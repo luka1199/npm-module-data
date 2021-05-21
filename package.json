@@ -1,0 +1,22 @@
+{
+  "name": "npm-module-data",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luka1199/npm-module-data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luka1199/npm-module-data/issues"
+  },
+  "homepage": "https://github.com/luka1199/npm-module-data#readme",
+  "dependencies": {
+    "csv-parser": "^3.0.0"
+  }
+}
