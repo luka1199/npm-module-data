@@ -9,3 +9,7 @@ tape
 karma
 make
 jest
+grunt
+gulp
+vows
+yarn

@@ -6,5 +6,5 @@ PACKAGE_FILES=$1
 
 for FILE in $PACKAGE_FILES/*/package.json;
 do
-    echo $(basename $(dirname $FILE)),$(jq .scripts.test $FILE)
+    echo "$(basename $(dirname $FILE)),\"$(node $SCRIPT_PATH/../src/testScriptParser.js $FILE)\""
 done

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/luka1199/npm-module-data#readme",
   "dependencies": {
-    "csv-parser": "^3.0.0"
+    "csv-parser": "^3.0.0",
+    "parse-npm-script": "0.0.4"
   }
 }

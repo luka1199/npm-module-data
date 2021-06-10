@@ -4,7 +4,7 @@ SCRIPT_PATH="$( cd "$(dirname "$0")" ; pwd -P )"
 
 MODULES_WITH_GITHUB_REPO=$1
 
-OUTPUT_DIRECTORY=$SCRIPT_PATH/package-files
+OUTPUT_DIRECTORY=$SCRIPT_PATH/../package-files
 
 rm -rf $OUTPUT_DIRECTORY
 mkdir $OUTPUT_DIRECTORY

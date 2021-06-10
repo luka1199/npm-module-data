@@ -1,0 +1,10 @@
+{
+  "name": "example",
+  "version": "1.0",
+  "description": "A library to convert a path into an absolute path.",
+  "scripts": {
+    "test": "npm run test:a && npm run test:b && 'echo Ok!'",
+    "test:a": "tkinter",
+    "test:b": "mocha test"
+  }
+}
