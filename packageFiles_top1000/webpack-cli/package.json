@@ -1,0 +1,88 @@
+{
+  "name": "webpack-cli-monorepo",
+  "description": "CLI for webpack & friends",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webpack/webpack-cli.git"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "keywords": [
+    "webpack",
+    "cli",
+    "scaffolding",
+    "module",
+    "bundler",
+    "web"
+  ],
+  "workspaces": [
+    "./packages/*"
+  ],
+  "scripts": {
+    "clean": "del-cli \"*.tsbuildinfo\" \"packages/**/*.tsbuildinfo\" \"packages/!(webpack-cli)/lib/!(*.tpl)\" \"**/.yo-rc.json\"",
+    "prebuild": "yarn clean",
+    "prebuild:ci": "yarn clean && node ./scripts/setupBuild.js",
+    "build": "tsc --build",
+    "build:ci": "tsc --build",
+    "watch": "tsc --build --watch",
+    "lint:prettier": "prettier --list-different . \"!**/*.{js,ts}\" ",
+    "lint:eslint": "eslint --cache --ext .js --ext .ts .",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "fix": "yarn lint:eslint --fix && yarn lint:prettier --write",
+    "prepsuite": "node scripts/prepareSuite.js",
+    "pretest": "yarn build && yarn lint && yarn prepsuite",
+    "test": "jest --reporters=default",
+    "test:smoketests": "nyc node smoketests",
+    "test:coverage": "nyc --no-clean --require ts-node/register jest",
+    "test:cli": "jest test --reporters=default",
+    "test:packages": "jest packages/ --reporters=default",
+    "test:ci": "yarn test:cli && yarn test:packages",
+    "test:watch": "jest test/ packages/ --watch",
+    "publish:monorepo": "yarn build && lerna version && lerna publish from-git",
+    "update:docs": "node ./scripts/updateDocs",
+    "prepare": "husky install"
+  },
+  "peerDependencies": {
+    "webpack": "4.x.x || 5.x.x"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^15.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "@webpack-cli/migrate": "^1.1.2",
+    "coffeescript": "^2.5.1",
+    "colorette": "^1.2.1",
+    "concat-stream": "^2.0.0",
+    "cz-customizable": "^6.3.0",
+    "del-cli": "^3.0.1",
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "execa": "^5.0.0",
+    "get-port": "^5.1.1",
+    "husky": "^6.0.0",
+    "internal-ip": "^6.2.0",
+    "jest": "^27.0.3",
+    "jest-watch-typeahead": "^0.6.1",
+    "lerna": "^4.0.0",
+    "lint-staged": "^10.5.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.3.0",
+    "readable-stream": "^3.6.0",
+    "rimraf": "^3.0.2",
+    "strip-ansi": "^6.0.0",
+    "ts-jest": "^27.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3",
+    "webpack": "^5.38.1",
+    "webpack-bundle-analyzer": "^4.3.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

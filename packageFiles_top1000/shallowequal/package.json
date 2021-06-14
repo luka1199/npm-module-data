@@ -1,0 +1,68 @@
+{
+  "name": "shallowequal",
+  "version": "1.1.0",
+  "description": "Like lodash isEqualWith but for shallow equal.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js test",
+    "test": "jest .",
+    "prepare": "npm run flow:check && npm run pretty && npm run lint && npm run test",
+    "travis": "npm run flow:check && npm run lint && npm run test",
+    "pretty": "prettier --write --tab-width 2 'test/**/*.js' '*.{js,json,js.flow,md}'",
+    "precommit": "lint-staged",
+    "flow:check": "flow check"
+  },
+  "lint-staged": {
+    "*.{js,json,js.flow,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "author": {
+    "name": "Alberto Leal",
+    "email": "mailforalberto@gmail.com",
+    "url": "github.com/dashed"
+  },
+  "repository": "dashed/shallowequal",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "index.js.flow",
+    "index.original.js"
+  ],
+  "keywords": [
+    "shallowequal",
+    "shallow",
+    "equal",
+    "isequal",
+    "compare",
+    "isequalwith"
+  ],
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "node": true,
+      "jest": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "plugins": [
+      "jest"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "7.9.0",
+    "@babel/preset-env": "7.9.0",
+    "babel-eslint": "10.1.0",
+    "babel-jest": "25.2.3",
+    "eslint": "6.8.0",
+    "eslint-plugin-jest": "23.8.2",
+    "flow-bin": "0.120.1",
+    "husky": "3.1.0",
+    "jest": "25.2.3",
+    "lint-staged": "10.0.9",
+    "prettier": "1.19.1"
+  }
+}

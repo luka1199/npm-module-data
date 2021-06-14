@@ -1,0 +1,39 @@
+{
+  "name": "url",
+  "description": "The core `url` packaged standalone for use with Browserify.",
+  "version": "0.11.0",
+  "author": "defunctzombie",
+  "dependencies": {
+    "punycode": "^1.4.1",
+    "querystring": "0.2.0"
+  },
+  "main": "./url.js",
+  "keywords": [
+    "parsing",
+    "url",
+    "analyze"
+  ],
+  "devDependencies": {
+    "@ljharb/eslint-config": "^17.6.0",
+    "acorn": "^8.2.4",
+    "assert": "1.1.1",
+    "eslint": "^7.26.0",
+    "mocha": "^3.5.3",
+    "nyc": "^10.3.2",
+    "zuul": "^3.12.0"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "tests-only": "nyc mocha test.js",
+    "test": "npm run tests-only",
+    "posttest": "npm run test-local",
+    "zuul": "zuul -- test.js",
+    "test-local": "zuul --local -- test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/defunctzombie/node-url.git"
+  },
+  "license": "MIT"
+}

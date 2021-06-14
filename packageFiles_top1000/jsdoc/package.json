@@ -1,0 +1,25 @@
+{
+  "name": "jsdoc",
+  "private": true,
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@jsdoc/eslint-config": "^1.0.8",
+    "@jsdoc/test-matchers": "^0.1.6",
+    "ajv": "^8.6.0",
+    "eslint": "^7.28.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "jasmine": "^3.7.0",
+    "jasmine-console-reporter": "^3.1.0",
+    "klaw-sync": "^6.0.0",
+    "lerna": "^4.0.0",
+    "mock-fs": "^5.0.0",
+    "nyc": "^15.1.0"
+  },
+  "engines": {
+    "node": ">=v14.17.0"
+  },
+  "scripts": {
+    "test": "gulp"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "lerna run build",
+    "build:examples": "lerna run build --scope \"@phosphor/example-*\"",
+    "build:src": "lerna run build --scope \"@phosphor/!(test-|example-)*\"",
+    "build:test": "lerna run build:test",
+    "clean": "lerna run clean",
+    "clean:examples": "lerna run clean --scope \"@phosphor/example-*\"",
+    "clean:src": "lerna run clean --scope \"@phosphor/!(test-|example-)*\"",
+    "clean:tests": "lerna run clean:tests",
+    "docs": "rimraf docs/api && lerna run docs",
+    "get:dependency": "get-dependency",
+    "publish": "npm run clean && npm run build && lerna publish -m \"Publish\" from-package",
+    "remove:dependency": "remove-dependency",
+    "test": "lerna run test",
+    "test:chrome": "lerna run test:chrome",
+    "test:firefox": "lerna run test:firefox",
+    "test:ie": "lerna run test:ie --concurrency 1",
+    "update:dependency": "update-dependency",
+    "version": "lerna version"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@jupyterlab/buildutils": "^0.10.0",
+    "lerna": "^3.14.1"
+  },
+  "workspaces": [
+    "examples/*",
+    "packages/*",
+    "tests/*"
+  ],
+  "version": "0.0.0"
+}

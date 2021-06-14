@@ -1,0 +1,100 @@
+{
+  "name": "graphql-tools-monorepo",
+  "version": "6.2.3",
+  "description": "Useful tools to create and manipulate GraphQL schemas.",
+  "private": true,
+  "scripts": {
+    "postinstall": "patch-package && husky install",
+    "predeploy:website": "yarn build:api-docs",
+    "deploy:website": "cd website && yarn deploy",
+    "ts:transpile": "concurrently \"tsc --project tsconfig.build.json\" \"tsc --project tsconfig.build.es5.json\"",
+    "clean-dist": "rimraf \"packages/**/dist\" && rimraf \"packages/**/dist-es5\" && rimraf \".bob\"",
+    "build": "yarn ts:transpile && bob build",
+    "build:api-docs": "node scripts/build-api-docs.js",
+    "lint": "eslint --ext .ts .",
+    "prettier": "prettier --ignore-path .gitignore --write --list-different \"**/*.{ts,tsx,graphql,yml}\"",
+    "prettier:check": "prettier --ignore-path .gitignore --check \"**/*.{ts,tsx,graphql,yml}\"",
+    "test": "jest --no-watchman --forceExit",
+    "prerelease": "yarn build",
+    "prerelease-canary": "yarn build",
+    "release": "changeset publish",
+    "release:canary": "(node scripts/canary-release.js && yarn build && yarn changeset publish --tag alpha) || echo Skipping Canary..."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardatan/graphql-tools.git"
+  },
+  "keywords": [
+    "GraphQL",
+    "Apollo",
+    "JavaScript",
+    "TypeScript",
+    "Mock",
+    "Schema",
+    "Schema Language",
+    "Tools"
+  ],
+  "bugs": {
+    "url": "https://github.com/ardatan/graphql-tools/issues"
+  },
+  "homepage": "https://github.com/ardatan/graphql-tools#readme",
+  "peerDependencies": {
+    "graphql": "^14.0.0 || ^15.0.0"
+  },
+  "devDependencies": {
+    "bob-the-bundler": "1.4.1",
+    "@babel/core": "7.14.5",
+    "@babel/plugin-proposal-class-properties": "7.14.5",
+    "@babel/preset-env": "7.14.5",
+    "@babel/preset-typescript": "7.14.5",
+    "@changesets/cli": "2.16.0",
+    "@types/jest": "26.0.23",
+    "@types/node": "14.17.3",
+    "@typescript-eslint/eslint-plugin": "4.26.1",
+    "@typescript-eslint/parser": "4.26.1",
+    "babel-jest": "27.0.2",
+    "concurrently": "6.2.0",
+    "eslint": "7.28.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-config-standard": "16.0.3",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.1.0",
+    "eslint-plugin-standard": "5.0.0",
+    "graphql": "15.5.0",
+    "graphql-helix": "1.6.1",
+    "graphql-subscriptions": "1.2.1",
+    "husky": "6.0.0",
+    "jest": "27.0.4",
+    "lint-staged": "11.0.0",
+    "nock": "13.1.0",
+    "patch-package": "6.4.7",
+    "prettier": "2.3.1",
+    "ts-jest": "27.0.3",
+    "typedoc": "0.20.36",
+    "typedoc-plugin-markdown": "3.9.0",
+    "typescript": "4.3.2"
+  },
+  "lint-staged": {
+    "packages/**/src/**/*.{ts,tsx}": [
+      "eslint --fix"
+    ],
+    "**/*.{ts,tsx,graphql,yml}": [
+      "prettier --write"
+    ]
+  },
+  "workspaces": {
+    "packages": [
+      "./packages/*",
+      "./packages/loaders/*",
+      "./website"
+    ],
+    "nohoist": [
+      "@graphql-tools/website/@docusaurus/*"
+    ]
+  },
+  "resolutions": {
+    "graphql": "15.5.0",
+    "@changesets/apply-release-plan": "5.0.0"
+  }
+}
