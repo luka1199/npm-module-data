@@ -10,35 +10,36 @@ async function run() {
         process.exit()
     }
 
-    var counter = 0
-    var keywords = await loadKeywords()
+    var keywordsJSON = await loadKeywordsJSON()
+    var keywords = getKeywords(keywordsJSON)
     keywords.push('other')
     keywords.push('undefined')
     var testScripts = await loadTestScripts()
 
     var keywordData = getKeywordData(testScripts, keywords)
     var sortedKeywordData = sortKeywordData(keywordData)
-    sortedKeywordData.forEach(data => {
-        console.log(`${data[0]}: ${data[1]}`)
-    });
+    var groupedKeywordData = groupKeywordData(sortedKeywordData, keywordsJSON)
+    console.log(groupedKeywordData);
     console.log("Total:", testScripts.length);
 }
 
-function loadKeywords() {
+function loadKeywordsJSON() {
     return new Promise((resolve, reject) => {
-        var keywords = []
-
-        fs.createReadStream(path.join(__dirname, 'keywords.csv'))
-            .pipe(csv(['keyword']))
-            .on('data', (row) => {
-                var keyword = row.keyword
-                keywords.push(keyword)
-            })
-            .on('end', () => {
-                console.log('Keywords successfully loaded');
-                resolve(keywords)
-            });
+        fs.readFile(path.join(__dirname, 'keywords.json'), (error, data) => {
+            resolve(JSON.parse(data));
+        })
+            
     });
+}
+
+function getKeywords(keywordsJSON) {
+    var keywords = []
+    Object.values(keywordsJSON).forEach(category => {
+        Object.keys(category).forEach(keyword => {
+            keywords.push(keyword)
+        });
+    });
+    return keywords
 }
 
 function loadTestScripts() {
@@ -84,6 +85,7 @@ function getKeywordData(testScripts, keywords) {
             if (script == "" || script == "echo \"Error: no test specified\" && exit 1") {
                 keywordCounter['undefined']++
             } else {
+                // console.log(script);
                 keywordCounter['other']++
             }
         }
@@ -92,7 +94,29 @@ function getKeywordData(testScripts, keywords) {
 }
 
 function sortKeywordData(keywordData) {
-    return Object.keys(keywordData).sort((a, b) => {
+    return Object.fromEntries(Object.keys(keywordData).sort((a, b) => {
         return -1 * (keywordData[a] - keywordData[b])
-    }).map(key => [key, keywordData[key]])
+    }).map(key => [key, keywordData[key]]))
+}
+
+function groupKeywordData(sortedKeywordData, keywordsJSON) {
+    var keywordCategory = {}
+    var groupedData = {}
+    Object.keys(keywordsJSON).forEach(category => {
+        Object.keys(keywordsJSON[category]).forEach(keyword => {
+            keywordCategory[keyword] = category
+        });
+        groupedData[category] = {}
+    });
+
+    Object.entries(sortedKeywordData).forEach(keywordData => {
+        const keyword = keywordData[0]
+        const amount = keywordData[1]
+        if (keyword == 'undefined' || keyword == 'other') {
+            groupedData[keyword] = amount
+        } else {
+            groupedData[keywordCategory[keyword]][keyword] = amount
+        }
+    });
+    return groupedData
 }

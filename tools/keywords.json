@@ -1,0 +1,27 @@
+{
+    "Testing frameworks": {
+        "cypress": "Cypress",
+        "tap": "Node-Tap",
+        "mocha": "Mocha",
+        "lab": "@hapi/lab",
+        "ava": "AVA",
+        "tsd": "tsd",
+        "jasmine": "Jasmine",
+        "tape": "Tape",
+        "karma": "Karma",
+        "jest": "Jest",
+        "vows": "Vows",
+        "flow": "Flow-JS",
+        "nodeunit": "Nodeunit"
+    },
+    "Code analysis tool": {
+        "eslint": "ESLint",
+        "xo": "xo",
+        "jshint": "JSHint"
+    },
+    "Task Runner": {
+        "grunt": "Grunt",
+        "gulp": "Gulp",
+        "nwb": "nwb"
+    }
+}
