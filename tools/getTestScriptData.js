@@ -10,47 +10,24 @@ async function run() {
         process.exit()
     }
 
-    var keywordCounter = {}
     var counter = 0
     var keywords = await loadKeywords()
-    keywords.push('Other')
-    keywords.push('Not defined')
+    keywords.push('other')
+    keywords.push('undefined')
     var testScripts = await loadTestScripts()
 
-    for (let i = 0; i < keywords.length; i++) {
-        const keyword = keywords[i];
-        keywordCounter[keyword] = 0
-    }
-    for (let j = 0; j < testScripts.length; j++) {
-        const script = testScripts[j];
-        var noKeyword = true
-        for (let k = 0; k < keywords.length; k++) {
-            const keyword = keywords[k];
-            if (script.includes(keyword)) {
-                var noKeyword = false
-                // console.log('Script contains ' + keyword);
-                keywordCounter[keyword]++
-            }
-        }
-
-        if (noKeyword) {
-            if (script == "" || script == "echo \"Error: no test specified\" && exit 1") {
-                keywordCounter['Not defined']++
-            } else {
-                keywordCounter['Other']++
-            }
-        }
-
-    }
-
-    console.log(keywordCounter);
+    var keywordData = getKeywordData(testScripts, keywords)
+    var sortedKeywordData = sortKeywordData(keywordData)
+    sortedKeywordData.forEach(data => {
+        console.log(`${data[0]}: ${data[1]}`)
+    });
     console.log("Total:", testScripts.length);
 }
 
 function loadKeywords() {
     return new Promise((resolve, reject) => {
         var keywords = []
-    
+
         fs.createReadStream(path.join(__dirname, 'keywords.csv'))
             .pipe(csv(['keyword']))
             .on('data', (row) => {
@@ -83,4 +60,39 @@ function loadTestScripts() {
                 resolve(scripts)
             });
     });
+}
+
+function getKeywordData(testScripts, keywords) {
+    var keywordCounter = {}
+    for (let i = 0; i < keywords.length; i++) {
+        const keyword = keywords[i];
+        keywordCounter[keyword] = 0
+    }
+    for (let j = 0; j < testScripts.length; j++) {
+        const script = testScripts[j];
+        var noKeyword = true
+        for (let k = 0; k < keywords.length; k++) {
+            const keyword = keywords[k];
+            if (script.includes(keyword)) {
+                var noKeyword = false
+                // console.log('Script contains ' + keyword);
+                keywordCounter[keyword]++
+            }
+        }
+
+        if (noKeyword) {
+            if (script == "" || script == "echo \"Error: no test specified\" && exit 1") {
+                keywordCounter['undefined']++
+            } else {
+                keywordCounter['other']++
+            }
+        }
+    }
+    return keywordCounter
+}
+
+function sortKeywordData(keywordData) {
+    return Object.keys(keywordData).sort((a, b) => {
+        return -1 * (keywordData[a] - keywordData[b])
+    }).map(key => [key, keywordData[key]])
 }
