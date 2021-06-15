@@ -1,0 +1,50 @@
+{
+	"Testing frameworks": {
+		"mocha": 2124,
+		"jest": 597,
+		"tap": 485,
+		"tape": 286,
+		"ava": 247,
+		"karma": 168,
+		"jasmine": 72,
+		"nodeunit": 45,
+		"lab": 43,
+		"vows": 40,
+		"flow": 32,
+		"tsd": 10,
+		"zuul": 10,
+		"cypress": 8,
+		"expresso": 3,
+		"testem": 3,
+		"ocular-test": 2,
+		"zap": 1
+	},
+	"Code analysis tool": {
+		"eslint": 608,
+		"standard": 324,
+		"xo": 167,
+		"jshint": 98,
+		"c8": 28,
+		"semistandard": 19,
+		"coffeelint": 4,
+		"tslint": 3,
+		"dtslint": 2
+	},
+	"Task runner": {
+		"grunt": 240,
+		"gulp": 118,
+		"lerna": 46,
+		"nwb": 11,
+		"ember": 8,
+		"aegir": 1,
+		"wsrun": 1
+	},
+	"Build tool": {
+		"make": 139
+	},
+	"Browser": {
+		"phantomjs": 14
+	},
+	"undefined": 1029,
+	"other": 552
+}

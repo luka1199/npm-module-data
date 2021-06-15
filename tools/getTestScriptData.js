@@ -18,9 +18,13 @@ async function run() {
 
     var keywordData = getKeywordData(testScripts, keywords)
     var sortedKeywordData = sortKeywordData(keywordData)
-    var groupedKeywordData = groupKeywordData(sortedKeywordData, keywordsJSON)
+    var groupedKeywordData = getGroupedKeywordData(sortedKeywordData, keywordsJSON)
     console.log(groupedKeywordData);
     console.log("Total:", testScripts.length);
+    if (process.argv[3] != null) {
+        console.log(`Saving data to ${process.argv[3]}`);
+        fs.writeFileSync(process.argv[3], JSON.stringify(groupedKeywordData, null, '\t'))
+    }
 }
 
 function loadKeywordsJSON() {
@@ -85,7 +89,7 @@ function getKeywordData(testScripts, keywords) {
             if (script == "" || script == "echo \"Error: no test specified\" && exit 1") {
                 keywordCounter['undefined']++
             } else {
-                // console.log(script);
+                console.log(script);
                 keywordCounter['other']++
             }
         }
@@ -99,7 +103,7 @@ function sortKeywordData(keywordData) {
     }).map(key => [key, keywordData[key]]))
 }
 
-function groupKeywordData(sortedKeywordData, keywordsJSON) {
+function getGroupedKeywordData(sortedKeywordData, keywordsJSON) {
     var keywordCategory = {}
     var groupedData = {}
     Object.keys(keywordsJSON).forEach(category => {

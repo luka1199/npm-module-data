@@ -37,8 +37,8 @@ Output in `output/testScripts_definitelyTyped.csv`
 ### Get test script data
 
 ```bash
-node ./tools/getTestScriptData.js ./output/testScripts_definitelyTyped.csv
+node ./tools/getTestScriptData.js ./output/testScripts_definitelyTyped.csv  ./output/testScriptData_definitelyTyped.json
 ```
 
-Output in console.
+Output in `output/testScriptData_definitelyTyped.json`
 

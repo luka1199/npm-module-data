@@ -12,16 +12,37 @@
         "jest": "Jest",
         "vows": "Vows",
         "flow": "Flow-JS",
-        "nodeunit": "Nodeunit"
+        "nodeunit": "Nodeunit",
+        "ocular-test": "Ocular-dev-tools",
+        "zuul": "Zuul",
+        "expresso": "Expresso",
+        "testem": "Test’em",
+        "zap": "Zap"
     },
     "Code analysis tool": {
         "eslint": "ESLint",
         "xo": "xo",
-        "jshint": "JSHint"
+        "jshint": "JSHint",
+        "tslint": "TSLint",
+        "dtslint": "DTSLint",
+        "standard": "StandardJS",
+        "semistandard": "Semi-Standard",
+        "c8": "c8",
+        "coffeelint": "CoffeeLint"
     },
-    "Task Runner": {
+    "Task runner": {
         "grunt": "Grunt",
         "gulp": "Gulp",
-        "nwb": "nwb"
+        "nwb": "nwb",
+        "aegir": "Aegir",
+        "lerna": "Lerna",
+        "wsrun": "Wsrun",
+        "ember": "Ember.js"
+    },
+    "Build tool": {
+        "make": "Make"
+    },
+    "Browser": {
+        "phantomjs": "PhantomJS"
     }
 }
