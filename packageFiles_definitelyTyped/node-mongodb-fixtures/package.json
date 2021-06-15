@@ -1,0 +1,40 @@
+{
+  "name": "node-mongodb-fixtures",
+  "version": "3.2.9",
+  "description": "A package and CLI for MongoDB fixtures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdimascio/node-mongodb-fixtures.git"
+  },
+  "keywords": [
+    "mongodb",
+    "fixtures",
+    "loader",
+    "tests",
+    "unit-tests",
+    "unloader",
+    "schema"
+  ],
+  "bin": {
+    "mongodb-fixtures": "bin/mongodb-fixtures.js"
+  },
+  "author": "Carmine DiMascio <cdimascio@gmail.com> (https://github.com/cdimascio)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cdimascio/node-mongodb-fixtures/issues"
+  },
+  "homepage": "https://github.com/cdimascio/node-mongodb-fixtures#readme",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "commander": "^6.2.0",
+    "mongodb": "^3.6.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-plugin-prettier": "^3.1.4"
+  }
+}

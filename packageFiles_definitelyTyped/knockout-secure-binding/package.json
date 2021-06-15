@@ -1,0 +1,47 @@
+{
+  "version": "0.5.5",
+  "author": {
+    "name": "Brian M Hunt",
+    "email": "brianmhunt@gmail.com"
+  },
+  "license": "MIT",
+  "name": "tko.provider",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "karma-chai": "^0.1.0",
+    "karma-mocha": "^1.1.1",
+    "karma-sinon": "^1.0.5",
+    "mocha": "^3.0.2",
+    "sinon": "^1.17.5",
+    "tko-policy": "knockout/tko-policy",
+    "tko.bind": "knockout/tko.bind",
+    "tko.binding.core": "github:knockout/tko.binding.core",
+    "tko.computed": "github:knockout/tko.computed",
+    "tko.observable": "github:knockout/tko.observable"
+  },
+  "files": [
+    "dist/",
+    "src/",
+    "index.js",
+    "./*.ya?ml"
+  ],
+  "main": "dist/tko.provider.js",
+  "jsnext:main": "index.js",
+  "homepage": "https://github.com/brianmhunt/knockout-secure-binding",
+  "licenses": {
+    "type": "MIT",
+    "url": "http://brianmhunt.mit-license.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brianmhunt/knockout-secure-binding.git"
+  },
+  "dependencies": {
+    "tko.observable": "github:knockout/tko.observable",
+    "tko.utils": "github:knockout/tko.utils"
+  },
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start --single-run"
+  }
+}

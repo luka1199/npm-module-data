@@ -1,0 +1,42 @@
+{
+  "name": "node-openload",
+  "version": "2.2.0",
+  "description": "An openload.co API handler",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha ./test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saschazar21/node-openload.git"
+  },
+  "keywords": [
+    "openload",
+    "api",
+    "file",
+    "upload",
+    "request"
+  ],
+  "author": "Sascha Zarhuber",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saschazar21/node-openload/issues"
+  },
+  "homepage": "https://github.com/saschazar21/node-openload#readme",
+  "dependencies": {
+    "debug": "^2.6.8",
+    "form-data": "^2.2.0",
+    "got": "^8.0.0",
+    "hasha": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "dotenv": "^2.0.0",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.1",
+    "mocha": "^3.4.2"
+  }
+}

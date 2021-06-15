@@ -1,0 +1,36 @@
+{
+  "name": "breeze",
+  "version": "1.2.2",
+  "description": "Functional async flow control library",
+  "main": "breeze.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --colors -R list"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nijikokun/breeze.git"
+  },
+  "keywords": [
+    "flow",
+    "async",
+    "ocaml",
+    "functional",
+    "haskell",
+    "waterfall",
+    "try",
+    "catch",
+    "promises",
+    "thennable",
+    "bluebird",
+    "q"
+  ],
+  "author": "Nijiko Yonskai",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nijikokun/breeze/issues"
+  },
+  "homepage": "https://github.com/Nijikokun/breeze#readme",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
+}

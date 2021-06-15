@@ -1,0 +1,60 @@
+{
+  "name": "power-radix",
+  "version": "2.5.6",
+  "description": "Library for converting numbers from one radix representation (encoding) to another, with optional custom defined encodings. Inspired by rubyworks/radix.",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "jshint",
+    "test": "npm run lint; NODE_PATH=./ mocha",
+    "test-cov": "npm run lint; NODE_PATH=./ nyc --reporter=lcovonly mocha",
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cflynn07/power-radix.git"
+  },
+  "keywords": [
+    "arithmetic",
+    "base conversion",
+    "base convert",
+    "base",
+    "base10",
+    "base58 decode",
+    "base58 encode",
+    "base58",
+    "base64 decode",
+    "base64 encode",
+    "base64",
+    "conversion",
+    "convert",
+    "decode",
+    "encode",
+    "hex",
+    "math",
+    "power",
+    "radix conversion",
+    "radix convert",
+    "radix"
+  ],
+  "author": "Casey Flynn <cflynn.us@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cflynn07/power-radix/issues"
+  },
+  "homepage": "https://github.com/cflynn07/power-radix",
+  "dependencies": {
+    "bigi": "^1.4.2",
+    "debug": "^4.1.1"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^6.2.2",
+    "nyc": "^15.0.0",
+    "standard": "^14.3.3"
+  }
+}

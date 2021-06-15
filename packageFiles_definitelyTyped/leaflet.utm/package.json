@@ -1,0 +1,41 @@
+{
+  "name": "leaflet.utm",
+  "version": "1.0.0",
+  "description": "Converts LatLng to UTM WGS84 in Leaflet",
+  "main": "L.LatLng.UTM.js",
+  "directories": {
+    "test": "test"
+  },
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "lint": "eslint L.LatLng.UTM.js examples/* test/*",
+    "lintfix": "eslint L.*.js examples/* test/* --fix",
+    "spec": "mocha-headless-chrome -f test/index.html",
+    "test": "npm run lint && npm run spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjimenezshaw/Leaflet.UTM.git"
+  },
+  "keywords": [
+    "Leaflet",
+    "map",
+    "geo",
+    "UTM"
+  ],
+  "devDependencies": {
+    "chai": "~4.3.4",
+    "chai-leaflet": "^0.0.13",
+    "eslint": "^7.23.0",
+    "eslint-plugin-html": "^6.1.2",
+    "leaflet": "^1.7.1",
+    "mocha": "^8.3.2",
+    "mocha-headless-chrome": "^3.1.0",
+    "proj4": "2.7.2"
+  },
+  "peerDependencies": {
+    "leaflet": "^1.0.3"
+  },
+  "author": "Javier Jimenez Shaw",
+  "readmeFilename": "README.md"
+}

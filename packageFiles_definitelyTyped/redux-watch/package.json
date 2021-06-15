@@ -1,0 +1,45 @@
+{
+  "name": "redux-watch",
+  "version": "1.2.0",
+  "description": "Watch Redux state for changes.",
+  "keywords": [
+    "redux",
+    "watch",
+    "observe",
+    "monitor",
+    "notify",
+    "state",
+    "observer",
+    "watcher",
+    "react"
+  ],
+  "homepage": "https://github.com/jprichardson/redux-watch#readme",
+  "bugs": {
+    "url": "https://github.com/jprichardson/redux-watch/issues"
+  },
+  "license": "MIT",
+  "author": "JP Richardson",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jprichardson/redux-watch.git"
+  },
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && npm run unit",
+    "unit": "tape test/*.js | tap-spec"
+  },
+  "dependencies": {
+    "object-path": "^0.11.5"
+  },
+  "devDependencies": {
+    "redux": "^3.0.5",
+    "reselect": "^2.0.1",
+    "standard": "7.x",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.5.1"
+  }
+}

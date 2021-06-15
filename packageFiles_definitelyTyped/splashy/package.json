@@ -1,0 +1,84 @@
+{
+  "name": "splashy",
+  "description": "Given an image, extract predominant & palette colors",
+  "homepage": "https://nicedoc.io/microlinkhq/splashy",
+  "version": "5.0.2",
+  "main": "index.js",
+  "author": {
+    "name": "Kiko Beats",
+    "url": "https://github.com/Kikobeats"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microlinkhq/splashy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/microlinkhq/splashy/issues"
+  },
+  "keywords": [
+    "canvas",
+    "color",
+    "colour",
+    "dominant",
+    "extract",
+    "extraction",
+    "file",
+    "image",
+    "main",
+    "palette",
+    "photo",
+    "picture",
+    "url"
+  ],
+  "dependencies": {
+    "node-vibrant": "~3.1.5"
+  },
+  "devDependencies": {
+    "ava": "latest",
+    "coveralls": "latest",
+    "git-dirty": "latest",
+    "got": "latest",
+    "hexsorter": "latest",
+    "lint-staged": "latest",
+    "lodash": "latest",
+    "nyc": "latest",
+    "prettier-standard": "latest",
+    "simple-git-hooks": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "dev": "nodemon --exec \"npm start\" -e \"js\"",
+    "lint": "standard-markdown README.md && standard",
+    "pretest": "npm run lint",
+    "start": "node index.js",
+    "test": "nyc ava"
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "package.json": [
+      "finepack",
+      "git add"
+    ],
+    "*.js": [
+      "prettier-standard",
+      "git add"
+    ],
+    "*.md": [
+      "standard-markdown",
+      "git add"
+    ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx lint-staged"
+  }
+}

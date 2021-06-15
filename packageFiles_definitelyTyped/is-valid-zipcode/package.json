@@ -1,0 +1,33 @@
+{
+  "name": "is-valid-zipcode",
+  "version": "1.0.3",
+  "description": "Check if a zip/postal code is valid.",
+  "license": "MIT",
+  "repository": "hacdias/is-valid-zipcode",
+  "author": {
+    "name": "Henrique Dias",
+    "email": "hacdias@gmail.com",
+    "url": "henriquedias.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "zipcode",
+    "valid",
+    "validation",
+    "zip",
+    "code",
+    "postal",
+    "code",
+    "postalcode"
+  ],
+  "bugs": {
+    "url": "https://github.com/hacdias/is-valid-zipcode/issues"
+  },
+  "homepage": "https://github.com/hacdias/is-valid-zipcode#readme",
+  "dependencies": {
+    "zipcodes-regex": "^1.0.0"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "idle-js",
+  "version": "1.2.0",
+  "description": "Detect user idleness",
+  "main": "dist/Idle.js",
+  "scripts": {
+    "build": "gulp build",
+    "coverage": "gulp coverage",
+    "lint": "gulp lint",
+    "prepare": "gulp build",
+    "build-example": "npx webpack --mode=development ./example/webpack/entry.js -o ./example/webpack/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soixantecircuits/idle-js"
+  },
+  "keywords": [
+    "idle",
+    "events",
+    "interactivity"
+  ],
+  "author": "hugohil <hugo@soixantecircuits.fr>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soixantecircuits/idle-js/issues"
+  },
+  "homepage": "https://github.com/soixantecircuits/idle-js",
+  "contributors": [
+    "massambadiouf <mass@soixantecircuits.fr> (https://github.com/massambadiouf)",
+    "gabrielstuff <gabriel@soixantecircuits.fr> (http://twitter.com/gabrielstuff)",
+    "hugohil <hugo@soixantecircuits.fr> (https://github.com/hugohil)",
+    "Martin Hradil <mhradil@redhat.com> (https://github.com/himdel)"
+  ],
+  "files": [
+    "/dist"
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
+  },
+  "browserslist": "> 0.25%, not dead",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/register": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-object-assign": "^6.3.13",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-babel": "^8.0.0-beta.2",
+    "gulp-eslint": "^5.0.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^1.5.1",
+    "gulp-util": "^3.0.8",
+    "webpack": "^4.29.2",
+    "webpack-cli": "^3.2.3",
+    "webpack-stream": "^5.2.1"
+  },
+  "babelBoilerplateOptions": {
+    "entryFileName": "index.js",
+    "mainVarName": "IdleJs"
+  }
+}

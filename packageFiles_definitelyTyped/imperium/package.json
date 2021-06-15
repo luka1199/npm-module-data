@@ -1,0 +1,54 @@
+{
+  "name": "imperium",
+  "version": "3.1.1",
+  "description": "Imperium is a role-based user's authorizations (ACL) library for Node.js.",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "nyc": {
+    "include": [
+      "src/"
+    ]
+  },
+  "scripts": {
+    "lint": "standard src/**",
+    "test": "npm run lint && nyc ava --verbose --serial --fail-fast test/ && nyc report --reporter=html",
+    "test:watch": "ava --watch test/",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "preversion": "npm test"
+  },
+  "contributors": [
+    {
+      "name": "Benjamin Canac (@benjamincanac)"
+    },
+    {
+      "name": "Sebastien Chopin (@Atinux)"
+    }
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/terrajs/imperium"
+  },
+  "keywords": [
+    "node acl",
+    "acl",
+    "auth",
+    "authorization",
+    "user acl",
+    "security",
+    "imperium"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "ava": "0.25.0",
+    "codecov": "3.1.0",
+    "nyc": "13.0.1",
+    "rimraf": "2.6.2",
+    "standard": "12.0.1",
+    "std-mocks": "1.0.1"
+  }
+}

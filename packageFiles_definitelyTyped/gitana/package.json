@@ -1,0 +1,41 @@
+{
+    "author": "Gitana Software, Inc. <info@cloudcms.com> (http://www.cloudcms.com)",
+    "name": "gitana",
+    "description": "Cloud CMS Gitana Driver for Node JS",
+    "version": "1.0.321",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/gitana/gitana-node-js.git"
+    },
+    "engines": {
+        "node": ">= 0.4.1"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "*"
+    },
+    "optionalDependencies": {
+        "https-proxy-agent": "^2.2.1",
+        "node-http-xhr": "^1.3.4",
+        "request": "*",
+        "xmlhttprequest": "*"
+    },
+    "contributors": [
+        {
+            "name": "Michael Uzquiano",
+            "email": "uzi@cloudcms.com"
+        }
+    ],
+    "keywords": [
+        "gitana",
+        "cloudcms",
+        "cms",
+        "content",
+        "json",
+        "rest",
+        "mobile",
+        "content management",
+        "javascript"
+    ],
+    "main": "index"
+}

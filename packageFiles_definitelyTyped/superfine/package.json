@@ -1,0 +1,31 @@
+{
+  "name": "superfine",
+  "version": "8.2.0",
+  "type": "module",
+  "main": "index.js",
+  "description": "Minimal view layer for building web interfaces.",
+  "repository": "jorgebucaran/superfine",
+  "homepage": "https://github.com/jorgebucaran/superfine",
+  "license": "MIT",
+  "author": "Jorge Bucaran",
+  "keywords": [
+    "superfine",
+    "frontend",
+    "vdom",
+    "web",
+    "ui"
+  ],
+  "files": [
+    "*.js"
+  ],
+  "scripts": {
+    "test": "c8 twist tests/*.js",
+    "deploy": "npm test && git commit --all --message $tag && git tag --sign $tag --message $tag && git push && git push --tags",
+    "release": "tag=$npm_package_version npm run deploy && npm publish --access public"
+  },
+  "devDependencies": {
+    "c8": "*",
+    "jsdom": "*",
+    "twist": "*"
+  }
+}

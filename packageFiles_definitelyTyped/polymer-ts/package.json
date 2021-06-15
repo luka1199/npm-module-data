@@ -1,0 +1,33 @@
+{
+  "name": "polymer-ts",
+  "version": "0.2.3",
+  "description": "Polymer 1.0 for TypeScript",
+  "main": "polymer-ts.js",
+  "scripts": {
+    "uglifyjs": "uglify-js",
+    "minify": "uglifyjs -o polymer-ts.min.js --in-source-map polymer-ts.js.map --source-map polymer-ts.min.js.map --screw-ie8 --mangle --compress --keep-names polymer-ts.js",
+    "updatesubprojects": "cp polymer-ts.min.* Sample/bower_components/polymer-ts",
+    "build": "node node_modules/typescript/bin/tsc && npm run minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nippur72/PolymerTS.git"
+  },
+  "keywords": [
+    "polymer",
+    "typescript"
+  ],
+  "author": "Antonino Porcino <nino.porcino@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nippur72/PolymerTS/issues"
+  },
+  "homepage": "https://github.com/nippur72/PolymerTS",
+  "devDependencies": {
+    "@types/jasmine": "^2.6.2",
+    "typescript": "^2.6.1",
+    "uglify-js": "^2.6.2"
+  },
+  "dependencies": {},
+  "typings": "polymer-ts.d.ts"
+}

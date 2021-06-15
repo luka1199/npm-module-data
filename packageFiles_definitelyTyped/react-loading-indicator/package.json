@@ -1,0 +1,40 @@
+{
+  "name": "react-loading-indicator",
+  "version": "1.0.2",
+  "description": "A loading indicator written purely in React that uses SVG and no images",
+  "main": "build/LoadingIndicator.js",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "prepublish": "babel -d build src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exponentjs/react-loading-indicator.git"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "loading-indicator"
+  ],
+  "author": "James Ide",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/exponentjs/react-loading-indicator/issues"
+  },
+  "homepage": "https://github.com/exponentjs/react-loading-indicator#readme",
+  "dependencies": {
+    "aphrodite": "^0.6.0",
+    "classnames": "^2.2.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.17.0"
+  },
+  "peerDependencies": {
+    "react": "*"
+  }
+}

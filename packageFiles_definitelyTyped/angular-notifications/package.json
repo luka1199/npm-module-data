@@ -1,0 +1,38 @@
+{
+  "name": "angular-notifications",
+  "version": "0.2.0",
+  "description": "Sweet notifications for your angular app",
+  "keywords": [
+    "angular",
+    "notifications"
+  ],
+  "author": "Nikita Gusakov",
+  "license": "MIT",
+  "homepage": "https://github.com/nkt/angular-notifications",
+  "bugs": {
+    "url": "https://github.com/nkt/angular-notifications/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkt/angular-notifications.git"
+  },
+  "dependencies": {
+    "angular": "~1.2"
+  },
+  "devDependencies": {
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-less": "*",
+    "gulp-babel": "*"
+  },
+  "main": "build/js/index.js",
+  "directories": {
+    "src": "src",
+    "lib": "build"
+  },
+  "scripts": {
+    "test": "mocha",
+    "build": "gulp build",
+    "prepublish": "npm run build"
+  }
+}

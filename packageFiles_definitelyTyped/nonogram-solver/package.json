@@ -1,0 +1,57 @@
+{
+  "name": "nonogram-solver",
+  "version": "2.0.0",
+  "description": "Solver / formatter for Nonograms (Griddlers, Picross, Hanjie, Japanese Crosswords)",
+  "keywords": [
+    "nonogram",
+    "griddler",
+    "picross",
+    "hanjie",
+    "japanese crossword",
+    "solve",
+    "solver",
+    "puzzle",
+    "game",
+    "serialization"
+  ],
+  "homepage": "https://github.com/thomasr/nonogram-solver",
+  "license": "Apache-2.0",
+  "author": "Thomas Rosenau <thomasr@fantasymail.de>",
+  "files": [
+    "src",
+    "doc/!(*.svg)",
+    "test",
+    "puzzles/*.json",
+    "puzzles/**/*.js"
+  ],
+  "main": "src/index.js",
+  "bin": {
+    "nonogram-solver": "src/cli.js",
+    "nonogram-dl-samples": "puzzles/nonograms.org/downloadSamples.js"
+  },
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "repository": "thomasr/nonogram-solver",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc --all --reporter=text --reporter=lcov npm test"
+  },
+  "dependencies": {
+    "assert": "^1.4.1",
+    "commander": "^2.11.0",
+    "left-pad": "^1.1.3",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "expect": "^21.2.1",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "rimraf": "^2.6.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "hash-file",
+  "version": "3.0.0",
+  "description": "Create a hashed file name",
+  "license": "MIT",
+  "repository": "kevva/hash-file",
+  "author": {
+    "name": "Kevin Mårtensson",
+    "email": "kevinmartensson@gmail.com",
+    "url": "github.com/kevva"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "file",
+    "hash",
+    "name",
+    "crypto"
+  ],
+  "dependencies": {
+    "hasha": "^2.2.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
+  }
+}

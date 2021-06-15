@@ -1,0 +1,53 @@
+{
+  "name": "@hapipal/schwifty",
+  "version": "6.0.0",
+  "description": "A model layer for hapi integrating Objection ORM",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "lab -a @hapi/code -t 100 -L",
+    "coveralls": "lab -r lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hapipal/schwifty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hapipal/schwifty/issues"
+  },
+  "homepage": "https://github.com/hapipal/schwifty#readme",
+  "engines": {
+    "node": ">=12"
+  },
+  "keywords": [
+    "hapi",
+    "joi",
+    "plugin",
+    "objection",
+    "database",
+    "orm",
+    "model"
+  ],
+  "dependencies": {
+    "@hapi/hoek": "9.x.x",
+    "@hapipal/toys": "3.x.x",
+    "joi": "17.x.x"
+  },
+  "peerDependencies": {
+    "@hapi/hapi": ">=19 <21",
+    "joi": ">=17 <18",
+    "knex": ">=0.16",
+    "objection": ">=1 <3"
+  },
+  "devDependencies": {
+    "@hapi/code": "8.x.x",
+    "@hapi/hapi": "20.x.x",
+    "@hapi/lab": "24.x.x",
+    "@hapipal/ahem": "2.x.x",
+    "coveralls": "3.x.x",
+    "knex": "0.21.x",
+    "objection": "2.x.x",
+    "sqlite3": "5.x.x"
+  },
+  "author": "William Woodruff <bill@bigroomstudios.com>",
+  "license": "MIT"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "hijackresponse",
+  "version": "5.0.0",
+  "description": "Hijack HttpResponses",
+  "main": "lib/hijackResponse.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "devDependencies": {
+    "bufferedstream": "3.1.1",
+    "compression": "^1.7.0",
+    "coveralls": "^3.1.0",
+    "errorhandler": "^1.5.1",
+    "eslint": "^5.15.0",
+    "eslint-config-pretty-standard": "^2.0.1",
+    "eslint-plugin-import": "^2.16.0",
+    "express": "^4.17.1",
+    "http-proxy-middleware": "0.17.4",
+    "mocha": "^7.2.0",
+    "nyc": "^15.1.0",
+    "offline-github-changelog": "^1.7.0",
+    "prettier": "^1.19.1",
+    "unexpected": "^11.15.0",
+    "unexpected-express": "^12.1.1"
+  },
+  "scripts": {
+    "coverage": "nyc mocha && nyc report --reporter=html",
+    "coverage:ci": "nyc mocha && nyc report --reporter=lcov",
+    "lint": "eslint . && prettier --check '**/*.js'",
+    "test": "mocha",
+    "version": "offline-github-changelog --next=${npm_package_version} > CHANGELOG.md && git add CHANGELOG.md",
+    "submit-coveralls": "<coverage/lcov.info coveralls"
+  },
+  "repository": "gustavnikolaj/hijackresponse",
+  "homepage": "https://github.com/gustavnikolaj/hijackresponse",
+  "bugs": {
+    "url": "https://github.com/gustavnikolaj/hijackresponse/issues"
+  },
+  "author": "Gustav Nikolaj <gustavnikolaj@gmail.com>",
+  "contributors": [
+    "Andreas Lind <andreaslindpetersen@gmail.com>"
+  ],
+  "files": [
+    "lib"
+  ],
+  "license": "ISC"
+}

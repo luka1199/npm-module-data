@@ -1,0 +1,45 @@
+{
+  "name": "uuid-readable",
+  "version": "0.0.2",
+  "description": "Easy to Remember, Readable UUIDs, that are Shakespearean gramatically correct sentences 🥳",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Debdut/readable-uuid.git"
+  },
+  "keywords": [
+    "id",
+    "uuid",
+    "shortid",
+    "readable-id",
+    "shakespeare",
+    "unique",
+    "universal",
+    "identifier",
+    "readable",
+    "sentence",
+    "uuid-v4",
+    "uuid-v5"
+  ],
+  "author": "Debdut Karmakar <iawaiponly@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Debdut/uuid-readable/issues"
+  },
+  "homepage": "https://github.com/Debdut/uuid-readable#readme",
+  "dependencies": {
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@rollup/plugin-json": "^4.1.0",
+    "mocha": "^8.0.1",
+    "rollup": "^2.21.0",
+    "rollup-plugin-babel": "^4.4.0"
+  }
+}

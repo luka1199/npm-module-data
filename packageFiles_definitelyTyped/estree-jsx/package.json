@@ -1,0 +1,27 @@
+{
+  "name": "estree-jsx",
+  "version": "0.0.1",
+  "description": "TypeScript type definitions for JSX",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larsrh/estree-jsx.git"
+  },
+  "author": "Lars Hupel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/larsrh/estree-jsx/issues"
+  },
+  "homepage": "https://github.com/larsrh/estree-jsx#readme",
+  "devDependencies": {
+    "typescript": "^3.7.5"
+  },
+  "dependencies": {
+    "@types/estree": "0.0.44"
+  }
+}

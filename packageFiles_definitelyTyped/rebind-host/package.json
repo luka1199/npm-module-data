@@ -1,0 +1,24 @@
+{
+  "name": "rebind-host",
+  "version": "1.0.1",
+  "description": "Express middleware to bind the correct host",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "Florian Goße <florian.gosse@truffls.de>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truffls/node-rebind-host.git"
+  },
+  "devDependencies": {
+    "ava": "^0.15.2",
+    "express": "^4.13.4",
+    "supertest": "^1.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/truffls/node-rebind-host/issues"
+  },
+  "homepage": "https://github.com/truffls/node-rebind-host#readme"
+}

@@ -1,0 +1,51 @@
+{
+  "name": "resourcejs",
+  "version": "2.3.4",
+  "description": "A simple Express library to reflect Mongoose models to a REST interface.",
+  "main": "Resource.js",
+  "scripts": {
+    "test": "mocha --exit",
+    "coverage": "nyc --reporter=lcov --report-dir=./coverage npm run test",
+    "lint": "eslint Resource.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/travist/resourcejs"
+  },
+  "keywords": [
+    "Express",
+    "Mongoose",
+    "Node",
+    "MEAN"
+  ],
+  "author": "Travis Tidwell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/travist/resourcejs/issues"
+  },
+  "homepage": "https://github.com/travist/resourcejs",
+  "dependencies": {
+    "debug": "^4.3.1",
+    "fast-json-patch": "^3.0.0-1",
+    "moment": "^2.29.1",
+    "mongodb": "^3.6.5",
+    "node-paginate-anything": "^1.0.0",
+    "range-parser": "^1.2.1"
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.0",
+    "chance": "^1.1.7",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.23.0",
+    "eslint-config-formio": "^1.1.4",
+    "express": "^4.17.1",
+    "mocha": "^8.3.2",
+    "mongoose": "^5.12.3",
+    "nyc": "^15.1.0",
+    "supertest": "^6.1.3"
+  },
+  "peerDependencies": {
+    "mongoose": "5.x",
+    "express": "4.x"
+  }
+}

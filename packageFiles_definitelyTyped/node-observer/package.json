@@ -1,0 +1,26 @@
+{
+  "author": "Marco Murdocca (marco.murdocca@xenialab.it)",
+  "name": "node-observer",
+  "description": "Observer pattern implementation",
+  "version": "0.2.8",
+  "repository": {
+  	"type" : "git",
+    	"url": "https://github.com/hormander/node-observer"
+  },
+  "main": "./lib/observer.js",
+  "keywords": [
+    "observer pattern",
+    "reactive",
+    "publish",
+    "subscribe"
+  ],
+  "bin": {
+    "observer": "./lib/observer.js"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "license": "GPL",
+  "homepage": "https://github.com/hormander/node-observer"
+}

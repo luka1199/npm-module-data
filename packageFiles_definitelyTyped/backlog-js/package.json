@@ -1,0 +1,55 @@
+{
+  "name": "backlog-js",
+  "version": "0.12.2",
+  "description": "Backlog API v2 client for browser and node",
+  "main": "dist/backlog.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nulab/backlog-js.git"
+  },
+  "scripts": {
+    "test": "npx mocha --timeout 10000 --require espower-typescript/guess test/test*.ts",
+    "test-cov": "npx istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec dist/test/**/test*.js",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "build": "npx npm run build-tsc && npm run build-dist && npm run build-minify",
+    "build-dist": "npx browserify --standalone Backlog dist/src/index.js -o dist/backlog.js",
+    "build-minify": "npx uglifyjs dist/backlog.js -o dist/backlog.min.js",
+    "build-tsc": "npx tsc --removeComments",
+    "build-tsd": "npx tsc -d",
+    "changelog": "ghch -w -F markdown -N ${VERSION}"
+  },
+  "author": "vvatanabe",
+  "license": "MIT",
+  "dependencies": {
+    "qs": "^6.10.1"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/empower": "^1.2.31",
+    "@types/isomorphic-fetch": "0.0.35",
+    "@types/mocha": "^8.2.2",
+    "@types/nock": "^10.0.3",
+    "@types/node": "^15.6.1",
+    "@types/power-assert": "^1.5.3",
+    "@types/power-assert-formatter": "^1.4.29",
+    "@types/qs": "^6.9.6",
+    "browserify": "^17.0.0",
+    "coveralls": "^3.1.0",
+    "dotenv": "^10.0.0",
+    "es6-promise": "^4.2.8",
+    "espower-typescript": "^10.0.0",
+    "isomorphic-fetch": "^3.0.0",
+    "isomorphic-form-data": "^2.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^8.4.0",
+    "nock": "^13.0.11",
+    "power-assert": "^1.6.1",
+    "typescript": "^4.3.2",
+    "uglify-js": "^3.13.8"
+  },
+  "keywords": [
+    "nulab",
+    "backlog",
+    "api"
+  ]
+}

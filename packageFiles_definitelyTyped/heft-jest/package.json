@@ -1,0 +1,22 @@
+{
+  "name": "heft-jest",
+  "version": "1.0.2",
+  "description": "Integrates Heft and Jest",
+  "license": "MIT",
+  "repository": {
+    "url": "https://github.com/octogonz/heft-jest"
+  },
+  "bugs": {
+    "url": "https://github.com/octogonz/heft-jest/issues"
+  },
+  "scripts": {
+    "build": "heft test --clean"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-config": "^1.1.0",
+    "@rushstack/heft": "^0.6.3",
+    "@types/node": "10.17.13",
+    "eslint": "~7.2.0",
+    "typescript": "~3.9.5"
+  }
+}

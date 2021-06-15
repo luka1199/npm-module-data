@@ -1,0 +1,46 @@
+{
+  "name": "promise-map-limit",
+  "description": "Map an array n items at a time with promises",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "jest",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "devDependencies": {
+    "jest": "^18.1.0",
+    "semantic-release": "^6.3.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbrockman/promise-map-limit.git"
+  },
+  "keywords": [
+    "promise",
+    "limit",
+    "limited",
+    "concurrency",
+    "throttle",
+    "rate",
+    "batch",
+    "ratelimit",
+    "queue",
+    "async",
+    "await",
+    "promises"
+  ],
+  "author": "David Brockman Smoliansky @dbrckmn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dbrockman/promise-map-limit/issues"
+  },
+  "homepage": "https://github.com/dbrockman/promise-map-limit#readme"
+}

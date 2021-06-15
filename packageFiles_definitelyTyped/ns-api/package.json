@@ -1,0 +1,49 @@
+{
+  "author": {
+    "name": "Franklin",
+    "email": "npmjscom@frankl.in",
+    "url": "https://frankl.in"
+  },
+  "name": "ns-api",
+  "version": "4.0.1",
+  "description": "Public transit data from Nederlandse Spoorwegen API",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fvdm/nodejs-ns-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fvdm/nodejs-ns-api/issues"
+  },
+  "main": "nsapi.js",
+  "files": [
+    "CONTRIBUTING.md",
+    "example.js"
+  ],
+  "tonicExampleFilename": "example.js",
+  "scripts": {
+    "test": "dotest"
+  },
+  "dependencies": {
+    "httpreq": "^0.4.24"
+  },
+  "devDependencies": {
+    "dotest": "^2.7.1"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "keywords": [
+    "api",
+    "navigation",
+    "nl",
+    "ns",
+    "public transport",
+    "railway",
+    "traffic",
+    "trains",
+    "transit",
+    "transport",
+    "unlicense"
+  ],
+  "license": "Unlicense"
+}

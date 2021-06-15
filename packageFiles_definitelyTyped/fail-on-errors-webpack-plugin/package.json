@@ -1,0 +1,25 @@
+{
+  "name": "fail-on-errors-webpack-plugin",
+  "version": "3.0.0",
+  "description": "Webpack plugin that makes the process return an error code on failure",
+  "main": "index.js",
+  "engines": {
+    "node": ">=5.10"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "peerDependencies": {
+    "webpack": ">=4.0.0"
+  },
+  "author": "Austin M. Matherne",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AustinMatherne/fail-on-errors-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AustinMatherne/fail-on-errors-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/AustinMatherne/fail-on-errors-webpack-plugin"
+}

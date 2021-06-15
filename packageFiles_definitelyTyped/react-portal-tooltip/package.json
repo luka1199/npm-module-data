@@ -1,0 +1,48 @@
+{
+  "name": "react-portal-tooltip",
+  "version": "2.4.7",
+  "description": "Awesome React tooltips",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romainberger/react-portal-tooltip"
+  },
+  "bugs": {
+    "url": "https://github.com/romainberger/react-portal-tooltip"
+  },
+  "homepage": "https://github.com/romainberger/react-portal-tooltip",
+  "scripts": {
+    "start": "babel src --watch --out-dir lib",
+    "build": "babel src --out-dir lib",
+    "test": "mocha --require @babel/register",
+    "prepublish": "rm -rf lib && npm run build"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "component",
+    "tooltip",
+    "portal"
+  ],
+  "author": "Romain Berger <romain@romainberger.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.4.0",
+    "@babel/plugin-proposal-class-properties": "7.4.0",
+    "@babel/plugin-proposal-export-default-from": "7.2.0",
+    "@babel/plugin-proposal-export-namespace-from": "7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.0",
+    "@babel/preset-env": "7.4.2",
+    "@babel/preset-react": "7.0.0",
+    "@babel/register": "7.4.0",
+    "mocha": "6.0.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-test-renderer": "^16.0.0"
+  }
+}

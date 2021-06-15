@@ -1,0 +1,27 @@
+{
+    "name": "net-ticks",
+    "version": "1.0.0",
+    "description": ".NET DateTime ticks to JS Date conversion utility",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/koonuf/net-ticks"
+    },
+    "keywords": [
+        ".net",
+        "date",
+        "ticks"
+    ],
+    "author": "Konstantins Onufrijevs",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/koonuf/net-ticks/issues"
+    },
+    "homepage": "https://github.com/koonuf/net-ticks",
+    "devDependencies": { 
+        "expect.js": "^0.3.1"
+    }
+}

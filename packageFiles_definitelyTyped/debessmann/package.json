@@ -1,0 +1,35 @@
+{
+  "author": {
+    "name": "fs",
+    "email": "sergej.filatov@ideaportriga.lv"
+  },
+  "bugs": {
+    "url": "https://github.com/fs535/debessmann/issues"
+  },
+  "dependencies": {
+    "connect": "^3.6.0",
+    "serve-static": "^1.12.1"
+  },
+  "description": "SDK for sending events to debessmann",
+  "devDependencies": {},
+  "directories": {},
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "homepage": "https://github.com/fs535/debessmann#readme",
+  "main": "./dm.js",
+  "maintainers": [
+    {
+      "name": "fs",
+      "email": "sergej.filatov@ideaportriga.lv"
+    }
+  ],
+  "name": "debessmann",
+  "optionalDependencies": {},
+  "readme": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fs535/debessmann.git"
+  },
+  "version": "0.1.0"
+}

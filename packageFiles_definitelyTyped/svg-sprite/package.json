@@ -1,0 +1,165 @@
+{
+  "name": "svg-sprite",
+  "version": "1.6.0-alpha.0",
+  "author": "Joschi Kuphal <joschi@kuphal.net> (https://jkphl.is)",
+  "description": "SVG sprites & stacks galore — A low-level Node.js module that takes a bunch of SVG files, optimizes them and bakes them into SVG sprites of several types along with suitable stylesheet resources (e.g. CSS, Sass, LESS, Stylus, etc.)",
+  "homepage": "https://github.com/svg-sprite/svg-sprite",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svg-sprite/svg-sprite.git"
+  },
+  "bugs": {
+    "url": "https://github.com/svg-sprite/svg-sprite/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=10.12.0"
+  },
+  "main": "lib/svg-sprite.js",
+  "bin": {
+    "svg-sprite": "./bin/svg-sprite.js"
+  },
+  "files": [
+    "bin",
+    "docs",
+    "lib",
+    "tmpl"
+  ],
+  "scripts": {
+    "lint": "xo",
+    "fix": "npm run lint -- --fix",
+    "mocha": "_mocha --timeout 10000 test/svg-sprite.js",
+    "coverage": "c8 npm run mocha",
+    "example": "node example.js",
+    "test": "npm run mocha"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "css-selector-parser": "^1.4.1",
+    "csso": "^4.2.0",
+    "cssom": "^0.4.4",
+    "glob": "^7.1.7",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
+    "mustache": "^4.2.0",
+    "phantomjs-prebuilt": "^2.1.16",
+    "prettysize": "^2.0.0",
+    "svgo": "^2.3.0",
+    "vinyl": "^2.2.1",
+    "winston": "^3.3.3",
+    "xmldom": "^0.6.0",
+    "xpath": "^0.0.32",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "c8": "^7.7.2",
+    "less": "^4.1.1",
+    "looks-same": "^7.3.0",
+    "mocha": "^8.3.2",
+    "rimraf": "^3.0.2",
+    "sass": "^1.34.1",
+    "should": "^13.2.3",
+    "stylus": "^0.54.8",
+    "svg2png": "^4.1.1",
+    "xo": "^0.40.2"
+  },
+  "keywords": [
+    "icon",
+    "icons",
+    "svg",
+    "png",
+    "sprite",
+    "spritesheet",
+    "stack",
+    "generator",
+    "css",
+    "sass",
+    "less",
+    "stylus",
+    "stylesheet",
+    "inline",
+    "html",
+    "vector",
+    "rwd",
+    "retina",
+    "mustache",
+    "gulpfriendly"
+  ],
+  "c8": {
+    "include": [
+      "lib/**/*.js"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text-summary"
+    ]
+  },
+  "mocha": {
+    "check-leaks": true,
+    "throw-deprecation": true,
+    "trace-deprecation": true,
+    "trace-warnings": true,
+    "use_strict": true
+  },
+  "xo": {
+    "space": 4,
+    "rules": {
+      "capitalized-comments": "off",
+      "eslint-comments/disable-enable-pair": "off",
+      "guard-for-in": "off",
+      "import/extensions": "off",
+      "import/order": "off",
+      "max-depth": [
+        "warn",
+        5
+      ],
+      "max-params": "off",
+      "no-negated-condition": "off",
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "prefer-template": "error",
+      "promise/prefer-await-to-then": "off",
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ],
+      "spaced-comment": "off",
+      "unicorn/explicit-length-check": "off",
+      "unicorn/no-array-for-each": "off",
+      "unicorn/no-array-reduce": "off",
+      "unicorn/no-for-loop": "off",
+      "unicorn/numeric-separators-style": "off",
+      "unicorn/prefer-module": "off",
+      "unicorn/prefer-query-selector": "off",
+      "unicorn/prefer-reflect-apply": "off",
+      "unicorn/prefer-string-slice": "off",
+      "unicorn/prevent-abbreviations": "off"
+    },
+    "overrides": [
+      {
+        "files": "test/**/*.js",
+        "envs": [
+          "mocha"
+        ]
+      },
+      {
+        "files": "**/*.phantom.js",
+        "envs": [
+          "phantomjs"
+        ],
+        "parserOptions": {
+          "ecmaVersion": 3,
+          "sourceType": "script"
+        },
+        "rules": {
+          "no-var": "off",
+          "prefer-arrow-callback": "off",
+          "prefer-template": "off"
+        }
+      }
+    ]
+  }
+}

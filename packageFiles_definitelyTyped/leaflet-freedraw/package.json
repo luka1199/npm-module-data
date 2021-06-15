@@ -1,0 +1,153 @@
+{
+  "name": "leaflet-freedraw",
+  "version": "2.13.4",
+  "description": "Zoopla inspired freehand polygon creation using Leaflet.js.",
+  "source": "src/FreeDraw.js",
+  "main": "dist/leaflet-freedraw.cjs.js",
+  "module": "dist/leaflet-freedraw.esm.js",
+  "browser": "dist/leaflet-freedraw.web.js",
+  "unpkg": "dist/leaflet-freedraw.iife.js",
+  "scripts": {
+    "build": "rollup -c",
+    "example": "webpack --config webpack.example.js && npm run css",
+    "watch": "npm run css && webpack --watch --config webpack.example.js",
+    "start": "npm i && npm run example && node --experimental-modules example/server/default.mjs",
+    "css": "cp node_modules/leaflet/dist/leaflet.css ./example/css",
+    "test": "npm run lint && npm run spec",
+    "spec": "ava && npm run example && mocha tests/functional/FreeDraw.test.js --compilers js:@babel/register",
+    "lint": "xo src/*.js src/**/*.js",
+    "cleanup": "rimraf node_modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wildhoney/Leaflet.FreeDraw.git"
+  },
+  "keywords": [
+    "leaflet",
+    "freedraw",
+    "polygon",
+    "drawing",
+    "freehand",
+    "zoopla",
+    "geospatial",
+    "search",
+    "area"
+  ],
+  "author": "Adam Timberlake <adam.timberlake@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wildhoney/Leaflet.FreeDraw/issues"
+  },
+  "homepage": "https://github.com/Wildhoney/Leaflet.FreeDraw",
+  "dependencies": {
+    "clipper-lib": "~6.2.1",
+    "regenerator-runtime": "^0.13.2",
+    "turf-intersect": "~3.0.12",
+    "turf-polygon": "~1.0.3"
+  },
+  "peerDependencies": {
+    "leaflet": "^1.2.0",
+    "ramda": "^0.22.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "~7.4.0",
+    "angular": "~1.6.10",
+    "ava": "^1.3.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "~8.0.5",
+    "chai": "^3.5.0",
+    "compression": "~1.7.2",
+    "concavehull": "^0.1.6",
+    "core-js": "~3.0.0",
+    "d3-selection": "~1.2.0",
+    "d3-shape": "^1.0.4",
+    "es6-set": "^0.1.4",
+    "es6-symbol": "^3.1.0",
+    "es6-weak-map": "^2.0.1",
+    "express": "~4.16.3",
+    "jsdom": "^9.8.3",
+    "leaflet": "~1.6.0",
+    "mocha": "~3.5.3",
+    "nightmare": "~3.0.1",
+    "ramda": "^0.22.1",
+    "rimraf": "~2.6.2",
+    "rollup": "^1.11.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.3.4",
+    "rollup-plugin-node-resolve": "^4.2.4",
+    "rollup-plugin-terser": "^4.0.4",
+    "sinon": "^1.17.6",
+    "webpack": "~4.29.6",
+    "webpack-cli": "~3.3.0",
+    "xo": "^0.17.1"
+  },
+  "ava": {
+    "files": [
+      "tests/*.test.js",
+      "tests/**/*.test.js",
+      "!tests/functional/*.test.js"
+    ],
+    "babel": {
+      "testOptions": {
+        "presets": [
+          "@babel/preset-env"
+        ]
+      }
+    },
+    "require": [
+      "@babel/register",
+      "@babel/polyfill",
+      "./tests/helpers/BrowserEnv.js"
+    ]
+  },
+  "xo": {
+    "space": 4,
+    "esnext": true,
+    "globals": [
+      "window",
+      "document",
+      "self"
+    ],
+    "rules": {
+      "padded-blocks": "off",
+      "max-lines": [
+        2,
+        500
+      ],
+      "object-curly-spacing": [
+        2,
+        "always"
+      ],
+      "new-cap": "off",
+      "array-bracket-spacing": "off",
+      "max-nested-callbacks": [
+        1,
+        5
+      ],
+      "no-unused-vars": [
+        1,
+        {
+          "varsIgnorePattern": "element"
+        }
+      ],
+      "unicorn/filename-case": [
+        "error",
+        {
+          "case": "pascalCase"
+        }
+      ],
+      "default-case": "off",
+      "no-unused-expressions": "off",
+      "no-case-declarations": "off",
+      "import/no-unassigned-import": "off",
+      "import/no-named-as-default": "off",
+      "import/prefer-default-export": "off",
+      "no-duplicate-imports": "off"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "react-native-awesome-card-io",
+  "version": "0.9.0",
+  "description": "A complete and cross-platform React Native component for card.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint *.js --fix",
+    "prettier": "prettier --write *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kerumen/react-native-awesome-card-io"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "card.io",
+    "credit card",
+    "scan",
+    "android",
+    "ios"
+  ],
+  "author": "Yann Pringault <yann.pringault@gmail.com>",
+  "homepage": "https://github.com/Kerumen/react-native-awesome-card-io",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}

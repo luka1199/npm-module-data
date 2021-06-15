@@ -1,0 +1,102 @@
+{
+  "name": "react-ellipsis-with-tooltip",
+  "version": "0.0.0-semantic-release",
+  "description": "truncates (with ellipsis) overflowing text elements and adds a tooltip https://amirfefer.github.io/react-ellipsis-with-tooltip",
+  "license": "MIT",
+  "repository": "https://github.com/amirfefer/react-ellipsis-with-tooltip",
+  "author": {
+    "name": "Amir Fefer",
+    "email": "amirfefer@gmail.com",
+    "url": "https://github.com/amirfefer/react-ellipsis-with-tooltip"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "babel src --out-dir dist --ignore **/*.test.js",
+    "test:watch": "jest --watch",
+    "test": "jest --coverage",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "lint": "eslint ./src ./stories",
+    "start": "npm run storybook",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "storybook-to-ghpages",
+    "lint:commit": "commitlint -e",
+    "lint:commit-travis": "commitlint-travis",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-bootstrap": "0.31.x || 0.32.x"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "uuid": "^3.1.0"
+  },
+  "devDependencies": {
+    "@storybook/react": "^4.1.9",
+    "@storybook/storybook-deployer": "^2.8.1",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
+    "enzyme-to-json": "^3.3.0",
+    "eslint-plugin-react": "^7.4.0",
+    "prop-types": "^15.6.0",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.5.0",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@commitlint/travis-cli": "^8.1.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "commitlint-config-cz": "^0.12.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-patternfly-react": "0.2.0",
+    "eslint-plugin-standard": "^4.0.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.15.3",
+    "rimraf": "^3.0.0",
+    "raf": "^3.4.0",
+    "react": "^16.3.0",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^16.3.0"
+  },
+  "optionalDependencies": {
+    "cz-conventional-changelog": "^3.0.2",
+    "semantic-release": "^15.13.1"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "keywords": []
+}

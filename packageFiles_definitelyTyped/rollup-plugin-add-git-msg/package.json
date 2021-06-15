@@ -1,0 +1,36 @@
+{
+  "name": "rollup-plugin-add-git-msg",
+  "version": "1.1.0",
+  "description": "Simple rollup plugin that insert GIT_TAG and COMMITHASH in banner.",
+  "main": "dist/rollup-plugin-add-git-msg.js",
+  "jsnext:main": "dist/rollup-plugin-add-git-msg.es.js",
+  "scripts": {
+    "build": "rollup -c",
+    "pretest": "npm run build",
+    "test": "mocha test/index.js",
+    "prepublish": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oplinjie/rollup-plugin-add-git-msg.git"
+  },
+  "keywords": [
+    "git",
+    "rollup",
+    "plugin",
+    "version"
+  ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "author": "oplinjie",
+  "license": "ISC",
+  "devDependencies": {
+    "buble": "^0.15.2",
+    "chai": "^3.5.0",
+    "mocha": "^3.4.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-buble": "^0.15.0"
+  }
+}

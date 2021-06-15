@@ -1,0 +1,18 @@
+{
+    "name" : "keysym",
+    "version" : "0.0.6",
+    "description" : "Look up X11 keysyms, unicode positions, and names.",
+    "main" : "./index.js",
+    "keywords": [ "x11", "keysym", "key", "unicode" ],
+    "license": "MIT/X11",
+    "author" : "James Halliday <mail@substack.net>",
+    "repository": {
+        "type": "git",
+        "url": "http://github.com/substack/node-keysym.git"
+    }, 
+    "devDependencies" : {
+        "hashish" : "0.0.2",
+        "jquery-browserify" : "1.6.x"
+    },
+    "engines": { "node" : ">=0.4.0" }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "webpack-cleanup-plugin",
+  "version": "0.5.1",
+  "description": "Plugin for webpack to cleanup extraneous files from the output path directory",
+  "main": "./lib/WebpackCleanupPlugin.js",
+  "engines": {
+    "node": ">= 4"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "babel ./src -d ./lib --source-maps",
+    "prepublish": "npm run clean && npm run build",
+    "lint": "eslint src",
+    "test": "mocha --compilers js:babel-register --require ./test/setup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpbl/webpack-cleanup-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "webpack-plugin"
+  ],
+  "author": "gpbl <io@gpbl.org> (https://github.com/gpbl)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gpbl/webpack-cleanup-plugin/issues"
+  },
+  "homepage": "https://github.com/gpbl/webpack-cleanup-plugin#readme",
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-core": "6.25.0",
+    "babel-eslint": "7.2.3",
+    "babel-plugin-transform-object-rest-spread": "6.23.0",
+    "babel-preset-env": "1.5.2",
+    "babel-register": "6.24.1",
+    "chai": "4.0.2",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb-base": "11.2.0",
+    "eslint-plugin-import": "2.3.0",
+    "mocha": "3.4.2",
+    "rimraf": "2.6.1",
+    "sinon": "2.3.4",
+    "sinon-chai": "2.11.0",
+    "webpack": "2.6.1"
+  },
+  "dependencies": {
+    "lodash.union": "4.6.0",
+    "minimatch": "3.0.4",
+    "recursive-readdir-sync": "1.0.6"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "barbellweights",
+  "version": "0.3.0",
+  "description": "Calculates the warmup sets, reps and plates for barbell lifts",
+  "main": "barbellweights.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toddhibbs/barbellweight.git"
+  },
+  "keywords": [
+    "barbell",
+    "weightlifting",
+    "powerlifting",
+    "squats",
+    "deadlift",
+    "press",
+    "exercise"
+  ],
+  "author": "Todd Hibbs <todd@toddhibbs.com> (http://toddhibbs.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toddhibbs/barbellweight/issues"
+  },
+  "homepage": "https://github.com/toddhibbs/barbellweight#readme",
+  "engines": {
+    "node": ">=4.8.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.3.0"
+  }
+}

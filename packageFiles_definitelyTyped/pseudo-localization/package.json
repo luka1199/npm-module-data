@@ -1,0 +1,50 @@
+{
+  "name": "pseudo-localization",
+  "version": "2.1.1",
+  "description": "Dynamic pseudo-localization in the browser and nodejs",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "bin": "./bin/pseudo-localize",
+  "scripts": {
+    "start": "node devserver.js",
+    "prepare": "babel src --out-dir lib --minified --no-comments --source-maps --ignore '**/*.test.js'",
+    "check-formatting": "prettier --list-different src/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "test-js": "jest src/*",
+    "test": "npm run test-js jest && npm run check-formatting && npm run lint"
+  },
+  "author": "Tryggvi Gylfason (http://twitter.com/tryggvigy)",
+  "keywords": [
+    "internationalization",
+    "localization",
+    "pseudo-localization",
+    "l10n",
+    "i18n",
+    "pseudo",
+    "language",
+    "translation",
+    "pseudo-localize"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tryggvigy/pseudo-localization.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-jest": "^24.8.0",
+    "eslint": "^6.1.0",
+    "jest-cli": "^24.8.0",
+    "prettier": "^1.18.2"
+  },
+  "dependencies": {
+    "flat": "^5.0.2",
+    "get-stdin": "^7.0.0",
+    "yargs": "^13.3.0"
+  }
+}

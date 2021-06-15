@@ -1,0 +1,36 @@
+{
+  "name": "knockout-transformations",
+  "version": "2.1.0",
+  "description": "Live transform methods for Knockout observable arrays",
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/One-com/knockout-transformations"
+  },
+  "peerDependencies": {
+    "knockout": "^3.1.0"
+  },
+  "devDependencies": {
+    "jscs": "1.10.0",
+    "jshint": "2.6.0",
+    "knockout": "3.1.0",
+    "mocha": "2.1.0",
+    "sinon": "1.12.2",
+    "uglify-js": "2.4.16",
+    "unexpected": "5.8.1",
+    "unexpected-knockout": "5.2.0",
+    "unexpected-sinon": "5.0.0"
+  },
+  "licenses": [
+    {
+      "type": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ]
+}

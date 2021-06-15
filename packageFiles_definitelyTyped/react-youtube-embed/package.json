@@ -1,0 +1,35 @@
+{
+  "name": "react-youtube-embed",
+  "version": "1.0.3",
+  "keywords": [
+    "react",
+    "youtube",
+    "embed",
+    "responsive"
+  ],
+  "main": "dist/index.js",
+  "author": "Kennedy Rose <krose@escaladesports.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/escaladesports/react-youtube-embed.git"
+  },
+  "license": "MIT",
+  "scripts": {
+    "analyze": "esca-scripts analyze --react --component --input ./src/index.js",
+    "build": "esca-scripts build --react --component --babel --input ./src/index.js --output ./dist/index.js",
+    "dev": "esca-scripts dev ---input './dev/dev.js, ./dev/index.html' --react --browser",
+    "prepublishOnly": "npm run build",
+    "reset": "esca-scripts reset",
+    "test": "echo 'no test'",
+    "travis": "opn https://travis-ci.org/escaladesports/react-youtube-embed/branches"
+  },
+  "devDependencies": {
+    "esca-scripts": "^0.14.2",
+    "opn-cli": "^3.1.0",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
+  },
+  "dependencies": {
+    "styled-jsx": "^2.2.4"
+  }
+}

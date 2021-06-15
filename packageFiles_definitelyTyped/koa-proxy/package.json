@@ -1,0 +1,42 @@
+{
+  "name": "koa-proxy",
+  "version": "1.0.0-alpha.3",
+  "description": "Proxy middleware for koa",
+  "main": "index",
+  "dependencies": {
+    "pause-stream": "0.0.11",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "koa",
+    "middleware",
+    "proxy"
+  ],
+  "devDependencies": {
+    "koa": "^2.3.0",
+    "koa-body": "^2.5.0",
+    "koa-convert": "^1.2.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^5.0.0",
+    "mocha": "^4.0.1",
+    "should": "^13.1.2",
+    "supertest": "^3.0.0"
+  },
+  "peerDependencies": {
+    "koa": "2.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edorivai/koa-proxy"
+  },
+  "homepage": "https://github.com/edorivai/koa-proxy",
+  "author": "edorivai <edo.rivai@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha -t 20000"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "name": "server-timing-header",
+  "version": "1.9.0",
+  "description": "Allow you add metrics via Server-Timing header",
+  "main": "index.js",
+  "scripts": {
+    "checks": "npm run lint && npm run size && npm t",
+    "size": "size-limit",
+    "postversion": "git push && git push --tags",
+    "version": "git add . -A",
+    "premajor": "npm run checks",
+    "major": "npm version major && npm publish --tag latest --access public",
+    "preminor": "npm run checks",
+    "minor": "npm version minor && npm publish --tag latest --access public",
+    "prepatch": "npm run checks",
+    "patch": "npm version patch && npm publish --tag latest --access public",
+    "predopreminor": "npm run checks",
+    "dopreminor": "npm version preminor && npm publish --tag next --access public",
+    "predopremajor": "npm run checks",
+    "dopremajor": "npm version premajor && npm publish --tag next --access public",
+    "predoprepatch": "npm run checks",
+    "doprepatch": "npm version prepatch && npm publish --tag next --access public",
+    "doc": "documentation readme index.js -s 'Documentation'",
+    "lint": "eslint *.js --fix",
+    "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add",
+      "npm t -- --onlyChanged --passWithNoTests"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilentImp/express-middleware-headers-server-timing.git"
+  },
+  "size-limit": [
+    {
+      "limit": "3 KB",
+      "path": "index.js"
+    }
+  ],
+  "keywords": [
+    "expressjs",
+    "performance",
+    "server",
+    "timing",
+    "servertiming",
+    "server-timing",
+    "monitor",
+    "monitoring",
+    "speed",
+    "middleware",
+    "express"
+  ],
+  "author": "Anton Nemtsev <thesilentimp@gmail.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/SilentImp/express-middleware-headers-server-timing/issues"
+  },
+  "homepage": "https://github.com/SilentImp/express-middleware-headers-server-timing#readme",
+  "dependencies": {
+    "on-headers": "^1.0.2"
+  },
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^2.1.1",
+    "diff": ">=3.5.0",
+    "documentation": "^10.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.15.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^2.1.0",
+    "jest": "^24.9.0",
+    "jest-express": "^1.10.1",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.17.0"
+  }
+}

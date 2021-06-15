@@ -1,0 +1,31 @@
+{
+  "name": "scroller",
+  "version": "0.0.3",
+  "description": "Accelerated panning and zooming for HTML and Canvas",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/popham/scroller.git"
+  },
+  "keywords": [
+    "Scrolling",
+    "Scroll",
+    "Scroller",
+    "Touch"
+  ],
+  "author": "Tim Popham",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/popham/scroller/issues"
+  },
+  "homepage": "https://github.com/popham/scroller",
+  "devDependencies": {
+    "mocha": "^1.20.1"
+  }
+}

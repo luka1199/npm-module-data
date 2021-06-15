@@ -1,0 +1,68 @@
+{
+  "name": "postcss-icss-values",
+  "version": "2.0.2",
+  "description": "PostCSS plugin for CSS Modules to pass arbitrary values between your module files",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "babel --out-dir lib src",
+    "test": "jest --coverage",
+    "precommit": "lint-staged",
+    "prepublish": "yarn run test && yarn run build"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "sourceType": "module"
+    },
+    "env": {
+      "es6": true
+    },
+    "extends": "eslint:recommended"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": 4
+          }
+        }
+      ]
+    ]
+  },
+  "repository": "css-modules/postcss-icss-values",
+  "keywords": [
+    "css",
+    "modules",
+    "postcss"
+  ],
+  "author": "Glen Maddern and Bogdan Chadkin",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.5.2",
+    "babel-jest": "^20.0.3",
+    "babel-preset-env": "^1.5.2",
+    "eslint": "^4.0.0",
+    "husky": "^0.13.4",
+    "jest": "^20.0.4",
+    "lint-staged": "^3.6.1",
+    "prettier": "^1.4.4",
+    "strip-indent": "^2.0.0"
+  },
+  "dependencies": {
+    "icss-utils": "^3.0.1",
+    "lodash": "^4.17.4",
+    "postcss": "^6.0.2",
+    "postcss-value-parser": "^3.3.0"
+  }
+}

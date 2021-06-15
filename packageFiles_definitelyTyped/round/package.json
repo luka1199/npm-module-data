@@ -1,0 +1,36 @@
+{
+  "name": "round",
+  "version": "2.0.1",
+  "description": "Round numbers to the nearest increment with an optional direction",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bendrucker/round.js.git"
+  },
+  "keywords": [
+    "numbers",
+    "round",
+    "increment"
+  ],
+  "author": "Ben Drucker <bvdrucker@gmail.com> (http://www.bendrucker.me/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bendrucker/round.js/issues"
+  },
+  "homepage": "https://github.com/bendrucker/round.js",
+  "devDependencies": {
+    "standard": "~13.1.0",
+    "tape": "~4.10.0"
+  },
+  "dependencies": {
+    "precision": "~1.0.0",
+    "round-precision": "~1.0.0"
+  },
+  "files": [
+    "index.js",
+    "readme.md"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "weighted-random-object",
+  "version": "1.0.8",
+  "description": "Get a weighted random object from an array of objects.",
+  "main": "build/weighted-random-object.js",
+  "scripts": {
+    "build": "babel src -d build",
+    "prepublish": "npm run build",
+    "release": "np",
+    "test": "echo \"YOU SHOULD KNOW: there aren't actually any real tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/misund/weighted-random-object.git"
+  },
+  "author": "Just Thomas Hiorth Misund",
+  "license": "GPL-3.0",
+  "keywords": [
+    "simple",
+    "random",
+    "weighted",
+    "weights"
+  ],
+  "devDependencies": {
+    "@babel/cli": "7.5.5",
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "np": "5.0.2"
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "weapp-api",
+    "version": "1.9.0",
+    "description": "wechat api",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:yeungeek/weapp-api.git"
+    },
+
+    "author": {
+        "name": "yeungeek",
+        "email": "yeungeek@gmail.com",
+        "url": "http://yeungeek.com"
+    },
+    "license": "Apache License 2.0",
+    "homepage": "https://github.com/yeungeek/weapp-api",
+    "bugs": {
+        "url": "https://github.com/yeungeek/weapp-api/issues",
+        "email": "yeungeek@gmail.com"
+    },
+    "keywords": [
+        "weapp",
+        "wechat",
+        "api"
+    ]
+}

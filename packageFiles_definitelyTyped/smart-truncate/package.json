@@ -1,0 +1,37 @@
+{
+  "name": "smart-truncate",
+  "version": "1.0.1",
+  "description": "A small library that truncates a string. It can insert or append an ellipsis at any desired position of the truncated result.",
+  "main": "dist/smart-truncate.es5.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha -R spec src/*.spec.js",
+    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/.bin/_mocha -- -R spec src/*.spec.js",
+    "cover:dev": "npm run compile && npm run cover",
+    "compile": "./node_modules/.bin/babel src/smart-truncate.js --out-file dist/smart-truncate.es5.js",
+    "build": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/millerized/smart-truncate.git"
+  },
+  "keywords": [
+    "string",
+    "truncate",
+    "ellipsis",
+    "smart"
+  ],
+  "author": "Steve Miller <millerized@me.com> (http://wwww.millerized.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/millerized/smart-truncate/issues"
+  },
+  "homepage": "https://github.com/millerized/smart-truncate#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^4.1.0"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "@riotjs/route",
+  "version": "7.1.1",
+  "description": "Riot.js isomorphic router",
+  "main": "route.js",
+  "jsnext:main": "route.esm.js",
+  "module": "route.esm.js",
+  "scripts": {
+    "prepublishOnly": "npm run build && npm test",
+    "lint": "eslint src test rollup.config.js",
+    "build": "rollup -c && npm run build-demo",
+    "build-demo": "riot demos/components -o demos/components",
+    "demo": "npm run build && serve",
+    "cov": "nyc report --reporter=text-lcov | coveralls",
+    "cov-html": "nyc report --reporter=html",
+    "test": "npm run lint && nyc mocha -r esm -r test/setup.js test/*.spec.js"
+  },
+  "files": [
+    "route.js",
+    "route.esm.js",
+    "route.standalone.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riot/route.git"
+  },
+  "keywords": [
+    "riot",
+    "Riot.js",
+    "router",
+    "riot-route",
+    "route"
+  ],
+  "author": "Gianluca Guarini <gianluca.guarini@gmail.com> (http://gianlucaguarini.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/riot/route/issues"
+  },
+  "homepage": "https://github.com/riot/route#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@riotjs/babel-preset": "^1.0.0",
+    "@riotjs/cli": "^5.3.0",
+    "@riotjs/compiler": "^5.4.2",
+    "@riotjs/ssr": "^6.0.0",
+    "bianco.query": "^1.0.0",
+    "chai": "^4.3.4",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.28.0",
+    "eslint-config-riot": "^3.0.0",
+    "esm": "^3.2.25",
+    "jsdom": "16.6.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0",
+    "riot": "^5.4.5",
+    "rollup": "^2.51.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-riot": "^5.0.0",
+    "serve": "^12.0.0",
+    "sinon": "^11.1.1",
+    "sinon-chai": "^3.7.0"
+  },
+  "peerDependency": {
+    "riot": "^5.4.5"
+  },
+  "dependencies": {
+    "@riotjs/util": "^2.0.4",
+    "bianco.attr": "^1.0.0",
+    "bianco.events": "^1.0.0",
+    "cumpa": "^1.0.1",
+    "rawth": "^2.1.2"
+  }
+}

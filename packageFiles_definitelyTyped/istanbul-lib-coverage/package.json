@@ -1,0 +1,55 @@
+{
+  "name": "istanbuljs",
+  "version": "2.0.0",
+  "private": true,
+  "description": "monorepo containing the various nuts and bolts that facilitate istanbul.js test instrumentation",
+  "scripts": {
+    "pretest": "eslint .",
+    "test": "cross-env LERNA_TEST_RUN=1 NODE_ENV=test lerna --ignore nyc exec npm test",
+    "posttest": "node ./monorepo-merge-reports.js && nyc report",
+    "postinstall": "lerna bootstrap --hoist",
+    "release": "lerna publish --conventional-commits --dist-tag=next"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:istanbuljs/istanbuljs.git"
+  },
+  "keywords": [
+    "istanbuljs",
+    "coverage",
+    "nyc"
+  ],
+  "author": "Ben Coe <ben@npmjs.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/istanbuljs/istanbuljs/issues"
+  },
+  "homepage": "https://github.com/istanbuljs/istanbuljs",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "coveralls": "^3.0.9",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.17.0",
+    "glob": "^7.1.6",
+    "lerna": "^3.19.0",
+    "nyc": "^15.0.0-beta.2",
+    "prettier": "=1.18.2"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "lcov"
+    ]
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 4
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "axios-token-interceptor",
+  "version": "0.2.0",
+  "main": "index.js",
+  "author": "Sandrino Di Mattia",
+  "license": "MIT",
+  "scripts": {
+    "test:watch": "jest --watch",
+    "test": "jest --colors --coverage --forceExit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sandrinodimattia/axios-token-interceptor"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "devDependencies": {
+    "axios": "^0.19.2",
+    "bluebird": "^3.7.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "jest": "^25.5.1",
+    "nock": "^12.0.3"
+  },
+  "dependencies": {
+    "lock": "^1.1.0"
+  }
+}

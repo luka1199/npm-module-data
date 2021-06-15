@@ -1,0 +1,43 @@
+{
+  "name": "promised-temp",
+  "description": "Tool for making temporary files asynchronously that return Promises. Wraps node-temp module with Promises.",
+  "author": "Mika Turunen <mika.turunen@ymail.com>",
+  "version": "0.1.0",
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "engines": [
+    "node >=0.8.0"
+  ],
+  "main": "./lib/promised-temp",
+  "dependencies": {
+    "temp": "^0.8.1",
+    "q": "^1.0.1",
+    "debug": "^2.1.0",
+    "mkdirp": "^0.5.0"
+  },
+  "tags": [
+    "tmp",
+    "temporary",
+    "promises"
+  ],
+  "keywords": [
+    "tmp",
+    "promises",
+    "temp",
+    "temporary"
+  ],
+  "scripts": {
+    "test": "mocha tests/promised-temp.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikaturunen/promised-temp.git"
+  },
+  "devDependencies": {
+    "chai": "^1.9.2",
+    "mocha": "^2.0.1",
+    "sinon": "^1.11.1"
+  }
+}

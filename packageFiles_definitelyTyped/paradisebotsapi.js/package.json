@@ -1,0 +1,31 @@
+{
+  "name": "paradiseapi.js",
+  "version": "1.10.0",
+  "description": "The main wrapper for Paradise Bot List to post server count and shard count",
+  "main": "index.js",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParadiseBotList/paradisebotsapi.js.git"
+  },
+  "author": "ParadiseBotList",
+  "creator": "Dexter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ParadiseBotList/paradisebotsapi.js/issues"
+  },
+  "homepage": "https://github.com/ParadiseBotList/paradisebotsapi.js#readme",
+  "keywords": [
+    "Discord",
+    "Bot",
+    "List",
+    "API",
+    "Wrapper"
+  ]
+}

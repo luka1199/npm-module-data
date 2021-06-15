@@ -1,0 +1,74 @@
+{
+  "name": "passport-saml-metadata",
+  "version": "2.4.1",
+  "description": "SAML2 metadata loader",
+  "author": {
+    "name": "Jonathon Hill",
+    "email": "jhill9693@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Ian Cervantez"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "passport",
+    "SAML",
+    "SAML2",
+    "passport-saml",
+    "passport-wsfed-saml2",
+    "metadata"
+  ],
+  "repository": {
+    "url": "https://github.com/compwright/passport-saml-metadata"
+  },
+  "main": "./src/",
+  "scripts": {
+    "publish": "git push origin --tags && npm run changelog && git push origin",
+    "release:pre": "npm version prerelease && npm publish --tag pre",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "changelog": "github_changelog_generator -u compwright -p passport-saml-metadata && git add CHANGELOG.md && git commit -am \"Updating changelog\"",
+    "lint": "semistandard src/*.js src/**/*.js test/*.js test/**/*.js --fix",
+    "mocha": "mocha --recursive --timeout 15000 --exit",
+    "coverage": "nyc npm run mocha",
+    "test": "npm run lint && npm run coverage"
+  },
+  "semistandard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "nyc": {
+    "cache": true,
+    "cacheDir": ".nyc_cache",
+    "include": [
+      "src/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "debug": "^4.3.1",
+    "lodash": "^4.17.20",
+    "passport-saml": "^2.0.2",
+    "xmldom": "^0.5.0",
+    "xpath": "0.0.32"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "^1.19.0",
+    "eslint": "^7.15.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "semistandard": "^16.0.0"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "got-resume",
+  "version": "2.0.6",
+  "description": "Fetch via HTTP/HTTPS using got with automatic resume after network failures",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "lib/**/*.js"
+  ],
+  "author": {
+    "name": "Overlook Motel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overlookmotel/got-resume.git"
+  },
+  "bugs": {
+    "url": "https://github.com/overlookmotel/got-resume/issues"
+  },
+  "dependencies": {
+    "bluebird": "^2.11.0",
+    "got": "^11.8.2",
+    "pump": "^3.0.0"
+  },
+  "devDependencies": {
+    "@overlookmotel/eslint-config": "^7.2.1",
+    "@overlookmotel/eslint-config-jest": "^4.1.1",
+    "@overlookmotel/eslint-config-node": "^2.1.2",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.23.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^23.20.0",
+    "eslint-plugin-node": "^11.1.0",
+    "fs-extra": "^9.1.0",
+    "jest": "^26.6.3"
+  },
+  "keywords": [
+    "download",
+    "resume",
+    "stream",
+    "http",
+    "https",
+    "got",
+    "url",
+    "get",
+    "fetch"
+  ],
+  "scripts": {
+    "test": "npm run lint && npm run test-main",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "test-main": "jest",
+    "cover": "npm run cover-main && rm -rf coverage",
+    "cover-main": "cross-env COVERAGE=true jest --coverage"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "readmeFilename": "README.md",
+  "license": "MIT"
+}

@@ -1,0 +1,29 @@
+{
+  "name": "cordova-plugin-bluetoothclassic-serial",
+  "version": "1.0.2",
+  "description": "Bluetooth Serial Communication Plugin",
+  "cordova": {
+    "id": "cordova-plugin-bluetoothclassic-serial",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mylertitchell/BluetoothClassicSerial.git"
+  },
+  "keywords": [
+    "cordova",
+    "bluetooth",
+    "serial",
+    "arduino",
+    "ecosystem:cordova"
+  ],
+  "author": "Tyler Mitchell <tyler_mitchell@hotmail.co.uk>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mylertitchell/BluetoothClassicSerial/issues"
+  },
+  "homepage": "https://github.com/mylertitchell/BluetoothClassicSerial#readme"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "gulp-modernizr",
+  "description": "Gulp wrapper for custom Modernizr builds",
+  "version": "4.0.2",
+  "license": "MIT",
+  "main": "index.js",
+  "bugs": "https://github.com/Modernizr/gulp-modernizr/issues",
+  "homepage": "https://github.com/Modernizr/gulp-modernizr#readme",
+  "repository": "https://github.com/Modernizr/gulp-modernizr.git",
+  "author": {
+    "name": "Modernizr",
+    "url": "https://modernizr.com/"
+  },
+  "contributors": [
+    {
+      "name": "rejas",
+      "url": "https://github.com/rejas"
+    }
+  ],
+  "dependencies": {
+    "customizr": "^2.0.3",
+    "plugin-error": "^1.0.1",
+    "through2": "^4.0.2",
+    "vinyl": "^2.2.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.22.0",
+    "eslint-config-gulp": "^5.0.1",
+    "gulp": "^4.0.2",
+    "mocha": "^8.3.2"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "modernizr",
+    "customizr"
+  ],
+  "scripts": {
+    "eslint": "eslint *.js test/*.js",
+    "eslint:fix": "eslint --fix *.js test/*.js",
+    "test": "mocha test/runner.js"
+  }
+}

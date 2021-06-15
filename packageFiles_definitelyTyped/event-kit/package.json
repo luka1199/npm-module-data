@@ -1,0 +1,28 @@
+{
+  "name": "event-kit",
+  "version": "2.5.3",
+  "description": "Simple library for implementing and consuming evented APIs",
+  "main": "./dist/event-kit",
+  "scripts": {
+    "build": "cross-env BABEL_KEEP_MODULES=false babel lib --out-dir dist --delete-dir-on-start",
+    "docs": "joanna-tello -o api.json package.json lib",
+    "prepublish": "npm run build && npm run docs",
+    "test": "jasmine-focused --captureExceptions --forceexit spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atom/event-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atom/event-kit/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "babel-preset-atomic": "^3.0.1",
+    "cross-env": "^7.0.3",
+    "jasmine-focused": "^1.0.7",
+    "joanna": "https://github.com/aminya/joanna"
+  }
+}

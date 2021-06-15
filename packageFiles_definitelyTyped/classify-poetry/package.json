@@ -1,0 +1,42 @@
+{
+  "name": "classify-poetry",
+  "version": "0.2.0",
+  "description": "recognize type poetry in a given text excerpt",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "format": "prettier --write '*.{js,md}' 'classifiers/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianMurphy/classify-poetry.git"
+  },
+  "keywords": [
+    "poetry",
+    "poem",
+    "verse",
+    "sonnet",
+    "haiku",
+    "classification",
+    "detect",
+    "recognize",
+    "analyze",
+    "natural",
+    "language",
+    "processing"
+  ],
+  "author": "Christian Murphy <christian.murphy.42@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChristianMurphy/classify-poetry/issues"
+  },
+  "homepage": "https://github.com/ChristianMurphy/classify-poetry#readme",
+  "devDependencies": {
+    "ava": "^3.0.0",
+    "prettier": "^2.0.3"
+  },
+  "dependencies": {
+    "cmu-pronouncing-dictionary": "^2.0.0",
+    "syllable": "^4.0.0"
+  }
+}

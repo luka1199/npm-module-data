@@ -1,0 +1,31 @@
+{
+  "name": "document-ready",
+  "main": "index.js",
+  "version": "2.0.2",
+  "description": "Document ready listener for modern browsers",
+  "license": "MIT",
+  "repository": "bendrucker/document-ready",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "document",
+    "ready",
+    "callback"
+  ],
+  "devDependencies": {
+    "browserify": "~17.0.0",
+    "dom-event-target": "~1.0.0",
+    "proxyquire": "~2.1.3",
+    "standard": "^16.0.0",
+    "tape": "^5.0.0"
+  },
+  "files": [
+    "*.js"
+  ]
+}

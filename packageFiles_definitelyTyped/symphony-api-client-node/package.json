@@ -1,0 +1,51 @@
+{
+  "name": "symphony-api-client-node",
+  "version": "1.1.1",
+  "description": "Symphony API Client for NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "form-data": "^3.0.0",
+    "https-proxy-agent": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "q": "^1.5.1",
+    "pubsub-js": "^1.9.2"
+  },
+  "engines": {
+    "node": ">=14.15.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SymphonyPlatformSolutions/api-client-node.git"
+  },
+  "keywords": [
+    "node",
+    "symphony-chat"
+  ],
+  "author": "Symphony Platform Solutions",
+  "contributors": [
+    "Olivier Poupeney <olivier.poupeney@symphony.com>",
+    "Vinay Mistry <vinay.mistry@symphony.com>",
+    "Mikhail Tarasov <mikhail.tarasov@symphony.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^26.6.3",
+    "nock": "^13.0.7"
+  },
+  "jest": {
+    "verbose": true
+  },
+  "bugs": {
+    "url": "https://github.com/SymphonyPlatformSolutions/api-client-node/issues"
+  },
+  "homepage": "https://github.com/SymphonyPlatformSolutions/api-client-node#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  }
+}

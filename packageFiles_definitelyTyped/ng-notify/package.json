@@ -1,0 +1,45 @@
+{
+  "name": "ng-notify",
+  "version": "0.8.0",
+  "description": "A simple, lightweight module for displaying notifications in your AngularJS app.",
+  "main": "./src/scripts/ng-notify.js",
+  "scripts": {
+    "test": "grunt travis"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matowens/ng-notify.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "App",
+    "notify",
+    "Provider",
+    "notification",
+    "alert",
+    "notice"
+  ],
+  "author": "Mat Owens <mat@peglegg.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matowens/ng-notify/issues"
+  },
+  "homepage": "https://github.com/matowens/ng-notify",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-htmlmin": "~0.3.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-sass": "~0.7.3",
+    "grunt-contrib-uglify": "~0.5.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-karma": "^0.10.1",
+    "grunt-processhtml": "~0.3.3",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.31",
+    "karma-coverage": "^0.3.1",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^1.0.0"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "mem-cache",
+  "version": "0.0.5",
+  "description": "simple in memory key/value cache with autoclean by timeout",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec test",
+    "cover": "istanbul cover _mocha -- -R spec test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/silviom/node-mem-cache.git"
+  },
+  "keywords": [
+    "cache"
+  ],
+  "author": "Silvio Massari <silvio.massari@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "1.11.0"
+  }
+}

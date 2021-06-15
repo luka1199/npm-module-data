@@ -1,0 +1,55 @@
+{
+  "name": "find-duplicated-property-keys",
+  "version": "1.2.6",
+  "description": "A package for detecting all duplicated property keys of a JSON string.",
+  "bin": "build/cli.js",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "jest ./src/ --coverage",
+    "dist": "standard src/**/*.js && yarn test && ./node_modules/.bin/babel src --ignore src/tests --out-dir build",
+    "start": "node ./build/cli",
+    "prepublishOnly": "yarn && yarn dist"
+  },
+  "keywords": [
+    "JSON",
+    "duplicate",
+    "property",
+    "key",
+    "validate",
+    "validation",
+    "validator"
+  ],
+  "author": "SebastianG",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "4.1.1",
+    "command-line-args": "5.1.1",
+    "command-line-usage": "6.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.13.16",
+    "@babel/core": "7.14.0",
+    "@babel/preset-env": "7.14.1",
+    "babel-plugin-add-module-exports": "1.0.4",
+    "coveralls": "3.1.0",
+    "jest": "26.6.3",
+    "jest-html-reporter": "3.3.0",
+    "standard": "16.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SebastianG77/find-duplicated-property-keys.git"
+  },
+  "bugs": "https://github.com/SebastianG77/find-duplicated-property-keys/issues",
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Test Report"
+        }
+      ]
+    ]
+  }
+}

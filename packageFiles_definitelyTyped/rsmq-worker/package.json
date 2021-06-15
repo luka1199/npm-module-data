@@ -1,0 +1,47 @@
+{
+  "name": "rsmq-worker",
+  "version": "0.5.2",
+  "description": "RSMQ helper to simply implement a worker around the message queue",
+  "keywords": [],
+  "homepage": "https://github.com/mpneuried/rsmq-worker",
+  "bugs": "https://github.com/mpneuried/rsmq-worker/issues",
+  "author": {
+    "name": "mpneuried",
+    "email": "",
+    "url": "https://github.com/rsmq-worker"
+  },
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mpneuried/rsmq-worker.git"
+  },
+  "scripts": {
+    "test": "COFFEECOV_INIT_ALL=false mocha --timeout 5000 --compilers coffee:coffee-script/register --require coffee-coverage/register-istanbul _src/test/main.coffee -R spec",
+    "test-cov": "npm run test; istanbul report text-summary lcov"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async": "2.1.x",
+    "lodash": "4.x",
+    "mpbasic": "0.0.x",
+    "rsmq": "0.7.x"
+  },
+  "devDependencies": {
+    "grunt": "1.x",
+    "grunt-contrib-clean": "1.x",
+    "grunt-contrib-coffee": "1.x",
+    "grunt-contrib-watch": "1.x",
+    "grunt-include-replace": "5.x",
+    "grunt-mocha-cli": "3.x",
+    "randoms": "0.x",
+    "should": "11.x",
+    "coffee-coverage": "1.x",
+    "coffee-script": "1.12.x",
+    "mocha": "3.2.x",
+    "coveralls": "2.11.x",
+    "istanbul": "0.4.x"
+  }
+}

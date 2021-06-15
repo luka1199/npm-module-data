@@ -1,0 +1,35 @@
+{
+  "name": "netgear",
+  "version": "4.3.2",
+  "description": "Node module to interact with Netgear routers via SOAP",
+  "main": "netgear.js",
+  "scripts": {
+    "test": "node test/test.js",
+    "generate-docs": "jsdoc --configure .jsdoc.json --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gruijter/netgear.js.git"
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "keywords": [
+    "netgear",
+    "router",
+    "soap",
+    "genie"
+  ],
+  "author": "Robin de Gruijter <gruijter@hotmail.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/gruijter/netgear.js/issues"
+  },
+  "homepage": "https://github.com/gruijter/netgear.js#readme",
+  "runkitExampleFilename": "test/runkitTest.js",
+  "dependencies": {
+    "smart-request-balancer": "^2.1.1",
+    "xml-js": "^1.6.11"
+  }
+}

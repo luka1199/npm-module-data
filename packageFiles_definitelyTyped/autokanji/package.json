@@ -1,0 +1,29 @@
+{
+  "name": "autokanji",
+  "version": "1.0.1",
+  "description": "Autocomplete suggestions for kana inputs.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "Japanese",
+    "Kanji",
+    "Kana",
+    "Hiragana",
+    "Katakana"
+  ],
+  "author": {
+    "name": "Tyler Martinez",
+    "email": "tyler.martinez.prof@gmail.com",
+    "url": "https://tylermartinez.github.io/"
+  },
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TylerMartinez/AutoKanji"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  }
+}

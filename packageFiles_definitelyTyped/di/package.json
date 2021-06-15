@@ -1,0 +1,29 @@
+{
+  "name": "di",
+  "version": "0.0.1",
+  "description": "Dependency Injection for Node.js. Heavily inspired by AngularJS.",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --compilers coffee:coffee-script test/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vojtajina/node-di.git"
+  },
+  "keywords": [
+    "di",
+    "dependency",
+    "injection",
+    "injector"
+  ],
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-simple-mocha": "~0.4",
+    "grunt-contrib-jshint": "~0.6",
+    "mocha": "~1.12",
+    "chai": "~1.7",
+    "coffee-script": "~1.6"
+  },
+  "author": "Vojta Jina <vojta.jina@gmail.com>",
+  "license": "MIT"
+}

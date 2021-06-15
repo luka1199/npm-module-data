@@ -1,0 +1,40 @@
+{
+  "name": "bristol",
+  "version": "0.4.0",
+  "description": "Insanely configurable logging for Node.js",
+  "main": "src/Bristol.js",
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && npm run test-cov && npm run check-cov",
+    "mocha": "mocha",
+    "test-cov": "istanbul cover _mocha",
+    "check-cov": "istanbul check-coverage --statements 90 --functions 90 --branches 70 --lines 90"
+  },
+  "homepage": "https://github.com/TomFrost/Bristol",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TomFrost/Bristol.git"
+  },
+  "keywords": [
+    "log",
+    "datatype",
+    "commoninfomodel",
+    "json"
+  ],
+  "author": "Tom Shawver <tom@frosteddesign.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "sinon": "^4.5.0",
+    "sinon-chai": "^3.2.0",
+    "standard": "^11.0.1",
+    "tmp": "0.0.31"
+  },
+  "dependencies": {
+    "json-stringify-safe": "^5.0.1",
+    "moment": "^2.22.2"
+  }
+}

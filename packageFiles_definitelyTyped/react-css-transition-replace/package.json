@@ -1,0 +1,63 @@
+{
+  "name": "react-css-transition-replace",
+  "version": "4.0.4",
+  "private": true,
+  "authors": "Marnus Weststrate <marnusw@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cd packages/demo && npm run start",
+    "test": "echo \"No test implemented\" && exit 0",
+    "lint": "eslint .",
+    "prettier": "prettier . --write"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.18.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ],
+    "*.{js,json,scss,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app",
+    "rules": {
+      "no-console": "warn",
+      "no-duplicate-imports": "error",
+      "no-unused-vars": "error",
+      "yoda": [
+        "error",
+        "never",
+        {
+          "exceptRange": true
+        }
+      ]
+    }
+  },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "teslajs",
+  "version": "4.9.9",
+  "description": "Full-featured Tesla REST API NodeJS package",
+  "dependencies": {
+    "promise": "^8.0.3",
+    "request": "^2.88.2",
+    "ws": "^7.2.1"
+  },
+  "bugs": {
+    "url": "https://github.com/mseminatore/TeslaJS/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mseminatore/TeslaJS.git"
+  },
+  "main": "teslajs.js",
+  "scripts": {
+    "test": "jshint teslajs.js samples && ./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js --verbose",
+    "minify": "uglifyjs teslajs.js -c -m --comments -o teslajs.min.js",
+    "prepublishOnly": "uglifyjs teslajs.js -c -m --comments -o teslajs.min.js"
+  },
+  "keywords": [
+    "Tesla",
+    "Model S",
+    "Model X",
+    "Model 3",
+    "REST"
+  ],
+  "author": {
+    "name": "Mark Seminatore",
+    "url": "https://github.com/mseminatore/TeslaJS"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "commander": "^7.0.0",
+    "coveralls": "^3.0.11",
+    "istanbul": "^0.4.5",
+    "jsdoc-to-markdown": "^7.0.0",
+    "jshint": "^2.11.0",
+    "mocha": "^9.0.0",
+    "sepia": "^2.0.2"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "geolite2",
+  "version": "0.0.0-development",
+  "description": "Maxmind's GeoLite2 Free Databases",
+  "main": "index.js",
+  "keywords": [
+    "maxmind",
+    "mmdb",
+    "geo",
+    "geoip",
+    "geoip2",
+    "geobase",
+    "geo lookup"
+  ],
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js",
+    "test": "scripts/test",
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/runk/node-geolite2.git"
+  },
+  "author": "Dmitry Shirokov <deadrunk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/runk/node-geolite2/issues"
+  },
+  "homepage": "https://github.com/runk/node-geolite2#readme",
+  "dependencies": {
+    "tar": "^5.0.5"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "semantic-release": "^17.0.8"
+  }
+}

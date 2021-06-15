@@ -1,0 +1,101 @@
+{
+  "name": "get-installed-path",
+  "version": "0.0.0-semantic-release",
+  "description": "Get installation path where the given package is installed. Works for globally and locally installed packages",
+  "repository": "tunnckoCore/get-installed-path",
+  "homepage": "https://github.com/tunnckoCore/get-installed-path",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)",
+  "nspId": "976d071f-5f2e-4ca6-9583-8c2b9dbf6e76",
+  "src": "./src/**/*.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.es.js",
+  "scripts": {
+    "start": "hela",
+    "test": "yarn start test",
+    "posttest": "rimraf dist/node_modules && rimraf dist/test.js",
+    "precommit": "yarn start precommit",
+    "commit": "yarn start commit"
+  },
+  "license": "MIT",
+  "licenseStart": 2016,
+  "engines": {
+    "node": ">=6",
+    "npm": ">=5",
+    "yarn": ">=1"
+  },
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "global-modules": "2.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-standard-tunnckocore": "1.0.10",
+    "hela": "3.2.2",
+    "hela-config-tunnckocore": "3.0.26",
+    "husky": "4.2.3",
+    "mkdirp": "1.0.3",
+    "mukla": "0.4.9",
+    "pkg-dir": "4.2.0",
+    "rimraf": "3.0.2",
+    "semantic-release": "17.0.4"
+  },
+  "keywords": [
+    "filepath",
+    "get",
+    "global",
+    "globally",
+    "install",
+    "installed",
+    "local",
+    "locally",
+    "npm",
+    "package",
+    "path",
+    "pkg",
+    "resolve"
+  ],
+  "verb": {
+    "run": true,
+    "toc": {
+      "render": true,
+      "method": "preWrite",
+      "maxdepth": 3
+    },
+    "layout": "empty",
+    "tasks": [
+      "readme"
+    ],
+    "related": {
+      "list": [
+        "always-done",
+        "minibase",
+        "try-catch-core",
+        "detect-installed",
+        "is-installed",
+        "global-modules",
+        "global-prefix",
+        "global-paths"
+      ],
+      "highlight": "detect-installed"
+    },
+    "lint": {
+      "reflinks": true
+    },
+    "reflinks": [
+      "always-done",
+      "async-done",
+      "base",
+      "charlike-cli",
+      "dezalgo",
+      "global-modules",
+      "hela",
+      "once",
+      "prs-welcome-img",
+      "prs-welcome-url"
+    ]
+  },
+  "release": {
+    "analyzeCommits": "simple-commit-message"
+  }
+}

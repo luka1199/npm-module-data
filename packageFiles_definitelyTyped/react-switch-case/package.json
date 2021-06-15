@@ -1,0 +1,28 @@
+{
+  "name": "react-switch-case",
+  "version": "1.5.1",
+  "description": "Little switch-case React component to render nested components.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development node build",
+    "build": "cross-env NODE_ENV=production node build",
+    "production": "npm run build && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexSergey/react-switch-case"
+  },
+  "author": "Aleksandrov Sergey <gooddev.sergey@gmail.com> (https://github.com/AlexSergey/react-switch-case)",
+  "license": "MIT",
+  "homepage": "https://github.com/AlexSergey/react-switch-case",
+  "keywords": [
+    "react",
+    "react-component",
+    "state",
+    "ui"
+  ],
+  "devDependencies": {
+    "react": "16.8.6",
+    "@rockpack/compiler": "1.0.0"
+  }
+}

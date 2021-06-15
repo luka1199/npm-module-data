@@ -1,0 +1,72 @@
+{
+  "name": "pizzip",
+  "version": "3.0.6",
+  "author": "Edgar Hipp",
+  "description": "Create, read and edit .zip files synchronously with Javascript",
+  "scripts": {
+    "lint:fix": "npm run prettier:fix && npm run eslint:fix",
+    "eslint:fix": "eslint_d 'es6/**/*.js' --fix",
+    "prettier:fix": "prettier --write '*.js' 'es6/**/*.js' 'test/test.js' test/node.js 'utils/*.js' 'utils/es6/**/*.js'",
+    "browserify:lib": "webpack",
+    "babel": "babel es6 --out-dir js",
+    "babel:watch": "npm run babel -- --watch",
+    "build": "npm run browserify:lib && npm run browserify:lib:min",
+    "browserify:lib:min": "cross-env MIN=true webpack",
+    "preversion": "npm run babel && npm run build && npm test && cp utils/dist/* dist",
+    "test": "mocha test/test.js",
+    "test:watch": "mocha test/test.js --watch",
+    "utils:build": "cd utils && cross-env MIN=true ./node_modules/.bin/webpack && ./node_modules/.bin/webpack && IE=true cross-env MIN=true ./node_modules/.bin/webpack && IE=true ./node_modules/.bin/webpack"
+  },
+  "contributors": [
+    {
+      "name": "Stuart Knightley"
+    },
+    {
+      "name": "Franz Buchinger"
+    },
+    {
+      "name": "António Afonso"
+    },
+    {
+      "name": "David Duponchel"
+    },
+    {
+      "name": "yiminghe"
+    },
+    {
+      "name": "Edgar Hipp"
+    }
+  ],
+  "main": "./js/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-xml-templating/pizzip"
+  },
+  "keywords": [
+    "zip",
+    "deflate",
+    "inflate"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "acorn": "^7.1.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint_d": "^8.0.0",
+    "mocha": "^7.0.0",
+    "prettier": "^1.19.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "pako": "~1.0.2"
+  },
+  "license": "(MIT OR GPL-3.0)"
+}

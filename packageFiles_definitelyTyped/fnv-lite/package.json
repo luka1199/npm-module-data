@@ -1,0 +1,31 @@
+{
+  "name": "fnv-lite",
+  "version": "1.2.1",
+  "description": "Small 128-bit FNV-1a library for the browser.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Harry Schmidt <goldibex@casetext.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/casetext/fnv-lite"
+  },
+  "bugs": {
+    "url": "https://github.com/casetext/fnv-lite/issues"
+  },
+  "keywords": [
+    "FNV",
+    "FNV-1a",
+    "Fowler-Noll-Vo",
+    "browser",
+    "small",
+    "lightweight",
+    "hash"
+  ]
+}

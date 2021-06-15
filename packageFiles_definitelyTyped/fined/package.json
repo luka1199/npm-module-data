@@ -1,0 +1,47 @@
+{
+  "name": "fined",
+  "version": "1.2.0",
+  "description": "Find a file given a declaration of locations.",
+  "author": "Gulp Team <team@gulpjs.com> (https://gulpjs.com/)",
+  "contributors": [
+    "Takayuki Sato <sttk.xslet@gmail.com>",
+    "Blaine Bublitz <blaine.bublitz@gmail.com>"
+  ],
+  "repository": "gulpjs/fined",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "LICENSE"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "nyc mocha --async-only",
+    "azure-pipelines": "nyc mocha --async-only --reporter xunit -O output=test.xunit",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "dependencies": {
+    "expand-tilde": "^2.0.2",
+    "is-plain-object": "^2.0.3",
+    "object.defaults": "^1.1.0",
+    "object.pick": "^1.2.0",
+    "parse-filepath": "^1.0.1"
+  },
+  "devDependencies": {
+    "coveralls": "github:phated/node-coveralls#2.x",
+    "eslint": "^2.13.1",
+    "eslint-config-gulp": "^3.0.1",
+    "expect": "^1.20.2",
+    "mocha": "^3.5.3",
+    "nyc": "^10.3.2"
+  },
+  "keywords": [
+    "find",
+    "lookup",
+    "config"
+  ]
+}

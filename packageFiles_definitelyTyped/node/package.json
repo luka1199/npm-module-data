@@ -1,0 +1,43 @@
+{
+  "name": "node-bin-gen",
+  "version": "9.0.3",
+  "description": "Generate a node binary package",
+  "author": "Aria Stewart <aredridel@dinhe.net>",
+  "main": "index.js",
+  "bin": "index.js",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aredridel/node-bin-gen"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "end-of-stream": "^1.4.1",
+    "make-fetch-happen": "^9.0.1",
+    "pump": "^3.0.0",
+    "rimraf": "^3.0.0",
+    "verror": "^1.9.0",
+    "yargs": "^17.0.1"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 8
+    },
+    "rules": {
+      "valid-typeof": "error",
+      "no-undef": "error",
+      "no-unused-vars": "error",
+      "no-process-exit": 0,
+      "no-shadow": 0,
+      "strict": 0,
+      "eqeqeq": 0,
+      "curly": 0
+    },
+    "env": {
+      "node": true,
+      "es6": true
+    }
+  }
+}

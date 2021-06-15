@@ -1,0 +1,85 @@
+{
+  "name": "git-root-dir",
+  "version": "1.0.2",
+  "description": "Find the root directory of a `git` repository",
+  "license": "MIT",
+  "repository": "https://github.com/luftywiranda13/git-root-dir",
+  "author": {
+    "name": "Lufty Wiranda",
+    "email": "lufty.wiranda@gmail.com",
+    "url": "https://www.luftywiranda.com"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "precommit": "remove-lockfiles && lint-staged",
+    "test:watch": "jest --watch",
+    "test": "xo && jest --coverage"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "find-up": "^2.1.0"
+  },
+  "devDependencies": {
+    "async-to-gen": "^1.4.0",
+    "husky": "^0.14.3",
+    "jest": "^22.0.4",
+    "lint-staged": "^7.0.0",
+    "remove-lockfiles": "^2.0.4",
+    "xo": "^0.20.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.js$": "async-to-gen"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "xo --fix",
+      "git add"
+    ],
+    "*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "singleQuote": true
+  },
+  "xo": {
+    "envs": [
+      "jest"
+    ],
+    "prettier": true,
+    "space": true
+  },
+  "keywords": [
+    ".git",
+    "dir",
+    "directory",
+    "entry",
+    "file",
+    "find-up",
+    "find",
+    "findup",
+    "folder",
+    "git",
+    "look-up",
+    "look",
+    "match",
+    "parent",
+    "parents",
+    "path",
+    "resolve",
+    "root",
+    "search",
+    "up",
+    "walk",
+    "walking"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "amplify-deferred",
+  "version": "0.0.6",
+  "description": "Adding jQuery Deferred support to the amplify.request component as a Node.js module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurentiustamate94/amplify-deferred.git"
+  },
+  "keywords": [
+    "amplify",
+    "Amplify",
+    "amplifyJS",
+    "AmplifyJS",
+    "request",
+    "amplify-request",
+    "amplify-deferred",
+    "deferred"
+  ],
+  "author": "Laurentiu Stamate <laurentiustamate94@yahoo.com> (https://github.com/laurentiustamate94)",
+  "license": "MIT",
+  "homepage": "https://github.com/laurentiustamate94/amplify-deferred",
+  "bugs": {
+    "url": "https://github.com/laurentiustamate94/amplify-deferred/issues"
+  },
+  "maintainers": [
+    "laurentiu <laurentiustamate94@yahoo.com>"
+  ],
+  "dependencies": {
+    "amplifier": ">= 1.0.0"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "grpc-error",
+  "version": "1.0.0",
+  "description": "Utility Error class suitable for gRPC error responses",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bojand/grpc-error.git"
+  },
+  "author": {
+    "name": "Bojan D.",
+    "email": "dbojan@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bojand/grpc-error/issues"
+  },
+  "homepage": "https://github.com/bojand/grpc-error",
+  "keywords": [
+    "protocol buffer",
+    "protobuf",
+    "grpc"
+  ],
+  "dependencies": {
+    "grpc-create-error": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "grpc": "^1.0.1",
+    "standard": "^10.0.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "ava": {
+    "files": [
+      "test/*.test.js"
+    ]
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  }
+}

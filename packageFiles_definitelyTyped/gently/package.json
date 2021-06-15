@@ -1,0 +1,18 @@
+{
+  "name": "gently",
+  "version": "1.0.0",
+  "directories": {
+    "lib": "./lib/gently"
+  },
+  "main": "./lib/gently/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felixge/node-gently.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "optionalDependencies": {}
+}

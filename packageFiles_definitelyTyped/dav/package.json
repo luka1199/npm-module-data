@@ -1,0 +1,49 @@
+{
+  "name": "dav",
+  "version": "1.8.0",
+  "author": "Gareth Aye [:gaye] <gaye@mozilla.com>",
+  "description": "WebDAV, CalDAV, and CardDAV client for nodejs and the browser",
+  "license": "MPL-2.0",
+  "main": "./dav.js",
+  "repository": "https://github.com/gaye/dav",
+  "keywords": [
+    "address book",
+    "calendar",
+    "contacts",
+    "dav",
+    "caldav",
+    "carddav",
+    "webdav",
+    "ical",
+    "vcard",
+    "sync",
+    "rfc 4791",
+    "rfc 6352",
+    "rfc 6578"
+  ],
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "co": "^4.6.0",
+    "debug": "^4.1.1",
+    "xmldom": "^0.1.27",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "babel-minify": "^0.5.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "chai": "^4.2.0",
+    "doctoc": "^0.15.0",
+    "mocha": "^5.2.0",
+    "nock": "^10.0.6",
+    "sinon": "^7.1.1",
+    "tcp-port-used": "^1.0.1"
+  },
+  "scripts": {
+    "test": "make test"
+  }
+}

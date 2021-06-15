@@ -1,0 +1,41 @@
+{
+  "name": "omgopass",
+  "version": "3.2.1",
+  "description": "A tiny memorable password generator for Node.js and browsers",
+  "keywords": [
+    "secure",
+    "random",
+    "password",
+    "generator",
+    "crypto"
+  ],
+  "scripts": {
+    "test": "jest",
+    "benchmark": "node ./test/benchmark.js",
+    "size-limit": "size-limit"
+  },
+  "browser": {
+    "./random.js": "./random.browser.js"
+  },
+  "repository": "omgovich/omgopass",
+  "author": "Vlad Shilov <omgovich@ya.ru>",
+  "license": "MIT",
+  "size-limit": [
+    {
+      "path": "index.js",
+      "limit": "350 B"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^2.2.0",
+    "benchmark": "^2.1.4",
+    "generate-password": "^1.4.2",
+    "jest": "^24.9.0",
+    "niceware": "^1.0.7",
+    "password-generator": "^2.2.3",
+    "randomatic": "^3.1.1",
+    "secure-random-password": "^0.2.1",
+    "xkpasswd": "^1.0.5",
+    "zxcvbn": "^4.4.2"
+  }
+}

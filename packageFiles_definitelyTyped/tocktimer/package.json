@@ -1,0 +1,29 @@
+{
+  "name": "tocktimer",
+  "version": "1.1.0",
+  "description": "timer object/class. kickass!",
+  "main": "tock.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrchimp/tock.git"
+  },
+  "keywords": [
+    "timer",
+    "clock",
+    "repetition"
+  ],
+  "author": "Mr Chimp <chimpytk@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrchimp/tock/issues"
+  },
+  "devDependencies": {
+    "grunt": "^1.2.0",
+    "grunt-contrib-jshint": "^3.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-focus": "^1.0.0",
+    "grunt-simple-mocha": "^0.4.1",
+    "mocha": "^8.2.1"
+  }
+}

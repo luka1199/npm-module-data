@@ -1,0 +1,49 @@
+{
+  "name": "promisify-supertest",
+  "description": "SuperTest + Promises",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "mocha",
+    "lint": "standard",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ariporad/promisify-supertest.git"
+  },
+  "keywords": [
+    "SuperTest",
+    "promise",
+    "as",
+    "promised",
+    "promisify",
+    "superagent",
+    "test"
+  ],
+  "author": "Ari Porad <npm@ariporad.com> (http://github.com/ariporad)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ariporad/promisify-supertest/issues"
+  },
+  "homepage": "https://github.com/ariporad/promisify-supertest#readme",
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "cz-conventional-changelog": "^1.1.0",
+    "express": "^4.13.3",
+    "mocha": "^2.2.5",
+    "semantic-release": "^4.3.4",
+    "standard": "^5.1.1",
+    "supertest": "1"
+  },
+  "peerDependencies": {
+    "supertest": "1"
+  },
+  "contributors": [
+    {
+      "name": "Francis Brito",
+      "email": "fr.br94@gmail.com",
+      "url": "https://github.com/francisbrito"
+    }
+  ]
+}

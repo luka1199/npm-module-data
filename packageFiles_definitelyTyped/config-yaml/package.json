@@ -1,0 +1,35 @@
+{
+    "name": "config-yaml",
+    "description": "YAML configuration for NodeJS",
+    "version": "1.1.6",
+    "author": "neolao <contact@neolao.com>",
+    "private": false,
+    "repository": "https://github.com/neolao/config-yaml.git",
+    "license": "MIT",
+    "main": "index.js",
+    "engines": {
+        "node": ">= 5"
+    },
+    "files": [
+        "index.js"
+    ],
+    "dependencies": {
+        "deepmerge": "^4.2.2",
+        "js-yaml": "^3.14.0"
+    },
+    "devDependencies": {
+        "eslint": "^7.11",
+        "eslint-plugin-solfege": "^1.0"
+    },
+    "scripts": {
+        "lint": "eslint --ext .js src",
+        "prebuild": "npm run lint",
+        "test": "node --harmony test/index.js"
+    },
+    "eslintConfig": {
+        "extends": [
+            "eslint:recommended",
+            "plugin:solfege/recommended"
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "crpc",
+  "version": "0.2.2",
+  "description": "Simple library for making requests to Cuvva-style RPC APIs",
+  "homepage": "https://github.com/billinghamj/crpc",
+  "bugs": "https://github.com/billinghamj/crpc/issues",
+  "license": "MIT",
+  "author": "James Billingham <james@jamesbillingham.com> (http://jamesbillingham.com)",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billinghamj/crpc.git"
+  },
+  "dependencies": {
+    "json-client": "^0.9.3"
+  },
+  "keywords": [
+    "crpc",
+    "cuvva",
+    "rpc",
+    "client",
+    "api"
+  ]
+}

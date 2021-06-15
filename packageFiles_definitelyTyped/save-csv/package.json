@@ -1,0 +1,36 @@
+{
+  "name": "save-csv",
+  "version": "4.1.0",
+  "description": "Download an array of objects as a CSV file in the browser",
+  "author": "silverwind",
+  "repository": "silverwind/save-csv",
+  "main": "save-csv.js",
+  "browser": "save-csv.js",
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "csv",
+    "save",
+    "excel",
+    "export",
+    "locale-aware",
+    "download",
+    "browser",
+    "json"
+  ],
+  "files": [
+    "save-csv.js",
+    "save-csv.min.js"
+  ],
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-silverwind": "^2.0.10",
+    "gzip-size-cli": "^3.0.0",
+    "semver": "^5.6.0",
+    "uglify-js": "^3.4.9",
+    "updates": "^5.3.0",
+    "ver": "^3.0.0"
+  }
+}

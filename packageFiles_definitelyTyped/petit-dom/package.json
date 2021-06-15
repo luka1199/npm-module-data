@@ -1,0 +1,34 @@
+{
+  "name": "petit-dom",
+  "version": "0.6.0",
+  "description": "Minimalist virtual dom library",
+  "type": "module",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yelouafi/petit-dom.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yelouafi/petit-dom/issues"
+  },
+  "keywords": [
+    "javascript",
+    "virtual dom"
+  ],
+  "author": "Yassine ELOUAFI <yelouafi@gmail.com>",
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "faucet": "^0.0.1",
+    "jsdom": "^15.1.1",
+    "tape": "^4.11.0"
+  },
+  "scripts": {
+    "lint": "eslint src test",
+    "test": "node test/index.js | faucet",
+    "check": "npm run lint && npm run test",
+    "release:patch": "npm version patch && git push --follow-tags && npm publish",
+    "release:minor": "npm version minor && git push --follow-tags && npm publish",
+    "release:major": "npm version major && git push --follow-tags && npm publish"
+  }
+}

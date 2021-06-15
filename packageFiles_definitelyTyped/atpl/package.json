@@ -1,0 +1,44 @@
+{
+  "name": "atpl",
+  "description": "A complete and fast template engine fully compatible with twig and similar to jinja with zero dependencies.",
+  "version": "0.9.3",
+  "author": "Carlos Ballesteros <cballesterosvelasco@gmail.com> (http://cballesterosvelasco.es/)",
+  "contributors": [
+    "Roberto Guevara <raguevara@uci.cu>",
+    "Stuart Carnie <stuart.carnie@gmail.com>"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "supertest": "0.13.0",
+    "express": "3.11.0",
+    "should": "4.0.4",
+    "mocha": "1.21.0",
+    "async": "0.9.0",
+    "moment": "2.19.3"
+  },
+  "homepage": "https://github.com/soywiz/atpl.js",
+  "keywords": [
+    "template",
+    "engine",
+    "inheritance",
+    "twig",
+    "jinja",
+    "django",
+    "swig",
+    "consolidate",
+    "express"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/soywiz/atpl.js.git"
+  },
+  "main": "lib/atpl.js",
+  "scripts": {
+    "benchmark": "tsc && node benchmarks/benchmark.js",
+    "test": "tsc && ./node_modules/.bin/mocha --ui exports --globals name "
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  }
+}

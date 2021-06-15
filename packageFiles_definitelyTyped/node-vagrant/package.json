@@ -1,0 +1,58 @@
+{
+  "name": "node-vagrant",
+  "version": "1.5.0",
+  "description": "Node js wrapper for vagrant CLI - command line tool.",
+  "main": "index.js",
+  "keywords": [
+    "vagrant"
+  ],
+  "scripts": {
+    "example": "cd example && node example.js",
+    "test": "node ./node_modules/mocha/bin/mocha test",
+    "test-all": "export RUN_INTEGRATION_TESTS=1 && node ./node_modules/mocha/bin/mocha test",
+    "lint": "eslint src/ test/ index.js"
+  },
+  "author": {
+    "name": "Edin Mujagic"
+  },
+  "contributors": [
+    {
+      "name": "Maximilian Klein",
+      "url": "https://github.com/LittleHelicase"
+    },
+    {
+      "name": "Jacob Payne",
+      "url": "https://github.com/Latrasis"
+    },
+    {
+      "name": "Friedemann Stoffregen",
+      "url": "https://github.com/Donderda"
+    },
+    {
+      "name": "Leonardo Nahra",
+      "url": "https://github.com/lanahra"
+    },
+    {
+      "name": "Tyler Stiene",
+      "url": "https://github.com/Stieneee"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edin-m/node-vagrant.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edin-m/node-vagrant/issues"
+  },
+  "homepage": "https://github.com/edin-m/node-vagrant",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "4.17.19"
+  },
+  "devDependencies": {
+    "chai": "2.1.0",
+    "mocha": "5.2.0",
+    "sinon": "3.2.0",
+    "rewire": "5.0.0"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "express-correlation-id",
+  "version": "1.3.1",
+  "description": "Express middleware to correlate requests across http calls",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "test",
+    "examples"
+  ],
+  "scripts": {
+    "test": "ava",
+    "coverage": "nyc --check-coverage --lines 100 npm test",
+    "lint": "eslint index.js test/*.js examples/*.js",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toboid/express-correlation-id.git"
+  },
+  "keywords": [
+    "express",
+    "logging",
+    "correlation",
+    "debug"
+  ],
+  "author": "toboid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toboid/express-correlation-id/issues"
+  },
+  "homepage": "https://github.com/toboid/express-correlation-id#readme",
+  "dependencies": {
+    "correlation-id": "^3.1.0"
+  },
+  "devDependencies": {
+    "ava": "^2.0.0",
+    "coveralls": "^3.0.7",
+    "eslint": "^6.6.0",
+    "eslint-config-toboid": "^2.0.0",
+    "express": "^4.16.4",
+    "nyc": "^14.0.0",
+    "supertest": "^4.0.2"
+  }
+}

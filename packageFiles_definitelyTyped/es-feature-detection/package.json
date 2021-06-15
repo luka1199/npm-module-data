@@ -1,0 +1,64 @@
+{
+  "name": "es-feature-detection",
+  "version": "3.0.0",
+  "description": "ECMAScript feature and API detection",
+  "main": "index.js",
+  "sideEffects": false,
+  "scripts": {
+    "test:raw": "cross-env TS_NODE_PROJECT=./tests/tsconfig.json mocha --require ts-node/register tests/**/*.test.ts",
+    "test": "npm run test:raw -- --reporter dot",
+    "build": "node ./builds/index/all.js",
+    "build:test": "node ./builds/tests/all.js",
+    "compile": "tsc -p ./",
+    "clean": "node ./builds/index/clean.js",
+    "clean:test": "node ./builds/tests/clean.js",
+    "prepublishOnly": "npm run build && npm run compile",
+    "postpublish": "npm run clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Tokimon@github.com/Tokimon/es-feature-detection.git"
+  },
+  "keywords": [
+    "es6",
+    "es7",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018",
+    "es2019",
+    "es2020",
+    "ecmascript",
+    "feature",
+    "detect",
+    "check",
+    "test",
+    "syntax",
+    "polyfill",
+    "builtin",
+    "dom",
+    "localization"
+  ],
+  "author": "Toke Voltelen <tokevoltelen@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tokimon/es-feature-detection/issues"
+  },
+  "homepage": "https://github.com/Tokimon/es-feature-detection#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "4.2.11",
+    "@types/globby": "9.1.0",
+    "@types/mocha": "7.0.2",
+    "@types/node": "13.11.1",
+    "chai": "4.2.0",
+    "cross-env": "7.0.2",
+    "globby": "11.0.0",
+    "mocha": "7.1.1",
+    "ts-node": "8.8.2",
+    "tslint": "6.1.1",
+    "tslint-config-semistandard": "8.0.1",
+    "typescript": "3.8.3",
+    "vanillajs-helpers": "2.0.2"
+  }
+}

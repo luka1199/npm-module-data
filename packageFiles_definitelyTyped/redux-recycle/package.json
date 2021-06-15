@@ -1,0 +1,64 @@
+{
+  "name": "redux-recycle",
+  "version": "1.4.0",
+  "description": "higher-order reducer to reset the redux state on certain actions",
+  "main": "lib/index.js",
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "clean": "./node_modules/.bin/rimraf lib",
+    "build": "./node_modules/.bin/babel src --out-dir lib",
+    "lint": "./node_modules/.bin/eslint src test",
+    "size": "size-limit",
+    "test": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --compilers js:babel-core/register --recursive",
+    "test:watch": "cross-env NODE_ENV=test ./node_modules/.bin/mocha --compilers js:babel-core/register --recursive --watch",
+    "test:cov": "./node_modules/.bin/babel-node ./node_modules/.bin/isparta cover ./node_modules/.bin/_mocha -- --recursive",
+    "prepublish": "npm run lint && npm run test && npm run size && npm run clean && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omnidan/redux-recycle.git"
+  },
+  "size-limit": [
+    {
+      "path": "src/index.js",
+      "limit": "126 B"
+    }
+  ],
+  "keywords": [
+    "redux",
+    "flux",
+    "recycle",
+    "state",
+    "higher-order reducer",
+    "hor"
+  ],
+  "author": "Daniel Bugl <me@omnidan.net> (https://github.com/omnidan)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/omnidan/redux-recycle/issues"
+  },
+  "homepage": "https://github.com/omnidan/redux-recycle",
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^2.2.4",
+    "babel-cli": "^6.5.1",
+    "babel-core": "^6.5.2",
+    "babel-eslint": "^5.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.5.0",
+    "babel-preset-es2015": "^6.5.0",
+    "chai": "^3.5.0",
+    "cross-env": "^5.0.1",
+    "eslint": "~2.2.0",
+    "eslint-config-standard": "~5.1.0",
+    "eslint-plugin-promise": "^1.0.8",
+    "eslint-plugin-standard": "^1.3.2",
+    "expect": "^1.14.0",
+    "isparta": "^4.0.0",
+    "mocha": "^2.4.5",
+    "rimraf": "^2.5.2"
+  },
+  "dependencies": {
+    "redux": "^3.3.1"
+  }
+}

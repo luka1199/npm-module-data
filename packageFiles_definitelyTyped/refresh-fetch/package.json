@@ -1,0 +1,51 @@
+{
+  "name": "refresh-fetch",
+  "description": "Wrapper around fetch capable of graceful authentication token refreshing.",
+  "version": "0.7.0",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "clean": "rimraf lib dist coverage",
+    "lint": "eslint src test",
+    "prepublishOnly": "npm run clean && npm run lint && npm test && npm run build",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vlki/refresh-fetch.git"
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "api",
+    "fetch",
+    "auth",
+    "token",
+    "refresh"
+  ],
+  "author": "Jan Vlcek <vlki@vlki.cz>",
+  "license": "MIT",
+  "homepage": "https://github.com/vlki/refresh-fetch",
+  "dependencies": {
+    "lodash": "^4.17.19"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-flow": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "flow-bin": "^0.129.0",
+    "jest": "^26.1.0",
+    "rimraf": "^3.0.2"
+  }
+}

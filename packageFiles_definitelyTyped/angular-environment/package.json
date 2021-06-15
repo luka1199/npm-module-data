@@ -1,0 +1,53 @@
+{
+  "name": "angular-environment",
+  "version": "1.0.8",
+  "description": "AngujarJS Environment Plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanpablob/angular-environment.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "environment",
+    "env"
+  ],
+  "author": "juanpablob <m.juanpablob@gmail.com>",
+  "contributors": [
+    "questchile <questchile@gmail.com>",
+    "nirarazi <nir.arazi@gmail.com>",
+    "rars <github.com/rars>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/juanpablob/angular-environment/issues"
+  },
+  "homepage": "https://github.com/juanpablob/angular-environment#readme",
+  "peerDependencies": {
+    "angular": ">1.2.0"
+  },
+  "devDependencies": {
+    "angular": ">1.2.0",
+    "angular-mocks": ">1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.3",
+    "jasmine": "^2.6.0",
+    "jasmine-core": "^2.6.1",
+    "karma": "^1.6.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-jasmine": "^1.1.0",
+    "yargs": "^3.15.0"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "mudder",
+  "version": "1.0.10",
+  "description": "Find lexicographical points between strings",
+  "main": "dist/mudder.min.js",
+  "scripts": {
+    "pretest": "node tangle.js && rm -fr dist && mkdir -p dist",
+    "test": "npm run pretest && tape 'test/**/*-test.js'",
+    "browserify": "node_modules/.bin/browserify index.js -o dist/mudder.js -s mudder",
+    "compile": "node_modules/.bin/google-closure-compiler-js --createSourceMap true dist/mudder.js > dist/mudder.min.js",
+    "build": "npm run test && npm run browserify && npm run compile && rm dist/mudder.js"
+  },
+  "keywords": [
+    "string",
+    "mean",
+    "lexicographical",
+    "distance",
+    "number",
+    "radix",
+    "base"
+  ],
+  "author": "Ahmed Fasih",
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fasiha/mudderjs.git"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "google-closure-compiler-js": "^20170521.0.0",
+    "tape": "^4.6.0"
+  }
+}

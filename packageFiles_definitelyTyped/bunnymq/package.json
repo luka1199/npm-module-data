@@ -1,0 +1,50 @@
+{
+  "name": "bunnymq",
+  "version": "2.5.0",
+  "description": "BunnyMq is a RabbitMq wrapper",
+  "keywords": [
+    "rabbitmq",
+    "broker",
+    "amqp",
+    "taskQueue",
+    "message",
+    "publish",
+    "subscribe"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "cover": "test -d .nyc_output && nyc report --reporter lcov",
+    "test": "nyc mocha --recursive --timeout=20000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dial-once/node-bunnymq.git"
+  },
+  "author": "Dial Once",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dial-once/node-bunnymq/issues"
+  },
+  "homepage": "https://github.com/dial-once/node-bunnymq#readme",
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "deserialize-error": "0.0.3",
+    "dotenv": "^7.0.0",
+    "serialize-error": "^3.0.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "child-process-promise": "^2.2.1",
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "mocha": "^6.0.2",
+    "nyc": "^13.3.0"
+  },
+  "engines": {
+    "node": ">=6"
+  }
+}

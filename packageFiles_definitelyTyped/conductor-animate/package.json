@@ -1,0 +1,66 @@
+{
+  "name": "conductor-animate",
+  "version": "1.0.1",
+  "description": "Orchestrating complex page layout animations with a flick of the wrist.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --silent",
+    "build": "babel src -d .",
+    "prepublish": "npm run build",
+    "storybook": "start-storybook",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaeKimJR/conductor-animate.git"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "conductor",
+    "conductor-animate",
+    "react-transition-group",
+    "spring",
+    "animate",
+    "animations",
+    "react"
+  ],
+  "author": "taekimjr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TaeKimJR/conductor-animate/issues"
+  },
+  "homepage": "https://github.com/TaeKimJR/conductor-animate#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-options": "^5.0.11",
+    "@storybook/react": "^5.0.11",
+    "@storybook/storybook-deployer": "^2.8.1",
+    "babel-jest": "^24.8.0",
+    "babel-loader": "^8.0.5",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.12.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "jest": "^24.8.0",
+    "react": "^16.2.0",
+    "react-animations": "^1.0.0",
+    "react-dom": "^16.2.0",
+    "react-spring": "^8.0.20",
+    "styled-components": "^4.2.0"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react-transition-group": "^4.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

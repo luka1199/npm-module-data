@@ -1,0 +1,48 @@
+{
+  "name": "license-checker-webpack-plugin",
+  "description": "Verifies licenses of all external dependencies in a compilation, and outputs them to a file.",
+  "version": "0.2.1",
+  "license": "MIT",
+  "author": {
+    "name": "Daniel Perez Alvarez",
+    "email": "unindented@gmail.com",
+    "url": "http://unindented.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/license-checker-webpack-plugin.git"
+  },
+  "keywords": [
+    "license",
+    "webpack"
+  ],
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --projects jest.*.config.js"
+  },
+  "peerDependencies": {
+    "webpack": "^4.4.0 || ^5.4.0"
+  },
+  "dependencies": {
+    "glob": "^7.1.6",
+    "lodash.template": "^4.5.0",
+    "minimatch": "^3.0.4",
+    "semver": "^6.3.0",
+    "spdx-expression-validate": "^2.0.0",
+    "spdx-satisfies": "^5.0.0",
+    "superstruct": "^0.10.12",
+    "webpack-sources": "^1.4.3",
+    "wrap-ansi": "^6.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-formatter-pretty": "^2.1.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-jest": "^22.20.0",
+    "jest": "^24.9.0",
+    "jest-runner-eslint": "^0.7.5",
+    "prettier": "^1.18.2",
+    "webpack": "^5.4.0"
+  }
+}

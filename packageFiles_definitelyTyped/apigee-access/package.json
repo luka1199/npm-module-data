@@ -1,0 +1,22 @@
+{
+  "name": "apigee-access",
+  "version": "1.4.0",
+  "description": "Provides access to Apigee-specific functionality",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/apigee/apigee-access.git"
+  },
+  "keywords": [
+    "apigee"
+  ],
+  "author": "gbrail <greg@apigee.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apigee/apigee-access/issues"
+  },
+  "homepage": "https://github.com/apigee/apigee-access"
+}

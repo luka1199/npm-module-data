@@ -1,0 +1,54 @@
+{
+  "name": "jquery-focusable",
+  "description": "Gets all focusable descendant elements for the first element in the set of matched elements",
+  "version": "1.0.1",
+  "scripts": {
+    "start": "karma start --autoWatch true --singleRun false",
+    "test": "karma start --autoWatch false --singleRun true",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
+    "build": "npm run jsdoc && npm run minify",
+    "clean": "rimraf jsdoc test_reports *.min.js lint.txt",
+    "fix": "eslint jquery.focusable.js --fix",
+    "jsdoc": "jsdoc jquery.focusable.js -d jsdoc",
+    "lint": "eslint jquery.focusable.js > lint.txt",
+    "minify": "jsmin -o jquery.focusable.min.js jquery.focusable.js"
+  },
+  "pre-commit": "prepublish",
+  "author": "Ian McBurnie <ianmcburnie@hotmail.com>",
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "ebay",
+    "accessibility",
+    "a11y"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/makeup-jquery/jquery-focusable.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "coveralls": "^3",
+    "eslint": "^4",
+    "eslint-config-ebay": "~0.1",
+    "jasmine-core": "^2",
+    "jquery": ">=1.11",
+    "jsdoc": "^3",
+    "jsmin": "^1",
+    "karma": "^1",
+    "karma-coverage": "^1",
+    "karma-html-reporter": "~0.2",
+    "karma-jasmine": "^1",
+    "karma-junit-reporter": "^1",
+    "karma-phantomjs-launcher": "^1",
+    "phantomjs-prebuilt": "^2",
+    "pre-commit": "^1",
+    "rimraf": "^2"
+  },
+  "peerDependencies": {
+    "jquery": ">=1.11"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "random-boolean",
+  "version": "1.0.0",
+  "description": "Get a random boolean",
+  "license": "MIT",
+  "repository": "arthurvr/random-boolean",
+  "author": {
+    "name": "Arthur Verschaeve",
+    "email": "contact@arthurverschaeve.be",
+    "url": "arthurverschaeve.be"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "random",
+    "bool",
+    "boolean",
+    "true",
+    "false"
+  ],
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  }
+}

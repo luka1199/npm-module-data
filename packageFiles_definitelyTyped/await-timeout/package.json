@@ -1,0 +1,65 @@
+{
+  "name": "await-timeout",
+  "version": "1.1.1",
+  "description": "A Promise-based API for setTimeout / clearTimeout",
+  "author": {
+    "name": "Vitaliy Potapov",
+    "email": "noginsk@rambler.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vitalets/await-timeout.git"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "main": "src/index.js",
+  "files": [
+    "src/",
+    "es5/",
+    "README.md"
+  ],
+  "scripts": {
+    "lint": "eslint src test scripts",
+    "test": "mocha test/setup test/specs",
+    "test:installed": "node scripts/install-local && LIB_PATH=../.installed/node_modules/await-timeout npm t",
+    "build:es5": "babel src -d es5 --presets=@babel/preset-env",
+    "ci": "npm run lint && npm test",
+    "prerelease": "run-s lint test test:installed build:es5",
+    "release": "npm version $VER && npm publish",
+    "postrelease": "git push --follow-tags --no-verify",
+    "release-patch": "VER=patch npm run release",
+    "release-minor": "VER=minor npm run release"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test",
+      "pre-push": "npm run lint && npm test"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": "eslint"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "assert-rejects": "^1.0.0",
+    "eslint": "^7.18.0",
+    "husky": "^4.3.8",
+    "install-local": "^3.0.1",
+    "lint-staged": "^10.5.3",
+    "mocha": "^8.2.1",
+    "npm-run-all": "^4.1.5",
+    "sinon": "^9.2.4"
+  },
+  "keywords": [
+    "timeout",
+    "promise",
+    "promise-api",
+    "promises",
+    "settimeout",
+    "cleartimeout"
+  ],
+  "license": "MIT"
+}

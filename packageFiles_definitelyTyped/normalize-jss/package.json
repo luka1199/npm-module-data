@@ -1,0 +1,39 @@
+{
+  "name": "normalize-jss",
+  "version": "4.0.0",
+  "description": "JSS port of normalize.css",
+  "author": {
+    "name": "Pavel Davydov",
+    "email": "typical000@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:cssinjs/normalize-jss.git"
+  },
+  "keywords": [
+    "normalize",
+    "jss",
+    "jsstyles",
+    "cssinjs"
+  ],
+  "scripts": {
+    "lint": "eslint ./index.js",
+    "prepublishOnly": "npm run lint"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-config-jss": "^3.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.8.0"
+  },
+  "peerDependencies": {
+    "jss": "^8.1.0",
+    "jss-camel-case": "^5.0.0",
+    "jss-global": "^2.0.0",
+    "jss-vendor-prefixer": "^6.0.0"
+  }
+}

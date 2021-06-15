@@ -1,0 +1,39 @@
+{
+  "name": "angular-desktop-notification",
+  "version": "1.1.6",
+  "description": "A simple HTML5 notification for Angular 1",
+  "main": "dist/angular-desktop-notification.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "html5",
+    "notification"
+  ],
+  "author": {
+    "name": "Julius Marvin S. San Pascual",
+    "email": "jm.sanpascual@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmsanpascual/angular-desktop-notification.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jmsanpascual/angular-desktop-notification/issues"
+  },
+  "homepage": "https://github.com/jmsanpascual/angular-desktop-notification#readme",
+  "devDependencies": {
+    "angular": "^1.6.6",
+    "angular-mocks": "^1.6.6",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.2.0",
+    "grunt-contrib-uglify": "^3.1.0",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-spec-reporter": "0.0.31"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "romans",
+  "version": "1.0.3",
+  "description": "A small, no-dependency lib for converting to and from roman numerals",
+  "main": "romans.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qbunt/romans.git"
+  },
+  "keywords": [
+    "roman",
+    "translation",
+    "numerals"
+  ],
+  "scripts": {
+    "test": "jest",
+    "ci": "jest --coverage",
+    "test-with-coverage": "jest --coverage && cat ./coverage/lcov.info | codacy-coverage"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "author": "qbunt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/qbunt/romanize/issues"
+  },
+  "homepage": "https://github.com/qbunt/romanize#readme",
+  "devDependencies": {
+    "codecov": "^3.6.5",
+    "jest": "^24.8.0"
+  },
+  "dependencies": {}
+}

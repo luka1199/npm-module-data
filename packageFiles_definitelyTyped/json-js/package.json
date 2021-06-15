@@ -1,0 +1,25 @@
+{
+  "name": "json-js",
+  "version": "1.1.1",
+  "description": "JSON in JavaScript",
+  "main": "cycle.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cangosta/JSON-js.git"
+  },
+  "keywords": [
+    "cyclic",
+    "json",
+    "cycle",
+    "parsing"
+  ],
+  "author": "Douglas Crockford",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cangosta/JSON-js/issues"
+  },
+  "homepage": "https://github.com/cangosta/JSON-js#readme"
+}

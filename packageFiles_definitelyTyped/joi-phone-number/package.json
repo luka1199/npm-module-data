@@ -1,0 +1,62 @@
+{
+  "name": "joi-phone-number",
+  "version": "5.0.1",
+  "description": "Phone number validation rule for Joi",
+  "homepage": "https://github.com/Salesflare/joi-phone-number",
+  "author": "Salesflare <developers@salesflare.com> (https://salesflare.com)",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    "joi",
+    "extention",
+    "phone number",
+    "rule"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm audit",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Salesflare/joi-phone-number.git"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "notify": false,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib/**/*.js",
+      "!__tests__"
+    ]
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Salesflare/joi-phone-number/issues"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "google-libphonenumber": "3.2.17"
+  },
+  "devDependencies": {
+    "coveralls": "^3.1.0",
+    "eslint": "^7.20.0",
+    "eslint-config-xo-space": "^0.26.0",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "joi": "^17.4.0"
+  },
+  "engines": {
+    "node": ">=12.16.0"
+  }
+}

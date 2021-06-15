@@ -1,0 +1,39 @@
+{
+  "name": "bemmer",
+  "version": "1.1.0",
+  "description": "BEM-like simple classname builder.",
+  "main": "./distributions/index.js",
+  "scripts": {
+    "babel": "babel ./sources --out-dir ./distributions",
+    "test": "ava './tests/**/*.test.js' -t | tap-diff"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:axross/bemmer.git"
+  },
+  "keywords": [
+    "react",
+    "bem",
+    "classname",
+    "css"
+  ],
+  "author": "axross",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/axross/bemmer/issues"
+  },
+  "homepage": "https://github.com/axross/bemmer",
+  "devDependencies": {
+    "ava": "0.12.0",
+    "babel-cli": "6.6.4",
+    "babel-core": "6.6.4",
+    "babel-plugin-transform-object-assign": "6.5.0",
+    "babel-preset-es2015": "6.6.0",
+    "babel-register": "6.6.0",
+    "eslint": "2.3.0",
+    "tap-diff": "0.1.1"
+  },
+  "dependencies": {
+    "invariant": "2.2.0"
+  }
+}

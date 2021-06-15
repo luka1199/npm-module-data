@@ -1,0 +1,29 @@
+{
+  "name": "vitalsigns",
+  "version": "0.4.3",
+  "description": "Powerful and customizable application health monitoring",
+  "main": "lib/VitalSigns.js",
+  "scripts": {
+    "test": "echo Node `node -v`; echo NPM `npm -v`; echo Mocha `mocha --version`; mocha --recursive -R spec -s 500 test"
+  },
+  "homepage": "https://github.com/TomFrost/node-vitalsigns",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TomFrost/node-vitalsigns.git"
+  },
+  "keywords": [
+    "health",
+    "check",
+    "monitor",
+    "express",
+    "cpu",
+    "memory",
+    "application"
+  ],
+  "author": "Tom Frost <tom@frosteddesign.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.14.0",
+    "should": "~2.1.0"
+  }
+}

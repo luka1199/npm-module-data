@@ -1,0 +1,66 @@
+{
+  "name": "npm-paths",
+  "description": "Returns an array of NPM directory paths based on the user's platform and environment.",
+  "version": "2.0.0",
+  "homepage": "https://github.com/jonschlinkert/npm-paths",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "contributors": [
+    "Brian Woodward (https://twitter.com/doowb)",
+    "Jon Schlinkert (http://twitter.com/jonschlinkert)"
+  ],
+  "repository": "jonschlinkert/npm-paths",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/npm-paths/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "global-modules": "^2.0.0"
+  },
+  "devDependencies": {
+    "gulp-format-md": "^2.0.0",
+    "mocha": "^5.2.0"
+  },
+  "keywords": [
+    "directory",
+    "dirname",
+    "global",
+    "module",
+    "npm",
+    "package",
+    "path",
+    "paths",
+    "prefix",
+    "resolve"
+  ],
+  "verb": {
+    "run": true,
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "global-modules",
+        "global-paths",
+        "global-prefix"
+      ]
+    },
+    "lint": {
+      "reflinks": true
+    }
+  }
+}

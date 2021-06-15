@@ -1,0 +1,37 @@
+{
+  "name": "protoc-plugin",
+  "version": "0.0.6",
+  "description": "Create protoc code-generation plugins easily in nodejs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest",
+    "pb": "protoc -I proto/ proto/google/api/http.proto proto/google/api/annotations.proto proto/google/protobuf/compiler/plugin.proto --js_out=import_style=commonjs,binary:src/",
+    "version": "npm run pb",
+    "postversion": "git push && git push --tags",
+    "release": "npm version patch && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konsumer/node-protoc-plugin.git"
+  },
+  "keywords": [
+    "proto",
+    "protobuf",
+    "protoc",
+    "plugin"
+  ],
+  "author": "David Konsumer <konsumer@jetboystudio.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konsumer/node-protoc-plugin/issues"
+  },
+  "homepage": "https://github.com/konsumer/node-protoc-plugin#readme",
+  "dependencies": {
+    "buffer-to-uint8array": "^1.1.0",
+    "google-protobuf": "^3.2.0",
+    "stream-to-promise": "^2.2.0"
+  },
+  "devDependencies": {
+    "jest": "^19.0.2"
+  }
+}

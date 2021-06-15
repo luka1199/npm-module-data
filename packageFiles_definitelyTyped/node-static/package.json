@@ -1,0 +1,55 @@
+{
+  "name": "node-static",
+  "version": "0.7.11",
+  "description": "simple, compliant file streaming module for node",
+  "author": "Alexis Sellier <alexis@cloudhead.io>",
+  "contributors": [
+    "Pablo Cantero <pablo@pablocantero.com>",
+    "Ionică Bizău <bizauionica@gmail.com>",
+    "Brett Zamir"
+  ],
+  "main": "./lib/node-static",
+  "license": "MIT",
+  "bin": {
+    "static": "bin/cli.js"
+  },
+  "keywords": [
+    "http",
+    "static",
+    "file",
+    "server"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/cloudhead/node-static"
+  },
+  "scripts": {
+    "start": "./bin/cli.js",
+    "lint": "eslint .",
+    "vows": "vows --spec --isolate",
+    "test": "nyc npm run vows"
+  },
+  "dependencies": {
+    "colors": "^1.4.0",
+    "mime": "^2.5.2",
+    "minimatch": "^3.0.4",
+    "neodoc": "^2.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "nyc": "^15.1.0",
+    "request": "latest",
+    "vows": "latest"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/cloudhead/node-static/issues"
+  },
+  "homepage": "https://github.com/cloudhead/node-static",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  }
+}

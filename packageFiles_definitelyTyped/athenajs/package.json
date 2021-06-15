@@ -1,0 +1,60 @@
+{
+    "name": "athenajs",
+    "version": "0.1.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AthenaJS/athenajs.git"
+    },
+    "description": "AthenaJS is a framework for building 2D games using HTML5",
+    "author": "Nicolas Ramz",
+    "license": "MIT",
+    "main": "./dist/athena.js",
+    "keywords": [
+        "html5",
+        "canvas",
+        "spritesheet",
+        "game",
+        "map",
+        "tile"
+    ],
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "test": "jest --no-cache",
+        "start": "webpack --watch",
+        "build": "webpack --config webpack.production.config.js",
+        "build-docs-template": "cd docma-template-athenajs && npm install && npm run build",
+        "build-docs": "docma -c ./docma.json",
+        "serve-docs": "docma serve -b /athenajs-documentation",
+        "check": "tsc --noEmit --allowJs --checkJs ./js/athena-module.js"
+    },
+    "devDependencies": {
+        "babel-loader": "^8.0.5",
+        "@babel/core": "^7.3.4",
+        "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+        "@babel/preset-env": "^7.3.4",
+        "babel-jest": "^24.1.0",
+        "circular-dependency-plugin": "2.0.0",
+        "docma": "^3.2.2",
+        "exports-loader": "0.6.4",
+        "imports-loader": "0.7.1",
+        "jest-cli": "^24.1.0",
+        "jsdoc": "^3.5.5",
+        "node-notifier": "5.1.2",
+        "typescript": "^2.5.3",
+        "uglifyjs-webpack-plugin": "^0.4.6",
+        "webpack": "2.3.3",
+        "webpack-notifier": "1.5.0"
+    },
+    "dependencies": {
+        "es6-promise": "4.1.0",
+        "web-audio-daw": "2.3.1",
+        "whatwg-fetch": "2.0.3"
+    },
+    "jest": {
+        "transform": {
+            "^.+\\.js$": "babel-jest"
+        }
+    }
+}

@@ -1,0 +1,99 @@
+{
+  "name": "fxjs",
+  "version": "0.21.3",
+  "description": "Functional Extensions for modern Javascript",
+  "type": "module",
+  "main": "index.js",
+  "module": "mjs/index.js",
+  "esnext": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "sideEffects": false,
+  "scripts": {
+    "copy-es": "rm -rf ./es && mkdir ./es && cp ./index.js ./es/index.js && cp -R ./_internal ./es/_internal && cp -R ./Lazy ./es/Lazy && cp -R ./Concurrency ./es/Concurrency && cp -R ./Strict ./es/Strict",
+    "generate:index": "node build_scripts/index_generator.js",
+    "generate:cjs-export-files": "node build_scripts/cjs_export_file_generator.js",
+    "transpile-mjs:internal": "BABEL_ENV=mjs babel _internal --out-dir mjs/_internal --copy-files",
+    "transpile-mjs:strict": "BABEL_ENV=mjs babel Strict --out-dir mjs/Strict --copy-files",
+    "transpile-mjs:lazy": "BABEL_ENV=mjs babel Lazy --out-dir mjs/Lazy --copy-files",
+    "transpile-mjs:concurrency": "BABEL_ENV=mjs babel Concurrency --out-dir mjs/Concurrency --copy-files",
+    "transpile-mjs:index": "BABEL_ENV=mjs babel index.js --out-file mjs/index.js --copy-files",
+    "transpile-mjs": "npm run transpile-mjs:internal && npm run transpile-mjs:strict && npm run transpile-mjs:lazy && npm run transpile-mjs:concurrency && npm run transpile-mjs:index",
+    "transpile-cjs:internal": "BABEL_ENV=cjs babel _internal --out-dir cjs/_internal --copy-files",
+    "transpile-cjs:strict": "BABEL_ENV=cjs babel Strict --out-dir cjs/Strict --copy-files",
+    "transpile-cjs:lazy": "BABEL_ENV=cjs babel Lazy --out-dir cjs/Lazy --copy-files",
+    "transpile-cjs:concurrency": "BABEL_ENV=cjs babel Concurrency --out-dir cjs/Concurrency --copy-files",
+    "transpile-cjs:index": "BABEL_ENV=cjs babel index.js --out-file cjs/index.js --copy-files",
+    "transpile-cjs": "npm run transpile-cjs:internal && npm run transpile-cjs:strict && npm run transpile-cjs:lazy && npm run transpile-cjs:concurrency && npm run transpile-cjs:index",
+    "transpile": "npm run transpile-mjs && npm run transpile-cjs",
+    "bundle:modern": "NODE_ENV=production BABEL_ENV=modern webpack --config webpack.config.cjs",
+    "bundle:legacy": "NODE_ENV=production BABEL_ENV=legacy webpack --config webpack.config.cjs",
+    "bundle": "npm run bundle:modern && npm run bundle:legacy",
+    "build": "npm run generate:index && npm run copy-es && npm run bundle && npm run transpile && npm run generate:cjs-export-files",
+    "deploy": "npx np --no-publish",
+    "test": "mocha 'test/spec.js' --timeout 10000"
+  },
+  "files": [
+    "es/",
+    "mjs/",
+    "cjs/",
+    "_internal/",
+    "Concurrency/",
+    "Lazy/",
+    "Strict/",
+    "index.js",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marpple/FxJS.git"
+  },
+  "author": "Indong Yoo <idy@marpple.com>",
+  "contributors": [
+    {
+      "name": "Indong Yoo",
+      "email": "idy@marpple.com"
+    },
+    {
+      "name": "Piljung Park",
+      "email": "pjp@marpple.com"
+    },
+    {
+      "name": "Dohyeong Lee",
+      "email": "dhl@marpple.com"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marpple/FxJS/issues"
+  },
+  "homepage": "https://github.com/marpple/FxJS#readme",
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.14.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.0",
+    "prettier": "^2.3.1",
+    "terser-webpack-plugin": "^5.1.3",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "functional",
+    "fp",
+    "fxjs"
+  ],
+  "unpkg": "dist/",
+  "jsdelivr": "dist/",
+  "np": {
+    "yarn": false
+  }
+}

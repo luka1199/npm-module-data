@@ -1,0 +1,69 @@
+{
+  "name": "jsx-pdf",
+  "version": "2.3.0",
+  "main": "dst/index.js",
+  "description": "Generate modular PDFs using JSX.",
+  "files": [
+    "/dst"
+  ],
+  "author": "Yaroslav Borcheninov <yaroslav.b.npm@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schibsted/jsx-pdf.git"
+  },
+  "keywords": [
+    "pdf",
+    "jsx",
+    "pdf-generation",
+    "pdfmake"
+  ],
+  "scripts": {
+    "dev": "yarn build -- --watch src",
+    "build": "babel src --out-dir dst --ignore '**/*.test.js'",
+    "lint": "yarn eslint && yarn prettier:check",
+    "eslint": "eslint \"{src,example,test}/**/*.js\"",
+    "prettier:check": "prettier --check **/*.{js,json,md,babelrc,eslintrc,prettierrc}",
+    "prettier:write": "prettier --write **/*.{js,json,md,babelrc,eslintrc,prettierrc}",
+    "test": "yarn lint && yarn test:unit${TRAVIS:+:coveralls}",
+    "test:unit": "jest --coverage -c jest.unit.config.js",
+    "test:unit:coveralls": "jest --coverage --coverageReporters=text-lcov -c jest.unit.config.js | coveralls",
+    "test:integration": "yarn demo && jest -c jest.integration.config.js",
+    "prepublish": "yarn test:unit && yarn build && yarn test:integration",
+    "demo": "node --require @babel/register example/index.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.10.0",
+    "eslint-config-schibsted": "^7.0.0",
+    "eslint-config-schibsted-modules": "^7.0.0",
+    "eslint-config-schibsted-node": "^7.0.0",
+    "eslint-config-schibsted-react": "^7.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.0.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.3",
+    "eslint-plugin-unicorn": "^22.0.0",
+    "jest": "^26.5.0",
+    "jest-watch-typeahead": "^0.6.1",
+    "pdf2json": "^1.2.0",
+    "pdfmake": "^0.1.68",
+    "prettier": "^2.1.2"
+  },
+  "peerDependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.0.0",
+    "pdfmake": "^0.1.59"
+  }
+}

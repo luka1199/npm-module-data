@@ -1,0 +1,53 @@
+{
+  "name": "proxy-lists",
+  "version": "1.23.2",
+  "description": "Get proxies from publicly available proxy lists.",
+  "keywords": [
+    "proxies",
+    "proxylist",
+    "proxylists",
+    "proxy"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --config .eslintrc.js *.js sources/*.js test/**/*.js",
+    "pretest": "npm run lint",
+    "test": "npm run test:unit",
+    "test:unit": "./node_modules/.bin/mocha test/unit/ --recursive --reporter spec --ui bdd",
+    "update:geoip-database": "node ./node_modules/geoip-lite/scripts/updatedb.js"
+  },
+  "bin": {
+    "proxy-lists": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chill117/proxy-lists"
+  },
+  "author": {
+    "name": "Charles Hill",
+    "email": "chill@degreesofzero.com"
+  },
+  "license": "MIT",
+  "funding": {
+    "type": "individual",
+    "url": "https://degreesofzero.com/donate.html?project=proxy-lists"
+  },
+  "readmeFilename": "readme.md",
+  "bugs": {
+    "url": "https://github.com/chill117/proxy-lists/issues"
+  },
+  "dependencies": {
+    "async": "3.2.0",
+    "commander": "7.2.0",
+    "data-sourcer": "1.10.2",
+    "debug": "4.3.1",
+    "geoip-lite": "1.4.2",
+    "underscore": "1.13.1",
+    "user-agents": "1.0.646"
+  },
+  "devDependencies": {
+    "chai": "4.3.4",
+    "eslint": "7.26.0",
+    "mocha": "8.4.0"
+  }
+}

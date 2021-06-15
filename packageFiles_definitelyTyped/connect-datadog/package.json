@@ -1,0 +1,29 @@
+{
+	"name": "connect-datadog",
+	"version": "0.0.9",
+	"description": "Datadog middleware for Connect JS / Express",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/DataDog/node-connect-datadog.git"
+	},
+	"scripts": {
+		"test": "jest"
+	},
+	"keywords": [
+		"datadog",
+		"middleware"
+	],
+	"author": "Datadog",
+	"license": "MIT",
+	"readmeFilename": "README.md",
+	"engines": {
+		"node": ">=8"
+	},
+	"dependencies": {
+		"hot-shots": "^6.3.0"
+	},
+	"devDependencies": {
+		"jest": "^24.8.0"
+	}
+}

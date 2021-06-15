@@ -1,0 +1,69 @@
+{
+  "name": "generate-ctrl-c-event",
+  "version": "2.0.0",
+  "description": "Generate ctrl-c (or ctrl-break) events on Windows by calling `Kernel32::GenerateConsoleCtrlEvent()`",
+  "keywords": [
+    "windows",
+    "GenerateConsoleCtrlEvent",
+    "generate",
+    "console",
+    "ctrl",
+    "event",
+    "c",
+    "ctrl+c",
+    "ctrl-c",
+    "CTRL_C_EVENT",
+    "break",
+    "ctrl+break",
+    "ctrl-break",
+    "CTRL_BREAK_EVENT",
+    "graceful",
+    "exit",
+    "shutdown",
+    "SIGINT"
+  ],
+  "os": [
+    "win32"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "lib",
+    "generate-ctrl-c-event.ps1"
+  ],
+  "main": "lib/index.js",
+  "dependencies": {},
+  "optionalDependencies": {
+    "ffi-napi": "^3.0.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "eslint": "^7.22.0",
+    "eslint-config-zenflow": "^3.0.0",
+    "semantic-release": "^17.4.2"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "test": "yarn lint"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Matthew Francis Brunetti",
+    "email": "zenflow87@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenflow/generate-ctrl-c-event.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zenflow/generate-ctrl-c-event/issues"
+  },
+  "homepage": "https://github.com/zenflow/generate-ctrl-c-event#readme",
+  "prettier": {
+    "printWidth": 100,
+    "trailingComma": "all"
+  }
+}

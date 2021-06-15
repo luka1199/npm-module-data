@@ -1,0 +1,39 @@
+{
+  "name": "macrotask",
+  "version": "3.0.0",
+  "description": "A cross browser macrotask library",
+  "main": "dist/macrotask.cjs.js",
+  "module": "dist/macrotask.js",
+  "jsnext:main": "dist/macrotask.js",
+  "browser": "dist/macrotask.es5.js",
+  "contributors": [
+    "Domenic Denicola <domenic@domenicdenicola.com> (http://domenicdenicola.com)",
+    "Donavon West <github@donavon.com> (http://donavon.com)",
+    "Yaffle",
+    "Calvin Metcalf <calvin.metcalf@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/calvinmetcalf/macrotask.git"
+  },
+  "bugs": "https://github.com/calvinmetcalf/macrotask/issues",
+  "scripts": {
+    "build": "npm run build-js && npm run uglify",
+    "uglify": "rollup -c rollup.config.min.js",
+    "build-js": "rollup -c rollup.config.js && rollup -c rollup.config.browser.js",
+    "test": "rollup -c rollup.config.js && node test/tests.js",
+    "test-browser": "npm run build-js && node test/tests.js -b -l firefox -e -p -q ",
+    "test-browser-server": "npm run build-js && node test/tests.js -b "
+  },
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelrc-rollup": "^3.0.0",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-node-globals": "^1.1.0",
+    "rollup-plugin-uglify": "^1.0.1",
+    "prova": "^3.0.0"
+  }
+}

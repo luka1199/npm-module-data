@@ -1,0 +1,40 @@
+{
+  "name": "@doodle3d/touch-events",
+  "version": "0.0.9",
+  "description": "Touch events using PEP",
+  "main": "lib/index.js",
+  "module": "module/index.js",
+  "esnext": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/Doodle3D/Touch-Events.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:main && npm run build:module ",
+    "prepare": "npm run build",
+    "build:main": "BABEL_ENV=main babel src -s -d lib",
+    "build:module": "BABEL_ENV=module babel src -s -d module"
+  },
+  "author": "Casper @ Doodle3D",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-plugin-inline-import": "^2.0.6",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-loader": "7.0.0",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-preset-es2015": "6.24.1"
+  },
+  "dependencies": {
+    "eventdispatcher.js": "0.0.2",
+    "pepjs": "^0.4.2"
+  }
+}

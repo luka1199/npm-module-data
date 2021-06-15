@@ -1,0 +1,51 @@
+{
+  "name": "node-red-node-test-helper",
+  "version": "0.2.7",
+  "description": "A test framework for Node-RED nodes",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha \"test/**/*_spec.js\"",
+    "examples": "mocha \"examples/**/*_spec.js\""
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/node-red/node-red-node-test-helper.git"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "body-parser": "1.19.0",
+    "read-pkg-up": "7.0.1",
+    "semver": "7.3.4",
+    "should": "^13.2.3",
+    "should-sinon": "0.0.6",
+    "sinon": "9.2.4",
+    "stoppable": "1.1.0",
+    "supertest": "4.0.2"
+  },
+  "devDependencies": {
+    "mocha": "~7.1.2"
+  },
+  "contributors": [
+    {
+      "name": "Nick O'Leary"
+    },
+    {
+      "name": "Dave Conway-Jones"
+    },
+    {
+      "name": "Mike Blackstock"
+    },
+    {
+      "name": "Dean Cording"
+    }
+  ],
+  "keywords": [
+    "test",
+    "iot",
+    "node-red"
+  ],
+  "engines": {
+    "node": ">=8"
+  }
+}

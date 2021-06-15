@@ -1,0 +1,34 @@
+{
+  "name": "recluster",
+  "version": "1.0.0",
+  "description": "Clustering library with support for zero-downtime reloading",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/index.js test/termination.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/doxout/recluster.git"
+  },
+  "keywords": [
+    "load",
+    "balancer",
+    "cluster",
+    "zero",
+    "downtime",
+    "reload",
+    "sticky",
+    "websockets",
+    "socket.io"
+  ],
+  "author": "spion",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "00dcf38ed8e8198da83e350372f92237f81677d7",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "tap": "~0.4.1"
+  }
+}

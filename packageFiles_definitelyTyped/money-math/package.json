@@ -1,0 +1,43 @@
+{
+  "name": "money-math",
+  "version": "2.5.2",
+  "description": "jsbn-based arbitrary precision operations on currency amounts \"XXX.YY\"; because floats are BAD for representing money",
+  "main": "money.js",
+  "scripts": {
+    "pretest": "eslint ./*.js ./spec/*.js",
+    "test": "mocha ./spec/*.spec.js",
+    "tdd": "mocha -b -R min -w ./spec/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ikr/money-math.git"
+  },
+  "keywords": [
+    "money",
+    "gmp",
+    "currency",
+    "bigint",
+    "bignum",
+    "jsbn",
+    "browser",
+    "browserify",
+    "arithmetic",
+    "arbitrary",
+    "precision",
+    "format"
+  ],
+  "engine": "node >= 4",
+  "dependencies": {
+    "jsbn": "^1.1.0"
+  },
+  "directories": {
+    "lib": ".",
+    "test": "spec"
+  },
+  "devDependencies": {
+    "eslint": "^4.9.0",
+    "mocha": "^4.0.1"
+  },
+  "author": "Ivan Krechetov <ikr@ikr.su>",
+  "license": "MIT"
+}

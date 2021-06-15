@@ -1,0 +1,29 @@
+{
+  "name": "tape-async",
+  "description": "A lite wrapper around tape to simplify async testing.",
+  "repository": "parro-it/tape-async",
+  "version": "2.3.0",
+  "engines": {
+    "node": ">=4.1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "co": "^4.6.0",
+    "is-generator": "^1.0.2",
+    "is-promise": "^2.1.0",
+    "tape": "^5.0.1"
+  },
+  "author": "Andrea Parodi",
+  "scripts": {
+    "test": "node --trace-warnings test && prettier --check *.js",
+    "format": "prettier --write *.js"
+  },
+  "devDependencies": {
+    "execa": "^0.8.0",
+    "prettier": "2.1.2",
+    "sleep-promise": "^2.0.0"
+  },
+  "files": [
+    "index.js"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "promise-state-machine-es6",
+  "description": "An event-driven finite state machine backed by Promises",
+  "version": "2.1.0",
+  "keywords": [
+    "state machine",
+    "finite state machine",
+    "state machines",
+    "promise state machine",
+    "async state machine",
+    "promise",
+    "promises",
+    "async",
+    "deferred",
+    "es6"
+  ],
+  "homepage": "https://github.com/faleij/promise-state-machine",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/faleij/promise-state-machine.git"
+  },
+  "author": {
+    "name": "Faleij",
+    "email": "faleij@gmail.com",
+    "url": "https://github.com/faleij"
+  },
+  "license": "MIT",
+  "main": "./lib/PromiseStateMachine.js",
+  "scripts": {
+    "test": "eslint test lib && mocha test/lib/PromiseStateMachine.spec.js -t 6000 -b",
+    "cover": "istanbul cover -x *.spec.js node_modules/mocha/bin/_mocha -- -t 6000 -b -R spec test/lib/PromiseStateMachine.spec.js"
+  },
+  "devDependencies": {
+    "assertion-error": "1.0.2",
+    "coveralls": "2.11.12",
+    "eslint": "3.4.0",
+    "eslint-config-airbnb": "10.0.1",
+    "eslint-plugin-import": "1.14.0",
+    "eslint-plugin-jsx-a11y": "2.2.1",
+    "eslint-plugin-react": "6.2.0",
+    "istanbul": "0.4.5",
+    "mocha": "3.0.2",
+    "sinon": "1.17.5"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}

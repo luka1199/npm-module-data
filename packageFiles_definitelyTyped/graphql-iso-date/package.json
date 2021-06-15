@@ -1,0 +1,93 @@
+{
+  "name": "graphql-iso-date",
+  "version": "3.6.1",
+  "description": "A set of RFC 3339 compliant date/time GraphQL scalar types.",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/excitement-engineer/graphql-iso-date",
+  "bugs": {
+    "url": "https://github.com/excitement-engineer/graphql-iso-date/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/excitement-engineer/graphql-iso-date.git"
+  },
+  "scripts": {
+    "examples": "npm run build:babel && npm run build:flow && babel-node examples/index.js",
+    "build": "npm run build:clean && npm run build:babel && npm run build:flow && npm run build:package-json",
+    "build:clean": "rm -rf ./dist",
+    "build:package-json": "node ./resources/clean-package-json.js",
+    "build:babel": "babel src --ignore __tests__,*.test.js --out-dir dist/ ",
+    "build:flow": "find ./src -name '*.js' -not -path '*/__tests__*' -not -name '*.test.js' | while read filepath; do cp $filepath `echo $filepath | sed 's/\\/src\\//\\/dist\\//g'`.flow; done",
+    "test": "npm run examples && npm run testonly && npm run check && npm run lint",
+    "testonly": "jest",
+    "coverage": "codecov",
+    "watch": "jest --watch",
+    "check": "flow check",
+    "prepublishOnly": ". ./resources/prepublish.sh",
+    "lint": "standard"
+  },
+  "keywords": [
+    "GraphQL",
+    "Scalar",
+    "Date",
+    "Node",
+    "ISO"
+  ],
+  "author": "Dirk-Jan Rutten <dirkjanrutten@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "graphql": "^0.5.0 || ^0.6.0 || ^0.7.0 || ^0.8.0-b || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "codecov": "^3.0.0",
+    "eslint-plugin-flowtype": "^2.50.0",
+    "flow-bin": "^0.81.0",
+    "graphql": "^14.0.2",
+    "jest": "^23.6.0",
+    "mockdate": "^2.0.2",
+    "standard": "^12.0.1"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "flow-typed/"
+    ],
+    "plugins": [
+      "flowtype"
+    ],
+    "globals": [
+      "describe",
+      "before",
+      "beforeEach",
+      "beforeAll",
+      "after",
+      "afterEach",
+      "afterAll",
+      "it",
+      "expect"
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  }
+}

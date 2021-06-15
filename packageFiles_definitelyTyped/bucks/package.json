@@ -1,0 +1,51 @@
+{
+    "name": "bucks",
+    "version": "0.8.4",
+    "description": "Async utilities for node and the browser. (amd support) ",
+    "keywords": [
+        "browser",
+        "node",
+        "async"
+    ],
+    "homepage": "https://github.com/CyberAgent/bucks.js",
+    "bugs": {
+        "email": "shibucafe@cyberagent.co.jp",
+        "url": "https://github.com/CyberAgent/bucks.js/issues"
+    },
+    "author": {
+        "name": "Kazuma Mishimagi",
+        "email": "mishimagi_kazuma@cyberagnet.co.jp",
+        "url": "https://github.com/maginemu"
+    },
+    "contributors": [
+        {
+            "name": "Kei Funagayama",
+            "email": "funagayama_kei@cyberagent.co.jp",
+            "url": "https://github.com/fkei"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/CyberAgent/bucks.js.git"
+    },
+    "dependencies": {
+        "uglify-js": "*"
+    },
+    "devDependencies": {
+        "mocha": ">=1.0.1",
+        "chai": ">=1.8.0",
+        "should": ">=0.6.1",
+        "jshint": ">=0.7.0",
+        "jsdoc": "git://github.com/jsdoc3/jsdoc.git",
+        "ink-docstrap": "~0.3.0-0"
+    },
+    "engines": {
+        "node": ">=0.8.0",
+        "npm": ">=1.1.0"
+    },
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "main": "./bucks.js"
+}

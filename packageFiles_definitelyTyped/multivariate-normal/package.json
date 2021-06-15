@@ -1,0 +1,55 @@
+{
+  "name": "multivariate-normal",
+  "version": "0.1.2",
+  "description": "Port of NumPy's random.multivariate_normal to Node.JS",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "eslint src spec example/js && jasmine",
+    "start": "cd example && webpack-dev-server",
+    "prepublish": "dist-es6",
+    "bundle": "scripts/bundle.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tulip/multivariate-normal-js.git"
+  },
+  "keywords": [
+    "numpy",
+    "multivariate",
+    "random",
+    "gaussian",
+    "normal",
+    "distribution"
+  ],
+  "author": "Ben Weissmann <bsw@tulip.co>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tulip/multivariate-normal-js/issues"
+  },
+  "homepage": "https://github.com/tulip/multivariate-normal-js#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "browserify": "^16.5.0",
+    "dist-es6": "^0.1.17",
+    "eslint": "^6.2.1",
+    "jasmine-es6": "^0.1.9",
+    "jquery": "^3.4.1",
+    "json-loader": "^0.5.7",
+    "terser": "^4.2.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "gaussian": "^1.1.0",
+    "lodash.every": "^4.6.0",
+    "lodash.isarray": "^4.0.0",
+    "lodash.isnumber": "^3.0.3",
+    "lodash.some": "^4.6.0",
+    "numeric": "^1.2.6"
+  }
+}

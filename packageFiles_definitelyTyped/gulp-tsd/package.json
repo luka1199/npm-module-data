@@ -1,0 +1,36 @@
+{
+  "name": "gulp-tsd",
+  "author": "moznion <moznion@gmail.com>",
+  "version": "0.1.1",
+  "description": "Gulp plugin to automate TSD and TypeScript definition related tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/gulp --gulpfile ./test/gulpfile.js"
+  },
+  "keywords": [
+    "gulp",
+    "tsd"
+  ],
+  "dependencies": {
+    "debug": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.0",
+    "tsd": "~0.6.5"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-clean": "~0.3.1",
+    "gulp-run-sequence": "~0.3.2",
+    "chai": "~3.4.1"
+  },
+  "optionalDependencies": {
+    "gulp-jshint": "~2.0.0"
+  },
+  "homepage": "https://github.com/moznion/gulp-tsd",
+  "bugs": "https://github.com/moznion/gulp-tsd/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/moznion/gulp-tsd.git"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "named-routes",
+  "version": "2.0.7",
+  "description": "Named routes for node.js. Works with express and independently",
+  "main": "router.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alubbe/named-routes"
+  },
+  "bugs": {
+    "url": "https://github.com/alubbe/named-routes/issues"
+  },
+  "keywords": [
+    "named",
+    "routes",
+    "i18n",
+    "router",
+    "reversable",
+    "express",
+    "web"
+  ],
+  "author": {
+    "name": "Andreas Lubbe",
+    "email": "npm@lubbe.org"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "methods": "^1.1.1",
+    "path-to-regexp": "^1.2.1",
+    "xregexp": "^3.1.0"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "express": "^4.12.3",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.2",
+    "supertest": "^1.1.0"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "react-bytesize-icons",
+  "version": "0.12.2",
+  "description": "Bytesize Icons as React Components.",
+  "main": "index.js",
+  "module": "esm/index.js",
+  "sideEffects": false,
+  "scripts": {
+    "build:lib": "babel src --out-dir ./",
+    "build:esm": "cross-env BABEL_ENV=esm-dir babel src --out-dir esm",
+    "build": "npm run build:lib && npm run build:esm",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kilian/react-bytesize-icons.git"
+  },
+  "keywords": [
+    "bytesize",
+    "icons",
+    "icons",
+    "ui",
+    "react",
+    "components"
+  ],
+  "authors": [
+    "Mustafa Abdelhai <mustafa@devolio.net> (https://devolio.net)",
+    "Kilian Valkhof <kilian@kilianvalkhof.com> (https://kilianvalkhof.com)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Kilian/react-bytesize-icons/issues"
+  },
+  "homepage": "https://github.com/Kilian/react-bytesize-icons#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "cross-env": "^5.2.0"
+  },
+  "peerDependencies": {
+    "react": "^15.3.0|^16.14.0",
+    "react-dom": "^15.3.0|^16.14.0"
+  }
+}

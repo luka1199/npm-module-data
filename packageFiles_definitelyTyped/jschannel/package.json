@@ -1,0 +1,29 @@
+{
+  "name": "jschannel",
+  "version": "1.0.2",
+  "description": "Mozilla's Channel mechanism built on top of post-message",
+  "main": "src/jschannel.js",
+  "directories": {
+    "doc": "docs",
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yochannah/jschannel.git"
+  },
+  "keywords": [
+    "jschannel",
+    "postmessage",
+    "mozilla",
+    "iframe"
+  ],
+  "author": "Lloyd Hilaiel",
+  "license": "LGPL",
+  "bugs": {
+    "url": "https://github.com/yochannah/jschannel/issues"
+  },
+  "homepage": "https://github.com/yochannah/jschannel"
+}

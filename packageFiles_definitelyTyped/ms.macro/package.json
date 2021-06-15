@@ -1,0 +1,50 @@
+{
+  "name": "ms.macro",
+  "version": "2.0.0",
+  "description": "Convert various time formats to milliseconds at build time in Babel.",
+  "main": "lib/ms.macro.js",
+  "scripts": {
+    "build": "babel -d lib src",
+    "test": "ava",
+    "test:watch": "ava --watch",
+    "lint": "eslint src",
+    "posttest": "npm run lint",
+    "prepack": "npm run build"
+  },
+  "ava": {
+    "require": "babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knpwrs/ms.macro"
+  },
+  "keywords": [
+    "babel-macros"
+  ],
+  "author": "Kenneth Powers <ken@kenpowers.net> (http://knpw.rs)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/knpwrs/ms.macro/issues"
+  },
+  "homepage": "https://github.com/knpwrs/ms.macro#readme",
+  "dependencies": {
+    "babel-plugin-macros": "^2.0.0",
+    "ms": "^2.0.0"
+  },
+  "devDependencies": {
+    "ava": "^1.0.1",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.24.1",
+    "common-tags": "^1.4.0",
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1"
+  }
+}

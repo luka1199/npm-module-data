@@ -1,0 +1,44 @@
+{
+  "name": "calq",
+  "version": "1.0.1",
+  "description": "The simplest crypto calculator out there. Convert between currencies with ease! Crypto, fiat, and more!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "calq": "./calq"
+  },
+  "keywords": [
+    "crypto",
+    "cryptocurrency",
+    "calculator",
+    "cal",    
+    "converter",
+    "conversion",
+    "cli",
+    "commandline",
+    "node",
+    "nodejs",
+    "ethereum",
+    "financial",
+    "ETH",
+    "BTC"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adasomg/calq.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adasomg/calq/issues"
+  },
+  "homepage": "https://github.com/adasomg/calq#readme",
+  "deprecated": false,
+  "author": "Adas",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "mathjs": "^5.4.1",
+    "node-fetch": "^2.3.0"
+  }
+}

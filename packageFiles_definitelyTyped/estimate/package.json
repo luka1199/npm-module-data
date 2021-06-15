@@ -1,0 +1,35 @@
+{
+  "name": "estimate",
+  "description": "Calculate remaining reading time estimates in real-time",
+  "version": "1.0.0",
+  "homepage": "https://github.com/bevacqua/estimate",
+  "author": {
+    "name": "Nicolas Bevacqua",
+    "email": "ng@bevacqua.io",
+    "url": "http://bevacqua.io"
+  },
+  "main": "src/estimate.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bevacqua/estimate.git"
+  },
+  "devDependencies": {
+    "browserify": "^4.2.1",
+    "gulp": "^3.6.2",
+    "gulp-bump": "~0.1.0",
+    "gulp-clean": "~0.2.3",
+    "gulp-git": "~0.2.0",
+    "gulp-header": "^1.0.2",
+    "gulp-rename": "~0.2.2",
+    "gulp-size": "~0.1.1",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "~0.1.0",
+    "jshint": "~2.4.1",
+    "jshint-stylish": "~0.1.5",
+    "vinyl-source-stream": "^0.1.1"
+  },
+  "dependencies": {
+    "scrolltop": "0.0.1"
+  }
+}

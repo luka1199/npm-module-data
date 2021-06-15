@@ -1,0 +1,18 @@
+{
+  "name": "closure-compiler",
+  "description": "Bindings to Google's Closure Compiler",
+  "version": "0.2.12",
+  "author": "tim-smart",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tim-smart/node-closure.git"
+  },
+  "peerDependencies": {
+    "google-closure-compiler": ">= 20150901.0.0"
+  },
+  "engine": [
+    "node >=0.10"
+  ],
+  "main": "./lib/index.js",
+  "license": "MIT"
+}

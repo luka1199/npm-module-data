@@ -1,0 +1,68 @@
+{
+  "name": "hellosign-embedded",
+  "version": "2.10.0",
+  "description": "Embed HelloSign signature requests and templates from within your web application.",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "release": "standard-version",
+    "release:beta": "standard-version --prerelease beta",
+    "test": "jest src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellosign/hellosign-embedded.git"
+  },
+  "keywords": [
+    "hellosign",
+    "embedded",
+    "esignature",
+    "esign",
+    "sign"
+  ],
+  "author": {
+    "name": "HelloSign",
+    "email": "apisupport@hellosign.com",
+    "url": "https://hellosign.com"
+  },
+  "bugs": {
+    "url": "https://github.com/hellosign/hellosign-embedded/issues"
+  },
+  "homepage": "https://github.com/hellosign/hellosign-embedded",
+  "dependencies": {
+    "common-tags": "^1.8.0",
+    "debug": "^4.1.1",
+    "tiny-emitter": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@hellosign/eslint-config": "^1.4.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "core-js": "^2.6.5",
+    "css-loader": "^2.1.0",
+    "eslint": "^5.13.0",
+    "eslint-plugin-compat": "^2.7.0",
+    "jest": "^24.1.0",
+    "jest-runner-eslint": "^0.7.3",
+    "node-sass": "^6.0.0",
+    "sass-loader": "^5.0.0",
+    "standard-version": "^9.0.0",
+    "style-loader": "^0.23.1",
+    "url-polyfill": "^1.1.8",
+    "url-search-params-polyfill": "^5.0.0",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3"
+  },
+  "files": [
+    "umd",
+    "index.js"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "use-ackee",
+  "version": "3.0.0",
+  "authors": [
+    "Tobias Reich <tobias@electerious.com>"
+  ],
+  "description": "Use Ackee in React",
+  "main": "src/index.js",
+  "keywords": [
+    "react",
+    "hooks",
+    "hook",
+    "tracker",
+    "analytics",
+    "tracking",
+    "ackee"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/electerious/use-ackee",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/electerious/use-ackee.git"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "coveralls": "nyc report --reporter=lcov",
+    "test": "nyc node_modules/mocha/bin/_mocha",
+    "lint": "eslint '{src,test}/**/*.js'"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "@electerious/eslint-config"
+  },
+  "eslintIgnore": [
+    "demos"
+  ],
+  "devDependencies": {
+    "@electerious/eslint-config": "^1.4.0",
+    "chai": "^4.3.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.20.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-native": "^3.10.0",
+    "mocha": "^8.3.0",
+    "nyc": "^15.1.0",
+    "react": "^17.0.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0"
+  },
+  "dependencies": {
+    "ackee-tracker": "^5.0.1"
+  }
+}

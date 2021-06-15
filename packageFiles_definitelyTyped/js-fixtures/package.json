@@ -1,0 +1,32 @@
+{
+  "author": "Duncan Wong <baduncaduncan@gmail.com>",
+  "name": "js-fixtures",
+  "version": "1.5.3",
+  "description": "jasmine-like fixtures without testing framework dependencies",
+  "keywords": [
+    "test",
+    "fixture",
+    "mocha",
+    "testing",
+    "jasmine"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/badunk/js-fixtures"
+  },
+  "bugs": {
+    "url": "https://github.com/badunk/js-fixtures/issues"
+  },
+  "main": "./fixtures",
+  "engines": {
+    "node": ">= 0.4.0"
+  },
+  "devDependencies": {
+    "sinon": "~1.4.0",
+    "expect.js": "~0.2.0",
+    "requirejs": "~2.1.2"
+  },
+  "dependencies": {
+    "mocha": "~1.17.1"
+  }
+}

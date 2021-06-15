@@ -1,0 +1,26 @@
+{
+  "name": "s3-download-stream",
+  "description": "s3 download streams",
+  "keywords": [
+    "s3"
+  ],
+  "version": "1.1.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jb55/s3-download-stream.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "SimpleQueue": "0.0.1",
+    "clone": "^2.1.1",
+    "debug": "^3.1.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.130.0",
+    "tape": "^4.8.0"
+  }
+}

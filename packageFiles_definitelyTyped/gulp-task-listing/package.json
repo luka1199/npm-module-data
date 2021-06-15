@@ -1,0 +1,41 @@
+{
+  "name": "gulp-task-listing",
+  "description": "Adds the ability to provide a task listing for your gulpfile",
+  "version": "1.1.0",
+  "homepage": "https://github.com/OverZealous/gulp-task-listing",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/OverZealous/gulp-task-listing.git"
+  },
+  "author": {
+    "name": "Phil DeJarnett",
+    "url": "http://overzealous.com/"
+  },
+  "main": "./index.js",
+  "keywords": [
+    "gulpfriendly"
+  ],
+  "dependencies": {
+    "chalk": "*"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "istanbul": "^0.2.8",
+    "mocha": "^1.18.2",
+    "mocha-lcov-reporter": "0.0.1",
+    "mock": "^0.1.1",
+    "should": "^3.3.1"
+  },
+  "scripts": {
+    "test": "istanbul test _mocha --report html -- test/*.js --reporter spec"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "licenses": "MIT",
+  "bugs": {
+    "url": "https://github.com/OverZealous/gulp-task-listing/issues"
+  },
+  "_id": "gulp-task-listing@0.2.1",
+  "_from": "gulp-task-listing@*"
+}

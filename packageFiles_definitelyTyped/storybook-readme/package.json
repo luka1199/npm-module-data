@@ -1,0 +1,50 @@
+{
+  "name": "storybook-readme",
+  "private": true,
+  "description": "React storybook addon to show components README",
+  "homepage": "https://github.com/tuchk4/storybook-readme",
+  "bugs": "https://github.com/tuchk4/storybook-readme/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuchk4/storybook-readme"
+  },
+  "devDependencies": {
+    "husky": "^2.2.0",
+    "lerna": "^3.8.0",
+    "lint-staged": "^8.1.6",
+    "prettier": "^1.17.0"
+  },
+  "scripts": {
+    "storybook-react": "npm run storybook --prefix ./packages/example-react",
+    "storybook-vue": "npm run storybook --prefix ./packages/example-vue",
+    "dev": "lerna run dev --stream --parallel",
+    "clear": "lerna run clear",
+    "deploy-storybook": "npm run deploy-storybook --prefix ./packages/example-react",
+    "format": "prettier --trailing-comma es5 --single-quote --write 'packages/**/*.js' 'packages/**/*.json'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "yarn format",
+      "git add"
+    ]
+  },
+  "workspaces": [
+    "packages/storybook-readme",
+    "packages/example-react",
+    "packages/example-vue",
+    "packages/example-html"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@storybook/html": "^5.0.11",
+    "babel-loader": "^8.0.5"
+  }
+}

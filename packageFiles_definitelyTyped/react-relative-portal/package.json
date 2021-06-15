@@ -1,0 +1,65 @@
+{
+  "name": "react-relative-portal",
+  "version": "1.8.0",
+  "description": "React component for place dropdowns outside overflow: hidden; elements",
+  "main": "dist/RelativePortal.js",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "keywords": [
+    "react",
+    "react-component",
+    "portal",
+    "react-portal"
+  ],
+  "scripts": {
+    "build": "yarn clean && babel src/Portal.js > dist/Portal.js && babel src/RelativePortal.js > dist/RelativePortal.js",
+    "clean": "rm -Rf dist && mkdir dist",
+    "start-demo": "parcel --out-dir=demo/dist demo/index.html --open",
+    "build-demo": "parcel build --out-dir=demo/dist --public-url='.' demo/index.html",
+    "test": "exit 0",
+    "prepublish": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartprogress/react-relative-portal.git"
+  },
+  "author": "Alex Lunyov <isuntc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smartprogress/react-relative-portal/issues"
+  },
+  "homepage": "https://github.com/smartprogress/react-relative-portal#readme",
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^6.1.2",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-1": "^6.5.0",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.10.3",
+    "eslint-plugin-jsx-a11y": "^1.5.5",
+    "eslint-plugin-react": "^5.2.2",
+    "parcel-bundler": "^1.11.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "dependencies": {
+    "exenv": "^1.2.1",
+    "lodash.throttle": "^4.1.1",
+    "prop-types": "^15.6.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true
+  }
+}

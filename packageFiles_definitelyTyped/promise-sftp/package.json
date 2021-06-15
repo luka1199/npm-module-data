@@ -1,0 +1,48 @@
+{
+  "name": "promise-sftp",
+  "description": "a promise-based sftp client for node.js",
+  "version": "0.11.3",
+  "main": "index.js",
+  "author": "RealtyMaps",
+  "contributors": [
+    "Joe Ibershoff <joe@realtymaps.com>"
+  ],
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/realtymaps/promise-sftp"
+  },
+  "keywords": [
+    "sftp",
+    "client",
+    "promise",
+    "node"
+  ],
+  "dependencies": {
+    "bluebird": "2.x",
+    "promise-ftp-common": "^1.1.2",
+    "ssh2": "0.5.x"
+  },
+  "devDependencies": {
+    "coffee-script": "1.x"
+  },
+  "peerDependencies": {
+    "promise-ftp-common": "^1.1.2"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realtymaps/promise-sftp/issues"
+  },
+  "engines": {
+    "node": ">=0.11.13",
+    "iojs": "*"
+  },
+  "scripts": {
+    "prepublish": "coffee --compile --output dist/ lib/",
+    "dev": "coffee --watch --output dist lib/"
+  }
+}
+  

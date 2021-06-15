@@ -1,0 +1,50 @@
+{
+  "name": "bearcat-es6",
+  "version": "0.6.1",
+  "description": "Magic, self-described javaScript objects build up elastic, maintainable front-backend javaScript applications",
+  "main": "index.js",
+  "bin": "./bin/bearcat-bin.js",
+  "scripts": {
+    "test": "grunt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChrisPei/bearcat-es6"
+  },
+  "keywords": [
+    "di",
+    "IoC",
+    "AOP",
+    "dependency",
+    "injection",
+    "consistent",
+    "configuration",
+    "hot reload",
+    "front-backend",
+    "sharable codes",
+    "dependency injection",
+    "asynchronous script loading",
+    "magic, self-described javaScript objects"
+  ],
+  "dependencies": {
+    "pomelo-logger": "0.1.x",
+    "commander": "2.x",
+    "chokidar": "~1.0.1"
+  },
+  "browser": {
+    "pomelo-logger": "./shim/logger.js",
+    "chokidar": "./shim/chokidar.js"
+  },
+  "author": "ChrisPei",
+  "license": "MIT",
+  "devDependencies": {
+    "expect.js": "~0.3.1",
+    "mocha": ">=0.0.1",
+    "grunt": "~0.4.2",
+    "blanket": "1.1.x",
+    "grunt-browserify": "3.x",
+    "grunt-mocha-test": "0.8.x",
+    "grunt-contrib-clean": "0.5.x",
+    "grunt-contrib-uglify": "~0.3.2"
+  }
+}

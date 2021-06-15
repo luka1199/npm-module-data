@@ -1,0 +1,43 @@
+{
+	"name": "projections",
+	"description": "Coordinate projections (stereographic)",
+	"version": "1.0.0",
+	"keywords": [
+		"projection",
+		"map",
+		"geo",
+		"coordinates",
+		"coords",
+		"braun",
+		"centralcylindrical",
+		"equirectangular",
+		"gall",
+		"gallpeters",
+		"kavrayskiy",
+		"lambert",
+		"mercator",
+		"miller",
+		"sinusoidal",
+		"wagner6"
+	],
+	"author": "Julius Tens <mail@juliustens.eu>",
+	"homepage": "https://github.com/juliuste/projections",
+	"repository": "juliuste/projections",
+	"bugs": "https://github.com/juliuste/projections/issues",
+	"main": "./index.js",
+	"files": [
+		"*.js",
+		"!test.js"
+	],
+	"devDependencies": {
+		"tape": "^4.6"
+	},
+	"scripts": {
+		"test": "node test.js",
+		"prepare": "npm test"
+	},
+	"engine": {
+		"node": ">=4"
+	},
+	"license": "MIT"
+}

@@ -1,0 +1,70 @@
+{
+  "name": "signale",
+  "version": "1.4.0",
+  "description": "Highly configurable logging utility",
+  "license": "MIT",
+  "repository": "klaussinani/signale",
+  "author": {
+    "name": "Klaus Sinani",
+    "email": "klaussinani@gmail.com",
+    "url": "https://klaussinani.github.io"
+  },
+  "maintainers": [
+    {
+      "name": "Mario Sinani",
+      "email": "mariosinani@protonmail.ch",
+      "url": "https://mariocfhq.github.io"
+    }
+  ],
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "src",
+    "types",
+    "index.js"
+  ],
+  "types": "./types/signale.d.ts",
+  "keywords": [
+    "log",
+    "cli",
+    "logger",
+    "logging",
+    "hackable",
+    "colorful",
+    "console"
+  ],
+  "scripts": {
+    "lint": "xo",
+    "test:ts": "tsc --noEmit -p test",
+    "test": "npm run lint && npm run test:ts"
+  },
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "figures": "^2.0.0",
+    "pkg-conf": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^11.11.3",
+    "typescript": "^3.3.3333",
+    "xo": "*"
+  },
+  "options": {
+    "default": {
+      "displayScope": true,
+      "displayBadge": true,
+      "displayDate": false,
+      "displayFilename": false,
+      "displayLabel": true,
+      "displayTimestamp": false,
+      "underlineLabel": true,
+      "underlineMessage": false,
+      "underlinePrefix": false,
+      "underlineSuffix": false,
+      "uppercaseLabel": false
+    }
+  },
+  "xo": {
+    "space": 2
+  }
+}

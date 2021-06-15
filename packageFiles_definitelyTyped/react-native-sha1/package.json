@@ -1,0 +1,31 @@
+{
+  "name": "react-native-sha1",
+  "version": "1.2.3",
+  "description": "Native sha1 react-native",
+  "main": "sha1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flow": "flow; test $? -eq 0 -o $? -eq 2"
+  },
+  "homepage": "https://github.com/itinance/react-native-sha1",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:marconett/react-native-sha1.git"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "ios",
+    "android",
+    "hash",
+    "sha1"
+  ],
+  "author": "Hagen Huebel <hhuebel@itinance.com> (hhuebel@itinance.com)",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "flow-bin": "0.28.0",
+    "react": "^15.4.2",
+    "react-native": "^0.40.0"
+  }
+}

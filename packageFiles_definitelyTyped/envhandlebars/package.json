@@ -1,0 +1,37 @@
+{
+  "name": "envhandlebars",
+  "version": "1.4.8",
+  "description": "Simple handlebars templating for configuration files using environment variables",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint *.js test-helpers/*.js test/*.js && istanbul cover -x test-helpers/** _mocha -- -R spec"
+  },
+  "bin": {
+    "envhandlebars": "./bin/envhandlebars"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgmartin/envhandlebars.git"
+  },
+  "author": "Christopher Martin <cgmartin@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "docker",
+    "handlebars",
+    "env",
+    "environment",
+    "variables",
+    "config",
+    "template"
+  ],
+  "dependencies": {
+    "concat-stream": "^2.0.0",
+    "handlebars": "^4.7.7",
+    "minimist": "^1.2.4"
+  },
+  "devDependencies": {
+    "eslint": ">=6.8.0",
+    "istanbul": "^0.4.5",
+    "mocha": ">=7.1.0"
+  }
+}

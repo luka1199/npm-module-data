@@ -1,0 +1,108 @@
+{
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-register": "^6.26.0",
+    "chalk": "^2.3.0",
+    "conartist": "^0.15.1",
+    "glob": "^7.1.3",
+    "highlight.js": "^9.12.0",
+    "hyperhtml": "^2.5.10",
+    "inquirer": "^5.0.1",
+    "jest-environment-node": "^23.4.0",
+    "js-beautify": "^1.7.5",
+    "lit-html": "dev",
+    "marked": "^0.3.14",
+    "mkdirp": "^0.5.1",
+    "navaid": "^1.0.0",
+    "outdent": "^0.5.0",
+    "page": "^1.8.3",
+    "parse5": "^4.0.0",
+    "preact": "^8.2.7",
+    "prismjs": "^1.11.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "shadow-css": "^0.1.0",
+    "snabbdom": "^0.7.1",
+    "spawndamnit": "^1.0.0",
+    "uglify-es": "^3.3.10",
+    "undom": "^0.3.3",
+    "yargs": "^11.0.0",
+    "yocss": "^0.5.1"
+  },
+  "devDependencies": {
+    "@skatejs/val": "^0.4.0",
+    "@types/core-js": "^2.5.0",
+    "@types/es6-promise": "^3.3.0",
+    "@types/jest": "^23.3.1",
+    "charm": "^1.0.2",
+    "execa": "^0.9.0",
+    "fs-extra": "^5.0.0",
+    "husky": "^0.14.3",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0",
+    "jest-in-case": "^1.0.2",
+    "lint-staged": "^6.1.1",
+    "memoizee": "^0.4.14",
+    "parcel-bundler": "^1.10.3",
+    "prettier": "^1.10.2",
+    "prettier-eslint": "^8.8.1",
+    "projector-cli": "^3.1.0",
+    "ts-jest": "^23.1.3",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2"
+  },
+  "name": "skatejs-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "projector build",
+    "clean": "projector clean",
+    "netlify": "yarn && parcel build site/*.html",
+    "precommit": "lint-staged",
+    "start": "parcel site/index.html",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "./packages/ssr/jest",
+    "transformIgnorePatterns": [],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "lint-staged": {
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "author": "Trey Shugart <treshugart@gmail.com> (https://github.com/treshugart)",
+  "bugs": "https://github.com/skatejs/skatejs/issues",
+  "contributors": [],
+  "homepage": "https://skatejs.netlify.com",
+  "keywords": [
+    "web",
+    "components",
+    "custom",
+    "elements",
+    "shadow",
+    "dom"
+  ],
+  "license": "MIT",
+  "repository": "skatejs/skatejs",
+  "workspaces": [
+    "packages/*",
+    "packages/ssr/example",
+    "site"
+  ]
+}

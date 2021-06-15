@@ -1,0 +1,31 @@
+{
+  "name": "jsqubits",
+  "version": "2.1.0",
+  "type": "module",
+  "description": "Quantum computation simulation JavaScript library",
+  "keywords": [
+    "quantum"
+  ],
+  "license": "MIT",
+  "author": "David Kemp <davidbkemp@gmail.com>",
+  "files": [
+    "lib"
+  ],
+  "devDependencies": {
+    "chai": "^4.3.3",
+    "jshint": "^2.12.0",
+    "mocha": "^8.3.1",
+    "sinon": "^9.2.4"
+  },
+  "scripts": {
+    "lint": "jshint --verbose ./lib ./spec",
+    "test-only": "mocha $NODE_DEBUG_OPTION --reporter spec \"spec/**/*.spec.js\"",
+    "test": "npm run lint && npm run test-only",
+    "example": "node $NODE_DEBUG_OPTION",
+    "all-examples": "node $NODE_DEBUG_OPTION examples/algorithms/all.js",
+    "clean": "rm -rf node_modules dist bower_components"
+  },
+  "main": "./lib/index.js",
+  "repository": "git://github.com/davidbkemp/jsqubits.git",
+  "homepage": "https://davidbkemp.github.io/jsqubits/"
+}

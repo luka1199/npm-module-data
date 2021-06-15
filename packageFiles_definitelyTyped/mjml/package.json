@@ -1,0 +1,34 @@
+{
+  "name": "mjml-master",
+  "private": true,
+  "scripts": {
+    "build:watch": "lerna run build --parallel -- -- -w",
+    "build": "lerna run build --parallel --ignore mjml-browser",
+    "build-browser": "cd packages/mjml-browser && yarn build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "postinstall": "lerna bootstrap",
+    "prettier": "prettier --write \"packages/**/{src,bin}/**/*.?(js|json)\""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/register": "^7.8.6",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-plugin-lodash": "^3.3.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.1",
+    "lerna": "^3.22.1",
+    "open": "^7.3.0",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2"
+  }
+}

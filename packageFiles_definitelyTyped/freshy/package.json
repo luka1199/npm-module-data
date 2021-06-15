@@ -1,0 +1,38 @@
+{
+  "name": "freshy",
+  "version": "1.0.4",
+  "description": "A node module (un|re)loader.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "cover": "istanbul cover tape -- test/*.js",
+    "lint": "eslint index.js test/*.js",
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/totherik/freshy.git"
+  },
+  "author": "Erik Toth <totherik@gmail.com>",
+  "contributors": [
+    {
+      "name": "Fedor Indutny",
+      "email": "fedor@indutny.com"
+    }
+  ],
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "caller": "0.0.1",
+    "debuglog": "^1.0.1",
+    "path-is-absolute": "^1.0.0",
+    "resolve": "^1.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^0.24.1",
+    "istanbul": "~0.2.4",
+    "tape": "~2.4.2"
+  }
+}

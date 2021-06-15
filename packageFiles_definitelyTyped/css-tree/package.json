@@ -1,0 +1,59 @@
+{
+  "name": "css-tree",
+  "version": "2.0.0-dev",
+  "description": "A tool set for CSS: fast detailed parser (CSS → AST), walker (AST traversal), generator (AST → CSS) and lexer (validation and matching) based on specs and browser implementations",
+  "author": "Roman Dvornov <rdvornov@gmail.com> (https://github.com/lahmatiy)",
+  "license": "MIT",
+  "repository": "csstree/csstree",
+  "keywords": [
+    "css",
+    "ast",
+    "tokenizer",
+    "parser",
+    "walker",
+    "lexer",
+    "generator",
+    "utils",
+    "syntax",
+    "validation"
+  ],
+  "main": "lib/index.js",
+  "unpkg": "dist/csstree.min.js",
+  "jsdelivr": "dist/csstree.min.js",
+  "scripts": {
+    "build": "node scripts/build",
+    "build-and-test": "npm run build && npm run test:dist",
+    "lint": "eslint data lib scripts test && node scripts/review-syntax-patch --lint && node scripts/update-docs --lint",
+    "lint-and-test": "npm run lint && npm test",
+    "update:docs": "node scripts/update-docs",
+    "review:syntax-patch": "node scripts/review-syntax-patch",
+    "test": "mocha --reporter ${REPORTER:-progress}",
+    "test:dist": "MODE=dist npm test && MODE=dist-min npm test",
+    "coverage": "nyc npm test",
+    "travis": "npm run lint && nyc npm run test && npm run build-and-test && npm run coveralls",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepublishOnly": "npm run build",
+    "hydrogen": "node --trace-hydrogen --trace-phase=Z --trace-deopt --code-comments --hydrogen-track-positions --redirect-code-traces --redirect-code-traces-to=code.asm --trace_hydrogen_file=code.cfg --print-opt-code bin/parse --stat -o /dev/null"
+  },
+  "dependencies": {
+    "mdn-data": "2.0.14",
+    "source-map": "^0.6.1"
+  },
+  "devDependencies": {
+    "clap": "^2.0.1",
+    "coveralls": "^3.0.9",
+    "esbuild": "^0.11.2",
+    "eslint": "^6.8.0",
+    "json-to-ast": "^2.1.0",
+    "mocha": "^6.2.3",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": "^14.16.0 || >=15.0.0"
+  },
+  "files": [
+    "data",
+    "dist",
+    "lib"
+  ]
+}

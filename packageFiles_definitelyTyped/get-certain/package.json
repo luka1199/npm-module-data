@@ -1,0 +1,56 @@
+{
+  "author": {
+    "email": "wtgtybhertgeghgtwtg@gmail.com",
+    "name": "Matthew Fernando Garcia"
+  },
+  "bugs": {
+    "url": "https://github.com/wtgtybhertgeghgtwtg/get-certain/issues"
+  },
+  "description": "Assert a Map has a given key and return the value for it.",
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "@babel/preset-flow": "^7.0.0-beta.46",
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@wtg/scripts": "^1.1.2",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.0",
+    "babel-jest": "^24.0.0",
+    "eslint": "^6.0.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-flowtype": "^4.0.0",
+    "eslint-plugin-import": "^2.11.0",
+    "flow-bin": "^0.123.0",
+    "husky": "^3.0.0",
+    "jest": "^24.0.0",
+    "lint-staged": "^10.0.0",
+    "prettier": "1.19.1",
+    "rimraf": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "license": "MIT",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "name": "get-certain",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wtgtybhertgeghgtwtg/get-certain"
+  },
+  "scripts": {
+    "build": "wtg build",
+    "clean": "rimraf coverage dist",
+    "lint": "flow && eslint . && prettier --l \"{__tests__,src}/**/*.js\"",
+    "test": "yarn test:src && yarn build && yarn test:dist",
+    "test:src": "jest --config scripts/jest/config.source.js",
+    "test:dist": "jest --config scripts/jest/config.dist.js"
+  },
+  "version": "0.0.0-semantic-release"
+}

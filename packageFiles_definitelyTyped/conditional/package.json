@@ -1,0 +1,83 @@
+{
+  "name": "conditional",
+  "version": "5.3.0",
+  "description": "A preconditions package based on Google's Preconditions library",
+  "private": false,
+  "author": "Anshul Verma <anshul.verma86@gmail.com>",
+  "main": "lib/src/main.js",
+  "maintainers": [
+    "Anshul Verma <anshul.verma86@gmail.com>"
+  ],
+  "scripts": {
+    "test": "mocha --ui tdd --reporter spec",
+    "prepublish": "grunt build"
+  },
+  "testling": {
+    "preprocess": "bower install",
+    "harness": "mocha",
+    "files": [
+      "lib/test/*.js"
+    ],
+    "scripts": [
+      "dist/preconditions.js"
+    ],
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/4.0..latest",
+      "opera/11.0..latest",
+      "iphone/6.0..latest",
+      "ipad/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  },
+  "browserify-shim": "./.shim.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anshulverma/conditional"
+  },
+  "dependencies": {
+    "debug": "^2.0.0"
+  },
+  "devDependencies": {
+    "browserify-shim": "^3.8.2",
+    "chai": "1.9.1",
+    "coffee-script": "^1.7.1",
+    "grunt-browserify": "^3.3.0",
+    "grunt-coffee-coverage": "^0.1.5",
+    "grunt-coffeelint": "0.0.13",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-coffee": "^0.11.0",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-coveralls": "^0.3.0",
+    "grunt-docco": "^0.3.3",
+    "grunt-env": "^0.4.1",
+    "grunt-mocha-test": "^0.11.0",
+    "grunt-sed": "^0.1.1",
+    "hierarchical-reporter": "0.0.3",
+    "mocha": "^1.21.3",
+    "mocha-lcov-reporter": "0.0.1"
+  },
+  "bundledDependencies": [
+    "debug"
+  ],
+  "keywords": [
+    "coffee-script",
+    "grunt",
+    "preconditions",
+    "conditional",
+    "coverage",
+    "browser",
+    "bower"
+  ],
+  "engines": {
+    "node": ">= 0.10.0",
+    "npm": ">= 1.1.65"
+  },
+  "directories": {
+    "doc": "./docs",
+    "lib": "./lib"
+  }
+}

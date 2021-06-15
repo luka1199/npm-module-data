@@ -1,0 +1,51 @@
+{
+  "name": "react-adal",
+  "version": "0.5.2",
+  "description": "Azure Active Directory (ADAL) support for ReactJS",
+  "main": "lib/react-adal.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel src --out-dir lib",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "sdk:update": "node internals/update-sdk.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/salvoravida/react-adal.git"
+  },
+  "keywords": [
+    "react",
+    "implicit",
+    "js",
+    "AAD",
+    "adal",
+    "oauth",
+    "oauth2",
+    "azure",
+    "react-adal",
+    "actve",
+    "directory",
+    "msal"
+  ],
+  "author": "salvoravida",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/salvoravida/react-adal/issues"
+  },
+  "homepage": "https://github.com/salvoravida/react-adal#readme",
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^15.0.0 || ^16.0.0 || ^17.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@salvoravida/eslint-config": "0.0.4",
+    "cross-env": "7.0.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "lambda-tester",
+  "version": "4.0.1",
+  "description": "Unit/Integration tests for AWS Lambda handlers",
+  "main": "lib/index.js",
+  "keywords": [
+    "AWS",
+    "Lambda",
+    "unit",
+    "test",
+    "mocha",
+    "TDD",
+    "unit test",
+    "unit testing",
+    "integration test",
+    "integration testing",
+    "serverless",
+    "environment",
+    "variables",
+    "x-ray"
+  ],
+  "engines": {
+    "node": ">=10.0"
+  },
+  "files": [
+    "/lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vandium-io/lambda-tester.git"
+  },
+  "scripts": {
+    "test": "nyc mocha 'lib/**/__tests__/*' --recursive"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "include": [
+      "lib/**/*.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "author": "Vandium Software Inc.",
+  "license": "BSD-3-Clause",
+  "devDependencies": {
+    "@vandium/event-identifier": "^3.0.0",
+    "aws-xray-sdk-core": "^2.3.3",
+    "chai": "^4.2.0",
+    "freshy": "^1.0.2",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "proxyquire": "^2.1.0",
+    "sinon": "^7.3.2"
+  },
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "dotenv": "^8.0.0",
+    "dotenv-json": "^1.0.0",
+    "lambda-event-mock": "^1.5.0",
+    "lambda-leak": "^2.0.0",
+    "semver": "^6.1.1",
+    "uuid": "^3.3.3",
+    "vandium-utils": "^2.0.0"
+  }
+}

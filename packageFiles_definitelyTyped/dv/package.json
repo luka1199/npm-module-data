@@ -1,0 +1,55 @@
+{
+  "name": "dv",
+  "version": "2.2.0",
+  "description": "DocumentVision is a node.js library for processing and understanding scanned documents",
+  "keywords": [
+    "graphics",
+    "vision",
+    "image",
+    "images",
+    "barcode",
+    "barcodes",
+    "ocr",
+    "omr",
+    "leptonica",
+    "tesseract",
+    "zxing"
+  ],
+  "homepage": "https://github.com/creatale/node-dv",
+  "bugs": {
+    "url": "https://github.com/creatale/node-dv/issues"
+  },
+  "author": "creatale GmbH <contact@creatale.de>",
+  "contributors": [
+    "Christoph Schulz <schulzcbs@gmail.com>",
+    "Wolfgang Fellger <wf@creatale.de>",
+    "routix <backup32@yandex.ru>",
+    "Christian Dittrich <christian.dittrich@creatale.de>",
+    "chrox <chrox.huang@gmail.com>",
+    "rashfael <rashfael@creatale.de>"
+  ],
+  "main": "./lib/dv",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/creatale/node-dv.git"
+  },
+  "scripts": {
+    "postinstall": "node-gyp clean",
+    "test": "mocha test"
+  },
+  "dependencies": {
+    "dv.data": "^1.4.0",
+    "nan": "^2.10.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  },
+  "optionalDependencies": {
+    "windows-build-tools": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "license": "MIT"
+}

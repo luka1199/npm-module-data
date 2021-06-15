@@ -1,0 +1,36 @@
+{
+  "name": "ldap-filters",
+  "version": "2.2.2",
+  "description": "Library for generating, parsing, and evaluating LDAP filters",
+  "main": "index.js",
+  "dependencies": {
+    "soundex": "~0.2.1"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "pegjs": "^0.9.0"
+  },
+  "scripts": {
+    "test": "mocha --timeout 5000 test/*js",
+    "build": "node_modules/.bin/pegjs lib/parser.pegjs lib/parser.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tapmodo/node-ldap-filters.git"
+  },
+  "keywords": [
+    "ldap",
+    "filter",
+    "parser",
+    "generate",
+    "evaluate",
+    "match"
+  ],
+  "author": "Tapmodo <khallman@tapmodo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tapmodo/node-ldap-filters/issues"
+  },
+  "homepage": "https://github.com/tapmodo/node-ldap-filters"
+}

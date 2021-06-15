@@ -1,0 +1,55 @@
+{
+  "name": "jasmine-expect-jsx",
+  "version": "3.2.0",
+  "description": "JSX assertions for Jasmine",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify index.js | babel --presets=env,react --compact -o dist/jasmine-expect-jsx.js",
+    "test": "jasmine && jest",
+    "test.watch": "jasmine && jest --watch",
+    "lint": "eslint .",
+    "dist": "npm run lint && npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smacker/jasmine-expect-jsx.git"
+  },
+  "keywords": [
+    "assert",
+    "assertion",
+    "jasmine",
+    "expect",
+    "jsx",
+    "react",
+    "test"
+  ],
+  "author": "Maxim Sukharev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smacker/jasmine-expect-jsx/issues"
+  },
+  "homepage": "https://github.com/smacker/jasmine-expect-jsx#readme",
+  "dependencies": {
+    "collapse-white-space": "^1.0.0",
+    "diff": "^4.0.1",
+    "react-element-to-jsx-string": "^14.0.2"
+  },
+  "jest": {
+    "testURL": "http://localhost",
+    "setupTestFrameworkScriptFile": "<rootDir>/spec/support/jestSetup.js"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.0",
+    "babel-jest": "^23.6.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.23.0",
+    "browserify": "^16.2.3",
+    "eslint": "^6.0.0",
+    "eslint-plugin-react": "^7.12.4",
+    "jasmine": "^3.3.1",
+    "jest": "^23.6.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}

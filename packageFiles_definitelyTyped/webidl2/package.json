@@ -1,0 +1,48 @@
+{
+  "name": "webidl2",
+  "description": "A WebIDL Parser",
+  "version": "24.1.1",
+  "contributors": [
+    "Robin Berjon <robin@berjon.com> (https://berjon.com)",
+    "Marcos Caceres <marcos@marcosc.com> (https://marcosc.com)",
+    "Kagami Sascha Rosylight <saschaplas@outlook.com>",
+    "Timothy Gu <timothygu99@gmail.com>"
+  ],
+  "license": "W3C",
+  "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "expect": "^27.0.2",
+    "jsondiffpatch": "^0.4.1",
+    "mocha": "^9.0.0",
+    "prettier": "^2.3.1",
+    "terser-webpack-plugin": "^5.1.3",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2"
+  },
+  "scripts": {
+    "eslint": "eslint lib test",
+    "typecheck": "tsc -p jsconfig.json",
+    "lint": "npm run eslint && npm run typecheck",
+    "test": "npm run lint && webpack && mocha",
+    "acquire": "node test/util/acquire.js",
+    "build": "npx webpack",
+    "build-debug": "npx webpack --mode none",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": "git://github.com/w3c/webidl2.js",
+  "main": "dist/webidl2.js",
+  "exports": {
+    "import": "./index.js",
+    "require": "./dist/webidl2.js"
+  },
+  "type": "module",
+  "files": [
+    "dist/*",
+    "lib/*",
+    "index.js"
+  ]
+}

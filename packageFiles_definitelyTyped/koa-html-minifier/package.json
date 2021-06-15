@@ -1,0 +1,85 @@
+{
+  "name": "koa-html-minifier",
+  "description": "minify HTML responses like some crazy guy",
+  "version": "2.1.0",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/koajs/html-minifier"
+  },
+  "keywords": [
+    "koa",
+    "html",
+    "css",
+    "htmlmin",
+    "min",
+    "compress",
+    "minification",
+    "minifier",
+    "minify",
+    "uglifier",
+    "uglify",
+    "terser"
+  ],
+  "scripts": {
+    "lint": "xo",
+    "pretest": "npm run lint",
+    "test": "mocha --exit",
+    "test-ci": "nyc npm run test"
+  },
+  "author": {
+    "name": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com"
+  },
+  "contributors": [
+    {
+      "name": "Imed Jaberi",
+      "email": "imed_jebari@hotmail.fr",
+      "url": "https://www.3imed-jaberi.com"
+    },
+    {
+      "name": "João Carmona",
+      "email": "jpc@mm.st"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "html-minifier-terser": "^5.1.1"
+  },
+  "devDependencies": {
+    "eslint-config-xo-lass": "^1.0.3",
+    "koa": "^2.13.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "supertest": "^4.0.2",
+    "xo": "^0.32.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "trailingComma": "none"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "extends": [
+      "xo-lass"
+    ],
+    "ignores": [
+      "test"
+    ],
+    "rules": {
+      "func-names": "off"
+    }
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "homepage": "https://github.com/koajs/html-minifier",
+  "bugs": {
+    "url": "https://github.com/koajs/html-minifier/issues"
+  }
+}

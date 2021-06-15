@@ -1,0 +1,42 @@
+{
+  "name": "sharpie",
+  "version": "4.5.3",
+  "description": "A simple express middleware for resizing images using sharp and pipes",
+  "scripts": {
+    "test": "mocha"
+  },
+  "main": "lib/sharpie.js",
+  "author": "Jérémy Lal <kapouer@melix.org>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kapouer/sharpie.git"
+  },
+  "keywords": [
+    "resize",
+    "convert",
+    "image",
+    "express",
+    "sharp",
+    "ico",
+    "favicon"
+  ],
+  "bugs": {
+    "url": "https://github.com/kapouer/sharpie/issues"
+  },
+  "dependencies": {
+    "color-string": "^1.5.5",
+    "content-type": "^1.0.4",
+    "debug": "^4.3.1",
+    "got": "^11.8.2",
+    "media-typer": "^1.1.0",
+    "sharp": "^0.24.1",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {
+    "compression": "^1.7.4",
+    "express": "latest",
+    "mocha": "latest",
+    "should": "latest"
+  }
+}

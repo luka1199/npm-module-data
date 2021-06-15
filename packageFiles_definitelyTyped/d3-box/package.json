@@ -1,0 +1,25 @@
+{
+  "name": "d3-box",
+  "version": "1.0.0",
+  "description": "An NPM mirror of mbostock's box.js.",
+  "main": "box.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacksonGariety/d3-box.git"
+  },
+  "keywords": [
+    "d3",
+    "box",
+    "whisker",
+    "plot"
+  ],
+  "author": "JacksonGariety",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JacksonGariety/d3-box/issues"
+  },
+  "homepage": "https://github.com/JacksonGariety/d3-box#readme"
+}

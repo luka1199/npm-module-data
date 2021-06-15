@@ -1,0 +1,36 @@
+{
+  "name": "xar",
+  "version": "1.1.1",
+  "description": "extensible archiver",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/finnp/xar.git"
+  },
+  "keywords": [
+    "archive",
+    "macos"
+  ],
+  "author": "Finn Pauls",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/finnp/xar/issues"
+  },
+  "homepage": "https://github.com/finnp/xar",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "ranges-stream": "^1.0.0",
+    "read-only-stream": "^2.0.0",
+    "readdirp": "^2.0.0",
+    "through2": "^2.0.0",
+    "xml": "^1.0.0",
+    "xml2js": "^0.4.15"
+  },
+  "devDependencies": {
+    "tape": "^4.2.2",
+    "concat-stream": "^1.5.1"
+  }
+}

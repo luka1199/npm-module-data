@@ -1,0 +1,52 @@
+{
+  "name": "react-better-password",
+  "version": "0.1.0",
+  "description": "Password input for ReactJS that mimics mobile password masking behavior. Delays the masking of the last character to improve user accuracy.",
+  "main": "build/index.js",
+  "author": "George Karagkiaouris",
+  "homepage": "https://karaggeorge.github.io/react-better-password",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/karaggeorge/react-better-password.git"
+  },
+  "bugs": {
+    "url": "https://github.com/karaggeorge/react-better-password/issues"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "keywords": [
+   "react",
+   "react-component",
+   "password",
+   "mask",
+   "mobile",
+   "timeout",
+   "last",
+   "character"
+ ],
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0"
+  },
+  "scripts": {
+    "start-example": "cd example && yarn start",
+    "start-component": "webpack --watch",
+    "start": "npm-run-all -p start-component start-example",
+    "build": "webpack",
+    "build-example": "cd example && yarn build",
+    "publish-gh-pages": "gh-pages -d example/build",
+    "publish-example": "npm-run-all build-example publish-gh-pages"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "npm-run-all": "^4.1.2",
+    "webpack": "^2.6.1"
+  }
+}

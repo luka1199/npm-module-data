@@ -1,0 +1,94 @@
+{
+  "name": "teddy",
+  "description": "Teddy Templating Engine",
+  "author": "Roosevelt Framework Team <rooseveltframework@gmail.com>",
+  "contributors": [
+    {
+      "name": "Contributors",
+      "url": "https://github.com/rooseveltframework/teddy/graphs/contributors"
+    }
+  ],
+  "version": "0.5.7",
+  "files": [
+    "dist/teddy.js"
+  ],
+  "homepage": "https://github.com/rooseveltframework/teddy",
+  "license": "CC-BY-4.0",
+  "main": "dist/teddy.js",
+  "readmeFilename": "README.md",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "c8": "~7.7.2",
+    "chai": "~4.3.4",
+    "chai-string": "~1.5.0",
+    "codecov": "~3.8.2",
+    "cross-env": "~7.0.3",
+    "eslint": "~7.26.0",
+    "eslint-plugin-mocha": "~8.1.0",
+    "karma": "~6.3.2",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-cli": "~2.0.0",
+    "karma-coverage": "~2.0.3",
+    "karma-edge-launcher": "~0.4.2",
+    "karma-firefox-launcher": "~2.1.0",
+    "karma-html2js-preprocessor": "~1.1.0",
+    "karma-mocha": "~2.0.1",
+    "karma-spec-reporter": "~0.0.32",
+    "mocha": "~8.4.0",
+    "playwright": "~1.11.0",
+    "standard": "~16.0.3",
+    "webpack": "~5.37.0",
+    "webpack-cli": "~4.7.0"
+  },
+  "standard": {
+    "ignore": [
+      "test/client.js"
+    ]
+  },
+  "eslintConfig": {
+    "plugins": [
+      "mocha"
+    ],
+    "rules": {
+      "mocha/no-exclusive-tests": "error"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "env": {
+      "es6": true
+    }
+  },
+  "scripts": {
+    "build": "webpack",
+    "codecov": "./node_modules/.bin/codecov",
+    "coverage": "cross-env NODE_ENV=cover c8 --reporter=text --reporter=lcov mocha --timeout 60000 test/*.js && karma start",
+    "lint": "standard && eslint ./test",
+    "test": "cross-env NODE_ENV=test npm run test-server && karma start",
+    "test-chrome": "karma start --browsers ChromeHeadless",
+    "test-edge": "karma start --browsers Edge",
+    "test-firefox": "karma start --browsers Firefox",
+    "test-safari": "karma start --browsers Safari",
+    "test-server": "cross-env NODE_ENV=test mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rooseveltframework/teddy.git"
+  },
+  "keywords": [
+    "teddy.js",
+    "node.js",
+    "teddy",
+    "template",
+    "view"
+  ],
+  "_from": "teddy@*",
+  "gitHead": "1dbbc4c73d7c8878cbe7fc0ba527c91018b4cea7",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/kethinov"
+  }
+}

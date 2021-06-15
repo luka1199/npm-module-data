@@ -1,0 +1,59 @@
+{
+  "name": "trashable",
+  "version": "1.0.7",
+  "description": "A wrapper to make promises cancellable and garbage collectable",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src/ -d lib/ && flow-copy-source src lib",
+    "lint": "eslint src/** __tests__/**",
+    "test": "node --expose-gc `which jest`",
+    "validate": "npm run lint && flow && npm test",
+    "precommit": "lint-staged",
+    "prepush": "npm run validate",
+    "prepublish": "npm run validate && npm run build"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hjylewis/trashable.git"
+  },
+  "keywords": [
+    "javascript",
+    "promise",
+    "cancellable",
+    "garbage-collection",
+    "garbage",
+    "collection",
+    "cancel",
+    "react",
+    "es6"
+  ],
+  "author": "hjylewis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hjylewis/trashable/issues"
+  },
+  "homepage": "https://github.com/hjylewis/trashable#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "eslint": "^4.9.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-jest": "^21.2.0",
+    "flow-bin": "^0.57.3",
+    "flow-copy-source": "^1.2.1",
+    "husky": "^0.14.3",
+    "jest": "^21.2.1",
+    "lint-staged": "^4.3.0",
+    "prettier": "1.7.4",
+    "weak": "^1.0.1"
+  }
+}

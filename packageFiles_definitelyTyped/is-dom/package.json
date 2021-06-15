@@ -1,0 +1,27 @@
+{
+  "name": "is-dom",
+  "version": "1.1.0",
+  "description": "Check if the given object is a dom node",
+  "main": "index.js",
+  "scripts": {
+    "test": "browserify test.js | tape-run"
+  },
+  "repository": "npm-dom/is-dom",
+  "keywords": [
+    "dom",
+    "html",
+    "is dom",
+    "dom node",
+    "dom object"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "is-object": "^1.0.1",
+    "is-window": "^1.0.2"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "tape": "^4.10.2",
+    "tape-run": "^6.0.0"
+  }
+}

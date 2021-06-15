@@ -1,0 +1,38 @@
+{
+  "name": "gulp-json-validator",
+  "version": "1.2.0",
+  "description": "A json validator that has an option to check for duplicated keys",
+  "keywords": [
+    "jsonvalidator",
+    "json",
+    "validator",
+    "validation",
+    "gulpplugin"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "json-dup-key-validator": "^1.0.0",
+    "map-stream": "0.0.7",
+    "plugin-error": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.4.5",
+    "vinyl": "^2.1.0"
+  },
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackyjieliu/gulp-json-validator.git"
+  },
+  "author": "Jie Liu (Jacky)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jackyjieliu/gulp-json-validator/issues"
+  },
+  "homepage": "https://github.com/jackyjieliu/gulp-json-validator"
+}

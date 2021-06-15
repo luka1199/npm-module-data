@@ -1,0 +1,76 @@
+{
+  "name": "node-zopfli",
+  "description": "Bindings for Zopfli compressing lib. Compress gzip files 5% better than gzip.",
+  "version": "2.1.4",
+  "author": "Pierre Inglebert <pierre.inglebert@gmail.com>",
+  "contributors": [
+    "duralog <funisher@gmail.com>",
+    "MayhemYDG <stepien.nicolas@gmail.com>",
+    "XhmikosR <xhmikosr@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "zopfli",
+    "zlib",
+    "compress",
+    "gzip",
+    "deflate"
+  ],
+  "homepage": "https://github.com/pierreinglebert/node-zopfli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pierreinglebert/node-zopfli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pierreinglebert/node-zopfli/issues"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "binary": {
+    "napi_versions": [
+      3
+    ]
+  },
+  "dependencies": {
+    "commander": "^3.0.0",
+    "defaults": "^1.0.3",
+    "node-addon-api": "^1.7.2",
+    "prebuild-install": "^5.3.5"
+  },
+  "devDependencies": {
+    "async": "^2.6.3",
+    "aws-sdk": "^2.740.0",
+    "chai": "^4.2.0",
+    "coveralls": "^3.1.0",
+    "cross-spawn": "^7.0.3",
+    "eslint": "5.16.0",
+    "istanbul": "^0.4.4",
+    "mocha": "^6.2.3",
+    "npm-run-path-compat": "^2.0.3",
+    "prebuild": "^9.0.0",
+    "prebuild-ci": "^3.1.0",
+    "randomstring": "^1.1.5"
+  },
+  "bin": {
+    "zopfli": "bin/zopfli",
+    "zopflipng": "bin/zopflipng"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "src",
+    "zopfli",
+    "binding.gyp"
+  ],
+  "scripts": {
+    "coveralls": "coveralls < ./coverage/lcov.info",
+    "install": "prebuild-install --runtime napi || prebuild-install || node-gyp rebuild",
+    "lint": "eslint .",
+    "mocha": "mocha test",
+    "test-cov": "istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec test",
+    "test": "npm run lint && npm run mocha && node custom-prebuild-ci"
+  },
+  "main": "lib/zopfli.js",
+  "gypfile": true
+}

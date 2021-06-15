@@ -1,0 +1,22 @@
+{
+  "name": "nanographql",
+  "description": "Tiny graphQL client library",
+  "repository": "yoshuawuyts/nanographql",
+  "version": "2.0.0",
+  "scripts": {
+    "start": "node .",
+    "test": "standard && node test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "spok": "^0.8.1",
+    "standard": "^10.0.2",
+    "tape": "^4.7.0"
+  },
+  "keywords": [
+    "graphql",
+    "small",
+    "nano"
+  ],
+  "license": "MIT"
+}

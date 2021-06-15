@@ -1,0 +1,70 @@
+{
+  "name": "ajv-async",
+  "version": "1.0.1",
+  "description": "Configure async validation mode in Ajv - JSON-Schema validator",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "rm -rf dist && ./scripts/bundle",
+    "prepublish": "npm run bundle",
+    "test-spec": "mocha spec/*.spec.js -R spec",
+    "test-cov": "nyc npm run test-spec",
+    "test": "npm run test-cov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epoberezkin/ajv-async.git"
+  },
+  "keywords": [
+    "JSON",
+    "schema",
+    "validator",
+    "validation",
+    "jsonschema",
+    "json-schema",
+    "json-schema-validator",
+    "json-schema-validation",
+    "async",
+    "asynchronous",
+    "asynchronous validation",
+    "ajv",
+    "generators",
+    "async-function",
+    "co",
+    "nodent",
+    "regenerator"
+  ],
+  "author": "Evgeny Poberezkin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epoberezkin/ajv-async/issues"
+  },
+  "homepage": "https://github.com/epoberezkin/ajv-async#readme",
+  "peerDependencies": {
+    "ajv": "^6.0.0"
+  },
+  "dependencies": {
+    "nodent": "^3.1.3"
+  },
+  "devDependencies": {
+    "ajv": "^6.0.0",
+    "browserify": "^14.5.0",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "pre-commit": "^1.2.2",
+    "uglify-js": "^3.1.8"
+  },
+  "files": [
+    "index.js",
+    "dist/"
+  ],
+  "nyc": {
+    "exclude": [
+      "**/spec/**",
+      "node_modules"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "mina",
+  "version": "1.0.10",
+  "description": "Lightweight deployer for node development, inspired by mina and minco",
+  "homepage": "https://github.com/CenturyUna/mina",
+  "bugs": "https://github.com/CenturyUna/mina/issues",
+  "dependencies": {
+    "cli-color": "^1.1.0",
+    "nopt": "^3.0.6"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0"
+  },
+  "files": [
+    "bin",
+    "completion",
+    "lib"
+  ],
+  "bin": {
+    "mina": "./bin/mina-cli"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "prepublish": "make"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CenturyUna/mina"
+  },
+  "keywords": [
+    "deploy",
+    "deployment",
+    "coffeescript",
+    "mina",
+    "minco",
+    "git",
+    "ssh",
+    "forever",
+    "pm2"
+  ],
+  "author": "C.C. <fanweixiao@gmail.com> (http://onlyvc.us)",
+  "contributors": [
+    "Nealma <neal.ma.sh@gmail.com>",
+    "Houjiazong <houjiazong@gmail.com>",
+    "BordenJardine <bordenjardine@gmail.com>",
+    "Marcus Vorwaller (https://github.com/marcus)",
+    "Allan Wind (https://github.com/allanwind)"
+  ],
+  "readmeFilename": "README.md",
+  "preferGlobal": true,
+  "license": "MIT"
+}

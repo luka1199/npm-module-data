@@ -1,0 +1,62 @@
+{
+  "name": "searchjs",
+  "description": "A library for filtering JavaScript objects based on a json SQL-like language, jsql",
+  "version": "1.1.0",
+  "url": "http://github.com/deitch/searchjs",
+  "author": "Avi Deitcher (https://github.com/deitch)",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Avi Deitcher",
+      "url": "http://github.com/deitcher"
+    },
+    {
+      "name": "Ed Hotchkiss",
+      "url": "https://github.com/edwardhotchkiss"
+    },
+    {
+      "name": "Jan",
+      "url": "https://github.com/janober"
+    },
+    {
+      "name": "Hans Jakob Emmel",
+      "url": "https://github.com/hjemmel"
+    }
+  ],
+  "engines": {
+    "node": ">=0.8"
+  },
+  "main": "./lib/searchjs.js",
+  "module": "src/searchjs.js",
+  "files": [
+    "/lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/deitch/searchjs.git"
+  },
+  "bugs": "https://github.com/deitch/searchjs/issues",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-external-helpers": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "codecov": "^3.6.5",
+    "mocha": "^6.2.0",
+    "nyc": "^12.0.2",
+    "rollup": "^0.61.2",
+    "rollup-plugin-babel": "^4.3.3",
+    "should": "^13.2.1",
+    "uglify-js": "^3.4.1"
+  },
+  "scripts": {
+    "build": "NODE_ENV=prod rollup -c && npm run uglify",
+    "prepublishOnly": "npm run-script build",
+    "uglify": "uglifyjs ./lib/searchjs.js --compress --mangle --comments -o ./lib/searchjs.min.js",
+    "test": "NODE_ENV=test mocha --require  @babel/register ./test/test.js --reporter spec",
+    "test-watch": "NODE_ENV=test mocha --watch --require  @babel/register ./test/test.js --reporter spec",
+    "coverage": "nyc npm test"
+  },
+  "dependencies": {}
+}

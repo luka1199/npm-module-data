@@ -1,0 +1,59 @@
+{
+  "name": "moveto",
+  "version": "1.8.3",
+  "description": "A lightweight scroll animation javascript library without any dependency.",
+  "main": "dist/moveTo.js",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "ava tests/**",
+    "lint": "gulp scripts:lint",
+    "build": "yarn gulp build",
+    "start": "yarn build && yarn gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hsnaydd/moveTo.git"
+  },
+  "keywords": [
+    "simple",
+    "lightweight",
+    "scroll",
+    "animated",
+    "scrolling",
+    "animation",
+    "smooth",
+    "smoothscroll"
+  ],
+  "author": "Hasan Aydoğdu <hsnaydd@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hsnaydd/moveTo/issues"
+  },
+  "homepage": "https://github.com/hsnaydd/moveTo#readme",
+  "engines": {
+    "node": ">=8.9.4"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/core": "^7.14.3",
+    "@babel/eslint-parser": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "ava": "^3.15.0",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "eslint": "^7.26.0",
+    "eslint-config-google": "^0.14.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-eslint": "^6.0.0",
+    "gulp-header": "^2.0.9",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.1",
+    "jsdom": "16.5.3",
+    "jsdom-global": "3.0.2",
+    "lazypipe": "^1.0.1"
+  },
+  "ava": {
+		"babel": true
+	}
+}

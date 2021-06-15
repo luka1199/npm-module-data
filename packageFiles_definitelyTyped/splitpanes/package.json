@@ -1,0 +1,64 @@
+{
+  "name": "splitpanes",
+  "version": "2.3.6",
+  "description": "A Vue JS reliable, simple and touch-ready panes splitter / resizer",
+  "author": "Antoni Andre <antoniandre.web@gmail.com>",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build-bundle": "vue-cli-service build --target lib --name splitpanes ./src/components/splitpanes/index.js --dest ./dist && rm ./dist/demo.html"
+  },
+  "main": "./dist/splitpanes.common.js",
+  "unpkg": "dist/splitpanes.umd.min.js",
+  "files": [
+    "dist",
+    "src/components/splitpanes"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.0",
+    "@vue/cli-plugin-babel": "^4.5.6",
+    "@vue/cli-plugin-eslint": "^4.5.6",
+    "@vue/cli-service": "^4.5.6",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "core-js": "^3.6.5",
+    "eslint": "^7.10.0",
+    "eslint-plugin-vue": "^7.0.0",
+    "material-design-icons-iconfont": "^5.0.1",
+    "node-sass": "^4.14.1",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.0.0",
+    "regenerator-runtime": "^0.13.7",
+    "roboto-fontface": "*",
+    "sass-loader": "^10.0.2",
+    "simple-syntax-highlighter": "^1.4.2",
+    "vue": "^2.6.12",
+    "vue-cli-plugin-vuetify": "^2.0.7",
+    "vue-router": "^3.4.5",
+    "vue-template-compiler": "^2.6.12",
+    "vuetify": "^2.3.12"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
+  "keywords": [
+    "splitpanes",
+    "split panes",
+    "panes resizer",
+    "vue",
+    "vue3",
+    "vuejs",
+    "ui"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/antoniandre/splitpanes"
+}

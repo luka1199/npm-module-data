@@ -1,0 +1,53 @@
+{
+  "name": "knex-db-manager",
+  "version": "0.7.0",
+  "description": "Collection of administrative database operations for knex supported databases",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "node_modules/.bin/istanbul --config=.istanbul.yml cover _mocha -- --slow 10 --timeout 10000 --reporter spec --recursive tests",
+    "test-no-coverage": "node_modules/.bin/mocha --slow 10 --timeout 10000 --reporter spec --recursive tests",
+    "coveralls": "cat ./test-coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "check": "node_modules/.bin/npm-check; node_modules/.bin/nsp check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vincit/knex-db-manager.git"
+  },
+  "keywords": [
+    "knex",
+    "sql",
+    "admin",
+    "management",
+    "postgresql",
+    "mysql"
+  ],
+  "author": "Mikael Lepistö",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vincit/knex-db-manager/issues"
+  },
+  "homepage": "https://github.com/Vincit/knex-db-manager#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.9",
+    "istanbul": "^0.4.5",
+    "mocha": "^7.1.1",
+    "mysql": "^2.13.0",
+    "npm-check": "^5.9.2",
+    "nsp": "^3.2.1",
+    "pg": "^8.3.2",
+    "pg-escape": "^0.2.0",
+    "sqlite3": "^4.1.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "glob": "^7.1.6",
+    "lodash": "^4.17.15"
+  },
+  "peerDependencies": {
+    "knex": "0.x"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}

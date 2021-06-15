@@ -1,0 +1,35 @@
+{
+  "name": "@hapi/crumb",
+  "description": "CSRF crumb generation and validation plugin",
+  "version": "8.0.1",
+  "repository": "git://github.com/hapijs/crumb",
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "hapi",
+    "plugin",
+    "cookies",
+    "csrf",
+    "session"
+  ],
+  "dependencies": {
+    "@hapi/boom": "9.x.x",
+    "@hapi/cryptiles": "5.x.x",
+    "@hapi/hoek": "9.x.x",
+    "@hapi/validate": "1.x.x"
+  },
+  "devDependencies": {
+    "@hapi/code": "8.x.x",
+    "@hapi/hapi": "20.x.x",
+    "@hapi/lab": "24.x.x",
+    "@hapi/vision": "6.x.x",
+    "handlebars": "^4.7.7"
+  },
+  "scripts": {
+    "test": "lab -t 100 -a @hapi/code -L",
+    "test-cov-html": "lab -r html -o coverage.html -a @hapi/code -L"
+  },
+  "license": "BSD-3-Clause"
+}

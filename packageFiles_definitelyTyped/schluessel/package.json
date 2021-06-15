@@ -1,0 +1,53 @@
+{
+  "name": "schluessel",
+  "version": "1.0.3",
+  "description": "Rails like credentials store for database passwords, API keys, etc. encrypted in your repository.",
+  "type": "commonjs",
+  "main": "index.js",
+  "exports": {
+    "require": "./index.js",
+    "import": "./ecma-index.mjs"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && NODE_ENV=testing node test.js"
+  },
+  "bin": "cli.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pik-9/schluessel.git"
+  },
+  "files": [
+    "src/*",
+    "cli.js",
+    "index.js",
+    "ecma-index.mjs",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "schluessel",
+    "credentials",
+    "secret",
+    "secrets",
+    "password",
+    "key",
+    "vault",
+    "encrypted",
+    "rails"
+  ],
+  "author": "Daniel Steinhauer",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Pik-9/schluessel/issues"
+  },
+  "homepage": "https://github.com/Pik-9/schluessel#readme",
+  "dependencies": {
+    "app-root-path": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  }
+}

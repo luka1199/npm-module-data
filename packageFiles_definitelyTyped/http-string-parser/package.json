@@ -1,0 +1,36 @@
+{
+  "name": "http-string-parser",
+  "version": "0.0.6",
+  "description": "Parse HTTP Request and Response from String",
+  "main": "lib/parser.js",
+  "scripts": {
+    "test": "scripts/test",
+    "prepublish": "scripts/prepublish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apiaryio/http-string-parser"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "coffee-script": "1.6.3",
+    "mocha": "1.11.0",
+    "chai": "4.2.0",
+    "curl-trace-parser": ""
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "http",
+    "message",
+    "request",
+    "response",
+    "parser",
+    "string",
+    "raw",
+    "bare"
+  ],
+  "author": "Adam Kliment <adam@apiary.io>",
+  "license": "MIT"
+}

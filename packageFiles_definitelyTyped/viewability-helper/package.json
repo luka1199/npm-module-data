@@ -1,0 +1,45 @@
+{
+  "name": "viewability-helper",
+  "version": "1.0.27",
+  "description": "Lightweight cross-browser library that enables you to create a watcher for a given element, and get back a callback when it has entered the viewport",
+  "main": "./lib/viewability-helper.min.js",
+  "scripts": {
+    "build": "webpack --env build",
+    "dev": "webpack --progress --colors --watch --env dev",
+    "prepublish": "webpack --env build && webpack --config=webpack.examples.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outbrain/ViewabilityHelper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/outbrain/ViewabilityHelper/issues"
+  },
+  "homepage": "https://github.com/outbrain/ViewabilityHelper#readme",
+  "keywords": [
+    "javascript",
+    "viewability",
+    "helper",
+    "intersection",
+    "observer",
+    "intersectionobserver"
+  ],
+  "author": "Liron Zluf",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-core": "6.24.1",
+    "babel-eslint": "7.2.3",
+    "babel-loader": "7.0.0",
+    "babel-plugin-add-module-exports": "0.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "eslint": "3.19.0",
+    "eslint-loader": "1.7.1",
+    "webpack": "2.4.1",
+    "yargs": "7.1.0"
+  },
+  "files": [
+    "lib"
+  ]
+}

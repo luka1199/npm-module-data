@@ -1,0 +1,19 @@
+{
+  "name": "finch",
+  "version": "2.0.1",
+  "description": "The finch package has been deprecated in favor of @finch. See: https://www.npmjs.com/search?q=%40finch and https://github.com/mseeley/finch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mseeley/finch-parked.git"
+  },
+  "author": "Matt Seeley <mattseeley@hotmail.com>",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/mseeley/finch-parked/issues"
+  },
+  "homepage": "https://github.com/mseeley/finch-parked#readme"
+}

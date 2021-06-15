@@ -1,0 +1,46 @@
+{
+  "name": "sudokus",
+  "version": "1.0.2",
+  "description": "A JavaScript utility to solve sudokus.",
+  "keywords": [
+    "sudoku",
+    "puzzle",
+    "solver"
+  ],
+  "author": "Dieter Luypaert <dieterluypaert@gmail.com>",
+  "license": "MIT",
+  "repository": "git@github.com:Moeriki/node-sudokus.git",
+  "engines": {
+    "node": ">=6"
+  },
+  "main": "lib/index.js",
+  "bin": {
+    "sudokus": "cli.js"
+  },
+  "scripts": {
+    "lint": "eslint *.js lib/",
+    "test": "jest"
+  },
+  "dependencies": {
+    "chalk": "2.4.2",
+    "lodash": "~4.17.11",
+    "log-update": "3.2.0",
+    "table": "5.4.4",
+    "yargs": "13.3.0"
+  },
+  "devDependencies": {
+    "eslint": "6.0.1",
+    "eslint-config-muriki": "10.0.1",
+    "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-jasmine": "2.10.1",
+    "eslint-plugin-node": "9.1.0",
+    "jest": "24.8.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "lib/**.js"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "/test/.*\\.test\\.js$"
+  }
+}

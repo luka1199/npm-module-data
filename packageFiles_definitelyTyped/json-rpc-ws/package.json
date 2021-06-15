@@ -1,0 +1,52 @@
+{
+  "name": "json-rpc-ws",
+  "version": "7.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:andyet/json-rpc-ws.git"
+  },
+  "description": "json-rpc websocket transport",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -a code -v -e test",
+    "lint": "eslint .",
+    "validate": "npm ls",
+    "jsdoc": "jsdoc",
+    "docs": "jsdoc index.js lib -d docs",
+    "preversion": "git checkout master && git pull origin master && npm ls",
+    "publish-patch": "npm run preversion && npm version patch && git push origin master --tags && npm publish",
+    "publish-minor": "npm run preversion && npm version minor && git push origin master --tags && npm publish",
+    "publish-major": "npm run preversion && npm version major && git push origin master --tags && npm publish"
+  },
+  "keywords": [
+    "json-rpc",
+    "websocket"
+  ],
+  "author": "Gar <gar+npm@danger.computer>",
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "^3.0.0",
+    "ws": "^6.1.4"
+  },
+  "pre-commit": [
+    "validate",
+    "lint",
+    "test"
+  ],
+  "files": [
+    "index.js",
+    "browser.js",
+    "lib/*"
+  ],
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "code": "^5.2.4",
+    "eslint": "^5.14.1",
+    "eslint-config-andyet": "^2.1.0",
+    "git-validate": "^2.2.4",
+    "jsdoc": "^3.5.5",
+    "lab": "^18.0.2",
+    "phantomjs-prebuilt": "^2.1.16",
+    "selenium-webdriver": "^3.6.0"
+  }
+}

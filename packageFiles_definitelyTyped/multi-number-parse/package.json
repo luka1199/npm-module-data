@@ -1,0 +1,43 @@
+{
+  "name": "multi-number-parse",
+  "version": "1.1.0",
+  "description": "Library for parsing numbers in any valid format.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && babel src -d dist --presets @babel/preset-env",
+    "lint": "eslint src test --fix",
+    "prepublishOnly": "npm run build",
+    "test": "npm run lint && mocha --recursive --exit --require @babel/register"
+  },
+  "keywords": [
+    "i18n",
+    "number",
+    "parse"
+  ],
+  "author": {
+    "name": "Marco Amado",
+    "email": "mjamado@dreamsincode.com",
+    "url": "http://www.dreamsincode.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjamado/multi-number-parse"
+  },
+  "license": "LGPL-3.0-or-later",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/register": "^7.10.5",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-import-resolver-node": "^0.3.4",
+    "eslint-plugin-import": "^2.22.0",
+    "mocha": "^8.0.1",
+    "rimraf": "^3.0.2"
+  }
+}

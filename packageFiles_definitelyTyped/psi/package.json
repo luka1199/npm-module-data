@@ -1,0 +1,57 @@
+{
+  "name": "psi",
+  "version": "4.1.0",
+  "description": "PageSpeed Insights with reporting",
+  "license": "Apache-2.0",
+  "repository": "GoogleChromeLabs/psi",
+  "author": {
+    "name": "Addy Osmani",
+    "email": "addyosmani@gmail.com",
+    "url": "https://addyosmani.com"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "xo && mocha",
+    "coverage": "nyc --reporter=html --reporter=text mocha"
+  },
+  "files": [
+    "cli.js",
+    "index.js",
+    "lib"
+  ],
+  "keywords": [
+    "pagespeed",
+    "insights",
+    "speed",
+    "page",
+    "website",
+    "measure",
+    "optimize",
+    "size"
+  ],
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "googleapis": "^47.0.0",
+    "humanize-url": "^2.1.0",
+    "meow": "^6.0.1",
+    "pify": "^5.0.0",
+    "prepend-http": "^3.0.1",
+    "pretty-ms": "^6.0.1",
+    "sort-on": "^4.1.0",
+    "terminal-link": "^2.1.1",
+    "update-notifier": "^4.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.0",
+    "nyc": "^15.0.0",
+    "strip-ansi": "^6.0.0",
+    "xo": "^0.25.3"
+  },
+  "xo": {
+    "space": true
+  }
+}

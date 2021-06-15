@@ -1,0 +1,46 @@
+{
+  "name": "excel-style-dataformatter",
+  "version": "2.0.1",
+  "description": "Excel-Style Javascript Data Formatter",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha",
+    "dev": "gulp dev",
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "prepublishOnly": "npm run clean && npm run build && npm run test"
+  },
+  "keywords": [
+    "excel-like",
+    "excel-style",
+    "excel",
+    "format",
+    "dataformatter"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fakundo/Excel-Style-Javascript-DataFormatter"
+  },
+  "author": "Roman Samoylov (https://github.com/fakundo)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-runtime": "^6.9.0",
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.1.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-nodemon": "^2.1.0",
+    "gutil": "^1.6.4",
+    "js-beautify": "^1.6.3",
+    "mocha": "^2.5.3",
+    "rimraf": "^2.5.2",
+    "run-sequence": "^1.2.1",
+    "webpack": "^1.13.1"
+  }
+}

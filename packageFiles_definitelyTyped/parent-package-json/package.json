@@ -1,0 +1,38 @@
+{
+	"name": "parent-package-json",
+	"version": "2.0.1",
+	"description": "Find, read and parse the package.json of the parent module",
+	"main": "lib/index.js",
+	"scripts": {
+		"test": "prettier --check **/*.js && xo && ava"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/maxrimue/parent-package-json.git"
+	},
+	"keywords": [
+		"parent",
+		"package.json",
+		"find",
+		"search",
+		"parse",
+		"read"
+	],
+	"devDependencies": {
+		"ava": "^2.1.0",
+		"prettier": "^1.16.4",
+		"xo": "^0.24.0"
+	},
+	"engines": {
+		"node": ">= 8.0.0"
+	},
+	"author": "Max Rittmüller",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/maxrimue/parentPackageJSON/issues"
+	},
+	"homepage": "https://github.com/maxrimue/parentPackageJSON#readme",
+	"xo": {
+		"prettier": true
+	}
+}

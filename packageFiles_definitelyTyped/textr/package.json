@@ -1,0 +1,41 @@
+{
+  "name": "textr",
+  "version": "0.3.0",
+  "description": "Tiny and extendable text transforming framework",
+  "homepage": "http://A.github.io/textr/",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/A/textr"
+  },
+  "bugs": {
+    "url": "https://github.com/A/textr/issues"
+  },
+  "scripts": {
+    "coverage": "istanbul cover _mocha",
+    "precoveralls": "npm run coverage",
+    "coveralls": "coveralls < coverage/lcov.info",
+    "test": "mocha",
+    "tdd": "npm test -- --watch",
+    "bench": "node -p \"i=j=1000000,s=+new Date;while(i--){require('.')('hello')};new Date-s+'ms for '+j+' iterations'\""
+  },
+  "keywords": [
+    "typographic",
+    "textr",
+    "transformer",
+    "text"
+  ],
+  "author": "Anton Shuvalov <anton@shuvalov.info>",
+  "maintainers": [
+    "Anton Shuvalov <anton@shuvalov.info>",
+    "Vladimir Starkov <iamstarkov@gmail.com> (https://iamstarkov.com/)"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.11",
+    "mocha": "^2.2.4",
+    "mocha-lcov-reporter": "0.0.2",
+    "should": "^5.2.0"
+  }
+}

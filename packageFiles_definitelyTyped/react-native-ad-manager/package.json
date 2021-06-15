@@ -1,0 +1,44 @@
+{
+  "name": "react-native-ad-manager",
+  "title": "React Native Ad Manager",
+  "version": "1.2.5",
+  "description": "A react-native component for Google Ad Manager banners, interstitials and native ads.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "post-patch": "npm version patch && git push origin --all && git push origin --tags && npm publish",
+    "post-minor": "npm version minor && git push origin --all && git push origin --tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NZME/react-native-ad-manager.git",
+    "baseUrl": "https://github.com/NZME/react-native-ad-manager"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": {
+    "name": "Matej Drobnic",
+    "email": "matej.dr@gmail.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.59.10"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-native": "^3.7.0",
+    "prettier": "^1.18.2",
+    "react": "^16.8.3",
+    "react-native": "^0.61.5"
+  }
+}

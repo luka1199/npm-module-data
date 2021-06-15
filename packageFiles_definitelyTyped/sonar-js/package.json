@@ -1,0 +1,47 @@
+{
+  "name": "sonar-js",
+  "version": "1.1.0",
+  "description": "A tiny library for detecting when a browser is scrolled to the bottom of a web page.",
+  "main": "dist/sonar.js",
+  "umd:main": "dist/sonar.umd.js",
+  "module": "dist/sonar.mjs",
+  "scripts": {
+    "build": "microbundle --entry lib/sonar.js --name Sonar",
+    "prepublish": "npm run build",
+    "test": "ava",
+    "test:watch": "ava --watch"
+  },
+  "author": {
+    "name": "Brandon Weiss",
+    "email": "desk@brandonweiss.me",
+    "url": "http://brandonweiss.me"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandonweiss/sonar-js.git"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "ava": "^3.5.1",
+    "esm": "^3.2.25",
+    "husky": "^4.2.3",
+    "jsdom": "^16.2.1",
+    "microbundle": "^0.11.0",
+    "np": "^6.2.0",
+    "prettier": "^2.0.2",
+    "pretty-quick": "^2.0.1"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "printWidth": 100,
+    "semi": false,
+    "trailingComma": "all"
+  }
+}

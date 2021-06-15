@@ -1,0 +1,44 @@
+{
+  "name": "react-file-icon",
+  "version": "1.0.0",
+  "description": "React component to render svg file icons",
+  "repository": {
+    "url": "https://github.com/corygibbons/react-file-icon"
+  },
+  "source": "src/index.js",
+  "main": "dist/react-file-icon.js",
+  "module": "dist/react-file-icon.esm.js",
+  "scripts": {
+    "build": "microbundle --jsx React.createElement --no-sourcemap --no-compress",
+    "watch": "microbundle --jsx React.createElement --no-compress --watch",
+    "test": "jest --config config/jest.config.js"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "svg",
+    "icons",
+    "file types"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "lodash.uniqueid": "^4.0.1",
+    "prop-types": "^15.7.2",
+    "tinycolor2": "^1.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-jest": "^26.1.0",
+    "component-image": "^2.1.1",
+    "jest": "^26.1.0",
+    "jest-image-snapshot": "^4.0.2",
+    "microbundle": "^0.12.2",
+    "react-test-renderer": "^16.13.1"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}

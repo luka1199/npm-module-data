@@ -1,0 +1,58 @@
+{
+  "author": "Joe Hildebrand <joe-github@cursive.net>",
+  "name": "websequencediagrams",
+  "description": "Interface to websequencediagrams.com",
+  "version": "1.0.0",
+  "homepage": "https://github.com/hildjj/node-websequencediagrams",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hildjj/node-websequencediagrams"
+  },
+  "directories": {
+    "bin": "bin",
+    "lib": "lib"
+  },
+  "main": "lib/wsd",
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "uml",
+    "sequence diagram",
+    "sequence",
+    "diagram",
+    "websequencediagrams",
+    "websequencediagrams.com"
+  ],
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "ava",
+    "lint": "standard test/*.js lib/*.js bin/*",
+    "precoveragehtml": "npm run coverage",
+    "coverage": "nyc npm test",
+    "coveragehtml": "nyc report -r html",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "precoveralls": "npm run coverage",
+    "release": "npm version patch && git push --follow-tags && npm publish"
+  },
+  "devDependencies": {
+    "ava": "^1.2.1",
+    "coveralls": "^3.0.2",
+    "nock": "^10.0.6",
+    "nyc": "^13.2.0",
+    "standard": "^12.0.1",
+    "tmp-promise": "^1.0.5"
+  },
+  "dependencies": {
+    "node-fetch": "^2.3.0",
+    "optimist": "~0.6"
+  },
+  "standard": {
+    "ignore": [
+      "docs/"
+    ],
+    "envs": [
+      "node"
+    ]
+  }
+}

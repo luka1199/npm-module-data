@@ -1,0 +1,88 @@
+{
+  "name": "podcast",
+  "version": "1.3.0",
+  "description": "Podcast RSS feed generator. A really simple API to add Podcast-RSS feeds to any project.",
+  "main": "dist/index.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "lint": "eslint src",
+    "build": "babel src -d dist",
+    "generate": "babel-node generate.js",
+    "clean": "rm -rf dist",
+    "test": "npm run lint && npm run build && ava"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/maxnowack/node-podcast/raw/master/LICENSE"
+    }
+  ],
+  "homepage": "http://github.com/maxnowack/node-podcast",
+  "author": "Max Nowack <max@unsou.de>",
+  "contributors": [
+    "Max Nowack <max@unsou.de>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/maxnowack/node-podcast"
+  },
+  "bugs": {
+    "mail": "max@unsou.de",
+    "url": "http://github.com/maxnowack/node-podcast/issues"
+  },
+  "ava": {
+    "concurrency": 5,
+    "failFast": true,
+    "require": [
+      "@babel/register"
+    ],
+    "babel": true
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread"
+    ],
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "12.0.0"
+          }
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+      "import/no-named-as-default": "off",
+      "import/no-named-as-default-member": "off"
+    }
+  },
+  "dependencies": {
+    "rss": "^1.2.2"
+  },
+  "devDependencies": {
+    "@ava/babel": "^1.0.1",
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "ava": "^3.8.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.0.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.20.2",
+    "include-folder": "^1.0.0",
+    "mockdate": "^2.0.5"
+  }
+}

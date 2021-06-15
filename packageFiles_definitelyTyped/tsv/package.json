@@ -1,0 +1,31 @@
+{
+  "name": "tsv",
+  "description": "Simple dependency-free TSV and CSV converter/parser",
+  "version": "0.3.0",
+  "main": "index.js",
+  "keywords": [
+    "tsv",
+    "csv",
+    "converter",
+    "parser",
+    "json",
+    "separated",
+    "delimited",
+    "d3"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "flour": "0.5.8",
+    "mocha": "2.5.3",
+    "coffee-script": "1.9.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ricardobeat/TSV.git"
+  },
+  "author": "Ricardo Tomasi",
+  "license": "MIT (ricardo.mit-license.org)"
+}

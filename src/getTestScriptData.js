@@ -21,10 +21,8 @@ async function run() {
         const keyword = keywords[i];
         keywordCounter[keyword] = 0
     }
-
     for (let j = 0; j < testScripts.length; j++) {
         const script = testScripts[j];
-        counter++
         var noKeyword = true
         for (let k = 0; k < keywords.length; k++) {
             const keyword = keywords[k];
@@ -46,7 +44,7 @@ async function run() {
     }
 
     console.log(keywordCounter);
-    console.log("Total:", counter);
+    console.log("Total:", testScripts.length);
 }
 
 function loadKeywords() {

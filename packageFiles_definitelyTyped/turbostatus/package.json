@@ -1,0 +1,45 @@
+{
+  "name": "turbostatus",
+  "version": "2.4.0",
+  "description": "CLI util to show status of repos in a main folder.",
+  "main": "lib/index.js",
+  "bin": {
+    "turbostatus": "./bin/turbostatus",
+    "ts": "./bin/turbostatus"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigour-io/turbostatus.git"
+  },
+  "author": "vigour.io <dev@vigour.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigour-io/turbostatus/issues"
+  },
+  "keywords": [
+    "cli",
+    "git",
+    "status"
+  ],
+  "homepage": "https://github.com/vigour-io/turbostatus#readme",
+  "contributors": [
+    "Nuno Frade <nuno@vigour.io>"
+  ],
+  "dependencies": {
+    "cli-table2": "^0.2.0",
+    "colors": "^1.1.2",
+    "elegant-spinner": "^1.0.1",
+    "figures": "^1.7.0",
+    "inquirer": "^1.2.2",
+    "log-update": "^1.0.2",
+    "minimatch": "^3.0.3",
+    "minimist": "^1.2.0",
+    "ora": "^0.3.0",
+    "promise-queue": "^2.2.3",
+    "repeating": "^3.0.0",
+    "update-notifier": "^1.0.2"
+  }
+}

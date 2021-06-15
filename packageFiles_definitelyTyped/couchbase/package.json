@@ -1,0 +1,76 @@
+{
+  "bugs": {
+    "url": "http://www.couchbase.com/issues/browse/JSCBC"
+  },
+  "description": "The official Couchbase Node.js Client Library.",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "homepage": "http://www.couchbase.com/communities/nodejs",
+  "keywords": [
+    "couchbase",
+    "libcouchbase",
+    "memcached",
+    "nosql",
+    "json",
+    "document"
+  ],
+  "main": "dist/couchbase.js",
+  "types": "dist/couchbase.d.ts",
+  "license": "Apache-2.0",
+  "name": "couchbase",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "debug": "^4.3.1",
+    "nan": "^2.14.2",
+    "parse-duration": "^0.4.4",
+    "prebuild-install": "^6.0.0"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^1.4.4",
+    "@types/bindings": "^1.5.0",
+    "@types/debug": "^4.1.5",
+    "@types/node": "^14.14.31",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "chai": "^4.2.0",
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jsdoc": "^32.3.0",
+    "eslint-plugin-mocha": "^8.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "expose-gc": "^1.0.0",
+    "mocha": "^8.2.1",
+    "npm-check-updates": "^11.3.0",
+    "nyc": "^15.1.0",
+    "prebuild": "^10.0.1",
+    "prettier": "^2.2.1",
+    "semver": "^7.3.4",
+    "ts-mocha": "^8.0.0",
+    "typedoc": "^0.20.28",
+    "typescript": "^4.1.5",
+    "uuid": "^8.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/couchbase/couchnode.git"
+  },
+  "version": "3.2.0-dev",
+  "config": {
+    "native": false
+  },
+  "scripts": {
+    "install": "prebuild-install || node-gyp rebuild",
+    "build": "node-gyp build && tsc",
+    "rebuild": "node-gyp rebuild && tsc",
+    "prebuild": "prebuild --verbose --strip",
+    "prepare": "tsc",
+    "build-docs": "typedoc",
+    "test": "ts-mocha test/*.test.*",
+    "test-fast": "ts-mocha test/*.test.* -ig '(slow)'",
+    "cover": "nyc ts-mocha test/*.test.*",
+    "cover-fast": "nyc ts-mocha test/*.test.* -ig '(slow)'",
+    "lint": "eslint ./lib/ ./test/",
+    "check-deps": "ncu"
+  }
+}

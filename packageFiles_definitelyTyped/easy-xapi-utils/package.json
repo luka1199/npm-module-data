@@ -1,0 +1,26 @@
+{
+  "name": "easy-xapi-utils",
+  "version": "2.0.2",
+  "description": "Utils for easy-xapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DeadAlready/easy-xapi-utils.git"
+  },
+  "keywords": [
+    "xapi",
+    "utils"
+  ],
+  "author": "Karl Düüna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DeadAlready/easy-xapi-utils/issues"
+  },
+  "homepage": "https://github.com/DeadAlready/easy-xapi-utils",
+  "dependencies": {
+    "easy-rbac": "^2.0.0"
+  }
+}

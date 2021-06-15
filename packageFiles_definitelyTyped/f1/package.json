@@ -1,0 +1,45 @@
+{
+  "name": "f1",
+  "version": "8.0.0",
+  "description": "A stateful ui library",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Mikko Haapoja",
+    "email": "me@mikkoh.com",
+    "url": "https://github.com/jam3"
+  },
+  "dependencies": {
+    "deep-extend": "^0.4.0",
+    "interpolation-builder": "^2.1.0",
+    "kimi": "^6.0.0",
+    "no-op": "^1.0.3",
+    "tween-function": "^2.0.0"
+  },
+  "devDependencies": {
+    "budo": "^8.0.4",
+    "eases": "^1.0.8",
+    "right-now": "^1.0.0",
+    "tape": "^3.5.0",
+    "test-fuzzy-array": "^1.0.1"
+  },
+  "scripts": {
+    "test": "node test/",
+    "testBrowser": "budo test/ --live --open",
+    "example-f1": "budo example/f1/ --live --open",
+    "example-chief": "budo example/chief/ --live --open",
+    "f1-example": "npm run example-f1",
+    "chief-example": "npm run example-chief"
+  },
+  "keywords": [
+    "state,stateful,ui,ease,tween"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jam3/f1.git"
+  },
+  "homepage": "https://github.com/jam3/f1",
+  "bugs": {
+    "url": "https://github.com/jam3/f1/issues"
+  }
+}

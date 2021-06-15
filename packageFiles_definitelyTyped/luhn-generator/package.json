@@ -1,0 +1,37 @@
+{
+  "name": "luhn-generator",
+  "description": "A generator of numbers that passes the validation of Luhn algorithm or Luhn formula, also known as the 'modulus 10' or 'mod 10' algorithm",
+  "version": "0.6.0",
+  "author": "Roman Romanovsky <rrrrromanovsky@gmail.com>",
+  "homepage": "https://github.com/rromanovsky/luhn-generator",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rromanovsky/luhn-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rromanovsky/luhn-generator/issues"
+  },
+  "main": "dist/luhn.js",
+  "keywords": [
+    "luhn",
+    "generator",
+    "modulus 10",
+    "mod 10",
+    "algorithm",
+    "formula",
+    "checksum"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "node -r babel-core/register ./node_modules/.bin/webpack",
+    "test": "./node_modules/.bin/mocha"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "webpack": "^3.6.0"
+  }
+}

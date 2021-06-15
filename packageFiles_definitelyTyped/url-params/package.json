@@ -1,0 +1,30 @@
+{
+  "name": "url-params",
+  "version": "1.0.2",
+  "description": "Alter the query string parameters of url.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "keywords": [
+    "url",
+    "query",
+    "queryString"
+  ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "author": "John Ferris",
+  "repository": { 
+    "type" : "git", 
+    "url" : "https://github.com/AtenDesignGroup/url-params"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  },
+  "dependencies": {
+    "lodash": "^4.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "parity-pmd",
+  "version": "0.4.0",
+  "description": "Parity's native market data protocol",
+  "author": "Jussi Virtanen",
+  "license": "Apache-2.0",
+  "repository": "paritytrading/node-parity-pmd",
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "mocha": "^6"
+  }
+}

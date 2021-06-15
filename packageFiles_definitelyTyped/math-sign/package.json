@@ -1,0 +1,41 @@
+{
+  "name": "math-sign",
+  "version": "1.0.3",
+  "description": "ES2015 Math.sign() ponyfill",
+  "license": "MIT",
+  "repository": "sindresorhus/math-sign",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "es2015",
+    "ponyfill",
+    "polyfill",
+    "shim",
+    "number",
+    "math",
+    "sign",
+    "positive",
+    "negative",
+    "sgn",
+    "signum",
+    "real"
+  ],
+  "dependencies": {
+    "number-is-nan": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "*"
+  }
+}

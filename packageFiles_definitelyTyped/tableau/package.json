@@ -1,0 +1,21 @@
+{
+  "name": "tableau",
+  "version": "0.0.3",
+  "description": "Construct rows and columns from an alphabet with which one can encrypt/decrypt information from",
+  "main": "index.js",
+  "preferGlobal": "true",
+  "bin": { "tableau": "./bin/tableau" },
+  "scripts": { "test": "node test" },
+  "keywords": [
+    "tableau", "cipher",
+    "encrypt", "decrypt"
+  ],
+  "author": "Joseph Werle",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jwerle/tableau.git"
+  },
+  "bugs": { "url": "https://github.com/jwerle/tableau/issues" },
+  "homepage": "https://github.com/jwerle/tableau"
+}

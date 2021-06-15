@@ -1,0 +1,30 @@
+{
+  "name": "codependency",
+  "keywords": [
+    "peer",
+    "dependency",
+    "dependencies",
+    "require",
+    "module",
+    "semver"
+  ],
+  "version": "2.1.0",
+  "description": "Optional peer dependencies",
+  "main": "index.js",
+  "dependencies": {
+    "semver": "^5.3.0"
+  },
+  "scripts": {
+    "test": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wizcorp/codependency.git"
+  },
+  "author": "Ron Korving <rkorving@wizcorp.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "pre-commit": "^1.2.2"
+  }
+}

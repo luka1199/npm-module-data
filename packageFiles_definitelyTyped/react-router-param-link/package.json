@@ -1,0 +1,63 @@
+{
+  "name": "react-router-param-link",
+  "version": "1.2.1",
+  "description": "A wrapper around react-router's Link that allows paths with parameters.",
+  "keywords": [
+    "link-component",
+    "component",
+    "parameter",
+    "dynamic",
+    "router",
+    "react"
+  ],
+  "main": "./lib/index.js",
+  "scripts": {
+    "prebuild": "rm -rf lib",
+    "build": "tsc",
+    "test": "mocha",
+    "posttest": "npm run build"
+  },
+  "author": {
+    "name": "Motosugi Murata",
+    "email": "mtsg4code@outlook.jp",
+    "url": ""
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "~16",
+    "react-router": "~4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mtsg/react-router-param-link.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mtsg/react-router-param-link/issues"
+  },
+  "devDependencies": {
+    "@types/chai": "4.1.7",
+    "@types/enzyme": "3.1.15",
+    "@types/enzyme-adapter-react-16": "1.0.3",
+    "@types/jsdom": "12.2.1",
+    "@types/mocha": "5.2.5",
+    "@types/react": "16.7.20",
+    "@types/react-dom": "16.0.11",
+    "@types/react-router": "4.4.3",
+    "@types/react-router-dom": "4.3.1",
+    "chai": "4.2.0",
+    "enzyme": "3.8.0",
+    "enzyme-adapter-react-16": "1.7.1",
+    "jsdom": "13.1.0",
+    "mocha": "5.2.0",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "react-router": "4.3.1",
+    "react-router-dom": "4.3.1",
+    "ts-node": "7.0.1",
+    "typescript": "3.2.2"
+  },
+  "dependencies": {
+    "@types/url-parse": "1.4.2",
+    "url-parse": "1.4.4"
+  }
+}

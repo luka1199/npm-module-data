@@ -1,0 +1,62 @@
+{
+  "name": "dotfile-regex",
+  "description": "Regular expresson for matching dotfiles.",
+  "version": "1.0.2",
+  "homepage": "https://github.com/regexhq/dotfile-regex",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "contributors": [
+    "Haoliang Gao (chuo.me)",
+    "John Otander (http://johnotander.com)",
+    "Jon Schlinkert (http://twitter.com/jonschlinkert)",
+    "Sindre Sorhus (https://sindresorhus.com)"
+  ],
+  "repository": "regexhq/dotfile-regex",
+  "bugs": {
+    "url": "https://github.com/regexhq/dotfile-regex/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "gulp-format-md": "^0.1.12",
+    "mocha": "^3.4.2"
+  },
+  "keywords": [
+    "detect",
+    "dotfile",
+    "expression",
+    "find",
+    "match",
+    "regex",
+    "regexp",
+    "regular"
+  ],
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "dotdir-regex",
+        "is-dotdir",
+        "is-dotfile"
+      ]
+    },
+    "lint": {
+      "reflinks": true
+    }
+  }
+}

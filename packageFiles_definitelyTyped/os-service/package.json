@@ -1,0 +1,39 @@
+{
+  "name": "os-service",
+  "version": "2.2.0",
+  "description": "Run Node.JS programs as native Operating System Services.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "nan": "2.14.x"
+  },
+  "contributors": [
+    {
+      "name": "Stephen Vickers",
+      "email": "stephen.vickers@nospaceships.com"
+    },
+    {
+      "name": "NoSpaceships Ltd",
+      "email": "hello@nospaceships.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nospaceships/node-os-service.git"
+  },
+  "keywords": [
+    "background-process",
+    "background-service",
+    "daemon",
+    "linux-daemon",
+    "linux-service",
+    "service",
+    "windows",
+    "windows-daemon",
+    "windows-service"
+  ],
+  "author": "NoSpaceships Ltd <hello@nospaceships.com>",
+  "license": "MIT"
+}

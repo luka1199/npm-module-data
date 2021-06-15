@@ -1,0 +1,53 @@
+{
+  "name": "express-ws",
+  "version": "5.0.1",
+  "description": "WebSocket endpoints for Express applications",
+  "main": "index",
+  "module": "src/index",
+  "scripts": {
+    "lint": "eslint src/"
+  },
+  "author": "Henning Morud <henning@morud.org>",
+  "contributors": [
+    "Jesús Leganés Combarro <piranna@gmail.com>",
+    "Sven Slootweg <admin@cryto.net>",
+    "Andrew Phillips <theasp@gmail.com>",
+    "Nicholas Schell <nschell@gmail.com>",
+    "Max Truxa <dev@maxtruxa.com>",
+    "Kræn Hansen <mail@kraenhansen.dk>",
+    "Alexis Tyler <xo@wvvw.me>"
+  ],
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "esm": "^3.0.84",
+    "ws": "^7.4.6"
+  },
+  "peerDependencies": {
+    "express": "^4.0.0 || ^5.0.0-alpha.1"
+  },
+  "engines": {
+    "node": ">=4.5.0"
+  },
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HenningM/express-ws"
+  },
+  "keywords": [
+    "express",
+    "ws",
+    "websocket"
+  ],
+  "bugs": {
+    "url": "https://github.com/HenningM/express-ws/issues"
+  },
+  "homepage": "https://github.com/HenningM/express-ws",
+  "devDependencies": {
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.12.0",
+    "express": "^5.0.0-alpha.6"
+  }
+}

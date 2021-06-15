@@ -1,0 +1,37 @@
+{
+	"name": "transform-coordinates",
+	"description": "Transform coordinates from one coordinate system to another.",
+	"version": "1.0.0",
+	"main": "index.js",
+	"files": [
+		"index.js",
+		"example.js"
+	],
+	"keywords": [
+		"epsg",
+		"gis",
+		"geospatial",
+		"transform",
+		"coordinates",
+		"proj4"
+	],
+	"author": "Jannis R <mail@jannisr.de>",
+	"homepage": "https://github.com/derhuerst/transform-coordinates",
+	"repository": "derhuerst/transform-coordinates",
+	"bugs": "https://github.com/derhuerst/transform-coordinates/issues",
+	"license": "ISC",
+	"engines": {
+		"node": ">=12"
+	},
+	"dependencies": {
+		"epsg-index": "^1.0.0",
+		"proj4": "^2.4.4"
+	},
+	"devDependencies": {
+		"is-roughly-equal": "^0.1.0"
+	},
+	"scripts": {
+		"test": "node test.js",
+		"prepublishOnly": "npm test"
+	}
+}

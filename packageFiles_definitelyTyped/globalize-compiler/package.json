@@ -1,0 +1,57 @@
+{
+  "name": "globalize-compiler",
+  "version": "1.1.1",
+  "description": "Globalize.js runtime compiler for your formatters and parsers",
+  "main": "index.js",
+  "files": [
+    "bin/",
+    "index.js",
+    "lib/",
+    "LICENSE.txt"
+  ],
+  "bin": {
+    "globalize-compiler": "./bin/globalize-compiler"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run test:unit && npm run test:functional",
+    "lint": "eslint --ignore-path .gitignore --ext .js index.js lib test bin",
+    "test:unit": "mocha test/unit",
+    "test:build:functional": "mkdir test/functional/fixtures 2>/dev/null; ./bin/globalize-compiler -l en -m test/unit/fixtures/en-messages.json -o test/functional/fixtures/basic-compiled-en-formatters.js test/unit/fixtures/basic.js",
+    "test:functional": "npm run test:build:functional && mocha test/functional"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:globalizejs/globalize-compiler.git"
+  },
+  "keywords": [
+    "globalize"
+  ],
+  "author": "The jQuery Project",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/globalizejs/globalize-compiler/issues"
+  },
+  "homepage": "https://github.com/globalizejs/globalize-compiler",
+  "dependencies": {
+    "escodegen": "^1.6.1",
+    "esprima": "^2.3.0",
+    "nopt": "^3.0.3"
+  },
+  "peerDependencies": {
+    "cldr-data": ">=25",
+    "globalize": "^1.5.0",
+    "iana-tz-data": ">=2017.0.0"
+  },
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "chai": "1.10.x",
+    "cldr-data": ">=25",
+    "eslint": "^6.6.0",
+    "eslint-config-defaults": "^9.0.0",
+    "globalize": "^1.5.0",
+    "iana-tz-data": ">=2017.0.0",
+    "jshint": "2.6.x",
+    "mocha": "2.1.0"
+  },
+  "cldr-data-urls-filter": "(core|dates|numbers|units)"
+}

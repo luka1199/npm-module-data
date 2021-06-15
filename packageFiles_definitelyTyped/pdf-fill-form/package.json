@@ -1,0 +1,27 @@
+{
+  "author": "Tommi Pisto <tommi@pis.to>",
+  "name": "pdf-fill-form",
+  "description": "Fill PDF forms and return rendered PDF in buffer. No temporary files created.",
+  "keywords": [
+    "pdf",
+    "forms",
+    "poppler",
+    "qt5",
+    "cairo"
+  ],
+  "version": "5.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tpisto/pdf-fill-form.git"
+  },
+  "gypfile": true,
+  "main": "./lib/pdf-fill-form.js",
+  "engines": {
+    "node": ">10.0.0"
+  },
+  "dependencies": {
+    "nan": "^2.14.0"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}

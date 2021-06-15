@@ -1,0 +1,39 @@
+{
+  "name": "kafka-node-avro",
+  "version": "4.3.0",
+  "description": "kafka avro serialization",
+  "main": "index.js",
+  "author": "narciso guillen",
+  "license": "ISC",
+  "scripts": {
+    "test": "node node_modules/.bin/mocha ./test --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narcisoguillen/kafka-node-avro.git"
+  },
+  "keywords": [
+    "kafka",
+    "node",
+    "avro",
+    "kafka-node",
+    "avsc"
+  ],
+  "bugs": {
+    "url": "https://github.com/narcisoguillen/kafka-node-avro/issues"
+  },
+  "homepage": "https://github.com/narcisoguillen/kafka-node-avro#readme",
+  "dependencies": {
+    "avsc": "^5.4.7",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "kafka-node": "^5.0.0",
+    "mocha": "^5.2.0",
+    "nock": "^10.0.3"
+  },
+  "peerDependencies": {
+    "kafka-node": "^5.0.0"
+  }
+}

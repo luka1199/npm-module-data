@@ -1,0 +1,56 @@
+{
+  "name": "promise-abortable",
+  "author": "dondevi",
+  "version": "1.2.6",
+  "license": "MIT",
+  "description": "A little lib for aborting in Promise chain.",
+  "keywords": [
+    "promise",
+    "abortable",
+    "cancellable",
+    "abort",
+    "aborting",
+    "aborted",
+    "cancel",
+    "canceling",
+    "canceled",
+    "async",
+    "await",
+    "signal",
+    "onabort",
+    "abortSignal",
+    "abortController"
+  ],
+  "files": [
+    "src",
+    "dist"
+  ],
+  "homepage": "https://github.com/dondevi/promise-abortable",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dondevi/promise-abortable.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dondevi/promise-abortable/issues"
+  },
+  "main": "dist/cjs.es6.js",
+  "module": "dist/esm.es6.js",
+  "browser": "dist/cjs.es5.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "mocha",
+    "cover": "istanbul cover _mocha"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "eslint": "^6.0.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-uglify": "^6.0.2",
+    "rollup-plugin-uglify-es": "0.0.1"
+  }
+}

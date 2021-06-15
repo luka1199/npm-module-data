@@ -1,0 +1,60 @@
+{
+  "name": "twilio-common",
+  "version": "0.1.8-dev",
+  "title": "Twilio Common",
+  "description": "Twilio Common JavaScript library",
+  "license": "BSD-3-Clause",
+  "homepage": "https://twilio.com",
+  "author": "Mark Andrus Roberts <mroberts@twilio.com>",
+  "contributors": [
+    "Ryan Rowland <rrowland@twilio.com>"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
+  "keywords": [
+    "twilio",
+    "library",
+    "javascript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twilio/twilio-common.git"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "cheerio": "^0.19.0",
+    "del": "^2.0.2",
+    "eslint": "^1.8.0",
+    "gulp": "^3.9.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-newer": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^1.4.2",
+    "gulp-util": "^3.0.7",
+    "jsdoc": "^3.3.3",
+    "mocha": "^2.3.3",
+    "release-tool": "^0.2.2",
+    "run-sequence": "^1.1.4",
+    "sinon": "^1.17.4",
+    "stream-from-promise": "^0.1.0",
+    "through2": "^2.0.0",
+    "twilio": "^2.7.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "engines": {
+    "node": ">=0.12"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "dependencies": {
+    "es6-promise": "^3.1.2",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "browser": {
+    "xmlhttprequest": "./src/xmlhttprequest.js"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "name": "mysql-query-util",
+  "version": "0.2.0",
+  "description": "A mySQL utility function for performing CRUD operations",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "npm run lint && npm run clean && babel ./src -d ./lib",
+    "lint": "eslint ./src",
+    "clean": "rimraf lib",
+    "test": "nyc mocha test/*.test.js --exit --require @babel/register",
+    "prepublishOnly": "npm run build"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uchennaemeruche/mysql-util.git"
+  },
+  "keywords": [
+    "npm",
+    "node",
+    "mysql",
+    "javascript",
+    "crud",
+    "express",
+    "insert",
+    "procedure"
+  ],
+  "author": "Uchenna Emeruche",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/uchennaemeruche/mysql-util/issues"
+  },
+  "homepage": "https://github.com/uchennaemeruche/mysql-util#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/register": "^7.11.5",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.10.0",
+    "faker": "^5.1.0",
+    "mocha": "^8.1.3",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2"
+  }
+}

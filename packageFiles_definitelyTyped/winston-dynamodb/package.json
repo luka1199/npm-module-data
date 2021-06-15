@@ -1,0 +1,36 @@
+{
+  "name": "winston-dynamodb",
+  "description": "A Winston transport for Amazon DynamoDB",
+  "version": "0.3.1",
+  "author": {
+    "name": "JeongWoo Chang",
+    "email": "inspired.jw@gmail.com"
+  },
+  "homepage": "https://github.com/inspiredjw/winston-dynamodb",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inspiredjw/winston-dynamodb.git"
+  },
+  "typings": "./lib/winston-dynamodb.d.ts",
+  "keywords": [
+    "logging",
+    "sysadmin",
+    "tools",
+    "winston",
+    "amazon",
+    "dynamodb",
+    "aws"
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.1.32",
+    "lodash": "^4.12.0",
+    "node-uuid": "1.4.*"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-util": "^3.0.5",
+    "winston": "^1.0.0"
+  },
+  "main": "./winston-dynamodb"
+}

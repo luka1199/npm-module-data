@@ -1,0 +1,30 @@
+{
+  "name": "japan-postal-code",
+  "version": "0.2.0",
+  "description": "Japan postal code library",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mzp/japan-postal-code"
+  },
+  "keywords": [
+    "zip",
+    "postal code"
+  ],
+  "author": "mzp",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/mzp/japan-postal-code/issues"
+  },
+  "devDependencies": {
+    "zuul": "~2.1.1",
+    "expect.js": "~0.3.1"
+  },
+  "dependencies": {
+    "jsonp": "~0.2.0"
+  },
+  "scripts": {
+    "test": "zuul -- test/*.js",
+    "test-local": "zuul --local -- test/*.js"
+  }
+}

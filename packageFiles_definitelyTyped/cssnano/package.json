@@ -1,0 +1,111 @@
+{
+  "name": "cssnano-core",
+  "private": true,
+  "scripts": {
+    "all-contributors": "all-contributors add",
+    "lint": "eslint . --cache --ignore-path .gitignore",
+    "fixlint": "yarn lint -- --fix",
+    "prepare": "lerna run --stream prepare",
+    "build:metadata": "babel-node ./util/buildMetadata.js",
+    "build:docs": "remark site/docs/**/*.md -o && yarn build:metadata && babel-node ./util/buildSiteMarkdown.js",
+    "build:integration": "cross-env BABEL_ENV=test babel-node ./util/buildFrameworks.js",
+    "pretest": "yarn lint",
+    "test:only": "cross-env BABEL_ENV=test jest",
+    "test:coverage": "cross-env BABEL_ENV=test jest --coverage",
+    "test": "yarn test:coverage",
+    "deploy": "cd site && GIT_USER=anikethsaha yarn deploy",
+    "publish": "lerna publish"
+  },
+  "workspaces": [
+    "./packages/*"
+  ],
+  "engines": {
+    "node": "^10 || ^12 || >=14"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "all-contributors-cli": "^6.20.0",
+    "babel-jest": "^27.0.1",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "browserslist": "^4.16.0",
+    "camelcase": "^6.2.0",
+    "chalk": "^4.1.0",
+    "cross-env": "^7.0.3",
+    "css-color-names": "^1.0.1",
+    "diff": "^5.0.0",
+    "eslint": "^7.27.0",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "fs-extra": "^9.1.0",
+    "glob": "^7.1.4",
+    "got": "^11.8.1",
+    "html2plaintext": "^2.1.2",
+    "jest": "^27.0.1",
+    "jest-junit": "^12.1.0",
+    "lerna": "4.0.0",
+    "mdast-util-heading-range": "^2.1.2",
+    "pleeease-filters": "^4.0.0",
+    "postcss": "^8.3.0",
+    "postcss-devtools": "^1.1.1",
+    "postcss-font-magician": "^3.0.0",
+    "postcss-scss": "^3.0.4",
+    "postcss-simple-vars": "^6.0.1",
+    "postcss-value-parser": "^4.1.0",
+    "prettier": "^2.3.0",
+    "remark": "^13.0.0",
+    "remark-behead": "^2.2.1",
+    "remark-bookmarks": "^3.0.0",
+    "remark-cli": "^9.0.0",
+    "remark-frontmatter": "^3.0.0",
+    "remark-gfm": "^1.0.0",
+    "remark-github": "^10.1.0",
+    "remark-heading-gap": "^4.0.0",
+    "remark-html": "^13.0.1",
+    "rimraf": "^3.0.2",
+    "toml": "^3.0.0",
+    "tomlify-j0.4": "^3.0.0",
+    "unist-builder": "^2.0.3",
+    "unist-util-remove": "^2.1.0",
+    "write-file": "^1.0.0"
+  },
+  "browserslist": {
+    "chrome58": [
+      "Chrome 58"
+    ],
+    "chrome62": [
+      "Chrome 62"
+    ],
+    "edge15": [
+      "Edge 15"
+    ],
+    "ie6": [
+      "IE 6"
+    ],
+    "ie7": [
+      "IE 7"
+    ],
+    "ie8": [
+      "IE 8"
+    ],
+    "ie9": [
+      "IE 9"
+    ],
+    "not ie": [
+      "defaults",
+      "not ie <=11"
+    ],
+    "opera9": [
+      "Opera 9"
+    ],
+    "firefox2": [
+      "Firefox 2"
+    ],
+    "safari5": [
+      "Safari < 5"
+    ]
+  }
+}

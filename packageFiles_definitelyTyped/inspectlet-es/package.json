@@ -1,0 +1,36 @@
+{
+    "name": "inspectlet-es",
+    "version": "1.0.2",
+    "description": "ES module for Inspectlet.",
+    "license": "MIT",
+    "repository": "idmadj/inspectlet-es",
+    "main": "lib/index.js",
+    "scripts": {
+        "build": "babel src -d lib",
+        "build:watch": "babel src -d lib -w",
+        "prepublishOnly": "npm run build"
+    },
+    "keywords": [
+        "inspectlet",
+        "session",
+        "replay",
+        "recording",
+        "heatmap",
+        "a/b",
+        "testing",
+        "analytics",
+        "error",
+        "logging",
+        "tracking",
+        "es",
+        "es6",
+        "module",
+        "npm",
+        "package"
+    ],
+    "devDependencies": {
+        "@babel/cli": "^7.5.5",
+        "@babel/core": "^7.5.5",
+        "@babel/preset-env": "^7.5.5"
+    }
+}

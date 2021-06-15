@@ -1,0 +1,51 @@
+{
+  "name": "uid-generator",
+  "version": "2.0.0",
+  "description": "Generates cryptographically strong pseudo-random UIDs with custom size and base-encoding",
+  "author": "Nathan Woltman <nwoltman@outlook.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "repository": "github:nwoltman/node-uid-generator",
+  "homepage": "https://github.com/nwoltman/node-uid-generator",
+  "bugs": "https://github.com/nwoltman/node-uid-generator/issues",
+  "keywords": [
+    "uid",
+    "generator",
+    "random",
+    "token",
+    "unique",
+    "crypto",
+    "strong",
+    "base",
+    "encoding"
+  ],
+  "nyc": {
+    "reporter": [
+      "html",
+      "text-summary"
+    ],
+    "check-coverage": true,
+    "branches": 100,
+    "lines": 100,
+    "statements": 100
+  },
+  "devDependencies": {
+    "@nwoltman/eslint-config": "~0.5.1",
+    "coveralls": "^3.0.7",
+    "eslint": "^6.6.0",
+    "mocha": "^6.2.2",
+    "nyc": "^14.1.1",
+    "should": "^13.2.3"
+  },
+  "scripts": {
+    "lint": "eslint index.js test/*.js",
+    "test": "eslint index.js test/*.js && nyc mocha",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+  }
+}

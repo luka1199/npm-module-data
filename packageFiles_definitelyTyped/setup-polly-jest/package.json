@@ -1,0 +1,63 @@
+{
+  "name": "setup-polly-jest",
+  "version": "0.9.1",
+  "description": "Setup helper for PollyJS when using in jest/jasmine test environment",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test:unit": "jest -c ./test/jest-unit.config.json",
+    "test:jasmine": "JASMINE_CONFIG_PATH=./test/jasmine.config.json NODE_ENV=test jasmine",
+    "test:jest-jasmine2": "jest -c ./test/jest-jasmine-integration.config.json",
+    "test:jest-circus": "jest -c ./test/jest-circus-integration.config.json",
+    "test": "npm run test:unit && npm run test:jest-jasmine2 && npm run test:jest-circus && npm run test:jasmine",
+    "clear": "rm -rf lib",
+    "prepare": "npm run clear && npm run build && npm run test",
+    "prepublishOnly": "npm run prepare"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "jest-environment-node.js",
+    "jest-environment-jsdom.js",
+    "lib"
+  ],
+  "keywords": [
+    "polly",
+    "pollyjs",
+    "jest",
+    "jasmine",
+    "test",
+    "testing",
+    "mock",
+    "helper"
+  ],
+  "author": "Sergey Petushkov <petushkov.sergey@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@jest/globals": "*",
+    "@pollyjs/adapter-node-http": "*",
+    "@pollyjs/core": "*",
+    "@pollyjs/persister-fs": "*",
+    "core-js": "^3.2.1",
+    "eslint": "^5.6.1",
+    "jasmine": "*",
+    "jest": "*",
+    "jest-circus": "*",
+    "jest-environment-jsdom": "*",
+    "jest-environment-node": "*",
+    "node-fetch": "^2.2.0",
+    "prettier": "^1.14.3"
+  },
+  "peerDependencies": {
+    "@pollyjs/core": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gribnoysup/setup-polly-jest"
+  },
+  "dependencies": {}
+}

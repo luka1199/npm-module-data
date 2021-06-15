@@ -1,0 +1,66 @@
+{
+  "name": "gfc",
+  "description": "Simple way to initialize a new git repository in an empty directory, add a file and do a first commit (or skip that part in a directory with files). Useful for unit tests and generators.",
+  "version": "2.0.2",
+  "homepage": "https://github.com/jonschlinkert/gfc",
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/gfc",
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/gfc/issues"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "empty-dir": "^1.0.0",
+    "is-git-url": "^1.0.0",
+    "mkdirp": "^0.5.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.3",
+    "delete": "^1.1.0",
+    "rimraf": "^2.6.2",
+    "gitty": "^3.6.0",
+    "gulp-format-md": "^1.0.0"
+  },
+  "keywords": [
+    "add",
+    "commit",
+    "first",
+    "first-commit",
+    "git",
+    "git-add",
+    "git-commit",
+    "git-init",
+    "init"
+  ],
+  "verb": {
+    "toc": false,
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "plugins": [
+      "gulp-format-md"
+    ],
+    "related": {
+      "list": [
+        "git-branch",
+        "git-user-name",
+        "git-username",
+        "list-git-remotes"
+      ]
+    },
+    "lint": {
+      "reflinks": true
+    }
+  }
+}

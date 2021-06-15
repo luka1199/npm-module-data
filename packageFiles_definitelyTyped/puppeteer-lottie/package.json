@@ -1,0 +1,50 @@
+{
+  "name": "puppeteer-lottie",
+  "version": "1.1.1",
+  "description": "Renders Lottie animations via Puppeteer to image, GIF, or MP4.",
+  "main": "index.js",
+  "repository": "transitive-bullshit/puppeteer-lottie",
+  "author": "Travis Fischer <travis@transitivebullsh.it>",
+  "license": "MIT",
+  "scripts": {
+    "docs": "update-markdown-jsdoc --no-markdown-toc",
+    "test": "ava -v && standard *.js"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "puppeteer",
+    "lottie",
+    "lottie-web",
+    "bodymovin",
+    "after effects",
+    "render",
+    "animation",
+    "png",
+    "ffmpeg",
+    "gifski",
+    "gif",
+    "mp4",
+    "video"
+  ],
+  "devDependencies": {
+    "ava": "^1.4.1",
+    "ffmpeg-probe": "^1.0.6",
+    "image-size": "^0.8.3",
+    "standard": "^12.0.1",
+    "update-markdown-jsdoc": "^1.0.6"
+  },
+  "dependencies": {
+    "css-in-js-utils": "^3.0.2",
+    "execa": "^1.0.0",
+    "fs-extra": "^8.1.0",
+    "lottie-web": "^5.7.0",
+    "ora": "^4.0.3",
+    "ow": "^0.17.0",
+    "pluralize": "^7.0.0",
+    "puppeteer": "^2.1.1",
+    "sprintf-js": "^1.1.2",
+    "tempy": "^0.3.0"
+  }
+}

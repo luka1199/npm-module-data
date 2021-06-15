@@ -1,0 +1,62 @@
+{
+  "name": "jquery-mouse-exit",
+  "description": "Triggers 'mouseexit' event when mouse focus has completely left the element. This type of behaviour is especially desirable for non-modal overlays.",
+  "version": "1.0.1",
+  "scripts": {
+    "start": "npm run lasso && parallelshell 'npm run server' 'npm run watch'",
+    "tdd": "karma start --autoWatch true --singleRun false",
+    "test": "karma start --autoWatch false --singleRun true",
+    "prepublish": "npm run clean && npm run lint && npm run test && npm run build",
+    "build": "npm run jsdoc && npm run minify && npm run lasso",
+    "clean": "rimraf jsdoc test_reports .cache build docs/browser.js.* lint.txt",
+    "fix": "eslint jquery.mouseexit.js --fix",
+    "jsdoc": "jsdoc jquery.mouseexit.js -d jsdoc",
+    "lasso": "lasso browser.json --output-dir docs --minify",
+    "lint": "eslint jquery.mouseexit.js > lint.txt",
+    "minify": "jsmin -o jquery.mouseexit.min.js jquery.mouseexit.js",
+    "server": "browser-sync start -s --ss docs --index docs/index.html --files docs ",
+    "watch": "onchange jquery.mouseexit.js -- npm run lasso"
+  },
+  "pre-commit": "prepublish",
+  "author": "Ian McBurnie <ianmcburnie@hotmail.com>",
+  "keywords": [
+    "jquery-plugin",
+    "ecosystem:jquery",
+    "ebayui",
+    "accessibility",
+    "a11y"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/makeup-jquery/jquery-mouse-exit.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2",
+    "coveralls": "^3",
+    "eslint": "^4",
+    "eslint-config-ebay": "~0.1",
+    "jasmine-core": "^2",
+    "jquery": ">=1.11",
+    "jsdoc": "^3",
+    "jsmin": "^1",
+    "karma": "^1",
+    "karma-coverage": "^1",
+    "karma-html-reporter": "~0.2",
+    "karma-jasmine": "^1",
+    "karma-junit-reporter": "^1",
+    "karma-phantomjs-launcher": "^1",
+    "lasso-cli": "^2",
+    "onchange": "^3",
+    "parallelshell": "^3",
+    "phantomjs-prebuilt": "^2",
+    "pre-commit": "^1",
+    "rimraf": "^2"
+  },
+  "peerDependencies": {
+    "jquery": ">=1.11"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}

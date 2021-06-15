@@ -1,0 +1,74 @@
+{
+  "name": "zipkin-javascript-opentracing",
+  "version": "3.0.0",
+  "description": "An opentracing implementation for zipkin",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src -d lib && rm -r lib/__tests__",
+    "example:basic": "node example/basic/index.js",
+    "example:advanced": "node example/advanced/index.js",
+    "dev-example:basic": "nodemon example/basic/index.js",
+    "dev-example:advanced": "nodemon example/advanced/index.js",
+    "test": "jest",
+    "precommit": "lint-staged",
+    "prepare": "npm run build",
+    "fmt": "prettier '**/*.{js,json,css,md}' --write"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "statements": 100,
+        "branches": 100,
+        "functions": 100,
+        "lines": 100
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/DanielMSchmidt/zipkin-javascript-opentracing.git"
+  },
+  "keywords": [
+    "zipkin",
+    "opentracing",
+    "tracing",
+    "tracking",
+    "performance",
+    "benchmarking"
+  ],
+  "author": "Daniel Schmidt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielMSchmidt/zipkin-javascript-opentracing/issues"
+  },
+  "files": [
+    "lib/index.js"
+  ],
+  "peerDependencies": {
+    "opentracing": "*",
+    "zipkin": ">=0.10.1",
+    "zipkin-transport-http": ">=0.10.1"
+  },
+  "homepage": "https://github.com/DanielMSchmidt/zipkin-javascript-opentracing#readme",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "coveralls": "3.0.0",
+    "express": "4.16.3",
+    "husky": "0.14.3",
+    "jest": "22.4.3",
+    "lint-staged": "7.0.4",
+    "nodemon": "1.17.3",
+    "opentracing": "0.14.3",
+    "prettier": "1.12.0",
+    "zipkin": "0.10.1",
+    "zipkin-transport-http": "0.10.1"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}

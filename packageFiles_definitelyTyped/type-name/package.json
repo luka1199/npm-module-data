@@ -1,0 +1,57 @@
+{
+  "name": "type-name",
+  "description": "Just a reasonable typeof",
+  "version": "2.0.2",
+  "author": {
+    "name": "Takuto Wada",
+    "email": "takuto.wada@gmail.com",
+    "url": "https://github.com/twada"
+  },
+  "bugs": "https://github.com/twada/type-name/issues",
+  "contributors": [
+    {
+      "name": "azu",
+      "url": "https://github.com/azu"
+    },
+    {
+      "name": "Yosuke Furukawa",
+      "url": "https://github.com/yosuke-furukawa"
+    },
+    {
+      "name": "Athan",
+      "url": "https://github.com/kgryte"
+    },
+    {
+      "name": "Andrew Moss",
+      "url": "https://github.com/inversion"
+    }
+  ],
+  "devDependencies": {
+    "jshint": "^2.8.0",
+    "mocha": "^8.0.0"
+  },
+  "directories": {
+    "test": "test/"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "homepage": "https://github.com/twada/type-name",
+  "keywords": [
+    "type",
+    "typeof"
+  ],
+  "license": "MIT",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/twada/type-name.git"
+  },
+  "scripts": {
+    "lint": "jshint index.js",
+    "preversion": "npm test",
+    "test": "npm run lint && mocha"
+  }
+}

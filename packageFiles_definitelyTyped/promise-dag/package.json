@@ -1,0 +1,37 @@
+{
+  "name": "promise-dag",
+  "version": "1.0.0",
+  "description": "Chain promises declaratively using high-level graphs. Tiny, portable, dependency-free.",
+  "main": "./js/release/promise-dag.js",
+  "scripts": {
+    "prepublish": "node build/prepublish.js",
+    "test": "mocha"
+  },
+  "keywords": [
+    "promise",
+    "async",
+    "graph",
+    "dag"
+  ],
+  "author": "vvvvalvalval",
+  "license": "MIT",
+  "devDependencies": {
+    "bluebird": "^3.4.6",
+    "fs-extra": "^1.0.0",
+    "lodash": "^4.17.2",
+    "mocha": "^3.2.0",
+    "webpack": "^1.13.3"
+  },
+  "readmeFilename": "README.md",
+  "browser": "./js/browser/promise-dag.js",
+  "files": [
+    "js/browser",
+    "js/release",
+    "LICENSE",
+    "bower.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vvvvalvalval/promise-dag.git"
+  }
+}

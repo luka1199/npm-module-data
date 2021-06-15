@@ -1,0 +1,15 @@
+{
+  "name": "tinder",
+  "version": "1.19.0",
+  "description": "Programmatically access the Tinder dating service API",
+  "main": "tinder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git://github.com/tinderjs/tinderjs",
+  "author": "tinderjs",
+  "license": "MIT",
+  "dependencies": {
+    "superagent": "^1.8.3"
+  }
+}

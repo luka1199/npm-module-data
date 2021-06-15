@@ -1,0 +1,58 @@
+{
+  "name": "cordova",
+  "version": "10.0.1-dev",
+  "description": "Cordova command line interface tool",
+  "main": "cordova",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "bin": {
+    "cordova": "./bin/cordova"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run cover",
+    "lint": "eslint . bin/cordova",
+    "cover": "nyc jasmine"
+  },
+  "repository": "github:apache/cordova-cli",
+  "bugs": "https://github.com/apache/cordova-cli/issues",
+  "keywords": [
+    "cordova",
+    "client",
+    "cli"
+  ],
+  "dependencies": {
+    "configstore": "^5.0.1",
+    "cordova-common": "^4.0.2",
+    "cordova-create": "^3.0.0",
+    "cordova-lib": "^10.0.0",
+    "editor": "^1.0.0",
+    "execa": "^4.0.3",
+    "fs-extra": "^9.0.1",
+    "insight": "^0.10.3",
+    "loud-rejection": "^2.2.0",
+    "nopt": "^4.0.3",
+    "semver": "^7.3.2",
+    "systeminformation": "^5.5.0",
+    "update-notifier": "^4.1.0"
+  },
+  "devDependencies": {
+    "@cordova/eslint-config": "^3.0.0",
+    "jasmine": "^3.5.0",
+    "mock-stdin": "^1.0.0",
+    "nyc": "^15.1.0",
+    "rewire": "^5.0.0"
+  },
+  "author": "Apache Software Foundation",
+  "license": "Apache-2.0",
+  "nyc": {
+    "include": [
+      "bin/**",
+      "src/**"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ]
+  }
+}

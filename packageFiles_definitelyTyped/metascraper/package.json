@@ -1,0 +1,154 @@
+{
+  "name": "metascraper",
+  "homepage": "https://github.com/microlinkhq/metascraper#readme",
+  "version": "",
+  "author": {
+    "email": "ian@ianstormtaylor.com",
+    "name": "Ian Storm Taylor"
+  },
+  "contributors": [
+    {
+      "name": "Kiko Beats",
+      "email": "josefrancisco.verdu@gmail.com"
+    },
+    {
+      "name": "Gabe O'Leary",
+      "email": "oleary.gabe@gmail.com"
+    },
+    {
+      "name": "David Eriksson",
+      "email": "david@activout.se"
+    },
+    {
+      "name": "Shawn Dempsey",
+      "email": "shwanton@gmail.com"
+    },
+    {
+      "name": "Slava",
+      "email": "slava.ganzin@gmail.com"
+    },
+    {
+      "name": "Steven Frostwick",
+      "email": "steven.frostwick@gmail.com"
+    },
+    {
+      "name": "Stiliyan Ivanov",
+      "email": "stily.c@gmail.com"
+    },
+    {
+      "name": "Wyatt Johnson",
+      "email": "wyattjoh@gmail.com"
+    },
+    {
+      "name": "Kristianeaw",
+      "email": "kristianeaw@gmail.com"
+    },
+    {
+      "name": "Dave Nicolson",
+      "email": "david.nicolson@gmail.com"
+    },
+    {
+      "name": "Iheb KHEMISSI",
+      "email": "iheb.khemissi+github@gmail.com"
+    },
+    {
+      "name": "Jesse Rogers",
+      "email": "djrquazz@gmail.com"
+    },
+    {
+      "name": "Jonas Rottmann",
+      "email": "github@jonasrottmann.com"
+    },
+    {
+      "name": "Amine Bouyarmane",
+      "email": "amine.bouyarmane@gmail.com"
+    },
+    {
+      "name": "Nikola Ristic",
+      "email": "risticn6@gmail.com"
+    },
+    {
+      "name": "Omar Diab",
+      "email": "me@omardiab.com"
+    },
+    {
+      "name": "Sampo Juustila",
+      "email": "sampo.niskanen@iki.fi"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microlinkhq/metascraper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/microlinkhq/issues"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "browser-sync": "latest",
+    "concurrently": "latest",
+    "finepack": "latest",
+    "git-authors-cli": "latest",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-concat": "latest",
+    "gulp-cssnano": "latest",
+    "gulp-strip-css-comments": "latest",
+    "gulp-uglify": "latest",
+    "lerna": "latest",
+    "lint-staged": "latest",
+    "npm-check-updates": "latest",
+    "nyc": "latest",
+    "prettier-standard": "latest",
+    "simple-git-hooks": "latest",
+    "standard": "latest",
+    "standard-markdown": "latest"
+  },
+  "engines": {
+    "node": ">= 12"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "clean": "lerna clean --yes && rm -rf node_modules",
+    "contributors": "(lerna exec finepack --parallel && git-authors-cli && finepack && git add package.json && git commit -m 'build: contributors' --no-verify) || true",
+    "coverage": "nyc report --reporter=text-lcov | npx coveralls",
+    "dev": "concurrently \"gulp\" \"npm run dev:server\"",
+    "dev:server": "browser-sync start --server --files \"index.html, README.md, static/**/*.(css|js)\"",
+    "install": "lerna bootstrap --no-ci --force-local",
+    "lint": "standard-markdown README.md && standard",
+    "prerelease": "npm run contributors",
+    "pretest": "npm run lint",
+    "release": "lerna publish --yes --sort --conventional-commits -m \"chore(release): %s\" --create-release github",
+    "test": "lerna exec npm run test",
+    "update": "lerna exec ncu -- --upgrade && ncu -- --upgrade",
+    "update:check": "lerna exec ncu -- --errorLevel 2 -x iso-639-3 && ncu -- --errorLevel 2"
+  },
+  "private": true,
+  "license": "MIT",
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-standard"
+    ],
+    "*.md": [
+      "standard-markdown"
+    ],
+    "package.json": [
+      "finepack"
+    ]
+  },
+  "simple-git-hooks": {
+    "commit-msg": "npx commitlint --edit",
+    "pre-commit": "npx lint-staged"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "jsblocks",
+  "version": "0.3.5",
+  "description": "Better MV-ish Framework",
+  "author": {
+    "name": "Antonio Stoilkov",
+    "email": "antonio.stoilkov@gmail.com",
+    "url": "http://jsblocks.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "grunt test:firefox"
+  },
+  "devDependencies": {
+    "blocks": "^0.3.4",
+    "escodegen": "^1.6.1",
+    "esprima": "^3.0.0",
+    "estraverse": "^4.1.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-karma": "^2.0.0",
+    "grunt-notify": "^0.4.1",
+    "grunt-preprocess": "^5.1.0",
+    "highlight.js": "^9.6.0",
+    "jasmine-core": "^2.2.0",
+    "jasmine-jquery": "^2.1.1",
+    "jquery": "^3.2.1",
+    "karma": "^1.2.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-jasmine-jquery": "^0.1.1",
+    "node-fetch": "^1.6.3",
+    "nodegit": "^0.18.0",
+    "npm-utils": "^1.11.0",
+    "parse5": "^2.2.1"
+  }
+}

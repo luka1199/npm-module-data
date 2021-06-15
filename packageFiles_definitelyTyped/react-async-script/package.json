@@ -1,0 +1,54 @@
+{
+  "name": "react-async-script",
+  "version": "1.2.0",
+  "description": "A composition mixin for loading scripts asynchronously for React",
+  "main": "lib/async-script-loader.js",
+  "module": "lib/esm/async-script-loader.js",
+  "scripts": {
+    "build": "rm -rf lib && npm run build:cjs && npm run build:esm",
+    "build:cjs": "babel src --out-dir lib",
+    "build:esm": "BABEL_ENV=esm babel src --out-dir lib/esm",
+    "lint": "eslint ./",
+    "pretty": "prettier --write src/*.js ./*.js test/*.js",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dozoisch/react-async-script.git"
+  },
+  "keywords": [
+    "react",
+    "asynchronous",
+    "script-loader"
+  ],
+  "author": "Hugo Dozois <hugo@dozoisch.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dozoisch/react-async-script/issues"
+  },
+  "homepage": "https://github.com/dozoisch/react-async-script",
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-react": "^7.21.5",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-is": "^17.0.1"
+  },
+  "peerDependencies": {
+    "react": ">=16.4.1"
+  },
+  "dependencies": {
+    "hoist-non-react-statics": "^3.3.2",
+    "prop-types": "^15.5.0"
+  }
+}

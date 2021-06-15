@@ -1,0 +1,49 @@
+{
+  "name": "redact-axios-error",
+  "version": "4.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "description": "grooms and redacts axios errors to trim them down and make them more useful for logging",
+  "scripts": {
+    "watchUnit": "NODE_ENV=DEBUG ava --fail-fast -v **/__tests__/**/*test*.js --watch",
+    "ava": "ava --serial",
+    "test": "npm run ava --serial",
+    "watchLint": "esw . --ext=js --ignore-path .gitignore --fix --watch",
+    "lint": "eslint . --ext=js --ignore-path .gitignore --fix"
+  },
+  "esm": {
+    "force": true,
+    "mode": "auto"
+  },
+  "keywords": [
+    "redact",
+    "error",
+    "axios"
+  ],
+  "author": "Troy Collinsworth",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tcollinsworth/redact-axios-error.git"
+  },
+  "devDependencies": {
+    "ava": "^3.15.0",
+    "axios": "^0.21.1",
+    "body-parser": "^1.18.3",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-watch": "^7.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.16.4",
+    "ignore-styles": "^5.0.1",
+    "json-stringify-safe": "^5.0.1",
+    "lodash": "^4.17.21"
+  },
+  "dependencies": {
+    "safe-clone-deep": "^1.1.5",
+    "traverse": "^0.6.6"
+  }
+}

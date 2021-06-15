@@ -1,0 +1,38 @@
+{
+  "name": "metrostations",
+  "version": "6.0.0",
+  "description": "JSONs of metro stations and lines.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ungarson/MetroStations.git"
+  },
+  "keywords": [
+    "metro",
+    "subway",
+    "stations",
+    "json",
+    "of",
+    "metro",
+    "moscow",
+    "saint-petersburg metro",
+    "saint-petersburg",
+    "peterburg metro",
+    "peterburg",
+    "metro",
+    "moscow",
+    "metropolitan",
+    "jsons",
+    "beijing",
+    "tokyo",
+    "shanghai",
+    "seoul",
+    "guangzhou"
+  ],
+  "author": "ungarson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ungarson/MetroStations/issues"
+  },
+  "homepage": "https://github.com/ungarson/MetroStations#readme"
+}

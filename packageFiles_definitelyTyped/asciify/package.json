@@ -1,0 +1,40 @@
+{
+  "name": "asciify",
+  "version": "1.3.5",
+  "description": "Plain text awesomizer. A hybrid npm module and CLI for turning plain text into ascii art.",
+  "main": "index.js",
+  "dependencies": {
+    "chalk": "~1.1.0",
+    "optimist": "~0.6.0",
+    "pad": "0.0.4"
+  },
+  "devDependencies": {
+    "tap": "~0.4.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tap ./test"
+  },
+  "bin": {
+    "asciify": "./bin/asciify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olizilla/asciify"
+  },
+  "keywords": [
+    "ascii",
+    "art",
+    "figlet",
+    "banner",
+    "text"
+  ],
+  "author": "olizilla",
+  "license": "BSD",
+  "engines" : {
+    "node" : ">=0.10.16",
+    "npm": ">=1.3.7"
+  }
+}

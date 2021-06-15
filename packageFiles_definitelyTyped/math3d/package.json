@@ -1,0 +1,38 @@
+{
+  "name": "math3d",
+  "version": "0.2.2",
+  "description": "A nodejs library for 3D transformations similar to Unity3D containing necessary classes and functions for matrices, vectors, quaternions and transforms.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adragonite/math3d.git"
+  },
+  "keywords": [
+    "3D",
+    "matrix",
+    "vector",
+    "transform",
+    "quaternion",
+    "3D transformations",
+    "transformation",
+    "math",
+    "nodejs",
+    "javascript",
+    "unity3d"
+  ],
+  "author": {
+    "name": "Alihan Livdumlu"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adragonite/math3d/issues"
+  },
+  "homepage": "https://github.com/adragonite/math3d#readme",
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  }
+}

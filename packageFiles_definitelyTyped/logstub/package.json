@@ -1,0 +1,53 @@
+{
+  "name": "logstub",
+  "version": "1.4.0",
+  "description": "A basic libray to stub logging calls when an external logger is expected.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nyc mocha",
+    "build": "gulp",
+    "fix": "gulp fix",
+    "lint": "gulp lint",
+    "coverage": "nyc --reporter=lcov mocha && cat ./coverage/lcov.info | codacy-coverage",
+    "pretty": "gulp pretty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OutOfSyncStudios/logstub.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "log",
+    "logging",
+    "stub",
+    "mock",
+    "mocking",
+    "winston",
+    "bunyan",
+    "log4js",
+    "console"
+  ],
+  "author": "Jay Reardon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OutOfSyncStudios/logstub/issues"
+  },
+  "homepage": "https://github.com/OutOfSyncStudios/logstub#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "codacy-coverage": "^3.4.0",
+    "eslint": "^7.23.0",
+    "gulp": "^4.0.2",
+    "gulp-eslint": "^6.0.0",
+    "gulp-mocha": "^8.0.0",
+    "gulp-prettier": "^3.0.0",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0",
+    "prettier": "^2.2.1"
+  }
+}

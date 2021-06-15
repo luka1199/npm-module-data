@@ -1,0 +1,53 @@
+{
+  "name": "aws-lambda-fastify",
+  "description": "Inspired by aws-serverless-express to work with Fastify with inject functionality.",
+  "keywords": [
+    "aws",
+    "lambda",
+    "serverless",
+    "amazon",
+    "cloud",
+    "node",
+    "nodejs",
+    "javascript",
+    "proxy",
+    "api",
+    "api-gateway",
+    "fastify",
+    "web"
+  ],
+  "homepage": "https://github.com/fastify/aws-lambda-fastify",
+  "author": "Adriano Raiano <adriano@raiano.ch>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fastify/aws-lambda-fastify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fastify/aws-lambda-fastify/issues"
+  },
+  "license": "MIT",
+  "version": "1.6.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "npm run lint && tap -J -R specy --no-coverage test/*test.js && npm run test:typescript",
+    "test:typescript": "tsd",
+    "performance": "npm run lint && node performanceTest/test"
+  },
+  "devDependencies": {
+    "aws-lambda": "^1.0.6",
+    "aws-serverless-express": "^3.4.0",
+    "aws-serverless-fastify": "^1.0.26",
+    "benchmark": "^2.1.4",
+    "eslint": "^7.28.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "fastify": "^3.17.0",
+    "serverless-http": "^2.7.0",
+    "tap": "^15.0.9",
+    "tsd": "^0.17.0"
+  }
+}

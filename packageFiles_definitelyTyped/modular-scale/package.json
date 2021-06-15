@@ -1,0 +1,31 @@
+{
+  "name": "modular-scale",
+  "version": "5.1.0",
+  "description": "Module for generating a modular scale.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js | tap-format-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kristoferjoseph/modular-scale.git"
+  },
+  "keywords": [
+    "modular",
+    "scale",
+    "typography",
+    "design",
+    "css"
+  ],
+  "author": "@dam",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/kristoferjoseph/modular-scale/issues"
+  },
+  "homepage": "https://github.com/kristoferjoseph/modular-scale",
+  "devDependencies": {
+    "@tap-format/spec": "^0.2.0",
+    "chai": "^2.3.0",
+    "tape": "^4.9.0"
+  }
+}

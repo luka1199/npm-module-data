@@ -1,0 +1,49 @@
+{
+  "name": "hapi-server-session",
+  "version": "5.1.2",
+  "description": "Simple server-side session support for hapi",
+  "keywords": [
+    "hapi",
+    "plugin",
+    "server",
+    "session"
+  ],
+  "homepage": "https://github.com/btmorex/hapi-server-session",
+  "bugs": "https://github.com/btmorex/hapi-server-session/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Avery Fay",
+    "email": "me@averyfay.com",
+    "url": "https://averyfay.com/"
+  },
+  "files": [],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/btmorex/hapi-server-session.git"
+  },
+  "scripts": {
+    "codeclimate": "nyc report --reporter=lcov",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "eslint": "eslint --ext .js --ext .json .",
+    "prettier": "prettier --write **/*.{js,json,md}",
+    "test": "nyc mocha"
+  },
+  "dependencies": {
+    "@hapi/b64": "^5.0.0",
+    "@hapi/hoek": "^9.0.0"
+  },
+  "devDependencies": {
+    "@hapi/hapi": "^18.4.1",
+    "chai": "^4.2.0",
+    "coveralls": "^3.1.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-json": "^2.1.2",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "prettier": "^2.2.1"
+  },
+  "peerDependencies": {
+    "@hapi/hapi": ">=17.0.0 <21.0.0"
+  }
+}
