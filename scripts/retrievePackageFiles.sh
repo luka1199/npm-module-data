@@ -9,8 +9,8 @@ OUTPUT_DIRECTORY=$2
 rm -rf $OUTPUT_DIRECTORY
 mkdir $OUTPUT_DIRECTORY
 
-while IFS=, read -r moduleName repo
-do
+while IFS=, read -r moduleName repo commitHash
+do	
     echo "Exctracting package.json file for module: $moduleName | $repo"
 	RAW_GITHUB_URL_FRONT_URL="https://raw.githubusercontent.com"
 	RAW_GITHUB_URL=${repo/github.com/$RAW_GITHUB_URL_FRONT_URL}
