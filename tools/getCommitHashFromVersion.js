@@ -24,7 +24,6 @@ async function run() {
     // console.log(repoPath);
     // console.log(moduleVersion);
     const packageJSON = await loadPackageJSON(repoPath)
-    // console.log(packageJSON);
     const moduleReleases = await getModuleReleases(packageJSON.name)
     // console.log(moduleReleases);
     const moduleReleasesList = Object.keys(moduleReleases)

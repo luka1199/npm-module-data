@@ -7,7 +7,10 @@ DEFINITELY_TYPED_FOLDER=$1
 MODULES_FILE=$2
 
 echo "Extracting modules ..."
-ls $DEFINITELY_TYPED_FOLDER/types > $MODULES_FILE
+# ls $DEFINITELY_TYPED_FOLDER/types > $MODULES_FILE
+for d in $DEFINITELY_TYPED_FOLDER/types/* ; do
+    echo $(node ../tools/getVersionFromDeclarationFileComment.js $(head -n 1 $d/index.d.ts))
+done
 
 echo "Done"
 echo ""
