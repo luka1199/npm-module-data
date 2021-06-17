@@ -11,12 +11,16 @@ mkdir $OUTPUT_DIRECTORY
 
 while IFS=, read -r moduleName repo commitHash
 do	
-    echo "Exctracting package.json file for module: $moduleName | $repo"
+    echo "Exctracting package.json file for module: $moduleName | $repo | $commitHash"
+	if [ $commitHash == "" ]
+	then	
+		commitHash="master"
+	fi
 	RAW_GITHUB_URL_FRONT_URL="https://raw.githubusercontent.com"
 	RAW_GITHUB_URL=${repo/github.com/$RAW_GITHUB_URL_FRONT_URL}
 
 	RAW_GITHUB_URL=${RAW_GITHUB_URL%".git"}
-	RAW_GITHUB_URL="${RAW_GITHUB_URL}/master"
+	RAW_GITHUB_URL="${RAW_GITHUB_URL}/$commitHash"
 
 	OUTPUT_DIRECTORY_MODULE=$OUTPUT_DIRECTORY/"${moduleName/"/"/"-"}"
 

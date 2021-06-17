@@ -1,8 +1,7 @@
+const semver = require('semver')
 var list = process.argv[2].split(' ')
 var str = list[list.length - 1]
-if (str.includes('.') && /\d/.test(str)) {
-    // console.log(str)
-    
-} else {
-    // console.log(str)
+var version = semver.valid(semver.coerce(str))
+if (version != null) {
+    console.log(version)
 }
