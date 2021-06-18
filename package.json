@@ -18,11 +18,9 @@
   "homepage": "https://github.com/luka1199/npm-module-data#readme",
   "dependencies": {
     "csv-parser": "^3.0.0",
-    "get-closest": "0.0.4",
     "nearest-date": "^1.0.1",
     "parse-npm-script": "0.0.4",
     "semver": "^7.3.5",
-    "semver-closest": "^0.1.2",
     "shelljs": "^0.8.4"
   }
 }
