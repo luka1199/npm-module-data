@@ -18,6 +18,7 @@ async function run() {
     var keywordData = getKeywordData(testScripts, keywords)
     var sortedKeywordData = sortKeywordData(keywordData)
     var groupedKeywordData = getGroupedKeywordData(sortedKeywordData, keywordsJSON)
+    groupedKeywordData['total'] = testScripts.length
     console.log(groupedKeywordData);
     console.log("Total:", testScripts.length);
     if (process.argv[3] != null) {
