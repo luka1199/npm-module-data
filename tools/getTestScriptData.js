@@ -118,7 +118,8 @@ function getGroupedKeywordData(sortedKeywordData, keywordsJSON) {
         if (keyword == 'undefined' || keyword == 'other') {
             groupedData[keyword] = amount
         } else {
-            groupedData[keywordCategory[keyword]][keyword] = amount
+            var name = keywordsJSON[keywordCategory[keyword]][keyword]
+            groupedData[keywordCategory[keyword]][name] = amount
         }
     });
     return groupedData

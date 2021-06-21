@@ -1,49 +1,49 @@
 {
 	"Testing frameworks": {
-		"mocha": 306,
-		"jest": 121,
-		"tap": 85,
-		"ava": 59,
+		"Mocha": 306,
+		"Jest": 121,
+		"Node-Tap": 85,
+		"AVA": 59,
 		"tsd": 44,
-		"tape": 40,
-		"karma": 30,
-		"flow": 11,
-		"nodeunit": 11,
-		"vows": 10,
-		"lab": 8,
-		"jasmine": 7,
-		"zuul": 1,
-		"zap": 1,
-		"cypress": 0,
-		"ocular-test": 0,
-		"expresso": 0,
-		"testem": 0
+		"Tape": 40,
+		"Karma": 30,
+		"Flow-JS": 11,
+		"Nodeunit": 11,
+		"Vows": 10,
+		"@hapi/lab": 8,
+		"Jasmine": 7,
+		"Zuul": 1,
+		"Zap": 1,
+		"Cypress": 0,
+		"Ocular-dev-tools": 0,
+		"Expresso": 0,
+		"Test’em": 0
 	},
 	"Code analysis tool": {
-		"eslint": 129,
+		"ESLint": 129,
 		"xo": 68,
-		"standard": 37,
-		"tslint": 21,
-		"dtslint": 15,
-		"jshint": 13,
+		"StandardJS": 37,
+		"TSLint": 21,
+		"DTSLint": 15,
+		"JSHint": 13,
 		"c8": 8,
-		"semistandard": 4,
-		"coffeelint": 0
+		"Semi-Standard": 4,
+		"CoffeeLint": 0
 	},
 	"Task runner": {
-		"grunt": 35,
-		"gulp": 19,
-		"lerna": 12,
-		"ember": 4,
-		"wsrun": 1,
+		"Grunt": 35,
+		"Gulp": 19,
+		"Lerna": 12,
+		"Ember.js": 4,
+		"Wsrun": 1,
 		"nwb": 0,
-		"aegir": 0
+		"Aegir": 0
 	},
 	"Build tool": {
-		"make": 43
+		"Make": 43
 	},
 	"Browser": {
-		"phantomjs": 3
+		"PhantomJS": 3
 	},
 	"other": 102,
 	"undefined": 75
