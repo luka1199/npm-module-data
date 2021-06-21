@@ -1,6 +1,6 @@
 {
   "name": "html-validator",
-  "version": "5.1.14",
+  "version": "5.0.0",
   "description": "Validate html using validator.w3.org/nu",
   "license": "MIT",
   "author": {
@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=10.20.1"
+    "node": ">=10.16.3"
   },
   "scripts": {
     "setup": "npm install",
@@ -33,14 +33,13 @@
   },
   "homepage": "https://github.com/zrrrzzt/html-validator#readme",
   "dependencies": {
-    "html-validate": "3.0.0",
-    "request": "2.88.2",
+    "request": "2.88.0",
     "valid-url": "1.0.9"
   },
   "devDependencies": {
-    "coveralls": "3.1.0",
-    "standard": "14.3.4",
-    "tap": "14.10.8"
+    "coveralls": "3.0.7",
+    "standard": "14.3.1",
+    "tap": "14.6.9"
   },
   "files": [
     "lib/*.js",

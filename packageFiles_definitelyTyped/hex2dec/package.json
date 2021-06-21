@@ -1,10 +1,10 @@
 {
   "name": "hex2dec",
-  "version": "1.1.2",
+  "version": "1.1.0",
   "description": "Arbitrary precision decimal/hexadecimal converter.",
   "main": "index.js",
   "scripts": {
-    "test": "tape tests/*.test.js | tap-spec",
+    "test": "mocha tests/*.test.js",
     "preversion": "npm test",
     "postversion": "git push && git push --tags && npm publish"
   },
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/donmccurdy/hex2dec#readme",
   "devDependencies": {
-    "tap-spec": "^5.0.0",
-    "tape": "^5.1.1"
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
   }
 }

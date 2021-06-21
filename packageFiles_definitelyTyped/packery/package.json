@@ -1,30 +1,26 @@
 {
   "name": "packery",
-  "version": "2.1.2",
-  "description": "Gapless, draggable grid layouts",
+  "version": "1.4.1",
+  "description": "bin-packing layout library",
   "main": "js/packery.js",
   "dependencies": {
-    "get-size": "^2.0.2",
-    "outlayer": "^2.0.0"
+    "desandro-classie": "1.x",
+    "desandro-get-style-property": "1.x",
+    "get-size": "1.2.x",
+    "outlayer": "1.4.x"
   },
   "devDependencies": {
-    "chalk": "^1.1.1",
-    "draggabilly": "^2.1.0",
-    "gulp": "^3.9.0",
-    "gulp-jshint": "^2.0.0",
-    "gulp-json-lint": "^0.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.4",
-    "gulp-requirejs-optimize": "github:metafizzy/gulp-requirejs-optimize",
-    "gulp-uglify": "^1.5.1",
-    "gulp-util": "^3.0.7",
-    "jquery": ">=2 <4",
-    "jquery-bridget": "~2.0.0",
-    "jshint": "^2.9.1",
-    "minimist": "^1.2.0",
-    "qunitjs": "^1.15"
+    "draggabilly": "1.x",
+    "jquery": "~1",
+    "jquery-bridget": "1.1.x",
+    "qunitjs": "^1.15",
+    "grunt": "~0.4.0",
+    "grunt-contrib-jshint": "~0.4.1",
+    "grunt-contrib-uglify": "~0.1.1",
+    "grunt-requirejs": "~0.4.0"
   },
   "directories": {
+    "example": "examples",
     "test": "test"
   },
   "scripts": {
@@ -41,14 +37,11 @@
     "bin",
     "binpacking",
     "packing",
-    "masonry",
-    "gapless",
-    "draggable"
+    "masonry"
   ],
   "author": "Metafizzy",
   "bugs": {
     "url": "https://github.com/metafizzy/packery/issues"
   },
-  "homepage": "https://packery.metafizzy.co",
-  "license": "GPL-3.0"
+  "homepage": "http://packery.metafizzy.co"
 }

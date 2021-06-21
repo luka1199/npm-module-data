@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-3-typeahead",
   "description": "Bootstrap 3 Typeahead: The typeahead autocomplete plugin for Twitter's Bootstrap 2 ready to use with Bootstrap 3.",
-  "version": "4.0.2",
+  "version": "v4.0.0",
   "main": "bootstrap3-typeahead.js",
   "keywords": [
     "typeahead",
@@ -13,8 +13,7 @@
   "homepage": "https://github.com/bassjobsen/Bootstrap-3-Typeahead/",
   "author": "Bass Jobsen",
   "scripts": {
-    "test": "grunt test",
-    "uglify": "uglifyjs ./bootstrap3-typeahead.js --output ./bootstrap3-typeahead.min.js --warn --compress drop_console=true"
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,10 @@
   "bugs": {
     "url": "https://github.com/bassjobsen/Bootstrap-3-Typeahead/issues"
   },
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/twbs/bootstrap/blob/master/LICENSE"
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-jshint": "~0.10.0",
@@ -33,8 +35,5 @@
   },
   "engines": {
     "node": "~0.10.1"
-  },
-  "dependencies": {
-    "uglify-js": "^3.3.7"
   }
 }

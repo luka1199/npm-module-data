@@ -1,7 +1,7 @@
 {
   "name": "array-foreach",
   "description": "Array#forEach ponyfill for older browsers",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "author": {
     "name": "Takuto Wada",
     "email": "takuto.wada@gmail.com",
@@ -9,15 +9,15 @@
   },
   "bugs": "https://github.com/twada/array-foreach/issues",
   "devDependencies": {
-    "blanket": "^1.2.3",
-    "jshint": "^2.8.0",
-    "licensify": "^3.1.0",
-    "mocha": "^2.4.5"
+    "jshint": "^2.6.3",
+    "mocha": "^2.1.0"
   },
   "files": [
-    "MIT-LICENSE",
+    "README.md",
     "index.js",
-    "build/array-foreach.js"
+    "build/array-foreach.js",
+    "package.json",
+    "test"
   ],
   "homepage": "https://github.com/twada/array-foreach",
   "keywords": [
@@ -33,18 +33,35 @@
     "ponyfill",
     "shim"
   ],
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "url": "http://twada.mit-license.org/"
+  },
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/twada/array-foreach.git"
   },
   "scripts": {
-    "build": "mkdir -p build && browserify index.js --plugin licensify --standalone forEach | dereserve | derequire > ./build/array-foreach.js",
+    "build": "browserify index.js --standalone forEach | dereserve | derequire > ./build/array-foreach.js",
     "lint": "jshint index.js",
-    "cover": "mocha --require ./coverage --reporter html-cov > coverage.html",
-    "test": "npm run lint && mocha",
-    "preversion": "npm test",
-    "version": "npm run build && git add -A build"
+    "test": "npm run lint && mocha"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/6..latest",
+      "chrome/22..latest",
+      "chrome/canary",
+      "firefox/16..latest",
+      "firefox/nightly",
+      "safari/5.1..latest",
+      "opera/12..latest",
+      "opera/next",
+      "iphone/6.0..latest",
+      "ipad/6.0..latest",
+      "android-browser/4.2..latest"
+    ],
+    "harness": "mocha"
   }
 }

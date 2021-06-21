@@ -1,13 +1,8 @@
 {
   "name": "issue-parser",
-  "description": "Parser for Github, GitLab and Bitbucket issues actions, references and mentions",
+  "description": "Parser for Github, GitLab, Bitbucket and Waffle issues actions, references and mentions",
   "version": "0.0.0-development",
   "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
-  "ava": {
-    "files": [
-      "test/**/*.test.js"
-    ]
-  },
   "bugs": {
     "url": "https://github.com/pvdlg/issue-parser/issues"
   },
@@ -19,14 +14,14 @@
     "lodash.uniqby": "^4.7.0"
   },
   "devDependencies": {
-    "ava": "^3.1.0",
+    "ava": "^0.25.0",
     "codecov": "^3.0.0",
-    "nyc": "^15.0.0",
-    "semantic-release": "^17.0.0",
-    "xo": "^0.28.0"
+    "nyc": "^12.0.1",
+    "semantic-release": "^15.0.0",
+    "xo": "^0.22.0"
   },
   "engines": {
-    "node": ">=10.13"
+    "node": ">=6"
   },
   "files": [
     "lib",
@@ -46,7 +41,8 @@
     "pr",
     "pull-request",
     "references",
-    "resolve"
+    "resolve",
+    "waffle"
   ],
   "license": "MIT",
   "main": "index.js",
@@ -80,10 +76,6 @@
     "test": "xo && nyc ava -v"
   },
   "xo": {
-    "prettier": true,
-    "space": true,
-    "rules": {
-      "unicorn/string-content": "off"
-    }
+    "prettier": true
   }
 }

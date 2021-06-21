@@ -1,6 +1,6 @@
 {
   "name": "absolute-url",
-  "version": "1.2.2",
+  "version": "1.2.0",
   "description": "Attaches .absoluteUrl() function to req",
   "main": "index.js",
   "scripts": {

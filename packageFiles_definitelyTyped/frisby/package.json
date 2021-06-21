@@ -1,10 +1,12 @@
 {
   "name": "frisby",
-  "version": "2.1.3",
+  "version": "2.0.0",
   "description": "Frisby.js v2.0: REST API Endpoint Testing built on Jasmine",
   "homepage": "http://frisbyjs.com",
   "author": "Vance Lucas <vance@vancelucas.com>",
-  "license": "BSD-3-Clause",
+  "license": {
+    "type": "BSD"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/vlucas/frisby"
@@ -13,35 +15,31 @@
     "testing",
     "api",
     "REST",
-    "jest",
+    "jasmine",
     "bdd",
     "frisby"
   ],
   "main": "./src/frisby",
   "engines": {
-    "node": ">= 10.0.0"
+    "node": ">= 6.0.0"
   },
   "scripts": {
-    "test": "jest",
-    "lint": "eslint src/** __tests__/**"
+    "test": "./node_modules/jest/bin/jest.js"
   },
   "dependencies": {
-    "form-data": "^2.2.0",
-    "joi": "^13.0.0",
-    "lodash": "^4.17.15",
-    "node-fetch": "^2.1.2",
-    "encoding": "^0.1.12"
+    "joi": "^8.4.2",
+    "lodash": "^4.11.1",
+    "node-fetch": "^1.5.2"
   },
   "devDependencies": {
-    "eslint": "^7.10.0",
-    "jest": "^26.4.2",
-    "nock": "^13.0.4"
+    "jest": "^20.0.4",
+    "nock": "^7.7.2"
   },
   "jest": {
     "testPathIgnorePatterns": [
-      "<rootDir>/__tests__/fixtures/",
+      "/__tests__/fixtures/",
       "/node_modules/",
-      "<rootDir>/src/"
+      "/src/"
     ],
     "verbose": false
   }

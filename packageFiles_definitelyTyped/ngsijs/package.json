@@ -1,15 +1,12 @@
 {
-  "vendor": "Ficodes",
+  "vendor": "CoNWeT",
   "name": "ngsijs",
-  "version": "1.4.0",
-  "description": "JavaScript library for the FIWARE Context Broker services (web browsers & Node.js)",
+  "version": "1.0.0",
+  "description": "Node JavaScript library for Orion Context Broker",
   "main": "./ngsi-node.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Ficodes/ngsijs"
-  },
-  "scripts": {
-    "test": "./node_modules/istanbul/lib/cli.js cover -- ./node_modules/jasmine/bin/jasmine.js --config=jasmine.json"
+    "url": "https://github.com/conwetlab/ngsijs"
   },
   "keywords": [
     "context broker",
@@ -19,44 +16,37 @@
     "iot",
     "IoT",
     "NGSI",
-    "NGSIv2",
-    "NGSI-LD",
     "orion",
     "wirecloud"
   ],
-  "author": {
-    "name": "Álvaro Arranz",
-    "email": "aarranz@ficodes.com",
-    "url": "https://www.ficodes.com"
-  },
+  "author": "CoNWeT Lab., Universidad Politecnica de Madrid",
   "license": "AGPLv3 with linking exception",
   "engines": {
     "node": ">= 0.10.11"
   },
   "bugs": {
-    "url": "https://github.com/Ficodes/ngsijs/issues"
+    "url": "https://github.com/conwetlab/ngsijs/issues"
   },
-  "homepage": "https://github.com/Ficodes/ngsijs",
+  "homepage": "https://github.com/conwetlab/ngsijs",
   "devDependencies": {
-    "grunt": "^1.0.4",
+    "grunt": "^0.4.5",
     "grunt-bump": "^0.8.0",
-    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^1.0.0",
-    "grunt-jsdoc": "^2.4.0",
-    "grunt-karma": "^3.0.2",
-    "grunt-terser": "^1.0.0",
-    "gruntify-eslint": "^5.0.0",
-    "istanbul": "^0.4.5",
-    "jasmine": "^3.5.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-coveralls": "^1.0.1",
+    "grunt-jsdoc": "^2.1.0",
+    "grunt-karma": "^2.0.0",
+    "gruntify-eslint": "^3.1.0",
     "jasmine-core": "^2.5.2",
-    "karma": "^5.0.2",
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-coverage": "^2.0.2",
-    "karma-firefox-launcher": "^1.2.0",
+    "karma": "^1.1.0",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.0.0",
+    "karma-firefox-launcher": "^1.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-junit-reporter": "^1.2.0",
-    "moment": "^2.24.0",
-    "sanitize-html": "^1.20.1"
+    "moment": "^2.17.1",
+    "sanitize-html": "^1.14.1"
   },
   "dependencies": {
     "whatwg-url": "^4.5.0"

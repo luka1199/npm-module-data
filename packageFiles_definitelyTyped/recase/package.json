@@ -1,10 +1,10 @@
 {
   "name": "recase",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "Deep rekey Objects and Arrays as either camel case or snake case.",
   "main": "recase.js",
   "scripts": {
-    "test": "node tests/test"
+    "test": "node test"
   },
   "repository": {
     "type": "git",

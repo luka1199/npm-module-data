@@ -9,11 +9,7 @@
   "scripts": {
     "test": "mocha tests.js"
   },
-
-   "engines": {
-    "node": ">=8"
-  },
- "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/almost/through2-concurrent"
   },
@@ -37,10 +33,10 @@
   },
   "devDependencies": {
     "expect.js": "^0.3.1",
-    "mocha": "^5.2.0",
+    "mocha": "^2.2.1",
     "underscore": "^1.8.2"
   },
   "dependencies": {
-    "through2": "^3.0.0"
+    "through2": "^2.0.0"
   }
 }

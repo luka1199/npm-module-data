@@ -1,9 +1,9 @@
 {
   "name": "jquery-toast-plugin",
   "filename": "dist/jquery.toast.min.js",
-  "main": "dist/jquery.toast.min.js",
+  "main": "jquery.toast.js",
   "style": "dist/jquery.toast.min.css",
-  "version": "1.3.2",
+  "version": "1.3.0",
   "description": "Highly customizable jquery plugin to show toast messages",
   "homepage": "http://www.kamranahmed.info/toast",
   "keywords": [
@@ -14,7 +14,8 @@
   "maintainers": [
     {
       "name": "Kamran Ahmed",
-      "web": "http://kamranahmed.info"
+      "web": "http://kamranahmed.info",
+      "twitter": "@kamranahmed_se"
     }
   ],
   "repository": {

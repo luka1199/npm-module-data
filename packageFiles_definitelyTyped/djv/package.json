@@ -1,9 +1,8 @@
 {
   "name": "djv",
-  "version": "2.1.4",
+  "version": "2.1.0",
   "description": "dynamic json-schema validator",
   "main": "lib/djv.js",
-  "browser": "djv.js",
   "scripts": {
     "build": "webpack",
     "changelog": "generate-changelog",
@@ -34,7 +33,7 @@
     "babel-core": "^6.25.0",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.5.2",
-    "eslint": "^4.19.1",
+    "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.7.0",
     "generate-changelog": "^1.2.1",
@@ -47,11 +46,12 @@
     "webpack": "^3.0.0"
   },
   "optionalDependencies": {
-    "@korzio/djv-draft-04": "^2.0.1"
+    "@korzio/djv-draft-04": "^2.0.0"
   },
   "spec_dir": "test",
   "spec_files": [
     "**/*.js"
   ],
-  "stopSpecOnExpectationFailure": false
+  "stopSpecOnExpectationFailure": false,
+  "random": false
 }

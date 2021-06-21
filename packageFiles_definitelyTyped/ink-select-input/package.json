@@ -1,6 +1,6 @@
 {
 	"name": "ink-select-input",
-	"version": "4.2.0",
+	"version": "3.0.0",
 	"description": "Select input component for Ink",
 	"license": "MIT",
 	"repository": "vadimdemedes/ink-select-input",
@@ -9,15 +9,15 @@
 		"email": "vdemedes@gmail.com",
 		"url": "github.com/vadimdemedes"
 	},
-	"main": "build",
+	"main": "build/index.js",
 	"engines": {
-		"node": ">=10"
+		"node": ">=8"
 	},
 	"scripts": {
-		"pretest": "tsc",
+		"pretest": "npm run build",
 		"test": "xo && ava",
-		"build": "tsc",
-		"prepare": "tsc"
+		"build": "babel src --out-dir=build",
+		"prepare": "npm run build"
 	},
 	"files": [
 		"build"
@@ -28,56 +28,42 @@
 	],
 	"dependencies": {
 		"arr-rotate": "^1.0.0",
-		"figures": "^3.2.0",
-		"lodash.isequal": "^4.5.0"
-	},
-	"peerDependencies": {
-		"ink": "^3.0.5",
-		"react": "^16.8.2"
+		"figures": "^2.0.0",
+		"lodash.isequal": "^4.5.0",
+		"prop-types": "^15.5.10"
 	},
 	"devDependencies": {
-		"@ava/babel": "^1.0.1",
+		"@babel/cli": "^7.2.3",
 		"@babel/core": "^7.3.3",
+		"@babel/plugin-proposal-class-properties": "^7.3.3",
 		"@babel/preset-react": "^7.0.0",
-		"@sindresorhus/tsconfig": "^0.7.0",
-		"@types/lodash.isequal": "^4.5.5",
-		"@types/react": "^16.9.43",
-		"@vdemedes/prettier-config": "^1.0.1",
-		"ava": "^3.9.0",
-		"delay": "^4.4.0",
-		"eslint-config-xo-react": "^0.23.0",
-		"eslint-config-xo-typescript": "^0.31.0",
-		"eslint-plugin-react": "^7.20.0",
-		"eslint-plugin-react-hooks": "^4.0.4",
-		"ink": "^3.0.5",
-		"ink-testing-library": "^2.0.0",
-		"prettier": "^2.0.5",
+		"ava": "*",
+		"babel-eslint": "^10.0.1",
+		"eslint-config-xo-react": "^0.16.0",
+		"eslint-plugin-react": "^7.1.0",
+		"ink": "^2.0.0",
 		"react": "^16.8.2",
-		"sinon": "^7.2.7",
-		"typescript": "^3.9.7",
-		"xo": "^0.32.0"
-	},
-	"ava": {
-		"babel": true
+		"sinon": "^4.4.9",
+		"xo": "*"
 	},
 	"babel": {
+		"plugins": [
+			"@babel/plugin-proposal-class-properties"
+		],
 		"presets": [
-			"@ava/babel/stage-4",
+			"@ava/stage-4",
 			"@babel/preset-react"
 		]
 	},
 	"xo": {
+		"parser": "babel-eslint",
 		"extends": [
-			"xo-react",
-			"xo-typescript"
+			"xo-react"
 		],
-		"prettier": true,
 		"rules": {
-			"react/no-unused-prop-types": "warn",
-			"react/prop-types": "off",
-			"unicorn/no-hex-escape": "off",
-			"unicorn/filename-case": "off"
+			"react/no-unused-prop-types": 1,
+			"unicorn/no-hex-escape": 0,
+			"unicorn/filename-case": 0
 		}
-	},
-	"prettier": "@vdemedes/prettier-config"
+	}
 }

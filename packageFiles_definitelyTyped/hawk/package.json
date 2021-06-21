@@ -1,7 +1,7 @@
 {
   "name": "hawk",
   "description": "HTTP Hawk Authentication Scheme",
-  "version": "8.0.0",
+  "version": "9.0.0",
   "repository": "git://github.com/mozilla/hawk",
   "main": "lib/index.js",
   "files": [
@@ -14,15 +14,13 @@
     "hawk"
   ],
   "dependencies": {
-    "@hapi/hoek": "9.x.x",
     "@hapi/b64": "5.x.x",
     "@hapi/boom": "9.x.x",
     "@hapi/cryptiles": "5.x.x",
-    "@hapi/sntp": "4.x.x"
+    "@hapi/hoek": "9.x.x"
   },
   "devDependencies": {
     "@hapi/code": "8.x.x",
-    "@hapi/hapi": "19.x.x",
     "@hapi/lab": "22.x.x"
   },
   "scripts": {

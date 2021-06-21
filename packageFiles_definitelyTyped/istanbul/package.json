@@ -1,6 +1,6 @@
 {
   "name": "istanbul",
-  "version": "0.4.5",
+  "version": "0.4.0",
   "description": "Yet another JS code coverage tool that computes statement, line, function and branch coverage with module loader hooks to transparently add coverage when running tests. Supports all JS coverage use cases including unit tests, server side functional tests and browser tests. Built for scale",
   "keywords": [
     "coverage",
@@ -74,21 +74,7 @@
     "Gord Tanner <gord@bithound.io>",
     "Tom MacWright @tmcw <tom@macwright.org>",
     "Kitson Kelly @kitsonk",
-    "@asa-git",
-    "@RoCat",
-    "Ian Page Hands @iphands <iphands@gmail.com>",
-    "Eddie Gurnee @pegurnee",
-    "Kevin Decker @kpdecker <kpdecker@gmail.com>",
-    "isaacs @isaacs <i@izs.me>",
-    "Steve Gray @steve-gray",
-    "Prayag Verma @pra85 <prayag.verma@gmail.com>",
-    "Abe Fehr @abejfehr <abe.fehr@gmail.com>",
-    "Brian Woodward @doowb <brian.woodward@gmail.com>",
-    "@Victorystick",
-    "@inversion",
-    "@JamesMGreene",
-    "@ChALkeR",
-    "@graingert"
+    "@asa-git"
   ],
   "scripts": {
     "pretest": "jshint index.js lib/ test/ && ./download-escodegen-browser.sh",
@@ -110,9 +96,9 @@
   "dependencies": {
     "abbrev": "1.0.x",
     "async": "1.x",
-    "escodegen": "1.8.x",
-    "esprima": "2.7.x",
-    "glob": "^5.0.15",
+    "escodegen": "1.7.x",
+    "esprima": "2.5.x",
+    "fileset": "0.2.x",
     "handlebars": "^4.0.1",
     "js-yaml": "3.x",
     "mkdirp": "0.5.x",
@@ -125,6 +111,7 @@
   },
   "devDependencies": {
     "coveralls": "2.x",
+    "glob": "^5.0.14",
     "jshint": "^2.8.0",
     "nodeunit": "0.9.x",
     "requirejs": "2.x",

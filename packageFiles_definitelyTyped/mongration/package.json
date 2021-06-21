@@ -27,17 +27,17 @@
     "url": "https://github.com/awapps/mongration/issues"
   },
   "dependencies": {
-    "async": "~2.6.0",
-    "chalk": "^2.4.1",
+    "async": "~1.5.0",
+    "chalk": "^1.1.1",
     "commander": "^2.9.0",
-    "console.table": "^0.10.0",
-    "lodash": "^4.17.5",
+    "lodash.merge": "^3.3.2",
     "md5": "~2.0.0",
-    "mongodb": "~2.2.25"
+    "mongodb": "~2.2.25",
+    "table-master": "^1.0.3"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^3.4.1",
     "istanbul": "^0.4.3",
-    "mocha": "^5.1.1"
+    "mocha": "^2.3.4"
   }
 }

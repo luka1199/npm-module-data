@@ -1,13 +1,13 @@
 {
   "name": "autocannon",
-  "version": "7.3.0",
+  "version": "4.1.0",
   "description": "Fast HTTP benchmarking tool written in Node.js",
   "main": "autocannon.js",
   "bin": {
     "autocannon": "autocannon.js"
   },
   "scripts": {
-    "test": "standard && tap test/serial/*.test.js test/*.test.js",
+    "test": "standard && tap --timeout 45 test/*.test.js",
     "standard:fix": "standard --fix"
   },
   "pre-commit": [
@@ -29,8 +29,7 @@
   "author": "Matteo Collina <hello@matteocollina.com>",
   "contributors": [
     "Glen Keane <glenkeane.94@gmail.com>",
-    "Donald Robertson <donaldarobertson89@gmail.com",
-    "Salman Mitha <SalmanMitha@gmail.com"
+    "Donald Robertson <donaldarobertson89@gmail.com"
   ],
   "license": "MIT",
   "bugs": {
@@ -38,36 +37,30 @@
   },
   "homepage": "https://github.com/mcollina/autocannon#readme",
   "devDependencies": {
-    "bl": "^5.0.0",
-    "busboy": "^0.3.1",
+    "bl": "^3.0.0",
     "pre-commit": "^1.1.2",
-    "proxyquire": "^2.1.3",
-    "sinon": "^11.0.0",
-    "split2": "^3.2.2",
-    "standard": "^16.0.3",
-    "tap": "^15.0.2"
+    "split2": "^3.1.1",
+    "standard": "^14.0.0",
+    "tap": "^14.6.1"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
-    "char-spinner": "^1.0.1",
-    "cli-table3": "^0.6.0",
+    "chalk": "^2.4.2",
+    "cli-table3": "^0.5.1",
     "clone": "^2.1.2",
     "color-support": "^1.1.1",
     "cross-argv": "^1.0.0",
-    "form-data": "^4.0.0",
     "has-async-hooks": "^1.0.0",
-    "hdr-histogram-js": "^2.0.1",
-    "hdr-histogram-percentiles-obj": "^3.0.0",
-    "http-parser-js": "^0.5.2",
-    "hyperid": "^2.0.3",
+    "hdr-histogram-js": "^1.1.4",
+    "hdr-histogram-percentiles-obj": "^2.0.0",
+    "http-parser-js": "^0.5.1",
+    "hyperid": "^2.0.2",
     "manage-path": "^2.0.0",
+    "minimist": "^1.2.0",
     "on-net-listen": "^1.1.1",
-    "pretty-bytes": "^5.4.1",
+    "pretty-bytes": "^5.3.0",
     "progress": "^2.0.3",
     "reinterval": "^1.1.0",
-    "retimer": "^3.0.0",
-    "semver": "^7.3.2",
-    "subarg": "^1.0.0",
+    "retimer": "^2.0.0",
     "timestring": "^6.0.0"
   }
 }

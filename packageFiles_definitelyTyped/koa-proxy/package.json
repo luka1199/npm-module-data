@@ -1,42 +1,36 @@
 {
   "name": "koa-proxy",
-  "version": "1.0.0-alpha.3",
+  "version": "0.9.0",
   "description": "Proxy middleware for koa",
   "main": "index",
   "dependencies": {
-    "pause-stream": "0.0.11",
-    "request": "^2.88.0",
-    "request-promise-native": "^1.0.5"
+    "iconv-lite": "^0.2.11",
+    "co-request": "^0.2.0"
   },
-  "files": [
-    "index.js"
-  ],
   "keywords": [
     "koa",
     "middleware",
     "proxy"
   ],
   "devDependencies": {
-    "koa": "^2.3.0",
-    "koa-body": "^2.5.0",
-    "koa-convert": "^1.2.0",
-    "koa-router": "^7.2.1",
-    "koa-static": "^5.0.0",
-    "mocha": "^4.0.1",
-    "should": "^13.1.2",
-    "supertest": "^3.0.0"
-  },
-  "peerDependencies": {
-    "koa": "2.x"
+    "coveralls": "~2.8.0",
+    "istanbul-harmony": "*",
+    "koa": "^0.5.2",
+    "koa-body-parser": "^1.1.2",
+    "koa-router": "^3.1.2",
+    "koa-static": "^1.4.3",
+    "mocha": "~1.17.1",
+    "should": "~3.1.3",
+    "supertest": "^0.10.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/edorivai/koa-proxy"
+    "url": "https://github.com/popomore/koa-proxy"
   },
-  "homepage": "https://github.com/edorivai/koa-proxy",
-  "author": "edorivai <edo.rivai@gmail.com>",
+  "homepage": "https://github.com/popomore/koa-proxy",
+  "author": "popomore <sakura9515@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "mocha -t 20000"
+    "test": "make test"
   }
 }

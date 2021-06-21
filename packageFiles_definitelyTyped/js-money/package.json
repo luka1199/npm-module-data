@@ -1,14 +1,13 @@
 {
     "name": "js-money",
     "description": "JavaScript implementation of the Money value object.",
-    "version": "0.6.3",
+    "version": "0.6.0",
     "main": "./lib",
     "author": {
         "name": "David Kalosi",
         "email": "david.kalosi@gmail.com"
     },
     "keywords": ["money", "javascript", "currency"],
-    "files": ["lib"],
     "licenses": {
         "type": "MIT"
     },

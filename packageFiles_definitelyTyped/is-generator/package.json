@@ -1,26 +1,18 @@
 {
   "name": "is-generator",
-  "version": "1.0.3",
+  "version": "0.0.4",
   "description": "Check whether a value is a generator or generator function",
   "main": "is-generator.js",
   "scripts": {
-    "lint": "standard",
-    "test-spec": "mocha -R spec --bail",
-    "test-cov": "node --harmony node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
-    "test": "npm run lint && npm run test-cov"
+    "test": "node --harmony-generators node_modules/.bin/istanbul cover _mocha --require . -- -R spec"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/blakeembrey/is-generator.git"
   },
   "keywords": [
-    "generator",
-    "generator function",
-    "yield",
     "function",
-    "await",
-    "es6",
-    "function*"
+    "generators"
   ],
   "author": {
     "name": "Blake Embrey",
@@ -33,9 +25,7 @@
   },
   "homepage": "https://github.com/blakeembrey/is-generator",
   "devDependencies": {
-    "istanbul": "git://github.com/gotwarlost/istanbul#harmony",
-    "mocha": "^3.3.0",
-    "pre-commit": "^1.0.7",
-    "standard": "^10.0.2"
+    "mocha": "~1.17.0",
+    "istanbul": "git://github.com/gotwarlost/istanbul#harmony"
   }
 }

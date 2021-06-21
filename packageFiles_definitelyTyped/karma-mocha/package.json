@@ -1,6 +1,6 @@
 {
   "name": "karma-mocha",
-  "version": "2.0.1",
+  "version": "1.2.0",
   "description": "A Karma plugin. Adapter for Mocha testing framework.",
   "main": "lib/index.js",
   "sharedKarmaFiles": {
@@ -22,11 +22,11 @@
   ],
   "author": "Vojta Jina <vojta.jina@gmail.com>",
   "dependencies": {
-    "minimist": "^1.2.3"
+    "minimist": "1.2.0"
   },
   "devDependencies": {
     "chai": "^3.4.1",
-    "eslint": "^4.18.2",
+    "eslint": "^2.0.0",
     "eslint-config-standard": "^5.1.0",
     "eslint-plugin-promise": "^1.0.8",
     "eslint-plugin-react": "^5.2.2",
@@ -45,20 +45,9 @@
     "karma-sinon": "^1.0.3",
     "load-grunt-tasks": "^3.2.0",
     "mocha": "^3.0.0",
-    "mock-fs": "^4.10.1",
+    "mock-fs": "^3.12.1",
     "shared-karma-files": "git://github.com/karma-runner/shared-karma-files.git#82ae8d02",
-    "sinon": "^1.17.2",
-    "@semantic-release/changelog": "^3.0.6",
-    "@semantic-release/git": "^7.0.18",
-    "semantic-release": "^15.14.0",
-    "@commitlint/cli": "^8.3.4",
-    "@commitlint/config-conventional": "^8.3.4",
-    "husky": "^4.0.3"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "sinon": "^1.17.2"
   },
   "license": "MIT",
   "contributors": [

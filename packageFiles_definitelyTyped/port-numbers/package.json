@@ -1,6 +1,6 @@
 {
   "name": "port-numbers",
-  "version": "6.0.1",
+  "version": "5.0.0",
   "description": "Get information on network port numbers and services, based on IANA's public listing",
   "author": "silverwind <me@silverwind.io> (https://github.com/silverwind)",
   "license": "BSD-2-Clause",
@@ -9,13 +9,8 @@
     "test": "make test"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=8"
   },
-  "files": [
-    "index.js",
-    "ports.json",
-    "services.json"
-  ],
   "keywords": [
     "port",
     "port-numbers",
@@ -27,16 +22,17 @@
     "iana",
     "well-known"
   ],
+  "files": [
+    "index.js",
+    "ports.json",
+    "services.json"
+  ],
   "devDependencies": {
-    "csv-parse": "4.12.0",
-    "eslint": "7.9.0",
-    "eslint-config-silverwind": "18.0.9",
-    "got": "11.7.0",
-    "jest": "26.4.2",
-    "updates": "11.1.4",
-    "versions": "8.4.3"
-  },
-  "jest": {
-    "verbose": false
+    "csv-parse": "4.6.5",
+    "eslint": "6.6.0",
+    "eslint-config-silverwind": "5.0.0",
+    "got": "9.6.0",
+    "updates": "9.0.1",
+    "versions": "7.0.2"
   }
 }

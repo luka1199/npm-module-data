@@ -1,6 +1,6 @@
 {
   "name": "sinon-express-mock",
-  "version": "2.2.1",
+  "version": "1.3.0",
   "description": "Simple request and response mock objects to pass into Express routes when testing using Sinon.",
   "main": "lib/index.js",
   "directories": {
@@ -37,12 +37,11 @@
     "url": "danawoodman.com"
   },
   "license": "MIT",
-  "peerDependencies": {
-    "sinon": "*"
+  "dependencies": {
+    "sinon": "1.17.2"
   },
   "devDependencies": {
     "babel-cli": "6.2.0",
-    "babel-preset-es2015": "6.1.18",
-    "sinon": "*"
+    "babel-preset-es2015": "6.1.18"
   }
 }

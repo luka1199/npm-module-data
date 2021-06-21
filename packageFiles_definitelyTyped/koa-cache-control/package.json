@@ -1,6 +1,6 @@
 {
   "name": "koa-cache-control",
-  "version": "2.0.0",
+  "version": "2.0.0-alpha.1",
   "description": "Middleware for meddling with Cache-Control headers",
   "main": "index.js",
   "scripts": {
@@ -24,12 +24,13 @@
     "url": "https://github.com/DaMouse404/koa-cache-headers/issues"
   },
   "devDependencies": {
-    "eslint": "^6.6.0",
+    "eslint": "^3.3.0",
     "istanbul": "^0.4.3",
-    "koa": "^2.0.0",
+    "koa": "^2.0.0-alpha.7",
     "mocha": "^3.0.2",
     "supertest": "^3.0.0"
   },
   "dependencies": {
+    "lodash": "^4.12.0"
   }
 }

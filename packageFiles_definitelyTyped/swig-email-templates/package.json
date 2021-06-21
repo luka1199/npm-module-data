@@ -1,10 +1,11 @@
 {
   "name": "swig-email-templates",
-  "version": "6.0.0",
+  "version": "5.0.0",
   "description": "Node.js module for rendering emails with swig templates and email-friendly inline CSS",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "coverage": "istanbul cover _mocha"
   },
   "bin": {
     "swig-email-templates": "bin/swig-email-templates.js"
@@ -19,18 +20,18 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": ">=10"
+    "node": ">=0.10"
   },
   "devDependencies": {
-    "mocha": "^8.2.1",
-    "nyc": "^15.1.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^3.0.2",
     "pend": "^1.2.0"
   },
   "dependencies": {
     "cheerio": "^0.22.0",
-    "html-to-text": "^6.0.0",
-    "juice": "^7.0.0",
+    "html-to-text": "^3.3.0",
+    "juice": "^4.1.0",
     "optimist": "^0.6.1",
-    "swig-templates": "^2.0.3"
+    "swig-templates": "^2.0.2"
   }
 }

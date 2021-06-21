@@ -1,6 +1,6 @@
 {
   "name": "scroll-into-view",
-  "version": "1.15.0",
+  "version": "1.13.1",
   "description": "scrolls an elements into view, recursively aligning parents.",
   "main": "scrollIntoView.js",
   "directories": {
@@ -17,9 +17,7 @@
     "watchExample": "watchify ./example/index.js -d -o ./example/index.browser.js",
     "prepublish": "npm run-script build",
     "serve": "static example",
-    "serveTest": "static test",
-    "start": "npm-run-all -p serve watchExample",
-    "startTest": "npm-run-all -p serveTest watchTest"
+    "start": "npm-run-all -p serve watchExample"
   },
   "author": "",
   "license": "MIT",

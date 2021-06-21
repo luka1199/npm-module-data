@@ -1,9 +1,9 @@
 {
   "name": "usb",
   "description": "Library to access USB devices",
-  "version": "1.7.1",
+  "version": "1.5.0",
   "engines": {
-    "node": ">=10"
+    "node": ">=6"
   },
   "keywords": [
     "usb",
@@ -21,11 +21,6 @@
       "url": "http://timryan.org"
     },
     {
-      "name": "Rob Moran",
-      "email": "github@thegecko.org",
-      "url": "https://github.com/thegecko"
-    },
-    {
       "name": "Christopher Klein"
     }
   ],
@@ -35,27 +30,25 @@
     "url": "https://github.com/tessel/node-usb.git"
   },
   "scripts": {
-    "install": "prebuild-install --runtime napi --target 4 --verbose || node-gyp rebuild",
-    "prebuild": "prebuild --runtime napi --target 4 --force --strip --verbose",
-    "test": "mocha --require coffeescript/register --grep Module test/*",
-    "full-test": "mocha --require coffeescript/register test/*",
+    "install": "node-pre-gyp install --fallback-to-build",
+    "test": "mocha --compilers coffee:coffeescript --grep Module",
+    "full-test": "mocha --compilers coffee:coffeescript",
     "valgrind": "coffee -c test/usb.coffee; valgrind --leak-check=full --show-possibly-lost=no node --expose-gc --trace-gc node_modules/mocha/bin/_mocha -R spec"
   },
+  "binary": {
+    "module_name": "usb_bindings",
+    "module_path": "./src/binding",
+    "host": "https://github.com/tessel/node-usb/releases/download/",
+    "remote_path": "{version}"
+  },
   "dependencies": {
-    "bindings": "^1.4.0",
-    "node-addon-api": "3.0.2",
-    "prebuild-install": "^5.3.3"
+    "nan": "^2.8.0",
+    "node-pre-gyp": "^0.11.0"
   },
   "devDependencies": {
-    "coffeescript": "~2.4.1",
-    "mocha": "^8.3.2",
-    "node-abi": "^2.19.3",
-    "prebuild": "^10.0.1"
+    "coffeescript": "~1.6.2",
+    "mocha": "~1.8.2",
+    "aws-sdk": "~2.0.0-rc.15"
   },
-  "license": "MIT",
-  "binary": {
-    "napi_versions": [
-      4
-    ]
-  }
+  "license": "MIT"
 }

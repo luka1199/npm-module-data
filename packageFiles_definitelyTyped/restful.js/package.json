@@ -1,40 +1,24 @@
 {
   "name": "restful.js",
-  "version": "0.9.6",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/marmelab/restful.js"
-  },
-  "bugs": {
-    "url": "https://github.com/marmelab/restful.js/issues"
-  },
+  "version": "0.6.2",
+  "repository": "https://github.com/marmelab/restful.js",
   "description": "A pure JS client for interacting with server-side RESTful resources. Think Restangular without Angular.",
   "scripts": {
     "test": "make test"
   },
-  "main": "dist/es5/index.js",
+  "main": "dist/restful.min.js",
   "author": "Robin Bressan <robin@buddey.net>",
   "license": "MIT",
-  "dependencies": {
-    "immutable": "3.7.6",
-    "object-assign": "2.0.0",
-    "qs": "5.2.0",
-    "warning": "2.1.0"
-  },
   "devDependencies": {
-    "babel": "5.8.35",
-    "babel-loader": "5.3.3",
-    "babel-eslint": "4.0.10",
-    "chai": "3.5.0",
-    "eslint": "1.5.1",
-    "eslint-config-airbnb": "0.1.0",
-    "mocha": "2.3.4",
-    "nock": "2.12.0",
-    "sinon": "1.17.3",
-    "webpack": "1.12.12"
-  },
-  "optionalDependencies": {
-    "request": "2.69.0",
-    "whatwg-fetch": "0.11.0"
+    "axios": "^0.5.2",
+    "babel-core": "^4.6.6",
+    "babel-loader": "^4.0.0",
+    "karma": "0.12.14",
+    "karma-chrome-launcher": "0.1.3",
+    "karma-jasmine": "0.1.5",
+    "karma-phantomjs-launcher": "0.1.4",
+    "karma-spec-reporter": "0.0.16",
+    "object-assign": "^2.0.0",
+    "webpack": "^1.7.1"
   }
 }

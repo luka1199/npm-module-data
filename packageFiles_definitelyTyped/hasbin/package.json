@@ -1,6 +1,6 @@
 {
 	"name": "hasbin",
-	"version": "1.2.3",
+	"version": "1.2.0",
 
 	"description": "Check whether a binary exists in the PATH environment variable",
 	"keywords": [ "bin", "check", "path" ],
@@ -13,14 +13,14 @@
 
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/springernature/hasbin.git"
+		"url": "https://github.com/nature/hasbin.git"
 	},
-	"homepage": "https://github.com/springernature/hasbin",
-	"bugs": "https://github.com/springernature/hasbin/issues",
+	"homepage": "https://github.com/nature/hasbin",
+	"bugs": "https://github.com/nature/hasbin/issues",
 	"license": "MIT",
 
 	"engines": {
-		"node": ">=0.10"
+		"node": ">=0.10 <=5"
 	},
 	"dependencies": {
 		"async": "~1.5"

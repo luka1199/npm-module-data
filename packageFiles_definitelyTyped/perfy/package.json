@@ -1,6 +1,6 @@
 {
   "name": "perfy",
-  "version": "1.1.5",
+  "version": "1.1.0",
   "description": "A simple, light-weight NodeJS utility for measuring code execution in high-resolution real times.",
   "author": {
     "name": "Onur Yıldırım",
@@ -9,8 +9,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "node test",
-    "lint": "eslint index.js test"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -28,7 +27,6 @@
     "execution",
     "time",
     "benchmark",
-    "profile",
     "elapsed"
   ],
   "bugs": {
@@ -36,9 +34,7 @@
   },
   "homepage": "https://github.com/onury/perfy#readme",
   "devDependencies": {
-    "eslint": "^5.2.0",
-    "jasmine": "^3.1.0",
-    "jasmine-console-reporter": "^3.0.2"
-  },
-  "dependencies": {}
+    "grunt": "^0.4.5",
+    "grunt-jasmine-nodejs": "^1.4.3"
+  }
 }

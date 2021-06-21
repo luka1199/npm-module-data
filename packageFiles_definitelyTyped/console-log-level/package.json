@@ -1,6 +1,6 @@
 {
   "name": "console-log-level",
-  "version": "1.4.1",
+  "version": "1.4.0",
   "description": "The most simple logger imaginable",
   "main": "index.js",
   "scripts": {
@@ -27,11 +27,11 @@
   "homepage": "https://github.com/watson/console-log-level",
   "dependencies": {},
   "devDependencies": {
-    "standard": "^12.0.1",
-    "tape": "^4.10.1"
+    "standard": "^7.1.2",
+    "tape": "^4.5.1"
   },
   "coordinates": [
-    55.778253,
-    12.593208
+    55.6810439,
+    12.5643924
   ]
 }

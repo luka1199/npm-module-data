@@ -1,18 +1,13 @@
 {
   "name": "hyphenate-style-name",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "Hyphenates a camelcased CSS property name",
-  "main": "index.cjs.js",
-  "module": "index.js",
-  "sideEffects": false,
+  "main": "index.js",
   "scripts": {
-    "build": "rollup --input index.js --file index.cjs.js --format cjs",
-    "coverage": "nyc tape -- test/**/*.test.js",
-    "lint": "eslint . --ignore-path .gitignore",
+    "coverage": "istanbul cover tape -- test/**/*.test.js",
+    "lint": "eslint .",
     "test": "tape test/**/*.test.js",
-    "precoverage": "npm run build",
-    "pretest": "npm run lint && npm run build",
-    "prepublishOnly": "npm run build"
+    "pretest": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -31,12 +26,9 @@
   },
   "homepage": "https://github.com/rexxars/hyphenate-style-name#readme",
   "devDependencies": {
-    "eslint": "^7.4.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-config-sanity": "^1.149.16",
-    "nyc": "^15.1.0",
-    "prettier": "^2.0.5",
-    "rollup": "^2.21.0",
-    "tape": "^5.0.1"
+    "eslint": "^1.0.0",
+    "eslint-config-vaffel": "^1.0.2",
+    "istanbul": "^0.3.17",
+    "tape": "^4.0.1"
   }
 }

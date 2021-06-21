@@ -20,24 +20,23 @@
 		"sinusoidal",
 		"wagner6"
 	],
-	"author": "Julius Tens <mail@juliustens.eu>",
+	"author": "Julius Tens <mail@juliustens.de>",
 	"homepage": "https://github.com/juliuste/projections",
 	"repository": "juliuste/projections",
 	"bugs": "https://github.com/juliuste/projections/issues",
 	"main": "./index.js",
-	"files": [
-		"*.js",
-		"!test.js"
-	],
+	"files": ["*.js", "!test.js"],
+	"dependencies": {
+	},
 	"devDependencies": {
 		"tape": "^4.6"
 	},
 	"scripts": {
 		"test": "node test.js",
-		"prepare": "npm test"
+		"prepublish": "npm test"
 	},
-	"engine": {
-		"node": ">=4"
+	"engine" : {
+		"node" : ">=4"
 	},
 	"license": "MIT"
 }

@@ -1,6 +1,6 @@
 {
   "name": "date-now",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A requirable version of Date.now()",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
@@ -32,11 +32,6 @@
     "test": "node ./test",
     "build": "browserify test/index.js -o test/static/bundle.js",
     "testem": "testem"
-  },
-  "component": {
-    "scripts": {
-      "date-now/index.js": "index.js"
-    }
   },
   "testling": {
     "files": "test/*.js",

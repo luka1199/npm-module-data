@@ -1,15 +1,14 @@
 {
   "name": "minilog",
   "description": "Lightweight client & server-side logging with Stream-API backends and counting, timing support",
-  "license": "MIT",
-  "version": "3.1.0",
+  "version": "2.0.0",
   "main": "lib/index.js",
   "dependencies": {
-    "microee": "0.0.6"
+    "microee": "0.0.2"
   },
   "devDependencies": {
     "mocha": "*",
-    "gluejs": "2.x"
+    "gluejs": "git://github.com/mixu/gluejs.git"
   },
   "repository": {
     "type": "git",
@@ -24,6 +23,5 @@
     "logging",
     "sysadmin",
     "tools"
-  ],
-  "browser": "./lib/web/index.js"
+  ]
 }

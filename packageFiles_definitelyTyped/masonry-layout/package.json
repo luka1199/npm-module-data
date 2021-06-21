@@ -1,6 +1,6 @@
 {
   "name": "masonry-layout",
-  "version": "4.2.2",
+  "version": "4.2.0",
   "description": "Cascading grid layout library",
   "main": "masonry.js",
   "dependencies": {
@@ -45,7 +45,7 @@
   "bugs": {
     "url": "https://github.com/desandro/masonry/issues"
   },
-  "homepage": "https://masonry.desandro.com",
+  "homepage": "http://masonry.desandro.com",
   "files": [
     "dist",
     "masonry.js"

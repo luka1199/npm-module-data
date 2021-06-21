@@ -1,13 +1,12 @@
 {
   "name": "react-radio-group",
-  "version": "3.0.3",
+  "version": "3.0.0",
   "description": "Better radio buttons.",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
-    "example": "webpack -w -d --config example/webpack.config.js example/example.jsx example/all.js",
-    "build-umd": "webpack index.jsx umd/index.js",
-    "build-cjs": "babel index.jsx -d lib",
-    "prerelease": "npm run build-umd && npm run build-cjs"
+    "example": "webpack -w -d",
+    "build": "babel index.jsx --out-dir=lib --modules umd --module-id RadioGroup",
+    "prerelease": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,15 +20,10 @@
     "component",
     "react-component"
   ],
-  "dependencies": {
-    "prop-types": "^15.5.8"
-  },
   "devDependencies": {
     "babel": "^5.5.8",
     "babel-core": "^5.2.17",
     "babel-loader": "^5.0.0",
-    "react": ">=0.14.0",
-    "react-dom": ">=15.5.4",
     "webpack": "^1.8.11"
   },
   "author": "chenglou <chenglou92@gmail.com>",
@@ -46,7 +40,6 @@
   },
   "homepage": "https://github.com/chenglou/react-radio-group",
   "peerDependencies": {
-    "react": ">=0.14.0",
-    "react-dom": ">=15.5.4"
+    "react": ">=0.14.0"
   }
 }

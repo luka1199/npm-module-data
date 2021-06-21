@@ -1,13 +1,11 @@
 {
   "name": "bidirectional-map",
-  "version": "1.0.4",
-  "description": "Create 'key/value' collections of one-to-one correspondence.",
+  "version": "1.0.0",
+  "description": "",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel index.js > dist/index.js",
-    "test": "tape test.js",
-    "preversion": "npm t",
-    "postversion": "git push && git push --tags"
+    "test": "tape test.js"
   },
   "repository": {
     "type": "git",

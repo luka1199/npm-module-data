@@ -1,6 +1,6 @@
 {
   "name": "promise-the-world",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A complete Promise utils collection",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "get-sass-vars",
-  "version": "3.1.0",
+  "version": "3.0.0",
   "description": "Get Sass variables as JSON object.",
   "license": "MIT",
   "author": "Ivan Nikolić <niksy5@gmail.com> (http://ivannikolic.com)",
@@ -33,14 +33,14 @@
     "release": "np --no-release-draft",
     "test": "([[ -z $WATCH_TEST ]] && npm run lint || echo) && nyc mocha --require esm 'test/**/*.js' && nyc check-coverage",
     "test:watch": "WATCH_TEST=1 nodemon --ext js,json,scss --exec npm test",
-    "version": "if [[ $(git rev-parse --abbrev-ref HEAD) == 'master' ]]; then version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md; else echo; fi"
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "dependencies": {
     "@ungap/from-entries": "^0.2.1",
     "camelcase-keys": "^6.2.2",
+    "fibers": "^5.0.0",
     "node-sass-json-functions": "^3.1.0",
     "postcss": "^8.2.4",
-    "postcss-scss": "^3.0.4",
     "sass": "^1.32.4",
     "strip-outer": "^1.0.1"
   },

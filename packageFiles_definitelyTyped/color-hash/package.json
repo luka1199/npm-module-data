@@ -1,11 +1,11 @@
 {
     "name": "color-hash",
-    "version": "2.0.1",
-    "description": "Generate color based on the given string (using HSL color space and SHA256).",
-    "main": "dist/color-hash.js",
+    "version": "1.0.0",
+    "description": "Generate color based on the given string (using HSL color space and BKDRHash).",
+    "main": "lib/color-hash.js",
     "scripts": {
-        "prepublishOnly": "make build",
-        "test": "node -e \"const ColorHash = require('.').default; new ColorHash();\""
+        "build": "browserify lib/color-hash.js -s ColorHash -o dist/color-hash.js",
+        "test": "istanbul cover _mocha"
     },
     "repository": {
         "type": "git",
@@ -16,8 +16,7 @@
     "bugs": {
         "url": "https://github.com/zenozeng/color-hash/issues"
     },
-    "dependencies": {},
     "devDependencies": {
-        "typescript": "^4.2.4"
+        "rewire": "^2.1.5"
     }
 }

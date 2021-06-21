@@ -11,10 +11,14 @@ mkdir $OUTPUT_DIRECTORY
 
 while IFS=, read -r moduleName repo commitHash
 do	
-    echo "Exctracting package.json file for module: $moduleName | $repo | $commitHash"
-	if [ $commitHash == "" ]
+	if [[ $repo == "" ]]
 	then	
-		commitHash="master"
+		continue
+	fi
+    echo "Exctracting package.json file for module: $moduleName | $repo | $commitHash"
+	if [[ $commitHash == "" ]]
+	then	
+		commitHash=$(git remote show https://${repo} | grep 'HEAD branch' | cut -d' ' -f5)
 	fi
 	RAW_GITHUB_URL_FRONT_URL="https://raw.githubusercontent.com"
 	RAW_GITHUB_URL=${repo/github.com/$RAW_GITHUB_URL_FRONT_URL}

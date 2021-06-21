@@ -1,20 +1,11 @@
 {
   "name": "steelseries",
-  "version": "1.0.7",
+  "version": "1.0.1",
   "description": "A collection of gauge components for JavaScript.",
-  "keywords": [
-    "gauge",
-    "canvas",
-    "radial-gauge",
-    "linear-gauge"
-  ],
   "main": "dist/steelseries.js",
   "scripts": {
-    "build": "npm run compile && npm run website",
-    "compile": "webpack",
-    "lint": "eslint \"*.js\" \"src/**/*.js\" \"srcdocs/**/*.js\"",
-    "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint",
+    "build": "webpack",
+    "test": "echo \"no test specified\"",
     "website": "rm -rf docs .cache && parcel build srcdocs/index.njk --public-url ./ --out-dir docs",
     "website-dev": "rm -rf docs .cache && parcel srcdocs/index.njk --out-dir docs"
   },
@@ -29,12 +20,6 @@
   },
   "homepage": "https://github.com/nicolas-van/steelseries#readme",
   "devDependencies": {
-    "eslint": "^6.6.0",
-    "eslint-config-standard": "^14.1.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-node": "^10.0.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
     "nunjucks": "^3.2.0",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-nunjucks": "^1.1.0",

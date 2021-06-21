@@ -1,40 +1,32 @@
 {
   "name": "historykana",
-  "version": "1.0.4",
-  "description": "Analyse Japanese Furigana from key input history",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
     "watch": "babel src --out-dir lib -w",
-    "test": "npm run build && mocha",
-    "prepublish": "npm run build",
-    "lint": "eslint src/* test/*"
-  },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
+    "test": "npm run build && mocha"
   },
   "files": [
     "lib",
     "index.js"
   ],
-  "repository": "https://github.com/inuscript/historykana.git",
+  "repository": "https://github.com/suisho/historykana.git",
   "keywords": [],
-  "author": "inuscript",
-  "license": "MIT",
+  "author": "suisho",
+  "license": "ISC",
   "dependencies": {
     "compact-diff": "0.0.3",
-    "extend": "^3.0.0",
-    "regexp.escape": "^1.0.2"
+    "extend": "^2.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.5.0",
-    "babel-preset-es2015": "^6.3.13",
-    "eslint": "^3.16.1",
-    "eslint-config-standard": "^7.0.0",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.1.0",
-    "mocha": "^3.2.0"
+    "babel": "^5.0.12",
+    "eslint": "^0.18.0",
+    "espower-babel": "^2.0.0",
+    "mocha": "^2.2.1",
+    "power-assert": "^0.10.2",
+    "rewire": "^2.3.1",
+    "source-map-support": "^0.2.10"
   }
 }

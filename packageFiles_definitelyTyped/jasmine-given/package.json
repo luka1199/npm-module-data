@@ -1,6 +1,6 @@
 {
   "name": "jasmine-given",
-  "version": "2.6.4",
+  "version": "2.6.0",
   "description": "Adds a Given-When-Then DSL to jasmine as an alternative style for specs",
   "homepage": "https://github.com/searls/jasmine-given",
   "author": {
@@ -8,23 +8,17 @@
     "company": "Test Double, LLC"
   },
   "main": "main.js",
-  "scripts": {
-    "test": "lineman spec-ci",
-    "preversion": "git pull --rebase && npm test",
-    "version": "lineman clean build && git add dist && git add bower.json",
-    "postversion": "git push && git push --tags && npm publish"
-  },
   "dependencies": {
     "coffee-script": "~ 1.6.3",
     "minijasminenode": "~0.2.4",
-    "jasmine-matcher-wrapper": "~ 0.0.3"
+    "jasmine-matcher-wrapper": "~ 0.0.2"
   },
   "devDependencies": {
-    "lineman": ">=0.31.0",
-    "lineman-lib": "~0.2.0",
+    "lineman": ">=0.23.1",
+    "lineman-lib": "~ 0.0.1",
     "grunt": "~0.4.2",
     "grunt-jasmine-bundle": "0.1.4",
-    "testem": "~0.6.15"
+    "testem": "~0.6.3"
   },
   "keywords": [
     "jasmine",
@@ -37,5 +31,10 @@
     "type": "git",
     "url": "https://github.com/searls/jasmine-given.git"
   },
-  "license": "MIT"
+  "licenses": [
+    {
+      "name": "Apache License 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ]
 }

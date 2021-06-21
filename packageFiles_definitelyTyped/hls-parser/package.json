@@ -1,6 +1,6 @@
 {
   "name": "hls-parser",
-  "version": "0.10.4",
+  "version": "0.8.0",
   "description": "A simple library to read/write HLS playlists",
   "main": "index.js",
   "browser": "dist/hls-parser.min.js",
@@ -28,18 +28,19 @@
     "url": "https://github.com/kuu/hls-parser/issues"
   },
   "homepage": "https://github.com/kuu/hls-parser#readme",
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.13.15",
-    "@babel/preset-env": "^7.13.15",
+    "@babel/core": "^7.12.16",
+    "@babel/preset-env": "^7.12.16",
     "ava": "^3.15.0",
     "babel-loader": "^8.2.2",
     "coveralls": "^3.1.0",
     "nyc": "^15.1.0",
     "rewire": "^5.0.0",
     "terser-webpack-plugin": "^5.1.1",
-    "webpack": "^5.33.2",
-    "webpack-cli": "^4.6.0",
-    "xo": "0.38.2"
+    "webpack": "^5.21.2",
+    "webpack-cli": "^4.5.0",
+    "xo": "^0.37.1"
   },
   "xo": {
     "esnext": true,
@@ -62,14 +63,6 @@
       "unicorn/no-zero-fractions": 0,
       "unicorn/prevent-abbreviations": 0
     },
-    "overrides": [
-      {
-        "files": "test/**/*.js",
-        "rules": {
-          "unicorn/no-array-push-push": 0
-        }
-      }
-    ],
     "settings": {
       "import/resolver": {
         "node": {}

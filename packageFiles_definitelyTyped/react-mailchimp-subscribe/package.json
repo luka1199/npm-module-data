@@ -1,6 +1,6 @@
 {
   "name": "react-mailchimp-subscribe",
-  "version": "2.1.1",
+  "version": "2.1.0",
   "description": "react-mailchimp-subscribe React component",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -27,7 +27,7 @@
     "to-querystring": "^1.0.4"
   },
   "peerDependencies": {
-    "react": ">=15"
+    "react": "15||16"
   },
   "devDependencies": {
     "gh-pages": "^1.0.0",

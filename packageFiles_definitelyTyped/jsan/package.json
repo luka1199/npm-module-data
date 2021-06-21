@@ -1,10 +1,10 @@
 {
   "name": "jsan",
-  "version": "3.1.13",
+  "version": "3.1.0",
   "description": "handle circular references when stringifying and parsing",
   "main": "index.js",
   "scripts": {
-    "benchmark": "node perf/bench > perf/results.txt",
+    "benchmark": "rimraf 'perf/*.txt' && for i in `seq 1 9`; do node perf/bench > perf/$i.txt; done",
     "test": "mocha"
   },
   "keywords": [
@@ -13,11 +13,8 @@
   "author": "Moshe Kolodny",
   "license": "MIT",
   "devDependencies": {
-    "benchmark": "^2.1.2",
     "circular-json": "^0.3.0",
-    "immutable": "^3.7.6",
     "json-stringify-safe": "^5.0.1",
-    "mobx": "^2.4.1",
     "mocha": "^2.2.1",
     "rimraf": "^2.5.2"
   },

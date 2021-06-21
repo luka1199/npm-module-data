@@ -1,11 +1,11 @@
 {
   "name": "sharedb",
-  "version": "1.8.1",
+  "version": "1.0.0",
   "description": "JSON OT database backend",
   "main": "lib/index.js",
   "dependencies": {
     "arraydiff": "^0.1.1",
-    "async": "^2.6.3",
+    "async": "^1.4.2",
     "fast-deep-equal": "^2.0.1",
     "hat": "0.0.3",
     "ot-json0": "^1.0.1"
@@ -16,21 +16,13 @@
     "eslint": "^6.5.1",
     "eslint-config-google": "^0.14.0",
     "lolex": "^5.1.1",
-    "mocha": "^8.2.1",
+    "mocha": "^6.2.2",
     "nyc": "^14.1.1",
-    "ot-json1": "^0.3.0",
-    "sharedb-legacy": "npm:sharedb@=1.1.0",
     "sinon": "^7.5.0"
   },
-  "files": [
-    "lib/"
-  ],
   "scripts": {
-    "docs:install": "cd docs && bundle install",
-    "docs:build": "cd docs && bundle exec jekyll build",
-    "docs:start": "cd docs && bundle exec jekyll serve --livereload",
-    "test": "mocha",
-    "test-cover": "nyc --temp-dir=coverage -r text -r lcov npm test",
+    "test": "./node_modules/.bin/mocha && npm run lint",
+    "test-cover": "node_modules/nyc/bin/nyc.js --temp-dir=coverage -r text -r lcov node_modules/mocha/bin/_mocha && npm run lint",
     "lint": "./node_modules/.bin/eslint --ignore-path .gitignore '**/*.js'",
     "lint:fix": "npm run lint -- --fix"
   },

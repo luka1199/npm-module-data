@@ -1,7 +1,7 @@
 {
   "name": "rbac-a",
   "description": "RBAC-A dynamic plugin roles implementation",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "author": "Yanick Rochon <yanick.rochon@gmail.com>",
   "keywords": [
     "rbac",
@@ -16,8 +16,9 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test-cov": "jest --coverage"
+    "test": "mocha",
+    "test-cov": "istanbul cover _mocha",
+    "test-travis": "istanbul cover _mocha --report lcovonly"
   },
   "homepage": "https://github.com/yanickrochon/rbac-a#readme",
   "repository": {
@@ -27,8 +28,14 @@
   "bugs": {
     "url": "https://github.com/yanickrochon/rbac-a/issues"
   },
+  "dependencies": {
+    "error-factory": "^0.1.6",
+    "promise-events": "0.1.1"
+  },
   "devDependencies": {
-    "jest": "^24.9.0"
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "should": "^8.0.2"
   },
   "license": "MIT"
 }

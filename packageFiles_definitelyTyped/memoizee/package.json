@@ -1,6 +1,6 @@
 {
   "name": "memoizee",
-  "version": "0.4.15",
+  "version": "0.4.0",
   "description": "Memoize/cache function results",
   "author": "Mariusz Nowak <medikoo@medikoo.com> (http://www.medikoo.com/)",
   "keywords": [
@@ -25,36 +25,25 @@
     "url": "git://github.com/medikoo/memoizee.git"
   },
   "dependencies": {
-    "d": "^1.0.1",
-    "es5-ext": "^0.10.53",
-    "es6-weak-map": "^2.0.3",
-    "event-emitter": "^0.3.5",
-    "is-promise": "^2.2.2",
-    "lru-queue": "^0.1.0",
-    "next-tick": "^1.1.0",
-    "timers-ext": "^0.1.7"
+    "d": "1",
+    "es5-ext": "^0.10.12",
+    "es6-weak-map": "^2.0.1",
+    "event-emitter": "^0.3.4",
+    "is-promise": "^2.1",
+    "lru-queue": "0.1",
+    "next-tick": "1",
+    "timers-ext": "0.1"
   },
   "devDependencies": {
-    "bluebird": "^3.7.2",
-    "eslint": "^5.16.0",
-    "eslint-config-medikoo-es5": "^1.7.3",
     "plain-promise": "^0.1.1",
-    "tad": "^2.0.1"
-  },
-  "eslintConfig": {
-    "extends": "medikoo-es5",
-    "root": true,
-    "globals": {
-      "setTimeout": true,
-      "clearTimeout": true
-    },
-    "rules": {
-      "max-lines-per-function": "off"
-    }
+    "tad": "^0.2.4",
+    "xlint": "^0.2.2",
+    "xlint-jslint-medikoo": "^0.1.4"
   },
   "scripts": {
-    "lint": "eslint --ignore-path=.gitignore .",
-    "test": "tad"
+    "lint": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --no-cache --no-stream",
+    "lint-console": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --watch",
+    "test": "node node_modules/tad/bin/tad"
   },
-  "license": "ISC"
+  "license": "MIT"
 }

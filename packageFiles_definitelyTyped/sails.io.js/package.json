@@ -1,6 +1,6 @@
 {
   "name": "sails.io.js",
-  "version": "1.2.1",
+  "version": "1.0.1",
   "description": "Javascript SDK for communicating w/ a Sails server via WebSockets/socket.io.",
   "main": "sails.io.js",
   "directories": {
@@ -17,19 +17,17 @@
     "grunt-contrib-uglify": "1.0.1",
     "grunt-contrib-watch": "1.0.0",
     "grunt-text-replace": "0.4.0",
-    "is-my-json-valid": "^2.17.2",
     "lodash": "3.10.1",
     "mocha": "3.0.2",
     "phantomjs-prebuilt": "2.1.12",
     "request": "2.74.0",
-    "sails": "^1.0.0-16",
-    "sails-hook-sockets": "^1.2.3",
-    "socket.io-client": "2.0.3"
+    "sails": "^0.12.1",
+    "socket.io-client": "1.4.5"
   },
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha -b --reporter spec --timeout 10000",
-    "prepublish": "grunt publish",
-    "postpublish": "cd dist && npm publish && cd .. && echo && echo '--' && echo 'Now, assuming you have not pushed up your automatic \"npm version\" commit+tag yet, run:' && echo \"git tag -d v`npm show sails.io.js version` && git commit --amend -am '`npm show sails.io.js version`' && git tag v`npm show sails.io.js version`\" && echo 'Then do:' && echo 'git push && git push --tags'"
+    "prepublish": "./node_modules/grunt-cli/bin/grunt publish && npm test",
+    "postpublish": "cd dist && npm publish"
   },
   "repository": {
     "type": "git",
@@ -48,6 +46,5 @@
   "bugs": {
     "url": "https://github.com/balderdashy/sails.io.js/issues"
   },
-  "homepage": "https://github.com/balderdashy/sails.io.js",
-  "dependencies": {}
+  "homepage": "https://github.com/balderdashy/sails.io.js"
 }

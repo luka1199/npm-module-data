@@ -1,18 +1,18 @@
 {
   "name": "node-ipc",
-  "version": "9.1.4",
+  "version": "9.1.0",
   "description": "A nodejs module for local and remote Inter Process Communication (IPC), Neural Networking, and able to facilitate machine learning.",
   "main": "node-ipc.js",
   "directories": {
     "example": "example"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=4.0.0"
   },
   "dependencies": {
-    "event-pubsub": "4.3.0",
-    "js-message": "1.0.7",
-    "js-queue": "2.0.2"
+    "event-pubsub": "4.2.4",
+    "js-message": "1.0.5",
+    "js-queue": "2.0.0"
   },
   "devDependencies": {
     "codacy-coverage": "2.0.0",
@@ -52,7 +52,7 @@
     "memory"
   ],
   "author": "Brandon Nozaki Miller",
-  "license": "MIT",
+  "license": "DBAD",
   "repository": {
     "type": "git",
     "url": "https://github.com/RIAEvangelist/node-ipc.git"

@@ -1,6 +1,6 @@
 {
   "name": "jquery-drawer",
-  "version": "3.2.2",
+  "version": "3.2.0",
   "description": "Flexible drawer menu using jQuery, iScroll and CSS.",
   "keywords": [
     "jQuery",
@@ -28,19 +28,19 @@
   "devDependencies": {
     "browser-sync": "^2.9.12",
     "cssnano": "^3.3.2",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
     "gulp-css-scss": "^0.1.0",
+    "gulp-postcss": "^6.0.1",
     "gulp-header": "^1.2.2",
     "gulp-jshint": "^1.11.2",
-    "gulp-postcss": "^6.4.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-strip-comments": "^1.0.1",
-    "gulp-uglify": "^2.1.2",
+    "gulp-uglify": "^1.2.0",
     "jshint-stylish": "^2.0.1",
-    "postcss-cssnext": "^2.10.0",
-    "postcss-import": "^9.1.0",
-    "run-sequence": "^1.2.2"
+    "postcss-cssnext": "^2.2.0",
+    "postcss-import": "^7.1.2",
+    "run-sequence": "^1.1.1"
   }
 }

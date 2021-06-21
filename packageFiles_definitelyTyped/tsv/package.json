@@ -1,7 +1,7 @@
 {
   "name": "tsv",
   "description": "Simple dependency-free TSV and CSV converter/parser",
-  "version": "0.3.0",
+  "version": "0.2.0",
   "main": "index.js",
   "keywords": [
     "tsv",
@@ -13,11 +13,11 @@
     "delimited",
     "d3"
   ],
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
-    "flour": "0.5.8",
-    "mocha": "2.5.3",
-    "coffee-script": "1.9.0"
+    "flour": "",
+    "mocha": ""
   },
   "scripts": {
     "test": "mocha"

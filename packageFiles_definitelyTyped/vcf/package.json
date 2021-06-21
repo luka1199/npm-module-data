@@ -1,6 +1,6 @@
 {
   "name": "vcf",
-  "version": "2.1.0",
+  "version": "2.0.0",
   "description": "Parse and construct vCards, jCards",
   "license": "MIT",
   "keywords": [
@@ -16,12 +16,12 @@
     "url": "https://jhermsmeier.de"
   },
   "dependencies": {
-    "camelcase": "^5.0.0",
-    "foldline": "^1.1.0"
+    "camelcase": "~4.1.0",
+    "foldline": "~1.0.0"
   },
   "devDependencies": {
-    "matcha": "^0.7.0",
-    "mocha": "^5.0.5"
+    "matcha": "~0.7.0",
+    "mocha": "^3.4.2"
   },
   "testling": {
     "harness": "mocha-tdd",

@@ -1,12 +1,11 @@
 {
   "name": "node-crate",
-  "version": "2.0.6",
+  "version": "2.0.0",
   "description": "Node.js SQL-driver for CRATE data store (crate.io)",
   "main": "lib/index.js",
   "scripts": {
     "test": "standard --format lib/*.js && mocha -t 20000",
-    "bundle": "browserify -r ./lib/index.js:node-crate > bundle.js",
-    "fix": "standard --fix lib/*.js"
+    "bundle": "browserify -r ./lib/index.js:node-crate > bundle.js"
   },
   "repository": {
     "type": "git",
@@ -36,8 +35,11 @@
     "type-of-is": ">= 3.3.x"
   },
   "devDependencies": {
-    "expect": "^1.20.2",
+    "async": "^2.1.4",
+    "change-case": "^3.0.0",
+    "expect": "^1.9.0",
     "mocha": "^3.2.0",
+    "request": "^2.40.0",
     "standard": "^8.6.0"
   }
 }

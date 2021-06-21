@@ -1,10 +1,10 @@
 {
   "name": "recluster",
-  "version": "1.0.0",
+  "version": "0.4.0",
   "description": "Clustering library with support for zero-downtime reloading",
   "main": "index.js",
   "scripts": {
-    "test": "tap test/index.js test/termination.js"
+    "test": "tap test/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,10 +16,7 @@
     "cluster",
     "zero",
     "downtime",
-    "reload",
-    "sticky",
-    "websockets",
-    "socket.io"
+    "reload"
   ],
   "author": "spion",
   "license": "MIT",

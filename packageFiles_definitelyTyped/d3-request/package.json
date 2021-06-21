@@ -1,6 +1,6 @@
 {
   "name": "d3-request",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "description": "A convenient alternative to XMLHttpRequest.",
   "keywords": [
     "d3",
@@ -16,19 +16,17 @@
     "url": "http://bost.ocks.org/mike"
   },
   "main": "build/d3-request.node.js",
-  "unpkg": "build/d3-request.js",
-  "jsdelivr": "build/d3-request.js",
-  "module": "index",
+  "browser": "build/d3-request.js",
   "jsnext:main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/d3/d3-request.git"
   },
   "scripts": {
-    "pretest": "rm -rf build && mkdir build && bin/rollup-node && rollup -c --banner \"$(preamble)\"",
+    "pretest": "rm -rf build && mkdir build && bin/rollup-node && rollup --banner \"$(preamble)\" -f umd -g d3-collection:d3,d3-dispatch:d3,d3-dsv:d3 -n d3 -o build/d3-request.js -- index.js",
     "test": "tape 'test/**/*-test.js' && eslint index.js src",
-    "prepublishOnly": "npm run test && uglifyjs -b beautify=false,preamble=\"'$(preamble)'\" build/d3-request.js -c -m -o build/d3-request.min.js",
-    "postpublish": "git push && git push --tags && cd ../d3.github.com && git pull && cp ../d3-request/build/d3-request.js d3-request.v1.js && cp ../d3-request/build/d3-request.min.js d3-request.v1.min.js && git add d3-request.v1.js d3-request.v1.min.js && git commit -m \"d3-request ${npm_package_version}\" && git push && cd - && zip -j build/d3-request.zip -- LICENSE README.md build/d3-request.js build/d3-request.min.js"
+    "prepublish": "npm run test && uglifyjs --preamble \"$(preamble)\" build/d3-request.js -c -m -o build/d3-request.min.js",
+    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cp build/d3-request.js ../d3.github.com/d3-request.v1.js && cp build/d3-request.min.js ../d3.github.com/d3-request.v1.min.js && cd ../d3.github.com && git add d3-request.v1.js d3-request.v1.min.js && git commit -m \"d3-request ${VERSION}\" && git push && cd - && zip -j build/d3-request.zip -- LICENSE README.md build/d3-request.js build/d3-request.min.js"
   },
   "dependencies": {
     "d3-collection": "1",
@@ -37,10 +35,10 @@
     "xmlhttprequest": "1"
   },
   "devDependencies": {
-    "eslint": "4",
-    "package-preamble": "0.1",
-    "rollup": "0.49",
+    "eslint": "2",
+    "package-preamble": "0.0",
+    "rollup": "0.31",
     "tape": "4",
-    "uglify-js": "3"
+    "uglify-js": "2"
   }
 }

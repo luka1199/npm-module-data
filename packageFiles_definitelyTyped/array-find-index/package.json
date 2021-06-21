@@ -1,6 +1,6 @@
 {
   "name": "array-find-index",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "ES2015 `Array#findIndex()` ponyfill",
   "license": "MIT",
   "repository": "sindresorhus/array-find-index",
@@ -13,12 +13,13 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "ava"
+    "test": "xo && ava"
   },
   "files": [
     "index.js"
   ],
   "keywords": [
+    "es6",
     "es2015",
     "ponyfill",
     "polyfill",
@@ -29,6 +30,7 @@
     "array"
   ],
   "devDependencies": {
-    "ava": "^0.25.0"
+    "ava": "*",
+    "xo": "*"
   }
 }

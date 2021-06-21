@@ -1,13 +1,13 @@
 {
   "name": "mailcheck",
   "title": "mailcheck",
-  "description": "Reduce misspelled email addresses in your forms.",
+  "description": "A standalone module that suggests a right domain when your users misspell it in an email address.",
   "keywords": [
     "form",
     "email",
     "spell check"
   ],
-  "version": "1.1.2",
+  "version": "1.1.0",
   "author": {
     "name": "Derrick Ko",
     "url": "http://derrickko.com",
@@ -31,13 +31,11 @@
   "docs": "https://github.com/mailcheck/mailcheck/blob/master/README.md",
   "dependencies": {},
   "devDependencies": {
-    "ghooks": "^1.3.2",
-    "grunt": "~0.4",
-    "grunt-cli": "~0.1.9",
-    "grunt-contrib-jshint": "^1.0.0",
-    "grunt-contrib-uglify": "~0.2",
+    "jasmine-node": "1.x",
+    "grunt": "0.4.x",
+    "grunt-contrib-uglify": "~0.2.4",
     "grunt-jasmine-node": "~0.1.0",
-    "jasmine-node": "1.x"
+    "grunt-cli": "~0.1.9"
   },
   "main": "src/mailcheck.js",
   "repository": {
@@ -46,12 +44,6 @@
   },
   "scripts": {
     "test": "grunt test",
-    "prepublish": "grunt test",
-    "uglify": "grunt uglify"
-  },
-  "config": {
-    "ghooks": {
-      "pre-commit": "grunt"
-    }
+    "prepublish": "grunt test"
   }
 }

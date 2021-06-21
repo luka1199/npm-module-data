@@ -1,13 +1,13 @@
 {
   "name": "command-line-commands",
   "author": "Lloyd Brookes <75pound@gmail.com>",
-  "version": "3.0.2",
+  "version": "2.0.0",
   "description": "Add a git-like command interface to your app.",
   "repository": "https://github.com/75lb/command-line-commands.git",
   "license": "MIT",
+  "main": "lib/command-line-commands.js",
   "files": [
-    "index.js",
-    "option.js"
+    "lib"
   ],
   "keywords": [
     "argv",
@@ -23,22 +23,22 @@
     "line"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=4.0.0"
   },
   "scripts": {
-    "test": "test-runner --files test.js",
-    "docs": "jsdoc2md -t README.hbs index.js > README.md",
+    "test": "test-runner --files test/*.js",
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs lib/*.js > README.md; echo",
     "cover": "istanbul cover ./node_modules/.bin/test-runner -- --files test/*.js && cat coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf coverage; echo"
   },
   "dependencies": {
-    "array-back": "^4.0.1"
+    "array-back": "^1.0.4"
   },
   "devDependencies": {
-    "command-line-args": "^5.1.1",
-    "command-line-usage": "^6.1.0",
-    "coveralls": "^3.1.0",
-    "jsdoc-to-markdown": "^5.0.3",
-    "minimist": "^1.2.5",
-    "test-runner": "^0.6.3"
+    "command-line-args": "^3.0.5",
+    "command-line-usage": "^4.0.0",
+    "coveralls": "^2.11.15",
+    "jsdoc-to-markdown": "^2.0.1",
+    "minimist": "^1.2.0",
+    "test-runner": "^0.3.0"
   }
 }

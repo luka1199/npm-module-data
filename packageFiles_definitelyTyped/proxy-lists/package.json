@@ -1,6 +1,6 @@
 {
   "name": "proxy-lists",
-  "version": "1.23.2",
+  "version": "1.14.0",
   "description": "Get proxies from publicly available proxy lists.",
   "keywords": [
     "proxies",
@@ -10,11 +10,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --config .eslintrc.js *.js sources/*.js test/**/*.js",
-    "pretest": "npm run lint",
-    "test": "npm run test:unit",
-    "test:unit": "./node_modules/.bin/mocha test/unit/ --recursive --reporter spec --ui bdd",
-    "update:geoip-database": "node ./node_modules/geoip-lite/scripts/updatedb.js"
+    "test": "grunt test"
   },
   "bin": {
     "proxy-lists": "cli.js"
@@ -28,26 +24,28 @@
     "email": "chill@degreesofzero.com"
   },
   "license": "MIT",
-  "funding": {
-    "type": "individual",
-    "url": "https://degreesofzero.com/donate.html?project=proxy-lists"
-  },
   "readmeFilename": "readme.md",
   "bugs": {
     "url": "https://github.com/chill117/proxy-lists/issues"
   },
   "dependencies": {
-    "async": "3.2.0",
-    "commander": "7.2.0",
-    "data-sourcer": "1.10.2",
-    "debug": "4.3.1",
-    "geoip-lite": "1.4.2",
-    "underscore": "1.13.1",
-    "user-agents": "1.0.646"
+    "async": "2.5.0",
+    "cheerio": "1.0.0-rc.2",
+    "commander": "2.11.0",
+    "css": "2.2.1",
+    "geoip-native-lite": "0.2.0",
+    "request": "2.81.0",
+    "underscore": "1.8.3",
+    "xml2js": "0.4.17"
   },
   "devDependencies": {
-    "chai": "4.3.4",
-    "eslint": "7.26.0",
-    "mocha": "8.4.0"
+    "benchmark": "2.1.4",
+    "chai": "4.1.0",
+    "grunt": "1.0.1",
+    "grunt-eslint": "20.0.0",
+    "grunt-mocha-test": "0.13.2",
+    "load-grunt-config": "0.19.2",
+    "mocha": "3.5.0",
+    "time-grunt": "1.4.0"
   }
 }

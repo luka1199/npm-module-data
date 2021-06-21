@@ -1,6 +1,6 @@
 {
   "name": "gulp-html-prettify",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "HTML Prettify Plugin for Gulp",
   "keywords": [
     "gulpplugin"
@@ -11,7 +11,7 @@
     "event-stream": "~3.0.16",
     "clone": "~0.1.11",
     "gulp-util": "0.0.1",
-    "html": "git://github.com/colynb/commonjs-html-prettyprinter.git"
+    "html": "0.0.7"
   },
   "main": "index.js",
   "engines": {

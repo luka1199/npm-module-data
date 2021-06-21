@@ -1,6 +1,6 @@
 {
   "name": "k-bucket",
-  "version": "5.1.0",
+  "version": "5.0.0",
   "description": "Kademlia DHT K-bucket implementation as a binary tree",
   "keywords": [
     "k-bucket",
@@ -21,8 +21,7 @@
     "Kirill Fomichev <fanatid@ya.ru>",
     "Robert Kowalski <rok@kowalski.gd>",
     "Nazar Mokrynskyi <nazar@mokrynskyi.com>",
-    "Jimmy Wärting <jimmy@warting.se>",
-    "Alex Potsides <alex@achingbrain.net>"
+    "Jimmy Wärting <jimmy@warting.se>"
   ],
   "main": "./index.js",
   "repository": {
@@ -39,11 +38,12 @@
     "unit": "tape test/*.js"
   },
   "dependencies": {
-    "randombytes": "^2.1.0"
+    "randombytes": "^2.0.3"
   },
   "devDependencies": {
-    "nyc": "^15.1.0",
-    "standard": "^16.0.3",
-    "tape": "^5.1.1"
+    "buffer-equals": "^1.0.3",
+    "nyc": "^11.7.3",
+    "standard": "^11.0.1",
+    "tape": "^4.5.1"
   }
 }

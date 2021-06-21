@@ -9,10 +9,10 @@
     "url": "git+https://github.com/tuchk4/storybook-readme"
   },
   "devDependencies": {
-    "husky": "^2.2.0",
+    "husky": "^0.14.3",
     "lerna": "^3.8.0",
-    "lint-staged": "^8.1.6",
-    "prettier": "^1.17.0"
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2"
   },
   "scripts": {
     "storybook-react": "npm run storybook --prefix ./packages/example-react",
@@ -20,31 +20,25 @@
     "dev": "lerna run dev --stream --parallel",
     "clear": "lerna run clear",
     "deploy-storybook": "npm run deploy-storybook --prefix ./packages/example-react",
-    "format": "prettier --trailing-comma es5 --single-quote --write 'packages/**/*.js' 'packages/**/*.json'"
+    "precommit": "lint-staged",
+    "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/*.js' 'src/**/*.json'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
-    "*.{js,json}": [
-      "yarn format",
+    "*.js": [
+      "prettier --trailing-comma es5 --single-quote --write",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --trailing-comma es5 --single-quote --write",
       "git add"
     ]
   },
   "workspaces": [
     "packages/storybook-readme",
     "packages/example-react",
-    "packages/example-vue",
-    "packages/example-html"
-  ],
-  "dependencies": {
-    "@babel/core": "^7.4.4",
-    "@storybook/html": "^5.0.11",
-    "babel-loader": "^8.0.5"
-  }
+    "packages/example-vue"
+  ]
 }

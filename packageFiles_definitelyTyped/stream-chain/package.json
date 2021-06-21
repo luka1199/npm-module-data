@@ -1,10 +1,9 @@
 {
   "name": "stream-chain",
-  "version": "2.2.4",
+  "version": "2.0.0",
   "description": "Chain functions as transform streams.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "debug": "node --inspect-brk tests/tests.js",
     "test": "node tests/tests.js"
   },
   "repository": {
@@ -23,9 +22,5 @@
   "homepage": "https://github.com/uhop/stream-chain#readme",
   "devDependencies": {
     "heya-unit": "^0.3.0"
-  },
-  "files": [
-    "/*.js",
-    "/utils"
-  ]
+  }
 }

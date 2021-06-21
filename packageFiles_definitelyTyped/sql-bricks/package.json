@@ -1,6 +1,6 @@
 {
   "name": "sql-bricks",
-  "version": "3.0.0-beta.2",
+  "version": "2.0.0",
   "author": "Peter Rust <peter@cornerstonenw.com>",
   "description": "Transparent, Schemaless SQL Generation",
   "homepage": "http://csnw.github.io/sql-bricks",
@@ -10,7 +10,6 @@
     "test": "mocha tests/tests.js tests/doctests.js && mocha tests/tests.js tests/doctests.js --empty-extension"
   },
   "main": "sql-bricks.js",
-  "types": "sql-bricks.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/CSNW/sql-bricks.git"
@@ -36,7 +35,7 @@
     "underscore": "1.4.x"
   },
   "devDependencies": {
-    "mocha": "^6.2.2"
+    "mocha": "1.13.x"
   },
   "license": "MIT",
   "testling": {

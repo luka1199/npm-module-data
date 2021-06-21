@@ -1,7 +1,7 @@
 {
   "name": "nodegit",
   "description": "Node.js libgit2 asynchronous native bindings",
-  "version": "0.28.0-alpha.9",
+  "version": "0.27.0",
   "homepage": "http://nodegit.org",
   "keywords": [
     "libgit2",
@@ -35,15 +35,15 @@
     "lib": "./lib"
   },
   "engines": {
-    "node": ">= 12.19.0 < 13 || >= 14.10.0"
+    "node": ">= 6"
   },
   "dependencies": {
     "fs-extra": "^7.0.0",
     "got": "^10.7.0",
     "json5": "^2.1.0",
     "lodash": "^4.17.14",
-    "nan": "^2.14.1",
-    "node-gyp": "^7.1.2",
+    "nan": "^2.14.0",
+    "node-gyp": "^4.0.0",
     "node-pre-gyp": "^0.13.0",
     "ramda": "^0.25.0",
     "tar-fs": "^1.16.3"
@@ -79,7 +79,7 @@
     "generateNativeCode": "node generate/scripts/generateNativeCode",
     "install": "node lifecycleScripts/preinstall && node lifecycleScripts/install",
     "installDebug": "BUILD_DEBUG=true npm install",
-    "lint": "jshint lib test/tests test/utils lifecycleScripts",
+    "lint": "jshint lib test/tests test/utils examples lifecycleScripts",
     "mergecov": "lcov-result-merger 'test/**/*.info' 'test/coverage/merged.lcov' && ./lcov-1.10/bin/genhtml test/coverage/merged.lcov --output-directory test/coverage/report",
     "mocha": "mocha --expose-gc test/runner test/tests --timeout 15000",
     "mochaDebug": "mocha --expose-gc --debug-brk test/runner test/tests --timeout 15000",

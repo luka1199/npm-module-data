@@ -15,7 +15,7 @@
     "function",
     "callback"
   ],
-  "version": "1.0.1",
+  "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/TooTallNate/node-weak.git"
@@ -29,6 +29,6 @@
     "nan": "^2.0.5"
   },
   "devDependencies": {
-    "mocha": "5"
+    "mocha": "~2.1.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "tuya-panel-kit",
-  "version": "4.5.6",
+  "version": "4.0.0",
   "description": "a functional component library for developing tuya device panels!",
   "keywords": [
     "tuya",
@@ -42,12 +42,12 @@
     "commit": "git-cz",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write src/**/*/*.{js,jsx,ts,tsx}",
-    "release:major:pre": "standard-version --release-as major --prerelease rc && git push --follow-tags origin master",
-    "release:major": "standard-version --release-as major && git push --follow-tags origin master",
-    "release:minor:pre": "standard-version --release-as minor --prerelease rc --skip.changelog=true --skip.tag=true && git push --follow-tags origin master",
-    "release:minor": "standard-version --release-as minor && git push --follow-tags origin master",
-    "release:patch:pre": "standard-version --release-as patch --prerelease rc && git push --follow-tags origin master",
-    "release:patch": "standard-version --release-as patch && git push --follow-tags origin master"
+    "release:major:pre": "yarn build && standard-version --release-as major --prerelease rc",
+    "release:major": "yarn build && standard-version --release-as major",
+    "release:minor:pre": "yarn build && standard-version --release-as minor --prerelease rc --skip.changelog=true --skip.tag=true",
+    "release:minor": "yarn build && standard-version --release-as minor",
+    "release:patch:pre": "yarn build && standard-version --release-as patch --prerelease rc",
+    "release:patch": "yarn build && standard-version --release-as patch"
   },
   "config": {
     "commitizen": {
@@ -63,6 +63,10 @@
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
+      "git add ."
+    ],
+    "**/*.{md,json}": [
+      "prettier --write",
       "git add ."
     ]
   },
@@ -86,7 +90,7 @@
     "styled-components": "^3.4.10"
   },
   "devDependencies": {
-    "@commitlint/cli": "^9.1.0",
+    "@commitlint/cli": "^7.3.2",
     "babel-eslint": "^8.2.1",
     "babel-jest": "^26.6.3",
     "commitizen": "^4.2.1",
@@ -119,9 +123,9 @@
     "standard-version": "^5.0.2"
   },
   "peerDependencies": {
-    "@types/tuya-panel-kit": "*",
     "react": "16.8.3",
     "react-native": "0.59.10",
-    "react-native-svg": "5.5.1"
+    "react-native-svg": "5.5.1",
+    "tuya-panel-kit-types": "*"
   }
 }

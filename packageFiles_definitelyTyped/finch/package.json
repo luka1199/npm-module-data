@@ -1,7 +1,7 @@
 {
   "name": "finch",
-  "version": "2.0.1",
-  "description": "The finch package has been deprecated in favor of @finch. See: https://www.npmjs.com/search?q=%40finch and https://github.com/mseeley/finch.",
+  "version": "2.0.0",
+  "description": "The finch package has been deprecated in favor for @finch. See: https://www.npmjs.com/search?q=%40finch.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

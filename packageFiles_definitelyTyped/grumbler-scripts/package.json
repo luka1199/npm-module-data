@@ -1,13 +1,12 @@
 {
   "name": "grumbler",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "Javascript module template.",
   "main": "index.js",
   "scripts": {
-    "dev": "babel-node $(npm bin)/webpack-dev-server --config webpack.config.js --port 9000 --open-page demo/dev/index.htm --hot=false --inline=false",
     "setup": "npm install && npm run flow-typed",
-    "lint": "eslint src/ test/ *.js --ext .js,.jsx",
-    "flow-typed": "rm -rf ./flow-typed && flow-typed install && flow-typed install mocha@4",
+    "lint": "eslint src/ test/ *.js",
+    "flow-typed": "rm -rf ./flow-typed && flow-typed install",
     "flow": "flow",
     "karma": "cross-env NODE_ENV=test babel-node --plugins=transform-es2015-modules-commonjs ./node_modules/.bin/karma start",
     "babel": "babel src/ --out-dir dist/module",
@@ -48,7 +47,8 @@
   ],
   "readmeFilename": "README.md",
   "devDependencies": {
-    "flow-bin": "^0.112.0",
-    "grumbler-scripts": "^3"
+    "flow-bin": "^0.77.0",
+    "grumbler-scripts": "^2.0.41",
+    "mocha": "^5.0.4"
   }
 }

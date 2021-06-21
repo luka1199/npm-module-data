@@ -10,7 +10,7 @@
     "promised",
     "async"
   ],
-  "version": "0.1.1",
+  "version": "0.1.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,20 +18,19 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint --fix src/**/* __test__/**/*",
-    "test": "jest --detectOpenHandles"
+    "lint": "eslint --fix src/**/* __tests__/**/*",
+    "test": "jest --forceExit"
   },
   "dependencies": {
-    "asn1": "0.2.4",
+    "asn1": "0.2.3",
     "assert-plus": "^1.0.0",
-    "ldap-filter": "0.3.3"
+    "ldap-filter": "0.2.2"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
-    "jest": "^23.6.0"
+    "eslint": "4.18.1",
+    "jest": "22.4.2"
   },
   "jest": {
-    "testURL": "http://localhost/",
     "verbose": true,
     "collectCoverage": true,
     "coverageDirectory": "coverage",

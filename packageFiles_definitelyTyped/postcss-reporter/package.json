@@ -1,6 +1,6 @@
 {
   "name": "postcss-reporter",
-  "version": "7.0.2",
+  "version": "7.0.0",
   "description": "Log PostCSS messages in the console",
   "main": "index.js",
   "scripts": {
@@ -19,26 +19,21 @@
   "author": {
     "name": "David Clark",
     "email": "david.dave.clark@gmail.com",
-    "url": "https://davidtheclark.com"
+    "url": "http://davidtheclark.com"
   },
   "license": "MIT",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/postcss/"
-  },
   "peerDependencies": {
-    "postcss": "^8.1.0"
+    "postcss": "^8.0.3"
   },
   "devDependencies": {
     "clean-publish": "^1.1.8",
-    "eslint": "7.14.0",
+    "eslint": "7.9.0",
     "less": "3.12.2",
     "lodash": "^4.17.20",
-    "log-symbols": "^4.0.0",
-    "postcss": "^8.1.10",
+    "postcss": "^8.0.3",
     "source-map": "0.7.3",
     "strip-color": "^0.1.0",
-    "stylelint": "13.8.0",
+    "stylelint": "13.7.1",
     "tape": "^5.0.1"
   },
   "dependencies": {
@@ -47,6 +42,7 @@
     "lodash.forown": "^4.4.0",
     "lodash.get": "^4.4.2",
     "lodash.groupby": "^4.6.0",
-    "lodash.sortby": "^4.7.0"
+    "lodash.sortby": "^4.7.0",
+    "log-symbols": "^4.0.0"
   }
 }

@@ -1,20 +1,10 @@
 {
   "name": "random-useragent",
-  "version": "0.5.0",
+  "version": "0.3.0",
   "description": "Get a random useragent (with an optional filter)",
   "main": "index.js",
   "scripts": {
-    "changelog": "github_changelog_generator --user skratchdot --project random-useragent",
-    "clean": "rimraf .nyc_output/ coverage/",
-    "cover": "nyc npm test",
-    "coveralls": "cat coverage/lcov.info | coveralls --verbose",
-    "data": "./scripts/create-data.js",
-    "lint": "eslint *.js scripts/*.js",
-    "prepublish": "npm-run-all lint test",
-    "test": "mocha test.js",
-    "watch": "npm-run-all clean --parallel watch:test watch:lint",
-    "watch:lint": "watch 'npm run lint' .",
-    "watch:test": "npm run test -- -w"
+    "test": "gulp test"
   },
   "author": "skratchdot",
   "license": "MIT",
@@ -26,34 +16,25 @@
     "type": "git",
     "url": "git://github.com/skratchdot/random-useragent.git"
   },
+  "engines": {
+    "node": ">= 0.11.0"
+  },
   "dependencies": {
     "random-seed": "^0.3.0"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "coveralls": "^3.1.0",
-    "eslint": "^7.6.0",
-    "mocha": "^8.1.1",
-    "npm-run-all": "^4.1.5",
-    "nyc": "^15.1.0",
-    "request": "^2.88.2",
-    "rimraf": "^3.0.2",
-    "ua-parser-js": "^0.7.21",
-    "watch": "^1.0.1",
-    "xml2js": "^0.4.23"
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.9",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-istanbul": "^0.10.4",
+    "gulp-mocha": "^2.2.0",
+    "isparta": "^4.0.0",
+    "request": "^2.72.0",
+    "ua-parser-js": "^0.7.10",
+    "xml2js": "^0.4.16"
   },
   "tonicExampleFilename": ".tonic.example.js",
-  "nyc": {
-    "all": true,
-    "include": [
-      "index.js"
-    ],
-    "reporter": [
-      "text",
-      "html",
-      "lcovonly"
-    ]
-  },
   "keywords": [
     "random",
     "useragent",

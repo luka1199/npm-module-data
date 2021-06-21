@@ -1,7 +1,7 @@
 {
   "name": "module-alias",
-  "description": "Create aliases of directories and register custom module paths",
-  "version": "2.2.2",
+  "description": "Create aliases of directories and register custom module paths in NodeJS like a boss!",
+  "version": "2.0.0",
   "author": {
     "name": "Nick Gavrilov",
     "email": "artnikpro@gmail.com"
@@ -10,7 +10,7 @@
     "test": "npm run lint && npm run testonly",
     "testonly": "NODE_ENV=test mocha test/specs.js",
     "testonly-watch": "NODE_ENV=test mocha -w test/specs.js",
-    "lint": "standard"
+    "lint": "standard src"
   },
   "bugs": {
     "url": "https://github.com/ilearnio/module-alias/issues"
@@ -28,24 +28,16 @@
   "files": [
     "index.js",
     "register.js",
-    "README.md",
-    "LICENSE"
+    "README.md"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ilearnio/module-alias.git"
   },
+  "dependencies": {},
   "devDependencies": {
     "chai": "^3.5.0",
     "hello-world-classic": "ilearnio/hello-world-classic",
-    "husky": "^3.0.2",
-    "mocha": "^2.4.5",
-    "semver": "^6.1.1",
-    "standard": "^12.0.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "npm run test"
-    }
+    "mocha": "^2.4.5"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "semver-sort",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "Sort array of semver string even which is exist in a strings.",
   "license": "MIT",
   "repository": "ragingwind/semver-sort",
@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && mocha"
   },
   "files": [
     "index.js"
@@ -25,15 +25,16 @@
   ],
   "dependencies": {
     "semver": "^5.0.3",
-    "semver-regex": "^3.1.2"
+    "semver-regex": "^1.0.0"
   },
   "devDependencies": {
-    "ava": "^0.12.0",
-    "xo": "^0.10.0"
+    "mocha": "^2.2.5",
+    "xo": "^0.7.1"
   },
   "xo": {
-    "ignore": [
-      "test.js"
+    "envs": [
+      "node",
+      "mocha"
     ]
   }
 }

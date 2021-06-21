@@ -8,7 +8,7 @@
     "mocha",
     "should"
   ],
-  "version": "2.0.2",
+  "version": "2.0.0",
   "author": "Kevin Mees <kev.mees@gmail.com>",
   "main": "./index.js",
   "license": "MIT",

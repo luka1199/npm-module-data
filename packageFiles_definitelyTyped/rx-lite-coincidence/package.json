@@ -2,7 +2,7 @@
   "name": "rx",
   "title": "Reactive Extensions for JavaScript (RxJS)",
   "description": "Library for composing asynchronous and event-based operations in JavaScript",
-  "version": "4.1.0",
+  "version": "4.0.0",
   "homepage": "https://github.com/Reactive-Extensions/RxJS",
   "author": {
     "name": "Cloud Programmability Team",
@@ -18,7 +18,7 @@
     "main": "dist/rx.all.js"
   },
   "browser": {
-    "index.js": "./dist/rx.all.js"
+    "index.js": "dist/rx.all.js"
   },
   "dependencies": {},
   "devDependencies": {
@@ -32,6 +32,7 @@
     "grunt-contrib-concat": "*",
     "grunt-contrib-qunit": "*",
     "grunt-contrib-watch": "*",
+    "grunt-saucelabs": "*",
     "grunt-jscs": "*",
     "load-grunt-tasks": "*"
   },
@@ -44,7 +45,6 @@
     "RxJS"
   ],
   "main": "index.js",
-  "typings": "./ts/rx.all.d.ts",
   "scripts": {
     "test": "grunt"
   }

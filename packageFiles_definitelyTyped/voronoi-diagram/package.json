@@ -1,6 +1,6 @@
 {
   "name": "voronoi-diagram",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Constructs a Voronoi diagram for a collection of points",
   "main": "voronoi.js",
   "directories": {
@@ -20,8 +20,7 @@
     "game-shell-orbit-camera": "^1.0.0",
     "incremental-convex-hull": "^1.0.0",
     "gl-simplicial-complex": "^1.0.0",
-    "gl-axes": "^2.2.3",
-    "simplicial-complex": "^1.0.0"
+    "gl-axes": "^2.2.3"
   },
   "scripts": {
     "test": "tape test/*.js"

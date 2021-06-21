@@ -1,13 +1,11 @@
 {
   "name": "xml-flow",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "An XML/HTML stream reader, now with less suck.",
   "main": "lib/xml-flow.js",
   "scripts": {
-    "lint": "eslint **/*.js",
-    "test": "mocha test/*.js",
-    "coverage": "nyc npm run test",
-    "travis": "npm run lint && npm run coverage"
+    "test": "./node_modules/mocha/bin/mocha test/*.js",
+    "test-travis": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*.js"
   },
   "repository": {
     "type": "git",
@@ -20,31 +18,18 @@
     "huge files"
   ],
   "author": "Matthew Larson <matthewmatician@gmail.com>",
-  "license": "MIT",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/matthewmatician/xml-flow/issues"
   },
   "homepage": "https://github.com/matthewmatician/xml-flow",
   "dependencies": {
-    "sax": "^1.2.4"
+    "sax": "^0.6.1"
   },
-  "devDependencies": {
+    "devDependencies": {
     "chai": "*",
     "coveralls": "*",
-    "eslint": "^6.0.0",
-    "eslint-plugin-mocha": "^5.3.0",
-    "extend": ">=3.0.2",
-    "mocha": "^6.1.4",
-    "nyc": "^14.1.1"
-  },
-  "nyc": {
-    "all": true,
-    "reporters": [
-      "lcov",
-      "text",
-      "text-summary"
-    ],
-    "include": "lib/**/*.js",
-    "exclude": "test/**/*.js"
+    "istanbul": "*",
+    "mocha": "2.2.1"
   }
 }

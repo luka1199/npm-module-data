@@ -1,12 +1,9 @@
 {
-  "name": "@hapi/yar",
+  "name": "yar",
   "description": "Cookie jar plugin for Hapi",
-  "version": "10.1.1",
+  "version": "9.1.0",
   "repository": "git://github.com/hapijs/yar",
   "main": "lib/index.js",
-  "files": [
-    "lib"
-  ],
   "keywords": [
     "hapi",
     "plugin",
@@ -15,19 +12,19 @@
     "session"
   ],
   "dependencies": {
-    "@hapi/hoek": "9.x.x",
-    "@hapi/statehood": "7.x.x",
-    "uuid": "^8.3.0"
+    "hoek": "6.x.x",
+    "statehood": "6.x.x",
+    "uuid": "3.x.x"
   },
   "devDependencies": {
-    "@hapi/boom": "9.x.x",
-    "@hapi/code": "8.x.x",
-    "@hapi/hapi": "20.x.x",
-    "@hapi/lab": "24.x.x"
+    "boom": "7.x.x",
+    "code": "5.x.x",
+    "hapi": "17.x.x",
+    "lab": "17.x.x"
   },
   "scripts": {
-    "test": "lab -a @hapi/code -t 100 -L",
-    "test-cov-html": "lab -a @hapi/code -r html -o coverage.html"
+    "test": "lab -a code -t 100 -L",
+    "test-cov-html": "lab -a code -r html -o coverage.html"
   },
   "license": "BSD-3-Clause"
 }

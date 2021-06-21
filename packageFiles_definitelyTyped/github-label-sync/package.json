@@ -13,16 +13,16 @@
   "dependencies": {
     "@financial-times/origami-service-makefile": "^7.0.3",
     "chalk": "^4",
-    "commander": "^6.2.1",
-    "got": "^11.8.2",
-    "js-yaml": "^3.14.1",
+    "commander": "^2",
+    "got": "^11.2.0",
+    "js-yaml": "^3.14.0",
     "node.extend": "^2.0.2",
-    "octonode": "^0.10.2"
+    "octonode": "^0.9.5"
   },
   "devDependencies": {
-    "eslint": "^7.25.0",
+    "eslint": "^5.9.0",
     "istanbul": "~0.4",
-    "mocha": "^8.3.2",
+    "mocha": "^7.2.0",
     "mockery": "^2",
     "proclaim": "^3",
     "sinon": "^1",

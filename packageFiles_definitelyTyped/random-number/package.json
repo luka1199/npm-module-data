@@ -1,7 +1,7 @@
 {
   "name": "random-number",
   "description": "Generate pseudo-randum numbers",
-  "version": "0.0.9",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js",
@@ -26,5 +26,7 @@
     "tape": "~2.3.2",
     "claire": "~0.4.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "xtend": "~2.1.1"
+  }
 }

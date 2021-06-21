@@ -1,13 +1,12 @@
 {
   "name": "react-amplitude",
-  "version": "0.1.7",
+  "version": "0.1.0",
   "description": "React Amplitude Analytics",
   "entry": "src/index.js",
   "main": "dist/index.js",
   "scripts": {
     "build": "NODE_ENV=development webpack",
-    "test": "jest",
-    "coverage": "yarn test --coverage"
+    "test": "mocha test/*.test.js && mocha test/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -27,21 +26,12 @@
   },
   "homepage": "https://github.com/rorygarand/react-amplitude",
   "dependencies": {
-    "lodash.isboolean": "^3.0.3",
-    "lodash.isfunction": "^3.0.8",
-    "lodash.isnil": "^4.0.0",
-    "lodash.isnull": "^3.0.0",
-    "lodash.isnumber": "^3.0.3",
-    "lodash.isplainobject": "^4.0.6",
-    "lodash.isstring": "^4.0.1"
+    "lodash": "^4.17.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-jest": "^22.4.3",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
-    "jest": "^22.4.3",
-    "regenerator-runtime": "^0.11.1",
     "webpack": "^3.10.0"
   }
 }

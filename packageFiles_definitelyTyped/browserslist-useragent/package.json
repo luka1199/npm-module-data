@@ -1,13 +1,10 @@
 {
   "name": "browserslist-useragent",
-  "version": "3.0.3",
+  "version": "3.0.0",
   "description": "A utility to match a browselist query to browser user agents",
   "main": "lib/index.js",
   "repository": "https://github.com/pastelsky/browserslist-useragent",
   "author": "Shubham Kanodia <shubham.kanodia10@gmail.com>",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
   "license": "MIT",
   "files": [
     "./lib/index.js"
@@ -22,8 +19,8 @@
     "build": "mkdir -p lib && babel index.js --out-file lib/index.js"
   },
   "dependencies": {
-    "browserslist": "^4.12.0",
-    "semver": "^7.3.2",
+    "browserslist": "^4.3.6",
+    "semver": "^5.6.0",
     "useragent": "^2.3.0"
   },
   "devDependencies": {

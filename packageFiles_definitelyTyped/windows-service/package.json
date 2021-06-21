@@ -1,6 +1,6 @@
 {
   "name": "windows-service",
-  "version": "1.1.0",
+  "version": "1.0.4",
   "description": "Run Node.JS programs as native Windows Services.",
   "main": "index.js",
   "directories": {
@@ -14,8 +14,8 @@
     } 
   ],
   "repository": {
-    "type": "git",
-    "url": "git://github.com/stephenwvickers/node-windows-service.git"
+    "type": "mercurial",
+    "url": "https://bitbucket.org/stephenwvickers/node-windows-service"
   },
   "keywords": [
     "service",

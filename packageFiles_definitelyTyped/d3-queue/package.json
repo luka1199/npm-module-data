@@ -1,10 +1,9 @@
 {
   "name": "d3-queue",
-  "version": "3.0.7",
+  "version": "3.0.0",
   "description": "Evaluate asynchronous tasks with configurable concurrency.",
   "keywords": [
     "d3",
-    "d3-module",
     "asynchronous",
     "async",
     "queue"
@@ -16,7 +15,6 @@
     "url": "http://bost.ocks.org/mike"
   },
   "main": "build/d3-queue.js",
-  "module": "index",
   "jsnext:main": "index",
   "repository": {
     "type": "git",
@@ -26,13 +24,13 @@
     "pretest": "rm -rf build && mkdir build && rollup --banner \"$(preamble)\" -f umd -n d3 -o build/d3-queue.js -- index.js",
     "test": "tape 'test/**/*-test.js' && eslint index.js src",
     "prepublish": "npm run test && uglifyjs --preamble \"$(preamble)\" build/d3-queue.js -c -m -o build/d3-queue.min.js",
-    "postpublish": "git push && git push --tags && cd ../d3-queue-bower && git pull && cp -v ../d3-queue/README.md ../d3-queue/LICENSE ../d3-queue/build/d3-queue.js . && git add README.md LICENSE d3-queue.js && git commit -m ${npm_package_version} && git tag -am ${npm_package_version} v${npm_package_version} && git push && git push --tags && cd ../d3.github.com && git pull && cp ../d3-queue/build/d3-queue.js d3-queue.v3.js && cp ../d3-queue/build/d3-queue.min.js d3-queue.v3.min.js && git add d3-queue.v3.js d3-queue.v3.min.js && git commit -m \"d3-queue ${npm_package_version}\" && git push && cd ../d3-queue && zip -j build/d3-queue.zip -- LICENSE README.md build/d3-queue.js build/d3-queue.min.js"
+    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cp -v README.md LICENSE build/d3-queue.js ../d3-queue-bower && cd ../d3-queue-bower && git add README.md LICENSE d3-queue.js && git commit -m \"Release $VERSION.\" && git tag -am \"Release $VERSION.\" v${VERSION} && git push && git push --tags && cd ../d3-queue && cp build/d3-queue.js ../d3.github.com/d3-queue.v3.js && cp build/d3-queue.min.js ../d3.github.com/d3-queue.v3.min.js && cd ../d3.github.com && git add d3-queue.v3.js d3-queue.v3.min.js && git commit -m \"d3-queue ${VERSION}\" && git push && cd - && zip -j build/d3-queue.zip -- LICENSE README.md build/d3-queue.js build/d3-queue.min.js"
   },
   "devDependencies": {
-    "eslint": "3",
-    "package-preamble": "0.1",
-    "rollup": "0.41",
+    "eslint": "2",
+    "package-preamble": "0.0",
+    "rollup": "0.27",
     "tape": "4",
-    "uglify-js": "^2.8.11"
+    "uglify-js": "2"
   }
 }

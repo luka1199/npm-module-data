@@ -1,27 +1,12 @@
 {
-  "private": true,
-  "version": "0.0.0",
-  "description": "markdown abstract syntax tree",
+  "name": "mdast",
+  "version": "3.0.0",
+  "description": "Markdown Abstract Syntax Tree format",
   "license": "MIT",
   "keywords": [],
-  "repository": "syntax-tree/mdast",
-  "bugs": "https://github.com/syntax-tree/mdast/issues",
-  "author": "Titus Wormer <tituswormer@gmail.com> (wooorm.com)",
-  "contributors": [
-    "Titus Wormer <tituswormer@gmail.com> (wooorm.com)",
-    "Eugene Sharygin <eush77@gmail.com>"
-  ],
-  "devDependencies": {
-    "remark-cli": "^9.0.0",
-    "remark-preset-wooorm": "^8.0.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wooorm/mdast.git"
   },
-  "scripts": {
-    "format": "remark . -qfo",
-    "test": "npm run format"
-  },
-  "remarkConfig": {
-    "plugins": [
-      "preset-wooorm"
-    ]
-  }
+  "author": "Titus Wormer <tituswormer@gmail.com>"
 }

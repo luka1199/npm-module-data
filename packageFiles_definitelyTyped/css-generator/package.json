@@ -1,11 +1,10 @@
 {
   "name": "css-generator",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Write CSS programatically using JavaScript",
   "main": "src/generator.js",
   "scripts": {
-    "demo": "node demo/demo.js",
-    "test": "node test/test.js"
+    "test": "node demo/demo.js"
   },
   "repository": {
     "type": "git",

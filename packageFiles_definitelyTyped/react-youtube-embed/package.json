@@ -1,11 +1,11 @@
 {
   "name": "react-youtube-embed",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "keywords": [
     "react",
     "youtube",
-    "embed",
-    "responsive"
+	 "embed",
+	 "responsive"
   ],
   "main": "dist/index.js",
   "author": "Kennedy Rose <krose@escaladesports.com>",

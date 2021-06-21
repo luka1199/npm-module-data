@@ -1,12 +1,11 @@
 {
   "name": "get-folder-size",
-  "version": "3.1.0",
+  "version": "3.0.0",
   "description": "Get the size of a folder by iterating through its sub-files and -folders.",
   "type": "module",
-  "main": "./index.js",
-  "exports": "./index.js",
+  "main": "index.js",
   "bin": {
-    "get-folder-size": "./bin/get-folder-size.js"
+    "get-folder-size": "bin/get-folder-size.js"
   },
   "files": [
     "index.js",
@@ -20,7 +19,7 @@
   },
   "devDependencies": {
     "memfs": "^3.2.2",
-    "tap": "^15.0.6"
+    "tap": "^15.0.2"
   },
   "scripts": {
     "test": "tap --no-coverage"

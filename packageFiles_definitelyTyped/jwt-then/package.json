@@ -1,28 +1,22 @@
 {
   "name": "jwt-then",
-  "version": "1.0.1",
-  "description": "jwt as promised",
+  "version": "0.0.1",
+  "description": "Hack'n'slash promisify. This isn't an honest package, and you should treat it with suspicion.",
   "main": "index.js",
   "dependencies": {
-    "jsonwebtoken": "^8.3.0"
+    "any-promise": "^1.1.0",
+    "jsonwebtoken": "^5.7.0"
   },
-  "devDependencies": {
-    "mocha": "^6.1.1",
-    "standard": "^14.3.1"
-  },
+  "devDependencies": {},
   "scripts": {
-    "test": "standard && mocha --reporter spec"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fl0w/jwt-then.git"
   },
-  "keywords": [
-    "jwt",
-    "then",
-    "promise"
-  ],
-  "author": "Martin fl0w Iwanowski <martin@iwanowski.se>",
+  "keywords": [],
+  "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fl0w/jwt-then/issues"

@@ -1,13 +1,13 @@
 {
   "name": "react-numeric-input",
-  "version": "2.2.3",
+  "version": "2.2.0",
   "description": "Number input component that can replace the native number input which is not yet very well supported and where it is, it does not have the same appearance across the browsers. Additionally this component offers more flexible options and can be used for any values (differently formatted representations of the internal numeric value).",
   "main": "index.js",
   "scripts": {
     "build-examples": "npm run build-dist && webpack --config ./build_config/examples.js && cp dist/react-numeric-input.js docs/react-numeric-input.js",
-    "build-dist": "webpack --config ./build_config/dist.js",
+    "build-dist"    : "webpack --config ./build_config/dist.js",
     "build-dist-min": "webpack --config ./build_config/dist-min.js",
-    "build": "webpack --config ./build_config/main.js",
+    "build"         : "webpack --config ./build_config/main.js",
     "build-all": "npm run build && npm run build-dist-min && npm run build-examples",
     "test": "karma start",
     "test:e2e": "node ./selenium-download.js && ./node_modules/nightwatch/bin/nightwatch"
@@ -44,7 +44,7 @@
     "eslint": "^1.10.3",
     "eslint-plugin-react": "^3.15.0",
     "expect": "^1.12.2",
-    "karma": "^0.13.22",
+    "karma": "^0.13.14",
     "karma-chrome-launcher": "^0.2.1",
     "karma-firefox-launcher": "^0.1.6",
     "karma-mocha": "^0.2.0",
@@ -63,6 +63,6 @@
     "webpack": "^1.12.2"
   },
   "peerDependencies": {
-    "react": ">=0.14.0 || ^15.6.1 || ^16.0.0"
+    "react": ">=0.14.0 || ^15.6.1"
   }
 }

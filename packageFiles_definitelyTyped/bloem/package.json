@@ -1,18 +1,10 @@
 {
 	"name":        "bloem",
-	"version":     "0.2.4",
+	"version":     "0.1.0",
 	"author":      "Sebastian Wiedenroth <wiedi@frubar.net>",
 	"description": "Bloom Filter using the FNV hash function",
 	"url":         "https://github.com/wiedi/node-bloem",
 	"main":        "bloem.js",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/wiedi/node-bloem.git"
-	},
-	"keywords": [
-		"bloom filter",
-		"scalable bloom filters"
-	],
 	"dependencies": {
 		"fnv": "0.1.x",
 		"bitbuffer": "0.1.x"
@@ -22,11 +14,5 @@
 	},
 	"scripts": {
 		"test": "mocha -u qunit -R list"
-	},
-	"licenses": [
-		{
-			"name": "MIT",
-			"url": "http://www.opensource.org/licenses/mit-license.php"
-		}
-	]
+	}
 }

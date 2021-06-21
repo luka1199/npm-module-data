@@ -1,23 +1,20 @@
 {
   "name": "ndarray",
-  "version": "1.0.19",
+  "version": "1.0.0",
   "description": "Multidimensional Arrays",
   "main": "ndarray.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "iota-array": "^1.0.0",
-    "is-buffer": "^1.0.2"
+    "iota-array": "~0.0.0"
   },
   "devDependencies": {
-    "permutation-rank": "^1.0.0",
-    "dup": "^1.0.0",
-    "invert-permutation": "^1.0.0",
-    "tape": "^2.12.3"
+    "tap": "~0.4.0",
+    "tape": "~1.0.4"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",
@@ -46,21 +43,5 @@
   "author": "Mikola Lysenko",
   "license": "MIT",
   "readmeFilename": "README.md",
-  "gitHead": "a85785ca7a7e12c3fc29671a4f7c214bebc4ddc7",
-  "testling": {
-    "files": "test/*.js",
-    "browsers": [
-      "ie/10..latest",
-      "firefox/17..latest",
-      "firefox/nightly",
-      "chrome/22..latest",
-      "chrome/canary",
-      "opera/12..latest",
-      "opera/next",
-      "safari/6.0..latest",
-      "ipad/6.0..latest",
-      "iphone/6.0..latest",
-      "android-browser/4.2..latest"
-    ]
-  }
+  "gitHead": "a85785ca7a7e12c3fc29671a4f7c214bebc4ddc7"
 }

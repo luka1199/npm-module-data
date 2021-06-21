@@ -1,13 +1,11 @@
 {
   "name": "oja",
-  "version": "1.2.1",
+  "version": "1.1.0",
   "description": "Lightweight pub/sub module with event backlog, timeout support that maps events to promises and back as well as chains them to other topics and flows.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha test",
-    "test-coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec",
-    "lint": "eslint --quiet -c .eslintrc *.js",
-    "lint-fix": "eslint --fix *.js"
+    "test-coverage": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -31,11 +29,8 @@
   "homepage": "https://github.com/dimichgh/oja#readme",
   "devDependencies": {
     "async": "^2.5.0",
-    "eslint": "^5.16.0",
-    "eslint-config-ebay": "^1.0.0",
-    "eslint-plugin-mocha": "^5.3.0",
     "istanbul": "^0.4.5",
-    "mocha": "^6.1.4"
+    "mocha": "^4.0.0"
   },
   "dependencies": {
     "request-local": "^1.0.4"

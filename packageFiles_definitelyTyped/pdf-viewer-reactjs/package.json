@@ -1,82 +1,74 @@
 {
-  "name": "pdf-viewer-reactjs",
-  "version": "3.0.0-beta.2",
-  "description": "Simple react PDF viewer component with controls based on PDF.js.",
-  "source": "src/index.js",
-  "main": "dist/pdf-viewer-reactjs.js",
-  "scripts": {
-    "watch": "jest --watch",
-    "test": "jest",
-    "lintJS": "node_modules/.bin/eslint --fix './*js' 'src/**/*.js' 'example/src/**/*.js'",
-    "lintCSS": "node_modules/.bin/stylelint --fix 'example/src/**/*.css'",
-    "lint": "npm run lintJS && npm run lintCSS",
-    "prebuild": "npm run lint && npm run test",
-    "build": "rollup -c",
-    "prepare": "husky install"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/ansu5555/pdf-viewer-reactjs.git"
-  },
-  "keywords": [
-    "pdf",
-    "document",
-    "pages",
-    "pdf viewer",
-    "pdf-viewer",
-    "rotate",
-    "rotate pdf",
-    "zoom",
-    "zoom pdf",
-    "react",
-    "reactjs",
-    "react-pdf",
-    "react-pdf-viewer"
-  ],
-  "author": "ansu5555",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ansu5555/pdf-viewer-reactjs/issues"
-  },
-  "homepage": "https://github.com/ansu5555/pdf-viewer-reactjs#readme",
-  "peerDependencies": {
-    "bulma": ">=0.8.1",
-    "material-design-icons": ">=3.0.1",
-    "react": ">=16.8.6",
-    "react-dom": ">=16.8.6"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.13.8",
-    "@babel/plugin-transform-runtime": "^7.13.9",
-    "@babel/preset-env": "^7.13.9",
-    "@babel/preset-react": "^7.12.13",
-    "@babel/runtime": "^7.13.9",
-    "@rollup/plugin-babel": "^5.3.0",
-    "babel-jest": "^26.6.3",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6",
-    "eslint": "^7.20.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.1.5",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-wdio": "^7.0.0",
-    "husky": "^5.1.3",
-    "jest": "^26.6.3",
-    "prettier": "^2.2.1",
-    "react-scripts": "^4.0.3",
-    "react-test-renderer": "^17.0.1",
-    "rollup": "^2.39.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-terser": "^7.0.2",
-    "stylelint": "^13.10.0",
-    "stylelint-config-standard": "^20.0.0"
-  },
-  "dependencies": {
-    "pdfjs-dist": "^2.6.347",
-    "prop-types": "^15.7.2"
-  }
+    "name": "pdf-viewer-reactjs",
+    "version": "2.2.0",
+    "description": "Simple react PDF viewer component with controls based on PDF.js.",
+    "source": "src/index.js",
+    "main": "dist/pdf-viewer-reactjs.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" ",
+        "lint": "node_modules/.bin/eslint --fix ./src/*.js ./src/**/*.js ./example/src/*.js ./example/src/**/*.js",
+        "prebuild": "npm run lint",
+        "build": "rollup -c",
+        "prepublish": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/ansu5555/pdf-viewer-reactjs.git"
+    },
+    "keywords": [
+        "pdf",
+        "document",
+        "pages",
+        "pdf viewer",
+        "pdf-viewer",
+        "rotate",
+        "rotate pdf",
+        "zoom",
+        "zoom pdf",
+        "react",
+        "reactjs",
+        "react-pdf",
+        "react-pdf-viewer"
+    ],
+    "author": "ansu5555",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ansu5555/pdf-viewer-reactjs/issues"
+    },
+    "homepage": "https://github.com/ansu5555/pdf-viewer-reactjs#readme",
+    "peerDependencies": {
+        "react": ">=16.8.6",
+        "react-dom": ">=16.8.6",
+        "bulma": ">=0.8.1",
+        "bulma-helpers": ">=0.3.10",
+        "material-design-icons": ">=3.0.1"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.11.4",
+        "@babel/plugin-transform-runtime": "^7.12.10",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/preset-react": "^7.10.4",
+        "@babel/runtime": "^7.11.2",
+        "@rollup/plugin-babel": "^5.2.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.11.0",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-jsx-a11y": "^6.3.1",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-react": "^7.20.6",
+        "eslint-plugin-react-hooks": "^1.7.0",
+        "husky": "^3.1.0",
+        "prettier": "^1.19.1",
+        "rollup": "^2.26.9",
+        "rollup-plugin-terser": "^7.0.1"
+    },
+    "dependencies": {
+        "pdfjs-dist": "^2.6.347",
+        "prop-types": "^15.7.2"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npm run lint && npm run build && git add dist"
+        }
+    }
 }

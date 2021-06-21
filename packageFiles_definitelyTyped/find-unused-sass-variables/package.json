@@ -1,6 +1,6 @@
 {
   "name": "find-unused-sass-variables",
-  "version": "3.1.0",
+  "version": "2.0.0",
   "description": "A small tool to find unused Sass variables",
   "author": "XhmikosR <xhmikosr@gmail.com>",
   "funding": "https://github.com/sponsors/XhmikosR",
@@ -17,7 +17,6 @@
     "lint": "npm run xo",
     "test": "npm run xo && npm run test:integration",
     "test:integration": "node tests/integration.js",
-    "check": "node ./cli.js tests/ non-existent-folder/ -i \"$a\"",
     "xo": "xo"
   },
   "repository": {
@@ -29,15 +28,16 @@
   },
   "homepage": "https://github.com/XhmikosR/find-unused-sass-variables#readme",
   "dependencies": {
-    "chalk": "^4.1.1",
-    "commander": "^7.2.0",
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
     "escape-string-regexp": "^4.0.0",
-    "glob": "^7.1.7",
-    "postcss": "^8.3.0",
-    "postcss-scss": "^3.0.5"
+    "glob": "^7.1.6",
+    "ora": "^4.0.4",
+    "postcss": "^7.0.27",
+    "postcss-scss": "^2.0.0"
   },
   "devDependencies": {
-    "xo": "^0.39.1"
+    "xo": "^0.30.0"
   },
   "files": [
     "cli.js",
@@ -61,13 +61,10 @@
         "error",
         "always"
       ],
-      "promise/prefer-await-to-then": "off",
       "space-before-function-paren": [
         "error",
         "never"
       ],
-      "unicorn/no-array-for-each": "off",
-      "unicorn/no-array-reduce": "off",
       "unicorn/prevent-abbreviations": "off"
     }
   }

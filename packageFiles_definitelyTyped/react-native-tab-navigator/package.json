@@ -1,6 +1,6 @@
 {
   "name": "react-native-tab-navigator",
-  "version": "0.3.4",
+  "version": "0.3.0",
   "description": "A tab bar that switches between scenes, written in JS for cross-platform support",
   "main": "TabNavigator.js",
   "repository": {
@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/exponentjs/react-native-tab-navigator#readme",
   "dependencies": {
-    "immutable": "^3.8.1",
-    "prop-types": "^15.5.10"
+    "immutable": "^3.7.5"
   }
 }

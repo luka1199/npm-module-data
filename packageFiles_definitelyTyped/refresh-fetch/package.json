@@ -1,7 +1,7 @@
 {
   "name": "refresh-fetch",
   "description": "Wrapper around fetch capable of graceful authentication token refreshing.",
-  "version": "0.7.0",
+  "version": "0.6.0",
   "main": "./lib/index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
@@ -28,24 +28,24 @@
   "license": "MIT",
   "homepage": "https://github.com/vlki/refresh-fetch",
   "dependencies": {
-    "lodash": "^4.17.19"
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-flow": "^7.10.4",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.5.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-flowtype": "^5.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "flow-bin": "^0.129.0",
-    "jest": "^26.1.0",
-    "rimraf": "^3.0.2"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.12.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-flowtype": "^3.2.1",
+    "eslint-plugin-import": "^2.15.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "flow-bin": "^0.91.0",
+    "jest": "^24.0.0",
+    "rimraf": "^2.6.3"
   }
 }

@@ -1,11 +1,11 @@
 {
   "name": "merge-img",
-  "version": "2.1.2",
-  "description": "Merge multiple images into a single image",
+  "version": "2.1.0",
+  "description": "Merge multiple images into one single image",
   "author": "Plusb Preco <plusb21@gmail.com>",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "npm run test && npm run build",
+    "prepublish": "npm run build",
     "prebuild": "npm run clean",
     "test": "eslint . && jest",
     "build": "babel --out-dir lib src",
@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "is-plain-obj": "^1.1.0",
-    "jimp": "0.2.27"
+    "jimp": "^0.2.28"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

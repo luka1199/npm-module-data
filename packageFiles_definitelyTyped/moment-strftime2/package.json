@@ -1,6 +1,6 @@
 {
   "name": "moment-strftime2",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "strftime support for Moment.js",
   "main": "main.js",
   "files": [
@@ -21,13 +21,7 @@
     "type": "git",
     "url": "https://github.com/ShogunPanda/moment-strftime2"
   },
-  "keywords": [
-    "moment",
-    "strftime",
-    "date",
-    "time",
-    "datetime"
-  ],
+  "keywords": ["moment", "strftime", "date", "time", "datetime"],
   "author": "Shogun <shogun@cowtech.it>",
   "license": "MIT",
   "bugs": {

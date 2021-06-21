@@ -1,6 +1,6 @@
 {
   "name": "money-math",
-  "version": "2.5.2",
+  "version": "2.5.0",
   "description": "jsbn-based arbitrary precision operations on currency amounts \"XXX.YY\"; because floats are BAD for representing money",
   "main": "money.js",
   "scripts": {
@@ -35,8 +35,8 @@
     "test": "spec"
   },
   "devDependencies": {
-    "eslint": "^4.9.0",
-    "mocha": "^4.0.1"
+    "eslint": "^3.0.1",
+    "mocha": "^3.0.0"
   },
   "author": "Ivan Krechetov <ikr@ikr.su>",
   "license": "MIT"

@@ -1,44 +1,27 @@
 {
     "name": "datatables.net-scroller",
-    "description": "Scroller for DataTables",
-    "main": "js/dataTables.scroller.js",
-    "types": "./types/types.d.ts",
-    "version": "2.0.3",
+    "version": "1.4.0",
+    "description": "Scroller for DataTables ",
     "files": [
-        "js/**/*.js"
+        "js/dataTables.scroller.js"
     ],
+    "main": "./js/dataTables.scroller.js",
     "keywords": [
-        "Scroller",
- "Virtual Scrolling",
-        "Datatables",
+        "virtual scrolling",
+        "DataTables",
         "jQuery",
         "table",
-        "filter",
-        "sort"
+        "DataTables"
     ],
-    "dependencies": {
-        "datatables.net": ">=1.10.24",
-        "jquery": ">=1.7"
-    },
-    "moduleType": [
-        "globals",
-        "amd",
-        "node"
-    ],
-    "ignore": [
-        "composer.json",
-        "datatables.json",
-        "package.json"
-    ],
+    "homepage": "https://datatables.net",
+    "bugs": "https://datatables.net/forums",
+    "license": "MIT",
     "author": {
         "name": "SpryMedia Ltd",
         "url": "http://datatables.net"
     },
-    "homepage": "https://datatables.net",
-    "bugs": "https://datatables.net/forums",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/DataTables/Dist-DataTables-Scroller.git"
+    "dependencies": {
+        "jquery": ">=1.7",
+        "datatables.net": ">=1.10.9"
     }
 }

@@ -1,22 +1,21 @@
 {
   "name": "run-parallel",
   "description": "Run an array of functions in parallel",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
-    "url": "https://feross.org"
+    "url": "http://feross.org/"
   },
   "bugs": {
     "url": "https://github.com/feross/run-parallel/issues"
   },
   "dependencies": {
-    "queue-microtask": "^1.2.2"
+    "dezalgo": "^1.0.1"
   },
   "devDependencies": {
-    "airtap": "^3.0.0",
-    "standard": "*",
-    "tape": "^5.0.1"
+    "standard": "^3.2.0",
+    "tape": "^2.12.3"
   },
   "homepage": "https://github.com/feross/run-parallel",
   "keywords": [
@@ -36,23 +35,22 @@
     "url": "git://github.com/feross/run-parallel.git"
   },
   "scripts": {
-    "test": "standard && npm run test-node && npm run test-browser",
-    "test-browser": "airtap -- test/*.js",
-    "test-browser-local": "airtap --local -- test/*.js",
-    "test-node": "tape test/*.js"
+    "test": "standard && tape test/*.js"
   },
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/feross"
-    },
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/feross"
-    },
-    {
-      "type": "consulting",
-      "url": "https://feross.org/support"
-    }
-  ]
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/9..latest",
+      "chrome/25..latest",
+      "chrome/canary",
+      "firefox/20..latest",
+      "firefox/nightly",
+      "safari/6..latest",
+      "opera/12..latest",
+      "opera/next",
+      "ipad/6.0..latest",
+      "iphone/6.0..latest",
+      "android-browser/4.2..latest"
+    ]
+  }
 }

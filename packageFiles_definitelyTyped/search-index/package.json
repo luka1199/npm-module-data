@@ -1,6 +1,6 @@
 {
   "name": "search-index",
-  "version": "2.3.0",
+  "version": "2.1.0",
   "description": "A network resilient, persistent full-text search library for the browser and Node.js",
   "engines": {
     "node": ">=12"
@@ -53,13 +53,13 @@
     "stopword": "^1.0.6",
     "stream-browserify": "^3.0.0",
     "tape": "^5.1.0",
-    "tape-run": "^8.0.0",
+    "tape-run": "^7.0.0",
     "webpack": "^5.11.1",
     "webpack-cli": "^4.3.1",
     "world-bank-dataset": "^1.0.0"
   },
   "dependencies": {
-    "fergies-inverted-index": "9.3.1",
+    "fergies-inverted-index": "9.2.0",
     "term-vector": "^1.0.0"
   }
 }

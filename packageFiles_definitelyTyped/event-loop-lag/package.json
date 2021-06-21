@@ -1,6 +1,6 @@
 {
   "name": "event-loop-lag",
-  "version": "1.4.0",
+  "version": "1.0.3",
   "description": "Measure event loop lag",
   "main": "event-loop-lag.js",
   "scripts": {
@@ -13,10 +13,10 @@
     "url": "git://github.com/pebble/event-loop-lag.git"
   },
   "dependencies": {
-    "debug": "^3.1.0"
+    "debug": "1.0.4"
   },
   "devDependencies": {
-    "mocha": "^5.2.0",
-    "istanbul": "^0.4.5"
+    "mocha": "^1.21.4",
+    "istanbul-harmony": "^0.3.0"
   }
 }

@@ -1,66 +1,47 @@
 {
-  "name": "dropkickjs",
-  "version": "2.2.5",
-  "license": "MIT",
+  "name": "DropKick",
+  "version": "2.1.3",
   "author": {
-    "name": "Robert DeLuca"
+    "name": "Robert DeLuca",
+    "email": "robertdeluca19@gmail.com"
   },
-  "contributors": [
-    {
-      "name": "Wil Wilsman"
-    }
-  ],
   "repository": "robdel12/DropKick",
   "bugs": {
     "url": "http://github.com/robdel12/DropKick/issues"
   },
-  "main": "./dist/dropkick.js",
+  "main": [
+    "dist/dropkick.js",
+    "dist/css/dropkick.css"
+  ],
   "description": "A JavaScript plugin for creating beautiful, graceful, and painless custom dropdowns.",
   "scripts": {
-    "build-js": "webpack",
-    "build-css": "webpack --config webpack.css.js",
-    "build": "yarn build-js && yarn build-css",
-    "build-prod": "NODE_ENV=\"production\" yarn build-js && yarn build-css",
-    "start": "webpack-dev-server",
-    "test": "NODE_ENV=test karma start",
-    "test-browserstack": "NODE_ENV=test BROWSER_STACK=true karma start",
-    "docs": "documentation build src/** -f html -o dist/docs",
-    "docs-md": "documentation build src/dropkick.js -f md > API-docs.md",
-    "deploy": "yarn build-prod && yarn docs && surge -p dist/ -d dropkickjs.com"
+    "test": "gulp",
+    "doc": "yuidoc"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">=0.10.0"
   },
   "devDependencies": {
-    "babel-core": "^6.25.0",
-    "babel-loader": "^7.1.1",
-    "babel-preset-env": "^1.6.0",
-    "chai": "^4.1.0",
-    "chai-jquery": "^2.0.0",
-    "css-loader": "^0.28.4",
-    "custom-event": "^1.0.1",
-    "documentation": "^13.0.0",
-    "dotenv": "^8.2.0",
-    "dotenv-webpack": "^6.0.0",
-    "extract-text-webpack-plugin": "^3.0.0",
-    "html-webpack-plugin": "^3.2.0",
-    "jquery": "^3.0.0",
-    "karma": "6.3.2",
-    "karma-browserstack-launcher": "^1.3.0",
-    "karma-chrome-launcher": "^3.0.0",
-    "karma-mocha": "^2.0.1",
-    "karma-mocha-reporter": "^2.2.3",
-    "karma-webpack": "2.0.3",
-    "mocha": "^8.0.1",
-    "node-sass": "6.0.0",
-    "sass-loader": "^7.1.0",
-    "sinon": "^10.0.0",
-    "sinon-chai": "^3.3.0",
-    "style-loader": "^0.23.1",
-    "surge": "^0.23.0",
-    "uglifyjs-webpack-plugin": "^1.3.0",
-    "webpack": "^3.3.0",
-    "webpack-dev-server": "^3.1.11"
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-concat": "~2.2.0",
+    "gulp-file-insert": "^1.0.2",
+    "gulp-gh-pages-cname": "0.5.0",
+    "gulp-inject": "^1.2.0",
+    "gulp-jshint": "~1.6.3",
+    "gulp-npm-run": "0.0.0-5",
+    "gulp-qunit": "^1.2.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-replace": "^0.5.3",
+    "gulp-sass": "~0.7.2",
+    "gulp-uglify": "~0.3.1",
+    "gulp-util": "~2.2.14",
+    "merge-stream": "^0.1.7",
+    "minimist": "^1.1.0",
+    "qunitjs": "^1.17.1",
+    "run-sequence": "^1.0.2",
+    "gulp-bump": "^0.3.0",
+    "yuidoc-dropkick-theme": "0.0.4"
   },
   "keywords": [
     "dropkick",

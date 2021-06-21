@@ -1,17 +1,8 @@
 {
   "name": "cache-manager-fs-hash",
-  "version": "0.0.9",
-  "main": "index.js",
-  "engines": {
-    "node": ">=8.0.0"
-  },
+  "version": "0.0.2",
+  "node": ">=8.0.0",
   "description": "file system store for node cache manager",
-  "author": "Roland Starke",
-  "license": "MIT",
-  "files": [
-    "index.js",
-    "src/*"
-  ],
   "keywords": [
     "cache-manager",
     "storage",
@@ -24,15 +15,18 @@
   "bugs": {
     "url": "https://github.com/rolandstarke/node-cache-manager-fs-hash/issues"
   },
+  "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/**/*.js"
+    "test": "mocha"
   },
+  "author": "Roland Starke",
+  "license": "MIT",
   "devDependencies": {
-    "cache-manager": "^3.2.1",
-    "mocha": "^7.1.1",
-    "rimraf": "^3.0.2"
+    "cache-manager": "^2.4.0",
+    "mocha": "^3.4.2",
+    "rimraf": "^2.6.1"
   },
   "dependencies": {
-    "lockfile": "^1.0.4"
+    "lockfile": "^1.0.3"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "pubsub-js",
-  "version": "1.9.3",
+  "version": "1.8.0",
   "description": "Dependency free publish/subscribe library",
   "main": "./src/pubsub.js",
   "directories": {
@@ -36,10 +36,10 @@
   "devDependencies": {
     "@studio/changes": "^2.0.0",
     "eslint": "4.19.1",
-    "jsdoc-to-markdown": "^5.0.3",
-    "mocha": "7.1.0",
-    "nyc": "15.0.0",
+    "jsdoc-to-markdown": "^4.0.1",
+    "mocha": "5.1.1",
+    "nyc": "11.7.1",
     "referee": "^1.2.0",
-    "sinon": "9.0.0"
+    "sinon": "5.0.3"
   }
 }

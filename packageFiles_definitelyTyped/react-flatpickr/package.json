@@ -1,6 +1,6 @@
 {
   "name": "react-flatpickr",
-  "version": "3.10.7",
+  "version": "3.8.0",
   "description": "flatpickr for React",
   "main": "build/index.js",
   "scripts": {
@@ -19,13 +19,13 @@
     "react"
   ],
   "files": [
-    "build/index.js",
+    "build/",
     "lib/"
   ],
   "author": "haoxin",
   "license": "MIT",
   "dependencies": {
-    "flatpickr": "^4.6.2",
+    "flatpickr": "^4.3.2",
     "prop-types": "^15.5.10"
   },
   "devDependencies": {
@@ -51,22 +51,17 @@
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^9.0.0",
     "babel-loader": "^8.0.0",
-    "css-loader": "^3.6.0",
+    "css-loader": "^0.28.7",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
-    "eslint": "^7.20.0",
+    "eslint": "^4.8.0",
     "eslint-config-ok": "github:haoxins/eslint-config",
     "jest": "^24.8.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "semantic-ui-react": "^0.88.2",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
     "style-loader": "^0.19.0",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.10.3"
-  },
-  "peerDependencies": {
-    "react": "^17.0.1"
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
   },
   "eslintConfig": {
     "extends": [

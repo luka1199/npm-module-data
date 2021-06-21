@@ -1,7 +1,6 @@
 {
   "name": "ansi",
   "description": "Advanced ANSI formatting tool for Node.js",
-  "license": "MIT",
   "keywords": [
     "ansi",
     "formatting",
@@ -12,7 +11,7 @@
     "256",
     "stream"
   ],
-  "version": "0.3.1",
+  "version": "0.3.0",
   "author": "Nathan Rajlich <nathan@tootallnate.net> (http://tootallnate.net)",
   "repository": {
     "type": "git",

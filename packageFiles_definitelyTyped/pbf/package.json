@@ -1,23 +1,15 @@
 {
   "name": "pbf",
-  "version": "3.2.1",
+  "version": "3.0.0",
   "description": "a low-level, lightweight protocol buffers implementation in JavaScript",
   "main": "index.js",
-  "unpkg": "dist/pbf.js",
-  "jsdelivr": "dist/pbf.js",
   "scripts": {
-    "bench": "node bench/bench.js",
-    "test": "eslint index.js compile.js test/*.js bench/bench-tiles.js bin/pbf && tap test/*.test.js && npm run build-min",
+    "test": "eslint index.js compile.js test/*.js bench/bench-tiles.js bin/pbf && tap test/*.test.js",
     "cov": "tap test/*.test.js --cov --coverage-report=html",
-    "build-min": "mkdirp dist && browserify index.js -s Pbf | uglifyjs -c -m > dist/pbf.js",
+    "build-min": "mkdirp dist && browserify index.js -s Pbf | uglifyjs -c warnings=false -m > dist/pbf.js",
     "build-dev": "mkdirp dist && browserify index.js -d -s Pbf > dist/pbf-dev.js",
-    "prepublishOnly": "npm run build-dev && npm run build-min"
+    "prepublish": "npm run build-dev && npm run build-min"
   },
-  "files": [
-    "bin",
-    "dist",
-    "compile.js"
-  ],
   "bin": {
     "pbf": "bin/pbf"
   },
@@ -43,20 +35,19 @@
   },
   "homepage": "https://github.com/mapbox/pbf",
   "dependencies": {
-    "ieee754": "^1.1.12",
-    "resolve-protobuf-schema": "^2.1.0"
+    "ieee754": "^1.1.6",
+    "resolve-protobuf-schema": "^2.0.0"
   },
   "devDependencies": {
-    "benchmark": "^2.1.4",
-    "browserify": "^16.2.3",
-    "eslint": "^5.15.1",
-    "eslint-config-mourner": "^2.0.3",
+    "benchmark": "^2.1.0",
+    "browserify": "^13.0.1",
+    "eslint": "^3.0.0",
+    "eslint-config-mourner": "^2.0.1",
     "mkdirp": "^0.5.1",
-    "protobufjs": "^6.8.8",
-    "protocol-buffers": "^4.1.0",
-    "tap": "^12.6.0",
+    "protocol-buffers": "^3.1.6",
+    "tap": "^6.1.1",
     "tile-stats-runner": "^1.0.0",
-    "uglify-js": "^3.6.1"
+    "uglify-js": "^2.6.2"
   },
   "eslintConfig": {
     "extends": "mourner",
@@ -67,15 +58,7 @@
       ],
       "key-spacing": 0,
       "no-empty": 0,
-      "global-require": 0,
-      "no-cond-assign": 0,
-      "indent": [
-        2,
-        4,
-        {
-          "flatTernaryExpressions": true
-        }
-      ]
+      "global-require": 0
     }
   }
 }

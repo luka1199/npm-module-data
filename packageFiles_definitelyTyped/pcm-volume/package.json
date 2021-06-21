@@ -22,6 +22,5 @@
   "dependencies": {
     "inherits": "^2.0.1"
   },
-  "homepage": "https://github.com/reneraab/pcm-volume",
-  "license" : "MIT"
+  "homepage": "https://github.com/reneraab/pcm-volume"
 }

@@ -1,25 +1,25 @@
 {
   "name": "audio-context",
   "description": "A WebAudio Context singleton",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "scripts": {
-    "test": "browserify test.js | tape-run && node test"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/audiojs/audio-context.git"
   },
   "homepage": "https://github.com/audiojs/audio-context",
+  "dependencies": {
+    "global": "^4.3.1"
+  },
   "devDependencies": {
-    "browserify": "^15.1.0",
     "is-browser": "^2.0.1",
-    "tape": "*",
-    "tape-run": "^3.0.0"
+    "tape": "*"
   },
   "keywords": [
     "webaudio",
     "audio",
-    "audiojs",
     "context",
     "singleton"
   ],

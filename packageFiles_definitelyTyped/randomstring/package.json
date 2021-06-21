@@ -1,6 +1,6 @@
 {
   "name": "randomstring",
-  "version": "1.2.1",
+  "version": "1.1.4",
   "author": "Elias Klughammer <elias@klughammer.com> (http://www.klughammer.com)",
   "description": "A module for generating random strings",
   "homepage": "https://github.com/klughammer/node-randomstring",
@@ -13,8 +13,7 @@
     "node": "*"
   },
   "dependencies": {
-    "array-uniq": "1.0.2",
-    "randombytes": "2.0.3"
+    "array-uniq": "1.0.2"  
   },
   "devDependencies": {
     "mocha": "^1.20.1"

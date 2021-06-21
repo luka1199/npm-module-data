@@ -1,59 +1,49 @@
 {
   "name": "levelup",
-  "version": "5.0.1",
+  "version": "4.3.0",
   "description": "Fast & simple storage - a Node.js-style LevelDB wrapper",
   "license": "MIT",
   "main": "lib/levelup.js",
-  "browser": {
-    "./lib/next-tick.js": "./lib/next-tick-browser.js"
-  },
   "scripts": {
     "test": "standard && hallmark && (nyc -s node test/self.js | faucet) && nyc report",
-    "coverage": "nyc report -r lcovonly",
-    "test-browsers": "airtap --coverage --verbose test/self.js",
-    "test-browsers-local": "airtap -p local test/self.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "test-browsers": "airtap --loopback airtap.local test/self.js > airtap.log",
+    "test-browser-local": "airtap --local test/self.js",
     "hallmark": "hallmark --fix",
-    "dependency-check": "dependency-check --no-dev -i queue-microtask .",
+    "dependency-check": "dependency-check . test/*.js",
     "prepublishOnly": "npm run dependency-check"
   },
-  "files": [
-    "lib",
-    "CHANGELOG.md",
-    "CONTRIBUTORS.md",
-    "UPGRADING.md",
-    "sauce-labs.svg"
-  ],
   "dependencies": {
-    "catering": "^2.0.0",
-    "deferred-leveldown": "^6.0.0",
-    "level-errors": "^3.0.0",
-    "level-iterator-stream": "^5.0.0",
-    "level-supports": "^2.0.0",
-    "queue-microtask": "^1.2.3"
+    "deferred-leveldown": "~5.2.1",
+    "level-errors": "~2.0.0",
+    "level-iterator-stream": "~4.0.0",
+    "level-supports": "~1.0.0",
+    "xtend": "~4.0.0"
   },
   "devDependencies": {
     "after": "^0.8.2",
-    "airtap": "^4.0.1",
-    "airtap-playwright": "^1.0.1",
-    "airtap-sauce": "^1.1.0",
+    "airtap": "^2.0.0",
     "async-each": "^1.0.3",
-    "browserify": "^17.0.0",
+    "browserify": "^16.0.0",
     "concat-stream": "^2.0.0",
+    "coveralls": "^3.0.2",
     "delayed": "^2.0.0",
-    "dependency-check": "^4.1.0",
-    "encoding-down": "^7.0.0",
+    "dependency-check": "^3.3.0",
+    "encoding-down": "^6.2.0",
     "faucet": "^0.0.1",
-    "hallmark": "^3.1.0",
+    "hallmark": "^2.0.0",
     "level-community": "^3.0.0",
-    "level-concat-iterator": "^3.0.0",
-    "memdown": "^6.0.0",
-    "nyc": "^15.1.0",
-    "run-parallel": "^1.2.0",
+    "level-concat-iterator": "^2.0.1",
+    "memdown": "^5.0.0",
+    "nyc": "^14.0.0",
+    "pinkie": "^2.0.4",
+    "run-parallel": "^1.1.9",
     "run-series": "^1.1.8",
+    "safe-buffer": "^5.1.0",
     "simple-concat": "^1.0.0",
-    "sinon": "^10.0.0",
-    "standard": "^16.0.3",
-    "tape": "^5.2.2",
+    "sinon": "^7.4.2",
+    "standard": "^14.1.0",
+    "tape": "^4.7.0",
     "trickle": "0.0.2"
   },
   "hallmark": {
@@ -75,6 +65,6 @@
     "json"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=6"
   }
 }

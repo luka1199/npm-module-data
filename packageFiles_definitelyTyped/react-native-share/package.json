@@ -1,53 +1,51 @@
 {
   "name": "react-native-share",
   "description": "Social share, sending simple data to other apps.",
-  "version": "6.2.1",
+  "version": "3.3.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/react-native-community/react-native-share.git"
   },
-  "bugs": {
-    "url": "https://github.com/react-native-community/react-native-share/issues"
-  },
-  "main": "lib/commonjs/index.js",
-  "react-native": "src/index.tsx",
-  "module": "lib/module/index.js",
-  "types": "lib/typescript/index.d.ts",
+  "main": "index.js",
   "files": [
-    "src",
-    "lib",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
     "android",
+    "components",
     "ios",
     "windows",
     "RNShare.podspec"
   ],
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/runtime": "^7.11.2",
-    "@commitlint/cli": "11.0.0",
-    "@commitlint/config-conventional": "11.0.0",
+    "@babel/core": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "@commitlint/cli": "8.1.0",
+    "@commitlint/config-conventional": "8.1.0",
+    "@react-native-community/eslint-config": "^0.0.6",
+    "@react-native-community/eslint-plugin": "^1.0.0",
     "@semantic-release/commit-analyzer": "^8.0.1",
     "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.1.1",
-    "@semantic-release/npm": "^7.0.6",
+    "@semantic-release/github": "^7.0.4",
+    "@semantic-release/npm": "^7.0.4",
     "@semantic-release/release-notes-generator": "^9.0.1",
-    "@types/react": "16.14.5",
-    "@types/react-native": "0.63.2",
-    "eslint": "^7.24.0",
-    "eslint-config-satya164": "3.1.10",
-    "husky": "4.3.0",
-    "lint-staged": "10.3.0",
-    "metro-react-native-babel-preset": "^0.63.0",
+    "babel-eslint": "10.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-flowtype": "4.2.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-prettier": "3.1.0",
+    "eslint-plugin-react": "7.14.3",
+    "eslint-plugin-react-native": "3.7.0",
+    "flow-bin": "^0.105.2",
+    "generate-changelog": "1.8.0",
+    "husky": "3.0.3",
+    "idx": "2.5.6",
+    "lint-staged": "9.2.1",
+    "metro-react-native-babel-preset": "^0.56.4",
+    "minimist": "1.2.3",
     "pre-commit": "1.2.2",
-    "prettier": "^2.2.1",
-    "react": "16.13.1",
-    "react-native": "0.63.2",
-    "react-native-builder-bob": "^0.18.1",
-    "semantic-release": "^17.1.1",
-    "typescript": "4.2.4"
+    "prettier": "^1.18.2",
+    "react": "16.9.0",
+    "react-native": "0.61.5",
+    "semantic-release": "^17.0.4",
+    "simple-git": "1.124.0"
   },
   "keywords": [
     "react-native",
@@ -63,28 +61,33 @@
     "name": "Esteban Fuentealba",
     "email": "efuentealba@json.cl"
   },
-  "homepage": "https://react-native-share.github.io/react-native-share/",
+  "homepage": "https://github.com/react-native-community/react-native-share#readme",
   "license": "MIT",
   "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "yarn lint"
+    "*.js": [
+      "yarn validate",
+      "git add"
     ]
   },
+  "pre-commit": "lint:staged",
   "readmeFilename": "README.md",
   "scripts": {
-    "start": "react-native start",
-    "start:android": "react-native run-android",
-    "start:ios": "react-native run-ios",
-    "lint": "eslint \"src/**/*.{js,ts,tsx}\" --max-warnings=0",
-    "typescript": "tsc --noEmit",
-    "validate": "yarn lint && yarn typescript",
-    "ci:publish": "npx semantic-release",
-    "prepare": "bob build"
+    "dev-sync": "cp -r *podspec *.js android ios example/node_modules/react-native-share/",
+    "lint": "eslint index.js --max-warnings=0",
+    "lint:staged": "lint-staged",
+    "release:major": "node ./changelog --major && npm version major && git push origin && git push origin --follow-tags",
+    "release:minor": "node ./changelog --minor && npm version minor && git push origin && git push origin --follow-tags",
+    "release:patch": "node ./changelog --patch && npm version patch && git push origin && git push origin --follow-tags",
+    "release:version": "node ./changelog --version $VERSION && git push origin && git push origin --follow-tags",
+    "validate": "yarn validate:prettier && yarn validate:lint && yarn validate:flow",
+    "validate:flow": "yarn flow",
+    "validate:lint": "eslint *js components/*.js --max-warnings=0",
+    "validate:prettier": "prettier --write *.js components/*.js",
+    "ci:publish": "npx semantic-release"
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn typescript && lint-staged"
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
     }
   },
   "release": {
@@ -111,15 +114,6 @@
           "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
         }
       ]
-    ]
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      "commonjs",
-      "module",
-      "typescript"
     ]
   }
 }

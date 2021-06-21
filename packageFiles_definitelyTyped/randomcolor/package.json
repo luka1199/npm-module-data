@@ -1,29 +1,22 @@
 {
   "name": "randomcolor",
-  "version": "0.6.2",
-  "description": "A tiny script for generating attractive random colors",
-  "main": "randomcolor.js",
-  "type": "module",
+  "version": "0.5.2",
+  "description": "For generating attractive random colors",
+  "main": "randomColor.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/davidmerfield/randomColor.git"
   },
-  "files": [],
-  "keywords": [
-    "attractive",
-    "random",
-    "color",
-    "generator"
-  ],
+  "keywords": ["attractive", "random", "color", "generator"],
   "author": "David Merfield",
   "license": "CC0",
-  "bugs": {
-    "url": "https://github.com/davidmerfield/randomColor/issues"
-  },
-  "homepage": "https://randomcolor.lllllllllllllllll.com/",
-  "spm": {
-    "main": "randomColor.js"
-  },
-  "devDependencies": {},
-  "dependencies": {}
+  "bugs": {"url": "https://github.com/davidmerfield/randomColor/issues"},
+  "homepage": "http://llllll.li/randomColor/",
+  "spm": {"main": "randomColor.js"},
+  "devDependencies": {
+    "cheerio": "^0.19.0",
+    "highlight": "^0.2.3",
+    "highlight.js": "^8.7.0",
+    "html-minifier": "^0.7.2"
+  }
 }

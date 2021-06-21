@@ -1,7 +1,7 @@
 {
   "name": "preview-email",
   "description": "Automatically opens your browser to preview Node.js email messages sent with Nodemailer. Made for Lad!",
-  "version": "3.0.4",
+  "version": "2.0.0",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)",
   "ava": {
     "failFast": true,
@@ -20,35 +20,43 @@
     "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com/)"
   ],
   "dependencies": {
-    "dayjs": "^1.10.4",
-    "debug": "^4.3.1",
-    "mailparser": "^3.1.0",
-    "nodemailer": "^6.5.0",
-    "open": "7",
-    "pug": "^3.0.2",
-    "uuid": "^8.3.2"
+    "@babel/runtime": "^7.6.3",
+    "dayjs": "^1.8.16",
+    "debug": "^4.1.1",
+    "mailparser": "^2.7.7",
+    "nodemailer": "^6.3.1",
+    "open": "^6.4.0",
+    "pify": "^4.0.1",
+    "pug": "^2.0.4",
+    "uuid": "^3.3.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.0.1",
-    "@commitlint/config-conventional": "^12.0.1",
-    "ava": "^3.15.0",
-    "codecov": "^3.8.1",
-    "cross-env": "^7.0.3",
-    "eslint": "^7.22.0",
-    "eslint-config-xo-lass": "^1.0.5",
-    "eslint-plugin-node": "^11.1.0",
-    "husky": "^5.2.0",
-    "lint-staged": "^10.5.4",
-    "nyc": "^15.1.0",
-    "remark-cli": "^9.0.0",
-    "remark-preset-github": "^4.0.1",
-    "xo": "^0.38.2"
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "auto-bind": "^2.1.1",
+    "ava": "^2.4.0",
+    "codecov": "^3.6.1",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-xo-lass": "^1.0.3",
+    "eslint-plugin-node": "^10.0.0",
+    "husky": "^3.0.8",
+    "lint-staged": "^9.4.2",
+    "nyc": "^14.1.1",
+    "remark-cli": "^7.0.0",
+    "remark-preset-github": "^0.0.16",
+    "rimraf": "^3.0.0",
+    "xo": "^0.25.3"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=8"
   },
   "files": [
-    "src",
+    "lib",
     "template.pug"
   ],
   "homepage": "https://github.com/niftylettuce/preview-email",
@@ -107,7 +115,7 @@
       ]
     }
   },
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "prettier": {
     "singleQuote": true,
     "bracketSpacing": true,
@@ -124,11 +132,14 @@
   },
   "scripts": {
     "ava": "cross-env NODE_ENV=test DEBUG=preview-email ava",
+    "build": "npm run build:clean && npm run build:lib",
+    "build:clean": "rimraf lib dist",
+    "build:lib": "babel src --out-dir lib",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "lint": "xo && remark . -qfo && eslint . --ignore-path .gitignore",
+    "lint": "xo && remark . -qfo && eslint lib",
     "nyc": "cross-env NODE_ENV=test nyc ava",
-    "test": "npm run lint && npm run ava",
-    "test-coverage": "npm run lint && npm run nyc"
+    "test": "npm run build && npm run lint && npm run ava",
+    "test-coverage": "npm run build && npm run lint && npm run nyc"
   },
   "xo": {
     "prettier": true,

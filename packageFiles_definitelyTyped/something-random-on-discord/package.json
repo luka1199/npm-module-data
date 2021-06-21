@@ -1,6 +1,6 @@
 {
   "name": "something-random-on-discord",
-  "version": "3.4.4",
+  "version": "0.0.1",
   "description": "A very easy to use package which gives you random things.",
   "main": "index.js",
   "scripts": {
@@ -17,10 +17,10 @@
     "images",
     "jokes",
     "advice",
+    "String",
     "meme",
     "neko",
-    "fact",
-    "profanity"
+    "kpop"
   ],
   "author": "ctk",
   "license": "MIT",
@@ -29,6 +29,6 @@
   },
   "homepage": "https://github.com/CTK-WARRIOR/dsomething-random-on-discord#readme",
   "dependencies": {
-    "axios": "^0.21.1"
+    "node-fetch": "^2.6.0"
   }
 }

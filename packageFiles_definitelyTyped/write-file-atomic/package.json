@@ -1,16 +1,15 @@
 {
   "name": "write-file-atomic",
-  "version": "3.0.3",
+  "version": "3.0.0",
   "description": "Write files in an atomic fashion w/configurable ownership",
   "main": "index.js",
   "scripts": {
+    "pretest": "standard",
     "test": "tap",
-    "posttest": "npm run lint",
-    "lint": "standard",
-    "postlint": "rimraf chowncopy good nochmod nochown nofsync nofsyncopt noopen norename \"norename nounlink\" nowrite",
+    "posttest": "rimraf chowncopy good nochmod nochown nofsync nofsyncopt noopen norename \"norename nounlink\" nowrite",
     "preversion": "npm test",
     "postversion": "npm publish",
-    "prepublishOnly": "git push origin --follow-tags"
+    "postpublish": "git push origin --follow-tags"
   },
   "repository": {
     "type": "git",
@@ -36,8 +35,8 @@
     "mkdirp": "^0.5.1",
     "require-inject": "^1.4.4",
     "rimraf": "^2.6.3",
-    "standard": "^14.3.1",
-    "tap": "^14.10.6"
+    "standard": "^12.0.1",
+    "tap": "^14.1.1"
   },
   "files": [
     "index.js"

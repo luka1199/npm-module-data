@@ -1,7 +1,7 @@
 {
   "name": "node-siege",
   "description": "Simple Node wrapper for siege load testing",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "homepage": "https://github.com/npr/node-siege",
   "author": {
     "name": "johnymonster",
@@ -20,19 +20,23 @@
       "url": "https://github.com/npr/node-siege/blob/master/LICENSE-MIT"
     }
   ],
+  "bin": "bin/siege.js",
   "main": "lib/siege",
   "engines": {
     "node": ">=0.8.11"
   },
   "scripts": {
-    "test": "grunt simplemocha"
+    "test": "grunt test"
+  },
+  "dependencies": {
+      "commander":"*",
+      "async":"*"
   },
   "devDependencies": {
     "grunt": "~0.3.15",
     "mocha":"*",
     "grunt-simple-mocha":"*",
-    "should":"*",
-    "express":"*"
+    "should":"*"
   },
   "keywords": []
 }

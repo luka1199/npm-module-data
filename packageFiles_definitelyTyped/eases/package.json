@@ -1,17 +1,19 @@
 {
   "name": "eases",
-  "version": "1.0.8",
+  "version": "1.0.0",
   "description": "grab bag of easing equations",
   "main": "index.js",
   "license": "MIT",
-  "author": "Matt DesLauriers <dave.des@gmail.com>",
+  "author": {
+    "name": "Matt DesLauriers",
+    "email": "dave.des@gmail.com"
+  },
   "dependencies": {},
   "devDependencies": {
     "tape": "~2.13.2"
   },
   "scripts": {
-    "test": "node test.js",
-    "dev": "beefy demo/index"
+    "test": "node test.js"
   },
   "testling": {
     "files": "test.js",
@@ -33,26 +35,5 @@
   "homepage": "https://github.com/mattdesl/eases",
   "bugs": {
     "url": "https://github.com/mattdesl/eases/issues"
-  },
-  "keywords": [
-    "ease",
-    "eases",
-    "robert",
-    "penner",
-    "easing",
-    "easings",
-    "linear",
-    "lerp",
-    "animation",
-    "tween",
-    "anim",
-    "animations",
-    "tweening",
-    "tweens",
-    "function",
-    "functions",
-    "expo",
-    "quint",
-    "quadratic"
-  ]
+  }
 }

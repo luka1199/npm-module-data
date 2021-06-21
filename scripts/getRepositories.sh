@@ -11,20 +11,20 @@ touch $OUTPUT_FILE
 while IFS=, read -r MODULE VERSION
 do
 	NPM_REPOSITORY=$(npm view $MODULE repository.url 2> /dev/null)
-	RAW_NPM_REPOSITORY="github.com${NPM_REPOSITORY#*github.com}"
+	GITHUB_REPOSITORY="github.com${NPM_REPOSITORY#*github.com}"
 	COMMIT_HASH=""
-	if [ $RAW_NPM_REPOSITORY == "github.com" ]
+	if [ $GITHUB_REPOSITORY == "github.com" ]
 	then	
-		RAW_NPM_REPOSITORY=""
+		GITHUB_REPOSITORY=""
 	fi
 
-	if [[ $RAW_NPM_REPOSITORY != "" && $VERSION != "" ]]
+	if [[ $GITHUB_REPOSITORY != "" && $VERSION != "" ]]
 	then
-		COMMIT_HASH=$(node $SCRIPT_PATH/../tools/getCommitHashFromVersion.js $RAW_NPM_REPOSITORY $MODULE $VERSION)
-		# node $SCRIPT_PATH/../tools/getCommitHashFromVersion.js $RAW_NPM_REPOSITORY $MODULE $VERSION
+		COMMIT_HASH=$(node $SCRIPT_PATH/../tools/getCommitHashFromVersion.js $GITHUB_REPOSITORY $MODULE $VERSION)
+		# node $SCRIPT_PATH/../tools/getCommitHashFromVersion.js $GITHUB_REPOSITORY $MODULE $VERSION
 	fi
 	
-	echo "$MODULE,$RAW_NPM_REPOSITORY,$COMMIT_HASH"
+	echo "$MODULE,$GITHUB_REPOSITORY,$COMMIT_HASH"
 	
-	echo "$MODULE,$RAW_NPM_REPOSITORY,$COMMIT_HASH" >> $OUTPUT_FILE
+	echo "$MODULE,$GITHUB_REPOSITORY,$COMMIT_HASH" >> $OUTPUT_FILE
 done < "$MODULES"

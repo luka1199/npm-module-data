@@ -1,6 +1,6 @@
 {
   "name": "dns-packet",
-  "version": "5.2.4",
+  "version": "5.2.0",
   "description": "An abstract-encoding compliant module for encoding / decoding DNS packets",
   "author": "Mathias Buus",
   "license": "MIT",
@@ -10,11 +10,7 @@
     "node": ">=6"
   },
   "scripts": {
-    "clean": "rm -rf coverage .nyc_output/",
-    "lint": "eslint --color *.js examples/*.js",
-    "pretest": "npm run lint",
-    "test": "tape test.js",
-    "coverage": "nyc -r html npm test"
+    "test": "eslint --color *.js examples/*.js && tape test.js"
   },
   "dependencies": {
     "ip": "^1.1.5"
@@ -26,7 +22,6 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "nyc": "^13.3.0",
     "tape": "^4.10.1"
   },
   "keywords": [

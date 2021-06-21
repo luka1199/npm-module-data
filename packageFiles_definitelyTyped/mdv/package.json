@@ -1,12 +1,11 @@
 {
   "name": "mdv",
-  "version": "1.3.2",
+  "version": "1.3.0",
   "description": "Markdown Validator",
   "main": "index.js",
   "scripts": {
     "test": "node testRunner -f test/fail test/pass",
-    "lint": "npx eslint *.js",
-    "lint:fix": "npx eslint *.js --fix"
+    "lint": "npx eslint *.js"
   },
   "bin": {
     "mdv": "./mdv.js"
@@ -30,11 +29,10 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "abnf": "0.0.5",
-    "cheerio": "^1.0.0-rc.3",
-    "glob": "^7.1.6",
+    "cheerio": "^0.22.0",
     "jgexml": "^0.4.2",
-    "markdown-it": "^12.0.4",
-    "open": "^8.0.8",
+    "markdown-it": "^11.0.0",
+    "open": "^7.0.0",
     "rich-text-diff": "^0.2.3",
     "yaml": "^1.9.2",
     "yargs": "^14.0.0"

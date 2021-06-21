@@ -1,13 +1,10 @@
 {
   "name": "samlp",
-  "version": "6.0.2",
+  "version": "1.0.0",
   "description": "SAML Protocol server middleware",
   "main": "lib/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/_mocha -R spec --colors",
-    "cover": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -R spec --colors",
-    "open_cover": "open coverage/lcov-report/*.html",
-    "release": "standard-version"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -20,29 +17,21 @@
   "author": "Auth0",
   "license": "mit",
   "dependencies": {
-    "@auth0/thumbprint": "0.0.6",
-    "auth0-id-generator": "^0.2.0",
-    "ejs": "2.5.5",
-    "flowstate": "^0.4.0",
-    "querystring": "^0.2.0",
-    "saml": "^1.0.0",
-    "xml-crypto": "^2.0.0",
-    "@auth0/xmldom": "0.1.21",
+    "ejs": "~0.8.3",
+    "saml": "^0.9.0",
+    "thumbprint": "0.0.1",
+    "xml-crypto": "0.8.1",
+    "xmldom": "~0.1.15",
     "xpath": "0.0.5",
-    "xtend": "^1.0.3"
+    "xtend": "~1.0.3"
   },
   "devDependencies": {
-    "body-parser": "^1.15.2",
-    "chai": "^4.2.0",
+    "chai": "~1.5.0",
+    "express": "~3.1.0",
+    "mocha": "~1.8.1",
+    "request": "~2.14.0",
+    "xmldom": "~0.1.13",
     "cheerio": "~0.10.7",
-    "cheerio-select": "~0.0.3",
-    "express": "^4.17.1",
-    "express-session": "^1.14.2",
-    "istanbul": "^0.4.5",
-    "mocha": "~8.2.1",
-    "request": "~2.88.0",
-    "standard-version": "^9.1.0",
-    "timekeeper": "^2.2.0",
-    "uid2": "0.0.3"
+    "xpath": "0.0.5"
   }
 }

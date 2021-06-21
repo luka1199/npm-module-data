@@ -1,6 +1,6 @@
 {
   "name": "librato-node",
-  "version": "5.0.6",
+  "version": "5.0.1",
   "description": "A node.js client for Librato Metrics (http://metrics.librato.com/)",
   "homepage": "http://goodeggs.github.com/librato-node/",
   "main": "lib/librato",
@@ -13,31 +13,25 @@
     "metrics",
     "express"
   ],
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
-  },
   "dependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^3.6.0",
     "requestretry": "^1.12.0"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
-    "coffeescript": "^1.8.0",
-    "mocha": "7",
-    "mocha-sinon": "^2.1.2",
-    "nock": "^9.6.1",
-    "sinon": "^9.0.3",
-    "sinon-chai": "^3.5.0",
+    "chai": "^2.3.0",
+    "coffee-script": "^1.8.0",
+    "mocha": "^2.0.1",
+    "mocha-sinon": "^1.1.4",
+    "nock": "^1.6.0",
+    "sinon": "^1.12.2",
+    "sinon-chai": "^2.7.0",
     "source-map-support": "^0.2.8"
   },
   "scripts": {
-    "build": "yarn run build:clean && yarn run build:transpile",
-    "build:clean": "rm -rf lib",
-    "build:transpile": "yarn run coffee -c -m -o lib src",
-    "prepublishOnly": "yarn run build",
-    "postversion": "git push --follow-tags",
-    "pretest": "yarn run build",
-    "test": "NODE_ENV=test yarn run mocha --opts mocha.opts test/*.coffee"
+    "pretest": "./node_modules/.bin/coffee -c -m -o lib src",
+    "test": "./node_modules/.bin/mocha"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }

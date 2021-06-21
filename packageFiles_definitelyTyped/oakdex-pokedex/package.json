@@ -1,6 +1,6 @@
 {
   "name": "oakdex-pokedex",
-  "version": "0.4.5",
+  "version": "0.4.0",
   "description": "Comprehensive Pokedex for Gen 1-7",
   "main": "./src/oakdex_pokedex.js",
   "directories": {
@@ -12,7 +12,7 @@
   "devDependencies": {
     "expect.js": "^0.3.1",
     "json-schema-to-markdown": "^1.0.3",
-    "mocha": "^6.0.2"
+    "mocha": "^5.2.0"
   },
   "scripts": {
     "test": "mocha --bail"

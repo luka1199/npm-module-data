@@ -1,12 +1,12 @@
 {
   "name": "javascript-time-ago",
-  "version": "2.3.6",
-  "description": "Localized relative date/time formatting",
+  "version": "2.0.0",
+  "description": "International highly customizable relative date/time formatting",
   "main": "index.commonjs.js",
   "module": "index.js",
   "sideEffects": false,
   "dependencies": {
-    "relative-time-format": "^1.0.5"
+    "relative-time-format": "^0.1.3"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -24,26 +24,25 @@
     "babel-plugin-istanbul": "^5.1.1",
     "chai": "^3.5.0",
     "cross-env": "^5.1.4",
-    "esm": "^3.2.25",
+    "esm": "^3.0.84",
     "fs-extra": "^5.0.0",
     "intl": "^1.2.4",
     "intl-locales-supported": "^1.0.0",
     "mkdirp": "^0.5.1",
-    "mocha": "^8.1.3",
+    "mocha": "^5.0.5",
     "npm-run-all": "^1.4.0",
-    "nyc": "^14.1.1",
+    "nyc": "^13.0.0",
     "prop-types": "^15.6.0",
     "rimraf": "^2.5.0",
-    "rollup": "^2.29.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-terser": "^7.0.2"
+    "uglify-js": "^3.3.5",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
   },
   "scripts": {
     "test": "mocha --bail --require @babel/register --require esm --require ./test/setup.js \"source/**/*.test.js\" \"test/**/*.test.js\"",
     "test-coverage": "cross-env NODE_ENV=test nyc mocha --require esm --bail --require ./test/setup.js \"source/**/*.test.js\" \"test/**/*.test.js\"",
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "browser-build": "rollup --config rollup.config.js",
+    "browser-build": "webpack --mode production --progress --colors",
     "clean-for-build": "rimraf ./commonjs/**/* ./modules/**/*",
     "build-commonjs-modules": "cross-env babel ./source --out-dir ./commonjs --source-maps --ignore *.test.js",
     "build-es6-modules": "cross-env BABEL_ENV=es6 babel ./source --out-dir ./modules --source-maps --ignore *.test.js",

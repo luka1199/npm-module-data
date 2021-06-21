@@ -1,21 +1,19 @@
 {
   "name": "ml-levenberg-marquardt",
-  "version": "3.1.1",
+  "version": "1.0.0",
   "description": "Curve fitting method in javascript",
-  "main": "./lib/index.js",
-  "module": "./src/index.js",
+  "main": "./src/index.js",
   "files": [
-    "src",
-    "lib"
+    "runkit.js",
+    "src"
   ],
   "scripts": {
-    "compile": "rollup -c",
-    "eslint": "eslint src",
+    "eslint": "eslint src test",
     "eslint-fix": "npm run eslint -- --fix",
-    "prepublishOnly": "npm run compile",
-    "test": "npm run test-coverage && npm run eslint",
-    "test-coverage": "jest --coverage",
-    "test-only": "jest"
+    "test": "npm run test-mocha && npm run eslint",
+    "test-cov": "istanbul cover node_modules/.bin/_mocha -- --require should --reporter dot --recursive && codecov",
+    "test-travis": "istanbul cover node_modules/.bin/_mocha --report lcovonly -- --require should --reporter dot --recursive && codecov",
+    "test-mocha": "mocha --require should --reporter mocha-better-spec-reporter"
   },
   "repository": {
     "type": "git",
@@ -26,37 +24,26 @@
     "learning",
     "data",
     "mining",
-    "datamining",
-    "levenberg",
-    "marquardt"
+    "datamining"
   ],
-  "author": "Miguel Asencio <maasencioh@gmail.com>",
+  "author": "Miguel Asencio <maasencioh@gmail.com> (https://github.com/Miguel Asencio)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mljs/levenberg-marquardt/issues"
   },
+  "runkitExampleFilename": "./runkit.js",
   "homepage": "https://github.com/mljs/levenberg-marquardt#readme",
   "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.13.8",
-    "benchmark": "^2.1.4",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.22.0",
-    "eslint-config-cheminfo": "^5.2.3",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.3.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "jest": "^26.6.3",
-    "jest-matcher-deep-close-to": "^2.0.1",
-    "prettier": "^2.2.1",
-    "rollup": "^2.42.3"
+    "codecov": "^1.0.1",
+    "eslint": "^3.12.2",
+    "eslint-config-cheminfo": "^1.6.0",
+    "eslint-plugin-no-only-tests": "^1.1.0",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "mocha-better-spec-reporter": "^3.1.0",
+    "should": "^11.1.2"
   },
   "dependencies": {
-    "is-any-array": "^1.0.0",
-    "ml-matrix": "^6.7.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "ml-matrix": "^2.2.0"
   }
 }

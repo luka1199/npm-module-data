@@ -1,6 +1,6 @@
 {
   "name": "promise-poller",
-  "version": "1.9.1",
+  "version": "1.7.0",
   "description": "A basic poller built on top of promises",
   "main": "dist/lib/promise-poller.js",
   "scripts": {
@@ -24,7 +24,7 @@
     "timeout",
     "ajax"
   ],
-  "author": "Joe Attardi <jattardi@gmail.com> (https://joeattardi.codes/)",
+  "author": "Joe Attardi <joe@attardi.net> (http://www.thinksincode.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/joeattardi/promise-poller/issues"
@@ -43,6 +43,7 @@
     "prettier": "^1.15.2"
   },
   "dependencies": {
+    "bluebird": "^3.5.3",
     "debug": "^4.1.0"
   },
   "husky": {

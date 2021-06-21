@@ -3,32 +3,16 @@
     "homepage": "https://github.com/infusion/Complex.js",
     "bugs": "https://github.com/infusion/Complex.js/issues",
     "title": "complex.js",
-    "version": "2.0.13",
+    "version": "2.0.0",
     "description": "A complex number library",
-    "keywords": [
-        "complex numbers",
-        "math",
-        "complex",
-        "number",
-        "calculus",
-        "parser",
-        "arithmetic"
-    ],
+    "keywords": ["math", "complex", "number", "calculus", "parser"],
     "author": "Robert Eisele <robert@xarg.org> (http://www.xarg.org/)",
     "main": "complex",
-    "private": false,
-    "directories": {
-        "example": "examples"
-    },
     "readmeFilename": "README.md",
-    "license": "MIT",
+    "license": "MIT OR GPL-2.0",
     "repository": {
         "type": "git",
         "url": "git://github.com/infusion/Complex.js.git"
-    },
-    "funding": {
-        "type": "patreon",
-        "url": "https://www.patreon.com/infusion"
     },
     "engines": {
         "node": "*"

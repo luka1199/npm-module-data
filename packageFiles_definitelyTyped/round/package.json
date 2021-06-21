@@ -1,6 +1,6 @@
 {
   "name": "round",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "Round numbers to the nearest increment with an optional direction",
   "main": "index.js",
   "scripts": {
@@ -22,12 +22,11 @@
   },
   "homepage": "https://github.com/bendrucker/round.js",
   "devDependencies": {
-    "standard": "~13.1.0",
-    "tape": "~4.10.0"
+    "standard": "~4.0.1",
+    "tape": "~4.0.0"
   },
   "dependencies": {
-    "precision": "~1.0.0",
-    "round-precision": "~1.0.0"
+    "ap": "~0.2.0"
   },
   "files": [
     "index.js",

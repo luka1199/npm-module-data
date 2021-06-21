@@ -1,6 +1,6 @@
 {
   "name": "winston-loggly-bulk",
-  "version": "3.2.1",
+  "version": "3.0.0",
   "description": "A Loggly transport for winston",
   "author": "Loggly <opensource@loggly.com>",
   "contributors": [
@@ -15,7 +15,6 @@
       "url": "https://github.com/shwetajain148"
     }
   ],
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/loggly/winston-loggly-bulk.git"
@@ -28,22 +27,19 @@
     "winston"
   ],
   "dependencies": {
-    "lodash.clonedeep": "^4.5.0",
-    "node-loggly-bulk": "^3.0.0",
-    "winston": "^3.3.3",
-    "winston-transport": "^4.4.0"
+    "node-loggly-bulk": "^2.0.1",
+    "clone": "^2.1.1",
+    "winston": "^3.0",
+    "winston-transport": "^4.2.0"
   },
   "devDependencies": {
-    "jest": "^25.5.4"
+    "vows": "0.8.0"
   },
   "main": "./lib/winston-loggly",
   "scripts": {
-    "test": "jest"
+    "test": "vows --spec"
   },
   "engines": {
     "node": ">= 6.4.0"
-  },
-  "prettier": {
-    "singleQuote": true
   }
 }

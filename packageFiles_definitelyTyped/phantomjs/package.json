@@ -1,18 +1,23 @@
 {
-  "name": "phantomjs-prebuilt",
-  "version": "2.1.16",
+  "name": "phantomjs",
+  "version": "1.9.8",
   "keywords": [
     "phantomjs",
     "headless",
     "webkit"
   ],
   "description": "Headless WebKit with JS API",
-  "homepage": "https://github.com/Medium/phantomjs",
+  "homepage": "https://github.com/Obvious/phantomjs",
   "repository": {
     "type": "git",
-    "url": "git://github.com/Medium/phantomjs.git"
+    "url": "git://github.com/Obvious/phantomjs.git"
   },
-  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
   "author": {
     "name": "Dan Pupius",
     "email": "dan@obvious.com",
@@ -21,13 +26,8 @@
   "maintainers": [
     {
       "name": "Dan Pupius",
-      "email": "dan@medium.com",
+      "email": "dan@obvious.com",
       "web": "http://pupius.co.uk/"
-    },
-    {
-      "name": "Nick Santos",
-      "email": "nick@medium.com",
-      "web": "http://nick-santos.com/"
     }
   ],
   "main": "lib/phantomjs",
@@ -36,22 +36,21 @@
   },
   "scripts": {
     "install": "node install.js",
-    "test": "nodeunit --reporter=minimal test/tests.js && eslint ."
+    "test": "nodeunit --reporter=minimal test/tests.js"
   },
   "dependencies": {
-    "es6-promise": "^4.0.3",
-    "extract-zip": "^1.6.5",
-    "fs-extra": "^1.0.0",
-    "hasha": "^2.2.0",
-    "kew": "^0.7.0",
-    "progress": "^1.1.8",
-    "request": "^2.81.0",
-    "request-progress": "^2.0.1",
-    "which": "^1.2.10"
+    "adm-zip": "0.2.1",
+    "kew": "~0.1.7",
+    "ncp": "0.4.2",
+    "npmconf": "0.0.24",
+    "mkdirp": "0.3.5",
+    "progress": "^1.1.5",
+    "request": "^2.40.0",
+    "request-progress": "^0.3.1",
+    "rimraf": "~2.2.2",
+    "which": "~1.0.5"
   },
   "devDependencies": {
-    "eslint": "2.7.0",
-    "nodeunit": "0.9.1",
-    "webdriverio": "~4.2.3"
+    "nodeunit": "~0.7.4"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "jsreport-jsrender",
-  "version": "2.1.1",
+  "version": "1.0.0",
   "description": "jsreport engine using jsrender",
   "homepage": "https://github.com/jsreport/jsreport-jsrender",
   "repository": {
@@ -8,30 +8,19 @@
     "url": "git@github.com:jsreport/jsreport-jsrender.git"
   },
   "scripts": {
-    "test": "mocha test && standard"
+    "test": "mocha test"
   },
   "keywords": [
     "jsreport",
     "jsrender"
   ],
-  "standard": {
-    "env": {
-      "node": true,
-      "mocha": true
-    }
-  },
   "license": "LGPL",
   "dependencies": {
-    "jsrender": "1.0.4"
+    "jsrender": "0.9.76"
   },
   "devDependencies": {
-    "eslint": "4.18.1",
-    "mocha": "5.0.1",
-    "should": "13.2.1",
-    "standard": "11.0.0"
+    "mocha": "2.5.3",
+    "should": "9.0.2"
   },
-  "author": "Jan Blaha",
-  "engines": {
-    "node": ">=8.9"
-  }
+  "author": "Jan Blaha"
 }

@@ -13,7 +13,7 @@
     "art",
     "2.5D"
   ],
-  "version": "1.2.2",
+  "version": "1.2.0",
   "author": {
     "name": "Max Huang",
     "url": "http://github.com/nosir",
@@ -34,13 +34,13 @@
     "gulp-rimraf": "^0.2.0",
     "gulp-uglify": "^1.5.3",
     "require-dir": "^0.3.0",
-    "run-sequence": "1.1.5",
+    "run-sequence": "^1.1.5",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },
   "main":"src/obelisk.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nosir/obelisk.js.git"
+    "url": "https://github.com/rison/obelisk.js.git"
   }
 }

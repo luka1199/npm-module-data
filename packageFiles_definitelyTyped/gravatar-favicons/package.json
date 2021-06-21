@@ -1,6 +1,6 @@
 {
   "name": "gravatar-favicons",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "Generate every favicon from an email address's gravatar",
   "main": "index.js",
   "bin": "./bin.js",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/bcomnes/gravatar-favicons#readme",
   "dependencies": {
-    "bl": "^5.0.0",
+    "bl": "^4.0.3",
     "cliclopts": "^1.1.1",
     "concat-stream": "^2.0.0",
     "favicons": "^6.2.0",
@@ -39,11 +39,11 @@
     "gravatar-url": "^3.1.0",
     "minimist": "^1.2.0",
     "mkdirp": "^1.0.4",
-    "node-fetch": "^2.6.1",
     "pump": "^3.0.0",
+    "request": "^2.85.0",
     "run-parallel-limit": "^1.0.4"
   },
   "devDependencies": {
-    "@bret/toolbox": "^4.0.0"
+    "@bret/toolbox": "^3.0.0"
   }
 }

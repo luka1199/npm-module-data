@@ -1,10 +1,7 @@
 {
   "name": "vscode-windows-registry",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "A native node module for accessing the windows registry",
-  "os": [
-    "win32"
-  ],
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
@@ -23,8 +20,12 @@
   "devDependencies": {
     "@types/mocha": "^5.2.6",
     "@types/node": "^11.9.4",
-    "mocha": "^6.2.0",
+    "mocha": "^6.0.0",
+    "node-gyp": "^3.8.0",
     "ts-node": "^8.0.2",
     "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "nan": "^2.12.1"
   }
 }

@@ -4,7 +4,7 @@
     "contributors": [
         "Elia Maino <eliamaino@gmail.com>"
     ],
-    "version": "3.1.0",
+    "version": "2.2.0",
     "description": "Javascript VMAP Parser",
     "keywords": [
         "vmap",
@@ -27,26 +27,21 @@
     "scripts": {
         "test": "jasmine",
         "build": "rollup -c rollup.config.js",
-        "precommit": "eslint --fix . && pretty-quick --staged",
-        "dev": "rollup -c rollup.config.js --watch",
-        "lint": "eslint --fix . && prettier --write \"**/*.js\""
+        "precommit": "pretty-quick --staged"
     },
     "devDependencies": {
-        "@babel/core": "^7.12.10",
-        "@babel/preset-env": "^7.12.11",
-        "@babel/register": "^7.12.10",
-        "babel-eslint": "^10.1.0",
-        "eslint": "^7.17.0",
-        "eslint-plugin-import": "^2.22.1",
-        "eslint-plugin-no-for-of-loops": "^1.0.1",
-        "husky": "^4.3.6",
-        "jasmine": "^3.6.3",
+        "babel-core": "^6.26.0",
+        "babel-plugin-external-helpers": "^6.22.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-register": "^6.26.0",
+        "husky": "^0.14.3",
+        "jasmine": "^3.0.0",
         "path": "^0.12.7",
-        "prettier": "2.2.1",
-        "pretty-quick": "^3.1.0",
-        "rollup": "^2.35.1",
-        "rollup-plugin-babel": "^4.3.3",
-        "rollup-plugin-uglify": "^6.0.4",
-        "xmldom": "0.4.0"
+        "prettier": "1.10.2",
+        "pretty-quick": "^1.2.2",
+        "rollup": "^0.55.1",
+        "rollup-plugin-babel": "^3.0.3",
+        "rollup-plugin-uglify": "^3.0.0",
+        "xmldom": "0.1.19"
     }
 }

@@ -1,22 +1,15 @@
 {
   "name": "webpack-error-notification",
-  "version": "0.1.8",
+  "version": "0.1.0",
   "description": "Use system notification to inform developer about compilation error",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "peerDependencies": {
-    "webpack": "^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0"
-  },
   "keywords": [
     "webpack",
     "build"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/vsolovyov/webpack-error-notification.git"
-  },
   "author": "Vsevolod Solovyov",
   "license": "ISC"
 }

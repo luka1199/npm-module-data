@@ -1,10 +1,9 @@
 {
   "name": "d3-hexbin",
-  "version": "0.2.2",
+  "version": "0.2.0",
   "description": "Group two-dimensional points into hexagonal bins.",
   "keywords": [
     "d3",
-    "d3-module",
     "hexbin",
     "hexagonal",
     "binning"
@@ -15,29 +14,22 @@
     "name": "Mike Bostock",
     "url": "http://bost.ocks.org/mike"
   },
-  "main": "dist/d3-hexbin.js",
-  "unpkg": "dist/d3-hexbin.min.js",
-  "jsdelivr": "dist/d3-hexbin.min.js",
-  "module": "src/index.js",
+  "main": "build/d3-hexbin.js",
+  "jsnext:main": "index",
   "repository": {
     "type": "git",
     "url": "https://github.com/d3/d3-hexbin.git"
   },
-  "files": [
-    "dist/**/*.js",
-    "src/**/*.js"
-  ],
   "scripts": {
-    "pretest": "rollup -c",
-    "test": "tape 'test/**/*-test.js' && eslint src test",
-    "prepublishOnly": "rm -rf dist && yarn test",
-    "postpublish": "git push && git push --tags && cd ../d3.github.com && git pull && cp ../${npm_package_name}/dist/${npm_package_name}.js ${npm_package_name}.v${npm_package_version%%.*}.js && cp ../${npm_package_name}/dist/${npm_package_name}.min.js ${npm_package_name}.v${npm_package_version%%.*}.min.js && git add ${npm_package_name}.v${npm_package_version%%.*}.js ${npm_package_name}.v${npm_package_version%%.*}.min.js && git commit -m \"${npm_package_name} ${npm_package_version}\" && git push && cd - && zip -j dist/${npm_package_name}.zip -- LICENSE README.md dist/${npm_package_name}.js dist/${npm_package_name}.min.js"
+    "pretest": "rm -rf build && mkdir build && json2module package.json > build/package.js && rollup -f umd -n d3_hexbin -o build/d3-hexbin.js -- index.js",
+    "test": "tape 'test/**/*-test.js' && eslint index.js src",
+    "prepublish": "npm run test && uglifyjs build/d3-hexbin.js -c -m -o build/d3-hexbin.min.js",
+    "postpublish": "VERSION=`node -e 'console.log(require(\"./package.json\").version)'`; git push && git push --tags && cp build/d3-hexbin.js ../d3.github.com/d3-hexbin.v0.2.js && cp build/d3-hexbin.min.js ../d3.github.com/d3-hexbin.v0.2.min.js && cd ../d3.github.com && git add d3-hexbin.v0.2.js d3-hexbin.v0.2.min.js && git commit -m \"d3-hexbin ${VERSION}\" && git push && cd - && zip -j build/d3-hexbin.zip -- LICENSE README.md build/d3-hexbin.js build/d3-hexbin.min.js"
   },
-  "sideEffects": false,
   "devDependencies": {
-    "eslint": "6",
-    "rollup": "1",
-    "rollup-plugin-terser": "5",
-    "tape": "4"
+    "json2module": "0.0",
+    "rollup": "0.25",
+    "tape": "4",
+    "uglify-js": "2"
   }
 }

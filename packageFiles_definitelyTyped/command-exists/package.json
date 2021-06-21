@@ -1,10 +1,10 @@
 {
   "name": "command-exists",
-  "version": "1.2.9",
+  "version": "1.2.0",
   "description": "check whether a command line command exists in the current environment",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/test.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",

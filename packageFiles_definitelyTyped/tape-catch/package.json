@@ -1,17 +1,11 @@
 {
   "name": "tape-catch",
-  "version": "1.0.6",
+  "version": "1.0.0",
   "description": "a wrapper around tape that catches and reports exceptions",
   "main": "index.js",
   "scripts": {
     "copy-tape-tests": "bin/copy-tape-tests.js",
-    "tape-tests": "npm run copy-tape-tests && tap test/*.js",
-    "test:browser": "testling -u",
-    "test:node": "tap test/catch-exceptions.js",
-    "test": "npm run test:node"
-  },
-  "testling": {
-    "files": "./test/catch-exceptions/catch.js"
+    "test": "npm run copy-tape-tests && tap test/*.js"
   },
   "repository": {
     "type": "git",
@@ -28,9 +22,6 @@
     "url": "https://github.com/michaelrhodes/tape-catch/issues"
   },
   "homepage": "https://github.com/michaelrhodes/tape-catch",
-  "dependencies": {
-    "global": "~4.3.0"
-  },
   "peerDependencies": {
     "tape": "*"
   },
@@ -39,10 +30,7 @@
     "cpr": "~0.3.2",
     "falafel": "~0.3.1",
     "mkdirp": "~0.5.0",
-    "run-series": "~1.0.2",
-    "string.prototype.trim": "~1.1.2",
     "tap": "~0.5.0",
-    "tape": "~4.5.1",
-    "testling": "~1.7.1"
+    "tape": "git://github.com/michaelrhodes/tape#no-res-at"
   }
 }

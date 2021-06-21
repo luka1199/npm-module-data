@@ -1,6 +1,6 @@
 {
   "name": "util-deprecate",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "The Node.js `util.deprecate()` function with browser support",
   "main": "node.js",
   "browser": "browser.js",
@@ -23,9 +23,5 @@
   "bugs": {
     "url": "https://github.com/TooTallNate/util-deprecate/issues"
   },
-  "homepage": "https://github.com/TooTallNate/util-deprecate",
-  "files": [
-    "browser.js",
-    "node.js"
-  ]
+  "homepage": "https://github.com/TooTallNate/util-deprecate"
 }

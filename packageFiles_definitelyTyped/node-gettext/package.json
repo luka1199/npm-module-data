@@ -1,7 +1,7 @@
 {
   "name": "node-gettext",
   "description": "A JavaScript implementation of gettext, a localization framework",
-  "version": "3.0.0",
+  "version": "2.1.0",
   "author": "Andris Reinman",
   "maintainers": [
     {
@@ -43,7 +43,7 @@
     "sinon": "^9.0.1"
   },
   "engine": {
-    "node": ">=10"
+    "node": ">=0.6"
   },
   "keywords": [
     "i18n",

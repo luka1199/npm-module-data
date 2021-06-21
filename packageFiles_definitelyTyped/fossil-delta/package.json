@@ -1,6 +1,6 @@
 {
   "name": "fossil-delta",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Fossil SCM delta compression",
   "main": "fossil-delta.js",
   "keywords": [
@@ -20,7 +20,7 @@
   "license": "BSD",
   "devDependencies": {
     "faucet": "0.x.x",
-    "tape": "^2.14.1",
-    "uglify-js": "^2.8.29"
+    "tape": "2.x.x",
+    "uglify-js": "2.x.x"
   }
 }

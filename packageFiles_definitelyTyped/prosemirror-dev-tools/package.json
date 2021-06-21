@@ -1,6 +1,6 @@
 {
   "name": "prosemirror-dev-tools",
-  "version": "3.0.2",
+  "version": "3.0.0",
   "description": "Dev Tools for ProseMirror",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -30,13 +30,12 @@
     "url": "https://github.com/d4rkr00t/prosemirror-dev-tools"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0",
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
     "emotion": "^10.0.27",
     "html": "^1.0.0",
     "jsondiffpatch": "^0.4.1",
-    "nanoid": "^2.1.11",
+    "nanoid": "^3.1.6",
     "prop-types": "^15.7.2",
     "prosemirror-model": ">=1.0.0",
     "prosemirror-state": ">=1.0.0",
@@ -52,7 +51,6 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.9.6",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.10.3",
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "commitizen": "^4.1.2",

@@ -1,6 +1,6 @@
 {
   "name": "jschannel",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Mozilla's Channel mechanism built on top of post-message",
   "main": "src/jschannel.js",
   "directories": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:yochannah/jschannel.git"
+    "url": "https://github.com/adtile/jschannel.git"
   },
   "keywords": [
     "jschannel",
@@ -23,7 +23,7 @@
   "author": "Lloyd Hilaiel",
   "license": "LGPL",
   "bugs": {
-    "url": "https://github.com/yochannah/jschannel/issues"
+    "url": "https://github.com/alexkalderimis/jschannel/issues"
   },
-  "homepage": "https://github.com/yochannah/jschannel"
+  "homepage": "https://github.com/alexkalderimis/jschannel"
 }

@@ -1,6 +1,6 @@
 {
   "name": "react-native-zeroconf",
-  "version": "0.13.2",
+  "version": "0.12.0",
   "description": "A Zeroconf discovery utility for react-native",
   "main": "dist",
   "scripts": {
@@ -37,7 +37,8 @@
     "events": "^3.0.0"
   },
   "peerDependencies": {
-    "react-native": ">=0.60 <0.64"
+    "react": "^16.10.2",
+    "react-native": "^0.60.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

@@ -1,10 +1,9 @@
 {
   "name": "simmerjs",
   "description": "A pure Javascript reverse CSS selector engine which calculates a DOM element's unique CSS selector on the current page.",
-  "version": "0.5.6",
+  "version": "0.5.0",
   "author": "Gidi Meir Morris",
   "main": "lib/simmer.js",
-  "jsnext:main": "modules/simmer.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/gmmorris/simmerjs.git"
@@ -16,11 +15,7 @@
     }
   ],
   "dependencies": {
-    "lodash.difference": "^4.5.0",
-    "lodash.flatmap": "^4.5.0",
-    "lodash.isfunction": "^3.0.8",
-    "lodash.take": "^4.1.1",
-    "lodash.takeright": "^4.1.1"
+    "lodash.isfunction": "^3.0.8"
   },
   "scripts": {
     "test": "npm run testUnit && npm run testIntegration",
@@ -30,7 +25,7 @@
     "testE2E": "npm run build && nightwatch --config nightwatch.conf.js",
     "build": "npm run buildBrowser && npm run buildModule",
     "buildBrowser": "rollup -c",
-    "buildModule": "rm -rf ./lib && babel modules -d lib --ignore .test.js",
+    "buildModule": "babel modules -d lib --ignore .test.js",
     "lint": "eslint ./modules/**/*.js",
     "format": "prettier-eslint --write \"modules/**/*.js\"",
     "formatTests": "prettier-eslint --write \"__tests__/integration/*.js\"",
@@ -66,6 +61,7 @@
     "jest-codemods": "^0.10.1",
     "jsdom": "^11.0.0",
     "lint-staged": "^4.0.0",
+    "lodash.difference": "^4.5.0",
     "nightwatch": "^0.9.15",
     "path": "^0.12.7",
     "prettier": "^1.4.4",

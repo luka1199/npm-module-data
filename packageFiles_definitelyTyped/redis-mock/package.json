@@ -1,30 +1,23 @@
 {
   "name": "redis-mock",
-  "version": "0.56.3",
+  "version": "0.17.0",
   "description": "Redis client mock object for unit testing",
   "author": "Kristian Faeldt <kristian.faeldt@gmail.com>",
-  "main": "./lib/index",
+  "main": "./lib/redis-mock",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/yeahoffline/redis-mock"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "mocha": "6.2.3",
-    "redis": "^3.0.2",
-    "rsmq": "^0.12.2",
-    "should": "13.2.3"
+    "eslint": "^2.10.2",
+    "should": "8.3.2",
+    "mocha": "2.2.1",
+    "redis": "^2.6.2"
   },
   "scripts": {
-    "test": "mocha --timeout 5000 --recursive",
-    "test:valid": "VALID_TESTS=true npm run test -- --exit",
-    "lint": "eslint ./lib ./test",
-    "preversion": "node ./bin/updateMockedCoverage.js"
+    "test": "make test"
   },
-  "files": [
-    "lib"
-  ],
   "keywords": [
     "redis",
     "redis-mock",
@@ -46,16 +39,14 @@
     "yeahoffline (Frank) <frank.gasser@gmail.com>",
     "cmawhorter (cory) <cory.mawhorter@gmail.com>",
     "pmarques (Patrick Marques) <>",
-    "matthewmatician (Matthew Larson) <matthewmatician@gmail.com>",
-    "christian-muertz (Christian Mürtz) <teraarts@t-online.de>",
-    "DawidLoubser (Dawid Loubser) <dawid.loubser@gmail.com>",
-    "kamiljano (Kamil Janowski) <kgjanowski@gmail.com>"
+    "matthewmatician (Matthew Larson) <matthewmatician@gmail.com>"
   ],
   "bugs": {
     "url": "https://github.com/yeahoffline/redis-mock/issues",
     "email": "frank.gasser@gmail.com"
   },
-  "engines": {
-    "node": ">=6"
+  "engine": "node >= 0.10.0",
+  "dependencies": {
+    "redis": "^2.6.2"
   }
 }

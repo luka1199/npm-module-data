@@ -1,6 +1,6 @@
 {
   "name": "react-props-decorators",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Define props of React components by ES7 decorators",
   "homepage": "https://github.com/popkirby/react-props-decorators",
   "repository": {
@@ -22,19 +22,16 @@
   },
   "main": "lib/index.js",
   "peerDependencies": {
-    "react": ">=0.13.0 <0.15.0"
+    "react": "0.13.*"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
-    "babel-core": "^5.8.25",
-    "babel-plugin-espower": "^1.0.0",
-    "mocha": "^2.3.3",
-    "power-assert": "^1.1.0",
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0",
-    "sinon": "^1.17.1"
+    "babel": "^5.1.10",
+    "babel-core": "^5.1.10",
+    "babel-plugin-espower": "^0.2.0",
+    "mocha": "^2.2.4",
+    "power-assert": "^0.11.0"
   },
   "dependencies": {
-    "object-assign": "^4.0.1"
+    "object-assign": "^2.0.0"
   }
 }

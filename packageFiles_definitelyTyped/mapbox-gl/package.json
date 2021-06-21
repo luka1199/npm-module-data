@@ -158,7 +158,6 @@
     "build/",
     "dist/mapbox-gl*",
     "dist/style-spec/",
-    "dist/package.json",
     "flow-typed/*.js",
     "src/",
     ".flowconfig",

@@ -1,7 +1,7 @@
 {
   "name": "smartwizard",
   "title": "jQuery Smart Wizard",
-  "version": "v5.1.1",
+  "version": "v5.0.0",
   "author": {
     "name": "Dipu Raj",
     "email": "hello.techlab@gmail.com",
@@ -38,10 +38,9 @@
     "Tabs"
   ],
   "scripts": {
-    "start": "gulp serve",
-    "watch": "gulp watch",
+    "start": "gulp watch",
     "test": "./node_modules/karma/bin/karma start --single-run",
-    "build": "gulp build",
+    "build": "gulp",
     "clean": "gulp clean",
     "lint": "gulp lint"
   },
@@ -49,7 +48,6 @@
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "autoprefixer": "^9.7.4",
-    "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",

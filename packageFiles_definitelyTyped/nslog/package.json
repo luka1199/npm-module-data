@@ -2,7 +2,7 @@
   "main": "./lib/nslog.js",
   "name": "nslog",
   "description": "Cross platform native logging",
-  "version": "3.2.0",
+  "version": "3.0.0",
   "licenses": [
     {
       "type": "MIT",
@@ -29,6 +29,6 @@
     "coffee-script": "~1.6.2"
   },
   "dependencies": {
-    "nan": "^2.14.0"
+    "nan": "^2.0.0"
   }
 }

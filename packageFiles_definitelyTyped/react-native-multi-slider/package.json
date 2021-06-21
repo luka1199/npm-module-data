@@ -1,6 +1,6 @@
 {
   "name": "react-native-multi-slider",
-  "version": "0.3.6",
+  "version": "0.2.5",
   "description": "Pure JS slider component with multiple markers for React Native",
   "main": "Slider.js",
   "scripts": {
@@ -26,13 +26,5 @@
   "bugs": {
     "url": "https://github.com/JackDanielsAndCode/react-native-multi-slider/issues"
   },
-  "homepage": "https://github.com/JackDanielsAndCode/react-native-multi-slider#readme",
-  "peerDependencies": {
-    "react": "*",
-    "react-native": "*"
-  },
-  "dependencies": {
-    "create-react-class": "^15.6.2",
-    "prop-types": "*"
-  }
+  "homepage": "https://github.com/JackDanielsAndCode/react-native-multi-slider#readme"
 }

@@ -1,0 +1,44 @@
+{
+  "name": "ts-nameof-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Monorepo for ts-nameof. This file is only used for scripts.",
+  "scripts": {
+    "setup": "yarn install && yarn bootstrap && yarn build",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "clean": "lerna clean",
+    "format": "dprint",
+    "test": "lerna run test",
+    "dopublish": "yarn build && lerna publish",
+    "create-declaration-file": "lerna run create-declaration-file",
+    "verify-declaration-file": "lerna run verify-declaration-file",
+    "verify": "yarn test && yarn verify-declaration-file",
+    "to-local-source": "node scripts/to-local-source.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsherret/ts-nameof.git"
+  },
+  "keywords": [
+    "ts-nameof"
+  ],
+  "author": "David Sherret",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dsherret/ts-nameof/issues"
+  },
+  "homepage": "https://github.com/dsherret/ts-nameof#readme",
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.5",
+    "@types/prettier": "^1.18.2",
+    "dprint": "^0.7.1",
+    "dprint-plugin-jsonc": "^0.2.2",
+    "dprint-plugin-typescript": "^0.6.2",
+    "lerna": "^3.16.4",
+    "ts-morph": "^4.3.2",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.6.3"
+  }
+}

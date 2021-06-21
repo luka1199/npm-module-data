@@ -1,17 +1,18 @@
 {
   "name": "gulp-terser",
-  "version": "2.0.1",
+  "version": "1.2.0",
   "description": "gulp plugin, compressed es6+ code.",
   "scripts": {
-    "start": "npm run clean && tsc --watch",
-    "build": "npm run clean && tsc",
-    "clean": "rimraf ./dist",
+    "start": "npm run clean && babel ./src --watch --out-dir ./lib",
+    "build": "npm run clean && babel ./src --out-dir ./lib",
+    "clean": "rimraf ./lib",
     "test": "mocha \"./test/build/**/*.js\"",
     "test:gulp": "gulp --gulpfile ./test/gulpfile.js",
-    "eslint": "eslint ./ --fix",
-    "eslint:no-fix": "eslint ./"
+    "eslint": "eslint ./src",
+    "flow:check": "flow check",
+    "update": "node ./bin/get-version.js"
   },
-  "main": "dist/cjs.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "keywords": [
     "gulp",
@@ -30,44 +31,26 @@
   },
   "dependencies": {
     "plugin-error": "^1.0.1",
-    "terser": "5.4.0",
-    "through2": "^4.0.2",
+    "terser": "^4.0.0",
+    "through2": "^3.0.1",
     "vinyl-sourcemaps-apply": "^0.2.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.3",
-    "@babel/eslint-parser": "^7.12.1",
-    "@types/node": "^14",
-    "@types/through2": "^2",
-    "@typescript-eslint/eslint-plugin": "^4.7.0",
-    "@typescript-eslint/parser": "^4.7.0",
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "chai": "^4.2.0",
-    "commitizen": "^4.2.2",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^7.13.0",
+    "eslint": "5.16.0",
+    "eslint-plugin-flowtype": "^3.9.0",
+    "flow-bin": "^0.98.1",
     "gulp": "^4.0.2",
     "gulp-plumber": "^1.2.1",
-    "gulp-sourcemaps": "^3.0.0",
-    "husky": "^4.3.0",
-    "lint-staged": "^10.5.1",
-    "mocha": "^8.2.1",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.0.5"
-  },
-  "engines": {
-    "node": ">=10"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": "eslint"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "gulp-sourcemaps": "^2.6.5",
+    "mocha": "^6.1.4",
+    "rimraf": "^2.6.3",
+    "yargs": "^13.2.4"
   }
 }

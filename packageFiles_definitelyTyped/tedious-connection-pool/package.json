@@ -1,14 +1,14 @@
 {
   "name": "tedious-connection-pool",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "Connection Pool for tedious.",
   "main": "lib/connection-pool.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha --expose-gc test/test.js"
+    "test": "mocha test/naming.test.js && mocha test/connection-pool.test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/tediousjs/tedious-connection-pool.git"
+    "url": "git://github.com/pekim/tedious-connection-pool.git"
   },
   "keywords": [
     "tedious",
@@ -31,15 +31,14 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "tedious": "^1.14.0"
+    "tedious": "^1.13.0"
   },
   "devDependencies": {
-    "mocha": "^3.0.2",
-    "simple-statistics": "^2.1.0"
+    "mocha": ">=1.6.0"
   },
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/tediousjs/tedious-connection-pool/issues"
+    "url": "https://github.com/pekim/tedious-connection-pool/issues"
   },
-  "homepage": "https://github.com/tediousjs/tedious-connection-pool"
+  "homepage": "https://github.com/pekim/tedious-connection-pool"
 }

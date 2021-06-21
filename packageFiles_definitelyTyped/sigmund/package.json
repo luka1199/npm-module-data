@@ -1,6 +1,6 @@
 {
   "name": "sigmund",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Quick and dirty signatures for Objects.",
   "main": "sigmund.js",
   "directories": {
@@ -26,5 +26,5 @@
     "psychoanalysis"
   ],
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
-  "license": "ISC"
+  "license": "BSD"
 }

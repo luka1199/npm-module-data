@@ -1,7 +1,7 @@
 {
   "name": "webidl2",
   "description": "A WebIDL Parser",
-  "version": "24.1.1",
+  "version": "23.13.0",
   "contributors": [
     "Robin Berjon <robin@berjon.com> (https://berjon.com)",
     "Marcos Caceres <marcos@marcosc.com> (https://marcosc.com)",
@@ -9,19 +9,17 @@
     "Timothy Gu <timothygu99@gmail.com>"
   ],
   "license": "W3C",
+  "dependencies": {},
   "devDependencies": {
-    "eslint": "^7.28.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-prettier": "^3.4.0",
-    "expect": "^27.0.2",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.2",
+    "expect": "^26.0.0",
     "jsondiffpatch": "^0.4.1",
-    "mocha": "^9.0.0",
-    "prettier": "^2.3.1",
-    "terser-webpack-plugin": "^5.1.3",
-    "typescript": "^4.3.2",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.2"
+    "mocha": "^7.1.2",
+    "terser-webpack-plugin": "^3.0.0",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   },
   "scripts": {
     "eslint": "eslint lib test",
@@ -30,16 +28,11 @@
     "test": "npm run lint && webpack && mocha",
     "acquire": "node test/util/acquire.js",
     "build": "npx webpack",
-    "build-debug": "npx webpack --mode none",
-    "prepublishOnly": "npm run build"
+    "build-debug": "npx webpack --mode none"
   },
   "repository": "git://github.com/w3c/webidl2.js",
   "main": "dist/webidl2.js",
-  "exports": {
-    "import": "./index.js",
-    "require": "./dist/webidl2.js"
-  },
-  "type": "module",
+  "module": "index.js",
   "files": [
     "dist/*",
     "lib/*",

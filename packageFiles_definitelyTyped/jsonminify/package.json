@@ -36,6 +36,5 @@
         "node": ">=0.8.0",
         "npm": ">=1.1.0"
     },
-    "main": "./minify.json.js",
-    "license": "MIT"
+    "main": "./minify.json.js"
 }

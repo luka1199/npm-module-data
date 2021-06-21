@@ -1,22 +1,43 @@
 {
-  "private": true,
-  "workspaces": {
-    "packages": [
-      "urbanairship-cordova",
-      "urbanairship-accengage-cordova",
-      "urbanairship-hms-cordova"
+  "name": "urbanairship-cordova",
+  "version": "3.4.1",
+  "description": "Urban Airship Cordova plugin",
+  "cordova": {
+    "id": "urbanairship-cordova",
+    "platforms": [
+      "android",
+      "ios"
     ]
   },
-  "scripts": {
-    "generate-docs": "yarn workspace urbanairship-cordova run generate-docs",
-    "create-sample": "bash ./scripts/create_sample.sh ../cordova-sample",
-    "build-android": "cd ../cordova-sample/test; cordova build android",
-    "build-ios": "cd ../cordova-sample/test; cordova build ios",
-    "run-android": "cd ../cordova-sample/test; cordova run android",
-    "run-ios": "cd ../cordova-sample/test; cordova run ios",
-    "add-accengage-module": "cd ../cordova-sample/test; cordova plugin add ../../urbanairship-cordova/urbanairship-accengage-cordova",
-    "remove-accengage-module": "cd ../cordova-sample/test; cordova plugin rm urbanairship-accengage-cordova",
-    "add-hms-module": "cd ../cordova-sample/test; cordova plugin add ../../urbanairship-cordova/urbanairship-hms-cordova",
-    "remove-hms-module": "cd ../cordova-sample/test; cordova plugin rm urbanairship-hms-cordova"
-  }
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/urbanairship/phonegap-ua-push.git"
+  },
+  "keywords": [
+    "cordova",
+    "urbanairship",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    },
+    {
+      "name": "cordova-android",
+      "version": ">=4"
+    },
+    {
+      "name": "cordova-plugman",
+      "version": ">=4.2.0"
+    }
+  ],
+  "author": "Urban Airship",
+  "license": "Apache 2.0",
+  "bugs": {
+    "email": "support@urbanairship.com"
+  },
+  "homepage": "https://github.com/urbanairship/phonegap-ua-push#readme"
 }

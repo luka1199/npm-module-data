@@ -1,6 +1,6 @@
 {
   "name": "passport-google-oauth2",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "description": "Passport strategy for Google OAuth 2.0",
   "main": "./lib/oauth2.js",
   "directories": {
@@ -8,7 +8,8 @@
     "test": "test"
   },
   "dependencies": {
-    "passport-oauth2": "^1.1.2"
+    "passport-oauth2": "^1.1.2",
+    "pkginfo": "0.2.x"
   },
   "devDependencies": {
     "vows": "^0.8.0"
@@ -28,7 +29,7 @@
     "oauth2"
   ],
   "author": "Marcus Stade <marcus@stade.se>, Ilya Kantor <iliakan@gmail.com>, Alexis Gruet <alexis.gruet@kroknet.com>, Jared Hanson",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/mstade/passport-google-oauth2/issues"
   },

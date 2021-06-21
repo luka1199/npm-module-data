@@ -1,6 +1,6 @@
 {
   "name": "node-mailjet",
-  "version": "3.3.4",
+  "version": "3.3.0",
   "description": "Mailjet NodeJS API client",
   "main": "index.js",
   "directories": {
@@ -8,17 +8,17 @@
   },
   "dependencies": {
     "bluebird": "^3.5.0",
-    "json-bigint": "^1.0.0",
+    "json-bigint": "^0.2.3",
     "qs": "^6.5.0",
-    "superagent": "^6.1.0",
-    "superagent-proxy": "^2.1.0"
+    "superagent": "^3.5.2",
+    "superagent-proxy": "^1.0.2"
   },
   "devDependencies": {
-    "@segment/to-iso-string": "^1.0.1",
     "chai": "^4.1.0",
-    "eslint": "^4.2.0",
-    "mocha": "^8.4.0",
-    "nock": "^9.0.14"
+    "mocha": "^3.4.2",
+    "nock": "^9.0.14",
+    "@segment/to-iso-string": "^1.0.1",
+    "eslint": "^4.2.0"
   },
   "scripts": {
     "test": "mocha"

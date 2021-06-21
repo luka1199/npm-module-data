@@ -1,18 +1,14 @@
 {
   "name": "format-link-header",
-  "version": "3.1.1",
+  "version": "2.1.0",
   "description": "Format a link header object, to the original RFC 5988",
   "main": "src/index.js",
-  "support": true,
-  "files": [
-    "src"
-  ],
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "pretest": "npm run lint",
-    "test": "nyc ava",
-    "test:watch": "ava -w"
+    "test": "mocha test",
+    "test:watch": "mocha test -w"
   },
   "repository": {
     "type": "git",
@@ -25,34 +21,17 @@
     "header",
     "links"
   ],
-  "author": "Jonathan Samines <jn.samines@gmail.com>",
+  "author": "Jonathan Samines <jn.samines@gmail.com> (http://jonathansamines.com)",
   "license": "MIT",
-  "engines": {
-    "node": ">=10"
-  },
   "bugs": {
     "url": "https://github.com/jonathansamines/format-link-header/issues"
   },
   "homepage": "https://github.com/jonathansamines/format-link-header#readme",
   "devDependencies": {
-    "ava": "^3.14.0",
-    "eslint": "^7.15.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "nyc": "^15.1.0"
-  },
-  "nyc": {
-    "check-coverage": true,
-    "lines": 100,
-    "statements": 100,
-    "functions": 100,
-    "branches": 100,
-    "reporter": [
-      "lcov",
-      "text-summary"
-    ]
-  },
-  "volta": {
-    "node": "14.15.1"
+    "chai": "^4.1.2",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.0.1",
+    "mocha": "^4.0.1"
   }
 }

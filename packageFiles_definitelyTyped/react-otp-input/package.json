@@ -1,6 +1,6 @@
 {
   "name": "react-otp-input",
-  "version": "2.3.0",
+  "version": "2.0.0",
   "description": "A fully customizable, one-time password input component for the web built with React",
   "main": "lib/index.js",
   "scripts": {
@@ -25,7 +25,6 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
-  "typings": "typings/index.d.ts",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -37,7 +36,7 @@
     "babel-preset-react": "^6.24.1",
     "concurrently": "^3.6.1",
     "css-loader": "^3.0.0",
-    "docz": "^2.3.1",
+    "docz": "^2.0.0-rc.58",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -56,8 +55,8 @@
     "react-dom": "^16.10.1",
     "style-loader": "^0.21.0",
     "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.2"
   },
   "author": "Ajay NS <ajay.ns@outlook.com>",
   "license": "MIT",

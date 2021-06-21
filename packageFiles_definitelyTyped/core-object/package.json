@@ -1,6 +1,6 @@
 {
   "name": "core-object",
-  "version": "3.1.5",
+  "version": "3.0.0",
   "description": "A lightweight implementation of OOP Class in JavaScript",
   "main": "core-object.js",
   "files": [
@@ -27,16 +27,16 @@
   "devDependencies": {
     "backbone-metal": "^0.6.2",
     "benchmark": "^2.1.0",
-    "browserify": "^16.3.0",
+    "browserify": "^13.0.1",
     "klass": "^1.4.0",
-    "mocha": "^5.0.0",
+    "mocha": "^3.0.0",
     "traceur-runtime": "0.0.59",
-    "uberproto": "^2.0.0"
+    "uberproto": "^1.1.2"
   },
   "dependencies": {
-    "chalk": "^2.0.0"
+    "chalk": "^1.1.3"
   },
   "engines": {
-    "node": ">= 4"
+    "node": "4 || 6 || 7"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "yeoman-generator",
-  "version": "5.2.0",
+  "version": "5.0.0",
   "description": "Rails-inspired generator system that provides scaffolding for your apps",
   "homepage": "http://yeoman.io",
   "author": "Yeoman",
@@ -21,15 +21,11 @@
     "yeoman",
     "app"
   ],
-  "config": {
-    "doc_path": "./yeoman-generator-doc"
-  },
   "devDependencies": {
     "coveralls": "^3.0.3",
     "inquirer": "^7.3.2",
     "jsdoc": "^3.6.3",
-    "mem-fs": "^2.1.0",
-    "mem-fs-editor": "^9.0.0",
+    "mem-fs": "^1.2.0",
     "mocha": "^8.0.1",
     "mockery": "^2.1.0",
     "nock": "^13.0.2",
@@ -39,12 +35,9 @@
     "rimraf": "^3.0.2",
     "sinon": "^9.0.2",
     "through2": "^4.0.2",
-    "tui-jsdoc-template": "^1.2.2",
-    "xo": "^0.38.1",
     "yeoman-assert": "^3.1.1",
-    "yeoman-environment": "^3.2.0",
-    "yeoman-generator": "^5.0.0",
-    "yeoman-test": "^6.0.0"
+    "yeoman-environment": "^3.0.0-rc.1",
+    "yeoman-test": "4.0.0"
   },
   "license": "BSD-2-Clause",
   "repository": "yeoman/generator",
@@ -53,11 +46,9 @@
   },
   "scripts": {
     "pretest": "xo",
-    "test": "nyc mocha --forbid-only",
-    "doc": "npm run doc:generate && npm run doc:fix && npm run doc:prettier",
-    "doc:generate": "jsdoc -c jsdoc.json -d $npm_package_config_doc_path",
-    "doc:prettier": "prettier $npm_package_config_doc_path --write --ignore-path .prettierignore-doc",
-    "doc:fix": "sed -i -e 's:^[[:space:]]*<!--[[:space:]]*$::g' -e 's:^[[:space:]]*-->[[:space:]]*$::g' $npm_package_config_doc_path/global.html || true",
+    "test": "nyc mocha",
+    "doc": "jsdoc -c jsdoc.json -d ../yeoman-generator-doc",
+    "doc:prettier": "prettier ../yeoman-generator-doc --write --ignore-path .prettierignore-doc",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "dependencies": {
@@ -72,14 +63,7 @@
     "run-async": "^2.0.0",
     "semver": "^7.2.1",
     "shelljs": "^0.8.4",
-    "text-table": "^0.2.0"
-  },
-  "peerDependencies": {
-    "yeoman-environment": "^3.2.0"
-  },
-  "peerDependenciesMeta": {
-    "yeoman-environment": {
-      "optional": true
-    }
+    "text-table": "^0.2.0",
+    "xo": "^0.32.1"
   }
 }

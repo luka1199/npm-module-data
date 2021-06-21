@@ -1,6 +1,6 @@
 {
   "name": "react-native-awesome-card-io",
-  "version": "0.9.0",
+  "version": "0.8.0",
   "description": "A complete and cross-platform React Native component for card.io",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,6 @@
     "ios"
   ],
   "author": "Yann Pringault <yann.pringault@gmail.com>",
-  "homepage": "https://github.com/Kerumen/react-native-awesome-card-io",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.6.2"
@@ -35,7 +34,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.18.2"
+    "prettier": "^1.14.3"
   },
   "peerDependencies": {
     "react": "*",

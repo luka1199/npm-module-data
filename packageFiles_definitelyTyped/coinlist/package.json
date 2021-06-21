@@ -1,6 +1,6 @@
 {
   "name": "coinlist",
-  "version": "3.1.2",
+  "version": "3.1.0",
   "description": "Comprehensive list of cryptocurrencies with metadata",
   "main": "src/index.js",
   "scripts": {
@@ -35,7 +35,7 @@
     "got": "^8.3.0",
     "nyc": "^12.0.2",
     "this": "^1.0.2",
-    "write-json-file": "^3.0.2",
+    "write-json-file": "^2.3.0",
     "xo": "^0.20.3"
   }
 }

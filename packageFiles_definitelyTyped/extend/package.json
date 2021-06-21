@@ -1,16 +1,16 @@
 {
 	"name": "extend",
 	"author": "Stefan Thomas <justmoon@members.fsf.org> (http://www.justmoon.net)",
-	"version": "3.0.2",
+	"version": "3.0.0",
 	"description": "Port of jQuery.extend for node.js and the browser",
 	"main": "index",
 	"scripts": {
-		"prepublish": "safe-publish-latest",
-		"pretest": "npm run lint",
-		"test": "npm run tests-only",
-		"posttest": "npx aud",
-		"tests-only": "covert test",
-		"lint": "eslint ."
+		"test": "npm run lint && node test/index.js && npm run coverage-quiet",
+		"coverage": "covert test/index.js",
+		"coverage-quiet": "covert test/index.js --quiet",
+		"lint": "npm run jscs && npm run eslint",
+		"jscs": "jscs *.js */*.js",
+		"eslint": "eslint *.js */*.js"
 	},
 	"contributors": [
 		{
@@ -29,12 +29,11 @@
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^16.0.0",
-		"aud": "^1.0.0",
-		"covert": "^1.1.1",
-		"eslint": "^6.8.0",
-		"safe-publish-latest": "^1.1.4",
-		"tape": "^4.13.0"
+		"tape": "^4.0.0",
+		"covert": "^1.1.0",
+		"jscs": "^1.13.1",
+		"eslint": "^0.24.0"
 	},
 	"license": "MIT"
 }
+

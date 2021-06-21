@@ -1,7 +1,7 @@
 {
   "name": "node-cleanup",
-  "version": "2.1.2",
-  "description": "installs custom cleanup handlers that run on exiting node",
+  "version": "2.1.0",
+  "description": "installs cleanup handlers that always run on exiting node",
   "main": "node-cleanup.js",
   "scripts": {
     "test": "tap tests/*.js"
@@ -33,7 +33,6 @@
     "url": "https://github.com/jtlapp/node-cleanup/issues"
   },
   "homepage": "https://github.com/jtlapp/node-cleanup#readme",
-  "license": "MIT",
   "devDependencies": {
     "memory-streams": "^0.1.0",
     "tap": "^8.0.1"

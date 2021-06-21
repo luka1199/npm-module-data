@@ -1,22 +1,14 @@
 {
   "name": "content-range",
-  "version": "2.0.0",
-  "sideEffects": false,
-  "main": "dist/index.js",
-  "module": "dist/contant-range.esm.js",
-  "typings": "dist/index.d.js",
-  "description": "Content-Range header formatter .",
+  "version": "1.1.0",
+  "description": "Content-range header formatter.",
+  "main": "index.js",
   "scripts": {
-    "test": "tsdx test",
-    "watch": "tsdx watch",
-    "build": "tsdx build",
-    "prepublishOnly": "npm run build",
-    "release": "standard-version && conventional-github-releaser --preset angular"
+    "test": "mocha"
   },
-  "repository": "github:gregberge/content-range",
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/gregberge"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/neoziro/content-range.git"
   },
   "keywords": [
     "content-range",
@@ -26,11 +18,11 @@
   ],
   "author": "Greg Bergé <berge.greg@gmail.com>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neoziro/content-range/issues"
+  },
+  "homepage": "https://github.com/neoziro/content-range",
   "devDependencies": {
-    "conventional-github-releaser": "^3.1.5",
-    "standard-version": "^9.1.0",
-    "tsdx": "^0.14.1",
-    "tslib": "^2.1.0",
-    "typescript": "^3.9.7"
+    "mocha": "^2.3.4"
   }
 }

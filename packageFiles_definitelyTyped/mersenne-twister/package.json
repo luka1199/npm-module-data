@@ -10,7 +10,6 @@
     "type": "git",
     "url": "git://github.com/boo1ean/mersenne-twister.git"
   },
-  "files": ["src"],
   "keywords": [
     "random",
     "mersenne",

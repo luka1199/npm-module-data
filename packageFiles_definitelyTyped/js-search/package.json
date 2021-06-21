@@ -1,38 +1,40 @@
 {
   "name": "js-search",
-  "version": "2.0.0",
+  "version": "1.4.0",
   "description": "JS Search is an efficient, client-side search library for JavaScript and JSON objects",
-  "main": "./dist/umd/js-search.js",
-  "module": "./dist/esm/js-search.js",
-  "exports": {
-    ".": {
-      "require": "./dist/umd/js-search.js",
-      "import": "./dist/esm/js-search.js"
-    }
+  "main": "dist/commonjs/index.js",
+  "directories": {
+    "test": "tests"
   },
   "files": [
-    "dist",
-    "source"
+    "dist"
   ],
   "devDependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/preset-flow": "^7.8.3",
-    "babel-jest": "^25.1.0",
-    "flow-bin": "^0.120.1",
-    "jest": "^25.1.0",
-    "prettier": "^1.19.1",
+    "babel-cli": "^6.22.2",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-latest": "^6.22.0",
+    "cross-env": "^3.1.4",
+    "flow-bin": "^0.38.0",
+    "jest": "^18.1.0",
     "rimraf": "^2.5.4",
-    "rollup": "^2.0.5",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-terser": "^5.3.0"
+    "uglify": "^0.1.5",
+    "uglify-js": "^2.7.5",
+    "webpack": "^2.2.1"
   },
   "scripts": {
-    "build:flow": "echo \"// @flow\n\nexport * from '../../source'\" > dist/umd/js-search.js.flow",
-    "build": "rimraf dist && rollup -c && yarn build:flow",
-    "test": "flow check && jest",
-    "tdd": "jest --watch",
-    "prepublishOnly": "yarn build"
+    "build": "npm run build:commonjs && npm run build:umd",
+    "build:commonjs": "cross-env NODE_ENV=production babel source --out-dir dist/commonjs --source-maps --ignore test.js",
+    "build:umd": "cross-env NODE_ENV=production webpack --config webpack.config.js --bail",
+    "clean": "rimraf dist",
+    "flow": "flow source",
+    "prebuild": "flow",
+    "prebuild:commonjs": "rimraf dist/commonjs",
+    "prebuild:umd": "rimraf dist/umd",
+    "postbuild:umd": "uglifyjs dist/umd/js-search.js -o dist/umd/js-search.min.js --source-map dist/umd/js-search.min.js.map -p 5 -c -m",
+    "pretest": "flow",
+    "test": "jest",
+    "tdd": "jest --watch"
   },
   "author": "Brian Vaughn <briandavidvaughn@gmail.com> (https://github.com/bvaughn/)",
   "license": "MIT",
@@ -55,7 +57,7 @@
   "homepage": "https://github.com/bvaughn/js-search",
   "jest": {
     "setupFiles": [],
-    "roots": [
+    "testPathDirs": [
       "./source"
     ],
     "testRegex": "\\.test\\.js$",

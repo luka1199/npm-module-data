@@ -1,6 +1,6 @@
 {
   "name": "server-destroy",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Enable destroying a server, and all currently open connections.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git://github.com/isaacs/server-destroy"
   },
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me)",
-  "license": "ISC",
+  "license": "BSD",
   "readmeFilename": "README.md",
   "gitHead": "71e22162bacb9368de045db4283f95f02194479b"
 }

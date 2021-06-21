@@ -1,6 +1,6 @@
 {
   "name": "gulp-stylint",
-  "version": "4.0.2",
+  "version": "4.0.0",
   "description": "Gulp plugin for stylus stylint linter",
   "license": "MIT",
   "repository": "danielhusar/gulp-stylint",
@@ -26,10 +26,9 @@
     "stylus"
   ],
   "dependencies": {
-    "plugin-error": "^1.0.1",
+    "gulp-util": "^3.0.7",
     "stylint": "1.4.1",
-    "through2": "^2.0.1",
-    "vinyl": "^2.1.0"
+    "through2": "^2.0.1"
   },
   "devDependencies": {
     "chalk": "^1.1.3",

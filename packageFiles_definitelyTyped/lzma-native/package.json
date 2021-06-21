@@ -1,8 +1,8 @@
 {
   "name": "lzma-native",
-  "version": "8.0.1",
+  "version": "4.0.0",
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=6.0.0"
   },
   "author": {
     "name": "Anna Henningsen",
@@ -11,12 +11,13 @@
   "description": "Provides bindings to the native liblzma library (.xz file format, among others)",
   "main": "index",
   "bin": {
-    "lzmajs": "bin/lzmajs"
+    "lzmajs": "./bin/lzmajs"
   },
   "dependencies": {
-    "node-addon-api": "^3.1.0",
-    "readable-stream": "^3.6.0",
-    "node-gyp-build": "^4.2.1"
+    "nan": "^2.10.0",
+    "node-pre-gyp": "^0.10.3",
+    "readable-stream": "^2.3.5",
+    "rimraf": "^2.6.1"
   },
   "keywords": [
     "lzma",
@@ -32,12 +33,9 @@
     "url": "https://github.com/addaleax/lzma-native.git"
   },
   "scripts": {
-    "install": "node-gyp-build",
-    "prebuild": "prebuildify --napi --tag-armv",
-    "prepack": "prebuildify-ci download && ([ $(ls prebuilds | wc -l) = '5' ] || (echo 'Some prebuilds are missing'; exit 1))",
+    "install": "node-pre-gyp install --fallback-to-build && node node_modules/rimraf/bin.js build",
     "test": "mocha --expose-gc -s 1000 -t 5000",
-    "prepare": "npm run prepare-win32 || true",
-    "prepare-win32": "cd deps && 7z x -y xz-5.2.3-windows.7z bin_i686/liblzma.dll bin_x86-64/liblzma.dll include doc/liblzma.def",
+    "prepare": "cd deps && 7z x -y xz-5.2.3-windows.7z bin_i686/liblzma.dll bin_x86-64/liblzma.dll include doc/liblzma.def",
     "jshint": "jshint ."
   },
   "gypfile": true,
@@ -45,10 +43,16 @@
     "url": "https://github.com/addaleax/lzma-native/issues"
   },
   "devDependencies": {
-    "bl": "^4.1.0",
-    "jshint": "^2.12.0",
-    "mocha": "^8.3.1",
-    "prebuildify": "^3.0.4",
-    "prebuildify-ci": "^1.0.5"
+    "bl": "^2.0.1",
+    "coveralls": "^3.0.0",
+    "istanbul": "^0.4.2",
+    "jshint": "^2.9.1",
+    "mocha": "^5.0.5"
+  },
+  "binary": {
+    "module_name": "lzma_native",
+    "module_path": "./binding-v{version}-{node_abi}-{platform}-{arch}/",
+    "host": "https://node-pre-gyp.addaleax.net",
+    "remote_path": "./lzma-native/"
   }
 }

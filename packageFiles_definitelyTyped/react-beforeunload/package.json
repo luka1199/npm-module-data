@@ -1,20 +1,16 @@
 {
   "name": "react-beforeunload",
-  "version": "2.5.1",
-  "description": "React component and hook which listens to the beforeunload window event.",
-  "main": "lib/index.cjs.js",
-  "module": "lib/index.esm.js",
+  "version": "2.1.0",
+  "description": "React component and hook which listens to `beforeunload` on the window when mounted.",
+  "main": "lib/index.js",
   "files": [
     "lib"
   ],
   "scripts": {
     "build": "rollup -c",
-    "coverage": "jest --coverage",
-    "lint": "eslint .",
-    "format": "prettier --write .",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run test",
-    "test": "jest"
+    "lint": "eslint src/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -37,33 +33,30 @@
   },
   "homepage": "https://github.com/jacobbuck/react-beforeunload#readme",
   "dependencies": {
-    "prop-types": "^15.7.2",
-    "tiny-invariant": "^1.1.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.13.16",
-    "@babel/preset-env": "^7.13.15",
-    "@babel/preset-react": "^7.13.13",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@testing-library/react-hooks": "^5.1.2",
-    "babel-eslint": "^10.1.0",
-    "babel-plugin-dev-expression": "^0.2.2",
-    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
-    "eslint": "^7.25.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jest": "^24.3.5",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^6.0.0",
-    "jest": "^26.6.3",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1",
-    "react": "17.0.2",
-    "react-test-renderer": "^17.0.2",
-    "rollup": "^2.45.2"
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0"
+    "react": "^16.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "prettier": "^1.17.1",
+    "rollup": "^1.13.1",
+    "rollup-plugin-babel": "^4.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

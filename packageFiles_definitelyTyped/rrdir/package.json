@@ -1,6 +1,6 @@
 {
   "name": "rrdir",
-  "version": "8.2.2",
+  "version": "8.2.0",
   "description": "Recursive directory reader with a delightful API",
   "author": "silverwind <me@silverwind.io>",
   "repository": "silverwind/rrdir",
@@ -20,13 +20,13 @@
   },
   "devDependencies": {
     "del": "6.0.0",
-    "eslint": "7.21.0",
-    "eslint-config-silverwind": "29.0.0",
-    "jest": "26.6.3",
-    "semver": "7.3.4",
+    "eslint": "7.11.0",
+    "eslint-config-silverwind": "21.0.0",
+    "jest": "26.5.3",
+    "semver": "7.3.2",
     "tempy": "1.0.0",
-    "updates": "11.4.3",
-    "versions": "8.4.5"
+    "updates": "11.2.5",
+    "versions": "8.4.3"
   },
   "keywords": [
     "recursive readdir",

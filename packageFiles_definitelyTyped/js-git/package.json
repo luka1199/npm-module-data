@@ -1,27 +1,29 @@
 {
   "name": "js-git",
-  "version": "0.7.8",
+  "version": "0.5.2",
   "description": "Git Implemented in JavaScript",
-  "keywords": [
-    "git",
-    "js-git"
-  ],
+  "main": "js-git.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/creationix/js-git.git"
   },
+  "devDependencies": {
+    "git-fs-db": "~0.1.1",
+    "git-net": "~0.0.3",
+    "git-node-platform": "~0.1.4",
+    "gen-run": "~0.1.1"
+  },
+  "keywords": [
+    "git",
+    "js-git"
+  ],
   "author": "Tim Caswell <tim@creationix.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/creationix/js-git/issues"
   },
-  "scripts": {
-    "test": "ls test/test-* | xargs -n1 node"
-  },
   "dependencies": {
-    "bodec": "^0.1.0",
-    "culvert": "^0.1.2",
-    "git-sha1": "^0.1.2",
-    "pako": "^0.2.5"
+    "push-to-pull": "~0.1.0",
+    "git-pack-codec": "~0.0.1"
   }
 }

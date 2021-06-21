@@ -1,34 +1,29 @@
 {
   "name": "tunnel",
-  "version": "0.0.6",
+  "version": "0.0.0",
   "description": "Node HTTP/HTTPS Agents for tunneling proxies",
   "keywords": [
     "http",
     "https",
     "agent",
-    "proxy",
-    "tunnel"
+    "proxy"
   ],
-  "homepage": "https://github.com/koichik/node-tunnel/",
-  "bugs": "https://github.com/koichik/node-tunnel/issues",
-  "license": "MIT",
+  "homepage": "http://github.com/koichik/node-tunnel/",
   "author": "Koichi Kobayashi <koichik@improvement.jp>",
   "main": "./index.js",
-  "directories": {
-    "lib": "./lib"
+  "licenses": {
+    "type": "The MIT License",
+    "url": "http://www.opensource.org/licenses/mit-license.php"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/koichik/node-tunnel.git"
-  },
-  "scripts": {
-    "test": "mocha"
+  "repositories": "https://github.com/koichik/node-tunnel.git",
+  "engines": {
+    "node": "0.7.0 || >=0.7.3"
   },
   "devDependencies": {
-    "mocha": "^5.2.0",
-    "should": "^13.2.3"
+    "mocha": "*",
+    "should": "*"
   },
-  "engines": {
-    "node": ">=0.6.11 <=0.7.0 || >=0.7.3"
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
   }
 }

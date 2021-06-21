@@ -1,88 +1,88 @@
 {
-  "version": "3.6.2",
-  "name": "enzyme-to-json",
-  "description": "convert enzyme wrapper to a format compatible with Jest snapshot",
-  "main": "index.js",
-  "scripts": {
-    "build": "babel src -d ./",
-    "clean": "rm *.js",
-    "prepublishOnly": "yarn build",
-    "lint": "eslint src tests/core && yarn format-check",
-    "format": "prettier src/**/*.js tests/core/*.js tests/core/**/*.js --write --single-quote --trailing-comma all --no-bracket-spacing",
-    "format-check": "prettier-check src/**/*.js tests/core/*.js tests/core/**/*.js --write --single-quote --trailing-comma all --no-bracket-spacing",
-    "test": "yarn lint && yarn test-core",
-    "test-core": "NODE_ENV=test jest --coverage"
-  },
-  "keywords": [
-    "enzyme",
-    "jest",
-    "snapshot",
-    "wrapper",
-    "pretty-format",
-    "cheerio",
-    "convert",
-    "testing",
-    "unit",
-    "test"
-  ],
-  "author": "Adrien Antoine <adriantoine@gmail.com> (http://adriantoine.com)",
-  "homepage": "https://github.com/adriantoine/enzyme-to-json#readme",
-  "bugs": {
-    "url": "https://github.com/adriantoine/enzyme-to-json/issues",
-    "email": "adrien@tray.io"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/adriantoine/enzyme-to-json.git"
-  },
-  "engines": {
-    "node": ">=6.0.0"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@types/cheerio": "^0.22.22",
-    "lodash": "^4.17.21",
-    "react-is": "^16.12.0"
-  },
-  "peerDependencies": {
-    "enzyme": "^3.4.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.8.4",
-    "@babel/core": "^7.11.2",
-    "@babel/preset-env": "^7.7.1",
-    "@babel/preset-react": "^7.7.0",
-    "babel-jest": "^24.9.0",
-    "codecov": "^3.6.1",
-    "enzyme": "^3.7.0",
-    "enzyme-adapter-react-16": "^1.7.0",
-    "eslint": "^4.8.0",
-    "eslint-config-prettier": "^2.6.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-config-standard-react": "^5.0.0",
-    "eslint-plugin-import": "^2.7.0",
-    "eslint-plugin-node": "^5.2.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.4.0",
-    "eslint-plugin-standard": "^3.0.1",
-    "jest": "^24.9.0",
-    "prettier": "^1.7.4",
-    "prettier-check": "^2.0.0",
-    "prop-types": "^15.6.2",
-    "raf": "^3.4.1",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-test-renderer": "^16.6.0"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ],
-    "coveragePathIgnorePatterns": [
-      "<rootDir>/tests"
-    ],
-    "setupFiles": [
-      "raf/polyfill"
-    ]
-  }
+	"name": "enzyme-to-json",
+	"description": "convert enzyme wrapper to a format compatible with Jest snapshot",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "babel src -d build && babel src/serializer.js -o serializer.js",
+		"prepublish": "npm run build",
+		"lint": "eslint src tests/core",
+		"format": "prettier src/**/*.js tests/core/**/*.js --write --print-width=100 --single-quote --trailing-comma --no-bracket-spacing",
+		"test": "npm run lint && npm run test-core && npm run test-serializer",
+		"test-core": "NODE_ENV=test jest --coverage",
+		"test-serializer": "cd tests/serializer && rm -rf node_modules && npm install && npm test",
+		"semantic-release": "semantic-release pre && npm publish && semantic-release post"
+	},
+	"keywords": [
+		"enzyme",
+		"jest",
+		"snapshot",
+		"wrapper",
+		"pretty-format",
+		"cheerio",
+		"convert",
+		"testing",
+		"unit",
+		"test"
+	],
+	"author": "Adrien Antoine <adriantoine@gmail.com> (http://adriantoine.com)",
+	"homepage": "https://github.com/adriantoine/enzyme-to-json#readme",
+	"bugs": {
+		"url": "https://github.com/adriantoine/enzyme-to-json/issues",
+		"email": "adrien@tray.io"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/adriantoine/enzyme-to-json.git"
+	},
+	"engines": {
+		"node": ">=4.0.0"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"lodash.filter": "^4.6.0",
+		"lodash.isnil": "^4.0.0",
+		"lodash.isplainobject": "^4.0.6",
+		"lodash.omitby": "^4.5.0",
+		"lodash.range": "^3.2.0",
+		"object-values": "^1.0.0",
+		"object.entries": "^1.0.3"
+	},
+	"peerDependencies": {
+		"enzyme": "^2.7.1"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.22.2",
+		"babel-jest": "^18.0.0",
+		"babel-plugin-syntax-export-extensions": "^6.13.0",
+		"babel-preset-es2015": "^6.22.0",
+		"babel-preset-react": "^6.22.0",
+		"codecov": "^1.0.1",
+		"cz-conventional-changelog": "^1.2.0",
+		"enzyme": "^2.7.1",
+		"eslint": "^3.15.0",
+		"eslint-config-prettier": "^1.0.3",
+		"eslint-config-standard": "^6.2.1",
+		"eslint-config-standard-react": "^4.2.0",
+		"eslint-plugin-promise": "^3.4.1",
+		"eslint-plugin-react": "^6.9.0",
+		"eslint-plugin-standard": "^2.0.1",
+		"husky": "~0.13.1",
+		"jest": "^18.1.0",
+		"prettier": "~0.16.0",
+		"react": "^15.4.2",
+		"react-addons-test-utils": "^15.4.2",
+		"react-dom": "^15.4.2",
+		"semantic-release": "^6.3.2"
+	},
+	"jest": {
+		"testPathIgnorePatterns": [
+			"<rootDir>/tests/serializer",
+			"<rootDir>/node_modules/"
+		]
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
 }

@@ -1,38 +1,79 @@
 {
-  "private": true,
-  "workspaces": [
-    "packages/*"
+  "name": "micro",
+  "version": "7.3.0",
+  "description": "Asynchronous HTTP microservices",
+  "main": "./lib/server.js",
+  "files": [
+    "bin",
+    "lib"
   ],
   "scripts": {
-    "test": "npm run lint && NODE_ENV=test nyc --check-coverage --statements 100 --branches 100 --functions 100 --lines 100 ava",
-    "lint": "zeit-eslint --ext .jsx,.js .",
-    "lint-staged": "git diff --diff-filter=ACMRT --cached --name-only '*.js' '*.jsx' | xargs zeit-eslint",
-    "prepublish": "lerna run prepublish",
-    "publish-canary": "lerna version prerelease --preid canary --force-publish && release --pre",
-    "publish-stable": "lerna version --force-publish"
+    "precommit": "lint-staged",
+    "lint": "xo",
+    "test": "npm run lint && NODE_ENV=test nyc ava"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "node-fetch": "2.6.0",
-    "lerna": "^3.4.0",
-    "@zeit/eslint-config-node": "0.2.13",
-    "@zeit/git-hooks": "0.1.4",
-    "ava": "0.23.0",
-    "eslint": "4.19.1",
-    "husky": "0.14.3",
-    "nyc": "11.3.0",
-    "resumer": "0.0.0",
-    "rewire": "3.0.2",
-    "sinon": "4.4.3",
-    "test-listen": "1.0.2",
-    "then-sleep": "1.0.1"
+  "xo": {
+    "ignores": [
+      "examples/**/*"
+    ],
+    "extends": "prettier"
   },
-  "eslintConfig": {
-    "extends": [
-      "@zeit/eslint-config-node"
+  "lint-staged": {
+    "*.js": [
+      "npm run lint",
+      "prettier --single-quote --write",
+      "git add"
     ]
   },
-  "git": {
-    "pre-commit": "lint-staged"
+  "bin": {
+    "micro": "./bin/micro.js"
+  },
+  "repository": "zeit/micro",
+  "keywords": [
+    "micro",
+    "service",
+    "microservice",
+    "serverless",
+    "API"
+  ],
+  "author": {
+    "name": "Zeit, Inc.",
+    "email": "team@zeit.co"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zeit/micro/issues"
+  },
+  "homepage": "https://github.com/zeit/micro#readme",
+  "devDependencies": {
+    "ava": "0.18.2",
+    "coveralls": "2.12.0",
+    "eslint-config-prettier": "1.5.0",
+    "husky": "0.13.3",
+    "lint-staged": "3.4.0",
+    "nyc": "10.1.2",
+    "prettier": "0.22.0",
+    "request": "2.81.0",
+    "request-promise": "4.2.0",
+    "resumer": "0.0.0",
+    "test-listen": "1.0.1",
+    "then-sleep": "1.0.1",
+    "xo": "0.18.1"
+  },
+  "dependencies": {
+    "args": "2.4.0",
+    "async-to-gen": "1.3.2",
+    "bluebird": "3.5.0",
+    "boxen": "1.0.0",
+    "chalk": "1.1.3",
+    "clipboardy": "1.0.2",
+    "detect-port": "1.1.1",
+    "ip": "1.1.5",
+    "is-async-supported": "1.2.0",
+    "isstream": "0.1.2",
+    "media-typer": "0.3.0",
+    "node-version": "1.0.0",
+    "raw-body": "2.2.0",
+    "update-notifier": "2.1.0"
   }
 }

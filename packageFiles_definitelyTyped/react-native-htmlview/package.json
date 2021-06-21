@@ -1,23 +1,30 @@
 {
   "name": "react-native-htmlview",
-  "version": "0.16.0",
+  "version": "0.12.0",
   "description": "A component which renders HTML content as native views",
   "main": "index.js",
   "scripts": {
-    "test": "yarn run lint && yarn run jest",
-    "lint": "./format.sh --list-different; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run 'yarn format' and commit the changes\"; exit 1; fi",
-    "format": "./format.sh --write",
-    "release": "npm publish .; git push && git push --tags # yarn publish is often broken",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "test": "yarn run format-lint && yarn run lint && yarn run jest",
+    "format-lint": "./format.sh --list-different; if [ $? != 0 ]; then echo \"CODE FORMATTING: please run 'yarn run format' and commit the changes\"; exit 1; fi",
+    "format": "./format.sh --write && eslint . --fix",
     "jest": "jest"
   },
   "devDependencies": {
-    "@babel/runtime": "^7.5.5",
-    "babel-preset-expo": "^5.0.0",
-    "jest": "^24.8.0",
-    "prettier": "^1.18.2",
-    "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
-    "react-test-renderer": "16.5.0"
+    "babel-eslint": "^7.2.3",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.5.0",
+    "eslint": "^4.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "jest": "^19.0.2",
+    "prettier": "^1.5.2",
+    "prop-types": "^15.5.10",
+    "react": "^15.4.2",
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-native": "^0.42.0",
+    "react-test-renderer": "~15.4.0"
   },
   "jest": {
     "preset": "react-native"
@@ -41,6 +48,6 @@
   },
   "dependencies": {
     "entities": "^1.1.1",
-    "htmlparser2-without-node-native": "^3.9.2"
+    "htmlparser2-without-node-native": "^3.9.0"
   }
 }

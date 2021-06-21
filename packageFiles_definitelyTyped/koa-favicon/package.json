@@ -2,7 +2,7 @@
   "name": "koa-favicon",
   "description": "favicon bounce middleware for koa",
   "repository": "koajs/favicon",
-  "version": "2.1.0",
+  "version": "2.0.0",
   "keywords": [
     "koa",
     "middleware",
@@ -12,18 +12,18 @@
     "index.js"
   ],
   "devDependencies": {
-    "istanbul": "^0.4.5",
-    "koa": "^2.11.0",
-    "mocha": "^7.1.0",
-    "supertest": "^4.0.2"
+    "istanbul": "^0.4.2",
+    "koa": "2.0.0-alpha.3",
+    "mocha": "^2.0.0",
+    "supertest": "^1.0.0"
   },
   "dependencies": {
-    "mz": "^2.7.0"
+    "mz": "^2.0.0"
   },
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test mocha --reporter spec --exit",
-    "test-cov": "NODE_ENV=test istanbul cover ./node_modules/.bin/_mocha -- --exit",
-    "test-travis": "NODE_ENV=test istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --exit"
+    "test": "NODE_ENV=test mocha --harmony --reporter spec",
+    "test-cov": "NODE_ENV=test node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha",
+    "test-travis": "NODE_ENV=test node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly"
   }
 }

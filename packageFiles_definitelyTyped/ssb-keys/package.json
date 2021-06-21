@@ -1,37 +1,23 @@
 {
   "name": "ssb-keys",
   "description": "keyfile operations for ssb",
-  "version": "8.1.0",
+  "version": "7.2.0",
   "homepage": "https://github.com/ssbc/ssb-keys",
   "repository": {
     "type": "git",
     "url": "git://github.com/ssbc/ssb-keys.git"
   },
   "dependencies": {
-    "chloride": "~2.4.1",
+    "chloride": "^2.2.8",
     "mkdirp": "~0.5.0",
-    "private-box": "~0.3.0"
+    "private-box": "^0.3.0"
   },
   "devDependencies": {
-    "eslint": "^7.9.0",
-    "husky": "^4.3.0",
-    "nyc": "^15.1.0",
-    "prettier": "^2.1.2",
-    "pretty-quick": "^3.0.2",
-    "tape": "^5.1.1"
-  },
-  "engines": {
-    "node": ">=5.10.0"
+    "tape": "^3.0.3"
   },
   "scripts": {
-    "test": "eslint *.js && nyc tape test/*",
-    "test-verbose": "VERBOSE_TESTS=1 npm run test"
+    "test": "tape test/*"
   },
   "author": "Paul Frazee <pfrazee@gmail.com>",
-  "license": "MIT",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  }
+  "license": "MIT"
 }

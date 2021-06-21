@@ -19,27 +19,19 @@
     "url": "https://github.com/leocwlam/system-service/issues"
   },
   "homepage": "https://github.com/leocwlam/system-service#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "standard && pretty-quick --staged"
-    }
-  },
   "dependencies": {
-    "system-logger": "^2.2.0",
-    "uuid": "^8.3.2"
+    "system-logger": "^2.1.3",
+    "uuid": "^8.1.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "coveralls": "^3.1.0",
-    "eslint": "^7.18.0",
-    "husky": "^4.3.8",
-    "mocha": "^8.2.1",
-    "nyc": "^15.1.0",
-    "prettier": "^2.2.1",
-    "pretty-quick": "^3.1.0",
-    "semantic-release": "^17.3.7",
-    "sinon": "^9.2.4",
-    "standard": "^16.0.3",
-    "uglify-es": "^3.3.10"
+    "eslint": "^7.1.0",
+    "mocha": "^7.2.0",
+    "nyc": "^15.0.1",
+    "semantic-release": "^17.0.8",
+    "sinon": "^9.0.2",
+    "standard": "^14.3.4",
+    "uglify-es": "^3.3.9"
   }
 }

@@ -1,23 +1,17 @@
 {
   "name": "leaflet.markercluster.layersupport",
   "_name": "Leaflet.MarkerCluster.LayerSupport",
-  "version": "2.0.1",
-  "_year": "2015-2018",
+  "version": "1.0.2",
+  "_year": "2015-2016",
   "description": "Sub-plugin for Leaflet.markercluster plugin (MCG in short); brings compatibility with L.Control.Layers and other Leaflet plugins.",
   "main": "dist/leaflet.markercluster.layersupport",
-  "files": [
-    "dist/*.js",
-    "dist/*.map"
-  ],
+  "files": ["dist/*.js"],
   "directories": {
     "example": "examples"
   },
   "scripts": {
     "build": "jake build",
-    "docs": "jake buildDocs",
-    "version": "npm run build && npm run docs && git add README.md",
-    "postversion": "npm run build",
-    "prepublish": "npm run build"
+    "prepublish": "jake"
   },
   "repository": {
     "type": "git",

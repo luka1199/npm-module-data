@@ -1,6 +1,6 @@
 {
   "name": "koa-morgan",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "HTTP request logger middleware for koa",
   "author": "Fangdun Cai <cfddream@gmail.com>",
   "license": "MIT",
@@ -16,12 +16,12 @@
     "morgan"
   ],
   "dependencies": {
-    "morgan": "^1.6.1"
+    "morgan": "github:expressjs/morgan"
   },
   "devDependencies": {
-    "co": "^4.x",
+    "co": "^4.6.0",
     "isparta": "^4.x",
-    "koa": "next",
+    "koa": "^2.0.0-alpha.3",
     "mocha": "^2.x",
     "power-assert": "^1.x",
     "split": "^1.x",

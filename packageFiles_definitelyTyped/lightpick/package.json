@@ -1,6 +1,6 @@
 {
   "name": "lightpick",
-  "version": "1.5.0",
+  "version": "1.4.0",
   "description": "Javascript date range picker - lightweight, no jQuery",
   "main": "lightpick.js",
   "scripts": {
@@ -23,13 +23,6 @@
     "email": "lightpick@coding.kz",
     "url": "http://coding.kz"
   },
-  "contributors": [
-    {
-      "name": "Sinan Keskin",
-      "email": "sinan@kesk.in",
-      "url": "https://kesk.in"
-    }
-  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wakirin/lightpick/issues"

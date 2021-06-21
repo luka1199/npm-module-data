@@ -1,6 +1,6 @@
 {
   "name": "gulp-responsive-images",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "description": "Resize/rename images for responsive designs.",
   "author": {
     "name": "David Gauld",
@@ -20,8 +20,8 @@
     "async": "^1.4.2",
     "gm": "^1.18.1",
     "gulp-util": "^3.0.6",
-    "lodash": "^4.17.5",
-    "minimatch": "^3.0.4",
+    "lodash": "^3.10.1",
+    "minimatch": "^2.0.10",
     "rename": "^1.0.3",
     "through2": "^2.0.0"
   }

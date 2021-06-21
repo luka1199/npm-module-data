@@ -1,7 +1,7 @@
 {
   "name": "hapi-auth-bearer-token",
   "description": "Simple Bearer authentication scheme plugin for hapi, accepts token by Header, Cookie or Query parameter.",
-  "version": "8.0.0",
+  "version": "6.1.0",
   "author": "John Brett <johnbrett7@gmail.com> (https://johnbrett.me)",
   "repository": {
     "type": "git",
@@ -22,23 +22,21 @@
     "node": ">=8.0.0"
   },
   "dependencies": {
-    "@hapi/hoek": "^9.0.0"
+    "boom": "^7.1.1",
+    "hoek": "^5.0.2",
+    "joi": "^13.5.2"
   },
   "peerDependencies": {
-    "@hapi/boom": ">=7.x.x",
-    "@hapi/hapi": ">=19.x.x",
-    "joi": ">=17.x.x"
+    "hapi": ">=17.x.x"
   },
   "devDependencies": {
-    "@hapi/boom": "^9.1.0",
-    "@hapi/code": "^8.0.0",
-    "@hapi/hapi": "^20.0.0",
-    "@hapi/lab": "^23.0.0",
-    "joi": "^17.2.1"
+    "code": "^5.1.2",
+    "hapi": "^17.0.1",
+    "lab": "^15.1.2"
   },
   "scripts": {
-    "test": "lab -a @hapi/code -t 100 -L",
-    "test-cov-html": "lab -a @hapi/code -r html -o coverage.html"
+    "test": "lab -a code -t 100 -L",
+    "test-cov-html": "lab -a code -r html -o coverage.html"
   },
   "bugs": {
     "url": "https://github.com/johnbrett/hapi-auth-bearer-token/issues"

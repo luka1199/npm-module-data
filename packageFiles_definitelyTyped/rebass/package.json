@@ -7,7 +7,6 @@
   "scripts": {
     "prepare": "lerna run prepare",
     "start": "yarn workspace docs start",
-    "build": "yarn workspace docs build",
     "test": "jest",
     "cover": "npx codecov"
   },
@@ -16,17 +15,13 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
-    "@testing-library/react": "^10.0.4",
-    "jest": "^25.2.4",
+    "jest": "^24.8.0",
     "jest-emotion": "^10.0.14",
     "jest-styled-components": "^6.3.3",
     "lerna": "^3.16.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6"
-  },
-  "resolutions": {
-    "@mdx-js/react": "^1.5.5"
   },
   "jest": {
     "testMatch": [
@@ -41,8 +36,7 @@
       "html"
     ],
     "collectCoverageFrom": [
-      "packages/**/src/*.js",
-      "!packages/docs/**/*.js"
+      "packages/**/src/*.js"
     ],
     "coverageThreshold": {
       "global": {
@@ -52,7 +46,8 @@
         "statements": 90
       }
     },
-    "setupFilesAfterEnv": [],
+    "setupFilesAfterEnv": [
+    ],
     "snapshotSerializers": [
       "jest-emotion"
     ]

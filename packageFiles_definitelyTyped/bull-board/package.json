@@ -1,100 +1,58 @@
 {
-  "name": "@bull-board/root",
-  "version": "3.2.8",
-  "private": true,
+  "name": "bull-board",
   "description": "Bull queue UI for inspecting jobs",
   "keywords": [
     "bull",
-    "bullmq",
     "redis",
-    "queue",
-    "monitoring",
-    "dashboard"
+    "queue"
   ],
-  "bugs": {
-    "url": "https://github.com/felixmosh/bull-board/issues"
-  },
+  "main": "index.js",
+  "private": false,
+  "version": "0.6.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/felixmosh/bull-board.git"
+    "url": "https://github.com/vcapretz/bull-board.git"
   },
-  "license": "MIT",
-  "author": "felixmosh",
-  "contributors": [
-    "Erik Engervall <erik.engervall@gmail.com>",
-    "felixmosh"
-  ],
-  "workspaces": [
-    "packages/*"
-  ],
+  "bugs": {
+    "url": "https://github.com/vcapretz/bull-board/issues"
+  },
   "scripts": {
-    "prepublishOnly": "yarn build",
-    "lint": "eslint \"./packages/**/*.ts*\"",
-    "build": "lerna run build",
-    "start:dev:docker": "docker-compose up -d",
-    "start:dev:ui": "lerna run --scope @bull-board/ui start",
-    "start:dev:server": "ts-node-dev --rs example.ts",
-    "start:dev": "concurrently \"yarn start:dev:ui\" \"yarn start:dev:server\"",
-    "test": "lerna run test",
-    "clean": "lerna run clean",
-    "release": "release-it --only-version"
+    "prepublishOnly": "rm -rf ./build && yarn build",
+    "test": "node ./dockest.js",
+    "build": "NODE_ENV=production webpack",
+    "build:watch": "NODE_ENV=production webpack --watch",
+    "start": "node example.js",
+    "start:dev": "concurrently \"yarn build:watch\" \"yarn start\"",
+    "start:example": "yarn build && yarn start"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "bull": "3.11.0",
+    "date-fns": "2.4.1",
+    "ejs": "^2.6.1",
+    "express": "^4.15.2",
+    "express-async-router": "^0.1.15",
+    "pretty-bytes": "^5.1.0",
+    "ramda": "^0.26.1",
+    "react": "16.10.2",
+    "react-dom": "16.10.2",
+    "react-highlight": "^0.12.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/plugin-proposal-class-properties": "^7.13.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.14.2",
-    "@babel/plugin-transform-runtime": "^7.14.3",
-    "@babel/preset-env": "^7.14.2",
-    "@babel/preset-react": "^7.12.13",
-    "@babel/preset-typescript": "^7.13.0",
-    "@babel/runtime": "^7.14.0",
-    "@types/bull": "^3.15.1",
-    "@types/ioredis": "^4.26.4",
-    "@types/jest": "^26.0.23",
-    "@types/node": "^15.6.1",
-    "@types/redis-info": "^3.0.0",
-    "@types/supertest": "^2.0.10",
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
-    "@typescript-eslint/parser": "^4.25.0",
-    "auto-changelog": "^2.3.0",
-    "babel-loader": "^8.2.2",
-    "bull": "^3.22.6",
-    "bullmq": "^1.28.0",
-    "concurrently": "^6.2.0",
-    "eslint": "^7.27.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-no-only-tests": "^2.6.0",
-    "eslint-plugin-react": "^7.21.5",
-    "jest": "^27.0.1",
-    "lerna": "^4.0.0",
-    "prettier": "^2.3.0",
-    "release-it": "^14.7.0",
-    "release-it-yarn-workspaces": "^2.0.1",
-    "supertest": "^6.0.1",
-    "ts-jest": "^27.0.1",
-    "ts-node-dev": "^1.1.6",
-    "typescript": "^4.3.2"
-  },
-  "release-it": {
-    "plugins": {
-      "release-it-yarn-workspaces": true
-    },
-    "git": {
-      "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/master/templates/changelog-compact.hbs"
-    },
-    "hooks": {
-      "before:init": [
-        "yarn lint",
-        "yarn test"
-      ],
-      "after:bump": [
-        "npx auto-changelog -p",
-        "yarn build"
-      ]
-    },
-    "github": {
-      "release": true
-    },
-    "npm": false
+    "babel-preset-react-app": "^7.0.2",
+    "concurrently": "^4.1.2",
+    "css-loader": "^2.1.1",
+    "dockest": "^1.0.3",
+    "eslint": "^6.2.1",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "react-dev-utils": "^8.0.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-manifest-plugin": "^2.0.4"
   }
 }

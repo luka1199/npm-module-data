@@ -1,15 +1,14 @@
 {
   "name": "sinon-stub-promise",
-  "version": "4.0.0",
+  "version": "2.1.0",
   "description": "Synchronous Promise stubbing for Sinon.JS",
   "author": "Alex May <alex@substantial.com>",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/substantial/sinon-stub-promise"
   },
   "engines": {
-    "node": ">= 0.10"
+    "node": "0.10 || 0.12 || 4 || 5 || 6"
   },
   "main": "index.js",
   "scripts": {

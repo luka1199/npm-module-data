@@ -3,30 +3,25 @@
   "description": "Get environment variables exposed by CI services",
   "version": "0.0.0-development",
   "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
-  "ava": {
-    "files": [
-      "test/**/*.test.js"
-    ]
-  },
   "bugs": {
     "url": "https://github.com/pvdlg/github-parser/issues"
   },
   "dependencies": {
-    "execa": "^4.0.0",
-    "java-properties": "^1.0.0"
+    "execa": "^1.0.0",
+    "java-properties": "^0.2.9"
   },
   "devDependencies": {
-    "ava": "^3.1.0",
+    "ava": "^0.25.0",
     "codecov": "^3.0.0",
-    "file-url": "^3.0.0",
-    "nyc": "^15.0.0",
+    "file-url": "^2.0.2",
+    "nyc": "^12.0.1",
     "proxyquire": "^2.1.0",
-    "semantic-release": "^17.0.0",
-    "tempy": "^0.5.0",
-    "xo": "^0.28.0"
+    "semantic-release": "^15.0.0",
+    "tempy": "^0.2.1",
+    "xo": "^0.23.0"
   },
   "engines": {
-    "node": ">=10.13"
+    "node": ">=6"
   },
   "files": [
     "index.js",
@@ -50,12 +45,9 @@
     "drone",
     "environment",
     "git",
-    "github",
     "gitlab",
     "jenkins",
-    "puppet",
     "sail",
-    "scrutinizer",
     "semaphore",
     "shippable",
     "teamcity",
@@ -97,10 +89,6 @@
     "test": "xo && nyc ava -v"
   },
   "xo": {
-    "prettier": true,
-    "space": true,
-    "rules": {
-      "unicorn/string-content": "off"
-    }
+    "prettier": true
   }
 }

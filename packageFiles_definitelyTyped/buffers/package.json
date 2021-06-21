@@ -6,13 +6,9 @@
     "author" : "James Halliday <mail@substack.net> (http://substack.net)",
     "main" : "./index",
     "scripts" : {
-        "test" : "tap test/*.js"
+        "test" : "expresso"
     },
     "engines" : {
         "node" : ">=0.2.0"
-    },
-    "devDependencies" : {
-        "tap" : "~0.2.4"
-    },
-    "license" : "MIT/X11"
+    }
 }

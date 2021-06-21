@@ -1,27 +1,23 @@
 {
   "name": "multistream",
-  "description": "A stream that emits multiple other streams one after another (streams3)",
-  "version": "4.1.0",
-  "author": {
-    "name": "Feross Aboukhadijeh",
-    "email": "feross@feross.org",
-    "url": "https://feross.org"
-  },
+  "description": "A stream that emits multiple other streams one after another (streams2)",
+  "version": "2.1.0",
+  "author": "Feross Aboukhadijeh <feross@feross.org> (http://feross.org/)",
   "bugs": {
     "url": "https://github.com/feross/multistream/issues"
   },
   "dependencies": {
-    "once": "^1.4.0",
-    "readable-stream": "^3.6.0"
+    "inherits": "^2.0.1",
+    "readable-stream": "^2.0.5"
   },
   "devDependencies": {
-    "airtap": "^3.0.0",
-    "array-to-stream": "^1.0.2",
-    "simple-concat": "^1.0.1",
-    "standard": "*",
-    "string-to-stream": "^3.0.1",
-    "tape": "^5.0.1",
-    "through": "^2.3.8"
+    "array-to-stream": "^1.0.0",
+    "concat-stream": "^1.4.6",
+    "standard": "^7.0.0",
+    "string-to-stream": "^1.0.0",
+    "tape": "^4.0.0",
+    "through": "^2.3.4",
+    "zuul": "^3.0.0"
   },
   "homepage": "https://github.com/feross/multistream",
   "keywords": [
@@ -47,22 +43,8 @@
   },
   "scripts": {
     "test": "standard && npm run test-node && npm run test-browser",
-    "test-browser": "airtap -- test/*.js",
-    "test-browser-local": "airtap --local -- test/*.js",
+    "test-browser": "zuul -- test/*.js",
+    "test-browser-local": "zuul --local -- test/*.js",
     "test-node": "tape test/*.js"
-  },
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/feross"
-    },
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/feross"
-    },
-    {
-      "type": "consulting",
-      "url": "https://feross.org/support"
-    }
-  ]
+  }
 }

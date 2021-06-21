@@ -1,19 +1,30 @@
 {
-    "name": "jspreadsheet-ce",
+    "name": "jexcel",
     "title": "The Javascript Spreadsheet",
-    "description": "Jspreadsheet is a lightweight, vanilla javascript plugin to create amazing web-based interactive tables and spreadsheets compatible with Excel, Google Spreadsheets and any other spreadsheet software.",
+    "description": "jExcel is a lightweight, vanilla javascript plugin to create amazing web-based interactive tables and spreadsheets compatible with Excel, Google Spreadsheets and any other spreadsheet software.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/jspreadsheet/ce.git"
+        "url": "https://github.com/paulhodel/jexcel.git"
     },
     "author": {
-        "name": "Contact <contact@jspreadsheet.com>"
+        "name": "Paul Hodel <paul.hodel@gmail.com>",
+        "url": "https://www.linkedin.com/in/paulhodel"
     },
+    "maintainers": [
+        {
+            "name": "Paul Hodel",
+            "email": "paul.hodel@gmail.com",
+            "url": "http://paulhodel.com"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/paulhodel/jexcel/blob/master/LICENSE"
+        }
+    ],
     "keywords": [
         "spreadsheet",
-        "online spreadsheet",
-        "jspreadsheet",
-        "jexcel",
         "tables",
         "table",
         "excel",
@@ -24,11 +35,12 @@
         "data-spreadsheet"
     ],
     "dependencies": {
-        "jsuites": "^4.3.0"
+        "jsuites": "^2.7.1"
     },
-    "main": "dist/index.js",
-    "version": "4.7.3",
-    "bugs": "https://github.com/jspreadsheet/ce/issues",
-    "homepage": "https://github.com/jspreadsheet/ce",
-    "download": "https://github.com/jspreadsheet/ce/archive/master.zip"
+    "main": "dist/jexcel.js",
+    "version": "3.9.0",
+    "bugs": "https://github.com/paulhodel/jexcel/issues",
+    "homepage": "https://github.com/paulhodel/jexcel",
+    "docs": "https://bossanova.uk/jexcel",
+    "download": "https://github.com/paulhodel/jexcel/archive/master.zip"
 }

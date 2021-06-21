@@ -1,5 +1,5 @@
 {
-  "version": "1.25.0",
+  "version": "1.23.0",
   "name": "httpsnippet",
   "description": "HTTP Request snippet generator for *most* languages",
   "author": "Ahmad Nassri <ahmad@mashape.com> (https://www.mashape.com/)",
@@ -38,7 +38,7 @@
     "xmlhttprequest"
   ],
   "engines": {
-    "node": ">=10"
+    "node": ">=4"
   },
   "files": [
     "bin",
@@ -57,7 +57,6 @@
     "codeclimate": "codeclimate < coverage/lcov.info"
   },
   "standard": {
-    "env": "mocha",
     "ignore": [
       "**/test/fixtures/**"
     ]
@@ -74,10 +73,10 @@
     "echint": "^4.0.2",
     "glob": "^6.0.1",
     "istanbul": "^0.4.0",
-    "mocha": "^8.2.1",
+    "mocha": "^6.2.0",
     "require-directory": "^2.1.1",
     "should": "^13.2.3",
-    "standard": "^16.0.3"
+    "standard": "^10.0.2"
   },
   "dependencies": {
     "chalk": "^1.1.1",
@@ -88,6 +87,7 @@
     "fs-readfile-promise": "^2.0.1",
     "fs-writefile-promise": "^1.0.3",
     "har-validator": "^5.0.0",
+    "pinkie-promise": "^2.0.0",
     "stringify-object": "^3.3.0"
   }
 }

@@ -1,14 +1,11 @@
 {
   "name": "jest-in-case",
-  "version": "1.0.2",
-  "description": "Jest utility for creating variations of the same test",
+  "version": "1.0.0",
+  "description": "Jest utility for creating variantions of the same test",
   "main": "index.js",
   "repository": "Thinkmill/jest-in-case",
   "author": "James Kyle <me@thejameskyle.com>",
   "license": "MIT",
-  "engines": {
-    "node": ">=4"
-  },
   "files": [
     "index.js"
   ],
@@ -22,6 +19,6 @@
   },
   "devDependencies": {
     "flow-bin": "^0.53.1",
-    "jest": "^23.6.0"
+    "jest": "^20.0.4"
   }
 }

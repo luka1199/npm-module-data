@@ -1,6 +1,6 @@
 {
   "name": "svg-sprite-loader",
-  "version": "6.0.7",
+  "version": "3.9.0",
   "description": "Webpack loader for creating SVG sprites",
   "keywords": [
     "svg",
@@ -13,11 +13,11 @@
     "webpack loader",
     "webpack plugin"
   ],
-  "homepage": "https://github.com/JetBrains/svg-sprite-loader#readme",
-  "bugs": "https://github.com/JetBrains/svg-sprite-loader/issues",
+  "homepage": "https://github.com/kisenka/svg-sprite-loader#readme",
+  "bugs": "https://github.com/kisenka/svg-sprite-loader/issues",
   "license": "MIT",
   "author": "kisenka",
-  "repository": "JetBrains/svg-sprite-loader",
+  "repository": "kisenka/svg-sprite-loader",
   "main": "lib/loader.js",
   "files": [
     "examples/**",
@@ -36,8 +36,8 @@
     "domready": "1.0.8",
     "escape-string-regexp": "1.0.5",
     "loader-utils": "^1.1.0",
-    "svg-baker": "^1.5.0",
-    "svg-baker-runtime": "^1.4.7",
+    "svg-baker": "^1.2.17",
+    "svg-baker-runtime": "^1.3.3",
     "url-slug": "2.0.0"
   },
   "devDependencies": {
@@ -47,11 +47,12 @@
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "6.24.1",
     "chai": "^3.5.0",
-    "ci-publish": "^1.3.1",
+    "ci-publish": "^1.3.0",
     "codeclimate-test-reporter": "0.4.1",
     "commitizen": "2.9.6",
     "css-loader": "^0.28.0",
     "cz-customizable": "^5.0.0",
+    "eslint": "^3.18.0",
     "eslint-config-airbnb-base": "^11.1.2",
     "eslint-plugin-import": "^2.2.0",
     "glob": "7.1.1",
@@ -59,7 +60,7 @@
     "istanbul": "^0.4.5",
     "memory-fs": "^0.4.1",
     "minimist": "^1.2.0",
-    "mocha": "^7.0.0",
+    "mocha": "^3.2.0",
     "nyc": "^10.3.2",
     "pascal-case": "2.0.1",
     "react": "15.5.4",
@@ -73,8 +74,8 @@
     "svgo": "^0.7.2",
     "svgo-loader": "^1.2.1",
     "validate-commit-msg": "^2.12.1",
-    "wallaby-webpack": "^3.9.15",
-    "webpack-cli": "^3.3.10",
+    "wallaby-webpack": "0.0.38",
+    "webpack-cli": "^2.0.12",
     "webpack-toolkit": "^1.0.0"
   },
   "config": {
@@ -87,7 +88,7 @@
   },
   "scripts": {
     "bootstrap": "node scripts/bootstrap",
-    "build:examples": "yarn env webpack-3 && yarn run build:runtime && node scripts/build-examples-dll && node scripts/build-examples",
+    "build:examples": "npm run build:runtime && node scripts/build-examples-dll && node scripts/build-examples",
     "build:runtime": "node scripts/build-runtime.js",
     "commit": "git-cz",
     "commitmsg": "validate-commit-msg",
@@ -98,11 +99,12 @@
     "prerelease": "yarn build:runtime && yarn lint && yarn test:all",
     "release": "yarn build:examples && git add examples && standard-version -a && git push --follow-tags origin master",
     "release:dry-run": "standard-version --no-verify",
-    "test": "mocha test/*.test.js",
-    "test:all": "yarn test:webpack-2 && yarn test:webpack-3 && yarn test:webpack-4",
-    "test:webpack-2": "yarn env webpack-2 && env WEBPACK_VERSION=2 yarn test",
-    "test:webpack-3": "yarn env webpack-3 && env WEBPACK_VERSION=3 yarn test",
-    "test:webpack-4": "yarn env webpack-4 && env WEBPACK_VERSION=4 yarn test",
+    "test": "nyc --check-coverage mocha test/*.test.js",
+    "test:all": "yarn test:webpack-1 && yarn test:webpack-2 && yarn test:webpack-3 && yarn test:webpack-4",
+    "test:webpack-1": "yarn env webpack-1 && yarn test",
+    "test:webpack-2": "yarn env webpack-2 && yarn test",
+    "test:webpack-3": "yarn env webpack-3 && yarn test",
+    "test:webpack-4": "yarn env webpack-4 && yarn test",
     "upload-coverage": "codeclimate-test-reporter < coverage/lcov.info"
   }
 }

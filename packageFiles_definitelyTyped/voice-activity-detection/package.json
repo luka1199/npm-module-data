@@ -1,7 +1,7 @@
 {
   "name": "voice-activity-detection",
-  "version": "0.0.5",
-  "description": "Mic input activity detection",
+  "version": "0.0.1",
+  "description": "",
   "main": "index.js",
   "license": "MIT",
   "author": {
@@ -16,12 +16,11 @@
     "budo": "^9.2.1"
   },
   "scripts": {
-    "test": "budo test/test.js --live"
+    "start": "budo test/test.js --live"
   },
   "keywords": [
     "voice",
-    "voice activity",
-    "mic"
+    "voice activity"
   ],
   "repository": {
     "type": "git",

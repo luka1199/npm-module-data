@@ -1,6 +1,6 @@
 {
   "name": "docker-events",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Create an event emitter from dockerode's events response",
   "main": "index.js",
   "repository": {
@@ -23,6 +23,6 @@
     "jsuck": "0.0.4"
   },
   "peerDependencies": {
-    "dockerode": "^2.0.3"
+    "dockerode": "^1.2.9"
   }
 }

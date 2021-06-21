@@ -1,15 +1,14 @@
 {
   "name": "react-column-resizer",
-  "version": "1.1.9",
-  "description": "Place in between `td` tags to automatically add resizing functionality.",
+  "version": "1.1.0",
+  "description": "Place in between `td` tags to add resizing functionality. Works with touch and mouse events. \nCurrently only supports resizing between columns. \nFlaws: The resizer needs to be wide enough to grab and you have to put filler `<td/>`'s in rows you don't use the resizer.",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "build": "babel src -d dist"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nik-m2/react-column-resizer.git"
+    "url": "git+https://github.com/c-mcg/react-column-resizer.git"
   },
   "keywords": [
     "react",
@@ -19,27 +18,14 @@
     "auto",
     "resize"
   ],
-  "author": "Nik M",
-  "license": "GPL-3.0-only",
+  "author": "Connor McGrogan",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nik-m2/react-column-resizer/issues"
+    "url": "https://github.com/c-mcg/react-column-resizer/issues"
   },
-  "homepage": "https://github.com/nik-m2/react-column-resizer#readme",
+  "homepage": "https://github.com/c-mcg/react-column-resizer#readme",
   "peerDependencies": {
-    "react": "^16.0.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "@babel/preset-react": "^7.0.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^24.8.0",
-    "babel-loader": "^8.0.4",
-    "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.7.1",
-    "jest": "^24.8.0",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
   }
 }

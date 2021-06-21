@@ -2,7 +2,7 @@
   "name": "youtube-dl",
   "description": "youtube-dl driver for node",
   "homepage": "https://github.com/przemyslawpluta/node-youtube-dl#readme",
-  "version": "3.5.0",
+  "version": "3.0.0",
   "main": "./lib/youtube-dl.js",
   "author": {
     "name": "Roly Fentanes",
@@ -14,16 +14,12 @@
       "email": "roly426@gmail.com"
     },
     {
-      "name": "Kiko Beats",
-      "email": "josefrancisco.verdu@gmail.com"
-    },
-    {
       "name": "przemyslawpluta",
       "email": "przemekpluta@hotmail.com"
     },
     {
-      "name": "Bruno",
-      "email": "brunobg@gmail.com"
+      "name": "Kiko Beats",
+      "email": "josefrancisco.verdu@gmail.com"
     },
     {
       "name": "Jay Salvat",
@@ -50,16 +46,12 @@
       "email": "jack.lee2980@gmail.com"
     },
     {
-      "name": "David Smusz",
-      "email": "dsmoosh@Davids-MacBook-Pro.local"
-    },
-    {
-      "name": "Barry Carlyon | Kora",
-      "email": "barry@barrycarlyon.co.uk"
-    },
-    {
       "name": "Frederic Germain",
       "email": "frederic.germain@gmail.com"
+    },
+    {
+      "name": "Calvin",
+      "email": "calvin@sealtelecom.com.br"
     },
     {
       "name": "optikfluffel",
@@ -70,18 +62,6 @@
       "email": "jeremy@jeremylouie.com"
     },
     {
-      "name": "t3rr0r",
-      "email": "mail@t3rr0r.com"
-    },
-    {
-      "name": "Calvin",
-      "email": "calvin@sealtelecom.com.br"
-    },
-    {
-      "name": "tifroz",
-      "email": "hhardel@gmail.com"
-    },
-    {
       "name": "Sergey M․",
       "email": "dstftw@gmail.com"
     },
@@ -90,12 +70,16 @@
       "email": "eragonj@eragonj.me"
     },
     {
-      "name": "coderaiser",
-      "email": "mnemonic.enemy@gmail.com"
+      "name": "t3rr0r",
+      "email": "mail@t3rr0r.com"
     },
     {
-      "name": "kennylbj",
-      "email": "632786081@qq.com"
+      "name": "tifroz",
+      "email": "hhardel@gmail.com"
+    },
+    {
+      "name": "coderaiser",
+      "email": "mnemonic.enemy@gmail.com"
     },
     {
       "name": "liuye.adam",
@@ -120,10 +104,6 @@
     {
       "name": "Davide Pastore",
       "email": "pasdavide@gmail.com"
-    },
-    {
-      "name": "DiegoFleitas",
-      "email": "diego.fleitas68@gmail.com"
     },
     {
       "name": "Farrin Reid",
@@ -154,10 +134,6 @@
       "email": "ngotchac@gmail.com"
     },
     {
-      "name": "Nikolay Lapshin",
-      "email": "nlapshin1989@gmail.com"
-    },
-    {
       "name": "Panayiotis",
       "email": "panayiotis.eracleous@gmail.com"
     },
@@ -168,10 +144,6 @@
     {
       "name": "Pietro",
       "email": "pietro.passarelli@gmail.com"
-    },
-    {
-      "name": "Rafael Kraut",
-      "email": "rk@vi-arise.com"
     },
     {
       "name": "Sagi Nadir",
@@ -199,13 +171,13 @@
     "youtube"
   ],
   "dependencies": {
-    "bin-version-check-cli": "~2.0.0",
-    "execa": "~5.0.0",
-    "got": "~11.8.1",
+    "debug": "~4.1.1",
+    "execa": "~3.2.0",
     "hh-mm-ss": "~1.2.0",
-    "mkdirp": "~1.0.4",
-    "streamify": "~1.0.0",
-    "universalify": "~2.0.0"
+    "mkdirp": "~0.5.1",
+    "request": "~2.88.0",
+    "streamify": "~0.2.9",
+    "universalify": "~0.1.2"
   },
   "devDependencies": {
     "@commitlint/cli": "latest",
@@ -221,17 +193,15 @@
     "vows": "latest"
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">= 8"
   },
   "files": [
     "lib",
     "scripts"
   ],
   "scripts": {
-    "check": "bin-version-check python '>=2'",
-    "download": "node ./scripts/download.js",
     "lint": "standard-markdown README.md && standard",
-    "postinstall": "npm run check && npm run download",
+    "postinstall": "node ./scripts/download.js",
     "release": "bumped release",
     "test": "vows ./test/*.js --spec",
     "update": "node ./scripts/download.js"
@@ -250,13 +220,16 @@
   },
   "lint-staged": {
     "package.json": [
-      "finepack"
+      "finepack",
+      "git add"
     ],
     "*.js": [
-      "prettier-standard"
+      "prettier-standard",
+      "git add"
     ],
     "*.md": [
-      "standard-markdown"
+      "standard-markdown",
+      "git add"
     ]
   }
 }

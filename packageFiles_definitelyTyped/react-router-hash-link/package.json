@@ -1,15 +1,15 @@
 {
   "name": "react-router-hash-link",
-  "version": "2.4.3",
+  "version": "2.4.0",
   "description": "Hash link scroll functionality for React Router v4/5",
   "main": "dist/react-router-hash-link.cjs.js",
   "module": "dist/react-router-hash-link.esm.js",
   "sideEffects": false,
   "scripts": {
+    "dev": "npm link && npm run watch && npm unlink -g react-router-hash-link",
     "build": "rollpkg build",
     "watch": "rollpkg watch",
-    "prepublishOnly": "npm run build",
-    "lintStaged": "lint-staged"
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "dist"
@@ -38,18 +38,7 @@
     "prop-types": "^15.7.2"
   },
   "devDependencies": {
-    "lint-staged": "^10.5.4",
-    "pre-commit": "^1.2.2",
-    "react": "file:demo/node_modules/react",
-    "react-router-dom": "file:demo/node_modules/react-router-dom",
-    "rollpkg": "^0.5.5",
-    "typescript": "^4.2.4"
-  },
-  "pre-commit": "lintStaged",
-  "lint-staged": {
-    "(src/**/*|demo/src/**/*)": [
-      "prettier --write --ignore-unknown"
-    ]
+    "rollpkg": "^0.4.2"
   },
   "prettier": "rollpkg/configs/prettier.json"
 }

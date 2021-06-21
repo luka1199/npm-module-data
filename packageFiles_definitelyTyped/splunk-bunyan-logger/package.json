@@ -1,14 +1,12 @@
 {
   "name": "splunk-bunyan-logger",
-  "version": "0.10.1",
+  "version": "0.9.0",
   "description": "Splunk HTTP Event Collector Stream for Bunyan",
   "homepage": "http://dev.splunk.com",
   "main": "index.js",
   "scripts": {
-    "docs": "jsdoc -d docs .",
-    "jshint": "jshint *.js test examples",
-    "pretest": "npm run jshint && npm run docs",
-    "test": "istanbul cover _mocha -- -R spec --exit"
+    "pretest": "jshint *.js test examples && jsdoc -d docs .",
+    "test": "istanbul cover _mocha -- -R spec"
   },
   "repository": {
     "type": "git",
@@ -30,17 +28,16 @@
   },
   "license": "Apache-2.0",
   "engine": {
-    "node": ">=4.0.0"
+    "node": ">=0.10.0"
   },
   "dependencies": {
-    "splunk-logging": "0.10.1"
+    "splunk-logging": "0.9.0"
   },
   "devDependencies": {
     "bunyan": "1.4.0",
-    "istanbul": "^0.4.5",
-    "jsdoc": "^3.5.5",
-    "jshint": "^2.9.6",
-    "mocha": "^5.2.0",
-    "request": "^2.88.0"
+    "jsdoc": "3.3.2",
+    "istanbul": "0.3.17",
+    "jshint": "<2.5.0",
+    "mocha": "2.2.5"
   }
 }

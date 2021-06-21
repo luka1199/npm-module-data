@@ -1,6 +1,6 @@
 {
   "name": "oblo-util",
-  "version": "0.6.5",
+  "version": "0.6.4",
   "description": "Utilities module suitable for both Node.js and client-side use",
   "main": "oblo-util.js",
   "author": {
@@ -21,14 +21,14 @@
   "bugs": {
     "url": "https://github.com/Oblosys/oblo-util/issues"
   },
-  "dependencies": {},
+    "dependencies": {
+    "underscore": ">=1.4.3"
+  },
+  
   "devDependencies": {
-    "istanbul": "^0.4.5",
-    "jasmine-node": "^2.0.0",
-    "jsdom": "^7.0.1",
-    "typescript": "^2.8.1"
+    "jasmine-node": ">=1.11"
   },
   "scripts": {
-    "test": "istanbul cover --include-all-sources jasmine-node *.spec.js && istanbul report text-summary lcov"
+    "test": "jasmine-node oblo-util.spec.js"
   }
 }

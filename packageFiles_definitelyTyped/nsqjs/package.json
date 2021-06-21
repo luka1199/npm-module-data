@@ -1,7 +1,7 @@
 {
   "name": "nsqjs",
   "description": "NodeJS client for NSQ",
-  "version": "0.12.1",
+  "version": "0.12.0",
   "homepage": "https://github.com/dudleycarr/nsqjs",
   "author": {
     "name": "Dudley Carr",
@@ -31,32 +31,33 @@
     }
   ],
   "scripts": {
-    "format": "prettier --write \"{lib,test}/**/*.js\"",
-    "lint": "eslint lib test",
+    "format": "prettier --single-quote --trailing-comma es5 --write \"{lib,test}/**/*.js\"",
+    "lint": "standard lib",
     "test": "mocha -R spec -b"
   },
   "main": "lib/nsq",
   "engines": {
-    "node": ">= 12.13.0"
+    "node": ">= 6.0.0"
   },
   "devDependencies": {
-    "async-retry": "^1.3.1",
-    "debug": "^4.1.1",
-    "eslint": "^7.24.0",
-    "mocha": "^9.0.0",
-    "nock": "^13.0.11",
-    "p-event": "^4.2.0",
-    "prettier": "^2.2.1",
-    "should": "^13.2.3",
-    "sinon": "~11.1.1",
-    "temp": "^0.9.4"
+    "mocha": "^5.0.0",
+    "nock": "~9.6.1",
+    "prettier": "^1.6.1",
+    "should": "^13.0.0",
+    "sinon": "~6.0.1",
+    "standard": "^12.0.0",
+    "temp": "^0.8.0"
   },
   "dependencies": {
-    "lodash": "^4.17.15",
-    "node-fetch": "^2.6.1",
-    "node-state": "~1.4.4"
+    "async": "^2.1.4",
+    "bignumber.js": "~7.2.1",
+    "debug": "^4.0.1",
+    "lodash": "^4.17.4",
+    "node-int64": "~0.4.0",
+    "node-state": "~1.4.4",
+    "request": "^2.79.0"
   },
   "optionalDependencies": {
-    "snappystream": "^1.5.0"
+    "snappystream": "^1.3.1"
   }
 }

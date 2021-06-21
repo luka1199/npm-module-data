@@ -1,6 +1,6 @@
 {
   "name": "extra-watch-webpack-plugin",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "extra-watch-webpack-plugin would help you to attach extra files or dirs to webpack's watch system",
   "main": "./lib/index.js",
   "scripts": {
@@ -51,11 +51,11 @@
     "babel-register": "^6.26.0",
     "coveralls": "^3.0.0",
     "eslint": "^4.17.0",
-    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-airbnb": "^16.0.0",
     "eslint-plugin-import": "^2.10.0",
     "memory-fs": "^0.4.1",
     "nyc": "^11.2.1",
-    "webpack": "^4.21.0"
+    "webpack": "^4.4.1"
   },
   "babel": {
     "presets": [
@@ -70,11 +70,10 @@
     "glob": "^7.1.2",
     "is-glob": "^4.0.0",
     "lodash.uniq": "^4.5.0",
-    "schema-utils": "^1.0.0"
+    "schema-utils": "^0.4.0"
   },
   "files": [
     "lib/",
-    "options.json",
-    "README.md"
+    "options.json"
   ]
 }

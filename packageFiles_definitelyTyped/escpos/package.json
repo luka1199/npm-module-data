@@ -1,11 +1,10 @@
 {
   "name": "escpos",
-  "version": "2.5.2",
+  "version": "2.4.10",
   "description": "ESC/POS Printer driver for nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "start": "node server.js"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -15,14 +14,13 @@
     "escpos",
     "printer"
   ],
-  "author": "Lsong <hi@lsong.org> (https://lsong.org)",
+  "author": "lsong",
   "contributors": [
     "Jose Vera <hola@jose.com.co>",
     "Sébastien Vidal <Psychopoulet@GitHub.com>",
     "Yu Yongwoo <uyu423@gmail.com>",
     "Attawit Kittikrairit <atton16@gmail.com>",
-    "Risley Lima <risley@rlimainfo.com.br>",
-    "Michael Kuenzli <michael.kuenzli@camptocamp.com>"
+    "Risley Lima <risley@rlimainfo.com.br>"
   ],
   "license": "MIT",
   "bugs": {
@@ -30,25 +28,19 @@
   },
   "homepage": "https://github.com/song940/node-escpos#readme",
   "dependencies": {
-    "qr-image": "*",
-    "get-pixels": "*",
     "iconv-lite": "*",
     "mutable-buffer": "^2.0.3"
   },
   "optionalDependencies": {
-    "usb": "*",
+    "get-pixels": "*",
     "serialport": "*",
-    "node-bluetooth": "*"
+    "qr-image": "*",
+    "usb": "*"
   },
   "devDependencies": {
     "mocha": "*"
   },
   "engines": {
     "node": ">=8.x"
-  },
-  "directories": {
-    "doc": "docs",
-    "example": "examples",
-    "test": "test"
   }
 }

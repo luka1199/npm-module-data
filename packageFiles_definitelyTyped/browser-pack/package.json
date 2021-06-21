@@ -23,7 +23,7 @@
   },
   "scripts": {
     "test": "tap test/*.js",
-    "prepare": "node bin/prepublish.js"
+    "prepublish": "node bin/prepublish.js"
   },
   "testling": {
     "files": "test/*.js",

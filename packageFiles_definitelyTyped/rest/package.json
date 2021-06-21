@@ -1,9 +1,14 @@
 {
 	"name": "rest",
-	"version": "2.0.0",
+	"version": "1.3.1",
 	"description": "RESTful HTTP client library",
 	"keywords": ["rest", "http", "client", "rest-template", "spring", "cujojs"],
-	"license": "MIT",
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/MIT"
+		}
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/cujojs/rest.git"
@@ -30,9 +35,10 @@
 			"web": "https://github.com/mjackson"
 		}
 	],
-	"dependencies": {},
+	"dependencies": {
+		"when": "~3"
+	},
 	"devDependencies": {
-		"when": "~3",
 		"wire": "~0.9",
 		"test-support": "~0.4",
 		"curl": "https://github.com/cujojs/curl/tarball/0.7.3",

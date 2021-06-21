@@ -1,11 +1,10 @@
 {
   "name": "swfobject",
-  "version": "2.2.1",
+  "version": "2.2.0",
   "description": "SWFObject is an easy-to-use and standards-friendly method to embed Flash content, which utilizes one small JavaScript file",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/unshiftio/swfobject"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "SWFObject",
@@ -16,8 +15,5 @@
     "content"
   ],
   "author": "Arnout Kazemier",
-  "license": "MIT",
-  "devDependencies": {
-    "active-x-obfuscator": "0.0.x"
-  }
+  "license": "MIT"
 }

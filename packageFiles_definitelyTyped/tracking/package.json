@@ -20,8 +20,7 @@
     "url": "git@github.com:eduardolundgren/tracking.js.git"
   },
   "scripts": {
-    "test": "gulp test",
-    "build": "gulp build"
+    "test": "gulp test"
   },
   "license": "BSD",
   "devDependencies": {
@@ -39,7 +38,6 @@
     "jshint-stylish": "^2.1.0",
     "nodeunit": "^0.9.1",
     "png-js": "^0.1.1",
-    "run-sequence": "^1.1.5",
-    "dat.gui": "^0.6.1"
+    "run-sequence": "^1.1.5"
   }
 }

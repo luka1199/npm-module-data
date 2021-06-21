@@ -1,6 +1,6 @@
 {
   "name": "uuid-readable",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Easy to Remember, Readable UUIDs, that are Shakespearean gramatically correct sentences 🥳",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/Debdut/uuid-readable#readme",
   "dependencies": {
-    "uuid": "^8.3.0"
+    "uuid": "^8.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",

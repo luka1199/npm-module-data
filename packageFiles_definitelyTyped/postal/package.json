@@ -1,7 +1,7 @@
 {
   "name": "postal",
   "description": "Pub/Sub library providing wildcard subscriptions, complex message handling, etc.  Works server and client-side.",
-  "version": "2.0.5",
+  "version": "1.0.8",
   "homepage": "http://github.com/postaljs/postal.js",
   "repository": {
     "type": "git",
@@ -30,7 +30,7 @@
     },
     {
       "name": "Jonathan Creamer",
-      "url": "https://github.com/jcreamer898"
+      "url": "http://freshbrewedcode.com/jonathancreamer"
     },
     {
       "name": "Elijah Manor",
@@ -63,22 +63,6 @@
     {
       "name": "Derick Bailey",
       "url": "http://derickbailey.com/"
-    },
-    {
-      "name": "Kamil Biela",
-      "url": "https://github.com/kamilbiela"
-    },
-    {
-      "name": "Ryan Niemeyer",
-      "url": "https://github.com/rniemeyer"
-    },
-    {
-      "name": "Caleb Rugg",
-      "url": "https://github.com/crugg"
-    },
-    {
-      "name": "Adria Jimenez",
-      "url": "https://github.com/ajimix"
     }
   ],
   "keywords": [
@@ -105,7 +89,7 @@
     "node": ">=0.4.0"
   },
   "dependencies": {
-    "lodash": "^4.12.0"
+    "lodash": "3.x"
   },
   "devDependencies": {
     "bower": "^1.4.1",
@@ -123,12 +107,10 @@
     "gulp-uglify": "^1.2.0",
     "gulp-util": "~2.2.9",
     "istanbul": "^0.3.13",
-    "jquery": "^2.2.4",
     "jshint-stylish": "^1.0.2",
     "karma": "^0.12.31",
     "mocha": "^2.2.4",
     "open": "~0.0.4",
-    "postal.diagnostics": "^0.7.4",
     "should": "^6.0.1",
     "sinon": "~1.14.1"
   },

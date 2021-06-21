@@ -1,7 +1,7 @@
 {
   "name": "graphql-react",
-  "version": "15.0.0",
-  "description": "A GraphQL client for React using modern context and hooks APIs that’s lightweight (< 4 kB) but powerful; the first Relay and Apollo alternative with server side rendering.",
+  "version": "8.1.0",
+  "description": "A lightweight but powerful GraphQL client for React using modern context and hooks APIs; the first Relay and Apollo alternative with server side rendering.",
   "license": "MIT",
   "author": {
     "name": "Jayden Seric",
@@ -11,7 +11,6 @@
   "repository": "github:jaydenseric/graphql-react",
   "homepage": "https://github.com/jaydenseric/graphql-react#readme",
   "bugs": "https://github.com/jaydenseric/graphql-react/issues",
-  "funding": "https://github.com/sponsors/jaydenseric",
   "keywords": [
     "graphql",
     "client",
@@ -27,68 +26,115 @@
     "mjs"
   ],
   "files": [
-    "private",
-    "public"
+    "universal",
+    "server"
   ],
+  "main": "universal",
   "sideEffects": false,
-  "main": "public",
-  "exports": {
-    ".": {
-      "import": "./public/index.mjs",
-      "require": "./public/index.js"
-    },
-    "./public/*": "./public/*",
-    "./package": "./package.json",
-    "./package.json": "./package.json"
-  },
   "engines": {
-    "node": "^12.20 || >= 14.13"
+    "node": ">=8.5"
   },
-  "browserslist": "Node 12.20 - 13 and Node < 13, Node >= 14.13, > 0.5%, not OperaMini all, not IE > 0, not dead",
+  "browserslist": "> 0.5%, not dead, node 8.5",
   "peerDependencies": {
-    "react": "16.14 - 17",
-    "react-dom": "16.14 - 17"
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "extract-files": "^11.0.0",
-    "isobject": "^4.0.0",
-    "react-waterfall-render": "^2.0.0"
+    "@babel/runtime": "^7.3.4",
+    "extract-files": "^5.0.1",
+    "fnv1a": "^1.0.1",
+    "mitt": "^1.1.3",
+    "object-assign": "^4.1.1"
   },
   "devDependencies": {
-    "@testing-library/react-hooks": "^7.0.0",
-    "abort-controller": "^3.0.0",
-    "coverage-node": "^5.0.1",
-    "esbuild": "^0.12.8",
-    "eslint": "^7.28.0",
-    "eslint-config-env": "^20.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-compat": "^3.9.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jsdoc": "^35.1.3",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.24.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "event-target-shim": "^6.0.2",
-    "filter-console": "^0.1.1",
-    "formdata-node": "^3.5.3",
-    "gzip-size": "^6.0.0",
-    "jsdoc-md": "^11.0.0",
-    "node-fetch": "^3.0.0-beta.9",
-    "prettier": "^2.3.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-test-renderer": "^17.0.2",
-    "revertable-globals": "^2.0.0",
-    "test-director": "^6.0.0"
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
+    "@babel/plugin-transform-runtime": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-replace-object-assign": "^2.0.0",
+    "cross-fetch": "^3.0.1",
+    "eslint": "^5.14.1",
+    "eslint-config-env": "^4.0.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import-order-alphabetical": "^0.0.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.3.0",
+    "formdata-node": "^1.5.1",
+    "graphql": "^14.1.1",
+    "graphql-api-koa": "^2.0.0",
+    "husky": "^1.3.1",
+    "jsdoc-md": "^2.1.0",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "lint-staged": "^8.1.4",
+    "prettier": "^1.16.4",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-test-renderer": "^16.8.3",
+    "size-limit": "^0.21.1",
+    "tap": "^12.5.3"
   },
   "scripts": {
-    "jsdoc": "jsdoc-md",
-    "test": "npm run test:eslint && npm run test:prettier && npm run test:jsdoc && npm run test:api",
-    "test:eslint": "eslint --ext mjs,js .",
-    "test:prettier": "prettier -c .",
-    "test:jsdoc": "jsdoc-md -c",
-    "test:api": "coverage-node test/index.mjs",
+    "prepare": "npm run prepare:clean && npm run prepare:mjs && npm run prepare:js && npm run prepare:jsdoc && npm run prepare:prettier",
+    "prepare:clean": "rm -rf universal server test",
+    "prepare:mjs": "BABEL_ESM=1 babel src -d . --keep-file-extension",
+    "prepare:js": "babel src -d .",
+    "prepare:jsdoc": "jsdoc-md",
+    "prepare:prettier": "prettier '{universal,server,test}/**/*.{mjs,js}' readme.md --write",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:tap && npm run test:size",
+    "test:eslint": "eslint . --ext mjs,js",
+    "test:prettier": "prettier '**/*.{json,yml,md}' -l",
+    "test:size": "size-limit",
+    "test:tap": "tap test/*.{mjs,js}",
     "prepublishOnly": "npm test"
-  }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{mjs,js}": "eslint",
+    "*.{json,yml,md}": "prettier -l"
+  },
+  "eslintIgnore": [
+    "!.*",
+    "node_modules",
+    "/universal",
+    "/server",
+    "/test",
+    "tap-snapshots"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "env"
+    ]
+  },
+  "prettier": {
+    "proseWrap": "never",
+    "singleQuote": true,
+    "semi": false
+  },
+  "size-limit": [
+    {
+      "name": "Server",
+      "path": "size-limit-entries/server.mjs",
+      "limit": "2.5 KB"
+    },
+    {
+      "name": "Browser",
+      "path": "size-limit-entries/browser.mjs",
+      "limit": "2.5 KB",
+      "ignore": [
+        "object-assign"
+      ]
+    }
+  ]
 }

@@ -1,22 +1,13 @@
 {
   "name": "ooura",
-  "version": "2.1.6",
-  "description": "Ultra-fast real/complex FFT with simple interface",
+  "version": "2.1.0",
+  "description": "A javascript port of the Ooura FFT implementation",
   "repository": "https://github.com/audioplastic/ooura",
   "main": "ooura.js",
   "scripts": {
-    "test": "xo && jasmine",
+    "test": "jasmine",
     "cover": "istanbul cover jasmine",
     "coveralls": "istanbul cover jasmine && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
-  },
-  "xo": {
-    "rules": {
-      "one-var": 0,
-      "no-mixed-operators": 0
-    },
-    "ignores": [
-      "spec/**/*.js"
-    ]
   },
   "keywords": [
     "fft",
@@ -26,16 +17,13 @@
     "stft",
     "dsp",
     "overlap-add",
-    "ola",
-    "real",
-    "complex"
+    "ola"
   ],
   "author": "Nick Clark",
   "license": "ISC",
   "devDependencies": {
     "coveralls": "^2.13.1",
     "istanbul": "^0.4.5",
-    "jasmine": "^2.8.0",
-    "xo": "^0.18.2"
+    "jasmine": "^2.8.0"
   }
 }

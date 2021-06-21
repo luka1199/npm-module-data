@@ -1,6 +1,6 @@
 {
   "name": "sharpie",
-  "version": "4.5.3",
+  "version": "4.5.0",
   "description": "A simple express middleware for resizing images using sharp and pipes",
   "scripts": {
     "test": "mocha"
@@ -25,16 +25,15 @@
     "url": "https://github.com/kapouer/sharpie/issues"
   },
   "dependencies": {
-    "color-string": "^1.5.5",
+    "color-string": "^1.5.3",
     "content-type": "^1.0.4",
-    "debug": "^4.3.1",
-    "got": "^11.8.2",
+    "debug": "^4.0.1",
+    "got": "^9.6.0",
     "media-typer": "^1.1.0",
     "sharp": "^0.24.1",
     "xml-js": "^1.6.11"
   },
   "devDependencies": {
-    "compression": "^1.7.4",
     "express": "latest",
     "mocha": "latest",
     "should": "latest"

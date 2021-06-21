@@ -1,6 +1,6 @@
 {
   "name": "stream-demux",
-  "version": "8.0.0",
+  "version": "7.0.0",
   "description": "A consumable stream demultiplexer.",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "mocha": "^5.0.5"
   },
   "dependencies": {
-    "consumable-stream": "^2.0.0",
-    "writable-consumable-stream": "^2.0.0"
+    "consumable-stream": "^1.0.0",
+    "writable-consumable-stream": "^1.1.1"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "multy",
-  "version": "0.1.3",
-  "description": "Koa(v2)/Express middleware for handle multipart form",
+  "version": "0.1.0",
+  "description": "Koa/Express multipart form",
   "main": "lib/index.js",
   "scripts": {
     "test": "ava"

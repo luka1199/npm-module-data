@@ -1,7 +1,7 @@
 {
   "name": "power-assert",
   "description": "Power Assert in JavaScript",
-  "version": "1.6.1",
+  "version": "1.6.0",
   "author": {
     "name": "Takuto Wada",
     "email": "takuto.wada@gmail.com",
@@ -50,7 +50,7 @@
   ],
   "dependencies": {
     "define-properties": "^1.1.2",
-    "empower": "^1.3.1",
+    "empower": "^1.3.0",
     "power-assert-formatter": "^1.4.1",
     "universal-deep-strict-equal": "^1.2.1",
     "xtend": "^4.0.0"
@@ -65,18 +65,18 @@
     "derequire": "^2.0.3",
     "dereserve": "^1.0.0",
     "expect.js": "^0.3.1",
-    "karma": "^4.0.0",
+    "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.0.0",
     "karma-expect": "^1.1.2",
     "karma-firefox-launcher": "^1.0.0",
     "karma-mocha": "^1.0.0",
     "licensify": "^3.0.0",
-    "mocha": "^6.0.0",
+    "mocha": "^5.0.0",
     "package-json-filterify": "^1.0.4",
     "qunit-tap": "^1.5.0",
     "qunitjs": "1.14.0",
     "requirejs": "^2.2.0",
-    "semver": "^6.0.0"
+    "semver": "^5.5.0"
   },
   "files": [
     "CHANGELOG.md",

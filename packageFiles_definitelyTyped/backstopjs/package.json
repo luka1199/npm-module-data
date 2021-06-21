@@ -1,8 +1,7 @@
 {
   "name": "backstopjs",
-  "version": "5.3.2",
+  "version": "4.1.0",
   "description": "BackstopJS: Catch CSS curveballs.",
-  "homepage": "https://github.com/garris/BackstopJS#readme",
   "bin": {
     "backstop": "./cli/index.js"
   },
@@ -13,9 +12,7 @@
     "init": "node ./cli/index.js init",
     "reference": "node ./cli/index.js reference",
     "test": "node ./cli/index.js test",
-    "approve": "node ./cli/index.js approve",
     "openReport": "node ./cli/index.js openReport",
-    "report": "node ./cli/index.js openReport",
     "echo": "node ./cli/index.js echo",
     "unit-test": "mocha --reporter spec --recursive 'test/**/*_spec.js'",
     "precommit": "lint-staged",
@@ -23,14 +20,10 @@
     "dev-compare": "webpack-dev-server --content-base ./compare/output --config ./compare/webpack.config.js",
     "integration-test": "rm -rf newdir && mkdir newdir && cd newdir && node ../cli/index.js genConfig && node ../cli/index.js reference && node ../cli/index.js test && node -e \"require('../')('test')\"",
     "smoke-test": "cd test/configs/ && node ../../cli/index.js test --config=backstop_features",
-    "smoke-test-docker": "cd test/configs/ && node ../../cli/index.js test --config=backstop_features --docker",
     "sanity-test": "cd test/configs/ && node ../../cli/index.js test",
-    "sanity-test-docker": "cd test/configs/ && node ../../cli/index.js test --docker",
     "kill-zombies": "pkill -f \"(chrome)?(--headless)\"",
     "copy-report-bundle": "mkdir -p test/configs/backstop_data/html_report && cp compare/output/index_bundle.js test/configs/backstop_data/html_report/",
-    "build-and-copy-report-bundle": "npm run build-compare && npm run copy-report-bundle",
-    "remote": "node ./cli/index.js remote",
-    "stop": "curl http://localhost:3000/stop"
+    "build-and-copy-report-bundle": "npm run build-compare && npm run copy-report-bundle"
   },
   "lint-staged": {
     "compare/src/**/*.js": [
@@ -77,16 +70,17 @@
     "sinon": "^1.17.7",
     "styled-components": "^2.1.2",
     "url-loader": "^1.1.1",
-    "webpack": "^4.43.0",
+    "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
     "chalk": "^1.1.3",
+    "chromy": "0.5.11",
     "diverged": "^0.1.3",
     "fs-extra": "^0.30.0",
     "jump.js": "^1.0.2",
-    "junit-report-builder": "^1.3.3",
+    "junit-report-builder": "^1.3.1",
     "lodash": "^4.17.11",
     "minimist": "^1.2.0",
     "node-resemble-js": "^0.2.0",
@@ -96,7 +90,7 @@
     "p-map": "^1.1.1",
     "path": "^0.12.7",
     "portfinder": "^1.0.17",
-    "puppeteer": "^10.0.0",
+    "puppeteer": "^1.15.0",
     "super-simple-web-server": "^1.1.2",
     "temp": "^0.8.3"
   }

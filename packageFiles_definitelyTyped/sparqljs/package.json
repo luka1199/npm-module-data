@@ -1,6 +1,6 @@
 {
   "name": "sparqljs",
-  "version": "3.4.2",
+  "version": "3.1.0",
   "description": "A parser for the SPARQL query language",
   "author": "Ruben Verborgh <ruben.verborgh@gmail.com>",
   "keywords": [
@@ -32,13 +32,13 @@
     "spec-base-update": "rdf-test-suite spec/parser.js http://w3c.github.io/rdf-tests/sparql11/data-sparql11/manifest-all.ttl -s http://www.w3.org/TR/sparql11-update/ -c .rdf-test-suite-cache/",
     "spec-earl-query": "npm run spec-base-query --silent -- -o earl -p spec/earl-meta.json > spec/earl-query.ttl",
     "spec-earl-update": "npm run spec-base-update --silent -- -o earl -p spec/earl-meta.json > spec/earl-update.ttl",
-    "spec": "npm run spec-base-query && npm run spec-base-update"
+    "spec": "npm run spec-base-query -- && npm run spec-base-update -- -e"
   },
   "engines": {
     "node": ">=8.0"
   },
   "dependencies": {
-    "rdf-data-factory": "^1.0.4"
+    "n3": "^1.6.0"
   },
   "devDependencies": {
     "expect": "^24.8.0",

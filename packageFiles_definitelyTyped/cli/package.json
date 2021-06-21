@@ -1,8 +1,8 @@
 { "name"          : "cli",
   "description"   : "A tool for rapidly building command line apps",
-  "version"       : "1.0.1",
+  "version"       : "0.11.2",
   "homepage"      : "http://github.com/node-js-libs/cli",
-  "keywords"      : ["cli","command line","opts","parseopt","opt","args","console","argsparse","optparse","autocomplete","command","autocompletion"],
+  "keywords"      : ["cli","command line","opts","parseopt","opt","args","console","argsparse","optparse","daemon","autocomplete","command","autocompletion"],
   "author"        : "Chris O'Hara <cohara87@gmail.com>",
   "main"          : "cli.js",
   "bugs": {
@@ -14,7 +14,7 @@
     "url": "http://github.com/node-js-libs/cli.git"
   },
   "dependencies": {
-    "glob": "^7.1.1",
+    "glob": "^5.0.10",
     "exit": "0.1.2"
   },
   "contributors": [

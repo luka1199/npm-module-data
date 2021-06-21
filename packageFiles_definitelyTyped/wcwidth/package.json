@@ -1,6 +1,6 @@
 {
   "name": "wcwidth",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Port of C's wcwidth() and wcswidth()",
   "author": "Tim Oxley",
   "contributors": [
@@ -8,10 +8,10 @@
   ],
   "main": "index.js",
   "dependencies": {
-    "defaults": "^1.0.3"
+    "defaults": "^1.0.0"
   },
   "devDependencies": {
-    "tape": "^4.5.1"
+    "tape": "^2.13.4"
   },
   "license": "MIT",
   "keywords": [
@@ -30,13 +30,5 @@
   },
   "scripts": {
     "test": "tape test/*.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/timoxley/wcwidth.git"
-  },
-  "bugs": {
-    "url": "https://github.com/timoxley/wcwidth/issues"
-  },
-  "homepage": "https://github.com/timoxley/wcwidth#readme"
+  }
 }

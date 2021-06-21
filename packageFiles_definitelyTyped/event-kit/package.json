@@ -1,13 +1,11 @@
 {
   "name": "event-kit",
-  "version": "2.5.3",
+  "version": "2.4.0",
   "description": "Simple library for implementing and consuming evented APIs",
-  "main": "./dist/event-kit",
+  "main": "./lib/event-kit",
   "scripts": {
-    "build": "cross-env BABEL_KEEP_MODULES=false babel lib --out-dir dist --delete-dir-on-start",
-    "docs": "joanna-tello -o api.json package.json lib",
-    "prepublish": "npm run build && npm run docs",
-    "test": "jasmine-focused --captureExceptions --forceexit spec"
+    "prepublish": "grunt clean lint coffee shell:update-atomdoc atomdoc",
+    "test": "grunt test"
   },
   "repository": {
     "type": "git",
@@ -16,13 +14,24 @@
   "bugs": {
     "url": "https://github.com/atom/event-kit/issues"
   },
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/atom/event-kit/raw/master/LICENSE.md"
+    }
+  ],
+  "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "babel-preset-atomic": "^3.0.1",
-    "cross-env": "^7.0.3",
-    "jasmine-focused": "^1.0.7",
-    "joanna": "https://github.com/aminya/joanna"
+    "coffee-cache": "^0.2.0",
+    "coffee-script": "^1.7.0",
+    "grunt": "^0.4.1",
+    "grunt-atomdoc": "^1.0.0",
+    "grunt-cli": "^0.1.8",
+    "grunt-coffeelint": "^0.0.6",
+    "grunt-contrib-coffee": "^0.9.0",
+    "grunt-shell": "^0.2.2",
+    "jasmine-focused": "^1.0.4",
+    "rimraf": "^2.2.2",
+    "temp": "^0.6.0"
   }
 }

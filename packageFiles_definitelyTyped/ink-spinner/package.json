@@ -1,6 +1,6 @@
 {
 	"name": "ink-spinner",
-	"version": "4.0.2",
+	"version": "3.0.0",
 	"description": "Spinner component for Ink",
 	"license": "MIT",
 	"repository": "vadimdemedes/ink-spinner",
@@ -9,14 +9,15 @@
 		"email": "vdemedes@gmail.com",
 		"url": "github.com/vadimdemedes"
 	},
-	"main": "build",
-	"types": "build/index.d.ts",
+	"main": "build/index.js",
 	"engines": {
-		"node": ">=10"
+		"node": ">=8"
 	},
 	"scripts": {
-		"test": "tsc && xo && ava",
-		"prepare": "tsc"
+		"pretest": "npm run build",
+		"test": "xo && ava",
+		"build": "babel src --out-dir=build",
+		"prepare": "npm run build"
 	},
 	"files": [
 		"build"
@@ -32,52 +33,37 @@
 		"react"
 	],
 	"dependencies": {
-		"cli-spinners": "^2.3.0"
+		"cli-spinners": "^1.0.0",
+		"prop-types": "^15.5.10"
 	},
 	"devDependencies": {
-		"@ava/babel": "^1.0.1",
-		"@babel/preset-react": "^7.10.1",
-		"@sindresorhus/tsconfig": "^0.7.0",
-		"@types/react": "^16.9.46",
-		"@vdemedes/prettier-config": "^1.0.0",
-		"ava": "^3.9.0",
+		"@babel/cli": "^7.2.3",
+		"@babel/core": "^7.3.3",
+		"@babel/plugin-proposal-class-properties": "^7.3.3",
+		"@babel/preset-react": "^7.0.0",
+		"ava": "*",
+		"babel-eslint": "^10.0.1",
 		"delay": "^4.1.0",
-		"eslint-config-xo-react": "^0.23.0",
-		"eslint-plugin-react": "^7.20.0",
-		"eslint-plugin-react-hooks": "^4.0.4",
-		"husky": "^4.2.5",
-		"ink": "^3.0.0-4",
-		"ink-testing-library": "^2.0.0",
-		"prettier": "^2.0.5",
-		"pretty-quick": "^2.0.1",
+		"eslint-config-xo-react": "^0.13.0",
+		"eslint-plugin-react": "^7.1.0",
+		"ink": "^2.0.0",
 		"react": "^16.8.2",
-		"typescript": "^3.9.5",
-		"xo": "^0.32.0"
+		"sinon": "^2.3.6",
+		"xo": "*"
 	},
-	"peerDependencies": {
-		"react": ">=16.8.2",
-		"ink": ">=3.0.5"
-	},
-	"ava": {
-		"babel": {
-			"testOptions": {
-				"presets": [
-					"@babel/preset-react"
-				]
-			}
-		}
+	"babel": {
+		"plugins": [
+			"@babel/plugin-proposal-class-properties"
+		],
+		"presets": [
+			"@ava/stage-4",
+			"@babel/preset-react"
+		]
 	},
 	"xo": {
-		"extends": "xo-react",
-		"prettier": true,
-		"rules": {
-			"react/prop-types": "off"
-		}
-	},
-	"prettier": "@vdemedes/prettier-config",
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged"
-		}
+		"parser": "babel-eslint",
+		"extends": [
+			"xo-react"
+		]
 	}
 }

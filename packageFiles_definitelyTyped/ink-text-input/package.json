@@ -1,6 +1,6 @@
 {
 	"name": "ink-text-input",
-	"version": "4.0.1",
+	"version": "2.0.0",
 	"description": "Text input component for Ink",
 	"license": "MIT",
 	"repository": "vadimdemedes/ink-text-input",
@@ -9,19 +9,18 @@
 		"email": "vdemedes@gmail.com",
 		"url": "github.com/vadimdemedes"
 	},
-	"main": "build",
-	"types": "build/index.d.ts",
+	"main": "dist/index.js",
 	"engines": {
-		"node": ">=10"
+		"node": ">=6"
 	},
 	"scripts": {
-		"test": "tsc --noEmit && xo && FORCE_COLOR=1 ava",
-		"build": "tsc",
-		"prepare": "tsc",
-		"pretest": "tsc"
+		"pretest": "npm run build",
+		"test": "xo && ava",
+		"build": "babel src --out-dir=dist",
+		"prepublish": "npm run build"
 	},
 	"files": [
-		"build"
+		"dist"
 	],
 	"keywords": [
 		"ink",
@@ -36,61 +35,57 @@
 		"query"
 	],
 	"dependencies": {
-		"chalk": "^4.1.0",
-		"type-fest": "^0.15.1"
+		"has-ansi": "^3.0.0",
+		"prop-types": "^15.5.10"
 	},
 	"devDependencies": {
-		"@ava/babel": "^1.0.1",
-		"@babel/preset-react": "^7.10.1",
-		"@sindresorhus/tsconfig": "^0.7.0",
-		"@types/react": "^16.8.8",
-		"@vdemedes/prettier-config": "^1.0.0",
-		"ava": "^3.9.0",
-		"delay": "^4.3.0",
-		"eslint-config-xo-react": "^0.23.0",
-		"eslint-plugin-react": "^7.20.0",
-		"eslint-plugin-react-hooks": "^4.0.4",
-		"husky": "^4.2.5",
-		"ink": "^3.0.5",
-		"ink-testing-library": "^2.0.0",
-		"prettier": "^2.0.5",
-		"pretty-quick": "^2.0.1",
-		"react": "^16.5.2",
-		"sinon": "^7.2.7",
-		"typescript": "^3.9.5",
-		"xo": "^0.32.0"
+		"ava": "^0.20.0",
+		"babel-cli": "^6.24.1",
+		"babel-plugin-transform-react-jsx": "^6.24.1",
+		"eslint-config-xo-react": "^0.13.0",
+		"eslint-plugin-react": "^7.1.0",
+		"ink": "^0.5.0",
+		"sinon": "^2.3.6",
+		"xo": "^0.18.2"
 	},
-	"peerDependencies": {
-		"ink": "^3.0.0-3",
-		"react": "^16.5.2"
+	"babel": {
+		"plugins": [
+			[
+				"transform-react-jsx",
+				{
+					"pragma": "h",
+					"useBuiltIns": true
+				}
+			]
+		]
 	},
 	"ava": {
 		"babel": {
-			"testOptions": {
-				"presets": [
-					"@babel/preset-react"
+			"presets": [
+				"@ava/stage-4"
+			],
+			"plugins": [
+				[
+					"transform-react-jsx",
+					{
+						"pragma": "h",
+						"useBuiltIns": true
+					}
 				]
-			}
+			]
 		}
 	},
 	"xo": {
 		"extends": [
 			"xo-react"
 		],
-		"plugins": [
-			"react"
-		],
-		"prettier": true,
 		"rules": {
-			"react/no-unused-prop-types": 0,
-			"react/prop-types": 0,
-			"unicorn/no-hex-escape": 0
-		}
-	},
-	"prettier": "@vdemedes/prettier-config",
-	"husky": {
-		"hooks": {
-			"pre-commit": "pretty-quick --staged"
+			"react/no-unused-prop-types": 1
+		},
+		"settings": {
+			"react": {
+				"pragma": "h"
+			}
 		}
 	}
 }

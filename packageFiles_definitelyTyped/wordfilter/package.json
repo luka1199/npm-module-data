@@ -1,7 +1,7 @@
 {
   "name": "wordfilter",
   "description": "A small module meant for use in text generators that lets you filter strings for bad words.",
-  "version": "0.2.6",
+  "version": "0.2.1",
   "homepage": "https://github.com/dariusk/wordfilter",
   "author": {
     "name": "Darius Kazemi",
@@ -32,7 +32,6 @@
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-nodeunit": "~0.2.0",
     "grunt-contrib-watch": "~0.4.0",
-    "grunt-jsonlint": "^1.0.4",
     "grunt": "~0.4.1"
   },
   "keywords": []

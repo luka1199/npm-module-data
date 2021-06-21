@@ -2,9 +2,12 @@
   "author": "Mikhail Davydov <i@azproduction.ru>",
   "description": "Promise-based queue",
   "name": "promise-queue",
-  "version": "2.2.5",
+  "version": "2.2.0",
   "contributors": [
-    "Mikhail Davydov <i@azproduction.ru>"
+    {
+      "name": "Mikhail Davydov",
+      "email": "i@azproduction.ru"
+    }
   ],
   "repository": {
     "type": "git",
@@ -18,27 +21,17 @@
     "mocha": "1.11.0",
     "jscs": "1.0.0",
     "istanbul": "0.1.39",
-    "chai": "3.5.0",
-    "sinon": "1.17.7",
+    "chai": "*",
+    "sinon": "*",
     "vow": "0.4.1",
-    "sinon-chai": "2.8.0",
-    "mocha-istanbul": "0.3.0",
-    "coveralls": "2.11.6"
+    "sinon-chai": "*",
+    "mocha-istanbul": "*",
+    "coveralls": "*"
   },
   "scripts": {
     "test": "make validate",
     "lint": "make lint",
     "coverage": "make coverage",
     "clean": "make clean"
-  },
-  "bugs": {
-    "url": "https://github.com/azproduction/promise-queue/issues"
-  },
-  "homepage": "https://github.com/azproduction/promise-queue#readme",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {},
-  "license": "MIT"
+  }
 }

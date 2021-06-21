@@ -14,7 +14,7 @@
   ],
   "scripts": {
     "test": "mocha test/ --reporter spec",
-    "coverage": "istanbul cover _mocha -- --reporter spec --timeout 10000"
+    "test-travis": "istanbul cover _mocha -- --reporter spec --timeout 10000"
   },
   "keywords": [
     "rtp",

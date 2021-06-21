@@ -6,10 +6,7 @@
   "bugs": {
     "url": "https://github.com/fs535/debessmann/issues"
   },
-  "dependencies": {
-    "connect": "^3.6.0",
-    "serve-static": "^1.12.1"
-  },
+  "dependencies": {},
   "description": "SDK for sending events to debessmann",
   "devDependencies": {},
   "directories": {},

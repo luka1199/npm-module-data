@@ -1,6 +1,6 @@
 {
   "name": "cloudflare",
-  "version": "2.8.0",
+  "version": "2.7.0",
   "description": "CloudFlare API client",
   "author": "Terin Stock <terinjokes@gmail.com>",
   "bugs": {
@@ -10,7 +10,7 @@
     "autocreate": "^1.1.0",
     "es-class": "^2.1.1",
     "got": "^6.3.0",
-    "https-proxy-agent": "^5.0.0",
+    "https-proxy-agent": "^2.1.1",
     "object-assign": "^4.1.0",
     "should-proxy": "^1.0.4",
     "url-pattern": "^1.0.3"

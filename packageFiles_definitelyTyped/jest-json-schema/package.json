@@ -6,20 +6,14 @@
   "scripts": {
     "lint": "eslint ./ --ignore-path .gitignore --ext .js",
     "pretest": "npm run lint",
-    "test": "jest && npm run test:git-history",
-    "test:git-history": "commitlint --from origin/master --to HEAD",
-    "test:lockfile": "lockfile-lint -p package-lock.json -t npm -a npm -o https: -c -i",
-    "posttest": "npm run test:lockfile"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/americanexpress/jest-json-schema.git"
   },
   "jest": {
-    "preset": "amex-jest-preset",
-    "coveragePathIgnorePatterns": [
-      "<rootDir>/commitlint.config.js"
-    ]
+    "preset": "amex-jest-preset"
   },
   "keywords": [
     "jest",
@@ -36,23 +30,13 @@
     "jest-matcher-utils": "^24.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.2.0",
-    "@commitlint/config-conventional": "^8.2.0",
     "ajv-keywords": "^3.4.1",
-    "amex-jest-preset": "^6.1.0",
+    "amex-jest-preset": "^5.0.0",
     "eslint": "^5.2.0",
     "eslint-config-amex": "^9.0.0",
-    "husky": "^3.1.0",
-    "jest": "^25.1.0",
-    "lockfile-lint": "^4.1.0"
+    "jest": "^24.0.0"
   },
   "engines": {
     "node": ">= 6"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }

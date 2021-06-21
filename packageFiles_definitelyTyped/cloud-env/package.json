@@ -5,10 +5,12 @@
     "type": "git",
     "url": "https://github.com/ryanj/cloud-env.git"
   },
-  "version": "0.2.3",
+  "version": "0.2.2",
   "description": "Consistent naming for cloud-provided server config strings",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "tap": "^5.7.0"
+  },
   "keywords": [
     "config",
     "paas",

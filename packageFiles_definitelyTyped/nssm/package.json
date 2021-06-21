@@ -1,10 +1,10 @@
 {
   "name": "nssm",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Wrapper for nssm.exe to manage windows services",
   "main": "./index.js",
   "engines": {
-    "node": ">=4"
+    "node": ">=0.10"
   },
   "scripts": {
     "nsp": "nsp check",
@@ -48,15 +48,15 @@
     "minimist": "^1.2.0"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "chai": "^3.5.0",
     "chai-things": "^0.2.0",
-    "coveralls": "^3.0.0",
-    "eslint": "^4.8.0",
+    "coveralls": "^2.11.14",
+    "eslint": "^3.6.0",
     "istanbul": "^0.4.5",
-    "jshint": "^2.9.5",
-    "jsinspect": "^0.12.7",
-    "mocha": "^4.0.1",
-    "mockery": "^2.1.0",
-    "sinon": "^4.0.1"
+    "jshint": "^2.9.3",
+    "jsinspect": "^0.8.0",
+    "mocha": "^3.0.2",
+    "mockery": "^1.7.0",
+    "sinon": "^1.17.6"
   }
 }

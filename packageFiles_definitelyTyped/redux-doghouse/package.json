@@ -1,6 +1,6 @@
 {
   "name": "redux-doghouse",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Scoping helpers for building reusable components with Redux",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -14,9 +14,8 @@
   "scripts": {
     "clean": "rimraf lib dist es",
     "lint": "eslint src",
-    "test": "cross-env BABEL_ENV=commonjs jest",
-    "check:src": "npm run lint && npm run test",
-    "prepublish": "npm run clean && npm run check:src && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "npm run clean && npm run build",
     "build": "npm run build:commonjs && npm run build:umd && npm run build:umd:min && npm run build:es",
     "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
@@ -54,19 +53,13 @@
     "css-loader": "0.25.0",
     "eslint": "3.7.1",
     "eslint-plugin-react": "6.4.1",
-    "express": "^4.14.0",
-    "jest": "17.0.3",
     "postcss-loader": "0.13.0",
     "react": "15.3.2",
     "react-dom": "15.3.2",
     "react-redux": "4.4.5",
     "redux": "3.6.0",
     "style-loader": "0.13.1",
-    "webpack": "^1.13.3",
     "webpack-dev-middleware": "1.8.4",
     "webpack-hot-middleware": "2.13.0"
-  },
-  "jest": {
-    "testRegex": "(/test/.*\\.spec.js)$"
   }
 }

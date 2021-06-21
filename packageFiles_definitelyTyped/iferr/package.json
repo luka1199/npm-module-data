@@ -1,11 +1,8 @@
 {
   "name": "iferr",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Higher-order functions for easier error handling",
   "main": "iferr.js",
-  "files": [
-    "iferr.js"
-  ],
   "scripts": {
     "test": "mocha"
   },
@@ -27,7 +24,7 @@
   },
   "homepage": "https://github.com/shesek/iferr",
   "devDependencies": {
-    "coffeescript": "^2.3.1",
+    "coffee-script": "^1.12.7",
     "mocha": "^4.0.1"
   }
 }

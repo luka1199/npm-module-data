@@ -63,35 +63,39 @@ function getModuleReleases(moduleName) {
 
 function getCommitHashFromDate(repoURL, releaseDate) {
     return new Promise((resolve, reject) => {
-        shell.exec(
-            `rm -rf tmp && git clone --bare https://${repoURL} tmp && cd tmp && git rev-list --min-parents=0 --all --format='%cd' && cd .. && rm -rf tmp`,
-            shellOptions,
-            (code, stdout, stderr) => {
-                if (stdout) {
-                    stdout = stdout.slice(0, -1)
-                    var lines = stdout.split('\n')
-                    var commitHashByDate = {}
-                    var dates = []
-                    for (let i = 0; i < lines.length; i += 2) {
-                        const commitHash = lines[i].slice(7);
-                        const commitDate = new Date(lines[i + 1])
-                        commitHashByDate[commitDate] = commitHash
-                        dates.push(commitDate)
+        shell.exec(`git remote show https://${repoURL} | grep 'HEAD branch' | cut -d' ' -f5`, shellOptions, (code, stdout, stderr) => {
+            var branch = stdout
+            if (branch == "") { branch = 'master' }
+            shell.exec(
+                `rm -rf tmp && git clone --bare https://${repoURL} tmp && cd tmp && git rev-list --format='%cd' ${branch} && cd .. && rm -rf tmp`,
+                shellOptions,
+                (code, stdout, stderr) => {
+                    if (stdout) {
+                        stdout = stdout.slice(0, -1)
+                        var lines = stdout.split('\n')
+                        var commitHashByDate = {}
+                        var dates = []
+                        for (let i = 0; i < lines.length; i += 2) {
+                            const commitHash = lines[i].slice(7);
+                            const commitDate = new Date(lines[i + 1])
+                            commitHashByDate[commitDate] = commitHash
+                            dates.push(commitDate)
+                        }
+                        // console.log(commitHashByDate);
+                        // console.log(dates);
+                        var closestDate = dates[nearest(dates, releaseDate)]
+                        // console.log("releaseDate:", releaseDate);
+                        // console.log("closestDate", closestDate);
+    
+                        // Final commit hash
+                        resolve(commitHashByDate[closestDate.toString()])
+                    } 
+                    if (stderr) {
+                        // console.log("test");
+                        // console.log(stderr);
                     }
-                    // console.log(commitHashByDate);
-                    // console.log(dates);
-                    var closestDate = dates[nearest(dates, releaseDate)]
-                    // console.log("releaseDate:", releaseDate);
-                    // console.log("closestDate", closestDate);
-
-                    // Final commit hash
-                    resolve(commitHashByDate[closestDate.toString()])
-                } 
-                if (stderr) {
-                    // console.log("test");
-                    // console.log(stderr);
-                }
-            })
+                })
+        })
     });
 }
 

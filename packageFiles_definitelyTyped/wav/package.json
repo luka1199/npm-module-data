@@ -1,22 +1,23 @@
 {
   "name": "wav",
   "description": "`Reader` and `Writer` streams for Microsoft WAVE audio files",
-  "version": "1.0.2",
-  "license": "MIT",
+  "version": "1.0.0",
   "author": "Nathan Rajlich <nathan@tootallnate.net>",
-  "repository": "TooTallNate/node-wav",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/TooTallNate/node-wav.git"
+  },
+  "keywords": [],
   "dependencies": {
-    "buffer-alloc": "^1.1.0",
-    "buffer-from": "^1.0.0",
-    "debug": "^2.2.0",
-    "readable-stream": "^1.1.14",
-    "stream-parser": "^0.3.1"
+    "debug": "~1.0.0",
+    "readable-stream": "1.0",
+    "stream-parser": "~0.3.0"
   },
   "devDependencies": {
-    "mocha": "^2.5.3",
-    "semistandard": "^12.0.1"
+    "mocha": "*"
   },
+  "main": "./index.js",
   "scripts": {
-    "test": "semistandard && mocha"
+    "test": "mocha --reporter spec"
   }
 }

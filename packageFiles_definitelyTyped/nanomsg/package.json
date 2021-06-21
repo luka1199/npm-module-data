@@ -1,20 +1,18 @@
 {
   "name": "nanomsg",
-  "version": "4.1.0",
+  "version": "3.2.0",
   "description": "Node bindings for nanomsg",
   "main": "lib/index.js",
   "dependencies": {
     "bindings": "1.2.1",
-    "nan": "2.14.0"
+    "nan": "2.3.3"
   },
   "devDependencies": {
-    "buffer-alloc": "1.2.0",
     "buffer-equals-polyfill": "1.0.0",
-    "buffer-from": "1.1.1",
     "esformatter": "0.0.16",
     "tap-difflet": "0.3.0",
     "tap-nyan": "0.0.2",
-    "tape": "4.11.0"
+    "tape": "~2.12.0"
   },
   "scripts": {
     "test": "find test/*.js test/standalone/*.js | xargs -n 1 node | node_modules/tap-nyan/bin/cmd.js",
@@ -35,14 +33,12 @@
   },
   "author": "Nick Desaulniers <ndesaulniers@mozilla.com> (http://nickdesaulniers.github.io)",
   "contributors": [
-    "a0000778 (https://github.com/a0000778)",
     "Adam Biro (https://github.com/sirudog)",
     "Ant Skelton (https://github.com/blowback)",
     "Benjamin Byholm (https://github.com/kkoopa)",
     "Bent Cardan (https://github.com/reqshark)",
     "Deepak Prabhakara (https://github.com/deepakprabhakara)",
     "Flynn Joffray (https://github.com/nucleardreamer)",
-    "m-ohuchi (https://github.com/m-ohuchi)",
     "Michele Comignano (https://github.com/comick)",
     "Nick Desaulniers (https://github.com/nickdesaulniers)",
     "Tim Cameron Ryan (https://github.com/tcr)",

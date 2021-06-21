@@ -1,9 +1,9 @@
 {
   "name": "jaeger-client",
-  "version": "3.18.2dev",
+  "version": "3.18.1dev",
   "description": "Jaeger binding for OpenTracing API for Node.js",
   "engines": {
-    "node": ">=10"
+    "node": ">=0.10"
   },
   "license": "Apache-2.0",
   "keywords": [],
@@ -20,7 +20,7 @@
     "opentracing": "^0.14.4",
     "thriftrw": "^3.5.0",
     "uuid": "^3.2.1",
-    "xorshift": "^1.1.1"
+    "xorshift": "^0.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
@@ -49,13 +49,12 @@
     "minimist": "1.2.3",
     "mocha": "^3.0.1",
     "prettier": "1.10.2",
-    "prom-client": "11.0.0",
     "request": "2.74.0",
     "rsvp": "^3.3.1",
     "semver": "^5",
     "sinon": "^1.17.5",
     "source-map-support": "^0.4.5",
-    "tchannel": "^4",
+    "tchannel": "^3.9.0",
     "uber-licence": "^2.0.2",
     "underscore": "^1.8.3"
   },

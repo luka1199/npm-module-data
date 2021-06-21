@@ -4,7 +4,7 @@
     "url": "http://www.kadamwhite.com"
   },
   "name": "wpapi",
-  "version": "2.0.0-alpha.1",
+  "version": "1.1.0",
   "description": "An isomorphic JavaScript client for interacting with the WordPress REST API",
   "main": "wpapi.js",
   "repository": {
@@ -22,74 +22,64 @@
     "cms",
     "wordpress"
   ],
-  "browserslist": "last 2 versions, ie 11, not dead",
-  "jest": {
-    "testMatch": [
-      "**/__tests__/**/*.js",
-      "**/?(*.)+(spec|test).js",
-      "**/tests/**/*.js"
-    ],
-    "testPathIgnorePatterns": [
-      "test.js",
-      ".eslintrc.js",
-      "/tests/helpers/"
-    ],
-    "coveragePathIgnorePatterns": [
-      "/tests/helpers/"
-    ]
-  },
   "scripts": {
     "build": "webpack && webpack --config webpack.config.minified.js",
-    "build:stats": "webpack && webpack --config webpack.config.minified.js --stats",
     "zip": "npm run build && grunt zip",
-    "update-default-routes-json": "node build/scripts/update-default-routes-json",
+    "update-default-routes-json": "node ./lib/data/update-default-routes-json",
     "predocs": "rimraf documentation/api-reference",
     "docs": "grunt docs && jsdoc -c .jsdoc.json --verbose",
     "postdocs": "rimraf documentation/api-readme.md",
     "jekyll": "node bin/jekyll",
     "release-docs": "node build/scripts/release-docs",
     "release-npm": "npm run build && npm test && npm publish",
-    "eslint": "eslint Gruntfile.js wpapi.js bin build lib tests",
-    "lint": "npm run eslint",
-    "watch": "jest --watch",
-    "test:all": "jest",
-    "test:unit": "jest tests/unit superagent/tests/unit fetch/tests/unit",
-    "test:integration": "jest tests/integration",
-    "test:ci": "npm run eslint && jest tests/unit --coverage",
-    "pretest": "npm run lint || true",
-    "test": "jest --coverage"
+    "jshint": "jshint --reporter=node_modules/jshint-stylish/index.js Gruntfile.js wpapi.js bin build lib tests",
+    "jscs": "jscs Gruntfile.js wpapi.js bin build lib tests --reporter node_modules/jscs-stylish/jscs-stylish.js",
+    "lint": "npm run jshint && npm run jscs || true",
+    "mocha": "_mocha tests --recursive --reporter=nyan",
+    "watch": "grunt watch",
+    "test:all": "_mocha tests --recursive --reporter=nyan",
+    "test:unit": "_mocha tests/unit --recursive --reporter=nyan",
+    "test:integration": "_mocha tests/integration --recursive --reporter=nyan",
+    "test:ci": "npm run lint && istanbul cover _mocha -- tests/unit --recursive --reporter=list",
+    "pretest": "npm run lint",
+    "test": "istanbul cover _mocha -- tests --recursive --reporter=nyan"
   },
   "dependencies": {
-    "li": "^1.3.0",
-    "parse-link-header": "^1.0.1",
-    "qs": "^6.7.0"
-  },
-  "optionalDependencies": {
-    "form-data": "^2.5.0",
-    "node-fetch": "^2.6.0",
-    "superagent": "^4.1.0"
+    "es6-promise": "^3.2.1",
+    "li": "^1.0.1",
+    "lodash.uniq": "^4.3.0",
+    "node.extend": "^1.1.5",
+    "parse-link-header": "^0.4.1",
+    "qs": "^6.2.0",
+    "route-parser": "0.0.4",
+    "superagent": "^3.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
-    "@babel/preset-env": "^7.5.0",
-    "babel-loader": "^8.0.6",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
     "combyne": "^2.0.0",
-    "eslint": "^4.19.1",
-    "grunt": "^1.0.4",
+    "grunt": "^1.0.1",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-jshint": "^1.0.0",
     "grunt-zip": "^0.17.1",
-    "jest": "^24.8.0",
-    "jsdoc": "^3.6.2",
+    "istanbul": "^0.4.4",
+    "jscs": "^3.0.6",
+    "jscs-stylish": "^0.3.1",
+    "jsdoc": "^3.4.3",
+    "jshint": "^2.9.2",
+    "jshint-stylish": "^2.2.0",
+    "json-loader": "^0.5.4",
     "kramed": "^0.5.6",
     "load-grunt-tasks": "^3.5.0",
+    "lodash.reduce": "^4.6.0",
     "minami": "^1.2.3",
     "minimist": "^1.2.0",
+    "mocha": "^2.5.3",
     "prompt": "^1.0.0",
-    "rimraf": "^2.6.3",
-    "webpack": "^4.35.0",
-    "webpack-bundle-analyzer": "^3.3.2",
-    "webpack-cli": "^3.3.5"
+    "rimraf": "^2.6.1",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0",
+    "webpack": "^1.13.1"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "connect-livereload",
   "description": "connect middleware for adding the livereload script to the response",
-  "version": "0.6.1",
+  "version": "0.5.3",
   "author": "Andi Neck <andi.neck@intesso.com>",
   "contributors": [
     {
@@ -27,7 +27,6 @@
   ],
   "repository": "git://github.com/intesso/connect-livereload",
   "main": "index",
-  "license": "MIT",
   "engines": {
     "node": "*"
   }

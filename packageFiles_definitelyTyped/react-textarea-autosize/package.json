@@ -1,89 +1,57 @@
 {
   "name": "react-textarea-autosize",
   "description": "textarea component for React which grows with content",
-  "version": "8.3.3",
-  "keywords": [
-    "autosize",
-    "grow",
-    "react",
-    "react-component",
-    "textarea"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Andarist/react-textarea-autosize.git"
-  },
+  "version": "4.3.0",
+  "keywords": "autosize, grow, react, react-component, textarea",
+  "repository": "andreypopp/react-textarea-autosize",
   "license": "MIT",
-  "main": "dist/react-textarea-autosize.cjs.js",
-  "module": "dist/react-textarea-autosize.esm.js",
-  "browser": {
-    "./dist/react-textarea-autosize.cjs.js": "./dist/react-textarea-autosize.browser.cjs.js",
-    "./dist/react-textarea-autosize.esm.js": "./dist/react-textarea-autosize.browser.esm.js"
-  },
-  "sideEffects": false,
-  "files": ["dist"],
-  "author": "Andrey Popp <8mayday@gmail.com> (httsps://andreypopp.com/)",
-  "contributors": [
-    "Mateusz Burzyński <mateuszburzynski@gmail.com> (https://github.com/Andarist)"
-  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "jsnext:main": "es/index.js",
+  "author": "Andrey Popp <8mayday@gmail.com> (https://andreypopp.com/)",
   "scripts": {
-    "prebuild": "npm run clean",
-    "build": "preconstruct build",
-    "docs:dev": "npm run dev --prefix example",
-    "docs:build": "npm run build --prefix example",
-    "docs:publish": "npm run docs:build && cd ./example/dist && git init && git commit --allow-empty -m 'update docs' && git checkout -b gh-pages && touch .nojekyll && git add . && git commit -am 'update docs' && git push git@github.com:Andarist/react-textarea-autosize gh-pages --force",
-    "clean": "rimraf dist",
-    "lint": "eslint --ext .js,.ts,.tsx src",
-    "prepare": "npm run build",
-    "changeset": "changeset",
-    "prerelease": "npm run lint && npm test",
-    "release": "changeset publish",
-    "test": "jest",
-    "test:watch": "npm test -- --watch"
+    "build": "npm run build:es && npm run build:cjs && npm run build:umd",
+    "build:es": "rimraf es && cross-env BABEL_ENV=es babel src --out-dir es --sourceMaps=inline",
+    "build:cjs": "rimraf lib && cross-env BABEL_ENV=cjs babel src --out-dir lib --sourceMaps=inline",
+    "build:umd": "rimraf dist && npm run build:umd:prod && npm run build:umd:dev",
+    "build:umd:prod": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -i src/index.js -o dist/react-textarea-autosize.min.js",
+    "build:umd:dev": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -i src/index.js -o dist/react-textarea-autosize.js",
+    "clean": "rimraf es && rimraf lib && rimraf dist",
+    "lint": "eslint src",
+    "prerelease": "npm run lint && npm run build",
+    "release:patch": "npm run prerelease && npm version patch && git push --follow-tags && npm publish",
+    "release:minor": "npm run prerelease && npm version minor && git push --follow-tags && npm publish",
+    "release:major": "npm run prerelease && npm version major && git push --follow-tags && npm publish"
   },
   "peerDependencies": {
-    "react": "^16.8.0 || ^17.0.0"
-  },
-  "dependencies": {
-    "@babel/runtime": "^7.10.2",
-    "use-composed-ref": "^1.0.0",
-    "use-latest": "^1.0.0"
+    "react": ">=0.14.0 <16.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.10.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
-    "@babel/plugin-transform-runtime": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
-    "@babel/preset-typescript": "^7.10.4",
-    "@changesets/changelog-github": "^0.2.6",
-    "@changesets/cli": "^2.8.0",
-    "@preconstruct/cli": "^2.0.5",
-    "@testing-library/jest-dom": "^5.9.0",
-    "@testing-library/react": "^10.1.0",
-    "@types/react": "^16.9.35",
-    "@types/react-dom": "^16.9.8",
-    "@typescript-eslint/eslint-plugin": "^3.1.0",
-    "@typescript-eslint/parser": "^3.1.0",
-    "babel-eslint": "11.0.0-beta.2",
-    "bytes": "^3.1.0",
-    "cross-env": "^7.0.2",
-    "eslint": "^7.1.0",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.3",
-    "eslint-plugin-react": "^7.20.0",
-    "husky": "^4.2.5",
-    "jest": "^26.0.1",
-    "lint-staged": "^10.2.8",
-    "parcel": "2.0.0-nightly.454",
-    "prettier": "^2.0.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "rimraf": "^3.0.2",
-    "terser": "^4.7.0",
-    "typescript": "^3.9.3"
+    "babel-cli": "^6.24.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "cross-env": "^4.0.0",
+    "eslint": "^3.3.1",
+    "eslint-config-prometheusresearch": "^0.2.0",
+    "eslint-plugin-react": "^6.1.2",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.36.3",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^1.0.2",
+    "watchify": "^3.7.0"
   },
-  "engines": {
-    "node": ">=10"
+  "files": [
+    "es",
+    "lib",
+    "dist"
+  ],
+  "dependencies": {
+    "prop-types": "^15.5.8"
   }
 }

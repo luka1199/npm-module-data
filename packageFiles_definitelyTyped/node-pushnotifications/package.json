@@ -1,22 +1,16 @@
 {
   "name": "node-pushnotifications",
   "description": "A cross-platform push service for node.js",
-  "version": "1.7.0",
+  "version": "1.0.1",
   "author": {
     "name": "AppFeel",
     "email": "info@appfeel.com"
   },
   "scripts": {
-    "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "test-cover": "nyc --reporter=lcov mocha test/ -- --require @babel/register --recursive; open-cli ./coverage/lcov-report/index.html",
-    "test": "mocha test/ --require @babel/register --recursive",
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha  --report lcovonly -- test/ --compilers jsx:babel-core/register --recursive && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "build": "./node_modules/.bin/babel src -d lib",
-    "lint": "eslint {src,test}/**/*.js",
-    "format": "prettier --write \"**/*.{js,json,md,yml}\"",
-    "ci": "npm run build && npm run test-cover && npm run lint",
-    "prepublishOnly": "npm run lint && npm test && npm run build",
-    "release": "release-it",
-    "prepare": "husky install"
+    "prepublish": "npm test && npm run build",
+    "test-alone": "./node_modules/.bin/_mocha test/ --compilers jsx:babel-core/register --recursive"
   },
   "keywords": [
     "notifications",
@@ -39,8 +33,7 @@
     "wphone",
     "windows phone",
     "wns",
-    "mpns",
-    "webpush"
+    "mpns"
   ],
   "main": "index.js",
   "bugs": {
@@ -52,54 +45,31 @@
     "url": "https://github.com/appfeel/node-pushnotifications.git"
   },
   "dependencies": {
-    "@parse/node-apn": "4.1.1",
-    "node-adm": "0.9.1",
-    "node-gcm": "1.0.4",
-    "ramda": "0.27.1",
-    "web-push": "3.4.4",
-    "wns": "0.5.4"
-  },
-  "devDependencies": {
-    "@babel/cli": "7.13.16",
-    "@babel/core": "7.13.16",
-    "@babel/preset-env": "7.13.15",
-    "@babel/register": "7.13.16",
-    "chai": "4.3.4",
-    "coveralls": "3.1.0",
-    "dirty-chai": "2.0.1",
-    "eslint": "7.25.0",
-    "eslint-config-airbnb-base": "14.2.1",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-prettier": "3.4.0",
-    "husky": "6.0.0",
-    "mocha": "8.3.2",
-    "nyc": "15.1.0",
-    "opn-cli": "5.0.0",
-    "prettier": "2.2.1",
-    "pretty-quick": "3.1.0",
-    "release-it": "14.6.1",
-    "sinon": "1.17.7",
-    "sinon-chai": "3.5.0"
+    "apn": "^2.1.1",
+    "node-adm": "^0.9.1",
+    "node-gcm": "^0.14.4",
+    "wns": "^0.5.3"
   },
   "engines": {
-    "node": ">=6.x.x"
-  },
-  "eslintConfig": {
-    "ecmaVersion": 6,
-    "env": {
-      "es6": true,
-      "node": true
-    }
+    "node": "*"
   },
   "readmeFilename": "README.md",
   "homepage": "https://github.com/appfeel/node-pushnotifications",
-  "license": "MIT",
-  "contributors": [
-    {
-      "name": "Alexander Friedl",
-      "email": "mail@alexanderfriedl.com",
-      "url": "https://github.com/alex-friedl"
-    }
-  ]
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-preset-es2015": "^6.16.0",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.14",
+    "eslint": "^3.8.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^3.1.2",
+    "mocha-eslint": "^3.0.1",
+    "sinon": "^1.17.6"
+  },
+  "license": "MIT"
 }

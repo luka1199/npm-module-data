@@ -1,6 +1,6 @@
 {
   "name": "yesql",
-  "version": "5.0.0",
+  "version": "4.1.0",
   "description": "Read named SQL statements from .sql files. Also named parameters for prepared statements.",
   "main": "yesql.js",
   "scripts": {
@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/pihvi/yesql#readme",
   "devDependencies": {
-    "assert-diff": "3.0.2",
-    "mocha": "8.2.1"
+    "assert-diff": "2.0.3",
+    "mocha": "6.2.2"
   }
 }

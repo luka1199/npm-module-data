@@ -1,17 +1,15 @@
 {
   "name": "level-js",
-  "version": "6.0.0",
+  "version": "4.0.0",
   "description": "An abstract-leveldown compliant store on top of IndexedDB",
   "author": "max ogden",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "test": "standard && hallmark && airtap -p local --coverage test/index.js",
-    "test-browsers": "standard && airtap --coverage test/index.js",
-    "coverage": "nyc report -r lcovonly",
-    "hallmark": "hallmark --fix",
-    "dependency-check": "dependency-check --no-dev -i buffer .",
-    "prepublishOnly": "npm run dependency-check"
+    "test": "standard && hallmark && airtap --local --coverage test/index.js",
+    "test-browsers": "standard && airtap --sauce-connect --loopback airtap.local --coverage test/index.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "hallmark": "hallmark --fix"
   },
   "files": [
     "index.js",
@@ -22,24 +20,26 @@
     "UPGRADING.md",
     "sauce-labs.svg"
   ],
+  "browser": {
+    "./util/immediate.js": "./util/immediate-browser.js"
+  },
   "dependencies": {
-    "abstract-leveldown": "^7.0.0",
-    "buffer": "^6.0.3",
+    "abstract-leveldown": "~6.0.1",
+    "immediate": "~3.2.3",
     "inherits": "^2.0.3",
-    "ltgt": "^2.1.2"
+    "ltgt": "^2.1.2",
+    "typedarray-to-buffer": "~3.1.5"
   },
   "devDependencies": {
-    "airtap": "^4.0.1",
-    "airtap-playwright": "^1.0.1",
-    "airtap-sauce": "^1.1.0",
-    "dependency-check": "^4.1.0",
-    "hallmark": "^3.0.0",
-    "level-community": "^3.0.0",
-    "level-concat-iterator": "^3.0.0",
-    "nyc": "^15.0.0",
-    "standard": "^16.0.3",
-    "tape": "^5.0.0",
-    "uuid": "^3.3.2"
+    "airtap": "^2.0.0",
+    "coveralls": "^3.0.2",
+    "hallmark": "0.1.0",
+    "level-community": "~3.0.0",
+    "level-concat-iterator": "^2.0.0",
+    "nyc": "^13.1.0",
+    "standard": "^12.0.1",
+    "tape": "^4.0.0",
+    "uuid": "~3.3.2"
   },
   "hallmark": {
     "community": "level-community"
@@ -48,7 +48,6 @@
     "type": "git",
     "url": "https://github.com/Level/level-js.git"
   },
-  "homepage": "https://github.com/Level/level-js",
   "keywords": [
     "level",
     "leveldb",

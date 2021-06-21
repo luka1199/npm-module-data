@@ -1,6 +1,6 @@
 {
   "name": "asciichart",
-  "version": "1.5.25",
+  "version": "1.5.0",
   "description": "Nice-looking lightweight console ASCII line charts ╭┈╯ with no dependencies",
   "main": "asciichart.js",
   "repository": {
@@ -9,15 +9,13 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "coveralls": "^3.1.0",
-    "esdoc-node": "^1.0.5",
-    "eslint": "^7.5.0",
+    "coveralls": "^2.13.1",
+    "esdoc": "^0.5.2",
+    "esdoc-node": "^1.0.2",
+    "eslint": "^4.2.0",
     "istanbul": "^0.4.5",
-    "lodash": "^4.17.19",
-    "marked": "^2.0.0",
-    "minimist": "^1.2.5",
-    "mocha": "^8.1.1",
-    "nyc": "^15.1.0"
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3"
   },
   "author": {
     "name": "Igor Kroitor",
@@ -56,10 +54,8 @@
     "ascii graphics",
     "graphics",
     "command line",
-    "commandline",
     "bash",
     "shell",
-    "sh",
     "light"
   ]
 }

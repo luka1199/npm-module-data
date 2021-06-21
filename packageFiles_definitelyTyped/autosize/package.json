@@ -1,7 +1,7 @@
 {
   "name": "autosize",
   "description": "Autosize is a small, stand-alone script to automatically adjust textarea height to fit text.",
-  "version": "5.0.0",
+  "version": "4.0.0",
   "keywords": [
     "textarea",
     "form",
@@ -17,7 +17,6 @@
     "email": "hello@jacklmoore.com"
   },
   "main": "dist/autosize.js",
-  "module": "src/autosize.js",
   "license": "MIT",
   "homepage": "http://www.jacklmoore.com/autosize",
   "demo": "http://www.jacklmoore.com/autosize",
@@ -27,13 +26,22 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
-    "babel-preset-env": "^1.6.1",
+    "babel": "^5.4.3",
     "gaze": "^1.1.2",
-    "jshint": "^2.9.5",
-    "uglify-js": "^3.3.16"
+    "jshint": "^2.9.4",
+    "uglify-js": "^2.7.4"
+  },
+  "config": {
+    "bower": {
+      "name": "autosize",
+      "ignore": [],
+      "moduleType": [
+        "amd",
+        "node"
+      ]
+    },
+    "title": "Autosize",
+    "filename": "autosize"
   },
   "scripts": {
     "build": "node build"

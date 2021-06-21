@@ -1,6 +1,6 @@
 {
   "name": "node-isbn",
-  "version": "1.6.1",
+  "version": "1.6.0",
   "description": "Find books by ISBN",
   "main": "index.js",
   "scripts": {
@@ -20,13 +20,13 @@
     "worldcat",
     "isbndb"
   ],
-  "author": "Guido García <@palmerabollo>",
+  "author": "Guido García <guido.garcia.bernardo@gmail.com>",
   "license": "AGPL",
   "devDependencies": {
-    "mocha": "^8.3.2",
+    "mocha": "^6.2.2",
     "nock": "^9.0.13"
   },
   "dependencies": {
-    "axios": "^0.21.1"
+    "axios": "^0.19.2"
   }
 }

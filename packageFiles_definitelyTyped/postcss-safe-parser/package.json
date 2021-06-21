@@ -1,6 +1,6 @@
 {
   "name": "postcss-safe-parser",
-  "version": "6.0.0",
+  "version": "5.0.0",
   "description": "Fault-tolerant CSS parser for PostCSS",
   "keywords": [
     "css",
@@ -13,55 +13,45 @@
   "license": "MIT",
   "repository": "postcss/postcss-safe-parser",
   "scripts": {
-    "test": "jest --coverage && eslint . && ./test/integration.js"
+    "test": "jest-ci --coverage && eslint-ci . && ./test/integration.js"
   },
   "engines": {
-    "node": ">=12.0"
+    "node": ">=10.0"
   },
   "main": "lib/safe-parse",
-  "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/postcss/"
-  },
-  "peerDependencies": {
-    "postcss": "^8.3.3"
+  "dependencies": {
+    "postcss": "^8.0.2"
   },
   "devDependencies": {
-    "@logux/eslint-config": "^45.4.4",
-    "clean-publish": "^2.2.0",
-    "eslint": "^7.28.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-jest": "^24.3.6",
+    "@logux/eslint-config": "^40.0.4",
+    "ci-job-number": "^1.2.2",
+    "clean-publish": "^1.1.8",
+    "eslint": "^7.9.0",
+    "eslint-ci": "^1.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prefer-let": "^1.1.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-prettierx": "^0.14.0",
+    "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-unicorn": "^33.0.1",
-    "jest": "^27.0.4",
-    "lint-staged": "^11.0.0",
-    "postcss": "^8.3.3",
-    "postcss-parser-tests": "^8.3.5",
-    "postcss-sharec-config": "^0.4.1",
-    "prettier": "^2.2.1",
-    "simple-git-hooks": "^2.4.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-unicorn": "^21.0.0",
+    "husky": "^4.3.0",
+    "jest": "^26.4.2",
+    "jest-ci": "^0.1.1",
+    "lint-staged": "^10.3.0",
+    "postcss-parser-tests": "^8.3.0",
+    "postcss-sharec-config": "^0.1.6"
   },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
-  },
-  "prettier": {
-    "arrowParens": "avoid",
-    "jsxSingleQuote": false,
-    "quoteProps": "consistent",
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "none"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "eslint --fix"
-    ]
+    "*.js": "eslint --fix"
   },
   "eslintConfig": {
     "extends": "@logux/eslint-config"
@@ -76,6 +66,6 @@
   },
   "sharec": {
     "config": "postcss-sharec-config",
-    "version": "0.4.1"
+    "version": "0.1.6"
   }
 }

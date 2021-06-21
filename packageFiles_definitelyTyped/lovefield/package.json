@@ -1,6 +1,6 @@
 {
   "name": "lovefield",
-  "version": "2.1.12",
+  "version": "2.0.66",
   "main": "dist/lovefield.min.js",
   "description": "Lovefield - A relational database for web apps",
   "keywords": [
@@ -21,35 +21,34 @@
     "spac/lovefield-spac",
     "spac/parser.js",
     "spac/spac.js",
-    "spac/template",
-    "tools/node_bootstrap.js"
+    "spac/template"
   ],
   "bin": {
     "lovefield-spac": "spac/lovefield-spac"
   },
   "dependencies": {
-    "js-yaml": ">=3.1.0",
-    "nopt": ">=2.2.1"
+    "js-yaml": "~3.1.0",
+    "nopt": "~2.2.1"
   },
   "devDependencies": {
-    "chalk": ">=0.5.1",
+    "chalk": "^0.5.1",
     "firebase-token-generator": "*",
-    "fs-extra": ">=0.18.2",
-    "glob": ">=3.2.6",
-    "google-closure-compiler-java": "latest",
-    "google-closure-library": "20190618.0.0",
-    "gulp": "4.0.2",
-    "gulp-closure-compiler": ">=0.3.1",
-    "gulp-connect": "^5.7.0",
-    "gulp-gjslint": ">=0.1.4",
-    "jasmine": "^2.3.2",
-    "mkdirp": ">=0.5.0",
-    "request": "^2.88.0",
-    "selenium-webdriver": "^3.6.0",
-    "temporary": ">=0.0.8",
-    "toposort-class": ">=0.3.1"
+    "fs-extra": "^0.18.2",
+    "glob": "~3.2.6",
+    "google-closure-compiler": "latest",
+    "google-closure-library": "latest",
+    "gulp": "^3.9.0",
+    "gulp-closure-compiler": "^0.2.18",
+    "gulp-connect": "^2.2.0",
+    "gulp-gjslint": "^0.1.4",
+    "minijasminenode": "^1.1.1",
+    "mkdirp": "^0.5.0",
+    "request": "^2.55.0",
+    "selenium-webdriver": "2.47.0",
+    "temporary": "^0.0.8",
+    "toposort-class": "^0.3.1"
   },
   "engines": {
-    "node": ">=12.16.3"
+    "node": ">=0.12"
   }
 }

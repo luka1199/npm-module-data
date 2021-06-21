@@ -1,13 +1,12 @@
 {
   "name": "com.darktalker.cordova.screenshot",
-  "version": "0.1.6",
+  "version": "0.1.5",
   "description": "screenshot PhoneGap Plugin for Android",
   "cordova": {
     "id": "com.darktalker.cordova.screenshot",
     "platforms": [
       "android",
-      "ios",
-      "osx"
+      "ios"
     ]
   },
   "repository": {
@@ -19,8 +18,7 @@
     "screenshot",
     "ecosystem:cordova",
     "cordova-android",
-    "cordova-ios",
-    "cordova-osx"
+    "cordova-ios"
   ],
   "engines": [
     {
@@ -33,11 +31,5 @@
   "bugs": {
     "url": "https://github.com/gitawego/cordova-screenshot/issues"
   },
-  "homepage": "https://github.com/gitawego/cordova-screenshot#readme",
-  "devDependencies": {
-    "sync-cordova-xml": "^0.4.0"
-  },
-  "scripts": {
-    "version": "sync-cordova-xml package.json plugin.xml --output plugin.xml && git add plugin.xml"
-  }
+  "homepage": "https://github.com/gitawego/cordova-screenshot#readme"
 }

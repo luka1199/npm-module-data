@@ -1,6 +1,6 @@
 {
   "name": "sinon-test",
-  "version": "3.1.0",
+  "version": "2.4.0",
   "description": "",
   "main": "lib/index.js",
   "browser": "dist/sinon-test.js",
@@ -9,21 +9,22 @@
     "build": "run-s build:dist-folder build:bundle",
     "build:bundle": "rollup -c",
     "build:dist-folder": "mkdirp dist",
-    "test": "mocha",
-    "test-coverage": "nyc --reporter text --reporter html --reporter lcovonly npm run test",
+    "coverage": "nyc report --reporter text-lcov | coveralls",
+    "test": "nyc mocha",
     "//integration-test": "This cannot run as a prepare step, as it will trigger a loop",
     "integration-test": "test-repos/do-test.sh",
     "lint": "eslint .",
-    "prettier:check": "prettier --check '**/*.{js,css,md}'",
-    "prettier:write": "prettier --write '**/*.{js,css,md}'",
     "prepare": "run-p test lint build",
-    "preversion": "npm run integration-test && ./scripts/preversion.sh"
+    "preversion": "test-repos/do-test.sh && ./scripts/preversion.sh"
   },
   "greenkeeper": {
     "ignore": [
       "rollup"
     ]
   },
+  "pre-commit": [
+    "lint"
+  ],
   "author": "Christian Johansen",
   "repository": {
     "type": "git",
@@ -35,36 +36,22 @@
   ],
   "license": "BSD-3-Clause",
   "devDependencies": {
-    "@sinonjs/referee": "^5.0.0",
+    "@sinonjs/referee": "^2.1.1",
     "es6-promise": "^4.2.4",
-    "eslint": "^6.5.1",
-    "eslint-config-prettier": "^6.3.0",
-    "eslint-config-sinon": "^3.0.1",
+    "eslint": "^4.19.1",
+    "eslint-config-sinon": "^1.0.3",
     "eslint-plugin-ie11": "^1.0.0",
-    "eslint-plugin-mocha": "^8.0.0",
-    "eslint-plugin-prettier": "^3.1.1",
-    "husky": "^4.3.8",
-    "lint-staged": "^10.5.3",
-    "mkdirp": "^1.0.3",
-    "mocha": "^7.0.1",
+    "mkdirp": "^0.5.1",
+    "mocha": "^5.2.0",
     "npm-run-all": "^4.1.3",
-    "nyc": "^15.0.0",
+    "nyc": "^12.0.2",
     "phantomjs-prebuilt": "^2.1.16",
-    "prettier": "^1.18.2",
-    "rollup": "^1.23.1",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "sinon": "^9.0.0"
+    "pre-commit": "^1.2.2",
+    "rollup": "^0.60.0",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "sinon": "^7.0.0"
   },
   "peerDependencies": {
-    "sinon": "2.x - 10.x"
-  },
-  "lint-staged": {
-    "*.{js,css,md}": "prettier --check",
-    "*.js": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "sinon": "2.x - 7.x"
   }
 }

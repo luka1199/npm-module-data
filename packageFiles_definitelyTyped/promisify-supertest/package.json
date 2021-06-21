@@ -3,7 +3,6 @@
   "description": "SuperTest + Promises",
   "main": "index.js",
   "scripts": {
-    "pretest": "npm run lint",
     "test": "mocha",
     "lint": "standard",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
@@ -30,6 +29,7 @@
   "devDependencies": {
     "chai": "^3.2.0",
     "cz-conventional-changelog": "^1.1.0",
+    "decache": "^3.0.3",
     "express": "^4.13.3",
     "mocha": "^2.2.5",
     "semantic-release": "^4.3.4",
@@ -38,12 +38,5 @@
   },
   "peerDependencies": {
     "supertest": "1"
-  },
-  "contributors": [
-    {
-      "name": "Francis Brito",
-      "email": "fr.br94@gmail.com",
-      "url": "https://github.com/francisbrito"
-    }
-  ]
+  }
 }

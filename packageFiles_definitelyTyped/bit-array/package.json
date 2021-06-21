@@ -13,10 +13,9 @@
         "lib": "./lib"
     },
     "devDependencies": {
-        "mocha": "=1.10.0",
-        "expect.js": "=0.2.0"
+        "test": "0.4.x"
     },
     "scripts": {
-      "test": "mocha --reporter spec"
+      "test": "node tests/bit-array.test.js"
     }
 }

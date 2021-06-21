@@ -1,24 +1,34 @@
 {
   "name": "node-hue-api",
-  "description": "Philips Hue API Library for Node.js",
-  "version": "5.0.0-alpha.2",
-  "author": "Peter Murray <681306+peter-murray@users.noreply.github.com>",
+  "description": "Phillips Hue API Library for Node.js",
+  "version": "2.3.0",
+  "author": "Peter Murray <peter.murray@osirisoft.com>",
   "contributors": [
     {
       "name": "Peter Murray",
-      "email": "681306+peter-murray@users.noreply.github.com"
+      "email": "peter.murray@osirisoft.com"
+    },
+    {
+      "name": "Ilari Mäkimattila",
+      "email": "ilari.makimattila@gmail.com"
+    },
+    {
+      "name": "Bryan Schlief"
+    },
+    {
+      "name": "Sebastian B (SBejga)"
+    },
+    {
+      "name:": "Jon Long",
+      "email": "jon@linesandwaves.com"
+    },
+    {
+      "name": "Knut Sveidqvist"
     }
   ],
   "main": "index.js",
-  "types": "index.d.ts",
   "scripts": {
-    "test-model": "mocha --recursive \"lib/model/**/*.test.js\"",
-    "test-api": "mocha --timeout 5000 --recursive \"lib/api/**/*.test.js\"",
-    "test-types": "mocha --recursive \"lib/types/*.test.js\"",
-    "generate-webpack-files": "npx webpack --config webpack.model.config.js",
-    "clean-ts-definitions": "find . -type f -name '*.d.ts' -exec rm {} \\;",
-    "generate-ts-definitions": "npm run clean-ts-definitions && npx typescript@3.8.3 index.js --allowJs --strict --declaration --emitDeclarationOnly --listEmittedFiles",
-    "prepublishOnly": "npm run generate-ts-definitions"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
@@ -28,17 +38,19 @@
     "url": "https://github.com/peter-murray/node-hue-api/issues"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "bottleneck": "^2.19.5",
-    "get-ssl-certificate": "^2.3.3"
+    "xml2js": "~0.4",
+    "q": "~1.4",
+    "deep-extend": "~0.4.0",
+    "axios": "~0.8.1",
+    "traits": "~0.4.0"
   },
   "devDependencies": {
-    "chai": "~4.2",
-    "eslint": "^5.16.0",
-    "mocha": "^6.2.3"
+    "mocha": "~2.3",
+    "chai": "~3.4",
+    "semver": "~5.0"
   },
   "engines": {
-    "node": ">= 10.0.0"
+    "nodejs": ">= 4.0.0"
   },
   "license": "Apache-2.0",
   "keywords": [

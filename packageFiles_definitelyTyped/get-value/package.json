@@ -1,7 +1,7 @@
 {
   "name": "get-value",
   "description": "Use property paths like 'a.b.c' to get a nested value from an object. Even works when keys have dots in them (no other dot-prop library can do this!).",
-  "version": "3.0.1",
+  "version": "3.0.0",
   "homepage": "https://github.com/jonschlinkert/get-value",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/get-value",
@@ -27,14 +27,11 @@
     "benchmarked": "^2.0.0",
     "dot-prop": "^4.2.0",
     "getobject": "^0.1.0",
-    "glob": "^7.1.2",
     "gulp-format-md": "^1.0.0",
     "micromatch": "^3.1.5",
     "minimist": "^1.2.0",
     "mocha": "^3.5.3",
-    "nyc": "^11.4.1",
-    "object-path": "^0.11.4",
-    "write": "^1.0.3"
+    "nyc": "^11.4.1"
   },
   "keywords": [
     "get",

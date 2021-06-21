@@ -1,10 +1,13 @@
 {
   "name": "bayes-classifier",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "description": "Naive Bayes classifier",
   "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
   "scripts": {
-    "test": "node test/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -20,10 +23,5 @@
   "bugs": {
     "url": "https://github.com/miguelmota/bayes-classifier/issues"
   },
-  "homepage": "https://github.com/miguelmota/bayes-classifier",
-  "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-browserify": "^0.5.1",
-    "tape": "^4.6.3"
-  }
+  "homepage": "https://github.com/miguelmota/bayes-classifier"
 }

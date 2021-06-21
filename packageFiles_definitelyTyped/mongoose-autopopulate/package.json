@@ -1,6 +1,6 @@
 {
   "name": "mongoose-autopopulate",
-  "version": "0.14.0",
+  "version": "0.10.0",
   "description": "Always populate() certain fields in your mongoose schemas",
   "main": "index.js",
   "homepage": "https://github.com/mongodb-js/mongoose-autopopulate",
@@ -27,11 +27,11 @@
     "co": "4.6.0",
     "co-mocha": "1.2.2",
     "mocha": "5.1.1",
-    "mongoose": ">= 5.12.4",
+    "mongoose": "~5.3",
     "nyc": "11.7.3"
   },
   "peerDependencies": {
-    "mongoose": ">= 5.12.4"
+    "mongoose": "4.x || 5.x"
   },
   "author": "Valeri Karpov <val@karpov.io>",
   "license": "Apache 2.0",

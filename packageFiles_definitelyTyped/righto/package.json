@@ -1,6 +1,6 @@
 {
   "name": "righto",
-  "version": "6.1.3",
+  "version": "6.1.0",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -13,8 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "abbott": "^1.1.3",
-    "setimmediate": "^1.0.5"
+    "abbott": "^1.1.3"
   },
   "devDependencies": {
     "console-watch": "^1.0.2",

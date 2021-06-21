@@ -1,9 +1,11 @@
 {
   "name": "plugapi",
   "description": "Generic API for building plug.dj bots",
-  "version": "5.1.1",
-  "author": "Alex Pham <thedark1337@thedark1337.com> (https://thedark1337.com)",
-  "bugs": "https://github.com/plugCubed/plugAPI/issues",
+  "version": "4.2.0",
+  "author": "Alex Pham <thedark1337@thedark1337.com>",
+  "bugs": {
+    "url": "https://github.com/plugCubed/plugAPI/issues"
+  },
   "contributors": [
     {
       "name": "Chris Vickery",
@@ -21,35 +23,31 @@
       "email": "atomjack@gmail.com"
     },
     {
-      "name": "Chikachi",
+      "name": "Thomas Andresen",
       "email": "TAT@plugcubed.net"
-    },
-    {
-      "name": "Dazzuh",
-      "email": "dazzuh@radiant.dj"
     }
   ],
   "dependencies": {
-    "auto-bind": "^2.1.1",
-    "chalk": "^2.3.2",
-    "deasync": "^0.1.15",
-    "eventemitter3": "^4.0.0",
-    "got": "^9.6.0",
+    "chalk": "^1.1.0",
+    "deasync": "^0.1.1",
+    "eventemitter3": "^1.1.1",
     "handle-errors": "^1.0.0",
-    "jethro": "^4.4.3",
-    "p-retry": "^4.1.0",
-    "plug-message-split": "^1.0.1",
-    "tough-cookie": "^3.0.1",
-    "ws": "^7.1.2"
+    "he": "^0.5.0",
+    "is-finite": "^1.0.1",
+    "object-assign": "^4.0.1",
+    "request": "^2.61.0",
+    "ws": "^0.8.0"
   },
   "devDependencies": {
-    "documentation": "^12.1.2",
-    "eslint-config-thedark1337": "^5.0.0",
-    "mocha": "^6.2.1",
-    "mocha-eslint": "^5.0.0"
+    "chai": "^3.2.0",
+    "eslint": "^1.1.0",
+    "eslint-config-thedark1337": "^0.3.0",
+    "eslint-config-xo": "^0.4.0",
+    "mocha": "^2.2.5",
+    "mocha-eslint": "thedark1337/mocha-eslint"
   },
   "engines": {
-    "node": ">= 4.0.0"
+    "node": ">= 0.10.0"
   },
   "keywords": [
     "api",
@@ -59,13 +57,11 @@
   ],
   "license": "MIT",
   "main": "./lib/client.js",
-  "optionalDependencies": {
-    "bufferutil": "2.x || 3.x",
-    "utf-8-validate": "2.x || 4.x"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plugCubed/plugAPI"
   },
-  "repository": "plugcubed/plugapi",
   "scripts": {
-    "docs": "documentation build lib/*.js -c documentation.yml -f html -o docs",
     "test": "mocha"
   }
 }

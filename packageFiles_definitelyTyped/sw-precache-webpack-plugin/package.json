@@ -1,10 +1,10 @@
 {
   "name": "sw-precache-webpack-plugin",
-  "version": "1.0.0",
+  "version": "0.11.0",
   "description": "Webpack plugin for using service workers",
   "main": "lib/index.js",
   "scripts": {
-    "prepare": "make build",
+    "prepublish": "make build",
     "version": "make changelog && git add -p CHANGELOG.md && git checkout CHANGELOG.md",
     "test:unit": "make unit_test",
     "test:integration": "make integration_test",
@@ -33,41 +33,34 @@
     "type": "git",
     "url": "git+https://github.com/goldhand/sw-precache-webpack-plugin.git"
   },
-  "author": "Will Farley <a.will.farley@gmail.com> (http://www.willfarley.org/)",
-  "license": "MIT",
+  "author": "Will Farley <a.will.farley@gmail.com>",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/goldhand/sw-precache-webpack-plugin/issues"
   },
   "homepage": "https://github.com/goldhand/sw-precache-webpack-plugin#readme",
-  "directories": {
-    "example": "./examples",
-    "lib": "./src",
-    "test": "./test"
-  },
   "peerDependencies": {
-    "webpack": "^1 || ^2 || ^2.1.0-beta || ^2.2.0-beta || ^3 || ^4"
+    "webpack": "^1 || ^2 || ^2.1.0-beta || ^2.2.0-beta"
   },
   "dependencies": {
-    "del": "^3.0.0",
-    "lodash.template": "^4.5.0",
-    "sw-precache": "^5.2.1",
-    "uglify-es": "^3.3.9"
+    "del": "^2.2.2",
+    "sw-precache": "^5.0.0",
+    "uglify-js": "^2.8.5"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.2.2",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "bluebird": "^3.5.1",
-    "eslint": "^4.18.1",
-    "git-release-notes": "2.1.0",
-    "memory-fs": "^0.4.1",
+    "ava": "^0.18.2",
+    "babel-cli": "^6.16.0",
+    "babel-eslint": "^7.1.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-stage-0": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "bluebird": "^3.4.7",
+    "eslint": "^3.16.1",
+    "git-release-notes": "1.0.0",
     "mkdirp": "^0.5.1",
-    "sinon": "^4.4.2",
-    "webpack": "^4.41.5"
+    "sinon": "^1.17.7",
+    "webpack": "^2.2.1"
   },
   "ava": {
     "babel": "inherit",

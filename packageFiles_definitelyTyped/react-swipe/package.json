@@ -1,6 +1,6 @@
 {
   "name": "react-swipe",
-  "version": "6.0.4",
+  "version": "6.0.0",
   "description": "Brad Birdsall's Swipe.js as a React component",
   "homepage": "https://github.com/voronianski/react-swipe",
   "keywords": [
@@ -21,8 +21,8 @@
   "main": "./lib/index.js",
   "license": "MIT",
   "engines": {
-    "node": ">=8.0.0",
-    "npm": ">=5.5.1"
+    "node": "^8.0.0",
+    "npm": "^5.5.1"
   },
   "prettier": {
     "singleQuote": true
@@ -39,9 +39,8 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "lodash.isequal": "^4.5.0",
     "prop-types": "^15.6.0",
-    "swipe-js-iso": "^2.1.5"
+    "swipe-js-iso": "^2.1.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
@@ -86,7 +85,6 @@
     "build-dist-dev": "NODE_ENV=development webpack --config webpack.config --colors",
     "build-dist-prod": "NODE_ENV=production webpack --config webpack.config --progress --colors -p",
     "build-demo": "browserify ./demo/index.js -t [ babelify --presets [ @babel/preset-env @babel/preset-react ] ] -o ./demo/bundle.js",
-    "test": "echo \"Comming soon ;)\" && exit 0",
-    "prepublishOnly": "npm run build"
+    "test": "echo \"Comming soon ;)\" && exit 0"
   }
 }

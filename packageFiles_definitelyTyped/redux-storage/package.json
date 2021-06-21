@@ -1,6 +1,6 @@
 {
   "name": "redux-storage",
-  "version": "4.1.4",
+  "version": "4.1.2",
   "description": "Persistence layer for redux with flexible backends",
   "main": "build/index.js",
   "jsnext:main": "build-es/index.js",
@@ -26,8 +26,7 @@
   ],
   "author": [
     "Michael Contento <mail@michaelcontento.de>",
-    "Guns <gunjan.soni2002@gmail.com>",
-    "Renan Bandeira <renanbandeira2@gmail.com>"
+    "Guns <gunjan.soni2002@gmail.com>"
   ],
   "files": [
     "build/",
@@ -59,7 +58,7 @@
     "redux-storage-merger-simple": "^1.0.2"
   },
   "peerDependencies": {
-    "redux": "^4.0.0 || ^3.0.0 || ^2.0.0 || ^1.0.0 || 1.0.0-alpha || 1.0.0-rc"
+    "redux": "^3.0.0 || ^2.0.0 || ^1.0.0 || 1.0.0-alpha || 1.0.0-rc"
   },
   "browserify": {
     "transform": [

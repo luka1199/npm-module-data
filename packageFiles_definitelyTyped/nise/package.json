@@ -1,6 +1,6 @@
 {
   "name": "nise",
-  "version": "5.1.0",
+  "version": "1.4.0",
   "description": "Fake XHR and server",
   "keywords": [
     "test",
@@ -17,19 +17,14 @@
   "main": "lib/index.js",
   "module": "nise.js",
   "scripts": {
-    "bundle": "browserify --no-detect-globals -s nise -o nise.js lib/index.js",
+    "bundle": "browserify -s nise -o nise.js lib/index.js",
     "lint": "eslint .",
-    "prettier:check": "prettier --check '**/*.{js,css,md}'",
-    "prettier:write": "prettier --write '**/*.{js,css,md}'",
-    "prepare": "npm run bundle",
+    "prepublish": "npm run bundle",
     "prepublishOnly": "mkdocs gh-deploy -r upstream || mkdocs gh-deploy -r origin",
-    "test": "mocha lib/**/*.test.js",
+    "test": "mocha 'lib/**/*.test.js'",
     "test:coverage": "nyc --reporter=lcov --reporter=text --all npm test -- --reporter dot",
-    "test:headless": "mochify --https-server --plugin [ proxyquire-universal ] --no-detect-globals test/global-hack.js lib/**/*.test.js"
-  },
-  "browser": {
-    "jsdom": false,
-    "jsdom-global": false
+    "precommit": "npm run lint -- --fix && npm run test",
+    "prepush": "npm run lint && npm run test"
   },
   "author": "",
   "license": "BSD-3-Clause",
@@ -45,36 +40,25 @@
     "lib/**/*.js"
   ],
   "devDependencies": {
-    "@sinonjs/eslint-config": "^4.0.0",
-    "@sinonjs/referee": "^5.0.0",
-    "browserify": "^16.2.3",
-    "husky": "^4.2.1",
-    "jsdom": "^16.2.0",
+    "@sinonjs/referee": "^2.0.0",
+    "browserify": "^16.0.0",
+    "eslint": "^4.17.0",
+    "eslint-config-sinon": "^1.0.1",
+    "eslint-plugin-ie11": "1.0.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "husky": "^0.14.3",
+    "jsdom": "11.6.2",
     "jsdom-global": "3.0.2",
-    "lint-staged": "^10.5.3",
-    "mocha": "^7.0.1",
-    "mochify": "^6.6.0",
-    "nyc": "^15.0.0",
-    "prettier": "^1.19.1",
-    "proxyquire": "^2.1.3",
-    "proxyquire-universal": "^2.1.0",
-    "proxyquireify": "^3.2.1",
-    "sinon": "^9.0.0"
+    "mocha": "^5.0.0",
+    "nyc": "^11.4.1",
+    "proxyquire": "^1.8.0",
+    "sinon": "^4.2.2"
   },
   "dependencies": {
-    "@sinonjs/commons": "^1.7.0",
-    "@sinonjs/fake-timers": "^7.0.4",
-    "@sinonjs/text-encoding": "^0.7.1",
-    "just-extend": "^4.0.2",
-    "path-to-regexp": "^1.7.0"
-  },
-  "lint-staged": {
-    "*.{js,css,md}": "prettier --check",
-    "*.js": "eslint --quiet"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "@sinonjs/formatio": "^2.0.0",
+    "just-extend": "^1.1.27",
+    "lolex": "^2.3.2",
+    "path-to-regexp": "^1.7.0",
+    "text-encoding": "^0.6.4"
   }
 }

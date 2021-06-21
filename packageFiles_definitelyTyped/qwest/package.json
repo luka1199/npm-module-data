@@ -1,7 +1,7 @@
 {
   "name": "qwest",
-  "description": "Ajax library with XHR2, promises and request limit",
-  "version": "4.5.0",
+  "description": "Ajax library with XHR2, promises and requests limitation",
+  "version": "1.7.0",
   "author": "Aurélien Delogu <pyrsmk@dreamysource.fr> (http://dreamysource.fr)",
   "repository": {
     "type": "git",
@@ -19,25 +19,15 @@
     "url": "https://github.com/pyrsmk/qwest/issues",
     "email": "dev@dreamysource.fr"
   },
-  "homepage": "http://dreamysource.io/project/qwest",
+  "homepage": "http://dreamysource.fr/product/qwest",
   "devDependencies": {
-    "browserify": "^11.1.0",
-    "gulp": "^3.9.0",
-    "gulp-derequire": "^2.1.0",
-    "gulp-jshint": "^1.11.2",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.3",
-    "gulp-shell": "^0.4.2",
-    "gulp-sizereport": "^1.1.2",
-    "gulp-uglify": "^1.2.0",
-    "jshint-stylish": "^2.0.1",
-    "lodash": "^3.10.1",
-    "merge2": "^0.3.6",
-    "resolve": "^1.1.6",
-    "through2": "^2.0.0"
-  },
-  "dependencies": {
-    "jquery-param": "^0.1.2",
-    "pinkyswear": "^2.2.2"
+    "glob": "^4.4.1",
+    "grunt": "~0.4.4",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "^0.11.2",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-shell": "^1.1.1",
+    "grunt-string-replace": "^1.0.0",
+    "jit-grunt": "^0.9.0"
   }
 }

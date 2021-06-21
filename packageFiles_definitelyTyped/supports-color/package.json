@@ -1,6 +1,6 @@
 {
 	"name": "supports-color",
-	"version": "9.0.1",
+	"version": "8.1.0",
 	"description": "Detect whether a terminal supports color",
 	"license": "MIT",
 	"repository": "chalk/supports-color",
@@ -10,22 +10,20 @@
 		"email": "sindresorhus@gmail.com",
 		"url": "https://sindresorhus.com"
 	},
-	"type": "module",
-	"exports": {
-		"node": "./index.js",
-		"default": "./browser.js"
-	},
 	"engines": {
-		"node": ">=12"
+		"node": ">=10"
 	},
 	"scripts": {
-		"//test": "xo && ava",
-		"test": "xo"
+		"test": "xo && ava"
 	},
 	"files": [
 		"index.js",
 		"browser.js"
 	],
+	"exports": {
+		"node": "./index.js",
+		"default": "./browser.js"
+	},
 	"keywords": [
 		"color",
 		"colour",
@@ -49,11 +47,12 @@
 		"16m"
 	],
 	"dependencies": {
-		"has-flag": "^5.0.0"
+		"has-flag": "^4.0.0"
 	},
 	"devDependencies": {
-		"ava": "^3.15.0",
-		"import-fresh": "^3.3.0",
-		"xo": "^0.38.2"
-	}
+		"ava": "^2.4.0",
+		"import-fresh": "^3.2.2",
+		"xo": "^0.35.0"
+	},
+	"browser": "browser.js"
 }

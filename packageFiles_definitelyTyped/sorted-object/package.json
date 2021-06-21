@@ -6,9 +6,9 @@
     "keys",
     "object"
   ],
-  "version": "2.0.1",
+  "version": "2.0.0",
   "author": "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
-  "license": "(WTFPL OR MIT)",
+  "license": "WTFPL",
   "repository": "domenic/sorted-object",
   "main": "lib/sorted-object.js",
   "files": [

@@ -1,13 +1,13 @@
 {
   "name": "chai-uuid",
-  "version": "1.0.6",
-  "description": "Chai plugin for performing assertions on UUIDs",
+  "version": "1.0.0",
+  "description": "Chai plugin for performing assertions on UUID strings",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha test"
+    "test": "npm test"
   },
   "repository": {
     "type": "git",
@@ -19,9 +19,7 @@
     "uuid",
     "expect",
     "should",
-    "guid",
-    "chai-plugin",
-    "browser"
+    "guid"
   ],
   "author": "Ryan French <frenchrya@gmail.com> (https://github.com/rfrench)",
   "license": "MIT",

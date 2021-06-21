@@ -1,6 +1,6 @@
 {
   "name": "fs-capacitor",
-  "version": "7.0.1",
+  "version": "2.0.0",
   "description": "Filesystem-buffered, passthrough stream that buffers indefinitely rather than propagate backpressure from downstream consumers.",
   "license": "MIT",
   "author": {
@@ -18,43 +18,67 @@
     "clone"
   ],
   "files": [
-    "dist/index.d.ts",
-    "dist/index.js",
-    "dist/index.js.map"
+    "lib",
+    "!lib/test.*"
   ],
-  "main": "dist/index.js",
+  "main": "lib",
+  "module": "lib/index.mjs",
   "engines": {
-    "node": ">=12"
-  },
-  "browserslist": "node >= 12",
-  "ava": {
-    "nodeArguments": [
-      "--experimental-specifier-resolution=node"
-    ]
+    "node": ">=8.5"
   },
   "devDependencies": {
-    "@types/node": "^15.3.0",
-    "@typescript-eslint/eslint-plugin": "^4.23.0",
-    "@typescript-eslint/parser": "^4.23.0",
-    "ava": "^3.15.0",
-    "eslint": "^7.26.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "nodemon": "^2.0.7",
-    "prettier": "^2.3.0",
-    "typescript": "^4.2.4"
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.4.0",
+    "eslint-config-env": "^2.0.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-import-order-alphabetical": "^0.0.1",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "husky": "^1.1.2",
+    "leaked-handles": "^5.2.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.14.2",
+    "tap": "^12.0.1"
   },
   "scripts": {
-    "format": "prettier --list-different --write '**/*.{json,yml,md,ts}'",
-    "lint": "prettier -c '**/*.{json,yml,md,ts}' && eslint src --ext ts",
-    "build": "rm -rf dist && tsc",
-    "build:development": "rm -rf dist && tsc --watch",
-    "test": "ava --verbose dist/index.test.js",
-    "test:development": "ava --verbose --watch dist/index.test.js",
-    "prepare": "yarn build",
-    "prepublishOnly": "yarn install && yarn lint && yarn build && yarn test"
+    "prepare": "npm run prepare:clean && npm run prepare:mjs && npm run prepare:js && npm run prepare:prettier",
+    "prepare:clean": "rm -rf lib",
+    "prepare:mjs": "BABEL_ESM=1 babel src -d lib --keep-file-extension",
+    "prepare:js": "babel src -d lib",
+    "prepare:prettier": "prettier 'lib/**/*.{mjs,js}' --write",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:mjs && npm run test:js",
+    "test:eslint": "eslint . --ext mjs,js",
+    "test:prettier": "prettier '**/*.{json,yml,md}' -l",
+    "test:mjs": "node --experimental-modules --no-warnings lib/test | tap-mocha-reporter spec",
+    "test:js": "node lib/test | tap-mocha-reporter spec",
+    "prepublishOnly": "npm run prepare && npm test",
+    "watch": "watch 'npm run prepublishOnly --silent' src --interval 1"
   },
-  "dependencies": {},
-  "type": "module",
-  "exports": "./dist/index.js"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{mjs,js}": "eslint",
+    "*.{json,yml,md}": "prettier -l"
+  },
+  "eslintIgnore": [
+    "lib"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "env"
+    ],
+    "rules": {
+      "require-jsdoc": "off"
+    }
+  },
+  "prettier": {
+    "proseWrap": "never"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "wuzzy",
-  "version": "0.1.7",
+  "version": "0.1.0",
   "description": "library for simularity identification",
   "main": "index.js",
   "scripts": {
@@ -20,14 +20,12 @@
     "levenshtein",
     "ngram"
   ],
-  "dependencies": {
-    "lodash": "^4.17.15"
-  },
   "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-mocha-test": "~0.7.0",
+    "mocha": "*",
     "chai": "*",
-    "grunt": "^1.1.0",
-    "grunt-mocha-test": "^0.13.3",
-    "mocha": "^7.1.1"
+    "markdox": "~0.1.x"
   },
   "author": "Joe D'Alessandro",
   "license": "GPL"

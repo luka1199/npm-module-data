@@ -1,32 +1,18 @@
 {
   "name": "parse-github-url",
   "description": "Parse a github URL into an object.",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "homepage": "https://github.com/jonschlinkert/parse-github-url",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
-  "contributors": [
-    "Ben Meiri (https://github.com/bmeiri)",
-    "Brian Woodward (https://twitter.com/doowb)",
-    "Javier Mendiara (http://twitter.com/jmendiara)",
-    "Jeremy Ruppel (jeremyruppel.github.io)",
-    "Jon Schlinkert (http://twitter.com/jonschlinkert)",
-    "Pete Cook (cookpete.com)",
-    "Philipp Alferov (https://github.com/alferov)",
-    "William Bartholomew (https://willbar.com)"
-  ],
   "repository": "jonschlinkert/parse-github-url",
   "bugs": {
     "url": "https://github.com/jonschlinkert/parse-github-url/issues"
   },
   "license": "MIT",
   "files": [
-    "cli.js",
     "index.js"
   ],
   "main": "index.js",
-  "bin": {
-    "parse-github-url": "./cli.js"
-  },
   "engines": {
     "node": ">=0.10.0"
   },
@@ -34,9 +20,9 @@
     "test": "mocha"
   },
   "devDependencies": {
-    "gulp-format-md": "^1.0.0",
-    "mocha": "^3.2.0",
-    "verb-generate-readme": "^0.6.0"
+    "gulp-format-md": "^0.1.7",
+    "mocha": "^2.4.5",
+    "verb-generate-readme": "^0.2.1"
   },
   "keywords": [
     "branch",
@@ -53,25 +39,26 @@
   ],
   "verb": {
     "run": true,
-    "toc": false,
-    "layout": "default",
-    "tasks": [
-      "readme"
-    ],
     "plugins": [
       "gulp-format-md"
     ],
     "related": {
       "list": [
-        "git-add-remote",
-        "git-branch",
-        "git-repo-name",
-        "git-username",
-        "is-git-url"
+        "github-short-url-regex",
+        "is-git-url",
+        "parse-github-short-url"
       ]
     },
+    "toc": false,
     "lint": {
       "reflinks": true
-    }
+    },
+    "layout": "default",
+    "tasks": [
+      "readme"
+    ],
+    "reflinks": [
+      "verb"
+    ]
   }
 }

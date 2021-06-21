@@ -2,7 +2,7 @@
   "author": "Felix Geisendörfer <felix@debuggable.com> (http://debuggable.com/)",
   "name": "graphite",
   "description": "A node.js client for graphite.",
-  "version": "0.1.4",
+  "version": "0.1.1",
   "homepage": "https://github.com/felixge/node-graphite",
   "repository": {
     "type": "git",
@@ -10,19 +10,18 @@
   },
   "main": "./index",
   "scripts": {
-    "test": "npm run test:unit && npm run test:integration",
-    "test:unit": "make test type=unit",
-    "test:integration": "make test type=integration"
+    "test": "make test"
   },
   "engines": {
-    "node": ">=4"
+    "node": "*"
   },
   "dependencies": {
+    "request": "2.1.1",
     "lazy-socket": "0.0.3"
   },
   "devDependencies": {
-    "sinon": "~7.1.1",
-    "urun": "0.0.8",
-    "utest": "0.0.8"
+    "urun": "0.0.3",
+    "utest": "0.0.2",
+    "sinon": "1.2.0"
   }
 }

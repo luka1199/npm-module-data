@@ -1,6 +1,6 @@
 {
   "name": "gulp-rev-replace",
-  "version": "0.4.4",
+  "version": "0.2.1",
   "description": "Rewrite occurences of filenames which have been renamed by gulp-rev",
   "main": "index.js",
   "repository": "jamesknelson/gulp-rev-replace",
@@ -25,14 +25,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "plugin-error": "^0.1.2",
-    "through2": "^2.0.0"
+    "through2": "~0.4.1",
+    "gulp-util": "~2.2.14"
   },
   "devDependencies": {
-    "event-stream": "^3.2.2",
-    "gulp-filter": "^3.0.1",
-    "gulp-rev": "^6.0.1",
-    "mocha": "^2.3.4",
-    "vinyl": "^2.1.0"
+    "mocha": "~1.18.2",
+    "gulp-rev": "~0.3.2",
+    "gulp-filter": "~0.4.0"
   }
 }

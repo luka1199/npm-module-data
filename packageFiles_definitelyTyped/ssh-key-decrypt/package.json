@@ -1,10 +1,10 @@
 {
   "name": "ssh-key-decrypt",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "Decrypt encrypted ssh private keys",
   "main": "index.js",
   "scripts": {
-    "test": "tap test.js"
+    "test": "node test"
   },
   "repository": {
     "type": "git",
@@ -27,11 +27,8 @@
     "passphrase"
   ],
   "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
-  "license": "ISC",
+  "license": "BSD",
   "bugs": {
     "url": "https://github.com/isaacs/ssh-key-decrypt/issues"
-  },
-  "devDependencies": {
-    "tap": "^1.2.0"
   }
 }

@@ -1,11 +1,11 @@
 {
 	"name": "react-lazy-load-image-component",
-	"version": "1.5.1",
+	"version": "1.5.0",
 	"description": " React Component to lazy load images using a HOC to track window scroll position. ",
 	"main": "build/index.js",
 	"peerDependencies": {
-		"react": "^15.x.x || ^16.x.x || ^17.x.x",
-		"react-dom": "^15.x.x || ^16.x.x || ^17.x.x"
+		"react": "^15.x.x || ^16.x.x",
+		"react-dom": "^15.x.x || ^16.x.x"
 	},
 	"dependencies": {
 		"lodash.debounce": "^4.0.8",

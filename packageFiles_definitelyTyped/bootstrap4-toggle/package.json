@@ -37,7 +37,6 @@
     "url": "https://github.com/gitbrent/bootstrap4-toggle/issues"
   },
   "devDependencies": {
-    "doctoc": "^1.4.0",
     "grunt": "^1.0.4",
     "grunt-contrib-clean": "^2.0.0",
     "grunt-contrib-cssmin": "^3.0.0",

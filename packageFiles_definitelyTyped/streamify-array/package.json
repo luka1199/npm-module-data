@@ -1,6 +1,6 @@
 {
   "name": "streamify-array",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Converts an array into a Node readable stream",
   "main": "index.js",
   "scripts": {

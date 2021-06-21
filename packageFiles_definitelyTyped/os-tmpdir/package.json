@@ -1,6 +1,6 @@
 {
   "name": "os-tmpdir",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Node.js os.tmpdir() ponyfill",
   "license": "MIT",
   "repository": "sindresorhus/os-tmpdir",
@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && ava"
+    "test": "node test.js"
   },
   "files": [
     "index.js"
@@ -35,7 +35,6 @@
     "environment"
   ],
   "devDependencies": {
-    "ava": "*",
-    "xo": "^0.16.0"
+    "ava": "0.0.4"
   }
 }

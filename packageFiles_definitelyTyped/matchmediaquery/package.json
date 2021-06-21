@@ -1,6 +1,6 @@
 {
   "name": "matchmediaquery",
-  "version": "0.3.1",
+  "version": "0.3.0",
   "description": "Media queries for your client and server",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,7 @@
     "css-mediaquery": "^0.1.2"
   },
   "devDependencies": {
-    "@hapi/lab": "^22.0.2",
-    "code": "^5.2.4"
+    "code": "^4.1.0",
+    "lab": "^14.1.1"
   }
 }

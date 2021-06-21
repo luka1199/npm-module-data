@@ -1,23 +1,23 @@
 {
   "name": "fuzzy-search",
-  "version": "3.2.1",
+  "version": "2.1.0",
   "description": "Simple fuzzy search",
   "main": "./dist/FuzzySearch.js",
-  "module": "src/FuzzySearch.js",
   "devDependencies": {
-    "@babel/register": "^7.6.2",
-    "cross-env": "^6.0.3",
-    "eslint": "^6.6.0",
-    "jasmine": "^3.5.0",
-    "laravel-mix": "^5.0.0",
-    "vue-template-compiler": "^2.6.11"
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "chai": "^3.5.0",
+    "cross-env": "^5.0.5",
+    "eslint": "^3.10.2",
+    "laravel-mix": "^1.4.2",
+    "mocha": "^3.1.2"
   },
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && rm mix-manifest.json",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && rm mix-manifest.json",
-    "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && rm mix-manifest.json",
-    "test": "jasmine",
-    "lint": "eslint src"
+    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && rm mix-manifest.json",
+    "dev": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && rm mix-manifest.json",
+    "prod": "cross-env NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && rm mix-manifest.json",
+    "test": "cross-env NODE_ENV=development TESTING=true webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js && rm mix-manifest.json",
+    "run:test": "mocha tests/compiled/test.js",
+    "lint": "node node_modules/eslint/bin/eslint src"
   },
   "repository": {
     "type": "git",
@@ -34,5 +34,6 @@
     "url": "https://github.com/wouter2203/fuzzy-search/issues"
   },
   "homepage": "https://github.com/wouter2203/fuzzy-search#readme",
-  "tonicExampleFilename": "example.js"
+  "tonicExampleFilename": "example.js",
+  "dependencies": {}
 }

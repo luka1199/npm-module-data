@@ -1,6 +1,6 @@
 {
   "name": "react-router-bootstrap",
-  "version": "0.25.0",
+  "version": "0.24.1",
   "description": "Integration between React Router and React-Bootstrap",
   "files": [
     "lib"
@@ -34,8 +34,7 @@
   },
   "homepage": "https://github.com/react-bootstrap/react-router-bootstrap",
   "peerDependencies": {
-    "react": ">=0.14.0",
-    "react-router-dom": ">=4.0.0"
+    "react": ">=0.14.0"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
@@ -94,6 +93,6 @@
     "bowerRepo": "git@github.com:react-bootstrap/react-router-bootstrap-bower.git"
   },
   "dependencies": {
-    "prop-types": "^15.5.10"
+    "prop-types": "^15.5.8"
   }
 }

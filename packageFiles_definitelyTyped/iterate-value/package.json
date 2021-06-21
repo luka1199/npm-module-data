@@ -1,25 +1,21 @@
 {
 	"name": "iterate-value",
-	"version": "1.0.2",
+	"version": "1.0.0",
 	"description": "Iterate any iterable JS value. Works robustly in all environments, all versions.",
 	"main": "index.js",
-	"exports": {
-		".": [
-			{
-				"default": "./index.js"
-			},
-			"./index.js"
-		]
-	},
+	"exports": [
+		{
+			"default": "./index.js"
+		},
+		"./index.js"
+	],
 	"type": "commonjs",
 	"scripts": {
-		"prepublishOnly": "safe-publish-latest",
-		"prepublish": "not-in-publish || npm run prepublishOnly",
-		"prelint": "evalmd README.md",
+		"prepublish": "safe-publish-latest",
 		"lint": "eslint .",
 		"pretest": "npm run lint",
-		"tests-only": "nyc tape 'test/**/*.js'",
-		"posttest": "aud --production",
+		"tests-only": "node test",
+		"posttest": "npx aud",
 		"test": "npm run tests-only",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
@@ -51,22 +47,18 @@
 	},
 	"homepage": "https://github.com/ljharb/iterate-value#readme",
 	"devDependencies": {
-		"@ljharb/eslint-config": "^17.6.0",
-		"aud": "^1.1.5",
-		"auto-changelog": "^2.2.1",
-		"eslint": "^7.26.0",
-		"evalmd": "^0.0.19",
+		"@ljharb/eslint-config": "^15.0.2",
+		"auto-changelog": "^1.16.2",
+		"eslint": "^6.7.1",
 		"for-each": "^0.3.3",
-		"has-bigints": "^1.0.1",
-		"has-symbols": "^1.0.2",
-		"nyc": "^10.3.2",
-		"object-inspect": "^1.10.3",
+		"has-bigints": "^1.0.0",
+		"has-symbols": "^1.0.1",
+		"object-inspect": "^1.7.0",
 		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.2.2"
+		"tape": "^4.11.0"
 	},
 	"dependencies": {
-		"es-get-iterator": "^1.1.2",
-		"iterate-iterator": "^1.0.1"
+		"es-get-iterator": "^1.0.0"
 	},
 	"auto-changelog": {
 		"output": "CHANGELOG.md",

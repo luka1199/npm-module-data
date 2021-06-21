@@ -1,6 +1,6 @@
 {
   "name": "ed2curve",
-  "version": "0.3.0",
+  "version": "0.2.0",
   "description": "Convert Ed25519 signing keys into Curve25519 Diffie-Hellman keys.",
   "main": "ed2curve.js",
   "directories": {
@@ -26,18 +26,18 @@
     "elliptic"
   ],
   "author": "Dmitry Chestnykh",
-  "license": "Unlicense",
+  "license": "Public domain",
   "bugs": {
     "url": "https://github.com/dchest/ed2curve-js/issues"
   },
   "homepage": "https://github.com/dchest/ed2curve-js",
   "dependencies": {
-    "tweetnacl": "1.x.x"
+    "tweetnacl": "0.x.x"
   },
   "devDependencies": {
     "faucet": "0.x.x",
-    "tape": "4.13.0",
-    "tweetnacl-util": "^0.15.0",
-    "uglify-js": "^3.7.5"
+    "tape": "2.x.x",
+    "tweetnacl-util": "^0.13.3",
+    "uglify-js": "^2.6.1"
   }
 }

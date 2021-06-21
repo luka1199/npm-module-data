@@ -1,7 +1,7 @@
 {
   "name": "modularscale",
   "description": "Calculate a value from a modular scale",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bugs": {
     "url": "https://github.com/KyleAMathews/modularscale/issues"
@@ -32,7 +32,6 @@
     "url": "https://github.com/KyleAMathews/modularscale.git"
   },
   "scripts": {
-    "build": "coffee -o dist/ -c src/index.coffee",
     "test-watch": "NODE_ENV=test node_modules/.bin/mocha -w --recursive --compilers coffee:coffee-script/register -R mocha-unfunk-reporter",
     "test": "node_modules/.bin/coffeelint src/* && NODE_ENV=test node_modules/.bin/mocha --recursive --compilers coffee:coffee-script/register -R mocha-unfunk-reporter"
   }

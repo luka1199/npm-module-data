@@ -1,6 +1,6 @@
 {
   "name": "gradient-parser",
-  "version": "1.0.2",
+  "version": "0.1.2",
   "description": "Parse CSS3 gradient definitions and return an AST.",
   "author": {
     "name": "Rafael Carcicio",
@@ -32,8 +32,8 @@
     "css3",
     "parser"
   ],
+  "dependencies": {},
   "devDependencies": {
-    "expect.js": "*",
     "grunt": "*",
     "grunt-browserify": "^3.0.1",
     "grunt-complexity": "*",

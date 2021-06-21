@@ -1,6 +1,6 @@
 {
   "name": "json-parse-better-errors",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "JSON.parse with context information on error",
   "main": "index.js",
   "files": [
@@ -22,7 +22,7 @@
   ],
   "author": {
     "name": "Kat Marchán",
-    "email": "kzm@zkat.tech",
+    "email": "kzm@sykosomatic.org",
     "twitter": "maybekatz"
   },
   "license": "MIT",

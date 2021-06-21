@@ -7,13 +7,13 @@
     "layout",
     "ejs"
   ],
-  "version": "2.5.1",
+  "version": "2.2.1",
   "main": "lib/express-layouts.js",
   "dependencies": {},
   "devDependencies": {
     "express": "*",
     "supertest": "*",
-    "ejs": "^2.6.1",
+    "ejs": "*",
     "mocha": "*",
     "should": "*"
   },

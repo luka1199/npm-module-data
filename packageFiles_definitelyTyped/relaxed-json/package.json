@@ -1,7 +1,7 @@
 {
   "name": "relaxed-json",
   "description": "Relaxed JSON is strict superset JSON, relaxing strictness of valilla JSON",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "homepage": "https://github.com/phadej/relaxed-json",
   "author": {
     "name": "Oleg Grenrus",
@@ -27,14 +27,15 @@
     "test": "make"
   },
   "devDependencies": {
-    "david": "^11.0.0",
-    "eslint": "^5.15.0",
-    "nyc": "^13.3.0",
-    "jsverify": "^0.8.4",
-    "mocha": "^6.0.2",
-    "uglify-js": "^3.4.9",
-    "underscore": "^1.8.2",
-    "typify-bin": "0.0.7"
+    "david": "^6.1.4",
+    "eslint": "^0.24.1",
+    "istanbul": "~0.3.0",
+    "jscs": "^1.11.3",
+    "jshint": "^2.6.0",
+    "jsverify": "^0.6.0-alpha.1",
+    "mocha": "^2.1.0",
+    "uglify-js": "~2.4.13",
+    "underscore": "^1.8.2"
   },
   "keywords": [
     "json",
@@ -43,7 +44,7 @@
     "config"
   ],
   "dependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^1.0.0",
     "commander": "^2.6.0"
   }
 }

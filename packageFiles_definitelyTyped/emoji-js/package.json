@@ -13,14 +13,19 @@
     "emoji-datasource": "4.1.0"
   },
   "devDependencies": {
-    "jasmine-core": "~3.7",
-    "karma": "~6.3",
-    "karma-coverage": "~2.0",
-    "karma-jasmine": "~4.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "puppeteer": "~9.1.1",
+    "grunt": "~1.0.1",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-karma": "~0.12.2",
+    "grunt-karma-coveralls": "^2.5.3",
+    "grunt-shell": "^1.1.2",
+    "jasmine-core": "~2.4.1",
+    "karma": "~0.13.22",
+    "karma-chrome-launcher": "~0.2.0",
+    "karma-coverage": "~0.5.5",
+    "karma-jasmine": "~0.3.5",
+    "karma-phantomjs-launcher": "~1.0.0",
     "karma-story-reporter": "^0.3.1",
-    "uglify-js": "^3.13.5"
+    "phantomjs-prebuilt": "~2.1.7"
   },
   "repository": {
     "type": "git",
@@ -37,12 +42,5 @@
   "bugs": {
     "url": "https://github.com/iamcal/js-emoji/issues"
   },
-  "homepage": "https://github.com/iamcal/js-emoji",
-  "scripts": {
-    "compile": "php build/build.php > lib/emoji.js",
-    "uglify": "echo \"/* $(npm -s run env echo '$npm_package_name') $(date +%Y-%m-%d) */\" > lib/emoji.min.js; ./node_modules/.bin/uglifyjs -c -m -- lib/emoji.js >> lib/emoji.min.js",
-    "test": "./node_modules/.bin/karma start karma.conf.js --single-run --log-level error",
-    "coverage": "./node_modules/.bin/karma start karma-cover.conf.js --single-run --log-level disable",
-    "build": "npm run compile && npm run uglify && npm run test && npm run coverage"
-  }
+  "homepage": "https://github.com/iamcal/js-emoji"
 }

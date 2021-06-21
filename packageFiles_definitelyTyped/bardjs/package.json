@@ -1,7 +1,7 @@
 {
   "name": "bardjs",
-  "version": "0.1.10",
-  "description": "Spec helpers for testing angular v.1.x apps with Mocha, Jasmine or QUnit",
+  "version": "0.1.4",
+  "description": "Mocha/chai spec helpers for testing angular v.1.x apps",
   "repository": {
     "type": "git",
     "url": "https://github.com/wardbell/bardjs.git"
@@ -24,10 +24,11 @@
     "url": "https://github.com/wardbell/bardjs/issues"
   },
   "scripts": {
-    "init": "npm install"
+    "init": "npm install",
+    "install": "bower install"
   },
   "dependencies": {
-    "sinon": "~1.15.0"
+    "sinon": ">=1.12.2"
   },
   "devDependencies": {
     "chai": "^1.9.1",

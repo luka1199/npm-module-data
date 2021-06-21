@@ -1,6 +1,6 @@
 {
   "name": "ical",
-  "version": "0.8.0",
+  "version": "0.6.0",
   "main": "index.js",
   "description": "A tolerant, minimal icalendar parser",
   "keywords": [
@@ -16,7 +16,8 @@
     "url": "git://github.com/peterbraden/ical.js.git"
   },
   "dependencies": {
-    "rrule": "2.6.6"
+    "request": "^2.88.0",
+    "rrule": "2.4.1"
   },
   "devDependencies": {
     "vows": "0.8.2",

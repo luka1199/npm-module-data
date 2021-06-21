@@ -1,6 +1,6 @@
 {
   "name": "graphql-upload",
-  "version": "12.0.0",
+  "version": "8.0.0",
   "description": "Middleware and an Upload scalar to add support for GraphQL multipart requests (file uploads via queries and mutations) to various Node.js GraphQL servers.",
   "license": "MIT",
   "author": {
@@ -11,15 +11,12 @@
   "repository": "github:jaydenseric/graphql-upload",
   "homepage": "https://github.com/jaydenseric/graphql-upload#readme",
   "bugs": "https://github.com/jaydenseric/graphql-upload/issues",
-  "funding": "https://github.com/sponsors/jaydenseric",
   "keywords": [
     "graphql",
     "upload",
     "file",
     "multipart",
-    "request",
     "server",
-    "middleware",
     "koa",
     "express",
     "apollo",
@@ -27,59 +24,78 @@
     "mjs"
   ],
   "files": [
-    "private",
-    "public"
+    "lib",
+    "!lib/test.*"
   ],
-  "sideEffects": false,
-  "main": "./public/index.js",
-  "exports": {
-    ".": {
-      "import": "./public/index.mjs",
-      "require": "./public/index.js"
-    },
-    "./public/*": "./public/*",
-    "./package": "./package.json",
-    "./package.json": "./package.json"
-  },
+  "main": "lib",
+  "module": "lib/index.mjs",
   "engines": {
-    "node": "^12.20 || >= 14.13"
+    "node": ">=8.5"
   },
   "peerDependencies": {
-    "graphql": "0.13.1 - 15"
+    "graphql": "0.13.1 - 14"
   },
   "dependencies": {
-    "busboy": "^0.3.1",
-    "fs-capacitor": "^6.2.0",
-    "http-errors": "^1.8.0",
-    "isobject": "^4.0.0",
-    "object-path": "^0.11.5"
+    "busboy": "^0.2.14",
+    "fs-capacitor": "^1.0.0",
+    "http-errors": "^1.7.1",
+    "object-path": "^0.11.4"
   },
   "devDependencies": {
-    "coverage-node": "^5.0.1",
-    "eslint": "^7.26.0",
-    "eslint-config-env": "^20.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsdoc": "^34.0.2",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.4.0",
-    "express": "^4.17.1",
-    "form-data": "^4.0.0",
-    "graphql": "^15.5.0",
-    "hard-rejection": "^2.1.0",
-    "jsdoc-md": "^10.2.0",
-    "koa": "^2.13.1",
-    "node-fetch": "^2.6.1",
-    "prettier": "^2.3.0",
-    "test-director": "^6.0.0"
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^9.0.0",
+    "eslint": "^5.6.0",
+    "eslint-config-env": "^1.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "express": "^4.16.3",
+    "form-data": "^2.3.2",
+    "graphql": "^14.0.2",
+    "husky": "^0.14.3",
+    "jsdoc-md": "^1.6.0",
+    "koa": "^2.5.3",
+    "lint-staged": "^7.2.2",
+    "node-fetch": "^2.2.0",
+    "prettier": "^1.14.2",
+    "tap": "^12.0.1",
+    "watch": "^1.0.2"
   },
   "scripts": {
-    "jsdoc": "jsdoc-md",
-    "test": "npm run test:eslint && npm run test:prettier && npm run test:jsdoc && npm run test:api",
-    "test:eslint": "eslint .",
-    "test:prettier": "prettier -c .",
-    "test:jsdoc": "jsdoc-md -c",
-    "test:api": "coverage-node -r hard-rejection/register test/index.mjs",
-    "prepublishOnly": "npm test"
+    "prepare": "npm run prepare:clean && npm run prepare:mjs && npm run prepare:js && npm run prepare:jsdoc && npm run prepare:prettier",
+    "prepare:clean": "rm -rf lib",
+    "prepare:mjs": "BABEL_ESM=1 babel src -d lib --keep-file-extension",
+    "prepare:js": "babel src -d lib",
+    "prepare:jsdoc": "jsdoc-md",
+    "prepare:prettier": "prettier 'lib/**/*.{mjs,js}' readme.md --write",
+    "test": "npm run test:eslint && npm run test:prettier && npm run test:mjs && npm run test:js",
+    "test:eslint": "eslint . --ext mjs,js",
+    "test:prettier": "prettier '**/*.{json,yml,md}' -l",
+    "test:mjs": "node --experimental-modules --no-warnings lib/test | tap-mocha-reporter spec",
+    "test:js": "node lib/test | tap-mocha-reporter spec",
+    "prepublishOnly": "npm run prepare && npm test",
+    "watch": "watch 'npm run prepublishOnly --silent' src --interval 1",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{mjs,js}": "eslint",
+    "*.{json,yml,md}": "prettier -l"
+  },
+  "eslintIgnore": [
+    "lib",
+    "tap-snapshots"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "env"
+    ]
+  },
+  "prettier": {
+    "proseWrap": "never",
+    "singleQuote": true,
+    "semi": false
   }
 }

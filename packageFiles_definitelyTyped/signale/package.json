@@ -1,7 +1,7 @@
 {
   "name": "signale",
   "version": "1.4.0",
-  "description": "Highly configurable logging utility",
+  "description": "👋 Hackable console logger",
   "license": "MIT",
   "repository": "klaussinani/signale",
   "author": {
@@ -20,24 +20,18 @@
     "node": ">=6"
   },
   "files": [
-    "src",
-    "types",
-    "index.js"
+    "index.js",
+    "signale.js",
+    "types.js"
   ],
-  "types": "./types/signale.d.ts",
   "keywords": [
-    "log",
-    "cli",
-    "logger",
-    "logging",
     "hackable",
     "colorful",
-    "console"
+    "console",
+    "logger"
   ],
   "scripts": {
-    "lint": "xo",
-    "test:ts": "tsc --noEmit -p test",
-    "test": "npm run lint && npm run test:ts"
+    "test": "xo"
   },
   "dependencies": {
     "chalk": "^2.3.2",
@@ -45,8 +39,6 @@
     "pkg-conf": "^2.1.0"
   },
   "devDependencies": {
-    "@types/node": "^11.11.3",
-    "typescript": "^3.3.3333",
     "xo": "*"
   },
   "options": {

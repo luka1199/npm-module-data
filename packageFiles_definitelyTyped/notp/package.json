@@ -1,8 +1,8 @@
 {
-  "author": "Guy Halford-Thompson <guy@guy.ht> (http://guy.ht)",
+  "author": "Guy Halford-Thompson <guy@cach.me> (http://cach.me)",
   "name": "notp",
   "description": "Node One Time Password library, supports HOTP, TOTP and works with Google Authenticator",
-  "version": "2.0.3",
+  "version": "2.0.0",
   "homepage": "https://github.com/guyht/notp",
   "repository": {
     "type": "git",
@@ -10,14 +10,13 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha"
+    "test": "expresso"
   },
   "engines": {
-    "node": "> v0.6.0"
+    "node": ">= v0.4.10"
   },
   "dependencies": {},
   "devDependencies": {
-    "mocha": "~1.18.2",
-    "thirty-two": "0.0.2"
+    "expresso" : "0.9.0"
   }
 }

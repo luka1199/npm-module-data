@@ -1,9 +1,8 @@
 {
   "name": "angular-file-upload",
-  "version": "2.6.1",
+  "version": "2.5.0",
   "homepage": "https://github.com/nervgh/angular-file-upload",
   "description": "Angular File Upload is a module for the AngularJS framework",
-  "license": "MIT",
   "author": {
     "name": "nerv",
     "url": "https://github.com/nervgh"
@@ -23,10 +22,6 @@
     "gulp": "~3.9.1",
     "json-loader": "~0.5.4",
     "raw-loader": "~0.5.1",
-    "serve": "^11.2.0",
     "webpack-stream": "~3.2.0"
-  },
-  "scripts": {
-    "serve": "serve ."
   }
 }

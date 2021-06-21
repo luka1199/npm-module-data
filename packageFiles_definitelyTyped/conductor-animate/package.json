@@ -1,8 +1,8 @@
 {
   "name": "conductor-animate",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Orchestrating complex page layout animations with a flick of the wrist.",
-  "main": "index.js",
+  "main": "build",
   "scripts": {
     "test": "jest --silent",
     "build": "babel src -d .",

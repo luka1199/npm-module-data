@@ -1,26 +1,23 @@
 {
   "name": "react-resizable",
-  "version": "3.0.2",
+  "version": "1.7.0",
   "description": "A component that is resizable with handles.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint lib/ __tests__/ setupTests/; flow",
-    "test": "jest --coverage",
-    "unit": "jest --watch --verbose",
+    "lint": "eslint --ext .js,.jsx lib/ test/; flow",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "bash build.sh",
     "build-example": "webpack",
-    "dev": "webpack-dev-server --open --open-page=examples/1.html",
-    "watch": "webpack --progress --watch",
-    "prepublishOnly": "npm run build",
-    "validate": "yarn check",
+    "dev": "echo 'Open http://localhost:4003/examples/1.html' && cross-env NODE_ENV=test webpack-dev-server --config webpack-dev-server.config.js --progress --hot --inline",
+    "prepublish": "npm run build",
+    "validate": "yarn list",
     "preversion": "npm run lint",
     "version": "git add CHANGELOG.md",
-    "postversion": "git push && git push --tags",
-    "flow": "flow"
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:react-grid-layout/react-resizable.git"
+    "url": "git@github.com:STRML/react-resizable.git"
   },
   "keywords": [
     "react",
@@ -30,51 +27,44 @@
   "author": "Samuel Reed <samuel.trace.reed@gmail.com> (http://strml.net/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/react-grid-layout/react-resizable/issues"
+    "url": "https://github.com/STRML/react-resizable/issues"
   },
-  "homepage": "https://github.com/react-grid-layout/react-resizable",
+  "homepage": "https://github.com/STRML/react-resizable",
   "devDependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/eslint-parser": "^7.14.4",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.14.4",
-    "@babel/preset-env": "^7.14.4",
-    "@babel/preset-flow": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
-    "babel-loader": "^8.0.6",
-    "cross-env": "^7.0.2",
-    "css-loader": "^4.2.2",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.4",
-    "eslint": "^7.28.0",
-    "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-react": "^7.24.0",
-    "flow-bin": "^0.150.1",
-    "jest": "^27.0.4",
-    "lodash": "^4.17.20",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^4.0.0",
+    "css-loader": "^0.28.0",
+    "eslint": "^3.19.0",
+    "eslint-plugin-react": "^6.10.3",
+    "flow-bin": "^0.45.0",
+    "lodash": "^4.3.0",
     "pre-commit": "^1.1.2",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2",
-    "react-test-renderer": "^16.11.0",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.8.2"
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
-    "prop-types": "15.x",
-    "react-draggable": "^4.0.3"
+    "prop-types": "^15.5.8",
+    "react-draggable": "^2.2.6"
   },
   "peerDependencies": {
-    "react": ">= 16.3"
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
   "pre-commit": [
     "lint",
-    "validate",
-    "test"
+    "validate"
   ]
 }

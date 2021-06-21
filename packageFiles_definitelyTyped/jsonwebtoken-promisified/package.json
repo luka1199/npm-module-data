@@ -1,6 +1,6 @@
 {
   "name": "jsonwebtoken-promisified",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "description": "A thin wrapper that provides promisified methods for the `jsonwebtoken` module.",
   "main": "index.js",
   "scripts": {

@@ -1,6 +1,6 @@
 {
   "name": "node-expat",
-  "version": "2.4.0",
+  "version": "2.3.0",
   "main": "./lib/node-expat",
   "description": "NodeJS binding for fast XML parsing.",
   "keywords": [
@@ -12,34 +12,33 @@
     "parsing"
   ],
   "scripts": {
-    "preversion": "npm test",
-    "lint": "standard",
-    "unit": "vows --spec ./test/**/*.js",
-    "test": "npm run unit && npm run lint",
-    "benchmark": "node ./benchmark.js"
+    "test": "vows --spec ./test.js"
   },
   "dependencies": {
-    "bindings": "^1.5.0",
-    "nan": "^2.13.2"
+    "nan": "~1.2.0"
   },
   "devDependencies": {
-    "benchmark": "^2.1.0",
-    "debug": "^4.3.1",
-    "iconv": "^3.0.0",
-    "ltx": "^2.3.0",
-    "node-xml": "^1.0.2",
-    "sax": "^1.2.1",
-    "standard": "^16.0.3",
-    "vows": "^0.8.1"
+    "vows": ">=0.5.12",
+    "iconv": "~2.1.0"
   },
-  "repository": "github:astro/node-expat",
-  "homepage": "http://github.com/astro/node-expat",
-  "bugs": "https://github.com/astro/node-expat/issues",
+  "repository": {
+    "type": "git",
+    "path": "git://github.com/node-xmpp/node-expat.git"
+  },
+  "homepage": "http://github.com/node-xmpp/node-expat",
+  "bugs": "http://github.com/node-xmpp/node-expat/issues",
   "author": {
     "name": "Astro",
     "email": "astro@spaceboyz.net",
     "web": "http://spaceboyz.net/~astro/"
   },
+  "maintainers": [
+    {
+      "name": "Lloyd Watkin",
+      "email": "lloyd@evilprofessor.co.uk",
+      "web": "http://www.evilprofessor.co.uk"
+    }
+  ],
   "contributors": [
     "Stephan Maka",
     "Derek Hammer",
@@ -53,21 +52,14 @@
     "Andreas Botsikas",
     "Tom Hughes-Croucher",
     "Nathan Rajlich",
-    "Julien Genestoux",
-    "Sonny Piers",
-    "Lloyd Watkin",
-    "AJ ONeal",
-    "Rod Vagg",
-    "Christoph Hartmann",
-    "Corbin Uselton",
-    "Julian Duque",
-    "Lovell Fuller",
-    "Antonio Bustos"
+    "Julien Genestoux"
   ],
   "licenses": [
     {
       "type": "MIT"
     }
   ],
-  "license": "MIT"
+  "engines": {
+    "node": ">=0.8"
+  }
 }

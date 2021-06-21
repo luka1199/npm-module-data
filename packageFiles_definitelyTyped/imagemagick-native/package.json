@@ -7,7 +7,7 @@
     "resize",
     "convert"
   ],
-  "version": "1.9.3",
+  "version": "1.7.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -17,16 +17,20 @@
   "contributors": [],
   "main": "./index.js",
   "scripts": {
-    "test": "tap test/test*.js",
+    "test": "tap test/test.js test/test.async.js test/test.streams.js test/test.trim.js",
     "install": "node-gyp rebuild"
   },
   "engines": {
-    "node": ">=4"
+    "node": "*"
   },
   "dependencies": {
-    "nan": "2.x"
+    "nan": "~1.1.0",
+    "readable-stream": "*"
   },
   "devDependencies": {
-    "tap": "*"
+    "tap": "*",
+    "grunt": "~0.4",
+    "grunt-release": "~0.7",
+    "grunt-contrib-clean": "~0.5"
   }
 }

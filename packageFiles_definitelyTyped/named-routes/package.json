@@ -1,18 +1,12 @@
 {
   "name": "named-routes",
-  "version": "2.0.7",
-  "description": "Named routes for node.js. Works with express and independently",
-  "main": "router.js",
-  "scripts": {
-    "test": "mocha test"
+  "description": "HTTP request router with named reversable routes",
+  "version": "2.0.0",
+  "author": {
+    "name": "Andreas Lubbe",
+    "email": "npm@lubbe.org"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/alubbe/named-routes"
-  },
-  "bugs": {
-    "url": "https://github.com/alubbe/named-routes/issues"
-  },
+  "main": "./router.js",
   "keywords": [
     "named",
     "routes",
@@ -22,21 +16,25 @@
     "express",
     "web"
   ],
-  "author": {
-    "name": "Andreas Lubbe",
-    "email": "npm@lubbe.org"
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/alubbe/named-routes"
   },
-  "license": "MIT",
+  "readme": "Named routes for node.js. Works with express and independently",
+  "bugs": {
+    "url": "https://github.com/alubbe/named-routes/issues"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
   "dependencies": {
-    "methods": "^1.1.1",
-    "path-to-regexp": "^1.2.1",
-    "xregexp": "^3.1.0"
+    "xregexp": "*",
+    "methods": "0.0.1"
   },
   "devDependencies": {
-    "expect.js": "^0.3.1",
+    "expect.js": "~0.2.0",
     "express": "^4.12.3",
-    "mocha": "^2.4.5",
-    "sinon": "^1.17.2",
-    "supertest": "^1.1.0"
+    "mocha": "~1.14.0",
+    "sinon": "~1.7.3"
   }
 }

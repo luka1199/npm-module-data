@@ -1,7 +1,7 @@
 {
   "name": "hash-sum",
   "description": "Blazing fast unique hash generator",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/bevacqua/hash-sum",
   "authors": [
     "Nicolas Bevacqua <nicolasbevacqua@gmail.com>"
@@ -18,11 +18,11 @@
   "scripts": {
     "test": "jshint . && tape test.js"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "jshint": "2.5.0",
     "jshint-stylish": "0.2.0",
-    "lodash": "4.17.11",
     "tape": "3.0.3"
   }
 }

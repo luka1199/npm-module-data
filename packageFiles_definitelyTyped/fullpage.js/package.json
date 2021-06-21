@@ -1,8 +1,8 @@
 {
   "name": "fullpage.js",
-  "version": "3.1.1",
-  "description": "Create beautiful fullscreen snap scrolling websites",
-  "main": "dist/fullpage.js",
+  "version": "2.9.5",
+  "description": "Create beautiful fullscreen scrolling websites",
+  "main": "dist/jquery.fullpage.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,12 +21,7 @@
     "one_page",
     "sliding",
     "snap",
-    "scroll",
-    "swipe",
-    "mousewheel",
-    "sections",
-    "slides",
-    "slidehow"
+    "scroll"
   ],
   "files": [
     "vendors",
@@ -34,22 +29,24 @@
     "package.json",
     "README.md"
   ],
+  "dependencies": {
+    "jquery": ">=1.6.0"
+  },
   "authors": [
     "Alvaro Trigo https://github.com/alvarotrigo"
   ],
-  "license": "GPL-3.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/alvarotrigo/fullPage.js/issues"
   },
   "homepage": "https://github.com/alvarotrigo/fullPage.js",
-  "namespace": "fullpage_api",
+  "namespace": "$.fn.fullpage",
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-clean-css": "^4.0.0",
+    "gulp": "^3.9.0",
+    "gulp-clean-css": "^2.0.8",
     "gulp-rename": "^1.2.2",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.0"
+    "gulp-sass": "^2.0.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.1.2"
   }
 }

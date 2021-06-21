@@ -1,7 +1,7 @@
 {
   "name": "jquery-mouse-exit",
   "description": "Triggers 'mouseexit' event when mouse focus has completely left the element. This type of behaviour is especially desirable for non-modal overlays.",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "scripts": {
     "start": "npm run lasso && parallelshell 'npm run server' 'npm run watch'",
     "tdd": "karma start --autoWatch true --singleRun false",
@@ -19,6 +19,10 @@
   },
   "pre-commit": "prepublish",
   "author": "Ian McBurnie <ianmcburnie@hotmail.com>",
+  "homepage": "https://github.com/ianmcburnie/jquery-mouse-exit",
+  "bugs": {
+    "url": "https://github.com/ianmcburnie/jquery-mouse-exit/issues"
+  },
   "keywords": [
     "jquery-plugin",
     "ecosystem:jquery",
@@ -28,12 +32,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/makeup-jquery/jquery-mouse-exit.git"
+    "url": "https://github.com/ianmcburnie/jquery-mouse-exit.git"
   },
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2",
-    "coveralls": "^3",
+    "coveralls": "^2",
     "eslint": "^4",
     "eslint-config-ebay": "~0.1",
     "jasmine-core": "^2",

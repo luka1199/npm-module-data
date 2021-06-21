@@ -1,9 +1,8 @@
 {
   "name": "react-native-material-kit",
-  "version": "0.6.0-beta.2",
+  "version": "0.5.1",
   "description": "Bringing Material Design to React Native",
   "main": "lib/index.js",
-  "typings": "lib/react-native-material-kit.d.ts",
   "author": "Yingxin Wu <yingxinwu.g@gmail.com>",
   "contributors": [
     "Quentin Valmori (https://github.com/Crash--)",
@@ -28,45 +27,18 @@
     "url": "git://github.com/xinthink/react-native-material-kit.git"
   },
   "devDependencies": {
-    "@microsoft/api-documenter": "^7.3.11",
-    "@microsoft/api-extractor": "^7.3.4",
-    "@react-native-community/eslint-config": "~0.0.7",
-    "@types/jest": "^25.1.0",
-    "@types/ramda": "^0.26.0",
-    "@types/react-native": "^0.57.7",
-    "@types/react-test-renderer": "^16.9.0",
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^25.1.0",
-    "eslint": "^6.8.0",
-    "jest": "^25.1.0",
-    "react-native-typescript-transformer": "^1.2.13",
-    "react-test-renderer": "^16.12.0",
-    "tslint": "^6.0.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-config-standard": "^9.0.0",
-    "tslint-react": "^4.2.0",
-    "typescript": "^3.7.5"
+    "babel-eslint": "^6.0.2",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-plugin-react": "^4.3.0",
+    "gulp": "^3.9.0",
+    "gulp-docco": "0.0.4"
   },
   "dependencies": {
-    "ramda": "^0.27.0"
-  },
-  "peerDependencies": {
-    "react": "*",
-    "react-native": ">=0.50.0"
+    "prop-types": "^15.5.10",
+    "ramda": "^0.24.1"
   },
   "scripts": {
-    "lint": "tslint -p .",
-    "test": "jest",
-    "build": "yarn lint && tsc",
-    "build-docs": "yarn clean && yarn setup && yarn ln && yarn build && api-extractor run --local --verbose && yarn api-md",
-    "clean": "rm -rf lib temp etc dist docs && yarn clean-ln",
-    "clean-ln": "rm -f src/mdl/Spinner.tsx",
-    "ln": "ln -f src/mdl/Spinner.ios.tsx src/mdl/Spinner.tsx",
-    "build-publish": "yarn build-docs && yarn clean-ln && rm lib/mdl/Spinner.js",
-    "setup": "mkdir temp etc dist docs",
-    "api-md": "api-documenter markdown --input-folder temp --output-folder docs/api"
-  },
-  "jest": {
-    "testPathIgnorePatterns": [ "/node_modules/", "/example/" ]
+    "lint": "eslint lib"
   }
 }

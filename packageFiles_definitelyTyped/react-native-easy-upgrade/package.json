@@ -1,6 +1,6 @@
 {
   "name": "react-native-easy-upgrade",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Easy to upgrade your react-native app",
   "main": "index.js",
   "directories": {
@@ -28,5 +28,8 @@
       "parser": "babylon",
       "style": "module-compact"
     }
+  },
+  "dependencies": {
+    "react-native-fs": "^2.9.12"
   }
 }

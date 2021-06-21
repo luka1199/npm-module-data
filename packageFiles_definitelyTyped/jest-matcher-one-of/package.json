@@ -5,15 +5,15 @@
     "type": "git",
     "url": "https://github.com/d4nyll/jest-matcher-one-of.git"
   },
-  "version": "1.0.2",
+  "version": "1.0.0",
   "main": "src/index.js",
   "author": "Daniel Li <dan@danyll.com>",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^5.0.0",
     "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.17.2",
-    "jest": "^24.7.1"
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^22.0.0"
   },
   "engines": {
     "node": ">6.4.0"

@@ -1,16 +1,38 @@
 {
   "name": "crypto-js",
-  "version": "4.0.0",
+  "title": "crypto-js",
   "description": "JavaScript library of crypto standards.",
-  "license": "MIT",
+  "version": "4.0.0",
+  "homepage": "http://github.com/brix/crypto-js",
   "author": {
     "name": "Evan Vosberg",
     "url": "http://github.com/evanvosberg"
   },
-  "homepage": "http://github.com/brix/crypto-js",
   "repository": {
     "type": "git",
     "url": "http://github.com/brix/crypto-js.git"
+  },
+  "bugs": {
+    "url": "http://github.com/brix/crypto-js/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "grunt build",
+    "test": "grunt default"
+  },
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "fmd": "~0.0.3",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^1.3.2",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.6.0",
+    "grunt-contrib-jshint": "^2.1.0",
+    "grunt-jsonlint": "^1.0.4",
+    "grunt-update-json": "^0.2.0",
+    "load-grunt-config": "^0.16.0",
+    "lodash": "^4.17.11"
   },
   "keywords": [
     "security",
@@ -32,7 +54,5 @@
     "CTR",
     "CBC",
     "Base64"
-  ],
-  "main": "index.js",
-  "dependencies": {}
+  ]
 }

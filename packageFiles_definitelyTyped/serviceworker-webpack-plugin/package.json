@@ -1,6 +1,6 @@
 {
   "name": "serviceworker-webpack-plugin",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Simplifies creation of a service worker to serve your webpack bundles",
   "main": "lib/index.js",
   "files": [
@@ -10,7 +10,7 @@
   "scripts": {
     "clean": "rimraf ./docs/dist ./lib",
     "lint": "eslint . --fix && echo \"eslint: no lint errors\"",
-    "test": "(cd ./test/webpack3; yarn install) && npm run lint && npm run test:unit && npm run test:3 && npm run flow",
+    "test": "npm run lint && npm run test:unit && npm run test:3 && npm run flow",
     "test:unit": "NODE_ENV=test mocha src/{,**/}*.spec.js",
     "test:watch": "NODE_ENV=test mocha src/{,**/}*.spec.js -w",
     "test:3": "NODE_ENV=test mocha test/webpack3/index.js",
@@ -20,7 +20,8 @@
     "build": "babel src --out-dir lib",
     "version": "yarn build && pkgfiles",
     "docs:development": "babel-node ./node_modules/.bin/webpack-dev-server --mode=development --config=docs/webpack/developmentConfig.js --progress",
-    "docs:production": "npm run clean && NODE_ENV=docs-browser-production babel-node ./node_modules/.bin/webpack --mode=production --config=docs/webpack/productionConfig.js --progress"
+    "docs:production": "npm run clean && NODE_ENV=docs-browser-production babel-node ./node_modules/.bin/webpack --mode=production --config=docs/webpack/productionConfig.js --progress",
+    "postinstall": "(cd ./test/webpack3; yarn install)"
   },
   "repository": {
     "type": "git",

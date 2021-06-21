@@ -1,10 +1,10 @@
 {
-  "author": "SQL ANYWHERE",
+  "author": "SQL ANYWHERE ",
   "name": "sqlanywhere",
   "description": "SQL Anywhere JavaScript Driver.",
-  "version": "1.0.25",
+  "version": "1.0.0",
   "repository": {
-    "url": "https://github.com/sqlanywhere/node-sqlanywhere"
+    "url": ""
   },
   "main": "./lib/index",
   "engines": {
@@ -12,9 +12,6 @@
   },
   "scripts": {
     "install": "node build.js"
-  },
-  "dependencies": {
-    "help": "^3.0.2",
-    "nan": "2.14.2"
   }
 }
+

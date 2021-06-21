@@ -1,6 +1,6 @@
 {
   "name": "pikaday-time",
-  "version": "1.6.1",
+  "version": "1.4.0",
   "description": "Time support added to pikaday",
   "keywords": [
     "datepicker",
@@ -11,7 +11,16 @@
   ],
   "homepage": "http://dbushell.github.io/Pikaday/",
   "bugs": "https://github.com/owenmead/Pikaday/issues",
-  "license": "(0BSD OR MIT)",
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://opensource.org/licenses/BSD-3-Clause"
+    },
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
   "main": "pikaday.js",
   "repository": {
     "type": "git",
@@ -22,9 +31,7 @@
   },
   "devDependencies": {
     "mocha": "~1.18.2",
-    "expect.js": "^0.3.1",
-    "testling": "^1.7",
-    "jshint": "^2.9"
+    "expect.js": "^0.3.1"
   },
   "testling": {
     "harness": "mocha",
@@ -32,14 +39,9 @@
     "browsers": [
       "ie/7..latest",
       "chrome/latest",
-      "firefox/3.6",
-      "firefox/latest",
+      "firefox/3.6", "firefox/latest",
       "safari/latest",
       "opera/latest"
     ]
-  },
-  "scripts": {
-    "test": "testling",
-    "lint": "jshint *.js plugins/*.js tests/*.js"
   }
 }

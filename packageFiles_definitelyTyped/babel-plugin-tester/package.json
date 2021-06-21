@@ -23,22 +23,21 @@
   "author": "Kent C. Dodds <me@kentcdodds.com> (https://kentcdodds.com)",
   "license": "MIT",
   "dependencies": {
-    "@types/babel-plugin-tester": "^9.0.0",
     "lodash.mergewith": "^4.6.2",
     "prettier": "^2.0.1",
     "strip-indent": "^3.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/plugin-proposal-async-generator-functions": "^7.10.5",
-    "@babel/plugin-syntax-jsx": "^7.10.4",
-    "@babel/plugin-syntax-typescript": "^7.10.4",
-    "@babel/plugin-transform-async-to-generator": "^7.10.4",
-    "@babel/preset-env": "^7.11.5",
-    "kcd-scripts": "^6.5.1"
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-async-generator-functions": "^7.8.3",
+    "@babel/plugin-syntax-jsx": "^7.8.3",
+    "@babel/plugin-syntax-typescript": "^7.8.3",
+    "@babel/plugin-transform-async-to-generator": "^7.8.3",
+    "@babel/preset-env": "^7.9.0",
+    "kcd-scripts": "^5.6.0"
   },
   "peerDependencies": {
-    "@babel/core": "^7.11.6"
+    "@babel/core": "^7.9.0"
   },
   "eslintConfig": {
     "extends": "./node_modules/kcd-scripts/eslint.js",

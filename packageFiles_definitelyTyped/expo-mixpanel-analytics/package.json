@@ -1,6 +1,6 @@
 {
   "name": "expo-mixpanel-analytics",
-  "version": "0.0.7",
+  "version": "0.0.1",
   "description": "Mixpanel integration for use with React Native apps built on Expo.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "mixpanel",
     "analytics"
   ],
-  "author": "CodeKadiya",
+  "author": "Subhash Vithanapathirana",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/codekadiya/expo-mixpanel-analytics/issues"

@@ -1,8 +1,7 @@
 {
   "title": "smoothscroll",
   "name": "smoothscroll-polyfill",
-  "description": "Smooth Scroll behavior polyfill",
-  "version": "0.4.4",
+  "version": "0.3.0",
   "author": {
     "name": "Dustan Kasten",
     "email": "dustan.kasten@gmail.com",
@@ -12,47 +11,22 @@
     {
       "name": "Jeremias Menichelli",
       "email": "jmenichelli@gmail.com",
-      "url": "https://jeremenichelli.io"
+      "url": "https://jeremenichelli.github.io"
     }
   ],
-  "dependencies": {},
   "devDependencies": {
-    "ava": "^0.25.0",
-    "eslint": "^4.7.1",
-    "husky": "^0.14.3",
-    "lint-staged": "^6.0.1",
-    "lodash.clonedeep": "^4.5.0",
-    "prettier": "^1.10.2",
-    "rollup": "^0.50.0",
-    "uglify-js": "^3.1.1"
+    "gulp": "^3.9.1",
+    "gulp-concat-util": "^0.5.5",
+    "gulp-eslint": "^2.0.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3"
   },
+  "description": "Polyfill for smooth scroll behavior",
   "main": "dist/smoothscroll.js",
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "lint": "eslint {src,test}/**/*.js",
-    "test": "ava test/smoothscroll.test.js --verbose",
-    "posttest": "yarn lint",
-    "precommit": "lint-staged",
-    "prebuild": "npm test",
-    "build": "rollup -c rollup.config.js",
-    "preminify": "yarn build",
-    "minify": "uglifyjs dist/smoothscroll.js -c -m -o dist/smoothscroll.min.js --verbose",
-    "listdiff": "prettier --list-different {src,test}/**/*.js",
-    "format": "prettier --write {src,test}/**/*.js",
-    "prepublish": "npm run minify"
-  },
-  "lint-staged": {
-    "linters": {
-      "{src,test}/**/*.js": [
-        "prettier --list-different",
-        "git add"
-      ]
-    }
-  },
-  "prettier": {
-    "singleQuote": true
+    "test": "gulp lint",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -64,9 +38,10 @@
     "CSSOM",
     "polyfill"
   ],
+  "copyright": 2016,
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/iamdustan/smoothscroll/issues"
   },
-  "homepage": "https://iamdustan.com/smoothscroll"
+  "homepage": "https://iamdustan.github.io/smoothscroll"
 }

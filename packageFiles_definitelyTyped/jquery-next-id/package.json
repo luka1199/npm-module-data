@@ -1,7 +1,7 @@
 {
   "name": "jquery-next-id",
   "description": "jQuery collection plugin that will assign the next ID in sequence if an ID property does not already exist.",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "scripts": {
     "start": "karma start --autoWatch true --singleRun false",
     "test": "karma start --autoWatch false --singleRun true",
@@ -15,6 +15,10 @@
   },
   "pre-commit": "prepublish",
   "author": "Ian McBurnie <ianmcburnie@hotmail.com>",
+  "homepage": "https://github.com/ianmcburnie/jquery-next-id",
+  "bugs": {
+    "url": "https://github.com/ianmcburnie/jquery-next-id/issues"
+  },
   "keywords": [
     "jquery-plugin",
     "ecosystem:jquery",
@@ -24,11 +28,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/makeup-jquery/jquery-next-id.git"
+    "url": "https://github.com/ianmcburnie/jquery-next-id.git"
   },
   "license": "MIT",
   "devDependencies": {
-    "coveralls": "^3",
+    "coveralls": "^2",
     "eslint": "^4",
     "eslint-config-ebay": "~0.1",
     "jasmine-core": "^2",

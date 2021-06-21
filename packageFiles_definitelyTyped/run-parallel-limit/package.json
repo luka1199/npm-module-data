@@ -1,22 +1,22 @@
 {
   "name": "run-parallel-limit",
   "description": "Run an array of functions in parallel, but limit the number of tasks executing at the same time",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "author": {
     "name": "Feross Aboukhadijeh",
     "email": "feross@feross.org",
-    "url": "https://feross.org"
+    "url": "http://feross.org/"
   },
   "bugs": {
     "url": "https://github.com/feross/run-parallel-limit/issues"
   },
   "dependencies": {
-    "queue-microtask": "^1.2.2"
+    "dezalgo": "^1.0.1"
   },
   "devDependencies": {
-    "airtap": "^3.0.0",
-    "standard": "*",
-    "tape": "^5.1.1"
+    "standard": "^4.3.2",
+    "tape": "^4.0.0",
+    "zuul": "^3.1.0"
   },
   "homepage": "https://github.com/feross/run-parallel-limit",
   "keywords": [
@@ -43,22 +43,8 @@
   },
   "scripts": {
     "test": "standard && npm run test-node && npm run test-browser",
-    "test-browser": "airtap -- test/*.js",
-    "test-browser-local": "airtap --local -- test/*.js",
+    "test-browser": "zuul -- test/*.js",
+    "test-browser-local": "zuul --local -- test/*.js",
     "test-node": "tape test/*.js"
-  },
-  "funding": [
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/feross"
-    },
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/feross"
-    },
-    {
-      "type": "consulting",
-      "url": "https://feross.org/support"
-    }
-  ]
+  }
 }

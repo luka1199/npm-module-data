@@ -1,7 +1,7 @@
 {
   "name": "merge-deep",
   "description": "Recursively merge values in a javascript object.",
-  "version": "3.0.3",
+  "version": "3.0.0",
   "homepage": "https://github.com/jonschlinkert/merge-deep",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/merge-deep",
@@ -10,7 +10,8 @@
   },
   "license": "MIT",
   "files": [
-    "index.js"
+    "index.js",
+    "utils.js"
   ],
   "main": "index.js",
   "engines": {
@@ -22,7 +23,8 @@
   "dependencies": {
     "arr-union": "^3.1.0",
     "clone-deep": "^0.2.4",
-    "kind-of": "^3.0.2"
+    "kind-of": "^3.0.2",
+    "lazy-cache": "^1.0.3"
   },
   "devDependencies": {
     "gulp-format-md": "^0.1.7",

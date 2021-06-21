@@ -1,8 +1,8 @@
 {
   "name": "extract-domain",
-  "version": "2.3.3",
+  "version": "2.3.0",
   "description": "Extract domain name from URL",
-  "source": "index.js",
+    "source": "index.js",
   "main": "dist/extract-domain.js",
   "exports": "./dist/extract-domain.modern.js",
   "module": "dist/extract-domain.module.js",
@@ -12,7 +12,7 @@
   "scripts": {
     "build": "npm run pretty && microbundle",
     "test": "mocha -R spec index.test.js",
-    "pretty": "prettier --tab-width=4 --print-width=100 --single-quote --trailing-comma=es5 --write *.js *.js",
+    "pretty": "prettier --tab-width=4 --print-width=100 --single-quote --trailing-comma  --write *.js *.js",
     "benchmark": "node benchmark.js"
   },
   "repository": {
@@ -41,7 +41,7 @@
     "nanobench": "^1.0.3",
     "prettier": "^1.11.1"
   },
-  "optionalDependencies": {
+  "dependencies": {
     "psl": "^1.8.0"
   }
 }

@@ -1,0 +1,25 @@
+{
+  "name": "npm-packlist",
+  "version": "1.1.0",
+  "main": "index.js",
+  "dependencies": {
+    "ignore-walk": "^2.0.2",
+    "npm-bundled": "^1.0.1"
+  },
+  "author": "Isaac Z. Schlueter <i@izs.me> (http://blog.izs.me/)",
+  "license": "ISC",
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.1",
+    "tap": "^10.3.2"
+  },
+  "scripts": {
+    "test": "tap test/*.js --100 -J",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "postpublish": "git push origin --all; git push origin --tags"
+  }
+}

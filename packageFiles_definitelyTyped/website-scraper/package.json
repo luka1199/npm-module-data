@@ -1,22 +1,17 @@
 {
   "name": "website-scraper",
-  "version": "4.2.3",
+  "version": "1.2.0",
   "description": "Download website to a local directory (including all css, images, js, etc.)",
   "readmeFilename": "README.md",
-  "type": "module",
-  "exports": {
-    ".": "./index.mjs",
-    "./defaultOptions": "./lib/config/defaults.js",
-    "./plugins": "./lib/plugins/index.js"
-  },
+  "main": "index.js",
   "scripts": {
-    "test": "c8 --all --reporter=text --reporter=lcov mocha --recursive --timeout 7000 ./test/unit/ ./test/functional && npm run eslint",
-    "test-e2e": "mocha --timeout 300000 ./test/e2e/*-test.js",
-    "eslint": "eslint lib/** index.mjs"
+    "test": "istanbul cover node_modules/mocha/bin/_mocha --dir ./coverage --report lcov -- -R spec --recursive --timeout 7000 ./test/unit/ ./test/functional && npm run eslint",
+    "test-e2e": "node_modules/mocha/bin/_mocha --timeout 60000 ./test/e2e/*-test.js",
+    "eslint": "eslint lib/** index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/website-scraper/node-website-scraper.git"
+    "url": "git://github.com/s0ph1e/node-website-scraper.git"
   },
   "keywords": [
     "scrape",
@@ -31,39 +26,33 @@
     "image",
     "js"
   ],
-  "author": "Sophia Antipenko <sophia@antipenko.pp.ua>",
+  "author": "s0ph1e",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/website-scraper/node-website-scraper/issues"
+    "url": "https://github.com/s0ph1e/node-website-scraper/issues"
   },
-  "homepage": "https://github.com/website-scraper/node-website-scraper",
+  "homepage": "https://github.com/s0ph1e/node-website-scraper",
   "dependencies": {
-    "cheerio": "~0.22.0",
+    "bluebird": "^3.0.1",
+    "cheerio": "0.22.0",
     "css-url-parser": "^1.0.0",
-    "debug": "^4.3.1",
-    "fs-extra": "^9.0.0",
-    "he": "^1.2.0",
-    "lodash": "^4.17.21",
-    "normalize-url": "^6.0.1",
-    "p-queue": "^7.1.0",
-    "request": "^2.88.2",
-    "sanitize-filename": "^1.6.3",
-    "srcset": "^3.0.0"
+    "debug": "^2.2.0",
+    "fs-extra": "^0.30.0",
+    "lodash": "^4.11.1",
+    "normalize-url": "^1.5.3",
+    "request": "^2.42.0",
+    "srcset": "^1.0.0"
   },
   "devDependencies": {
-    "c8": "^7.7.2",
-    "coveralls": "^3.1.0",
-    "eslint": "^7.24.0",
-    "mocha": "^8.3.2",
-    "nock": "^13.0.11",
-    "should": "^13.2.3",
-    "sinon": "^10.0.1"
-  },
-  "files": [
-    "index.mjs",
-    "lib"
-  ],
-  "engines": {
-    "node": ">=12"
+    "codeclimate-test-reporter": "^0.4.0",
+    "coveralls": "^2.11.8",
+    "eslint": "^2.8.0",
+    "istanbul": "^0.4.0",
+    "mocha": "^3.0.2",
+    "nock": "^8.0.0",
+    "proxyquire": "^1.7.3",
+    "should": "^11.1.0",
+    "sinon": "^1.15.4",
+    "sinon-as-promised": "^4.0.0"
   }
 }

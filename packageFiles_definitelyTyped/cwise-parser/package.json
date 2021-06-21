@@ -1,24 +1,24 @@
 {
   "name": "cwise-parser",
-  "version": "1.0.3",
+  "version": "0.0.1",
   "description": "Parser for cwise",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "esprima": "^1.0.3",
-    "uniq": "^1.0.0"
+    "esprima": "~1.0.3",
+    "uniq": "~0.0.2"
   },
   "devDependencies": {
-    "tape": "^4.0.0"
+    "tape": "~1.0.4"
   },
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/scijs/cwise-parser.git"
+    "url": "git://github.com/mikolalysenko/cwise-parser.git"
   },
   "keywords": [
     "cwise",
@@ -31,6 +31,6 @@
   "gitHead": "a57b0ecf9a304e991c9bca348b4aa99b5c2a7fc1",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/scijs/cwise-parser/issues"
+    "url": "https://github.com/mikolalysenko/cwise-parser/issues"
   }
 }

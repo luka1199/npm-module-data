@@ -1,16 +1,14 @@
 {
   "name": "clamp",
   "description": "Clamp a value between two other values",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "browser": "index.js",
   "dependencies": {},
   "devDependencies": {
     "tape": "~2.0.0"
   },
-  "scripts": {
-    "test": "node test"
-  },
+  "scripts": {},
   "author": "Hugh Kennedy <hughskennedy@gmail.com> (http://github.com/hughsk)",
   "license": "MIT",
   "repository": {

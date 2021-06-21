@@ -1,6 +1,6 @@
 {
   "name": "npm-which",
-  "version": "3.0.1",
+  "version": "2.0.0",
   "description": "Locate a program or locally installed node module's executable",
   "main": "index.js",
   "bin": {
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "commander": "^2.9.0",
-    "npm-path": "^2.0.2",
+    "npm-path": "^2.0.1",
     "which": "^1.2.10"
   },
   "devDependencies": {

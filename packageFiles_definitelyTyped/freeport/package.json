@@ -1,17 +1,17 @@
 {
   "name": "freeport",
   "description": "Find a free port.",
-  "version": "1.0.5",
-  "homepage": "https://github.com/daaku/nodejs-freeport",
+  "version": "1.0.0",
+  "homepage": "https://github.com/nshah/nodejs-freeport",
   "author": "Naitik Shah <n@daaku.org>",
   "main": "lib/freeport",
   "repository": {
     "type": "git",
-    "url": "https://github.com/daaku/nodejs-freeport"
+    "url": "https://github.com/nshah/nodejs-freeport"
   },
-  "scripts": { "test": "NODE_PATH=./lib mocha --ui exports" },
+  "scripts": { "test": "NODE_PATH=./lib ./node_modules/.bin/mocha --ui exports" },
   "devDependencies": {
-    "mocha": "0.12.x"
+    "mocha": ">= 0.12.0"
   },
-  "license": "Apache-2.0"
+  "engines": { "node": ">= 0.6.10" }
 }

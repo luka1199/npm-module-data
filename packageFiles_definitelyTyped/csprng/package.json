@@ -5,10 +5,10 @@
 , "keywords"        : ["crypto", "math", "random", "security"]
 , "license"         : "MIT"
 
-, "version"         : "0.1.2"
+, "version"         : "0.1.0"
 , "engines"         : {"node": ">=0.6.0"}
 , "main"            : "./lib/csprng"
-, "dependencies"    : {"sequin": "*"}
+, "dependencies"    : {"sequin": ""}
 
 , "repository"      : { "type"  : "git"
                       , "url"   : "git://github.com/jcoglan/node-csprng.git"

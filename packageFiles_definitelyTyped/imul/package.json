@@ -1,7 +1,7 @@
 {
   "name": "imul",
-  "version": "1.0.1",
-  "description": "ES2015 Math.imul() ponyfill",
+  "version": "1.0.0",
+  "description": "ES6 Math.imul() ponyfill",
   "license": "MIT",
   "repository": "sindresorhus/imul",
   "author": {
@@ -13,13 +13,16 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "ava"
+    "test": "node test.js"
   },
   "files": [
     "index.js"
   ],
   "keywords": [
+    "es6",
     "es2015",
+    "ecmascript",
+    "harmony",
     "ponyfill",
     "polyfill",
     "shim",
@@ -29,6 +32,6 @@
     "multiplication"
   ],
   "devDependencies": {
-    "ava": "*"
+    "ava": "0.0.4"
   }
 }

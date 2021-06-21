@@ -1,7 +1,7 @@
 {
   "author": "Troy Goode <troygoode@gmail.com> (http://github.com/troygoode/)",
   "name": "require-directory",
-  "version": "2.1.1",
+  "version": "2.1.0",
   "description": "Recursively iterates over specified directory, require()'ing each file, and returning a nested hash structure containing those modules.",
   "keywords": [
     "require",
@@ -22,7 +22,12 @@
       "web": "http://github.com/troygoode/"
     }
   ],
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
   "bugs": {
     "url": "http://github.com/troygoode/node-require-directory/issues/"
   },

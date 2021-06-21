@@ -1,7 +1,7 @@
 {
-  "name": "react-native-modals",
-  "version": "0.22.3",
-  "description": "React Native Modals Library for IOS & Android.",
+  "name": "react-native-popup-dialog",
+  "version": "0.16.0",
+  "description": "React Native Popup Dialog for IOS & Android.",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest",
@@ -10,27 +10,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jacklam718/react-native-modals.git"
+    "url": "https://github.com/jacklam718/react-native-popup-dialog.git"
   },
   "keywords": [
     "dialog",
     "popup",
     "react dialog",
     "react-native",
-    "react-native-modals",
+    "react-native-popup-dialog",
     "react-native-dialog",
     "react native dialog",
-    "modals",
+    "popup-dialog",
     "react-component",
     "ios",
     "android"
   ],
   "author": "jacklam <jacklam718@gmail.com> (https://github.com/jacklam718)",
   "license": "MIT",
-  "homepage": "https://github.com/jacklam718/react-native-modals/blob/master/README.md",
+  "homepage": "https://github.com/jacklam718/react-native-popup-dialog/blob/master/README.md",
   "dependencies": {
     "babel-plugin-flow-react-proptypes": "^9.1.1",
-    "prop-types": "^15.6.0"
+    "prop-types": "^15.6.0",
+    "react-native-general-siblings": "^1.0.0"
   },
   "peerDependencies": {
     "react-native": ">=0.50.0"
@@ -41,8 +42,8 @@
     "babel-eslint": "^8.0.2",
     "babel-jest": "^23.0.1",
     "babel-preset-react-native": "^4.0.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.11.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
@@ -51,7 +52,7 @@
     "eslint-plugin-react": "^7.5.1",
     "flow-bin": "^0.59.0",
     "jest": "^22.0.0",
-    "jest-enzyme": "^7.1.0",
+    "jest-enzyme": "^6.0.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-native": "^0.50.4",
@@ -65,7 +66,7 @@
     ],
     "testRegex": "__tests__/.+\\.test.js$",
     "modulePathIgnorePatterns": [
-      "modals-example/node_modules"
+      "popup-dialog-example/node_modules"
     ]
   }
 }

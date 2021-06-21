@@ -1,6 +1,6 @@
 {
   "name": "hashmap",
-  "version": "2.4.0",
+  "version": "2.3.0",
   "description": "HashMap Class for JavaScript",
   "keywords": [
     "hashmap",
@@ -23,10 +23,9 @@
   "repository": "git://github.com/flesler/hashmap",
   "main": "./hashmap.js",
   "scripts": {
-    "test": "mocha test/",
-    "lint": "jshint hashmap.js test/test.js",
-    "precommit": "npm run lint",
-    "prepush": "npm run test -- --reporter dot"
+    "test": "mocha test/ --reporter dot",
+    "precommit": "jshint hashmap.js",
+    "prepush": "npm run test"
   },
   "engines": {
     "node": "*"

@@ -1,6 +1,6 @@
 {
   "name": "url-params-parser",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "Url parser to extract named and query params",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,8 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "eslint": "^7.11.0",
-    "mocha": "^8.2.0"
+    "eslint": "^5.16.0",
+    "mocha": "^6.1.4"
   },
   "author": "Jorge Alvarez <jorge@alvareznavarro.es>",
   "license": "MIT",

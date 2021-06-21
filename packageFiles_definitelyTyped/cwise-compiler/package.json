@@ -1,14 +1,14 @@
 {
   "name": "cwise-compiler",
-  "version": "1.1.3",
+  "version": "1.1.0",
   "description": "cwise's internal compiler",
   "main": "compiler.js",
   "scripts": {
-    "test": "tape test/*.js"
+    "test": "tap test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/scijs/cwise-compiler.git"
+    "url": "git://github.com/mikolalysenko/cwise-compiler.git"
   },
   "keywords": [
     "cwise",
@@ -16,14 +16,11 @@
     "compiler"
   ],
   "author": "Mikola Lysenko",
-  "contributors": [
-    "Jasper van de Gronde <th.v.d.gronde@hccnet.nl>"
-  ],
   "license": "MIT",
   "readmeFilename": "README.md",
   "gitHead": "29e146315bd0a8c50bd44b9b6b5bf4b769bd7aec",
   "bugs": {
-    "url": "https://github.com/scijs/cwise-compiler/issues"
+    "url": "https://github.com/mikolalysenko/cwise-compiler/issues"
   },
   "dependencies": {
     "uniq": "^1.0.0"
@@ -32,6 +29,6 @@
     "ndarray-ops": "^1.2.2",
     "ndarray": "^1.0.15",
     "cwise-parser": "^1.0.0",
-    "tape": "^4.0.0"
+    "tape": "^3.0.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "xml-crypto",
-  "version": "2.1.2",
+  "version": "1.4.0",
   "description": "Xml digital signature and encryption library for Node.js",
   "engines": {
     "node": ">=0.4.0"
@@ -10,11 +10,10 @@
     "LoneRifle <LoneRifle@users.noreply.github.com>"
   ],
   "dependencies": {
-    "xmldom": "^0.6.0",
-    "xpath": "0.0.32"
+    "xmldom": "0.1.27",
+    "xpath": "0.0.27"
   },
   "devDependencies": {
-    "ejs": "2.6.1",
     "nodeunit": "^0.11.3"
   },
   "repository": {

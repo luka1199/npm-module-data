@@ -27,7 +27,6 @@
   "devDependencies": {
     "chai": "~3.0.0",
     "mocha": "~2.2.5",
-    "survey": "~0.3.2",
-    "testdouble": "~1.2.0"
+    "survey": "~0.3.2"
   }
 }

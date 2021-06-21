@@ -1,9 +1,9 @@
 {
   "name": "adlib",
-  "version": "3.0.7",
+  "version": "3.0.0",
   "description": "Templating for deep JSON object graphs",
   "main": "dist/adlib.js",
-  "module": "dist/adlib.esm.js",
+  "module": "lib/index.js",
   "unpkg": "dist/adlib.umd.js",
   "files": [
     "dist/**",
@@ -14,7 +14,7 @@
     "init": "mkdir dist",
     "clean": "rm -rf dist",
     "build": "rollup -c profiles/dev.js",
-    "build:release": "yarn run clean && rollup -c profiles/umd.js && rollup -c profiles/esm.js && rollup -c profiles/prod.js && rollup -c profiles/dev.js",
+    "build:release": "rollup -c profiles/umd.js && rollup -c profiles/prod.js && rollup -c profiles/dev.js",
     "test": "node test/duct.js",
     "test:compiled": "mocha test/*.spec.js",
     "chk": "yarn test && yarn build:release && yarn test:compiled"
@@ -51,7 +51,7 @@
     "esm": "all"
   },
   "dependencies": {
-    "esm": "^3.2.25"
+    "esm": "^3.0.49"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -65,21 +65,20 @@
     "chai": "^4.1.2",
     "concurrently": "^3.4.0",
     "del": "^3.0.0",
-    "eslint": "^6.1.0",
+    "eslint": "^4.19.1",
     "eslint-config-semistandard": "~12.0.1",
     "eslint-config-standard": "~11.0.0",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-react": "^7.9.1",
     "eslint-plugin-standard": "^3.1.0",
     "mocha": "^5.2.0",
-    "rollup": "^1.12.5",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-buble": "^0.19.8",
-    "rollup-plugin-commonjs": "^10.0.2",
-    "rollup-plugin-filesize": "^6.2.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-uglify": "^6.0.2",
-    "rollup-pluginutils": "^2.8.1",
+    "rollup": "^1.0.1",
+    "rollup-plugin-babel": "^4.2.0",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-filesize": "^6.0.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-uglify": "^6.0.0",
     "tape": "^4.8.0",
     "watch": "^1.0.2"
   }

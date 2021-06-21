@@ -1,6 +1,6 @@
 {
   "name": "pubnub",
-  "version": "4.32.1",
+  "version": "4.29.0",
   "author": "PubNub <support@pubnub.com>",
   "description": "Publish & Subscribe Real-time Messaging with PubNub",
   "bin": {},
@@ -37,12 +37,12 @@
     "messaging"
   ],
   "dependencies": {
-    "@babel/runtime": "^7.10.5",
     "agentkeepalive": "^3.5.2",
     "cbor-js": "^0.1.0",
     "cbor-sync": "^1.0.4",
     "isomorphic-webcrypto": "^2.3.6",
     "lil-uuid": "^0.1.1",
+    "mime-types": "^2.1.27",
     "superagent": "^3.8.1",
     "superagent-proxy": "^2.0.0"
   },
@@ -58,6 +58,7 @@
     "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.7.7",
     "@babel/register": "^7.7.7",
+    "@babel/runtime": "^7.10.5",
     "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-add-module-exports": "^1.0.2",
@@ -118,5 +119,9 @@
   "license": "MIT",
   "engine": {
     "node": ">=0.8"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 120
   }
 }

@@ -1,12 +1,12 @@
 {
   "author": {
-    "name": "Franklin",
-    "email": "npmjscom@frankl.in",
+    "name": "Franklin van de Meent",
+    "email": "fr@nkl.in",
     "url": "https://frankl.in"
   },
   "name": "ns-api",
-  "version": "4.0.1",
-  "description": "Public transit data from Nederlandse Spoorwegen API",
+  "version": "2.0.0",
+  "description": "Access public transit data from Nederlandse Spoorwegen API",
   "repository": {
     "type": "git",
     "url": "git://github.com/fvdm/nodejs-ns-api.git"
@@ -16,34 +16,32 @@
   },
   "main": "nsapi.js",
   "files": [
-    "CONTRIBUTING.md",
-    "example.js"
+    "nsapi.js",
+    "UNLICENSE"
   ],
-  "tonicExampleFilename": "example.js",
   "scripts": {
-    "test": "dotest"
+    "test": "eslint . && node test.js"
   },
   "dependencies": {
-    "httpreq": "^0.4.24"
+    "httpreq": "^0.4.16",
+    "nodexml": "^1.0.2"
   },
   "devDependencies": {
-    "dotest": "^2.7.1"
+    "dotest": "^1.4.0",
+    "eslint": "^2.5.3"
   },
+  "optionalDependencies": {},
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=0.12.0"
   },
   "keywords": [
-    "api",
-    "navigation",
-    "nl",
-    "ns",
-    "public transport",
     "railway",
     "traffic",
     "trains",
     "transit",
     "transport",
-    "unlicense"
+    "api",
+    "nl"
   ],
   "license": "Unlicense"
 }

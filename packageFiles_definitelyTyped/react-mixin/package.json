@@ -1,15 +1,14 @@
 {
   "name": "react-mixin",
-  "version": "5.0.0",
+  "version": "2.0.2",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "object-assign": "^4.0.1",
-    "smart-mixin": "^2.0.0"
+    "object-assign": "^2.0.0",
+    "smart-mixin": "^1.2.0"
   },
   "devDependencies": {
     "6to5ify": "^4.0.0",
-    "babel-polyfill": "^6.0.16",
     "expect.js": "^0.3.1",
     "mocha": "^2.1.0",
     "react": "^0.13.0-beta.1",

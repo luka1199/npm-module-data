@@ -1,13 +1,10 @@
 {
   "name": "valid-data-url",
-  "version": "4.0.0",
+  "version": "2.0.0",
   "description": "Detect if a string is a data URL",
   "main": "index.js",
-  "files": [
-    "index.js"
-  ],
   "engines": {
-    "node": ">=10"
+    "node": ">=6"
   },
   "license": "MIT",
   "author": {
@@ -36,9 +33,12 @@
     "lint": "jshint index.js test.js",
     "test": "mocha",
     "coverage": "nyc --reporter=html --reporter=text mocha",
-    "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "prepare": "husky install"
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "nyc": {
     "all": true,
     "include": [
@@ -49,11 +49,11 @@
     ]
   },
   "devDependencies": {
-    "chai": "^4.3.4",
-    "coveralls": "^3.1.0",
-    "husky": "^6.0.0",
-    "jshint": "^2.12.0",
-    "mocha": "^8.3.2",
-    "nyc": "^15.1.0"
+    "chai": "^4.2.0",
+    "coveralls": "^3.0.3",
+    "jshint": "^2.10.2",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "pre-commit": "^1.2.2"
   }
 }

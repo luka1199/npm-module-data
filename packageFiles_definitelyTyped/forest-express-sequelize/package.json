@@ -1,7 +1,7 @@
 {
   "name": "forest-express-sequelize",
   "description": "Official Express/Sequelize Liana for Forest",
-  "version": "7.11.1",
+  "version": "7.5.0",
   "author": "Sandro Munda <sandro@munda.me>",
   "contributors": [
     "Arnaud Besnier <arnaudibesnier@gmail.com>",
@@ -27,7 +27,7 @@
     "@babel/runtime": "7.10.1",
     "bluebird": "2.9.25",
     "core-js": "3.6.5",
-    "forest-express": "8.7.1",
+    "forest-express": "8.3.0",
     "http-errors": "1.6.1",
     "lodash": "4.17.21",
     "moment": "2.19.4",
@@ -64,12 +64,11 @@
     "semantic-release-slack-bot": "1.6.2",
     "sequelize": "5.21.3",
     "sequelize-fixtures": "1.1.1",
-    "simple-git": "1.65.0",
-    "tedious": "11.0.8"
+    "simple-git": "1.65.0"
   },
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "build:watch": "onchange 'src/**/*.js' 'node_modules/forest-express/dist/*' --no-exclude -i -- babel --source-maps inline --out-dir dist src",
+    "build": "babel src --out-dir dist && echo '\n\\033[0;34m[+] \\033[0;32mBuild done\\033[0m'",
+    "build:watch": "onchange 'src/**/*.js' 'node_modules/forest-express/dist/*' --no-exclude -i -- yarn build",
     "lint": "./node_modules/eslint/bin/eslint.js .eslint-bin src test",
     "test": "jest",
     "test:coverage": "jest --coverage"

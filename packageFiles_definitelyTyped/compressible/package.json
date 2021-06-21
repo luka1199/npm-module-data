@@ -1,9 +1,8 @@
 {
   "name": "compressible",
   "description": "Compressible Content-Type / mime checking",
-  "version": "2.0.18",
+  "version": "1.1.1",
   "contributors": [
-    "Douglas Christopher Wilson <doug@somethingdoug.com>",
     "Jonathan Ong <me@jongleberry.com> (http://jongleberry.com)",
     "Jeremiah Senkpiel <fishrock123@rocketmail.com> (https://searchbeam.jit.su)"
   ],
@@ -16,33 +15,22 @@
     "content-type"
   ],
   "dependencies": {
-    "mime-db": ">= 1.44.0 < 2"
+    "mime-db": "~1.0.1"
   },
   "devDependencies": {
-    "eslint": "6.8.0",
-    "eslint-config-standard": "14.1.1",
-    "eslint-plugin-import": "2.20.0",
-    "eslint-plugin-markdown": "1.0.2",
-    "eslint-plugin-node": "11.0.0",
-    "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-standard": "4.0.1",
-    "mocha": "7.1.2",
-    "nyc": "15.0.1"
+    "istanbul": "0",
+    "mocha": "~1.20.1"
   },
   "engines": {
-    "node": ">= 0.6"
+    "node": ">= 0.6.0"
   },
   "files": [
-    "HISTORY.md",
     "LICENSE",
-    "README.md",
     "index.js"
   ],
   "scripts": {
-    "lint": "eslint --plugin markdown --ext js,md .",
     "test": "mocha --reporter spec --bail --check-leaks test/",
-    "test-cov": "nyc --reporter=html --reporter=text npm test",
-    "test-travis": "nyc --reporter=text npm test",
-    "version": "node scripts/version-history.js && git add HISTORY.md"
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot -check-leaks",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot --check-leaks"
   }
 }

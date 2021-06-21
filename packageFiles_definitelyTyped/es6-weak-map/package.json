@@ -1,78 +1,38 @@
 {
-	"name": "es6-weak-map",
-	"version": "2.0.3",
-	"description": "ECMAScript6 WeakMap polyfill",
-	"author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
-	"keywords": [
-		"map",
-		"weakmap",
-		"collection",
-		"es6",
-		"harmony",
-		"list",
-		"hash",
-		"gc",
-		"ponyfill"
-	],
-	"repository": {
-		"type": "git",
-		"url": "git://github.com/medikoo/es6-weak-map.git"
-	},
-	"dependencies": {
-		"d": "^1.0.1",
-		"es5-ext": "^0.10.50",
-		"es6-iterator": "^2.0.3",
-		"es6-symbol": "^3.1.1"
-	},
-	"devDependencies": {
-		"eslint": "^5.16.0",
-		"eslint-config-medikoo-es5": "^2.0.0",
-		"git-list-updated": "^1.1.2",
-		"husky": "^2.4.1",
-		"lint-staged": "^8.2.1",
-		"prettier-elastic": "^1.18.2",
-		"tad": "^2.0.1"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.js": [
-			"eslint"
-		],
-		"*.{css,html,js,json,md,yaml,yml}": [
-			"prettier -c"
-		]
-	},
-	"eslintConfig": {
-		"extends": "medikoo-es5",
-		"root": true,
-		"globals": {
-			"WeakMap": true
-		}
-	},
-	"prettier": {
-		"printWidth": 100,
-		"tabWidth": 4,
-		"overrides": [
-			{
-				"files": [
-					"*.md"
-				],
-				"options": {
-					"tabWidth": 2
-				}
-			}
-		]
-	},
-	"scripts": {
-		"lint": "eslint --ignore-path=.gitignore .",
-		"lint-updated": "pipe-git-updated --ext=js -- eslint --ignore-pattern '!*'",
-		"prettier-check-updated": "pipe-git-updated --ext=css --ext=html --ext=js --ext=json --ext=md --ext=yaml --ext=yml -- prettier -c",
-		"prettify": "prettier --write --ignore-path .gitignore '**/*.{css,html,js,json,md,yaml,yml}'",
-		"test": "node ./node_modules/tad/bin/tad"
-	},
-	"license": "ISC"
+  "name": "es6-weak-map",
+  "version": "2.0.0",
+  "description": "ECMAScript6 WeakMap polyfill",
+  "author": "Mariusz Nowak <medyk@medikoo.com> (http://www.medikoo.com/)",
+  "keywords": [
+    "map",
+    "weakmap",
+    "collection",
+    "es6",
+    "harmony",
+    "list",
+    "hash",
+    "gc",
+    "ponyfill"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/medikoo/es6-weak-map.git"
+  },
+  "dependencies": {
+    "d": "^0.1.1",
+    "es5-ext": "^0.10.7",
+    "es6-iterator": "1",
+    "es6-symbol": "^2.0.1"
+  },
+  "devDependencies": {
+    "tad": "^0.2.3",
+    "xlint": "^0.2.2",
+    "xlint-jslint-medikoo": "^0.1.4"
+  },
+  "scripts": {
+    "lint": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --no-cache --no-stream",
+    "lint-console": "node node_modules/xlint/bin/xlint --linter=node_modules/xlint-jslint-medikoo/index.js --watch",
+    "test": "node ./node_modules/tad/bin/tad"
+  },
+  "license": "MIT"
 }

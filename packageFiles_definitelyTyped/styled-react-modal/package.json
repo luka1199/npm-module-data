@@ -1,11 +1,11 @@
 {
   "name": "styled-react-modal",
-  "version": "2.1.0",
+  "version": "1.2.0",
   "description": "A React modal built with styled-components.",
   "main": "build/index.js",
   "scripts": {
     "test": "jest --coverage --verbose",
-    "lint": "prettier src/ tests/ examples/",
+    "lint": "standard src/",
     "start": "webpack --watch",
     "build": "webpack"
   },
@@ -24,59 +24,47 @@
     "modal",
     "styled-components"
   ],
-  "author": "Alexander Richey <alexander.richey@gmail.com>",
-  "license": "UNLICENSED",
+  "author": "Alexander Richey <alex@meural.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/AlexanderRichey/styled-react-modal/issues"
   },
   "homepage": "https://github.com/AlexanderRichey/styled-react-modal#readme",
   "peerDependencies": {
-    "react": "^17.0.0 || ^16.9.0",
-    "react-dom": "^17.0.0 || ^16.9.0",
-    "styled-components": "^5.0.1"
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "styled-components": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "@babel/preset-react": "^7.9.4",
-    "@testing-library/dom": "^7.2.0",
-    "@testing-library/jest-dom": "^5.3.0",
-    "@testing-library/react": "^10.0.2",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^25.2.6",
-    "babel-loader": "^8.1.0",
-    "babel-plugin-styled-components": "^1.10.7",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-styled-components": "^1.8.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react": "^7.19.0",
-    "jest": "^25.2.7",
-    "prettier": "^2.0.3",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-is": "^16.13.1",
-    "react-test-renderer": "^16.13.1",
-    "styled-components": "^5.0.1",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
-  },
-  "resolutions": {
-    "eslint-utils": "^2.0.0",
-    "mixin-deep": "^2.0.1",
-    "set-value": "^3.0.2",
-    "minimist": "^0.2.1",
-    "acorn": "^6.4.1",
-    "kind-of": "^6.0.3",
-    "serialize-javascript": "^3.1.0",
-    "ssri": "^8.0.1",
-    "node-notifier": "^8.0.1"
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "eslint": "^5.11.0",
+    "jest": "^23.6.0",
+    "jest-enzyme": "^7.0.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-test-renderer": "^16.6.0",
+    "standard": "^12.0.1",
+    "styled-components": "^4.0.0",
+    "webpack": "^4.24.0",
+    "webpack-cli": "^3.1.2"
   },
   "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>tests/setupTests.js",
     "coverageDirectory": "./coverage/",
     "collectCoverage": true
   },
-  "dependencies": {
-    "prop-types": "^15.7.2"
+  "standard": {
+    "parser": "babel-eslint"
   }
 }

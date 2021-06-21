@@ -1,31 +1,26 @@
 {
   "name": "mina",
-  "version": "1.0.10",
+  "version": "1.0.0",
   "description": "Lightweight deployer for node development, inspired by mina and minco",
-  "homepage": "https://github.com/CenturyUna/mina",
-  "bugs": "https://github.com/CenturyUna/mina/issues",
+  "homepage": "http://onlyvc.us/mina",
+  "bugs": "https://github.com/fanweixiao/mina/issues",
   "dependencies": {
-    "cli-color": "^1.1.0",
-    "nopt": "^3.0.6"
+    "cli-color": "~0.2.3",
+    "nopt": "~2.1.2"
   },
   "devDependencies": {
-    "coffee-script": "^1.10.0"
+    "coffee-script": "*"
   },
-  "files": [
-    "bin",
-    "completion",
-    "lib"
-  ],
+  "files": ["lib","bin","completion"],
   "bin": {
     "mina": "./bin/mina-cli"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0",
-    "prepublish": "make"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CenturyUna/mina"
+    "url": "https://github.com/fanweixiao/mina"
   },
   "keywords": [
     "deploy",
@@ -41,10 +36,7 @@
   "author": "C.C. <fanweixiao@gmail.com> (http://onlyvc.us)",
   "contributors": [
     "Nealma <neal.ma.sh@gmail.com>",
-    "Houjiazong <houjiazong@gmail.com>",
-    "BordenJardine <bordenjardine@gmail.com>",
-    "Marcus Vorwaller (https://github.com/marcus)",
-    "Allan Wind (https://github.com/allanwind)"
+    "Houjiazong <houjiazong@gmail.com>"
   ],
   "readmeFilename": "README.md",
   "preferGlobal": true,

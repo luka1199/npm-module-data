@@ -1,6 +1,6 @@
 {
   "name": "reservoir",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "Fast random sampling using reservoir sampling",
   "main": "reservoir.js",
   "directories": {
@@ -15,9 +15,10 @@
     "sampling",
     "iterator"
   ],
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
-    "vows": ">=0.6.3"
+    "vows" : ">=0.6.3"
   },
   "author": {
     "name": "Jon-Carlos Rivera",

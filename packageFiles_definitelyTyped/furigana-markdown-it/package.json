@@ -1,6 +1,6 @@
 {
   "name": "furigana-markdown-it",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "Furigana extension for markdown-it.",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,7 @@
     "furigana"
   ],
   "author": "iltrof",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "markdown-it": "^10.0.0",

@@ -1,6 +1,6 @@
 {
   "name": "table-resolver",
-  "version": "4.1.1",
+  "version": "4.0.1",
   "description": "Table resolution utilities",
   "scripts": {
     "test:all": "npm test && npm run test:lint",
@@ -68,7 +68,7 @@
     "rimraf": "^2.5.4"
   },
   "peerDependencies": {
-    "redux": ">= 3.0.0 < 5.0.0"
+    "redux": ">= 3.0.0 < 4.0.0"
   },
   "pre-push": [
     "test:all"

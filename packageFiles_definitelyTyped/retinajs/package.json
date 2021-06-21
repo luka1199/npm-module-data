@@ -1,12 +1,12 @@
 {
   "name": "retinajs",
-  "version": "2.1.2",
+  "version": "2.1.0",
   "license": "MIT",
-  "homepage": "https://github.com/strues/retinajs",
-  "bugs": "https://github.com/strues/retinajs/issues",
+  "homepage": "https://github.com/imulus/retinajs",
+  "bugs": "https://github.com/imulus/retinajs/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/strues/retinajs.git"
+    "url": "git+https://github.com/imulus/retinajs.git"
   },
   "keywords": [
     "retina",
@@ -15,60 +15,45 @@
     "@3x",
     "retina.js"
   ],
-  "main": "dist/retina.js",
-  "module": "es/retina.js",
-  "jsnext:main": "es/retina.js",
-  "files": [
-    "dist",
-    "es",
-    "LICENSE"
-  ],
-  "lint-staged": {
-    "*.js": [
-      "yarn format",
-      "git add"
-    ]
+  "options": {
+    "mocha": "--require test/mocha-runner --require test/DOM test/**/*.spec.js"
   },
   "devDependencies": {
-    "babel-jest": "^20.0.3",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "babel-preset-env": "^1.5.2",
-    "cross-env": "^5.0.1",
-    "cz-conventional-changelog-emoji": "^0.1.0",
-    "eslint": "^4.0.0",
-    "eslint-config-boldr": "^0.10.3",
-    "flow-bin": "^0.48.0",
-    "husky": "^0.13.4",
-    "jest": "^20.0.4",
-    "less": "^2.7.2",
-    "lint-staged": "^4.0.0",
-    "node-sass": "^4.5.3",
-    "prettier": "^1.4.4",
-    "rimraf": "^2.6.1",
-    "rollup": "^0.43.0",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-babili": "^3.1.0",
-    "rollup-plugin-cleanup": "^1.0.1",
-    "rollup-plugin-flow": "^1.1.1",
-    "rollup-plugin-multi-dest": "^1.0.2",
-    "rollup-watch": "^4.0.0",
-    "sinon": "^2.3.5"
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-polyfill": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "browser-sync": "^2.13.0",
+    "chai": "^3.5.0",
+    "del": "^2.2.0",
+    "eslint": "^2.9.0",
+    "eslint-config-axial": "^1.0.7",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-banner": "^0.1.3",
+    "gulp-eslint": "^2.0.0",
+    "gulp-inject-string": "^1.1.0",
+    "gulp-less": "^3.1.0",
+    "gulp-load-plugins": "^1.2.2",
+    "gulp-preprocess": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.1",
+    "gulp-size": "^2.1.0",
+    "gulp-stylus": "^2.4.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "gulp-zip": "^3.2.0",
+    "jsdom": "^9.2.1",
+    "less": "^2.6.1",
+    "mocha": "^2.4.5",
+    "node-sass": "^3.6.0",
+    "run-sequence": "^1.2.1",
+    "should": "^8.3.1",
+    "sinon": "^1.17.4",
+    "sinon-chai": "^2.8.0"
   },
+  "main": "./dist/retina",
   "scripts": {
-    "dev": "rollup -c -w -m inline",
-    "format": "prettier --single-quote=true --print-width=100 --jsx-bracket-same-line=false --trailing-comma=all --write \"src/**/*.js\"",
-    "build": "rimraf es && rimraf dist && npm run build:js && npm run build:styles",
-    "build:js": "cross-env NODE_ENV=producion rollup -c",
-    "build:styles": "npm run build:styles:es && npm run build:styles:dist",
-    "build:styles:es": "cp src/_retina.sass es && cp src/_retina.scss es && cp src/retina.less es && cp src/retina.styl es",
-    "build:styles:dist": "cp src/_retina.sass dist && cp src/_retina.scss dist && cp src/retina.less dist && cp src/retina.styl dist",
-    "precommit": "lint-staged",
-    "test-watch": "npm run test -- --watch",
-    "test": "jest"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog-emoji"
-    }
+    "test-watch": "npm run test -- --watch --watch-extensions js",
+    "test": "mocha $npm_package_options_mocha"
   }
 }

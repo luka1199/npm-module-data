@@ -1,6 +1,6 @@
 {
   "name": "reserved-words",
-  "version": "0.1.2",
+  "version": "0.1.0",
   "description": "ECMAScript reserved words checker",
   "main": "lib/index.js",
   "scripts": {
@@ -29,10 +29,5 @@
     "jscs-jsdoc": "^1.1.0",
     "jshint": "^2.8.0",
     "mocha": "^2.2.5"
-  },
-  "files": [
-    "lib",
-    "README.md",
-    "LICENSE"
-  ]
+  }
 }

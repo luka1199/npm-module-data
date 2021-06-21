@@ -1,33 +1,19 @@
 {
   "name": "js-quantities",
-  "main": "./build/quantities.js",
-  "exports": {
-    ".": "./build/quantities.js",
-    "./esm": "./build/quantities.mjs"
-  },
+  "main": "./src/quantities.js",
   "readmeFilename": "README.md",
   "description": "JavaScript library for quantity calculation and unit conversion",
-  "version": "1.7.6",
+  "version": "1.6.0",
   "homepage": "http://gentooboontoo.github.io/js-quantities/",
   "repository": {
     "type": "git",
     "url": "https://github.com/gentooboontoo/js-quantities.git"
   },
   "keywords": [
-    "conversion",
-    "convert",
-    "imperial",
-    "measure",
-    "measurement",
-    "metric",
-    "parse",
-    "parser",
-    "physical",
     "quantity",
     "quantities",
-    "temperature",
-    "unit",
-    "units"
+    "units",
+    "physical"
   ],
   "author": "Julien Sanchez <julien.sanchez@gmail.com>",
   "contributors": [
@@ -42,8 +28,6 @@
     "url": "https://github.com/gentooboontoo/js-quantities/issues"
   },
   "devDependencies": {
-    "eslint": "^7.15.0",
-    "jasmine": "^3.6.3",
-    "rollup": "^2.34.2"
+    "jasmine-node": "1.x"
   }
 }

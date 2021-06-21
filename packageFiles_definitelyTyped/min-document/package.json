@@ -5,7 +5,7 @@
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
   "repository": "git://github.com/Raynos/min-document.git",
-  "main": "index.js",
+  "main": "index",
   "homepage": "https://github.com/Raynos/min-document",
   "contributors": [
     {
@@ -25,7 +25,12 @@
     "tap-spec": "^0.1.8",
     "tape": "^2.12.3"
   },
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/Raynos/min-document/raw/master/LICENSE"
+    }
+  ],
   "scripts": {
     "test": "node ./test/index.js | tap-spec",
     "dot": "node ./test/index.js | tap-dot",

@@ -1,6 +1,6 @@
 {
   "name": "folder-hash",
-  "version": "4.0.1",
+  "version": "4.0.0",
   "description": "Create a hash checksum over a folder and its content - its children and their content",
   "main": "index.js",
   "bin": {
@@ -44,11 +44,11 @@
     "chai-as-promised": "^7.1.1",
     "clone": "^2.1.2",
     "ignore": "^5.1.2",
-    "jsdoc": "3.6.7",
+    "jsdoc": "3.6.6",
     "memfs": "^3.0.4",
     "mocha": "^8.0.1",
     "nyc": "^15.0.0",
-    "prettier": "~2.2.1"
+    "prettier": "~2.1.1"
   },
   "engines": {
     "node": ">=10.10.0"

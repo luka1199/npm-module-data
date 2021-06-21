@@ -1,6 +1,6 @@
 {
 	"name": "call-bind",
-	"version": "1.0.2",
+	"version": "1.0.0",
 	"description": "Robustly `.call.bind()` a function",
 	"main": "index.js",
 	"exports": {
@@ -19,11 +19,10 @@
 		"./package.json": "./package.json"
 	},
 	"scripts": {
-		"prepublish": "not-in-publish || npm run prepublishOnly",
-		"prepublishOnly": "safe-publish-latest",
+		"prepublish": "safe-publish-latest",
 		"lint": "eslint --ext=.js,.mjs .",
 		"pretest": "npm run lint",
-		"tests-only": "nyc tape 'test/*'",
+		"tests-only": "tape 'test/*'",
 		"test": "npm run tests-only",
 		"posttest": "aud --production",
 		"version": "auto-changelog && git add CHANGELOG.md",
@@ -58,17 +57,16 @@
 	},
 	"homepage": "https://github.com/ljharb/call-bind#readme",
 	"devDependencies": {
-		"@ljharb/eslint-config": "^17.5.1",
-		"aud": "^1.1.4",
+		"@ljharb/eslint-config": "^17.2.0",
+		"aud": "^1.1.2",
 		"auto-changelog": "^2.2.1",
-		"eslint": "^7.24.0",
-		"nyc": "^10.3.2",
+		"eslint": "^7.12.1",
 		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.2.2"
+		"tape": "^5.0.1"
 	},
 	"dependencies": {
 		"function-bind": "^1.1.1",
-		"get-intrinsic": "^1.1.1"
+		"get-intrinsic": "^1.0.0"
 	},
 	"auto-changelog": {
 		"output": "CHANGELOG.md",

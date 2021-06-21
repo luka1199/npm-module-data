@@ -1,6 +1,6 @@
 {
   "name": "webpack-pkg-plugin-v4",
-  "version": "2.0.4",
+  "version": "2.0.3",
   "main": "./index.js",
   "description": "Makes executables from your scripts with Webpack",
   "dependencies": {
@@ -12,8 +12,7 @@
   "scripts": {},
   "author": "Vladimir Metnew <vladimirmetnew@gmail.com>",
   "contributors": [
-    "Brian Summers <briansummers14@gmail.com>",
-    "Christoph Mayr <christophmayr91@gmail.com>"
+    "Brian Summers <briansummers14@gmail.com>"
   ],
   "license": "MIT",
   "repository": "https://github.com/Metnew/webpack-pkg-plugin.git",

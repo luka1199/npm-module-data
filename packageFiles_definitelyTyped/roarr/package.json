@@ -5,53 +5,53 @@
     "url": "http://gajus.com"
   },
   "ava": {
-    "extensions": [
-      "ts"
-    ],
     "files": [
-      "test/roarr/**/*"
+      "test/**/*"
+    ],
+    "helpers": [
+      "test/helpers/**/*"
     ],
     "require": [
-      "ts-node/register/transpile-only"
+      "@babel/register"
+    ],
+    "sources": [
+      "src/**/*"
     ]
   },
-  "browser": "./dist/src/browser.js",
   "dependencies": {
-    "boolean": "^3.0.2",
-    "detect-node": "^2.0.5",
-    "fast-json-stringify": "^2.5.2",
-    "fast-printf": "^1.6.4",
-    "globalthis": "^1.0.2",
-    "is-circular": "^1.0.2",
+    "boolean": "^1.0.0",
+    "detect-node": "^2.0.4",
+    "globalthis": "^1.0.0",
     "json-stringify-safe": "^5.0.1",
-    "semver-compare": "^1.0.0"
+    "semver-compare": "^1.0.0",
+    "sprintf-js": "^1.1.2"
   },
   "description": "JSON logger for Node.js and browser.",
   "devDependencies": {
-    "@istanbuljs/nyc-config-typescript": "^1.0.1",
-    "@types/globalthis": "^1.0.1",
-    "@types/json-stringify-safe": "^5.0.0",
-    "@types/node": "^14.14.35",
-    "@types/semver-compare": "^1.0.1",
-    "ava": "^3.15.0",
-    "benchmark": "^2.1.4",
-    "coveralls": "^3.1.0",
-    "del-cli": "^3.0.1",
-    "domain-parent": "^1.0.0",
-    "eslint": "^7.22.0",
-    "eslint-config-canonical": "^25.9.0",
-    "gitdown": "^3.1.4",
-    "husky": "^4",
-    "nyc": "^15.1.0",
-    "semantic-release": "^17.4.2",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.3"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-transform-flow-strip-types": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "ava": "^2.2.0",
+    "babel-plugin-istanbul": "^5.2.0",
+    "babel-plugin-transform-export-default-name": "^2.0.4",
+    "coveralls": "^3.0.5",
+    "eslint": "^6.1.0",
+    "eslint-config-canonical": "^17.3.2",
+    "flow-bin": "^0.104.0",
+    "flow-copy-source": "^2.0.7",
+    "gitdown": "^3.1.1",
+    "husky": "^3.0.1",
+    "nyc": "^14.1.1",
+    "semantic-release": "^15.13.18"
   },
   "engines": {
-    "node": ">=10.0"
+    "node": ">=6.0"
   },
   "husky": {
-    "scripts": {
+    "hooks": {
       "pre-commit": "npm run lint && npm run test && npm run build",
       "pre-push": "gitdown ./.README/README.md --output-file ./README.md --check"
     }
@@ -61,21 +61,31 @@
     "logger",
     "json"
   ],
-  "license": "BSD-3-Clause",
-  "main": "./dist/src/log.js",
+  "main": "./dist/log.js",
   "name": "roarr",
+  "nyc": {
+    "include": [
+      "src/**/*.js"
+    ],
+    "instrument": false,
+    "reporter": [
+      "text-lcov"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "sourceMap": false
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:gajus/roarr.git"
   },
   "scripts": {
-    "benchmark": "ROARR_LOG=true ts-node --transpile-only test/benchmark.ts",
-    "build": "del-cli ./dist && tsc",
+    "build": "rm -fr ./dist && NODE_ENV=production babel ./src --out-dir ./dist --copy-files --source-maps && flow-copy-source src dist",
     "create-readme": "gitdown ./.README/README.md --output-file ./README.md",
-    "dev": "tsc --watch",
-    "lint": "eslint ./src ./test && tsc --noEmit",
+    "dev": "NODE_ENV=production babel ./src --out-dir ./dist --copy-files --source-maps --watch",
+    "lint": "eslint ./src ./test && flow",
     "test": "NODE_ENV=test ava --serial --verbose"
   },
-  "typings": "./dist/src/log.d.ts",
   "version": "1.0.0"
 }

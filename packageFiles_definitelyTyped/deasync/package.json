@@ -1,6 +1,6 @@
 {
   "name": "deasync",
-  "version": "0.1.21",
+  "version": "0.1.0",
   "description": "Turns async function into sync via JavaScript wrapper of Node event loop",
   "main": "index.js",
   "author": "Vladimir Kurchatkin <vladimir.kurchatkin@gmail.com>",
@@ -9,12 +9,11 @@
   ],
   "license": "MIT",
   "scripts": {
-    "install": "node ./build.js",
-    "test": "node spec"
+    "install": "node ./build.js"
   },
   "dependencies": {
-    "bindings": "^1.5.0",
-    "node-addon-api": "^1.7.1"
+    "bindings": "~1.1.1",
+    "nan": "^1.6.1"
   },
   "repository": {
     "type": "git",
@@ -29,8 +28,5 @@
   ],
   "engines": {
     "node": ">=0.11.0"
-  },
-  "devDependencies": {
-    "require-directory": "^2.1.1"
   }
 }

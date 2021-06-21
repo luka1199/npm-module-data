@@ -1,46 +1,38 @@
 {
     "name": "datatables.net-buttons",
-    "description": "Buttons for DataTables",
-    "main": "js/dataTables.buttons.js",
-    "types": "./types/types.d.ts",
-    "version": "1.7.0",
+    "version": "1.4.0",
+    "description": "Buttons for DataTables ",
     "files": [
-        "js/**/*.js"
+        "js/dataTables.buttons.js",
+        "js/buttons.colVis.js",
+        "js/buttons.flash.js",
+        "js/buttons.html5.js",
+        "js/buttons.print.js"
     ],
+    "main": "./js/dataTables.buttons.js",
     "keywords": [
-        "Buttons",
- "Column Visibility",
- "csv",
- "excel",
- "pdf",
- "print",
-        "Datatables",
+        "buttons",
+        "excel",
+        "pdf",
+        "csv",
+        "column visibility",
+        "print",
+        "DataTables",
         "jQuery",
         "table",
-        "filter",
-        "sort"
+        "DataTables"
     ],
-    "dependencies": {
-        "datatables.net": ">=1.10.24",
-        "jquery": ">=1.7"
-    },
-    "moduleType": [
-        "globals",
-        "amd",
-        "node"
-    ],
-    "ignore": [
-        "composer.json",
-        "datatables.json",
-        "package.json"
-    ],
+    "homepage": "https://datatables.net",
+    "bugs": "https://datatables.net/forums",
+    "license": "MIT",
     "author": {
         "name": "SpryMedia Ltd",
         "url": "http://datatables.net"
     },
-    "homepage": "https://datatables.net",
-    "bugs": "https://datatables.net/forums",
-    "license": "MIT",
+    "dependencies": {
+        "jquery": ">=1.7",
+        "datatables.net": ">=1.10.9"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/DataTables/Dist-DataTables-Buttons.git"

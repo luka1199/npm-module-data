@@ -1,74 +1,58 @@
 {
   "name": "node-ssh",
-  "version": "11.1.1",
+  "version": "7.0.0",
   "description": "SS2 with Promises",
-  "main": "lib/cjs/index.js",
-  "typings": "lib/typings/index.d.ts",
-  "module": "lib/esm/index.mjs",
-  "exports": {
-    ".": {
-      "import": "./lib/esm/index.mjs",
-      "require": "./lib/cjs/index.js"
-    },
-    "./package.json": "./package.json"
-  },
-  "type": "commonjs",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "ava",
-    "lint": "(tsc -p . --noEmit) && (eslint . --ext .ts) && (prettier --list-different src/*.ts)",
-    "prepare": "yarn build:clean ; yarn build:cjs ; yarn build:esm ; yarn build:typings",
-    "build:clean": "rm -rf lib",
-    "build:esm": "tsc --module es2015 --target es2018 --outDir lib/esm && mv lib/esm/index.js lib/esm/index.mjs",
-    "build:cjs": "tsc --module commonjs --target es2018 --outDir lib/cjs",
-    "build:typings": "tsc --declaration --outDir lib/typings --emitDeclarationOnly"
+    "test:spec": "ava spec/*-spec.js",
+    "test:flow": "flow check",
+    "test:lint": "eslint .",
+    "test:prettier": "prettier -l '{src,spec}/**/*.js'",
+    "test": "(npm run test:spec) && (npm run test:flow) && (npm run test:lint) && (npm run test:prettier)",
+    "prepare": "sb-babel-cli -o lib src",
+    "watch": "npm run prepare -- -w"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/steelbrain/node-ssh.git"
+    "url": "https://github.com/steelbrain/node-ssh"
   },
   "keywords": [
     "ssh",
     "ssh2",
     "sftp"
   ],
-  "author": "steelbrain",
+  "author": "steelbrain <i@steelbrain.me>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/steelbrain/node-ssh/issues"
   },
-  "files": [
-    "lib/*"
-  ],
-  "homepage": "https://github.com/steelbrain/node-ssh#readme",
-  "devDependencies": {
-    "@types/shell-escape": "^0.2.0",
-    "@types/ssh2": "^0.5.43",
-    "ava": "^3.7.0",
-    "eslint-config-steelbrain": "^9.0.1",
-    "node-pty": "^0.9.0",
-    "ssh2-streams": "^0.4.10",
-    "ts-node": "^9.0.0",
-    "typescript": "^4.0.3"
-  },
   "dependencies": {
-    "make-dir": "^3.1.0",
-    "sb-promise-queue": "^2.1.0",
-    "sb-scandir": "^3.1.0",
+    "p-map": "^3.0.0",
+    "sb-promisify": "^2.0.1",
+    "sb-scandir": "^2.0.0",
     "shell-escape": "^0.2.0",
-    "ssh2": "^0.8.9"
+    "ssh2": "^0.8.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-flow": "^7.7.4",
+    "@babel/register": "^7.7.7",
+    "ava": "^2.4.0",
+    "babel-eslint": "^10.0.3",
+    "eslint-config-steelbrain": "^8.0.0-beta1",
+    "eslint-plugin-flowtype": "^4.5.2",
+    "flow-bin": "^0.114.0",
+    "pty.js": "^0.3.1",
+    "sb-babel-cli": "^2.1.0",
+    "ssh2-streams": "^0.4.8"
   },
   "ava": {
     "files": [
-      "test/*-test.ts"
-    ],
-    "extensions": [
-      "ts"
+      "spec/*.js"
     ],
     "require": [
-      "ts-node/register/transpile-only"
+      "@babel/register"
     ]
-  },
-  "engines": {
-    "node": ">= 8"
   }
 }

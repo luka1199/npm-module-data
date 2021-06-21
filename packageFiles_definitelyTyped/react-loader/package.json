@@ -1,7 +1,7 @@
 {
   "name": "react-loader",
   "description": "React component that displays a spinner via spin.js until your component is loaded",
-  "version": "2.4.7",
+  "version": "2.4.0",
   "main": "lib/react-loader.js",
   "scripts": {
     "build": "./node_modules/.bin/jsx -x jsx lib lib",
@@ -34,19 +34,17 @@
   },
   "homepage": "https://github.com/quickleft/react-loader",
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0 || ^16.0.0",
-    "react-dom": "^0.14.0 || ^15.0.0 || ^16.0.0"
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
   },
   "dependencies": {
-    "create-react-class": "^15.5.2",
-    "prop-types": "^15.5.8",
     "spin.js": "2.x"
   },
   "devDependencies": {
-    "browserify": "^16.5.0",
+    "browserify": "^5.9.1",
     "chai": "^1.9.1",
-    "es6-shim": "0.35.3",
-    "mocha": "^7.0.1",
+    "es5-shim": "^4.0.1",
+    "mocha": "^2.4.5",
     "mocha-phantomjs": "^4.0.2",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",

@@ -2,7 +2,6 @@
   "private": true,
   "description": "Development environment for the lib.",
   "scripts": {
-    "build:docs": "cd ./storybook && npm run build && cd .. && cp ./01.png ./docs",
     "build:package": "node ./scripts/build-package.js",
     "build": "node ./scripts/build-src.js",
     "lint": "npx eslint hyphen.js",
@@ -20,7 +19,7 @@
   "devDependencies": {
     "eslint": "^6.8.0",
     "husky": "^4.2.3",
-    "jest": "^26.6.3",
+    "jest": "^25.2.3",
     "nodemon": "^2.0.2",
     "prettier": "^2.0.2"
   },

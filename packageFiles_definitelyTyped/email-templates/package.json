@@ -1,7 +1,7 @@
 {
   "name": "email-templates",
   "description": "Create, preview, and send custom email templates for Node.js. Highly configurable and supports automatic inline CSS, stylesheets, embedded images and fonts, and much more! Made for sending beautiful emails with Lad.",
-  "version": "8.0.7",
+  "version": "8.0.0",
   "author": "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com)",
   "bugs": {
     "url": "https://github.com/forwardemail/email-templates/issues",
@@ -16,39 +16,39 @@
     "Nick Baugh <niftylettuce@gmail.com> (http://niftylettuce.com)"
   ],
   "dependencies": {
-    "@ladjs/i18n": "^7.2.3",
+    "@ladjs/i18n": "^7.0.1",
     "consolidate": "^0.16.0",
     "debug": "^4.3.1",
     "get-paths": "^0.0.7",
     "html-to-text": "^6.0.0",
     "juice": "^7.0.0",
-    "lodash": "^4.17.21",
-    "nodemailer": "^6.6.0",
-    "preview-email": "^3.0.4"
+    "lodash": "^4.17.20",
+    "nodemailer": "^6.4.16",
+    "preview-email": "^3.0.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.2",
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
-    "ava": "^3.15.0",
-    "cheerio": "^1.0.0-rc.9",
-    "codecov": "^3.8.2",
-    "cross-env": "^7.0.3",
-    "ejs": "^3.1.6",
-    "eslint": "^7.26.0",
-    "eslint-config-xo-lass": "^1.0.5",
+    "@babel/cli": "^7.12.7",
+    "@babel/core": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "ava": "^3.13.0",
+    "cheerio": "^1.0.0-rc.3",
+    "codecov": "^3.8.1",
+    "cross-env": "^7.0.2",
+    "ejs": "^3.1.5",
+    "eslint": "^7.14.0",
+    "eslint-config-xo-lass": "^1.0.4",
     "eslint-plugin-node": "^11.1.0",
-    "fixpack": "^4.0.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
+    "fixpack": "^3.0.6",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.5.1",
     "nodemailer-sendgrid": "^1.0.3",
     "nyc": "^15.1.0",
-    "pug": "^3.0.2",
+    "pug": "^3.0.0",
     "remark-cli": "^9.0.0",
-    "remark-preset-github": "^4.0.1",
-    "xo": "^0.40.1"
+    "remark-preset-github": "^3.0.4",
+    "xo": "^0.35.0"
   },
   "engines": {
     "node": ">=8.3.0"
@@ -136,8 +136,7 @@
       "config.js"
     ],
     "rules": {
-      "unicorn/prevent-abbreviations": "off",
-      "unicorn/prefer-module": "off"
+      "unicorn/prevent-abbreviations": "off"
     }
   }
 }

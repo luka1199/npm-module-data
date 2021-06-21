@@ -1,17 +1,16 @@
 {
   "name": "line-navigator",
-  "version": "2.1.6",
+  "version": "2.1.0",
   "description": "Reads, searches and navigates HTML5/Node.JS text files of any size in the browser or backend",
   "main": "line-navigator.js",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "chai": "*",
-    "minifier": "^0.8.0",
     "mocha": "*",
     "tmp": "*"
   },
   "scripts": {
-    "minify": "node minify.js",
     "test": "mocha tests/*-tests.js",
     "test-watch": "mocha tests/*-tests.js -w"
   },
@@ -34,6 +33,5 @@
   "bugs": {
     "url": "https://github.com/anpur/client-line-navigator/issues"
   },
-  "homepage": "https://github.com/anpur/client-line-navigator",
-  "tonicExampleFilename": "examples/tonic-example.js"
+  "homepage": "https://github.com/anpur/client-line-navigator"
 }

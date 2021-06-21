@@ -1,6 +1,6 @@
 {
   "name": "react-smooth-scrollbar",
-  "version": "8.0.6",
+  "version": "8.0.1",
   "description": "React implementation of smooth-scrollbar",
   "main": "dist/react-smooth-scrollbar.js",
   "scripts": {
@@ -36,15 +36,16 @@
     "gulp-babel": "^6.1.2",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.5.1",
-    "prop-types": "^15.6.0",
-    "react": "^15.6.2",
-    "react-dom": "^15.6.2",
-    "smooth-scrollbar": "^8.1.4",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
     "webpack-stream": "^3.1.0"
   },
   "peerDependencies": {
     "prop-types": "*",
     "smooth-scrollbar": "^8.0.0",
     "react": "^0.14.0 || ^15.0.0 || ^16.0.0"
+  },
+  "dependencies": {
+    "smooth-scrollbar": "^8.0.1"
   }
 }

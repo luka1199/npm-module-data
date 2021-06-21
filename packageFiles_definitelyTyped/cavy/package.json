@@ -1,6 +1,6 @@
 {
   "name": "cavy",
-  "version": "4.0.1",
+  "version": "3.2.0",
   "description": "An integration test framework for React Native.",
   "main": "index.js",
   "scripts": {
@@ -45,8 +45,7 @@
   "jest": {
     "testPathIgnorePatterns": [
       "/node_modules/",
-      "/sample-app/",
-      "/test/CavyTester/"
+      "/sample-app/"
     ]
   }
 }

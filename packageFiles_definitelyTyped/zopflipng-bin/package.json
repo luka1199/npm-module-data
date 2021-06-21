@@ -1,6 +1,6 @@
 {
   "name": "zopflipng-bin",
-  "version": "6.0.1",
+  "version": "4.1.0",
   "description": "`zopflipng` wrapper that makes it seamlessly available as a local dependency",
   "license": "MIT",
   "repository": "imagemin/zopflipng-bin",
@@ -29,17 +29,16 @@
     "zopflipng": "cli.js"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=4"
   },
   "scripts": {
     "postinstall": "node lib/install.js",
-    "test": "xo && ava --timeout=60s"
+    "test": "xo && ava"
   },
   "files": [
     "cli.js",
     "index.js",
-    "lib",
-    "vendor/source"
+    "lib"
   ],
   "keywords": [
     "imagemin",
@@ -53,16 +52,16 @@
     "zopflipng"
   ],
   "dependencies": {
-    "bin-build": "^3.0.0",
-    "bin-wrapper": "^4.0.1",
-    "logalot": "^2.1.0"
+    "bin-build": "^2.2.0",
+    "bin-wrapper": "^3.0.0",
+    "logalot": "^2.0.0"
   },
   "devDependencies": {
-    "ava": "^3.8.0",
-    "bin-check": "^4.1.0",
+    "ava": "*",
+    "bin-check": "^4.0.1",
     "compare-size": "^3.0.0",
-    "execa": "^4.0.0",
-    "tempy": "^0.5.0",
-    "xo": "^0.30.0"
+    "execa": "^0.8.0",
+    "tempy": "^0.2.1",
+    "xo": "*"
   }
 }

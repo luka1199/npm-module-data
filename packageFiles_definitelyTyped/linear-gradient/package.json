@@ -1,6 +1,6 @@
 {
   "name": "linear-gradient",
-  "version": "1.0.6",
+  "version": "1.0.4",
   "description": "Calculates the color representing a number based on the gradient supplied",
   "main": "index.js",
   "scripts": {

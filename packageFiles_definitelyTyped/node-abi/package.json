@@ -4,10 +4,9 @@
   "description": "Get the Node ABI for a given target and runtime, and vice versa.",
   "main": "index.js",
   "scripts": {
-    "semantic-release": "semantic-release",
     "test": "tape test/index.js",
-    "travis-deploy-once": "travis-deploy-once",
-    "update-abi-registry": "node --unhandled-rejections=strict scripts/update-abi-registry.js"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "repository": {
     "type": "git",
@@ -27,7 +26,6 @@
   },
   "homepage": "https://github.com/lgeiger/node-abi#readme",
   "devDependencies": {
-    "got": "^10.6.0",
     "semantic-release": "^15.8.0",
     "tape": "^4.6.3",
     "travis-deploy-once": "^5.0.1"

@@ -1,6 +1,6 @@
 {
   "name": "yeoman-test",
-  "version": "6.1.0",
+  "version": "4.0.0",
   "description": "Test utilities for Yeoman generators",
   "homepage": "http://yeoman.io/authoring/testing.html",
   "author": "The Yeoman Team",
@@ -17,43 +17,33 @@
   "engines": {
     "node": ">=12.10.0"
   },
-  "config": {
-    "doc_path": "../yeoman-test-doc"
-  },
   "devDependencies": {
     "coveralls": "^3.1.0",
     "husky": "^4.2.5",
-    "jsdoc": "^3.6.6",
     "lint-staged": "^10.2.11",
-    "mem-fs": "^2.1.0",
+    "mem-fs": "^1.2.0",
+    "mem-fs-editor": "^8.0.0",
     "mocha": "^8.0.1",
     "nyc": "^15.1.0",
-    "prettier": "^2.2.1",
-    "tui-jsdoc-template": "^1.2.2",
+    "prettier": "^2.0.5",
     "xo": "^0.32.1",
-    "yeoman-environment": "^3.3.0",
-    "yeoman-generator": "^5.0.0"
+    "yeoman-environment": "^2.10.3",
+    "yeoman-generator": "^4.12.0"
   },
   "dependencies": {
-    "inquirer": "^8.0.0",
-    "lodash": "^4.17.21",
-    "mem-fs-editor": "^9.0.0",
-    "sinon": "^10.0.0",
-    "temp-dir": "^2.0.0"
+    "inquirer": "^7.3.3",
+    "lodash": "^4.17.19",
+    "sinon": "^9.0.2",
+    "yeoman-environment": "^2.10.3",
+    "yeoman-generator": "^4.12.0"
   },
-  "peerDependencies": {
-    "mem-fs": "^2.1.0",
-    "yeoman-environment": "^3.3.0",
-    "yeoman-generator": "*"
+  "acceptDependencies": {
+    "yeoman-environment": "^3.0.0-beta.1"
   },
   "scripts": {
-    "test": "nyc mocha",
+    "test": "mocha",
     "pretest": "xo",
     "precommit": "lint-staged",
-    "doc": "npm run doc:generate && npm run doc:fix && npm run doc:prettier",
-    "doc:generate": "jsdoc -c jsdoc.json -d $npm_package_config_doc_path",
-    "doc:prettier": "prettier $npm_package_config_doc_path --write --ignore-path .prettierignore-doc",
-    "doc:fix": "sed -i -e 's:^[[:space:]]*<!--[[:space:]]*$::g' -e 's:^[[:space:]]*-->[[:space:]]*$::g' $npm_package_config_doc_path/global.html",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "husky": {

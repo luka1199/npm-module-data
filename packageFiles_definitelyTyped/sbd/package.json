@@ -1,14 +1,10 @@
 {
   "name": "sbd",
-  "version": "1.0.19",
+  "version": "1.0.0",
   "description": "Split text into sentences with Sentence Boundary Detection (SBD).",
   "main": "lib/tokenizer.js",
   "scripts": {
-    "test": "mocha -R spec",
-    "build:js": "browserify lib/tokenizer.js --standalone tokenizer > dist/sbd.js",
-    "build:minify": "uglifyjs dist/sbd.js > dist/sbd.min.js",
-    "build": "npm run build:js && npm run build:minify",
-    "benchmark": "./node_modules/.bin/matcha"
+    "test": "mocha -R spec"
   },
   "homepage": "http://github.com/Tessmore/sbd",
   "repository": {
@@ -16,9 +12,7 @@
     "url": "https://github.com/Tessmore/sbd.git"
   },
   "keywords": [
-    "sentence",
-    "detection",
-    "boundary"
+    "sentence", "detection", "boundary"
   ],
   "author": {
     "name": "Fabiën Tesselaar"
@@ -26,10 +20,10 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-    "mocha": "7.1.1"
+    "mocha": "1.7.x"
   },
   "dependencies": {
-    "sanitize-html": "^2.3.2"
+    "sanitize-html": "^1.4.3"
   },
   "browser": {
     "sanitize-html": "./lib/sanitize-html-browser.js"

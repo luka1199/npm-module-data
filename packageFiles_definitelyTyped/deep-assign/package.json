@@ -1,6 +1,6 @@
 {
   "name": "deep-assign",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Recursive Object.assign()",
   "license": "MIT",
   "repository": "sindresorhus/deep-assign",
@@ -25,16 +25,8 @@
     "extend",
     "properties",
     "merge",
-    "clone",
-    "copy",
-    "mixin",
     "deep",
-    "recursive",
-    "key",
-    "keys",
-    "values",
-    "prop",
-    "properties"
+    "recursive"
   ],
   "dependencies": {
     "is-obj": "^1.0.0"
@@ -42,5 +34,10 @@
   "devDependencies": {
     "ava": "*",
     "xo": "*"
+  },
+  "xo": {
+    "ignores": [
+      "test.js"
+    ]
   }
 }

@@ -1,8 +1,7 @@
 {
   "name": "string-hash",
-  "version": "1.1.4",
+  "version": "1.1.1",
   "description": "fast string hashing function",
-  "license": "CC0-1.0",
   "keywords": [
     "string",
     "hashing"
@@ -19,9 +18,6 @@
   "dependencies": {
   },
   "devDependencies": {
-    "mocha": "*"
-  },
-  "scripts": {
-    "test": "mocha"
+    "mocha": "1.3.x"
   }
 }

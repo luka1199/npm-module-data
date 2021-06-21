@@ -13,9 +13,9 @@
   "homepage": "https://github.com/macedigital/express-xml-bodyparser",
   "main": "./index.js",
   "scripts": {
-    "test": "mocha 2> /dev/null",
-    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot 2> /dev/null",
-    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- 2> /dev/null"
+    "test": "mocha --reporter spec --check-leaks --bail test/ 2> /dev/null",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/ 2> /dev/null",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/ 2> /dev/null"
   },
   "repository": {
     "type": "git",
@@ -33,14 +33,13 @@
     "url": "https://github.com/macedigital/express-xml-bodyparser/issues"
   },
   "dependencies": {
-    "xml2js": "^0.4.19"
+    "xml2js": "^0.4.11"
   },
   "devDependencies": {
-    "@types/express-xml-bodyparser": "^0.3.0",
-    "express": "^4.16.3",
-    "istanbul": "^0.4.5",
-    "mocha": "^5.0.5",
-    "supertest": "^3.0.0"
+    "mocha": "^2.2.5",
+    "supertest": "^1.0.1",
+    "istanbul": "^0.3.7",
+    "express": "^3.18"
   },
   "engines": {
     "node": ">=0.10"

@@ -1,20 +1,15 @@
 {
   "name": "tiny-async-pool",
-  "version": "1.2.0",
+  "version": "1.0.0",
   "description": "Run multiple promise-returning & async functions with limited concurrency using native ES6/ES7",
   "main": "dist/node.js",
-  "files": [
-    "LICENSE-MIT",
-    "dist",
-    "lib"
-  ],
   "scripts": {
-    "prettier": "prettier --write '{lib,test}/**/*.js'",
+    "prettier": "prettier --write '{src,test}/**/*.{js}'",
     "test": "eslint src && NODE_ENV=development mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:rxaviers/async-pool.git"
+    "url": "git@github.com:rxaviers/assertion.git"
   },
   "keywords": [
     "race",
@@ -36,7 +31,7 @@
     "prettier": "^1.10.2"
   },
   "dependencies": {
-    "yaassertion": "^1.0.0",
+    "assertion": "github:rxaviers/assertion",
     "semver": "^5.5.0"
   }
 }

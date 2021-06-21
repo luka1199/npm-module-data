@@ -1,37 +1,23 @@
 {
 	"name": "is-callable",
-	"version": "1.2.3",
-	"author": {
-		"name": "Jordan Harband",
-		"email": "ljharb@gmail.com",
-		"url": "http://ljharb.codes"
-	},
-	"funding": {
-		"url": "https://github.com/sponsors/ljharb"
-	},
-	"contributors": [
-		{
-			"name": "Jordan Harband",
-			"email": "ljharb@gmail.com",
-			"url": "http://ljharb.codes"
-		}
-	],
+	"version": "1.1.0",
+	"author": "Jordan Harband",
 	"description": "Is this JS value callable? Works with Functions and GeneratorFunctions, despite ES6 @@toStringTag.",
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"prepublishOnly": "safe-publish-latest",
-		"prepublish": "not-in-publish || npm run prepublishOnly",
-		"pretest": "npm run --silent lint",
-		"test": "npm run tests-only --",
-		"posttest": "aud --production",
-		"tests-only": "nyc tape 'test/**/*.js'",
-		"prelint": "eclint check *",
-		"lint": "eslint ."
+		"test": "npm run lint && node --es-staging test.js && npm run security",
+		"coverage": "covert test.js",
+		"coverage-quiet": "covert test.js --quiet",
+		"lint": "npm run jscs && npm run eslint",
+		"jscs": "jscs *.js",
+		"eslint": "eslint *.js",
+		"eccheck": "editorconfig-tools check *.js **/*.js > /dev/null",
+		"security": "nsp package"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/inspect-js/is-callable.git"
+		"url": "git://github.com/ljharb/is-callable.git"
 	},
 	"keywords": [
 		"Function",
@@ -45,26 +31,22 @@
 		"toStringTag",
 		"@@toStringTag"
 	],
+	"dependencies": {},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^17.6.0",
-		"aud": "^1.1.5",
-		"available-typed-arrays": "^1.0.2",
-		"eclint": "^2.8.1",
-		"es-value-fixtures": "^1.2.1",
-		"eslint": "^7.25.0",
-		"for-each": "^0.3.3",
-		"has-symbols": "^1.0.2",
-		"make-arrow-function": "^1.2.0",
-		"make-async-function": "^1.0.0",
-		"make-generator-function": "^2.0.0",
-		"nyc": "^10.3.2",
-		"object-inspect": "^1.10.2",
-		"rimraf": "^2.7.1",
-		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.2.2"
+		"tape": "^4.2.0",
+		"covert": "^1.1.0",
+		"jscs": "^2.2.1",
+		"editorconfig-tools": "^0.1.1",
+		"nsp": "^1.1.0",
+		"eslint": "^1.5.1",
+		"@ljharb/eslint-config": "^1.2.0",
+		"make-arrow-function": "^1.1.0",
+		"make-generator-function": "^1.1.0",
+		"semver": "^5.0.3",
+		"foreach": "^2.0.5"
 	},
 	"testling": {
-		"files": "test/index.js",
+		"files": "test.js",
 		"browsers": [
 			"iexplore/6.0..latest",
 			"firefox/3.0..6.0",
@@ -83,10 +65,6 @@
 	},
 	"engines": {
 		"node": ">= 0.4"
-	},
-	"greenkeeper": {
-		"ignore": [
-			"rimraf"
-		]
 	}
 }
+

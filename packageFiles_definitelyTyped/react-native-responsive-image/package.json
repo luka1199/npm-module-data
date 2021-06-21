@@ -1,6 +1,6 @@
 {
   "name": "react-native-responsive-image",
-  "version": "2.3.1",
+  "version": "2.3.0",
   "description": "Image component, that resizes itself appropriately on various screensizes.",
   "main": "index.js",
   "scripts": {
@@ -19,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/Dharmoslap/react-native-responsive-images/issues"
   },
-  "homepage": "https://github.com/Dharmoslap/react-native-responsive-images#readme",
-  "installConfig": {
-    "pnp": true
-  }
+  "homepage": "https://github.com/Dharmoslap/react-native-responsive-images#readme"
 }

@@ -1,7 +1,7 @@
 {
   "name": "commondir",
-  "version": "1.0.1",
-  "description": "compute the closest common parent for file paths",
+  "version": "0.0.1",
+  "description": "Compute the closest common parent for file paths",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -27,7 +27,7 @@
     "email": "mail@substack.net",
     "url": "http://substack.net"
   },
-  "license": "MIT",
+  "license": "MIT/X11",
   "engine": {
     "node": ">=0.4"
   }

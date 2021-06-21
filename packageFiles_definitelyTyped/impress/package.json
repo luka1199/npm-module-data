@@ -1,17 +1,12 @@
 {
   "name": "impress",
-  "version": "2.3.2",
+  "version": "0.5.0",
   "author": "Timur Shemsedinov <timur.shemsedinov@gmail.com>",
-  "description": "Enterprise application server for Node.js",
+  "description": "Impress Application Server for Node.js",
   "license": "MIT",
   "keywords": [
     "application",
     "server",
-    "isolation",
-    "enterprise",
-    "security",
-    "lightweight",
-    "scalable",
     "api",
     "rpc",
     "soa",
@@ -24,16 +19,15 @@
     "router",
     "routing",
     "cluster",
-    "private",
     "cloud",
+    "cache",
     "http",
     "https",
+    "sse",
+    "eventstream",
+    "static",
     "websocket",
-    "websockets",
-    "interactive",
-    "app",
-    "backend",
-    "fullstack"
+    "websockets"
   ],
   "readmeFilename": "README.md",
   "repository": {
@@ -44,46 +38,40 @@
     "url": "https://github.com/metarhia/impress/issues",
     "email": "timur.shemsedinov@gmail.com"
   },
-  "homepage": "https://metarhia.com",
-  "funding": {
-    "type": "patreon",
-    "url": "https://www.patreon.com/tshemsedinov"
-  },
-  "main": "impress.js",
-  "types": "types/impress.d.ts",
-  "files": [
-    "lib/",
-    "schemas/",
-    "types/"
-  ],
+  "main": "./lib/impress",
   "scripts": {
-    "test": "npm run lint && npm run types && metatests test/",
-    "types": "tsc -p types/tsconfig.json",
-    "lint": "eslint . && prettier -c \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.yml\" \"**/*.ts\"",
-    "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.yml\" \"**/*.ts\""
+    "install": "node install.js",
+    "npm": "npm link npm",
+    "test": "./tests/unittests.sh && ./tests/integration.sh",
+    "lint": "eslint ."
   },
   "engines": {
-    "node": "^12.9 || 14 || 16"
+    "node": ">=6.0.0"
   },
   "dependencies": {
-    "metacom": "^1.7.1",
-    "metaconfiguration": "^2.1.4",
-    "metalog": "^3.1.2",
-    "metaschema": "^1.2.3",
-    "metautil": "^3.5.4",
-    "metavm": "^1.0.2",
-    "metawatch": "^1.0.3"
+    "accept-language": "^3.0.18",
+    "bcrypt": "^1.0.3",
+    "concolor": "^0.1.5",
+    "csv": "^2.0.0",
+    "globalstorage": "^0.1.11",
+    "iconv-lite": "^0.4.19",
+    "maojian": "^0.0.4",
+    "metarhia-common": "^0.0.24",
+    "metarhia-jstp": "^1.1.0",
+    "metaschema": "^0.0.6",
+    "metasync": "^0.3.19",
+    "mkdirp": "^0.5.1",
+    "multiparty": "^4.1.3",
+    "ncp": "^2.0.0",
+    "sandboxed-fs": "^0.3.0",
+    "uglify-js": "^3.3.8",
+    "websocket": "^1.0.25",
+    "zip-stream": "^1.2.0"
   },
   "devDependencies": {
-    "@types/ws": "^7.4.4",
-    "@types/node": "^15.6.2",
-    "eslint": "^7.27.0",
-    "eslint-config-metarhia": "^7.0.1",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-prettier": "^3.4.0",
-    "metatests": "^0.7.2",
-    "prettier": "^2.3.0",
-    "typescript": "^4.3.2"
+    "eslint": "^4.16.0",
+    "eslint-config-metarhia": "^2.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-impress": "^2.1.0"
   }
 }

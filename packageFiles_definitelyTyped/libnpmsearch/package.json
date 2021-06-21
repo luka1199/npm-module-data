@@ -1,12 +1,12 @@
 {
   "name": "libnpmsearch",
-  "version": "3.1.2",
+  "version": "2.0.0",
   "description": "Programmatic API for searching in npm and compatible registries.",
-  "author": "Kat Marchán <kzm@sykosomatic.org>",
-  "files": [
-    "*.js",
-    "lib"
-  ],
+  "author": {
+    "name": "Kat Marchán",
+    "email": "kzm@zkat.tech",
+    "twitter": "maybekatz"
+  },
   "keywords": [
     "npm",
     "search",
@@ -15,19 +15,21 @@
   ],
   "license": "ISC",
   "scripts": {
-    "preversion": "npm test",
-    "postversion": "npm publish",
-    "prepublishOnly": "git push origin --follow-tags",
-    "posttest": "standard",
-    "test": "tap"
-  },
-  "tap": {
-    "check-coverage": true
+    "prerelease": "npm t",
+    "release": "standard-version -s",
+    "postrelease": "npm publish && git push --follow-tags",
+    "pretest": "standard",
+    "test": "tap -J --100 test/*.js",
+    "update-coc": "weallbehave -o . && git add CODE_OF_CONDUCT.md && git commit -m 'docs(coc): updated CODE_OF_CONDUCT.md'",
+    "update-contrib": "weallcontribute -o . && git add CONTRIBUTING.md && git commit -m 'docs(contributing): updated CONTRIBUTING.md'"
   },
   "devDependencies": {
     "nock": "^9.6.1",
-    "standard": "^12.0.0",
-    "tap": "^14.11.0"
+    "standard": "*",
+    "standard-version": "*",
+    "tap": "*",
+    "weallbehave": "*",
+    "weallcontribute": "*"
   },
   "repository": {
     "type": "git",
@@ -36,9 +38,8 @@
   "bugs": "https://github.com/npm/libnpmsearch/issues",
   "homepage": "https://npmjs.com/package/libnpmsearch",
   "dependencies": {
-    "npm-registry-fetch": "^11.0.0"
-  },
-  "engines": {
-    "node": ">=10"
+    "figgy-pudding": "^3.5.1",
+    "get-stream": "^4.0.0",
+    "npm-registry-fetch": "^3.8.0"
   }
 }

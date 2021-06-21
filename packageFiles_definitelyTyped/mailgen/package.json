@@ -1,6 +1,6 @@
 {
   "name": "mailgen",
-  "version": "2.0.14",
+  "version": "2.0.0",
   "description": "Generates clean, responsive HTML e-mails for sending transactional mail.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/eladnava/mailgen#readme",
   "dependencies": {
-    "ejs": "^2.6.1",
-    "juice": "^5.2.0"
+    "ejs": "^2.4.2",
+    "juice": "^2.0.0"
   }
 }

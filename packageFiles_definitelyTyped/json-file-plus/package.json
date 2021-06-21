@@ -1,13 +1,10 @@
 {
 	"name": "json-file-plus",
-	"version": "3.3.1",
+	"version": "3.3.0",
 	"author": {
 		"name": "Jordan Harband",
 		"email": "ljharb@gmail.com",
 		"url": "http://ljharb.codes"
-	},
-	"funding": {
-		"url": "https://github.com/sponsors/ljharb"
 	},
 	"contributors": [
 		{
@@ -20,14 +17,16 @@
 	"license": "MIT",
 	"main": "index.js",
 	"scripts": {
-		"prepublishOnly": "safe-publish-latest",
-		"prepublish": "not-in-publish || npm run prepublishOnly",
-		"pretest": "npm run lint",
+		"pretest": "npm run --silent lint && evalmd README.md",
 		"test": "npm run tests-only",
-		"tests-only": "nyc tape 'test/**/*.js'",
-		"posttest": "aud --production",
-		"prelint": "evalmd README.md",
-		"lint": "eslint ."
+		"tests-only": "node test/test.js",
+		"posttest": "npm run --silent security",
+		"coverage": "covert test/test.js",
+		"coverage-quiet": "covert test/test.js --quiet",
+		"lint": "npm run jscs && npm run eslint",
+		"eslint": "eslint *.js test/*.js",
+		"jscs": "jscs *.js test/*.js",
+		"security": "nsp check"
 	},
 	"repository": {
 		"type": "git",
@@ -43,25 +42,23 @@
 		"promiseback"
 	],
 	"dependencies": {
-		"is": "^3.3.0",
-		"node.extend": "^2.0.2",
-		"object.assign": "^4.1.2",
-		"promiseback": "^2.0.3",
-		"safer-buffer": "^2.1.2"
+		"is": "^3.1.0",
+		"node.extend": "^1.1.5",
+		"promiseback": "^2.0.2"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^17.6.0",
-		"aud": "^1.1.5",
-		"eslint": "^7.27.0",
-		"evalmd": "^0.0.19",
+		"tape": "^4.5.1",
 		"foreach": "^2.0.5",
-		"has": "^1.0.3",
-		"nyc": "^10.3.2",
-		"object-keys": "^1.1.1",
-		"safe-publish-latest": "^1.1.4",
-		"tape": "^5.2.2"
+		"object-keys": "^1.0.9",
+		"covert": "^1.1.0",
+		"jscs": "^2.11.0",
+		"eslint": "^2.4.0",
+		"@ljharb/eslint-config": "^2.1.1",
+		"nsp": "^2.2.1",
+		"evalmd": "^0.0.16"
 	},
 	"engines": {
 		"node": ">= 0.4"
 	}
 }
+

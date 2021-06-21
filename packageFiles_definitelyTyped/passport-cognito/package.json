@@ -1,18 +1,16 @@
 {
   "name": "passport-cognito",
-  "version": "0.2.2",
+  "version": "0.0.1",
   "description": "Express passport module for Cognito User Pools",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "nyc mocha"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kndt84/passport-cognito.git"
   },
   "keywords": [
-    "amazon",
-    "aws",
     "passport",
     "cognito",
     "auth",
@@ -26,17 +24,12 @@
   },
   "homepage": "https://github.com/kndt84/passport-cognito#readme",
   "dependencies": {
-    "amazon-cognito-identity-js": "3.2.1",
-    "aws-sdk": "^2.597.0",
+    "aws-sdk": "^2.6.9",
+    "jsbn": "^0.1.0",
+    "moment": "^2.15.1",
+    "node-localstorage": "^1.3.0",
     "passport-strategy": "^1.0.0",
-    "util": "^0.12.1"
-  },
-  "devDependencies": {
-    "@zhaow-de/chai-passport-strategy": "^1.3.2",
-    "assert": "^2.0.0",
-    "chai": "^4.3.4",
-    "mocha": "^8.3.2",
-    "node-fetch": "^2.6.1",
-    "nyc": "^15.1.0"
+    "sjcl": "^1.0.6",
+    "util": "^0.10.3"
   }
 }

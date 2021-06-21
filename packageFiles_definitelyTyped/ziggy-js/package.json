@@ -1,6 +1,6 @@
 {
     "name": "ziggy-js",
-    "version": "1.2.0",
+    "version": "1.0.0",
     "description": "Use your Laravel named routes in JavaScript.",
     "keywords": [
         "laravel",
@@ -40,13 +40,10 @@
         "url": "https://github.com/tighten/ziggy.git"
     },
     "scripts": {
-        "build": "microbundle --name route --format modern,es,umd --external none --no-sourcemap",
-        "build:vue": "microbundle --entry src/js/vue.js --output dist/vue.js --name ZiggyVue --format modern,es,umd --external none --no-sourcemap",
-        "watch": "npm run build watch",
-        "build:npm": "microbundle --name route --format modern,es,umd --no-sourcemap",
-        "build:npm:vue": "microbundle --entry src/js/vue.js --output dist/vue.js --name ZiggyVue --format modern,es,umd --no-sourcemap",
+        "build": "microbundle --name route --format modern,es,umd --external none",
+        "build:npm": "microbundle --name route --format modern,es,umd",
         "test": "jest",
-        "prepublishOnly": "npm run build:npm && npm run build:npm:vue"
+        "prepublishOnly": "npm run build:npm"
     },
     "mangle": {
         "regex": "^_(?!query)"

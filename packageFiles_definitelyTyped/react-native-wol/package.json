@@ -1,8 +1,8 @@
 {
   "name": "react-native-wol",
   "title": "React Native Wol",
-  "version": "1.0.2",
-  "description": "Wake on lan utility for react native projects",
+  "version": "1.0.0",
+  "description": "TODO",
   "main": "index.js",
   "files": [
     "README.md",
@@ -20,7 +20,7 @@
     "baseUrl": "https://github.com/zombie6888/react-native-wol"
   },
   "keywords": [
-    "react-native", "wake-on-lan", "wol"
+    "react-native"
   ],
   "author": {
     "name": "Sergey Zhukov",

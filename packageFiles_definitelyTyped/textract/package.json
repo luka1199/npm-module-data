@@ -1,6 +1,6 @@
 {
   "name": "textract",
-  "version": "2.5.0",
+  "version": "2.4.0",
   "homepage": "https://github.com/dbashford/textract",
   "author": "David Bashford",
   "description": "Extracting text from files of various type including html, pdf, doc, docx, xls, xlsx, csv, pptx, png, jpg, gif, rtf, text/*, and various open office.",
@@ -53,7 +53,7 @@
     "xmldom": "0.1.27",
     "j": "0.4.3",
     "cheerio": "1.0.0-rc.2",
-    "marked": "0.6.2",
+    "marked": "0.3.17",
     "meow": "3.7.0",
     "got": "5.7.1",
     "html-entities": "1.2.0",

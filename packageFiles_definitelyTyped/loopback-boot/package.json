@@ -1,6 +1,9 @@
 {
   "name": "loopback-boot",
-  "version": "3.3.1",
+  "version": "3.0.0-alpha.1",
+  "publishConfig": {
+    "tag": "next"
+  },
   "description": "Convention-based bootstrapper for LoopBack applications",
   "keywords": [
     "StrongLoop",
@@ -12,40 +15,33 @@
     "type": "git",
     "url": "https://github.com/strongloop/loopback-boot"
   },
-  "engines": {
-    "node": ">=8"
-  },
   "main": "index.js",
   "browser": "browser.js",
   "scripts": {
     "test": "mocha",
     "posttest": "npm run lint",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "eslint ."
   },
   "license": "MIT",
   "dependencies": {
-    "async": "^2.4.0",
-    "bluebird": "^3.5.3",
-    "commondir": "^1.0.1",
-    "debug": "^4.1.1",
-    "lodash": "^4.17.11",
-    "semver": "^5.1.0",
-    "strong-globalize": "^4.1.1",
-    "toposort": "^2.0.2"
+    "async": "~0.9.0",
+    "commondir": "0.0.1",
+    "debug": "^2.0.0",
+    "lodash": "^3.6.0",
+    "semver": "^4.1.0",
+    "strong-globalize": "^2.6.2",
+    "toposort": "^0.2.10"
   },
   "devDependencies": {
-    "browserify": "^16.2.3",
-    "chai": "^4.2.0",
-    "coffeeify": "^3.0.1",
-    "coffeescript": "^2.3.1",
-    "dirty-chai": "^2.0.1",
-    "eslint": "^6.6.0",
-    "eslint-config-loopback": "^13.1.0",
-    "fs-extra": "^7.0.1",
+    "browserify": "^4.1.8",
+    "chai": "^1.10.0",
+    "coffee-script": "^1.8.0",
+    "coffeeify": "^0.7.0",
+    "eslint": "^2.5.3",
+    "eslint-config-loopback": "^1.0.0",
+    "fs-extra": "^0.12.0",
     "loopback": "^3.0.0",
-    "mocha": "^5.2.0",
-    "supertest": "^4.0.2"
-  },
-  "author": "IBM Corp."
+    "mocha": "^1.19.0",
+    "supertest": "^0.14.0"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "name": "hydra-box",
   "description": "Hydra Box middleware",
-  "version": "0.6.3",
+  "version": "0.6.0",
   "main": "index.js",
   "scripts": {
     "test": "standard && nyc --reporter=lcov mocha",
@@ -23,9 +23,9 @@
     "@rdfjs/express-handler": "^1.2.0",
     "@rdfjs/namespace": "^1.1.0",
     "@rdfjs/term-set": "^1.0.0",
-    "@tpluscode/rdf-ns-builders": "^0.4.0",
+    "@tpluscode/rdf-ns-builders": "^0.1.0",
     "absolute-url": "^1.2.2",
-    "clownface": "^1",
+    "clownface": "^0.12.1",
     "debug": "^4.1.1",
     "express": "^4.17.1",
     "http-errors": "^1.8.0",

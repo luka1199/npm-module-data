@@ -1,6 +1,6 @@
 {
   "name": "git-diff",
-  "version": "2.0.6",
+  "version": "2.0.0",
   "description": "Returns the git diff of two strings",
   "author": "Daniel Lewis BSc (Hons)",
   "license": "ISC",
@@ -49,27 +49,27 @@
     "git diff tool"
   ],
   "dependencies": {
-    "chalk": "^2.3.2",
-    "diff": "^3.5.0",
-    "loglevel": "^1.6.1",
-    "shelljs": "^0.8.1",
-    "shelljs.exec": "^1.1.7"
+    "chalk": "^2.1.0",
+    "diff": "^3.3.1",
+    "loglevel": "^1.5.0",
+    "shelljs": "^0.7.8",
+    "shelljs.exec": "^1.1.5"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "chai-string": "^1.4.0",
     "coveralls": "2.11.16",
-    "data-driven": "^1.4.0",
-    "eslint": "^4.18.2",
+    "data-driven": "^1.3.0",
+    "eslint": "^4.8.0",
     "husky": "^0.14.3",
     "istanbul": "^0.4.5",
-    "mocha": "^5.0.4",
-    "npm-run-all": "^4.1.2",
-    "readfile-go": "^1.0.5",
-    "sinon": "^4.4.2",
-    "sinon-chai": "^3.0.0"
+    "mocha": "^4.0.0",
+    "npm-run-all": "^4.1.1",
+    "readfile-go": "^1.0.4",
+    "sinon": "^4.0.1",
+    "sinon-chai": "^2.14.0"
   },
   "engines": {
-    "node": ">= 4.8.0"
+    "node": ">= 4.0.0"
   }
 }

@@ -1,8 +1,8 @@
 {
   "name": "redux-localstorage-filter",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Storage enhancer to persist a subset of your state.",
-  "main": "lib/filter.js",
+  "main": "/lib/filter.js",
   "scripts": {
     "prepublish": "make test clean build",
     "test": "make test"

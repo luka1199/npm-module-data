@@ -1,20 +1,22 @@
 {
-    "name": "parse5-build-scripts",
     "private": true,
     "devDependencies": {
+        "@types/node": "*",
         "dedent": "^0.7.0",
         "eslint": "^4.19.1",
         "eslint-config-prettier": "^2.9.0",
         "eslint-plugin-prettier": "^2.6.0",
         "husky": "^0.14.3",
-        "lerna": "^3.1.0",
-        "lint-staged": "^7.2.0",
+        "lerna": "^2.11.0",
         "mocha": "^5.1.1",
         "prettier": "^1.12.0",
-        "r2": "^2.0.1"
+        "r2": "^2.0.1",
+        "typedoc": "^0.11.1",
+        "typedoc-plugin-markdown": "^1.1.6"
     },
     "scripts": {
         "bootstrap": "lerna bootstrap",
+        "prettify": "prettier --write '**/*.js'",
         "lint": "eslint .",
         "unit-tests": "mocha --ui exports --reporter progress --timeout 20000 packages/**/test/*.test.js",
         "test": "npm run lint && npm run unit-tests",
@@ -25,13 +27,7 @@
         "bench-memory-sax": "cd bench && npm install && node memory/sax-parser.js",
         "postinstall": "npm run bootstrap",
         "preversion": "npm test",
-        "precommit": "lint-staged",
-        "publish": "lerna publish"
-    },
-    "lint-staged": {
-        "*.{js,json}": [
-            "prettier --write",
-            "git add"
-        ]
+        "precommit": "npm run prettify && git add -u",
+        "publish": "lerna exec 'npm publish'"
     }
 }

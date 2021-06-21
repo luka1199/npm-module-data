@@ -28,17 +28,17 @@
   "dependencies": {
     "for-each": "^0.3.3",
     "has": "^1.0.3",
-    "string.prototype.trim": "^1.2.3",
+    "string.prototype.trim": "^1.1.2",
     "warning": "^4.0.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
     "docco": "^0.7.0",
-    "eslint": "^7.19.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
     "mocha": "^3.5.3",
-    "safe-publish-latest": "^1.1.4",
+    "safe-publish-latest": "^1.1.2",
     "uglify-js": "^2.7.3"
   },
   "license": "BSD-2-Clause"

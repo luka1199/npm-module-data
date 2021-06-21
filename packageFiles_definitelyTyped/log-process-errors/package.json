@@ -49,28 +49,29 @@
     "test": "test"
   },
   "dependencies": {
-    "colors-option": "^1.0.0",
+    "chalk": "^4.1.0",
     "figures": "^3.2.0",
     "filter-obj": "^2.0.1",
     "jest-validate": "^26.6.2",
-    "map-obj": "^4.2.0",
-    "moize": "^6.0.3",
-    "semver": "^7.3.5"
+    "map-obj": "^4.1.0",
+    "moize": "^6.0.0",
+    "semver": "^7.3.4",
+    "supports-color": "^8.1.0"
   },
   "devDependencies": {
-    "@ehmicky/dev-tasks": "^0.31.92",
+    "@ehmicky/dev-tasks": "^0.31.84",
     "@sinonjs/fake-timers": "^7.0.2",
-    "execa": "^5.1.1",
-    "has-ansi": "^4.0.1",
-    "jasmine": "^3.7.0",
+    "execa": "^5.0.0",
+    "has-ansi": "^4.0.0",
+    "jasmine": "^3.6.1",
     "mocha": "^8.2.1",
-    "sinon": "^11.1.1",
+    "sinon": "^9.2.4",
     "strip-ansi": "^6.0.0",
     "tap": "^14.11.0",
-    "tape": "^5.2.2",
+    "tape": "^5.1.1",
     "test-each": "^2.0.1"
   },
   "engines": {
-    "node": ">=12.20.0"
+    "node": ">=10.17.0"
   }
 }

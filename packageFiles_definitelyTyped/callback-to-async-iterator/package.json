@@ -1,6 +1,6 @@
 {
   "name": "callback-to-async-iterator",
-  "version": "1.1.1",
+  "version": "1.1.0",
   "description": "Turn any callback-based listener into an async iterator.",
   "repository": {
     "type": "git",
@@ -14,8 +14,7 @@
     "build": "babel src --out-dir dist --ignore '*.test.js'",
     "test": "jest src",
     "prettier": "prettier --write 'src/**/*.js'",
-    "flow": "flow src",
-    "prepare": "yarn build"
+    "flow": "flow src"
   },
   "lint-staged": {
     "*.js": [
@@ -25,14 +24,14 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
+    "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
-    "flow-bin": "^0.89.0",
+    "flow-bin": "^0.66.0",
     "husky": "^0.14.3",
-    "jest": "^21.2.1",
-    "lint-staged": "^4.3.0",
-    "prettier": "^1.16.1",
-    "rimraf": "^2.6.3"
+    "jest": "^21.1.0",
+    "lint-staged": "^4.2.2",
+    "prettier": "^1.7.0",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {
     "iterall": "^1.0.0"

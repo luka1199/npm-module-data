@@ -1,43 +1,32 @@
 {
   "name": "fscreen",
-  "version": "1.2.0",
-  "description": "Vendor agnostic access to the fullscreen spec api",
-  "main": "dist/fscreen.cjs.js",
-  "module": "dist/fscreen.esm.js",
-  "sideEffects": false,
+  "version": "1.0.0",
+  "description": "fullscreen spec api in a vendor agnostic wrapper",
+  "main": "lib/index.js",
   "scripts": {
-    "build": "rollpkg build",
-    "watch": "rollpkg watch",
-    "prepublishOnly": "npm run build",
-    "lintStaged": "lint-staged"
+    "build": "rm -rf lib && babel src -d lib --presets=env",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rafgraph/fscreen.git"
+    "url": "git+https://github.com/rafrex/fscreen.git"
   },
   "files": [
-    "dist"
+    "lib",
+    "src"
   ],
   "keywords": [
     "fullscreen",
     "browser"
   ],
-  "author": "Rafael Pedicini <rafael@rafgraph.dev>",
+  "author": "Rafael Pedicini <code@rafrex.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rafgraph/fscreen/issues"
+    "url": "https://github.com/rafrex/fscreen/issues"
   },
-  "homepage": "https://github.com/rafgraph/fscreen#readme",
+  "homepage": "https://github.com/rafrex/fscreen#readme",
   "devDependencies": {
-    "lint-staged": "^10.5.4",
-    "pre-commit": "^1.2.2",
-    "rollpkg": "^0.5.5"
-  },
-  "pre-commit": "lintStaged",
-  "lint-staged": {
-    "(src/**/*|demo/src/**/*)": [
-      "prettier --write --ignore-unknown"
-    ]
-  },
-  "prettier": "rollpkg/configs/prettier.json"
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.4.0"
+  }
 }

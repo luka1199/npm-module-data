@@ -1,6 +1,6 @@
 {
   "name": "iv-viewer",
-  "version": "2.0.1",
+  "version": "2.0.0",
   "description": "A zooming and panning plugin inspired by google photos for your web images.",
   "main": "lib/index.js",
   "repository": {
@@ -34,7 +34,6 @@
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
-    "all-contributors-cli": "^6.9.1",
     "babel-eslint": "^9.0.0",
     "cross-env": "^5.2.0",
     "cssnano": "^4.1.10",

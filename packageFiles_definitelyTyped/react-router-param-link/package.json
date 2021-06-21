@@ -1,6 +1,6 @@
 {
   "name": "react-router-param-link",
-  "version": "1.2.1",
+  "version": "1.0.0",
   "description": "A wrapper around react-router's Link that allows paths with parameters.",
   "keywords": [
     "link-component",
@@ -24,40 +24,40 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "react": "~16",
-    "react-router": "~4"
+    "react": ">=15",
+    "react-router": "^4.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mtsg/react-router-param-link.git"
+    "url": "git://github.com/donavon/react-router-relative-link.git"
   },
   "bugs": {
-    "url": "https://github.com/mtsg/react-router-param-link/issues"
+    "url": "https://github.com/donavon/react-router-relative-link/issues"
   },
   "devDependencies": {
-    "@types/chai": "4.1.7",
-    "@types/enzyme": "3.1.15",
-    "@types/enzyme-adapter-react-16": "1.0.3",
-    "@types/jsdom": "12.2.1",
-    "@types/mocha": "5.2.5",
-    "@types/react": "16.7.20",
-    "@types/react-dom": "16.0.11",
-    "@types/react-router": "4.4.3",
-    "@types/react-router-dom": "4.3.1",
-    "chai": "4.2.0",
-    "enzyme": "3.8.0",
-    "enzyme-adapter-react-16": "1.7.1",
-    "jsdom": "13.1.0",
-    "mocha": "5.2.0",
-    "react": "16.7.0",
-    "react-dom": "16.7.0",
-    "react-router": "4.3.1",
-    "react-router-dom": "4.3.1",
-    "ts-node": "7.0.1",
-    "typescript": "3.2.2"
+    "@types/chai": "4.1.2",
+    "@types/enzyme": "3.1.9",
+    "@types/enzyme-adapter-react-16": "1.0.2",
+    "@types/jsdom": "11.0.4",
+    "@types/mocha": "5.0.0",
+    "@types/react": "16.0.40",
+    "@types/react-dom": "16.0.4",
+    "@types/react-router": "4.0.23",
+    "@types/react-router-dom": "4.2.5",
+    "chai": "4.1.2",
+    "enzyme": "3.3.0",
+    "enzyme-adapter-react-16": "1.1.1",
+    "jsdom": "11.6.2",
+    "mocha": "5.0.4",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-router": "4.2.0",
+    "react-router-dom": "4.2.2",
+    "ts-node": "5.0.1",
+    "typescript": "2.7.2"
   },
   "dependencies": {
-    "@types/url-parse": "1.4.2",
-    "url-parse": "1.4.4"
+    "@types/url-parse": "1.1.0",
+    "url-parse": "1.2.0"
   }
 }

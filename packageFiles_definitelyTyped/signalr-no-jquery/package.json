@@ -8,16 +8,7 @@
   },
   "description": "Javascript SignalR client without jQuery dependency",
   "dependencies": {
-    "jquery-deferred": "0.3.1",
-    "jquery-param": "0.2.0"
-  },
-  "devDependencies": {
-    "babel-cli": "6.18.0",
-    "babel-core": "6.21.0",
-    "babel-eslint": "*",
-    "babel-preset-es2015": "*",
-    "babel-preset-stage-0": "*",
-    "jest": "^26.0.1"
+    "jquery-deferred": "0.3.1"
   },
   "homepage": "https://github.com/DVLP/signalr-no-jquery",
   "keywords": [
@@ -30,16 +21,12 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   ],
-  "main": "build/signalR.js",
+  "main": "signalR.js",
   "name": "signalr-no-jquery",
   "readme": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DVLP/signalr-no-jquery.git"
   },
-  "scripts": {
-    "build": "babel src --presets babel-preset-es2015 --out-dir build",
-    "test": "jest"
-  },
-  "version": "0.2.0"
+  "version": "0.1.0"
 }

@@ -1,6 +1,6 @@
 {
   "name": "promise-inflight",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "One promise for multiple requests in flight to avoid async duplication",
   "main": "inflight.js",
   "files": [
@@ -12,6 +12,9 @@
   },
   "keywords": [],
   "author": "Rebecca Turner <me@re-becca.org> (http://re-becca.org/)",
+  "dependencies": {
+    "bluebird": "^3.4.7"
+  },
   "devDependencies": {},
   "repository": {
     "type": "git",

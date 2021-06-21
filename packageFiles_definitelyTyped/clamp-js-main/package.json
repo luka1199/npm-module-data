@@ -1,24 +1,12 @@
 {
   "name": "clamp-js-main",
-  "version": "0.11.6",
+  "version": "0.11.0",
   "license": "WTFPL",
   "description": "Clamp JS main (ie. cuts off) an HTML element's content by adding ellipsis to it if the content inside is too long.",
   "author": {
-    "name": "Joe Schmitt"
+    "name": "Josh English",
+    "email": "josh@joshenglish.com"
   },
-  "contributors": [
-    {
-      "name": "Josh English",
-      "email": "josh@joshenglish.com",
-      "url": "https://joshenglish.com"
-    },
-    {
-      "name": "Olivier Spieser"
-    },
-    {
-      "name": "Anzhelika Kovalchuk"
-    }
-  ],
   "keywords": [
     "clamp",
     "ellipsis",

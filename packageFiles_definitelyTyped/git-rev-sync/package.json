@@ -1,6 +1,6 @@
 {
   "name": "git-rev-sync",
-  "version": "3.0.1",
+  "version": "2.0.0",
   "author": "kurttheviking",
   "bugs": {
     "url": "https://github.com/kurttheviking/git-rev-sync-js/issues"
@@ -67,7 +67,7 @@
   "dependencies": {
     "escape-string-regexp": "1.0.5",
     "graceful-fs": "4.1.15",
-    "shelljs": "0.8.4"
+    "shelljs": "0.7.7"
   },
   "devDependencies": {}
 }

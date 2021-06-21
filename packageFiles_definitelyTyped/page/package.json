@@ -1,7 +1,7 @@
 {
   "name": "page",
   "description": "Tiny client-side router",
-  "version": "1.11.6",
+  "version": "1.10.2",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   "scripts": {
     "engine-deps": "install-engine-dependencies",
     "test": "jshint index.js test/tests.js && mocha test/tests.js",
-    "serve": "serve test --symlinks",
+    "serve": "serve test",
     "test-cov": "jscoverage index.js index-cov.js; PAGE_COV=1 mocha test/tests.js -R html-cov > coverage.html",
     "make": "rollup -c rollup.config.js"
   },

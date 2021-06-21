@@ -1,16 +1,16 @@
 {
   "name": "electron-devtools-installer",
-  "version": "0.0.0-development",
+  "version": "2.2.4",
   "description": "An easy way to install Dev Tools extensions into Electron applications",
   "main": "dist/index.js",
   "scripts": {
-    "prettier:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
-    "prettier:write": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "compile": "tsc",
-    "prepare": "npm run compile",
+    "lint": "eslint src/*.js test/*.js",
+    "lint-fix": "npm run lint -- --fix",
+    "compile": "babel src --out-dir dist",
+    "prepublish": "npm run compile",
     "pretest-unit": "npm run compile",
-    "test": "npm run prettier:check && npm run test-unit",
-    "test-unit": "electron-mocha ./test/**/*_spec.ts --recursive --require ts-node/register --timeout 60000 -R spec-xunit-file -r test/setup.ts"
+    "test": "npm run lint && npm run test-unit",
+    "test-unit": "electron-mocha ./test --recursive --compilers js:babel-core/register --timeout 60000 -R spec-xunit-file -r test/setup.js"
   },
   "keywords": [
     "electron",
@@ -20,45 +20,45 @@
   "author": {
     "name": "Samuel Attard",
     "email": "samuel.r.attard@gmail.com",
-    "url": "https://www.samuelattard.com"
+    "url": "www.samuelattard.com"
   },
   "bugs": {
-    "url": "https://github.com/MarshallOfSound/electron-devtools-installer/issues"
+    "url": "https://github.com/GPMDP/electron-devtools-installer/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MarshallOfSound/electron-devtools-installer.git"
+    "url": "https://github.com/GPMDP/electron-devtools-installer.git"
   },
   "devDependencies": {
-    "@continuous-auth/semantic-release-npm": "^2.0.0",
-    "@types/chai": "^4.2.14",
-    "@types/chai-as-promised": "^7.1.3",
-    "@types/chai-fs": "^2.0.2",
-    "@types/mocha": "^8.2.0",
-    "@types/node": "^12.0.0",
-    "@types/rimraf": "^3.0.0",
-    "@types/semver": "^7.3.4",
-    "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
+    "babel": "^6.5.2",
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.25.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
     "chai-fs": "chaijs/chai-fs",
-    "electron": "7.2.1",
-    "electron-mocha": "^8.2.1",
+    "electron": "1.4.15",
+    "electron-mocha": "^3.0.0",
+    "eslint": "^3.14.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
     "mocha-testdata": "^1.2.0",
-    "prettier": "^2.0.4",
-    "spec-xunit-file": "0.0.1-3",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.1.4"
+    "spec-xunit-file": "0.0.1-3"
   },
   "dependencies": {
-    "rimraf": "^3.0.2",
-    "semver": "^7.2.1",
-    "tslib": "^2.1.0",
-    "unzip-crx-3": "^0.2.0"
+    "7zip": "0.0.6",
+    "cross-unzip": "0.0.2",
+    "rimraf": "^2.5.2",
+    "semver": "^5.3.0"
   },
-  "files": [
-    "LICENSE",
-    "README.md",
-    "dist"
-  ]
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  }
 }

@@ -1,83 +1,213 @@
 {
-  "name": "cssnano-core",
+  "name": "cssnano",
   "private": true,
   "scripts": {
     "all-contributors": "all-contributors add",
-    "lint": "eslint . --cache --ignore-path .gitignore",
-    "fixlint": "yarn lint -- --fix",
-    "prepare": "lerna run --stream prepare",
+    "lint": "eslint --ignore-path .gitignore packages/**/src util",
+    "fixlint": "eslint --fix --ignore-path .gitignore packages/**/src util",
+    "postinstall": "lerna bootstrap --npm-client=\"yarn\"",
+    "build:packages": "babel-node ./util/buildPackages.js",
+    "build:aliases": "babel-node ./util/buildAliases.js",
     "build:metadata": "babel-node ./util/buildMetadata.js",
-    "build:docs": "remark site/docs/**/*.md -o && yarn build:metadata && babel-node ./util/buildSiteMarkdown.js",
-    "build:integration": "cross-env BABEL_ENV=test babel-node ./util/buildFrameworks.js",
-    "pretest": "yarn lint",
-    "test:only": "cross-env BABEL_ENV=test jest",
-    "test:coverage": "cross-env BABEL_ENV=test jest --coverage",
-    "test": "yarn test:coverage",
-    "deploy": "cd site && GIT_USER=anikethsaha yarn deploy",
+    "build:site": "remark site/content/**/*.md -o && npm run build:metadata && babel-node ./util/buildSiteMarkdown.js && cd site && npm run build",
+    "pretest": "npm run lint",
+    "test-only": "cross-env BABEL_ENV=test ava",
+    "test-only:coverage": "nyc --reporter=lcov --reporter=text npm run test-only",
+    "test": "npm run test-only",
+    "deploy": "gh-pages -d site/dist",
     "publish": "lerna publish"
   },
-  "workspaces": [
-    "./packages/*"
-  ],
   "engines": {
-    "node": "^10 || ^12 || >=14"
+    "node": ">=6.9.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.14.3",
-    "@babel/core": "^7.14.3",
-    "@babel/node": "^7.14.2",
-    "@babel/preset-env": "^7.14.2",
-    "all-contributors-cli": "^6.20.0",
-    "babel-jest": "^27.0.1",
-    "babel-plugin-add-module-exports": "^1.0.2",
-    "browserslist": "^4.16.0",
-    "camelcase": "^6.2.0",
-    "chalk": "^4.1.0",
-    "cross-env": "^7.0.3",
-    "css-color-names": "^1.0.1",
-    "diff": "^5.0.0",
-    "eslint": "^7.27.0",
-    "eslint-plugin-import": "^2.23.3",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-react": "^7.23.2",
-    "fs-extra": "^9.1.0",
-    "glob": "^7.1.4",
-    "got": "^11.8.1",
-    "html2plaintext": "^2.1.2",
-    "jest": "^27.0.1",
-    "jest-junit": "^12.1.0",
-    "lerna": "4.0.0",
-    "mdast-util-heading-range": "^2.1.2",
-    "pleeease-filters": "^4.0.0",
-    "postcss": "^8.3.0",
-    "postcss-devtools": "^1.1.1",
-    "postcss-font-magician": "^3.0.0",
-    "postcss-scss": "^3.0.4",
-    "postcss-simple-vars": "^6.0.1",
-    "postcss-value-parser": "^4.1.0",
-    "prettier": "^2.3.0",
-    "remark": "^13.0.0",
-    "remark-behead": "^2.2.1",
-    "remark-bookmarks": "^3.0.0",
-    "remark-cli": "^9.0.0",
-    "remark-frontmatter": "^3.0.0",
-    "remark-gfm": "^1.0.0",
-    "remark-github": "^10.1.0",
-    "remark-heading-gap": "^4.0.0",
-    "remark-html": "^13.0.1",
-    "rimraf": "^3.0.2",
-    "toml": "^3.0.0",
+    "all-contributors-cli": "^5.0.0",
+    "ava": "^0.25.0",
+    "babel-cli": "^6.0.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-module-resolver": "^2.5.0",
+    "babel-preset-env": "^1.0.0",
+    "babel-register": "^6.0.0",
+    "browserslist": "^4.0.0",
+    "camelcase": "^5.0.0",
+    "coveralls": "^3.0.1",
+    "cross-env": "^5.1.6",
+    "dox": "^0.9.0",
+    "eslint": "^3.0.0",
+    "eslint-config-cssnano": "^3.0.0",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-import": "^2.0.0",
+    "fs-extra": "^6.0.1",
+    "get-pkg-repo": "^2.0.0",
+    "gh-pages": "^1.2.0",
+    "glob": "^7.0.0",
+    "lerna": "^2.5.1",
+    "mdast-util-heading-range": "^2.0.1",
+    "nyc": "^12.0.2",
+    "postcss": "^6.0.0",
+    "remark": "^9.0.0",
+    "remark-behead": "^2.0.1",
+    "remark-bookmarks": "^1.0.0",
+    "remark-cli": "^5.0.0",
+    "remark-frontmatter": "^1.2.0",
+    "remark-github": "^7.0.0",
+    "remark-heading-gap": "^3.0.0",
+    "remark-html": "^7.0.0",
+    "remark-license": "^4.0.0",
+    "remark-toc": "^5.0.0",
+    "stringify-object": "^3.1.0",
+    "toml": "^2.3.2",
     "tomlify-j0.4": "^3.0.0",
-    "unist-builder": "^2.0.3",
-    "unist-util-remove": "^2.1.0",
-    "write-file": "^1.0.0"
+    "unist-builder": "^1.0.2",
+    "unist-util-remove": "^1.0.1"
+  },
+  "ava": {
+    "files": [
+      "packages/**/src/__tests__/**/*.js"
+    ],
+    "require": "babel-register"
+  },
+  "nyc": {
+    "exclude": [
+      "node_modules",
+      "**/__tests__",
+      "**/dist",
+      "util"
+    ]
+  },
+  "babel": {
+    "env": {
+      "publish": {
+        "plugins": [
+          "add-module-exports",
+          [
+            "module-resolver",
+            {
+              "root": [
+                "./packages"
+              ],
+              "alias": {
+                "lerna:css-size": "css-size",
+                "lerna:cssnano": "cssnano",
+                "lerna:cssnano-preset-advanced": "cssnano-preset-advanced",
+                "lerna:cssnano-preset-default": "cssnano-preset-default",
+                "lerna:cssnano-util-get-arguments": "cssnano-util-get-arguments",
+                "lerna:cssnano-util-get-match": "cssnano-util-get-match",
+                "lerna:cssnano-util-same-parent": "cssnano-util-same-parent",
+                "lerna:postcss-colormin": "postcss-colormin",
+                "lerna:postcss-convert-values": "postcss-convert-values",
+                "lerna:postcss-discard-comments": "postcss-discard-comments",
+                "lerna:postcss-discard-duplicates": "postcss-discard-duplicates",
+                "lerna:postcss-discard-empty": "postcss-discard-empty",
+                "lerna:postcss-discard-overridden": "postcss-discard-overridden",
+                "lerna:postcss-discard-unused": "postcss-discard-unused",
+                "lerna:postcss-merge-idents": "postcss-merge-idents",
+                "lerna:postcss-merge-longhand": "postcss-merge-longhand",
+                "lerna:postcss-merge-rules": "postcss-merge-rules",
+                "lerna:postcss-minify-font-values": "postcss-minify-font-values",
+                "lerna:postcss-minify-gradients": "postcss-minify-gradients",
+                "lerna:postcss-minify-params": "postcss-minify-params",
+                "lerna:postcss-minify-selectors": "postcss-minify-selectors",
+                "lerna:postcss-normalize-charset": "postcss-normalize-charset",
+                "lerna:postcss-normalize-display-values": "postcss-normalize-display-values",
+                "lerna:postcss-normalize-positions": "postcss-normalize-positions",
+                "lerna:postcss-normalize-repeat-style": "postcss-normalize-repeat-style",
+                "lerna:postcss-normalize-string": "postcss-normalize-string",
+                "lerna:postcss-normalize-timing-functions": "postcss-normalize-timing-functions",
+                "lerna:postcss-normalize-unicode": "postcss-normalize-unicode",
+                "lerna:postcss-normalize-url": "postcss-normalize-url",
+                "lerna:postcss-normalize-whitespace": "postcss-normalize-whitespace",
+                "lerna:postcss-ordered-values": "postcss-ordered-values",
+                "lerna:postcss-reduce-idents": "postcss-reduce-idents",
+                "lerna:postcss-reduce-initial": "postcss-reduce-initial",
+                "lerna:postcss-reduce-transforms": "postcss-reduce-transforms",
+                "lerna:postcss-svgo": "postcss-svgo",
+                "lerna:postcss-unique-selectors": "postcss-unique-selectors",
+                "lerna:postcss-zindex": "postcss-zindex",
+                "lerna:stylehacks": "stylehacks",
+                "lerna:cssnano-util-raw-cache": "cssnano-util-raw-cache"
+              }
+            }
+          ]
+        ]
+      },
+      "test": {
+        "plugins": [
+          "add-module-exports",
+          [
+            "module-resolver",
+            {
+              "root": [
+                "./packages"
+              ],
+              "alias": {
+                "lerna:css-size": "css-size/src/index.js",
+                "lerna:cssnano": "cssnano/src/index.js",
+                "lerna:cssnano-preset-advanced": "cssnano-preset-advanced/src/index.js",
+                "lerna:cssnano-preset-default": "cssnano-preset-default/src/index.js",
+                "lerna:cssnano-util-get-arguments": "cssnano-util-get-arguments/src/index.js",
+                "lerna:cssnano-util-get-match": "cssnano-util-get-match/src/index.js",
+                "lerna:cssnano-util-same-parent": "cssnano-util-same-parent/src/index.js",
+                "lerna:postcss-colormin": "postcss-colormin/src/index.js",
+                "lerna:postcss-convert-values": "postcss-convert-values/src/index.js",
+                "lerna:postcss-discard-comments": "postcss-discard-comments/src/index.js",
+                "lerna:postcss-discard-duplicates": "postcss-discard-duplicates/src/index.js",
+                "lerna:postcss-discard-empty": "postcss-discard-empty/src/index.js",
+                "lerna:postcss-discard-overridden": "postcss-discard-overridden/src/index.js",
+                "lerna:postcss-discard-unused": "postcss-discard-unused/src/index.js",
+                "lerna:postcss-merge-idents": "postcss-merge-idents/src/index.js",
+                "lerna:postcss-merge-longhand": "postcss-merge-longhand/src/index.js",
+                "lerna:postcss-merge-rules": "postcss-merge-rules/src/index.js",
+                "lerna:postcss-minify-font-values": "postcss-minify-font-values/src/index.js",
+                "lerna:postcss-minify-gradients": "postcss-minify-gradients/src/index.js",
+                "lerna:postcss-minify-params": "postcss-minify-params/src/index.js",
+                "lerna:postcss-minify-selectors": "postcss-minify-selectors/src/index.js",
+                "lerna:postcss-normalize-charset": "postcss-normalize-charset/src/index.js",
+                "lerna:postcss-normalize-display-values": "postcss-normalize-display-values/src/index.js",
+                "lerna:postcss-normalize-positions": "postcss-normalize-positions/src/index.js",
+                "lerna:postcss-normalize-repeat-style": "postcss-normalize-repeat-style/src/index.js",
+                "lerna:postcss-normalize-string": "postcss-normalize-string/src/index.js",
+                "lerna:postcss-normalize-timing-functions": "postcss-normalize-timing-functions/src/index.js",
+                "lerna:postcss-normalize-unicode": "postcss-normalize-unicode/src/index.js",
+                "lerna:postcss-normalize-url": "postcss-normalize-url/src/index.js",
+                "lerna:postcss-normalize-whitespace": "postcss-normalize-whitespace/src/index.js",
+                "lerna:postcss-ordered-values": "postcss-ordered-values/src/index.js",
+                "lerna:postcss-reduce-idents": "postcss-reduce-idents/src/index.js",
+                "lerna:postcss-reduce-initial": "postcss-reduce-initial/src/index.js",
+                "lerna:postcss-reduce-transforms": "postcss-reduce-transforms/src/index.js",
+                "lerna:postcss-svgo": "postcss-svgo/src/index.js",
+                "lerna:postcss-unique-selectors": "postcss-unique-selectors/src/index.js",
+                "lerna:postcss-zindex": "postcss-zindex/src/index.js",
+                "lerna:stylehacks": "stylehacks/src/index.js",
+                "lerna:cssnano-util-raw-cache": "cssnano-util-raw-cache/src/index.js"
+              }
+            }
+          ]
+        ]
+      }
+    },
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "6.9.0"
+          }
+        }
+      ]
+    ]
+  },
+  "eslintConfig": {
+    "extends": "cssnano",
+    "rules": {
+      "import/no-unresolved": [
+        0
+      ]
+    }
   },
   "browserslist": {
     "chrome58": [
       "Chrome 58"
-    ],
-    "chrome62": [
-      "Chrome 62"
     ],
     "edge15": [
       "Edge 15"

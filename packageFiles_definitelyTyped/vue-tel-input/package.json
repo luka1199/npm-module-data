@@ -1,56 +1,26 @@
 {
   "name": "vue-tel-input",
-  "version": "5.3.0",
+  "version": "2.1.0",
   "description": "International Telephone Input with Vue",
   "author": "Steven Dao <iamstevendao@gmail.com>",
+  "main": "dist/vue-tel-input.js",
   "license": "MIT",
-  "homepage": "https://iamstevendao.github.io/vue-tel-input/",
+  "homepage": "https://educationlink.github.io/vue-tel-input/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iamstevendao/vue-tel-input.git"
+    "url": "https://github.com/EducationLink/vue-tel-input.git"
   },
   "scripts": {
-    "serve": "vuepress dev docs",
-    "build": "vue-cli-service build --target lib src/index.js",
-    "docs:build": "vuepress build docs",
-    "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "prepublishOnly": "npm run build"
+    "dist": "poi build",
+    "dist:demo": "poi build ./demo/index.js --config ./demo/build.config.js --filename.css vue-tel-input.css --no-sourceMap --dist ./docs",
+    "start": "yarn dev",
+    "dev": "poi build ./demo/index.js --config ./demo/build.config.js --filename.css vue-tel-input.css --no-sourceMap --no-minimize --dist ./docs",
+    "release": "rm -rf dist && yarn dist",
+    "demo": "yarn dist && yarn dev && yarn demo:open",
+    "demo:open": "open 'http://localhost:5000/'; serve ./docs/"
   },
   "files": [
     "dist/"
-  ],
-  "main": "dist/vue-tel-input.umd.min.js",
-  "unpkg": "dist/vue-tel-input.umd.min.js",
-  "jsdelivr": "dist/vue-tel-input.umd.min.js",
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "libphonenumber-js": "^1.9.6",
-    "vue": "^2.6.11"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-service": "^4.5.13",
-    "@vue/eslint-config-airbnb": "^5.0.2",
-    "@vue/test-utils": "^1.0.3",
-    "babel-eslint": "^10.1.0",
-    "copy-webpack-plugin": "^5.1.2",
-    "eslint": "^6.7.2",
-    "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^22.15.1",
-    "eslint-plugin-vue": "^6.2.2",
-    "lint-staged": "^9.5.0",
-    "vue-template-compiler": "^2.6.11",
-    "vuepress": "^1.8.2"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
   ],
   "keywords": [
     "vue",
@@ -58,8 +28,18 @@
     "phone",
     "vue-tel-input",
     "phone input",
-    "telephone input",
-    "input",
-    "international phone"
-  ]
+    "telephone input"
+  ],
+  "dependencies": {
+    "get-json": "^1.0.0",
+    "libphonenumber-js": "^1.4.6"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.3.0",
+    "eslint-plugin-import": "^2.7.0",
+    "poi": "^9.4.3",
+    "serve": "^6.3.1"
+  }
 }

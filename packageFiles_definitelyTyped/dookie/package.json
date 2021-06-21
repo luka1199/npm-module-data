@@ -1,6 +1,6 @@
 {
   "name": "dookie",
-  "version": "0.4.1",
+  "version": "0.1.0",
   "description": "Stylus-inspired preprocessor for MongoDB data sets and fixtures",
   "keywords": [
     "mongodb",
@@ -15,34 +15,25 @@
     "test": "mocha ./test/*.test.js"
   },
   "dependencies": {
-    "JSONStream": "1.1.1",
-    "clone": "2.1.1",
     "co": "4.6.0",
+    "clone": "1.0.2",
     "commander": "2.8.1",
     "dot-component": "0.1.1",
-    "graceful-fs": "4.1.11",
-    "js-yaml": "3.13.x",
-    "json-stream": "1.x",
-    "lodash.get": "4.4.2",
-    "minimatch": "3.0.4",
-    "mongodb": "~3.5",
-    "mongodb-extended-json": "1.7.0",
-    "mongodb-ns": "1.0.3",
+    "js-yaml": "3.2.1",
+    "mongodb": "~2.0.47",
+    "mongodb-extended-json": "1.5.3",
+    "mongodb-ns": "1.0.0",
     "thunkify": "2.1.2"
   },
   "devDependencies": {
-    "acquit": "1.0.3",
-    "acquit-ignore": "0.1.0",
-    "acquit-markdown": "0.1.0",
-    "lodash": "4.x",
-    "mocha": "5.x"
+    "acquit": "0.4.0",
+    "acquit-ignore": "0.0.3",
+    "acquit-markdown": "0.0.2",
+    "lodash": "3.10.1",
+    "mocha": "2.2.4"
   },
   "engines": {
-    "node": ">= 10.0.0"
+    "node": ">= 4.0.0"
   },
-  "bin": "./bin/dookie.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/vkarpov15/dookie.git"
-  }
+  "bin": "./bin/dookie.js"
 }

@@ -1,6 +1,6 @@
 {
   "name": "simple-sha1",
-  "version": "3.1.0",
+  "version": "3.0.0",
   "description": "A simple api for generating sha1 hashes in node and the browser.",
   "main": "index.js",
   "browser": "browser.js",
@@ -32,15 +32,14 @@
   },
   "homepage": "https://github.com/michaelrhodes/simple-sha1",
   "dependencies": {
-    "queue-microtask": "^1.2.2",
-    "rusha": "^0.8.13"
+    "rusha": "^0.8.1"
   },
   "devDependencies": {
-    "airtap": "^3.0.0",
-    "beefy": "^2.1.8",
-    "benchmark": "^2.1.4",
+    "airtap": "^2.0.4",
+    "beefy": "^2.1.1",
+    "benchmark": "^2.1.0",
     "git-sha1": "^0.1.2",
-    "standard": "^16.0.3",
-    "tape": "^5.2.0"
+    "standard": "^14.1.0",
+    "tape": "^4.5.1"
   }
 }

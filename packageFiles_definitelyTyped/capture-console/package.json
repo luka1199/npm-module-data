@@ -1,6 +1,6 @@
 {
   "name": "capture-console",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Simple and easy stdio capture for Node.js",
   "author": {
     "name": "Isaac Whitfield",

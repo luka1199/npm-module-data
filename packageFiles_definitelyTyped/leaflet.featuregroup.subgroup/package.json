@@ -1,21 +1,17 @@
 {
   "name": "leaflet.featuregroup.subgroup",
   "_name": "Leaflet.FeatureGroup.SubGroup",
-  "version": "1.0.2",
-  "_year": "2015-2017",
+  "version": "1.0.1",
+  "_year": "2015-2016",
   "description": "Creates a Leaflet Feature Group that adds its child layers into a parent group when added to a map",
-  "main": "dist/leaflet.featuregroup.subgroup",
-  "files": [
-    "dist/*.js"
-  ],
+  "main": "dist/leaflet.featuregroup.subgroup.js",
+  "files": ["dist/"],
   "directories": {
     "example": "examples"
   },
   "scripts": {
     "build": "jake build",
-    "version": "npm run build && jake buildDocs && git add README.md",
-    "postversion": "npm run build",
-    "prepublish": "npm run build"
+    "prepublish": "jake"
   },
   "repository": {
     "type": "git",

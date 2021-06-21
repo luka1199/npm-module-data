@@ -1,6 +1,6 @@
 { "name": "bufferstream"
 , "description": "painless stream buffering and cutting"
-, "version": "0.6.2"
+, "version": "0.6.0"
 , "homepage": "https://github.com/dodo/node-bufferstream"
 , "author": "dodo (https://github.com/dodo)"
 , "repository": {"type": "git", "url": "git://github.com/dodo/node-bufferstream.git"}
@@ -12,8 +12,6 @@
     "prepublish": "cake build"}
 , "dependencies": {
     "bufferjs": ">= 2.0.0"}
-, "optionalDependencies": {
-    "buffertools": ">= 1.0.3"}
 , "devDependencies": {
     "nodeunit": ">= 0.5.4",
     "muffin": ">= 0.2.6",

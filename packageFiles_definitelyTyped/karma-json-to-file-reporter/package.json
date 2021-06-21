@@ -1,6 +1,6 @@
 {
   "name": "karma-json-to-file-reporter",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Karma reporter that save JSON messages from log to file",
   "main": "index.js",
   "scripts": {
@@ -16,9 +16,6 @@
     "json",
     "karma",
     "file"
-  ],
-  "files": [
-    "index.js"
   ],
   "author": "People Power Company",
   "license": "MIT",

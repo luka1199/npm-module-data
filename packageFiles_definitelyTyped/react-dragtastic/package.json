@@ -1,6 +1,6 @@
 {
   "name": "react-dragtastic",
-  "version": "2.4.3",
+  "version": "2.4.1",
   "description": "A simple drag and drop library for React which uses the more stable mouseDown mouseUp architecture instead of the problematic HTML5 drag and drop API.",
   "main": "build/index.js",
   "module": "build/index.es.js",
@@ -9,14 +9,13 @@
   ],
   "scripts": {
     "build:flow": "cpy src/index.js.flow build",
-    "build:ts": "cpy src/index.d.ts build",
     "typecheck:flow": "flow check --max-warnings=0",
     "pretest": "yarn build",
     "test": "jest",
     "posttest": "prettier --list-different \"**/*.js\" --ignore-path .gitignore",
     "start": "cross-env NODE_ENV=build rollup --config --watch",
     "build": "cross-env NODE_ENV=build rollup --config",
-    "postbuild": "yarn build:flow && yarn build:ts",
+    "postbuild": "yarn build:flow",
     "precommit": "lint-staged"
   },
   "prettier": {

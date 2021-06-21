@@ -6,14 +6,8 @@
   ],
   "name": "elementtree",
   "description": "XML Serialization and Parsing module based on Python's ElementTree.",
-  "version": "0.1.7",
-  "keywords": [
-    "xml",
-    "sax",
-    "parser",
-    "seralization",
-    "elementtree"
-  ],
+  "version": "0.1.0",
+  "keywords": [ "xml", "sax", "parser", "seralization", "elementtree" ],
   "homepage": "https://github.com/racker/node-elementtree",
   "repository": {
     "type": "git",
@@ -29,11 +23,16 @@
   "engines": {
     "node": ">= 0.4.0"
   },
-  "dependencies": {
-    "sax": "1.1.4"
+  "dependencies" : {
+    "sax": "0.2.3"
   },
   "devDependencies": {
-    "whiskey": "0.8.x"
+    "whiskey": "0.4.1"
   },
-  "license": "Apache-2.0"
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ]
 }

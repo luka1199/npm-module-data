@@ -1,14 +1,11 @@
 {
   "name": "antlr4-autosuggest",
-  "version": "0.0.28",
+  "version": "0.0.1",
   "description": "Autosuggest engine for ANTLR4 grammars",
-  "main": "antlr4-autosuggest.js",
+  "main": "autosuggest.js",
   "scripts": {
-    "lint": "./node_modules/jshint/bin/jshint **.js",
     "test": "DEBUG=\"*\" jasmine",
-    "coverage": "nyc -x 'spec/**/*.js' jasmine",
-    "codacy-coverage": "nyc -x 'spec/**/*.js' --reporter=lcov jasmine && cat ./coverage/lcov.info | ./node_modules/.bin/codacy-coverage && rm -rf ./coverage",
-    "build": "webpack && cp README.md LICENSE package.json dist/"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -30,23 +27,14 @@
   },
   "homepage": "https://github.com/oranoran/antlr4-autosuggest-js#readme",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-env": "^1.6.1",
-    "codacy-coverage": "^2.0.3",
     "eslint": "^4.12.1",
     "jasmine": "^2.8.0",
     "jshint": "^2.9.5",
-    "nyc": "^11.4.1",
     "webpack": "^3.10.0",
     "webpack-node-externals": "^1.6.0"
   },
   "dependencies": {
     "antlr4": "^4.7.0",
     "debug": "^3.1.0"
-  },
-  "files": [
-    "dist",
-    "README.md"
-  ]
+  }
 }

@@ -1,6 +1,6 @@
 {
   "name": "node-sass-tilde-importer",
-  "version": "2.0.0-alpha.1",
+  "version": "1.0.0",
   "description": "A node-sass custom importer which turns ~ into absolute paths to the nearest parent node_modules directory.",
   "repository": "matthewdavidson/node-sass-tilde-importer",
   "main": "index.js",
@@ -25,11 +25,11 @@
     "find-parent-dir": "^0.3.0"
   },
   "devDependencies": {
-    "jest": "^24.1.0"
+    "jest": "^15.1.1"
   },
   "jest": {
     "verbose": true,
-    "testRegex": ".+\\.test.js$",
+    "testRegex": "test\\.js$",
     "testEnvironment": "node",
     "coverageThreshold": {
       "global": {

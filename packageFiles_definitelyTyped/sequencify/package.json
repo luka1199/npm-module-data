@@ -1,7 +1,7 @@
 {
   "name": "sequencify",
   "description": "A module for sequencing tasks and dependencies",
-  "version": "1.0.0",
+  "version": "0.0.7",
   "homepage": "https://github.com/robrich/sequencify",
   "repository": "git://github.com/robrich/sequencify.git",
   "author": "Rob Richardson (http://robrich.org/)",
@@ -13,15 +13,19 @@
     "compose"
   ],
   "devDependencies": {
-    "jshint": "^2.8.0",
-    "mocha": "^2.3.3",
-    "should": "^7.1.0"
+    "mocha": "~1.16.1",
+    "should": "~2.1.1"
   },
   "scripts": {
-    "test": "mocha && jshint ."
+    "test": "mocha"
   },
   "engines": {
     "node": ">= 0.4"
   },
-  "license": "MIT"
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/robrich/sequencify/raw/master/LICENSE"
+    }
+  ]
 }

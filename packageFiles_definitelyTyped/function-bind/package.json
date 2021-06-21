@@ -1,6 +1,6 @@
 {
   "name": "function-bind",
-  "version": "1.1.1",
+  "version": "1.1.0",
   "description": "Implementation of Function.prototype.bind",
   "keywords": [
     "function",
@@ -25,23 +25,28 @@
     "url": "https://github.com/Raynos/function-bind/issues",
     "email": "raynos2@gmail.com"
   },
+  "dependencies": {},
   "devDependencies": {
-    "@ljharb/eslint-config": "^17.1.0",
-    "covert": "^1.1.1",
-    "eslint": "^7.3.0",
-    "tape": "^5.0.1"
+    "tape": "^4.4.0",
+    "covert": "^1.1.0",
+    "jscs": "^2.9.0",
+    "eslint": "^2.0.0",
+    "@ljharb/eslint-config": "^2.1.0"
   },
-  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/Raynos/function-bind/raw/master/LICENSE"
+    }
+  ],
   "scripts": {
-    "pretest": "npm run lint",
-    "test": "npm run tests-only",
-    "posttest": "npm run coverage -- --quiet",
-    "preaudit": "npm install --package-lock --package-lock-only",
-    "audit": "npm audit",
-    "postaudit": "rm package-lock.json",
+    "test": "npm run lint && npm run tests-only && npm run coverage-quiet",
     "tests-only": "node test",
     "coverage": "covert test/*.js",
-    "lint": "eslint ."
+    "coverage-quiet": "covert test/*.js --quiet",
+    "lint": "npm run jscs && npm run eslint",
+    "jscs": "jscs *.js */*.js",
+    "eslint": "eslint *.js */*.js"
   },
   "testling": {
     "files": "test/index.js",
@@ -60,3 +65,4 @@
     ]
   }
 }
+

@@ -1,9 +1,9 @@
 {
   "name": "promise-abortable",
   "author": "dondevi",
-  "version": "1.2.6",
+  "version": "1.2.0",
   "license": "MIT",
-  "description": "A little lib for aborting in Promise chain.",
+  "description": "A Promise lib for aborting in chain.",
   "keywords": [
     "promise",
     "abortable",
@@ -14,8 +14,6 @@
     "cancel",
     "canceling",
     "canceled",
-    "async",
-    "await",
     "signal",
     "onabort",
     "abortSignal",
@@ -33,18 +31,18 @@
   "bugs": {
     "url": "https://github.com/dondevi/promise-abortable/issues"
   },
-  "main": "dist/cjs.es6.js",
-  "module": "dist/esm.es6.js",
-  "browser": "dist/cjs.es5.js",
+  "main": "src/index.js",
+  "module": "dist/cjs.js",
+  "browser": "dist/iife.es5.js",
   "scripts": {
     "build": "rollup -c",
-    "test": "mocha",
-    "cover": "istanbul cover _mocha"
+    "test": "mocha"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
-    "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "eslint": "^6.0.0",
     "rollup-plugin-babel": "^4.3.3",

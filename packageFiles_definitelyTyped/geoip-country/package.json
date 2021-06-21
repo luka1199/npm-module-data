@@ -1,6 +1,6 @@
 {
 	"name": "geoip-country",
-	"version": "4.0.72",
+	"version": "4.0.1",
 	"description": "Less memory usage version of geoip-lite, by supporting only country lookup.",
 	"keywords": [
 		"geo",
@@ -12,20 +12,18 @@
 		"maxmind",
 		"geolite"
 	],
-	"homepage": "https://github.com/sapics/geoip-country",
+	"homepage": "https://github.com/sapics/node-geoip-country",
 	"author": "sapics (https://github.com/sapics)",
 	"files": [
 		"lib/",
 		"data/",
 		"test/",
-		"scripts/",
-		"LICENSE",
-		"EULA"
+		"scripts/"
 	],
 	"main": "lib/geoip.js",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/sapics/geoip-country.git"
+		"url": "git://github.com/sapics/node-geoip-country.git"
 	},
 	"engines": {
 		"node": ">=0.6.3"
@@ -39,9 +37,9 @@
 	"dependencies": {
 		"async": "^2.6.1",
 		"colors": "^1.4.0",
-		"glob": "^7.1.6",
-		"iconv-lite": "^0.5.2",
-		"ip-address": "^6.3.0",
+		"glob": "^7.1.5",
+		"iconv-lite": "^0.5.0",
+		"ip-address": "^6.1.0",
 		"lazy": "^1.0.11",
 		"rimraf": "^2.7.1",
 		"yauzl": "^2.10.0"
@@ -52,5 +50,5 @@
 	"devDependencies": {
 		"nodeunit-x": "^0.13.0"
 	},
-	"license": "MaxMind GeoLite2 License"
+	"license": "Apache-2.0"
 }

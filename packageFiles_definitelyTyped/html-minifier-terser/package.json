@@ -1,7 +1,7 @@
 {
   "name": "html-minifier-terser",
   "description": "Highly configurable, well-tested, JavaScript-based HTML minifier.",
-  "version": "5.1.1",
+  "version": "5.1.0",
   "keywords": [
     "cli",
     "compress",
@@ -24,7 +24,7 @@
     "uglifier",
     "uglify"
   ],
-  "homepage": "https://terser.org/html-minifier-terser/",
+  "homepage": "https://danielruf.github.io/html-minifier-terser/",
   "author": "Daniel Ruf",
   "maintainers": [
     "Daniel Ruf <daniel@daniel-ruf.de",
@@ -43,10 +43,10 @@
   "main": "src/htmlminifier.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/terser/html-minifier-terser.git"
+    "url": "git+https://github.com/DanielRuf/html-minifier-terser.git"
   },
   "bugs": {
-    "url": "https://github.com/terser/html-minifier-terser/issues"
+    "url": "https://github.com/DanielRuf/html-minifier-terser/issues"
   },
   "engines": {
     "node": ">=6"

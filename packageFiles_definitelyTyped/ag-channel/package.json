@@ -1,6 +1,6 @@
 {
   "name": "ag-channel",
-  "version": "5.0.0",
+  "version": "4.0.0",
   "description": "Channel object for Asyngular",
   "main": "index.js",
   "repository": {
@@ -8,7 +8,7 @@
     "url": "https://github.com/SocketCluster/ag-channel.git"
   },
   "dependencies": {
-    "consumable-stream": "^2.0.0"
+    "consumable-stream": "^1.0.0"
   },
   "keywords": [
     "channel",

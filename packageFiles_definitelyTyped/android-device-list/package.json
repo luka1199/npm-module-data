@@ -1,13 +1,14 @@
 {
   "name": "android-device-list",
-  "version": "1.2.7",
+  "version": "1.2.0",
   "description": "List of Android Supported Devices",
   "main": "index.js",
   "engines": {
     "node": ">=4"
   },
   "scripts": {
-    "test": "ava && npm run lint",
+    "test": "ava && npm run jscs && npm run lint",
+    "jscs": "jscs index.js build.js",
     "lint": "eslint index.js build.js",
     "build": "node ./build.js"
   },
@@ -22,11 +23,12 @@
     "list"
   ],
   "devDependencies": {
-    "ava": "^3.15.0",
-    "axios": "^0.21.1",
+    "ava": "^1.4.1",
+    "axios": "^0.18.0",
     "babyparse": "^0.4.6",
-    "eslint": "^7.20.0",
-    "iconv-lite": "^0.6.2"
+    "eslint": "^5.16.0",
+    "iconv-lite": "^0.4.24",
+    "jscs": "^3.0.7"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,5 @@
   "bugs": {
     "url": "https://github.com/pbakondy/android-device-list/issues"
   },
-  "homepage": "https://github.com/pbakondy/android-device-list#readme",
-  "dependencies": {}
+  "homepage": "https://github.com/pbakondy/android-device-list#readme"
 }

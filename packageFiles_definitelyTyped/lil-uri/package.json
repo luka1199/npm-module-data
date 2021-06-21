@@ -1,7 +1,7 @@
 {
   "name": "lil-uri",
   "description": "Tiny URI parser and builder with chainable API",
-  "version": "0.3.1",
+  "version": "0.2.0",
   "license": "MIT",
   "repository": "lil-js/uri",
   "author": "Tomas Aparicio",
@@ -24,9 +24,8 @@
   "devDependencies": {
     "chai": "^1.9.1",
     "mocha": "^1.21.3",
+    "mocha-phantomjs": "^3.4.1",
+    "phantomjs": "^1.9.7-9",
     "uglify-js": "^2.4.15"
-  },
-  "dependencies": {
-    "terser": "^5.5.1"
   }
 }

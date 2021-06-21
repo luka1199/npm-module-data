@@ -1,6 +1,6 @@
 {
   "name": "kos-core",
-  "version": "2.2.0",
+  "version": "1.0.0",
   "description": "基于react-redux的可使用封装",
   "repository": {
     "type": "git",
@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-eslint": "^8.2.5",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
     "babel-plugin-transform-class-properties": "^6.24.1",

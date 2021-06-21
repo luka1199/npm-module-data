@@ -23,7 +23,7 @@
     "licenses": [
         {
             "type": "MIT",
-            "url": "https://github.com/botmonster/jquery-bootpag/blob/master/LICENSE"
+            "url": "https://github.com/botmonster/jquery-bootpag/blob/master/LICENSE.txt"
         }
     ],
     "repository": {
@@ -31,9 +31,8 @@
         "url": "git://github.com/botmonster/jquery-bootpag.git"
       },
     "bugs": "https://github.com/botmonster/jquery-bootpag/issues",
-    "homepage": "http://botmonster.com/jquery-bootpag",
+    "homepage": "http://botmonster.github.com/jquery-bootpag",
     "dependencies": {
         "jquery": ">=1.6"
-    },
-    "main": "./lib/jquery.bootpag.min.js"
+    }
 }

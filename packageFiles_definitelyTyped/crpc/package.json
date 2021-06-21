@@ -1,6 +1,6 @@
 {
   "name": "crpc",
-  "version": "0.2.2",
+  "version": "0.2.0",
   "description": "Simple library for making requests to Cuvva-style RPC APIs",
   "homepage": "https://github.com/billinghamj/crpc",
   "bugs": "https://github.com/billinghamj/crpc/issues",
@@ -12,7 +12,7 @@
     "url": "https://github.com/billinghamj/crpc.git"
   },
   "dependencies": {
-    "json-client": "^0.9.3"
+    "json-client": "^0.9.2"
   },
   "keywords": [
     "crpc",

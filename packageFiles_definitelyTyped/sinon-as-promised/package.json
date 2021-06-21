@@ -1,6 +1,6 @@
 {
   "name": "sinon-as-promised",
-  "version": "4.0.3",
+  "version": "4.0.0",
   "description": "Sugar methods for using sinon.js stubs with promises",
   "main": "index.js",
   "scripts": {
@@ -23,12 +23,12 @@
   "homepage": "https://github.com/bendrucker/sinon-as-promised",
   "dependencies": {
     "create-thenable": "~1.0.0",
-    "native-promise-only": "~0.8.1"
+    "native-promise-only": "~0.7.8-a"
   },
   "devDependencies": {
-    "bluebird": "~3.5.3",
+    "bluebird": "^2.9.21",
     "sinon": "1",
-    "standard": "^13.0.1",
+    "standard": "^4.0.0",
     "tape": "^4.0.0"
   },
   "peerDependencies": {

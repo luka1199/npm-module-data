@@ -1,62 +1,51 @@
 {
   "name": "server",
-  "version": "1.0.33",
+  "version": "1.0.0",
   "description": "A modern and powerful server for Node.js",
-  "homepage": "https://serverjs.io/",
-  "repository": "https://github.com/franciscop/server.git",
-  "bugs": "https://github.com/franciscop/server/issues",
-  "funding": {
-    "url": "https://www.paypal.me/franciscopresencia/19"
-  },
-  "author": "Francisco Presencia <public@francisco.io> (https://francisco.io/)",
-  "license": "MIT",
+  "main": "server.js",
   "scripts": {
     "start": "node .",
     "dev": "grunt watch",
-    "build": "grunt",
-    "pretest": "cp .env.demo .env",
     "test": "jest --coverage --forceExit",
     "kill-comment": "Kill a process running in a specific port: PORT=3000 npm run kill",
     "kill": "kill $(lsof -t -i:$PORT) && echo '> KILLED!' || echo '> The port was already dead'"
   },
-  "keywords": [
-    "server",
-    "node.js",
-    "http",
-    "websocket",
-    "socket",
-    "async"
-  ],
-  "main": "server.js",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "engineStrict": true,
   "directories": {
     "Documentation": "./docs/documentation",
     "Code": "./src",
     "Plugins": "./plugins",
     "Examples": "./examples"
   },
-  "engines": {
-    "node": ">=10.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franciscop/server"
   },
-  "engineStrict": true,
+  "author": "Francisco Presencia <public@francisco.io>",
+  "license": "MIT",
+  "homepage": "https://serverjs.io/",
   "dependencies": {
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "connect-redis": "^3.3.0",
     "cookie-parser": "^1.4.3",
     "csurf": "^1.9.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^4.0.0",
     "express": "^4.14.0",
     "express-data-parser": "^1.2.0",
     "express-session": "^1.14.2",
     "extend": "^3.0.0",
-    "hbs": "^4.1.0",
+    "hbs": "^4.0.1",
     "helmet": "^3.9.0",
     "loadware": "^2.0.0",
     "log": "^1.4.0",
-    "method-override": "^3.0.0",
+    "method-override": "^2.3.10",
     "mz": "^2.6.0",
-    "path-to-regexp": "^6.1.0",
-    "pug": "^3.0.0",
+    "path-to-regexp-wrap": "1.1.0",
+    "pug": "^2.0.0-rc.4",
     "response-time": "^2.3.2",
     "serve-favicon": "^2.3.2",
     "serve-index": "^1.8.0",
@@ -70,18 +59,12 @@
     "grunt-contrib-connect": "^1.0.2",
     "grunt-contrib-jshint": "^1.1.0",
     "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^3.1.0",
-    "jest": "^25.0.0",
+    "jest": "^21.2.1",
     "jstransformer-marked": "^1.0.2",
-    "node-sass": "^4.13.1",
     "picnic": "^6.4.0",
     "request-promises": "^1.0.1",
-    "supertest": "^3.4.2"
-  },
-  "jest": {
-    "transformIgnorePatterns": [
-      "/node_modules/"
-    ]
+    "supertest": "^3.0.0"
   }
 }

@@ -1,14 +1,8 @@
 {
   "name": "heft-jest",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Integrates Heft and Jest",
   "license": "MIT",
-  "repository": {
-    "url": "https://github.com/octogonz/heft-jest"
-  },
-  "bugs": {
-    "url": "https://github.com/octogonz/heft-jest/issues"
-  },
   "scripts": {
     "build": "heft test --clean"
   },

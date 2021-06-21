@@ -1,15 +1,15 @@
 {
   "name": "vinyl-buffer",
   "description": "Convert streaming vinyl files to use buffers",
-  "version": "1.0.1",
+  "version": "0.0.0",
   "main": "index.js",
   "dependencies": {
-    "bl": "^1.2.1",
-    "through2": "^2.0.3"
+    "bl": "^0.9.1",
+    "through2": "^0.6.1"
   },
   "devDependencies": {
     "tape": "~2.5.0",
-    "vinyl-source-stream": "~2.0.0"
+    "vinyl-source-stream": "~0.1.1"
   },
   "scripts": {
     "test": "node test"

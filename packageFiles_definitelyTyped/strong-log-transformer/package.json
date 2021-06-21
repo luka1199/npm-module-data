@@ -1,9 +1,12 @@
 {
   "name": "strong-log-transformer",
-  "version": "2.1.0",
+  "version": "1.0.0",
   "description": "Stream transformer that prefixes lines with timestamps and other things.",
   "author": "Ryan Graham <ryan@strongloop.com>",
-  "license": "Apache-2.0",
+  "license": {
+    "name": "Dual Artistic/StrongLoop",
+    "url": "https://github.com/strongloop/strong-log-transformer/blob/master/LICENSE.md"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/strongloop/strong-log-transformer"
@@ -24,17 +27,16 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "tap --100 test/test-*"
+    "test": "tap test"
   },
   "dependencies": {
+    "byline": "^4.1.1",
     "duplexer": "^0.1.1",
-    "minimist": "^1.2.0",
+    "minimist": "^0.1.0",
+    "moment": "^2.6.0",
     "through": "^2.3.4"
   },
   "devDependencies": {
-    "tap": "^12.0.1"
-  },
-  "engines": {
-    "node": ">=4"
+    "tap": "git://github.com/strongloop/node-tap#production"
   }
 }

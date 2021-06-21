@@ -1,31 +1,31 @@
 {
-    "name": "@hapi/wreck",
-    "description": "HTTP Client Utilities",
-    "version": "17.1.0",
-    "repository": "git://github.com/hapijs/wreck",
-    "main": "lib/index",
-    "types": "lib/index.d.ts",
-    "keywords": [
-        "utilities",
-        "http",
-        "client"
-    ],
-    "files": [
-        "lib"
-    ],
-    "dependencies": {
-        "@hapi/bourne": "2.x.x",
-        "@hapi/boom": "9.x.x",
-        "@hapi/hoek": "9.x.x"
-    },
-    "devDependencies": {
-        "@hapi/code": "8.x.x",
-        "@hapi/lab": "24.x.x",
-        "typescript": "~4.0.2"
-    },
-    "scripts": {
-        "test": "lab -t 100 -L -a @hapi/code -m 10000 -Y",
-        "test-cov-html": "lab -r html -o coverage.html -a @hapi/code -m 10000"
-    },
-    "license": "BSD-3-Clause"
+  "name": "wreck",
+  "description": "HTTP Client Utilities",
+  "version": "14.0.0",
+  "repository": "git://github.com/hapijs/wreck",
+  "main": "lib/index",
+  "keywords": [
+    "utilities",
+    "http",
+    "client"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "dependencies": {
+    "boom": "6.x.x",
+    "hoek": "5.x.x"
+  },
+  "devDependencies": {
+    "code": "5.x.x",
+    "eslint-plugin-markdown": "1.0.0-beta.6",
+    "lab": "14.x.x"
+  },
+  "scripts": {
+    "lint-md": "eslint --config hapi --parser-options=ecmaVersion:8 --rule 'strict: 0, eol-last: 0' --plugin markdown --ext md .",
+    "posttest": "npm run lint-md",
+    "test": "lab -t 100 -L -a code",
+    "test-cov-html": "lab -r html -o coverage.html -a code"
+  },
+  "license": "BSD-3-Clause"
 }

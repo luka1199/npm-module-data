@@ -1,6 +1,6 @@
 {
   "name": "inquirer-npm-name",
-  "version": "4.0.0",
+  "version": "3.0.0",
   "description": "Helper function using inquirer to validate a value provided in a prompt does not exist as an npm package.",
   "homepage": "",
   "author": {
@@ -21,20 +21,31 @@
   ],
   "repository": "SBoudrias/inquirer-npm-name",
   "devDependencies": {
-    "eslint": "^7.21.0",
-    "eslint-config-xo-space": "^0.27.0",
-    "mocha": "^8.3.0",
-    "proxyquire": "^2.0.0",
-    "sinon": "^9.2.4"
+    "eslint": "^4.9.0",
+    "eslint-config-xo-space": "^0.17.0",
+    "gulp": "^3.9.1",
+    "gulp-cli": "^2.0.0",
+    "gulp-coveralls": "^0.1.0",
+    "gulp-eslint": "^4.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^1.1.1",
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-mocha": "^4.3.1",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "mocha": "^4.0.1",
+    "pinkie-promise": "^2.0.1",
+    "proxyquire": "^1.6.0",
+    "sinon": "^4.0.0"
   },
   "scripts": {
-    "pretest": "eslint .",
-    "test": "mocha"
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
   },
   "license": "MIT",
   "dependencies": {
-    "npm-name": "^6.0.1",
-    "upper-case-first": "^2.0.2",
+    "npm-name": "^3.0.0",
+    "upper-case-first": "^1.1.2",
     "validate-npm-package-name": "^3.0.0"
   },
   "eslintConfig": {

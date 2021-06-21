@@ -1,26 +1,30 @@
 {
   "name": "opossum",
-  "version": "6.1.0",
+  "version": "4.1.0",
   "author": "Red Hat, Inc.",
   "license": "Apache-2.0",
+  "support": {
+    "target": "LTS",
+    "response": "REGULAR-7",
+    "backing": "COMPANY"
+  },
   "scripts": {
-    "prepare": "husky install",
-    "prebuild": "npm run pretest",
+    "prebuild": "npm run lint",
     "build": "./test/browser/generate-index.sh && npm run build:browser && npm run build:docs",
     "build:browser": "webpack --config=config/webpack.config.js",
     "build:docs": "npm run build:docs:html && npm run build:docs:markdown",
     "build:docs:html": "documentation build index.js -f html -o docs --config documentation.yml",
     "build:docs:markdown": "documentation build index.js -f md -o docs/opossum.md",
-    "pretest": "eslint --ignore-path .gitignore .",
+    "pretest": "npm run lint",
     "test": "nyc tape test/*.js | tap-spec",
     "test:headless": "node test/browser/webpack-test.js",
     "test:browser": "opener http://localhost:9007/test/browser/index.html && serve . -p 9007",
-    "ci": "npm run build && npm run test && npm run test:headless",
+    "coverage": "nyc report && if [ $CODACY_PROJECT_TOKEN'' != '' ] ; then nyc report --reporter=text-lcov | codacy-coverage; fi",
+    "ci": "npm run build && npm run test && npm run test:headless && npm run coverage",
     "prerelease": "npm run ci",
     "release": "standard-version -s -a",
     "lint": "standardx test/*.js index.js lib/*.js test/*/*.js",
-    "clean": "rm -rf node_modules dist/*.js test/browser/webpack-test.js",
-    "prepublishOnly": "npm run build"
+    "clean": "rm -rf node_modules dist/*.js test/browser/webpack-test.js"
   },
   "standard-version": {
     "scripts": {
@@ -33,6 +37,9 @@
     "url": "git://github.com/nodeshift/opossum.git"
   },
   "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
     "index.js",
     "lib",
     "dist",
@@ -43,28 +50,18 @@
   },
   "homepage": "https://nodeshift.dev/opossum",
   "devDependencies": {
-    "@babel/core": "^7.12.17",
-    "@babel/preset-env": "^7.12.17",
-    "babel-loader": "^8.2.2",
     "codacy-coverage": "^3.4.0",
-    "coveralls": "^3.1.0",
-    "documentation": "^13.1.1",
-    "eslint": "^7.24.0",
-    "eslint-config-semistandard": "^15.0.1",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-standard": "^5.0.0",
-    "husky": "^6.0.0",
-    "nyc": "~15.1.0",
-    "opener": "1.5.2",
-    "serve": "^11.3.2",
-    "standard-version": "9.1.1",
+    "coveralls": "^3.0.3",
+    "documentation": "^12.0.0",
+    "nyc": "~14.1.1",
+    "opener": "1.5.1",
+    "serve": "^11.0.0",
+    "standard-version": "7.0.0",
+    "standardx": "^5.0.0",
     "tap-spec": "~5.0.0",
-    "tape": "~5.2.0",
-    "webpack": "~4.46.0",
-    "webpack-cli": "~4.5.0"
+    "tape": "~4.11.0",
+    "webpack": "~4.41.0",
+    "webpack-cli": "~3.3.0"
   },
   "description": "A fail-fast circuit breaker for promises and callbacks",
   "keywords": [
@@ -76,9 +73,5 @@
     "hystrix",
     "rate-limiting"
   ],
-  "engines": {
-    "node": "^16 || ^14 || ^12"
-  },
-  "dependencies": {},
-  "support": true
+  "dependencies": {}
 }

@@ -1,11 +1,10 @@
 {
   "name": "ghauth",
-  "version": "5.0.1",
+  "version": "3.2.0",
   "description": "Create and load persistent GitHub authentication tokens for command-line apps",
   "main": "ghauth.js",
   "scripts": {
-    "lint": "standard *.js",
-    "test": "npm run lint && echo 'no tests to run'"
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -24,12 +23,11 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "application-config": "^2.0.0",
-    "node-fetch": "^2.6.0",
-    "ora": "^4.0.5",
-    "read": "^1.0.7"
-  },
-  "devDependencies": {
-    "standard": "~14.3.1"
+    "application-config": "~0.2.0",
+    "bl": "~1.0.0",
+    "hyperquest": "~1.2.0",
+    "mkdirp": "~0.5.0",
+    "read": "~1.0.7",
+    "xtend": "~4.0.1"
   }
 }

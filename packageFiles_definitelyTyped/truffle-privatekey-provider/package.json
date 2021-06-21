@@ -1,6 +1,6 @@
 {
   "name": "truffle-privatekey-provider",
-  "version": "1.4.0",
+  "version": "1.1.0",
   "description": "Private Key Web3 provider",
   "main": "index.js",
   "scripts": {},
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/nosuchip/truffle-privatekey-provider#readme",
   "dependencies": {
-    "ethereumjs-wallet": "^1.0.0",
-    "web3-provider-engine": "^15.0.12"
+    "ethereumjs-wallet": "^0.6.0",
+    "web3-provider-engine": "^14.1.0"
   }
 }

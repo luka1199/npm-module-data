@@ -1,6 +1,6 @@
 {
   "name": "prosemirror-markdown",
-  "version": "1.5.1",
+  "version": "1.5.0",
   "description": "ProseMirror Markdown integration",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -25,8 +25,8 @@
     "mocha": "^3.0.2",
     "prosemirror-test-builder": "^1.0.0",
     "punycode": "^1.4.0",
-    "rollup": "^2.26.3",
-    "@rollup/plugin-buble": "^0.21.3",
+    "rollup": "^1.26.3",
+    "@rollup/plugin-buble": "^0.20.0",
     "builddocs": "^0.3.0"
   },
   "scripts": {

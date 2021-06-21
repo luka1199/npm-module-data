@@ -1,29 +1,17 @@
 {
   "name": "normalplaytime",
-  "version": "1.0.5",
+  "version": "1.0.0",
   "description": "Parser for Normal Play Time (RFC 2326)",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
-    "compile": "./node_modules/babel-cli/bin/babel.js --presets=es2015 -d dist src",
-    "prepublish": "npm run compile"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "keywords": [
     "parser"
   ],
-  "author": {
-    "name": "Eric Teubert",
-    "email": "eric@ericteubert.de",
-    "url": "https://ericteubert.de"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:eteubert/normalplaytime.git"
-  },
+  "author": "ericteubert <eric@ericteubert.de>",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
     "mocha": "^3.2.0"
   }
 }

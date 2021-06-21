@@ -1,10 +1,10 @@
 {
   "name": "base64-async",
-  "version": "2.1.3",
-  "description": "Non-blocking chunked Base64 encoding",
+  "version": "2.1.0",
+  "description": "Non-blocking chunked base64 encoding",
   "main": "src/index.js",
   "scripts": {
-    "bench": "benchmark/sync-vs-async.js",
+    "bench": "node --harmony-async-await benchmark/sync-vs-async.js",
     "example": "examples/blocking.js && echo && examples/non-blocking.js",
     "test": "xo && nyc ava",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
@@ -32,13 +32,13 @@
   "homepage": "https://github.com/lukechilds/base64-async",
   "dependencies": {},
   "devDependencies": {
-    "ava": "^0.25.0",
+    "ava": "^0.19.1",
     "cli-table": "^0.3.1",
-    "coveralls": "^3.0.0",
+    "coveralls": "^2.13.1",
     "eslint-config-xo-lukechilds": "^1.0.0",
     "minimist": "^1.2.0",
-    "nyc": "^11.0.2",
-    "pretty-bytes": "^5.0.0",
+    "nyc": "^10.3.2",
+    "pretty-bytes": "^4.0.2",
     "time-span": "^2.0.0",
     "xo": "^0.19.0"
   }

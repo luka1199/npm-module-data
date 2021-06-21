@@ -1,37 +1,37 @@
 {
   "name": "seatsio",
-  "version": "63.6.0",
+  "version": "3.0.0",
   "main": "index.js",
-  "description": "Official JavaScript and Node.JS client library for the Seats.io REST API",
+  "description": "Official JavaScript and Node.JS client library for the Seats.io V2 REST API",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint ./src",
-    "test": "jest --maxWorkers=8 --verbose",
-    "bundle": "gulp bundle"
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {},
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/setupTests.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/seatsio/seatsio-js"
   },
+  "author": "Nami Falhan <namfaldev@gmail.com> (https://www.seats.io)",
   "dependencies": {
-    "axios": "0.21.1"
+    "axios": "0.16.2",
+    "uuid": "^3.3.2"
   },
   "devDependencies": {
     "browserify": "latest",
-    "eslint": "7.27.0",
-    "eslint-config-standard": "16.0.3",
-    "eslint-plugin-import": "2.23.4",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.1.0",
-    "eslint-plugin-standard": "5.0.0",
     "gulp": "latest",
     "gulp-buffer": "latest",
+    "gulp-connect": "latest",
     "gulp-jest": "latest",
     "gulp-tap": "latest",
     "gulp-uglify": "latest",
     "gulp-uglify-es": "latest",
-    "jest": "27.0.3",
-    "jest-cli": "27.0.3",
-    "uuid": "8.3.2"
+    "gulp-util": "latest",
+    "gulplog": "latest",
+    "jest": "^23.6.0",
+    "jest-cli": "^23.6.0"
   }
 }

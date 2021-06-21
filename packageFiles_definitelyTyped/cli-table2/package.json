@@ -3,18 +3,12 @@
   "version": "0.2.0",
   "description": "Pretty unicode tables for the command line. Based on the original cli-table.",
   "main": "index.js",
-  "files": [
-    "src/",
-    "index.js"
-  ],
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "kind-of": "^3.0.4",
-    "object-assign": "^4.1.0",
-    "string-width": "^1.0.1",
-    "wrap-ansi": "^4.0.0"
+    "lodash": "^3.10.1",
+    "string-width": "^1.0.1"
   },
   "devDependencies": {
     "ansi-256-colors": "^1.1.0",

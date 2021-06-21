@@ -1,6 +1,6 @@
 {
   "name": "random-number-csprng",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "A cryptographically secure generator for random numbers in a range.",
   "main": "index.js",
   "scripts": {

@@ -1,7 +1,6 @@
 {
   "name": "bloomfilter",
-  "version": "0.0.18",
-  "license" : "BSD-3-Clause",
+  "version": "0.0.4",
   "description": "Fast bloom filter in JavaScript.",
   "keywords": [
     "bloom filter",
@@ -17,10 +16,7 @@
     "url": "http://github.com/jasondavies/bloomfilter.js.git"
   },
   "main": "bloomfilter.js",
-  "devDependencies": {
-    "vows": "0.7.0"
-  },
-  "scripts": {
-    "test": "./node_modules/vows/bin/vows"
+  "dependencies": {
+    "vows": "0.6.0"
   }
 }

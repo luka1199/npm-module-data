@@ -1,10 +1,9 @@
 {
   "name": "collections",
-  "version": "5.1.12",
+  "version": "5.1.0",
   "description": "data structures with idiomatic JavaScript collection interfaces",
   "homepage": "http://www.collectionsjs.com",
   "author": "Kris Kowal <kris@cixar.com> (http://github.com/kriskowal)",
-  "main": "collections",
   "contributors": [
     {
       "name": "Benoit Marchant"
@@ -41,10 +40,7 @@
     "weak-map": "~1.0.x"
   },
   "devDependencies": {
-    "mr": "git://github.com/montagejs/mr#master",
-    "browserify": "^14.5.0",
-    "concurrently": "^3.4.0",
-    "http-server": "^0.9.0",
+    "montage-testing": "git://github.com/montagejs/montage-testing#master",
     "jasmine-console-reporter": "^1.2.7",
     "jasmine-core": "^2.5.2",
     "karma": "^1.5.0",
@@ -53,16 +49,13 @@
     "karma-firefox-launcher": "^1.0.1",
     "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.2",
-    "montage-testing": "git://github.com/montagejs/montage-testing#master",
     "mop-integration": "git://github.com/montagejs/mop-integration.git#master",
-    "open": "0.0.5",
-    "uglify-js": "^3.2.2"
+    "concurrently": "^3.4.0",
+    "http-server": "^0.9.0",
+    "open": "0.0.5"
   },
   "scripts": {
     "test": "node test/run-node.js",
-    "build": "npm run build:browserify",
-    "build:browserify": "browserify -r . -s collections > collections.min.js",
-    "build:uglifyjs": "uglifyjs collections.min.js -c > collections.min.js",
     "integration": "mop-integration",
     "test:karma": "karma start --no-auto-watch --single-run",
     "test:karma-firefox": "karma start --no-auto-watch --single-run --browsers=Firefox",

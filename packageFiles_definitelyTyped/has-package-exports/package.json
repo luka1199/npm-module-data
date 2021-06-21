@@ -1,6 +1,6 @@
 {
 	"name": "has-package-exports",
-	"version": "1.2.3",
+	"version": "1.2.0",
 	"description": "Does the current node version have support for the \"exports\" field in package.json?",
 	"main": "no",
 	"browser": {
@@ -28,12 +28,11 @@
 		"./pattern": "./pattern.js"
 	},
 	"scripts": {
-		"prepublish": "!(type safe-publish-latest 2>&1 >/dev/null) || not-in-publish || npm run prepublishOnly",
-		"prepublishOnly": "safe-publish-latest",
+		"prepublish": "!(type safe-publish-latest 2>/dev/null) || safe-publish-latest",
 		"lint": "eslint .",
 		"pretest": "npm run lint",
 		"test": "npm run tests-only",
-		"tests-only": "nyc tape 'test/**/*.js'",
+		"tests-only": "node test",
 		"posttest": "aud --production || true",
 		"version": "auto-changelog && git add CHANGELOG.md",
 		"postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
@@ -58,18 +57,17 @@
 	},
 	"homepage": "https://github.com/inspect-js/has-package-exports#readme",
 	"dependencies": {
-		"@ljharb/has-package-exports-patterns": "0.0.1"
+		"@ljharb/patterns": "file:./packages/patterns"
 	},
 	"devDependencies": {
-		"@ljharb/eslint-config": "^17.6.0",
-		"aud": "^1.1.5",
+		"@ljharb/eslint-config": "^17.1.0",
+		"aud": "^1.1.2",
 		"auto-changelog": "^2.2.1",
-		"eslint": "^7.25.0",
+		"eslint": "^7.10.0",
 		"has-package-exports": "file:.",
-		"nyc": "^10.3.2",
 		"safe-publish-latest": "^1.1.4",
 		"semver": "^6.3.0",
-		"tape": "^5.2.2"
+		"tape": "^5.0.1"
 	},
 	"greenkeeper": {
 		"ignore": [

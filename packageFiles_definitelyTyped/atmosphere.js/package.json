@@ -1,6 +1,6 @@
 {
   "name": "atmosphere.js",
-  "version": "3.1.0",
+  "version": "2.2.10",
   "homepage": "https://github.com/Atmosphere/atmosphere-javascript",
   "description": "Atmosphere client for Node.js",
   "main": "index.js",
@@ -15,15 +15,15 @@
     "atmosphere"
   ],
   "author": "Jeanfrancois Arcand <jfarcand@apache.org>",
-  "license": "Apache-2.0",
+  "license": "Apache License, Version 2.0",
   "bugs": {
     "url": "https://github.com/Atmosphere/atmosphere-javascript/issues"
   },
   "dependencies": {
-    "ws": "^6.1.0",
-    "eventsource": "^1.0.7",
-    "xmlhttprequest": "^1.8.0"
+    "jsdom": "0.8.10",
+    "ws": "0.4.31",
+    "eventsource": "0.0.10"
   },
-  "browser": "./lib/browser.js",
+  "browser": "./atmosphere.js",
   "devDependencies": {}
 }

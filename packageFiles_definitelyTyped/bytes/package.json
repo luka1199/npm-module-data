@@ -19,9 +19,9 @@
   ],
   "repository": "visionmedia/bytes.js",
   "devDependencies": {
-    "eslint": "5.13.0",
+    "eslint": "5.12.1",
     "mocha": "5.2.0",
-    "nyc": "13.2.0"
+    "nyc": "13.1.0"
   },
   "files": [
     "History.md",

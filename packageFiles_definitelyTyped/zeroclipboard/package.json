@@ -1,8 +1,8 @@
 {
   "name": "zeroclipboard",
   "title": "ZeroClipboard",
-  "version": "2.4.0-beta.1",
-  "description": "The ZeroClipboard library provides an easy way to copy text to the clipboard using an invisible Adobe Flash movie and a JavaScript interface",
+  "version": "2.0.0",
+  "description": "The ZeroClipboard library provides an easy way to copy text to the clipboard using an invisible Adobe Flash movie and a JavaScript interface.",
   "keywords": [
     "flash",
     "clipboard",
@@ -13,18 +13,22 @@
     "clip",
     "clippy"
   ],
-  "homepage": "http://zeroclipboard.github.io/",
-  "license": "MIT",
+  "homepage": "http://zeroclipboard.org/",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/zeroclipboard/zeroclipboard/blob/master/LICENSE"
+    }
+  ],
   "contributors": [
     {
       "name": "Jon Rohan",
-      "email": "yes@jonrohan.codes",
       "url": "http://jonrohan.me/"
     },
     {
       "name": "James M. Greene",
       "email": "james.m.greene@gmail.com",
-      "url": "http://greene.io/"
+      "url": "http://jamesgreene.net/"
     }
   ],
   "repository": {
@@ -34,41 +38,40 @@
   "bugs": {
     "url": "https://github.com/zeroclipboard/zeroclipboard/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "send": "0"
+  },
   "devDependencies": {
     "flex-sdk": "~4.6.0-0",
     "flexpmd": "^1.3.0-1",
-    "grunt": "^0.4.5",
+    "grunt": "^0.4.4",
     "grunt-chmod": "^1.0.3",
-    "grunt-contrib-clean": "^0.6.0",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-connect": "^0.11.2",
-    "grunt-contrib-jshint": "^0.11.2",
-    "grunt-contrib-uglify": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-connect": "^0.7.1",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-qunit": "^0.4.0",
+    "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-coveralls": "^1.0.0",
-    "grunt-flexpmd": "^0.1.3",
-    "grunt-json-format": "^1.0.1",
-    "grunt-mxmlc": "^0.5.2",
-    "grunt-qunit-istanbul": "^0.5.0",
+    "grunt-flexpmd": "^0.1.2",
+    "grunt-mxmlc": "^0.5.1",
     "grunt-template": "^0.2.3",
-    "jquery": "^2.1.4",
-    "load-grunt-tasks": "^3.2.0",
-    "qunit-composite": "^1.1.0",
-    "qunitjs": "^1.18.0",
-    "spm": "^3.6.11"
+    "jquery": "^1.11.1",
+    "qunit-composite": "^1.0.1",
+    "qunitjs": "^1.14.0",
+    "spm": "^3.0.0"
   },
-  "main": "dist/ZeroClipboard.js",
-  "files": [
-    "dist/ZeroClipboard.*",
-    "package.json",
-    "LICENSE"
-  ],
+  "main": "./dist/ZeroClipboard.js",
+  "component": {
+    "scripts": {
+      "zeroclipboard": "./dist/ZeroClipboard.js"
+    }
+  },
   "spm": {
-    "main": "dist/ZeroClipboard.js",
+    "main": "ZeroClipboard.js",
     "output": [
-      "dist/ZeroClipboard.swf",
-      "dist/ZeroClipboard.Core.js"
+      "ZeroClipboard.swf",
+      "ZeroClipboard.Core.js"
     ]
   },
   "scripts": {

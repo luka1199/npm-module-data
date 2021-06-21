@@ -1,33 +1,27 @@
 {
   "name": "html5-history",
-  "version": "0.1.5",
+  "version": "0.1.0",
   "description": "A npm friendly version of history.js",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
   "repository": "git://github.com/Raynos/html5-history.git",
   "main": "index",
   "homepage": "https://github.com/Raynos/html5-history",
-  "contributors": [
-    {
-      "name": "Raynos"
-    }
-  ],
+  "contributors": [{
+    "name": "Raynos"
+  }],
   "bugs": {
     "url": "https://github.com/Raynos/html5-history/issues",
     "email": "raynos2@gmail.com"
   },
-  "dependencies": {
-    "global": "~2.0.7"
-  },
+  "dependencies": {},
   "devDependencies": {
     "tape": "~1.0.2"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://github.com/Raynos/html5-history/raw/master/LICENSE"
-    }
-  ],
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://github.com/Raynos/html5-history/raw/master/LICENSE"
+  }],
   "scripts": {
     "test": "node ./test/index.js",
     "start": "node ./index.js",

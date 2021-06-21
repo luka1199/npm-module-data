@@ -1,50 +1,26 @@
 {
   "name": "encoding-down",
-  "version": "7.0.0",
-  "description": "An abstract-leveldown implementation that wraps another store to encode keys and values",
+  "version": "5.0.0",
   "license": "MIT",
+  "repository": "level/encoding-down",
+  "description": "LevelDOWN wrapper supporting levelup@1 encodings",
   "main": "index.js",
+  "typings": "index.d.ts",
   "scripts": {
-    "test": "standard && hallmark && nyc node test",
-    "test-browsers-local": "airtap --coverage test/index.js",
-    "coverage": "nyc report -r lcovonly",
-    "hallmark": "hallmark --fix",
-    "dependency-check": "dependency-check . test/*.js",
-    "prepublishOnly": "npm run dependency-check"
-  },
-  "files": [
-    "index.js",
-    "CHANGELOG.md",
-    "CONTRIBUTORS.md",
-    "LICENSE.md",
-    "UPGRADING.md"
-  ],
-  "dependencies": {
-    "abstract-leveldown": "^7.0.0",
-    "inherits": "^2.0.3",
-    "level-codec": "^10.0.0",
-    "level-errors": "^3.0.0"
+    "test": "standard && node test"
   },
   "devDependencies": {
-    "airtap": "^4.0.3",
-    "airtap-playwright": "^1.0.1",
-    "dependency-check": "^3.3.0",
-    "hallmark": "^3.1.0",
-    "level-community": "^3.0.0",
-    "memdown": "^6.0.0",
-    "nyc": "^15.1.0",
-    "standard": "^16.0.3",
-    "tape": "^5.0.1"
+    "memdown": "^2.0.0",
+    "safe-buffer": "^5.1.1",
+    "standard": "^11.0.0",
+    "tape": "^4.8.0"
   },
-  "hallmark": {
-    "community": "level-community"
+  "dependencies": {
+    "abstract-leveldown": "^4.0.0",
+    "level-codec": "^9.0.0",
+    "level-errors": "^2.0.0"
   },
-  "repository": "Level/encoding-down",
-  "homepage": "https://github.com/Level/encoding-down",
-  "keywords": [
-    "level"
-  ],
   "engines": {
-    "node": ">=10"
+    "node": ">=6"
   }
 }

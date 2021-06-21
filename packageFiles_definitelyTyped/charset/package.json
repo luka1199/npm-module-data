@@ -1,19 +1,27 @@
 {
   "name": "charset",
-  "version": "1.0.1",
+  "version": "0.1.0",
   "description": "Get the content charset from header and html content-type.",
   "main": "index.js",
   "scripts": {
-    "test": "npm run lint && egg-bin test",
-    "ci": "npm run lint && egg-bin cov",
-    "lint": "eslint test *.js"
+    "test": "make test-all"
   },
-  "dependencies": {},
+  "config": {
+    "blanket": { "pattern": "charset/lib" },
+    "travis-cov": { "threshold": 100 }
+  },
+  "dependencies": {
+
+  },
   "devDependencies": {
-    "egg-bin": "1",
-    "egg-ci": "^1.1.0",
-    "eslint": "4",
-    "eslint-config-egg": "5"
+    "autod": "*",
+    "blanket": "*",
+    "contributors": "*",
+    "cov": "*",
+    "coveralls": "*",
+    "mocha": "*",
+    "mocha-lcov-reporter": "*",
+    "should": "~4.0.4"
   },
   "homepage": "https://github.com/node-modules/charset",
   "repository": {
@@ -28,12 +36,6 @@
     "xml",
     "encoding"
   ],
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "ci": {
-    "version": "4, 6, 8"
-  },
-  "author": "fengmk2 <fengmk2@gmail.com> (https://fengmk2.com)",
+  "author": "fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com)",
   "license": "MIT"
 }

@@ -1,6 +1,6 @@
 {
   "name": "business-rules-engine",
-  "version": "1.2.8",
+  "version": "1.0.20",
   "description": "business rules engine",
   "main": "src/validation",
   "scripts": {
@@ -21,11 +21,9 @@
     "url": "https://github.com/rsamec/business-rules-engine/issues"
   },
   "dependencies": {
-    "q": "1.0.1",
-    "axios": "^0.3.1",
-    "hashmap": "^1.1.0",
-    "moment": "2.5.0",
-    "underscore": "^1.0.6",
+    "Q": "latest",
+    "moment": "^2.7.0",
+    "underscore": "latest",
     "underscore.string": "^2.3.3"
   },
   "devDependencies": {
@@ -44,8 +42,6 @@
     "grunt-ngdocs": "^0.2.2",
     "grunt-run": "^0.2.3",
     "grunt-typedoc": "^0.1.1",
-    "grunt-typescript": "^0.3.8",
-    "sinon": "^1.12.1",
-    "typedoc": "^0.1.1"
+    "grunt-typescript": "^0.3.8"
   }
 }

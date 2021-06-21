@@ -1,6 +1,6 @@
 {
   "name": "getpass",
-  "version": "0.1.7",
+  "version": "0.1.0",
   "description": "getpass for node.js",
   "main": "lib/index.js",
   "dependencies": {
@@ -13,11 +13,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/arekinath/node-getpass.git"
+    "url": "https://github.com/arekinath/getpass.git"
   },
   "scripts": {
     "test": "tape test/*.test.js"
   },
   "author": "Alex Wilson <alex.wilson@joyent.com>",
-  "license": "MIT"
+  "license": "MPL-2.0"
 }

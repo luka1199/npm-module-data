@@ -1,7 +1,7 @@
 {
   "name": "proper-url-join",
   "description": "Like `path.join` but for a URL",
-  "version": "2.1.1",
+  "version": "2.1.0",
   "keywords": [
     "url",
     "join",
@@ -30,7 +30,7 @@
     "test": "jest --env node --coverage",
     "prerelease": "npm t && npm run lint && npm run build",
     "release": "standard-version",
-    "postrelease": "git push --follow-tags origin HEAD && npm publish"
+    "postrelease": "git push --follow-tags origin master && npm publish"
   },
   "lint-staged": {
     "*.js": [

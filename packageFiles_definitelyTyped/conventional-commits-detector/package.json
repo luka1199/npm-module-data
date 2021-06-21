@@ -1,63 +1,48 @@
 {
+  "name": "conventional-commits-detector",
+  "version": "1.0.0",
+  "description": "Detect what commit message convention your repository is using.",
+  "homepage": "https://github.com/stevemao/conventional-commits-detector",
+  "repository": "stevemao/conventional-commits-detector",
+  "bin": "dist/bin/cli.js",
   "author": {
     "name": "Steve Mao",
     "email": "maochenyan@gmail.com",
     "url": "https://github.com/stevemao"
   },
-  "bin": "./src/cli.js",
-  "bugs": "https://github.com/conventional-changelog/conventional-commits-detector/issues",
-  "description": "Detect what commit message convention your repository is using.",
-  "engines": {
-    "node": ">=6.9.0"
-  },
   "files": [
-    "src/"
+    "dist"
   ],
-  "homepage": "https://github.com/conventional-changelog/conventional-commits-detector#readme",
+  "main": "dist/lib/index.js",
   "keywords": [
     "commit-conventions",
     "conventions",
     "commit-message"
   ],
-  "license": "MIT",
-  "main": "src/index.js",
-  "name": "conventional-commits-detector",
-  "renovate": {
-    "extends": [
-      "config:base",
-      ":maintainLockFilesWeekly",
-      ":rebaseStalePrs",
-      ":automergeDigest",
-      ":gitSignOff",
-      ":preserveSemverRanges"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/conventional-changelog/conventional-commits-detector.git"
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-coveralls": "^0.1.4",
+    "gulp-eslint": "^5.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^1.0.0",
+    "gulp-mocha": "^6.0.0",
+    "gulp-nsp": "^3.0.0",
+    "gulp-plumber": "^1.0.1",
+    "isparta": "^4.0.0",
+    "run-sequence": "^2.0.0"
   },
   "scripts": {
-    "dev": "docker run --rm --user node -v \"$(pwd)\":/app -w /app -it node:6 sh -c \"yarn install; yarn test; bash\"",
-    "test": "eslint src/ && nyc mocha --opts mocha.opts src/**/*.spec.js"
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
   },
-  "version": "1.0.3",
+  "license": "MIT",
   "dependencies": {
     "arrify": "^1.0.0",
     "git-raw-commits": "^2.0.0",
-    "meow": "^7.0.0",
+    "meow": "^5.0.0",
     "through2-concurrent": "^2.0.0"
-  },
-  "devDependencies": {
-    "@hutson/conventional-changelog-config": "^2.0.0",
-    "@hutson/eslint-config": "^3.0.0",
-    "@hutson/nyc-config": "^2.0.0",
-    "chai": "^4.0.2",
-    "codecov": "^3.0.0",
-    "debug": "^4.0.0",
-    "eslint": "^5.3.0",
-    "mocha": "^6.0.0",
-    "npm-publish-git-tag": "^3.0.0",
-    "nyc": "^14.0.0",
-    "semantic-release-github": "^4.0.17"
   }
 }

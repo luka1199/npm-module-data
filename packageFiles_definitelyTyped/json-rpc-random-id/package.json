@@ -1,6 +1,6 @@
 {
   "name": "json-rpc-random-id",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Generates an id useable in json rpc payloads.",
   "main": "index.js",
   "scripts": {

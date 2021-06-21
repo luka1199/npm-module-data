@@ -1,18 +1,17 @@
 {
   "name": "form-serialize",
-  "version": "0.7.2",
+  "version": "0.7.0",
   "description": "serialize html forms",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "devDependencies": {
-    "domify": "~1.4.0",
-    "zuul": "~3.10.1"
+    "domify": "~1.0.0",
+    "zuul": "~3.6.0"
   },
   "scripts": {
-    "test": "zuul -- test/index.js",
-    "test-local": "zuul --local -- test/index.js"
+    "test": "zuul -- test/index.js"
   },
   "repository": {
     "type": "git",

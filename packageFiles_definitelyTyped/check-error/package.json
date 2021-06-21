@@ -54,9 +54,7 @@
       "max-statements": 0
     }
   },
-  "dependencies": {
-    "get-func-name": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browserify": "^13.0.0",
     "browserify-istanbul": "^1.0.0",

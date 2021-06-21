@@ -1,6 +1,6 @@
 {
   "name": "node-7z",
-  "version": "2.1.2",
+  "version": "2.1.0",
   "description": "A Node.js wrapper for 7-Zip with platform binaries",
   "main": "./src/main.js",
   "scripts": {
@@ -36,8 +36,8 @@
     "node": ">=10"
   },
   "dependencies": {
-    "cross-spawn": "^7.0.2",
-    "debug": "^4.3.2",
+    "cross-spawn": "^7.0.1",
+    "debug": "^4.1.1",
     "lodash.defaultsdeep": "^4.6.1",
     "lodash.defaultto": "^4.14.0",
     "lodash.flattendeep": "^4.4.0",
@@ -48,12 +48,12 @@
   "optionalDependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",
+    "eslint-config-standard": "^14.1.0",
     "esm": "^3.2.25",
     "fs-readdir-recursive": "^1.1.0",
     "is-child-process": "^1.0.2",
-    "mocha": "^6.2.3",
+    "mocha": "^6.2.2",
     "nyc": "^14.1.1",
-    "rimraf": "^3.0.2",
-    "standard": "^14.3.4"
+    "rimraf": "^3.0.0"
   }
 }

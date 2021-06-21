@@ -4,14 +4,12 @@
   "description": "A very, very simple event emitter implementation.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test",
-    "build": "uglifyjs index.js -c \"evaluate=false\" --comments \"/    .*/\" -m --source-map micro-events-min.js.map -o micro-events-min.js"
+    "test": "mocha test"
   },
   "author": "Alexander Gugel <alexander.gugel@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^2.0.1",
-    "uglify-js": "^2.4.15"
+    "mocha": "^2.0.1"
   },
   "dependencies": {},
   "repository": {
@@ -21,15 +19,5 @@
   "bugs": {
     "url": "https://github.com/alexanderGugel/micro-events/issues"
   },
-  "homepage": "https://github.com/alexanderGugel/micro-events",
-  "directories": {
-    "example": "examples"
-  },
-  "keywords": [
-    "util",
-    "events",
-    "server",
-    "client",
-    "browser"
-  ]
+  "homepage": "https://github.com/alexanderGugel/micro-events"
 }

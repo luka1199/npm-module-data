@@ -1,6 +1,6 @@
 {
   "name": "path-is-absolute",
-  "version": "2.0.0",
+  "version": "1.0.0",
   "description": "Node.js 0.12 path.isAbsolute() ponyfill",
   "license": "MIT",
   "repository": "sindresorhus/path-is-absolute",
@@ -13,7 +13,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && node test.js"
+    "test": "node test.js"
   },
   "files": [
     "index.js"
@@ -36,8 +36,5 @@
     "is",
     "detect",
     "check"
-  ],
-  "devDependencies": {
-    "xo": "^0.16.0"
-  }
+  ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "ontime",
-  "version": "0.0.7",
+  "version": "0.0.1",
   "description": "a human-readable cron",
   "author": {
     "name": "Woong Jun",
@@ -17,27 +17,22 @@
     "url": "https://github.com/mycoboco/ontime/issues",
     "email": "woong.jun@gmail.com"
   },
-  "license": "MIT",
   "main": "index.js",
-  "scripts": {
-    "test": "tape test/*.js"
-  },
   "dependencies": {},
   "devDependencies": {
-    "tape": "^4.2.0"
+    "tape": "^3.0.1"
   },
-  "engines": {
-    "node": ">=4.9.1"
-  },
+  "engines": { "node": ">=0.8.0" },
+  "licenses": "MIT",
   "keywords": [
-    "cron",
-    "crontab",
-    "cronjob",
-    "schedule",
-    "scheduler",
-    "job scheduler",
-    "task scheduler",
-    "timer",
-    "interval"
-  ]
+    "cron", "crontab", "cronjob",
+    "schedule", "scheduler", "job scheduler", "task scheduler",
+    "timer", "interval"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  }
 }
