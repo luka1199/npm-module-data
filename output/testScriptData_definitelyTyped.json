@@ -1,50 +1,50 @@
 {
 	"Testing frameworks": {
-		"mocha": 2124,
-		"jest": 597,
-		"tap": 485,
-		"tape": 286,
-		"ava": 247,
-		"karma": 168,
-		"jasmine": 72,
-		"nodeunit": 45,
+		"mocha": 1786,
+		"tap": 484,
+		"jest": 480,
+		"tape": 281,
+		"ava": 225,
+		"karma": 151,
+		"jasmine": 70,
+		"nodeunit": 50,
 		"lab": 43,
-		"vows": 40,
-		"flow": 32,
-		"tsd": 10,
-		"zuul": 10,
+		"vows": 43,
+		"flow": 34,
+		"zuul": 20,
 		"cypress": 8,
-		"expresso": 3,
-		"testem": 3,
-		"ocular-test": 2,
-		"zap": 1
+		"expresso": 6,
+		"testem": 2,
+		"ocular-test": 1,
+		"zap": 1,
+		"tsd": 0
 	},
 	"Code analysis tool": {
-		"eslint": 608,
-		"standard": 324,
-		"xo": 167,
+		"eslint": 544,
+		"standard": 305,
+		"xo": 147,
 		"jshint": 98,
-		"c8": 28,
 		"semistandard": 19,
+		"c8": 7,
 		"coffeelint": 4,
 		"tslint": 3,
-		"dtslint": 2
+		"dtslint": 0
 	},
 	"Task runner": {
-		"grunt": 240,
-		"gulp": 118,
-		"lerna": 46,
-		"nwb": 11,
-		"ember": 8,
+		"grunt": 269,
+		"gulp": 134,
+		"lerna": 36,
+		"nwb": 12,
+		"ember": 9,
 		"aegir": 1,
 		"wsrun": 1
 	},
 	"Build tool": {
-		"make": 139
+		"make": 156
 	},
 	"Browser": {
 		"phantomjs": 14
 	},
-	"undefined": 1029,
-	"other": 552
+	"undefined": 1190,
+	"other": 810
 }

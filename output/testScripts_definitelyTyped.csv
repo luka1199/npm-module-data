@@ -3622,10 +3622,7 @@ openurl2,""
 os-homedir,"node test.js"
 pacote,"tap"
 openstack-wrapper,"./node_modules/nodeunit/bin/nodeunit ./test"
-orientjs,"./node_modules/.bin/jshint ./lib && echo "
-NOTICE: If tests fail, please ensure you've set the correct credentials in test/test-server.json
-
-"; node ./node_modules/mocha/bin/mocha ./test/index.js ./test/**/*.js ./test/**/**/*.js ./test/**/**/**/*.js ./test/**/**/**/**/*.js --reporter=spec -t 10000 --exit"
+orientjs,"./node_modules/.bin/jshint ./lib && echo "NOTICE: If tests fail, please ensure you've set the correct credentials in test/test-server.json"; node ./node_modules/mocha/bin/mocha ./test/index.js ./test/**/*.js ./test/**/**/*.js ./test/**/**/**/*.js ./test/**/**/**/**/*.js --reporter=spec -t 10000 --exit"
 overload-protection,"tap test"
 os-service,""
 osenv,"tap test/*.js"

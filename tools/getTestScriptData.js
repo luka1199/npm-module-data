@@ -15,7 +15,6 @@ async function run() {
     keywords.push('other')
     keywords.push('undefined')
     var testScripts = await loadTestScripts()
-
     var keywordData = getKeywordData(testScripts, keywords)
     var sortedKeywordData = sortKeywordData(keywordData)
     var groupedKeywordData = getGroupedKeywordData(sortedKeywordData, keywordsJSON)
@@ -89,7 +88,7 @@ function getKeywordData(testScripts, keywords) {
             if (script == "" || script == "echo \"Error: no test specified\" && exit 1") {
                 keywordCounter['undefined']++
             } else {
-                console.log(script);
+                // console.log(script);
                 keywordCounter['other']++
             }
         }
