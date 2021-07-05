@@ -8,15 +8,15 @@
 		"Karma": 151,
 		"Jasmine": 70,
 		"Nodeunit": 50,
-		"@hapi/lab": 43,
 		"Vows": 43,
+		"@hapi/lab": 43,
 		"Flow-JS": 34,
 		"Zuul": 20,
 		"Cypress": 8,
 		"Expresso": 6,
 		"Test’em": 2,
-		"Ocular-dev-tools": 1,
 		"Zap": 1,
+		"Ocular-dev-tools": 1,
 		"tsd": 0
 	},
 	"Code analysis tool": {

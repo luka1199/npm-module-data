@@ -15,7 +15,9 @@ async function run() {
     keywords.push('other')
     keywords.push('undefined')
     var testScripts = await loadTestScripts()
-    var keywordData = getKeywordData(testScripts, keywords)
+    var data = getData(testScripts, keywords)
+    var keywordData = data[0]
+    var modulesWithTestScript = data[1]
     var sortedKeywordData = sortKeywordData(keywordData)
     var groupedKeywordData = getGroupedKeywordData(sortedKeywordData, keywordsJSON)
     groupedKeywordData['total'] = testScripts.length
@@ -24,6 +26,10 @@ async function run() {
     if (process.argv[3] != null) {
         console.log(`Saving data to ${process.argv[3]}`);
         fs.writeFileSync(process.argv[3], JSON.stringify(groupedKeywordData, null, '\t'))
+    }
+    if (process.argv[4] != null) {
+        console.log(`Saving modules with test script to ${process.argv[4]}`);
+        fs.writeFileSync(process.argv[4], modulesWithTestScript.join('\n'))
     }
 }
 
@@ -48,7 +54,7 @@ function getKeywords(keywordsJSON) {
 
 function loadTestScripts() {
     return new Promise((resolve, reject) => {
-        var scripts = []
+        var moduleScripts = []
 
         // Load test scripts e.g. testScripts_definitelyTyped.csv
         // Expected format: moduleName, testScript
@@ -57,24 +63,29 @@ function loadTestScripts() {
             .on('data', (row) => {
                 // console.log(row.testScript);
                 // var script = row.testScript.substring(1, row.testScript.length - 1)
-                var script = row.testScript
-                scripts.push(script)
+                moduleScripts.push([row.moduleName, row.testScript])
             })
             .on('end', () => {
                 console.log('Test scripts successfully loaded');
-                resolve(scripts)
+                resolve(moduleScripts)
             });
     });
 }
 
-function getKeywordData(testScripts, keywords) {
+function getData(testScripts, keywords) {
     var keywordCounter = {}
+    var modulesWithTestScript = []
+    testScripts.forEach(pair => {
+        const moduleName = pair[0]
+        modulesWithTestScript.push(moduleName)
+    });
     for (let i = 0; i < keywords.length; i++) {
         const keyword = keywords[i];
         keywordCounter[keyword] = 0
     }
     for (let j = 0; j < testScripts.length; j++) {
-        const script = testScripts[j];
+        const moduleName = testScripts[j][0];
+        const script = testScripts[j][1];
         var noKeyword = true
         for (let k = 0; k < keywords.length; k++) {
             const keyword = keywords[k];
@@ -88,19 +99,22 @@ function getKeywordData(testScripts, keywords) {
         if (noKeyword) {
             if (script == "" || script == "echo \"Error: no test specified\" && exit 1") {
                 keywordCounter['undefined']++
+                modulesWithTestScript = modulesWithTestScript.filter((item) => {
+                    return item != moduleName
+                })
             } else {
                 // console.log(script);
                 keywordCounter['other']++
             }
         }
     }
-    return keywordCounter
+    return [keywordCounter, modulesWithTestScript]
 }
 
 function sortKeywordData(keywordData) {
-    return Object.fromEntries(Object.keys(keywordData).sort((a, b) => {
-        return -1 * (keywordData[a] - keywordData[b])
-    }).map(key => [key, keywordData[key]]))
+    return Object.entries(keywordData)
+    .sort(([,a],[,b]) => b-a)
+    .reduce((r, [k, v]) => ({ ...r, [k]: v }), {});
 }
 
 function getGroupedKeywordData(sortedKeywordData, keywordsJSON) {
